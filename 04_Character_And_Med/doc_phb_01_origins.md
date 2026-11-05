@@ -1,0 +1,483 @@
+---
+id: "doc:phb_01_origins"
+package_id: "PHB_01_ORIGINS"
+title: "Nguồn Gốc Nhân Vật: Xuất Thân, Chủng Tộc & Kỹ Năng Nguồn Gốc (Origin Feats)"
+original_title: "Character Origins: Backgrounds, Species & Origin Feats"
+source_reference: "Dungeons & Dragons 2024 Player's Handbook (5.5e)"
+system_category: "04_Character_And_Med"
+associated_master_moc: "[[00_Master_MOC]]"
+---
+
+# Nguồn Gốc Nhân Vật: Xuất Thân, Chủng Tộc & Kỹ Năng Nguồn Gốc (Origin Feats)
+
+> **Mã gói (Package ID):** `PHB_01_ORIGINS` | **Nguồn khảo cứu:** *Dungeons & Dragons 2024 Player's Handbook (5.5e)*
+> **Phân loại hệ thống:** `[[04_Character_And_Med]]` | **Bản đồ não bộ:** [[00_Master_MOC]]
+
+## 1. Tóm Lược Nghiệp Vụ & Thiết Kế (Executive Summary)
+Dữ liệu luật chơi và cơ chế đã qua chắt lọc.
+
+## 3. Sections
+- **backgrounds:**
+  - **title:** 16 Character Backgrounds
+  - **pdf_pages:** 180-188
+  - **book_pages:** 177-185
+  - **background_rules_2024:**
+    - **ability_score_increases:** Each background provides three ability scores. Choose one score to increase by +2 and another by +1, OR increase all three scores by +1. No score can exceed 20.
+    - **origin_feat:** Each background grants one specific Origin Feat at 1st level.
+    - **skills_and_tools:** Each background grants proficiency in two specific skills and one artisan tool, musical instrument, gaming set, or thieves' tools.
+    - **starting_equipment:** Choose either the themed starting equipment package listed in the background or 50 GP to buy equipment.
+  - **background_catalog:**
+    -
+      - **name:** Acolyte
+      - **ability_scores:**
+        - Intelligence
+        - Wisdom
+        - Charisma
+      - **origin_feat:** Magic Initiate (Cleric)
+      - **skill_proficiencies:**
+        - Insight
+        - Religion
+      - **tool_proficiency:** Calligrapher's Supplies
+      - **equipment:** Calligrapher's Supplies, Holy Symbol, Prayer Book, Parchment (10 sheets), Robe, 8 GP
+    -
+      - **name:** Artisan
+      - **ability_scores:**
+        - Strength
+        - Dexterity
+        - Intelligence
+      - **origin_feat:** Crafter
+      - **skill_proficiencies:**
+        - Investigation
+        - Persuasion
+      - **tool_proficiency:** One Artisan's Tools of your choice
+      - **equipment:** Chosen Artisan's Tools, Abacus, Letter of Introduction, Traveler's Clothes, 15 GP
+    -
+      - **name:** Charlatan
+      - **ability_scores:**
+        - Dexterity
+        - Constitution
+        - Charisma
+      - **origin_feat:** Skilled
+      - **skill_proficiencies:**
+        - Deception
+        - Sleight of Hand
+      - **tool_proficiency:** Forgery Kit
+      - **equipment:** Forgery Kit, Costume Clothes, Fine Clothes, Deck of Marked Cards, 15 GP
+    -
+      - **name:** Criminal
+      - **ability_scores:**
+        - Dexterity
+        - Constitution
+        - Intelligence
+      - **origin_feat:** Alert
+      - **skill_proficiencies:**
+        - Sleight of Hand
+        - Stealth
+      - **tool_proficiency:** Thieves' Tools
+      - **equipment:** Thieves' Tools, Crowbar, 2 Daggers, Pouch, Dark Common Clothes, 16 GP
+    -
+      - **name:** Cultist
+      - **ability_scores:**
+        - Intelligence
+        - Wisdom
+        - Charisma
+      - **origin_feat:** Magic Initiate (Warlock)
+      - **skill_proficiencies:**
+        - Arcana
+        - Religion
+      - **tool_proficiency:** Disguise Kit
+      - **equipment:** Disguise Kit, Common Clothes, Dagger, Holy Symbol, Vestments, 19 GP
+    -
+      - **name:** Entertainer
+      - **ability_scores:**
+        - Strength
+        - Dexterity
+        - Charisma
+      - **origin_feat:** Musician
+      - **skill_proficiencies:**
+        - Acrobatics
+        - Performance
+      - **tool_proficiency:** One Musical Instrument of your choice
+      - **equipment:** Chosen Musical Instrument, Costume Clothes (2 sets), Mirror, Perfume, 8 GP
+    -
+      - **name:** Farmer
+      - **ability_scores:**
+        - Strength
+        - Constitution
+        - Wisdom
+      - **origin_feat:** Tough
+      - **skill_proficiencies:**
+        - Animal Handling
+        - Nature
+      - **tool_proficiency:** Carpenter's Tools
+      - **equipment:** Carpenter's Tools, Sickle, Iron Pot, Shovel, Work Clothes, 23 GP
+    -
+      - **name:** Guard
+      - **ability_scores:**
+        - Strength
+        - Intelligence
+        - Wisdom
+      - **origin_feat:** Alert
+      - **skill_proficiencies:**
+        - Athletics
+        - Perception
+      - **tool_proficiency:** One Gaming Set of your choice
+      - **equipment:** Chosen Gaming Set, Spear, Light Crossbow, 20 Crossbow Bolts, Manacles, Hooded Lantern, 12 GP
+    -
+      - **name:** Guide
+      - **ability_scores:**
+        - Dexterity
+        - Constitution
+        - Wisdom
+      - **origin_feat:** Magic Initiate (Druid)
+      - **skill_proficiencies:**
+        - Stealth
+        - Survival
+      - **tool_proficiency:** Cartographer's Tools
+      - **equipment:** Cartographer's Tools, Shortbow, 20 Arrows, Quiver, Tent, Traveler's Clothes, 3 GP
+    -
+      - **name:** Hermit
+      - **ability_scores:**
+        - Constitution
+        - Wisdom
+        - Charisma
+      - **origin_feat:** Healer
+      - **skill_proficiencies:**
+        - Medicine
+        - Religion
+      - **tool_proficiency:** Herbalism Kit
+      - **equipment:** Herbalism Kit, Quarterstaff, Bedroll, Fishing Tackle, Winter Blanket, Common Clothes, 15 GP
+    -
+      - **name:** Merchant
+      - **ability_scores:**
+        - Constitution
+        - Intelligence
+        - Charisma
+      - **origin_feat:** Lucky
+      - **skill_proficiencies:**
+        - Animal Handling
+        - Persuasion
+      - **tool_proficiency:** Navigator's Tools
+      - **equipment:** Navigator's Tools, Abacus, Fine Clothes, Letter of Credit, Mule with Pack Saddle, 22 GP
+    -
+      - **name:** Noble
+      - **ability_scores:**
+        - Strength
+        - Intelligence
+        - Charisma
+      - **origin_feat:** Skilled
+      - **skill_proficiencies:**
+        - History
+        - Persuasion
+      - **tool_proficiency:** One Gaming Set of your choice
+      - **equipment:** Chosen Gaming Set, Fine Clothes, Signet Ring, Perfume, Purse, 24 GP
+    -
+      - **name:** Sage
+      - **ability_scores:**
+        - Constitution
+        - Intelligence
+        - Wisdom
+      - **origin_feat:** Magic Initiate (Wizard)
+      - **skill_proficiencies:**
+        - Arcana
+        - History
+      - **tool_proficiency:** Calligrapher's Supplies
+      - **equipment:** Calligrapher's Supplies, Quarterstaff, Ink, Ink Pen, Book of Lore, Robe, 8 GP
+    -
+      - **name:** Sailor
+      - **ability_scores:**
+        - Strength
+        - Dexterity
+        - Wisdom
+      - **origin_feat:** Tavern Brawler
+      - **skill_proficiencies:**
+        - Athletics
+        - Perception
+      - **tool_proficiency:** Navigator's Tools
+      - **equipment:** Navigator's Tools, Dagger, 50 ft Silk Rope, Belaying Pin (Club), Traveler's Clothes, 10 GP
+    -
+      - **name:** Scribe
+      - **ability_scores:**
+        - Dexterity
+        - Intelligence
+        - Wisdom
+      - **origin_feat:** Skilled
+      - **skill_proficiencies:**
+        - Investigation
+        - Perception
+      - **tool_proficiency:** Calligrapher's Supplies
+      - **equipment:** Calligrapher's Supplies, Lamp, Oil (3 flasks), Parchment (10 sheets), Fine Clothes, 23 GP
+    -
+      - **name:** Soldier
+      - **ability_scores:**
+        - Strength
+        - Dexterity
+        - Constitution
+      - **origin_feat:** Savage Attacker
+      - **skill_proficiencies:**
+        - Athletics
+        - Intimidation
+      - **tool_proficiency:** One Gaming Set of your choice
+      - **equipment:** Chosen Gaming Set, Spear, Shortbow, 20 Arrows, Quiver, Healer's Kit, Uniform, 14 GP
+    -
+      - **name:** Wayfarer
+      - **ability_scores:**
+        - Dexterity
+        - Wisdom
+        - Charisma
+      - **origin_feat:** Lucky
+      - **skill_proficiencies:**
+        - Insight
+        - Stealth
+      - **tool_proficiency:** Thieves' Tools
+      - **equipment:** Thieves' Tools, 2 Daggers, Pouch, Bedroll, Common Clothes, 16 GP
+- **species:**
+  - **title:** 10 Revised Character Species
+  - **pdf_pages:** 189-201
+  - **book_pages:** 186-198
+  - **species_catalog:**
+    -
+      - **name:** Aasimar
+      - **creature_type:** Humanoid
+      - **size:** Medium or Small (chosen at character creation)
+      - **speed:** 30 feet
+      - **traits:**
+        -
+          - **name:** Celestial Resistance
+          - **description:** You have Resistance to Necrotic damage and Radiant damage.
+        -
+          - **name:** Darkvision
+          - **description:** You can see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light.
+        -
+          - **name:** Healing Hands
+          - **description:** Once per Long Rest as a Magic action, touch a creature to restore Hit Points equal to a number of d4s equal to your Proficiency Bonus.
+        -
+          - **name:** Light Bearer
+          - **description:** You know the Light cantrip, using Charisma as the spellcasting ability.
+        -
+          - **name:** Celestial Revelation
+          - **description:** At level 3, transform for 1 minute as a Bonus Action once per Long Rest (choose Necrotic Shroud, Radiant Consumption, or Radiant Soul).
+    -
+      - **name:** Dragonborn
+      - **creature_type:** Humanoid
+      - **size:** Medium
+      - **speed:** 30 feet
+      - **traits:**
+        -
+          - **name:** Draconic Ancestry
+          - **description:** Choose ancestry (Black/Acid, Blue/Lightning, Brass/Fire, Bronze/Lightning, Copper/Acid, Gold/Fire, Green/Poison, Red/Fire, Silver/Cold, White/Cold). Confers matching Breath Weapon and Damage Resistance.
+        -
+          - **name:** Breath Weapon
+          - **description:** Can replace one attack during Attack action with an exhalation (15-ft Cone or 30-ft Line, 5 ft wide). Deals 1d10 damage on failed Dex/Con save (halved on success), scaling to 2d10 at lvl 5, 3d10 at lvl 11, 4d10 at lvl 17. Usable PB times per Long Rest.
+        -
+          - **name:** Damage Resistance
+          - **description:** Resistance to the damage type associated with your Draconic Ancestry.
+        -
+          - **name:** Darkvision
+          - **description:** 60 feet Darkvision.
+        -
+          - **name:** Draconic Flight
+          - **description:** At level 5, sprout spectral dragon wings as a Bonus Action for 10 minutes, gaining a Fly Speed equal to your Speed once per Long Rest.
+    -
+      - **name:** Dwarf
+      - **creature_type:** Humanoid
+      - **size:** Medium
+      - **speed:** 30 feet
+      - **traits:**
+        -
+          - **name:** Darkvision
+          - **description:** Superior Darkvision out to 120 feet.
+        -
+          - **name:** Dwarven Resilience
+          - **description:** You have Resistance to Poison damage and Advantage on saving throws against the Poisoned condition.
+        -
+          - **name:** Dwarven Toughness
+          - **description:** Your Hit Point maximum increases by 1, and increases by 1 every time you gain a level.
+        -
+          - **name:** Stonecunning
+          - **description:** As a Bonus Action while touching stone surfaces, gain Tremorsense out to 60 feet for 10 minutes (usable PB times per Long Rest).
+    -
+      - **name:** Elf
+      - **creature_type:** Humanoid
+      - **size:** Medium
+      - **speed:** 30 feet
+      - **traits:**
+        -
+          - **name:** Darkvision
+          - **description:** 60 feet Darkvision.
+        -
+          - **name:** Elven Lineage
+          - **description:** Choose Drow (120 ft Darkvision, Dancing Lights, Faerie Fire, Darkness), High Elf (Wizard cantrip, Detect Magic, Misty Step, change cantrip on rest), or Wood Elf (Speed 35 ft, Druidcraft, Longstrider, Pass without Trace).
+        -
+          - **name:** Fey Ancestry
+          - **description:** Advantage on saving throws against the Charmed condition.
+        -
+          - **name:** Keen Senses
+          - **description:** Proficiency in the Perception skill.
+        -
+          - **name:** Trance
+          - **description:** Do not need to sleep. Finish a Long Rest in 4 hours of meditative trance.
+    -
+      - **name:** Gnome
+      - **creature_type:** Humanoid
+      - **size:** Small
+      - **speed:** 30 feet
+      - **traits:**
+        -
+          - **name:** Darkvision
+          - **description:** 60 feet Darkvision.
+        -
+          - **name:** Gnomish Cunning
+          - **description:** You have Advantage on all Intelligence, Wisdom, and Charisma saving throws against spells and magical effects.
+        -
+          - **name:** Gnomish Lineage
+          - **description:** Choose Forest Gnome (Minor Illusion, Speak with Animals PB times/day) or Rock Gnome (Mending, Prestidigitation, craft tiny clockwork devices that produce light, sound, or fire).
+    -
+      - **name:** Goliath
+      - **creature_type:** Humanoid
+      - **size:** Medium
+      - **speed:** 35 feet
+      - **traits:**
+        -
+          - **name:** Giant Ancestry
+          - **description:** Choose Cloud's Jaunt (teleport 30 ft as Bonus Action), Fire's Burn (+1d10 Fire damage), Frost's Chill (+1d6 Cold & reduce speed 10 ft), Hill's Tumble (knock target Prone on hit), Stone's Endurance (reaction reduce damage by 1d12+Con), or Storm's Thunder (reaction deal 1d8 Thunder damage to attacker). Usable PB times per Long Rest.
+        -
+          - **name:** Large Form
+          - **description:** At level 5, as a Bonus Action, transform into Large size for 10 minutes: Advantage on Strength checks, speed increases by +10 ft (usable once per Long Rest).
+        -
+          - **name:** Powerful Build
+          - **description:** Count as one size larger when determining carrying capacity and pushing/lifting weight; Advantage on saves against being moved or knocked Prone.
+    -
+      - **name:** Halfling
+      - **creature_type:** Humanoid
+      - **size:** Small
+      - **speed:** 30 feet
+      - **traits:**
+        -
+          - **name:** Brave
+          - **description:** You have Advantage on saving throws against the Frightened condition.
+        -
+          - **name:** Halfling Nimbleness
+          - **description:** You can move through the space of any creature that is a size larger than you.
+        -
+          - **name:** Luck
+          - **description:** When you roll a 1 on a D20 Test (d20 for attack, ability check, or save), you can reroll the die and must use the new roll.
+        -
+          - **name:** Naturally Stealthy
+          - **description:** You can attempt to hide even when obscured only by a creature at least one size larger than you.
+    -
+      - **name:** Human
+      - **creature_type:** Humanoid
+      - **size:** Medium or Small (chosen at character creation)
+      - **speed:** 30 feet
+      - **traits:**
+        -
+          - **name:** Resourceful
+          - **description:** You gain Heroic Inspiration whenever you finish a Long Rest.
+        -
+          - **name:** Skillful
+          - **description:** You gain proficiency in one skill of your choice.
+        -
+          - **name:** Versatile
+          - **description:** You gain one additional Origin Feat of your choice from the Origin Feats list.
+    -
+      - **name:** Orc
+      - **creature_type:** Humanoid
+      - **size:** Medium
+      - **speed:** 30 feet
+      - **traits:**
+        -
+          - **name:** Adrenaline Rush
+          - **description:** You can take the Dash action as a Bonus Action. When you do, you gain Temporary Hit Points equal to your Proficiency Bonus (usable PB times per Long Rest).
+        -
+          - **name:** Darkvision
+          - **description:** Superior Darkvision out to 120 feet.
+        -
+          - **name:** Relentless Endurance
+          - **description:** When you are reduced to 0 Hit Points but not killed outright, you can drop to 1 Hit Point instead (once per Long Rest).
+    -
+      - **name:** Tiefling
+      - **creature_type:** Humanoid
+      - **size:** Medium or Small (chosen at character creation)
+      - **speed:** 30 feet
+      - **traits:**
+        -
+          - **name:** Darkvision
+          - **description:** 60 feet Darkvision.
+        -
+          - **name:** Fiendish Legacy
+          - **description:** Choose Abyssal (Poison resistance, Poison Spray, Ray of Sickness, Hold Person), Chthonic (Necrotic resistance, Chill Touch, False Life, Ray of Enfeeblement), or Infernal (Fire resistance, Fire Bolt, Hellish Rebuke, Darkness). Spells use Int, Wis, or Cha.
+        -
+          - **name:** Otherworldly Presence
+          - **description:** You know the Thaumaturgy cantrip.
+- **origin_feats:**
+  - **title:** 10 Origin Feats (Level 1+)
+  - **pdf_pages:** 203-205
+  - **book_pages:** 200-202
+  - **prerequisite:** Character Level 1+ (Included automatically with 2024 Backgrounds)
+  - **feats_catalog:**
+    -
+      - **name:** Alert
+      - **category:** Origin Feat
+      - **benefits:**
+        - Initiative Proficiency: You add your Proficiency Bonus to your Initiative rolls.
+        - Initiative Swap: Immediately after you roll Initiative, you can swap your Initiative roll with the Initiative roll of one willing ally within line of sight.
+    -
+      - **name:** Crafter
+      - **category:** Origin Feat
+      - **benefits:**
+        - Tool Proficiency: You gain proficiency in three different Artisan's Tools of your choice.
+        - Discount: Whenever you buy a nonmagical item, you receive a 20 percent discount on the purchase price.
+        - Fast Crafting: When you craft an item using your Artisan's Tools, the crafting time required is halved.
+    -
+      - **name:** Healer
+      - **category:** Origin Feat
+      - **benefits:**
+        - Battle Medic: If you have a Healer's Kit, you can expend one use of it as an action to touch a creature and restore 2d4 + your Proficiency Bonus in Hit Points (once per creature per Rest).
+        - Healing Rerolls: Whenever you roll a die to determine Hit Points restored by a spell or ability, you can reroll any roll of a 1 and must use the new roll.
+    -
+      - **name:** Lucky
+      - **category:** Origin Feat
+      - **benefits:**
+        - Luck Points: You have a number of Luck Points equal to your Proficiency Bonus, regained after finishing a Long Rest.
+        - Advantage: Spend 1 Luck Point to give yourself Advantage on a D20 Test.
+        - Disadvantage: Spend 1 Luck Point as a Reaction when an attack hits you to force the attacker to reroll the d20 and use the lower result.
+    -
+      - **name:** Magic Initiate
+      - **category:** Origin Feat
+      - **benefits:**
+        - Spell Selection: Choose Cleric, Druid, or Wizard. You learn two cantrips of your choice from that class's spell list and one 1st-level spell.
+        - Free Casting: You can cast the chosen 1st-level spell once without expending a spell slot per Long Rest.
+        - Spell Slot Casting: You can also cast the 1st-level spell using any spell slots you have.
+        - Spellcasting Ability: Choose Intelligence, Wisdom, or Charisma as your spellcasting ability for these spells.
+    -
+      - **name:** Musician
+      - **category:** Origin Feat
+      - **benefits:**
+        - Instrument Proficiency: You gain proficiency with three Musical Instruments of your choice.
+        - Inspiring Performance: As you finish a Short Rest or Long Rest, you play music to grant Heroic Inspiration to a number of willing allies equal to your Proficiency Bonus.
+    -
+      - **name:** Savage Attacker
+      - **category:** Origin Feat
+      - **benefits:**
+        - Weapon Damage Reroll: Once per turn when you hit a target with a weapon attack roll, you can roll the weapon's damage dice twice and choose either roll to apply.
+    -
+      - **name:** Skilled
+      - **category:** Origin Feat
+      - **repeatable:** True
+      - **benefits:**
+        - Broad Competence: You gain proficiency in any combination of three skills or tools of your choice. You can take this feat multiple times.
+    -
+      - **name:** Tavern Brawler
+      - **category:** Origin Feat
+      - **benefits:**
+        - Enhanced Unarmed Strike: Your Unarmed Strikes deal 1d4 + Strength modifier Bludgeoning damage.
+        - Damage Reroll: When you hit with an Unarmed Strike, you can reroll any damage die of a 1.
+        - Push: When you hit a creature with an Unarmed Strike on your turn, you can deal damage and push the target 5 feet away.
+        - Improvised Weapons: You are proficient with Improvised Weapons.
+    -
+      - **name:** Tough
+      - **category:** Origin Feat
+      - **benefits:**
+        - Hit Point Maximum Increase: Your Hit Point maximum increases by an amount equal to twice your character level when you gain this feat.
+        - Subsequent Levels: Whenever you gain a level thereafter, your Hit Point maximum increases by an additional 2 Hit Points.

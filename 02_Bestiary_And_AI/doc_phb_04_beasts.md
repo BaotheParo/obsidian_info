@@ -1,0 +1,820 @@
+---
+id: "doc:phb_04_beasts"
+package_id: "PHB_04_BEASTS"
+title: "Phụ Lục B: Bảng Chỉ Số Sinh Vật (Thú Săn, Thú Cưỡi, Linh Thú Triệu Hồi & Xác Sống Cơ Bản)"
+original_title: "Appendix B: Creature Stat Blocks (Beasts, Mounts, Familiars & Undead)"
+source_reference: "Dungeons & Dragons 2024 Player's Handbook (5.5e)"
+system_category: "02_Bestiary_And_AI"
+associated_master_moc: "[[00_Master_MOC]]"
+---
+
+# Phụ Lục B: Bảng Chỉ Số Sinh Vật (Thú Săn, Thú Cưỡi, Linh Thú Triệu Hồi & Xác Sống Cơ Bản)
+
+> **Mã gói (Package ID):** `PHB_04_BEASTS` | **Nguồn khảo cứu:** *Dungeons & Dragons 2024 Player's Handbook (5.5e)*
+> **Phân loại hệ thống:** `[[02_Bestiary_And_AI]]` | **Bản đồ não bộ:** [[00_Master_MOC]]
+
+## 1. Tóm Lược Nghiệp Vụ & Thiết Kế (Executive Summary)
+Dữ liệu luật chơi và cơ chế đã qua chắt lọc.
+
+## 3. Creatures
+-
+  - **name:** Ape
+  - **cr:** 1/2
+  - **xp:** 100
+  - **size:** Medium
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 12
+  - **hp:** 19 (3d8 + 6)
+  - **speed:** 30 ft., climb 30 ft.
+  - **scores:**
+    - **str:** 16
+    - **dex:** 14
+    - **con:** 14
+    - **int:** 6
+    - **wis:** 12
+    - **cha:** 7
+  - **skills:** Athletics +5, Perception +3
+  - **senses:** Passive Perception 13
+  - **actions:**
+    -
+      - **name:** Multiattack
+      - **description:** The ape makes two Fist attacks.
+    -
+      - **name:** Fist
+      - **type:** Melee Attack
+      - **bonus:** +5
+      - **reach:** 5 ft.
+      - **hit:** 6 (1d6 + 3) Bludgeoning damage.
+    -
+      - **name:** Rock
+      - **type:** Ranged Attack
+      - **bonus:** +5
+      - **range:** 25/50 ft.
+      - **hit:** 6 (1d6 + 3) Bludgeoning damage.
+-
+  - **name:** Badger
+  - **cr:** 0
+  - **xp:** 10
+  - **size:** Tiny
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 10
+  - **hp:** 3 (1d4 + 1)
+  - **speed:** 20 ft., burrow 5 ft.
+  - **scores:**
+    - **str:** 4
+    - **dex:** 11
+    - **con:** 12
+    - **int:** 2
+    - **wis:** 12
+    - **cha:** 5
+  - **senses:** Darkvision 30 ft., Keen Smell, Passive Perception 11
+  - **actions:**
+    -
+      - **name:** Bite
+      - **type:** Melee Attack
+      - **bonus:** +2
+      - **reach:** 5 ft.
+      - **hit:** 1 Piercing damage.
+-
+  - **name:** Bat
+  - **cr:** 0
+  - **xp:** 10
+  - **size:** Tiny
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 12
+  - **hp:** 1 (1d4 - 1)
+  - **speed:** 5 ft., fly 30 ft.
+  - **scores:**
+    - **str:** 2
+    - **dex:** 15
+    - **con:** 8
+    - **int:** 2
+    - **wis:** 12
+    - **cha:** 4
+  - **senses:** Blindsight 60 ft. (blind beyond), Passive Perception 11
+  - **traits:**
+    -
+      - **name:** Echolocation
+      - **description:** The bat can't use its blindsight while Deafened.
+  - **actions:**
+    -
+      - **name:** Bite
+      - **type:** Melee Attack
+      - **bonus:** +4
+      - **reach:** 5 ft.
+      - **hit:** 1 Piercing damage.
+-
+  - **name:** Black Bear
+  - **cr:** 1/2
+  - **xp:** 100
+  - **size:** Medium
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 11
+  - **hp:** 19 (3d8 + 6)
+  - **speed:** 40 ft., climb 30 ft.
+  - **scores:**
+    - **str:** 15
+    - **dex:** 12
+    - **con:** 14
+    - **int:** 2
+    - **wis:** 12
+    - **cha:** 7
+  - **skills:** Perception +3
+  - **senses:** Passive Perception 13, Keen Smell
+  - **actions:**
+    -
+      - **name:** Multiattack
+      - **description:** The bear makes one Bite attack and one Claws attack.
+    -
+      - **name:** Bite
+      - **type:** Melee Attack
+      - **bonus:** +4
+      - **reach:** 5 ft.
+      - **hit:** 5 (1d6 + 2) Piercing damage.
+    -
+      - **name:** Claws
+      - **type:** Melee Attack
+      - **bonus:** +4
+      - **reach:** 5 ft.
+      - **hit:** 7 (2d4 + 2) Slashing damage.
+-
+  - **name:** Boar
+  - **cr:** 1/4
+  - **xp:** 50
+  - **size:** Medium
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 11
+  - **hp:** 11 (2d8 + 2)
+  - **speed:** 40 ft.
+  - **scores:**
+    - **str:** 13
+    - **dex:** 11
+    - **con:** 12
+    - **int:** 2
+    - **wis:** 9
+    - **cha:** 5
+  - **senses:** Passive Perception 9
+  - **traits:**
+    -
+      - **name:** Charge
+      - **description:** If the boar moves at least 20 ft. straight toward a target and hits with a Tusk attack, the target takes an extra 3 (1d6) damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked Prone.
+    -
+      - **name:** Relentless
+      - **description:** If the boar takes 7 damage or less that would reduce it to 0 HP, it drops to 1 HP instead (recharges on Short/Long Rest).
+  - **actions:**
+    -
+      - **name:** Tusk
+      - **type:** Melee Attack
+      - **bonus:** +3
+      - **reach:** 5 ft.
+      - **hit:** 4 (1d6 + 1) Slashing damage.
+-
+  - **name:** Brown Bear
+  - **cr:** 1
+  - **xp:** 200
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 11
+  - **hp:** 34 (4d10 + 12)
+  - **speed:** 40 ft., climb 30 ft.
+  - **scores:**
+    - **str:** 19
+    - **dex:** 10
+    - **con:** 16
+    - **int:** 2
+    - **wis:** 13
+    - **cha:** 7
+  - **skills:** Perception +3
+  - **senses:** Passive Perception 13, Keen Smell
+  - **actions:**
+    -
+      - **name:** Multiattack
+      - **description:** The bear makes one Bite attack and one Claws attack.
+    -
+      - **name:** Bite
+      - **type:** Melee Attack
+      - **bonus:** +6
+      - **reach:** 5 ft.
+      - **hit:** 8 (1d8 + 4) Piercing damage.
+    -
+      - **name:** Claws
+      - **type:** Melee Attack
+      - **bonus:** +6
+      - **reach:** 5 ft.
+      - **hit:** 11 (2d6 + 4) Slashing damage.
+-
+  - **name:** Camel
+  - **cr:** 1/8
+  - **xp:** 25
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 9
+  - **hp:** 15 (2d10 + 4)
+  - **speed:** 50 ft.
+  - **scores:**
+    - **str:** 16
+    - **dex:** 8
+    - **con:** 14
+    - **int:** 2
+    - **wis:** 8
+    - **cha:** 5
+  - **senses:** Passive Perception 9
+  - **actions:**
+    -
+      - **name:** Bite
+      - **type:** Melee Attack
+      - **bonus:** +5
+      - **reach:** 5 ft.
+      - **hit:** 2 (1d4) Bludgeoning damage.
+-
+  - **name:** Cat
+  - **cr:** 0
+  - **xp:** 10
+  - **size:** Tiny
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 12
+  - **hp:** 2 (1d4)
+  - **speed:** 40 ft., climb 30 ft.
+  - **scores:**
+    - **str:** 3
+    - **dex:** 15
+    - **con:** 10
+    - **int:** 3
+    - **wis:** 12
+    - **cha:** 7
+  - **skills:** Perception +3, Stealth +4
+  - **senses:** Darkvision 30 ft., Keen Smell, Passive Perception 13
+  - **actions:**
+    -
+      - **name:** Claws
+      - **type:** Melee Attack
+      - **bonus:** +4
+      - **reach:** 5 ft.
+      - **hit:** 1 Slashing damage.
+-
+  - **name:** Constrictor Snake
+  - **cr:** 1/4
+  - **xp:** 50
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 12
+  - **hp:** 13 (2d10 + 2)
+  - **speed:** 30 ft., swim 30 ft.
+  - **scores:**
+    - **str:** 15
+    - **dex:** 14
+    - **con:** 12
+    - **int:** 1
+    - **wis:** 10
+    - **cha:** 3
+  - **senses:** Blindsight 10 ft., Passive Perception 10
+  - **actions:**
+    -
+      - **name:** Bite
+      - **type:** Melee Attack
+      - **bonus:** +4
+      - **reach:** 5 ft.
+      - **hit:** 5 (1d6 + 2) Piercing damage.
+    -
+      - **name:** Constrict
+      - **type:** Melee Attack
+      - **bonus:** +4
+      - **reach:** 5 ft.
+      - **hit:** 6 (1d8 + 2) Bludgeoning damage, and the target is Grappled (escape DC 14). Until this grapple ends, the target has the Restrained condition.
+-
+  - **name:** Crocodile
+  - **cr:** 1/2
+  - **xp:** 100
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 12
+  - **hp:** 19 (3d10 + 3)
+  - **speed:** 20 ft., swim 30 ft.
+  - **scores:**
+    - **str:** 15
+    - **dex:** 10
+    - **con:** 13
+    - **int:** 2
+    - **wis:** 10
+    - **cha:** 5
+  - **skills:** Stealth +2
+  - **senses:** Passive Perception 10
+  - **traits:**
+    -
+      - **name:** Hold Breath
+      - **description:** The crocodile can hold its breath for 1 hour.
+  - **actions:**
+    -
+      - **name:** Bite
+      - **type:** Melee Attack
+      - **bonus:** +4
+      - **reach:** 5 ft.
+      - **hit:** 7 (1d10 + 2) Piercing damage, and target is Grappled (escape DC 12) and Restrained.
+-
+  - **name:** Dire Wolf
+  - **cr:** 1
+  - **xp:** 200
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 14
+  - **hp:** 37 (5d10 + 10)
+  - **speed:** 50 ft.
+  - **scores:**
+    - **str:** 17
+    - **dex:** 15
+    - **con:** 15
+    - **int:** 3
+    - **wis:** 12
+    - **cha:** 7
+  - **skills:** Perception +3, Stealth +4
+  - **senses:** Darkvision 60 ft., Keen Hearing and Smell, Passive Perception 13
+  - **traits:**
+    -
+      - **name:** Pack Tactics
+      - **description:** Advantage on attack rolls against a creature if at least one ally is within 5 ft. of the target.
+  - **actions:**
+    -
+      - **name:** Bite
+      - **type:** Melee Attack
+      - **bonus:** +5
+      - **reach:** 5 ft.
+      - **hit:** 10 (2d6 + 3) Piercing damage. Target must succeed on a DC 13 Strength save or be knocked Prone.
+-
+  - **name:** Draft Horse
+  - **cr:** 1/4
+  - **xp:** 50
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 10
+  - **hp:** 19 (3d10 + 3)
+  - **speed:** 40 ft.
+  - **scores:**
+    - **str:** 18
+    - **dex:** 10
+    - **con:** 12
+    - **int:** 2
+    - **wis:** 11
+    - **cha:** 7
+  - **senses:** Passive Perception 10
+  - **actions:**
+    -
+      - **name:** Hooves
+      - **type:** Melee Attack
+      - **bonus:** +6
+      - **reach:** 5 ft.
+      - **hit:** 9 (2d4 + 4) Bludgeoning damage.
+-
+  - **name:** Elephant
+  - **cr:** 4
+  - **xp:** 1100
+  - **size:** Huge
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 12
+  - **hp:** 76 (8d12 + 24)
+  - **speed:** 40 ft.
+  - **scores:**
+    - **str:** 22
+    - **dex:** 9
+    - **con:** 17
+    - **int:** 3
+    - **wis:** 11
+    - **cha:** 6
+  - **senses:** Passive Perception 10
+  - **traits:**
+    -
+      - **name:** Trampling Charge
+      - **description:** Moving 20+ ft straight and hitting with Gore forces a DC 16 Str save or target is knocked Prone; can then make one Stomp attack as a Bonus Action.
+  - **actions:**
+    -
+      - **name:** Gore
+      - **type:** Melee Attack
+      - **bonus:** +8
+      - **reach:** 5 ft.
+      - **hit:** 19 (3d8 + 6) Piercing damage.
+    -
+      - **name:** Stomp
+      - **type:** Melee Attack
+      - **bonus:** +8
+      - **reach:** 5 ft.
+      - **hit:** 22 (3d10 + 6) Bludgeoning damage.
+-
+  - **name:** Giant Spider
+  - **cr:** 1
+  - **xp:** 200
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 14
+  - **hp:** 26 (4d10 + 4)
+  - **speed:** 30 ft., climb 30 ft.
+  - **scores:**
+    - **str:** 14
+    - **dex:** 16
+    - **con:** 12
+    - **int:** 2
+    - **wis:** 11
+    - **cha:** 4
+  - **skills:** Stealth +7
+  - **senses:** Blindsight 10 ft., Darkvision 60 ft., Web Sense
+  - **traits:**
+    -
+      - **name:** Spider Climb
+      - **description:** Climb difficult surfaces without ability checks.
+  - **actions:**
+    -
+      - **name:** Bite
+      - **type:** Melee Attack
+      - **bonus:** +5
+      - **reach:** 5 ft.
+      - **hit:** 7 (1d8 + 3) Piercing damage plus 9 (2d8) Poison damage (DC 11 Con save halves).
+    -
+      - **name:** Web
+      - **type:** Ranged Attack
+      - **bonus:** +5
+      - **range:** 30/60 ft.
+      - **hit:** Target is Restrained by webbing (escape DC 12).
+-
+  - **name:** Imp
+  - **cr:** 1
+  - **xp:** 200
+  - **size:** Tiny
+  - **type:** Fiend (Devil)
+  - **alignment:** Lawful Evil
+  - **ac:** 13
+  - **hp:** 10 (3d4 + 3)
+  - **speed:** 20 ft., fly 40 ft.
+  - **scores:**
+    - **str:** 6
+    - **dex:** 17
+    - **con:** 13
+    - **int:** 11
+    - **wis:** 12
+    - **cha:** 14
+  - **damage_resistances:** Cold; Bludgeoning, Piercing, Slashing from Nonmagical Attacks
+  - **damage_immunities:** Fire, Poison
+  - **condition_immunities:** Poisoned
+  - **senses:** Darkvision 120 ft., Devil's Sight, Passive Perception 11
+  - **actions:**
+    -
+      - **name:** Sting
+      - **type:** Melee Attack
+      - **bonus:** +5
+      - **reach:** 5 ft.
+      - **hit:** 5 (1d4 + 3) Piercing damage + 10 (3d6) Poison damage (DC 11 Con save halves).
+    -
+      - **name:** Invisibility
+      - **description:** Magically turns invisible until it attacks or concentration ends.
+-
+  - **name:** Lion
+  - **cr:** 1
+  - **xp:** 200
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 12
+  - **hp:** 26 (4d10 + 4)
+  - **speed:** 50 ft.
+  - **scores:**
+    - **str:** 17
+    - **dex:** 15
+    - **con:** 13
+    - **int:** 3
+    - **wis:** 12
+    - **cha:** 8
+  - **skills:** Perception +3, Stealth +6
+  - **senses:** Passive Perception 13, Pack Tactics
+  - **traits:**
+    -
+      - **name:** Pounce
+      - **description:** Moving 20+ ft and hitting with Claw forces DC 13 Str save or target is Prone; can make Bite as Bonus Action.
+  - **actions:**
+    -
+      - **name:** Bite
+      - **type:** Melee Attack
+      - **bonus:** +5
+      - **reach:** 5 ft.
+      - **hit:** 7 (1d8 + 3) Piercing damage.
+    -
+      - **name:** Claw
+      - **type:** Melee Attack
+      - **bonus:** +5
+      - **reach:** 5 ft.
+      - **hit:** 6 (1d6 + 3) Slashing damage.
+-
+  - **name:** Mastiff
+  - **cr:** 1/8
+  - **xp:** 25
+  - **size:** Medium
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 12
+  - **hp:** 5 (1d8 + 1)
+  - **speed:** 40 ft.
+  - **scores:**
+    - **str:** 13
+    - **dex:** 14
+    - **con:** 12
+    - **int:** 3
+    - **wis:** 12
+    - **cha:** 7
+  - **skills:** Perception +3
+  - **senses:** Keen Hearing and Smell, Passive Perception 13
+  - **actions:**
+    -
+      - **name:** Bite
+      - **type:** Melee Attack
+      - **bonus:** +3
+      - **reach:** 5 ft.
+      - **hit:** 4 (1d6 + 1) Piercing damage. DC 11 Strength save or knocked Prone.
+-
+  - **name:** Owl
+  - **cr:** 0
+  - **xp:** 10
+  - **size:** Tiny
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 11
+  - **hp:** 1 (1d4 - 1)
+  - **speed:** 5 ft., fly 60 ft.
+  - **scores:**
+    - **str:** 3
+    - **dex:** 13
+    - **con:** 8
+    - **int:** 2
+    - **wis:** 12
+    - **cha:** 7
+  - **skills:** Perception +3, Stealth +3
+  - **senses:** Darkvision 120 ft., Flyby, Keen Hearing and Sight
+  - **actions:**
+    -
+      - **name:** Talons
+      - **type:** Melee Attack
+      - **bonus:** +3
+      - **reach:** 5 ft.
+      - **hit:** 1 Piercing damage.
+-
+  - **name:** Panther
+  - **cr:** 1/4
+  - **xp:** 50
+  - **size:** Medium
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 12
+  - **hp:** 13 (3d8)
+  - **speed:** 50 ft., climb 40 ft.
+  - **scores:**
+    - **str:** 14
+    - **dex:** 15
+    - **con:** 10
+    - **int:** 3
+    - **wis:** 14
+    - **cha:** 7
+  - **skills:** Perception +4, Stealth +6
+  - **senses:** Keen Smell, Passive Perception 14
+  - **traits:**
+    -
+      - **name:** Pounce
+      - **description:** Moving 20+ ft and hitting with Claw forces DC 12 Str save or target is Prone; can make Bite as Bonus Action.
+  - **actions:**
+    -
+      - **name:** Bite
+      - **type:** Melee Attack
+      - **bonus:** +4
+      - **reach:** 5 ft.
+      - **hit:** 5 (1d6 + 2) Piercing damage.
+    -
+      - **name:** Claw
+      - **type:** Melee Attack
+      - **bonus:** +4
+      - **reach:** 5 ft.
+      - **hit:** 4 (1d4 + 2) Slashing damage.
+-
+  - **name:** Pseudodragon
+  - **cr:** 1/4
+  - **xp:** 50
+  - **size:** Tiny
+  - **type:** Dragon
+  - **alignment:** Neutral Good
+  - **ac:** 13
+  - **hp:** 7 (2d4 + 2)
+  - **speed:** 15 ft., fly 60 ft.
+  - **scores:**
+    - **str:** 6
+    - **dex:** 15
+    - **con:** 13
+    - **int:** 10
+    - **wis:** 12
+    - **cha:** 10
+  - **skills:** Perception +3, Stealth +4
+  - **senses:** Blindsight 10 ft., Darkvision 60 ft., Magic Resistance, Limited Telepathy 100 ft.
+  - **actions:**
+    -
+      - **name:** Bite
+      - **type:** Melee Attack
+      - **bonus:** +4
+      - **reach:** 5 ft.
+      - **hit:** 4 (1d4 + 2) Piercing damage.
+    -
+      - **name:** Sting
+      - **type:** Melee Attack
+      - **bonus:** +4
+      - **reach:** 5 ft.
+      - **hit:** 4 (1d4 + 2) Piercing damage, and target makes DC 11 Con save or Poisoned for 1 hour (fails by 5+ = Unconscious).
+-
+  - **name:** Riding Horse
+  - **cr:** 1/4
+  - **xp:** 50
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 10
+  - **hp:** 13 (2d10 + 2)
+  - **speed:** 60 ft.
+  - **scores:**
+    - **str:** 16
+    - **dex:** 10
+    - **con:** 12
+    - **int:** 2
+    - **wis:** 11
+    - **cha:** 7
+  - **senses:** Passive Perception 10
+  - **actions:**
+    -
+      - **name:** Hooves
+      - **type:** Melee Attack
+      - **bonus:** +5
+      - **reach:** 5 ft.
+      - **hit:** 8 (2d4 + 3) Bludgeoning damage.
+-
+  - **name:** Skeleton
+  - **cr:** 1/4
+  - **xp:** 50
+  - **size:** Medium
+  - **type:** Undead
+  - **alignment:** Lawful Evil
+  - **ac:** 13
+  - **hp:** 13 (2d8 + 4)
+  - **speed:** 30 ft.
+  - **scores:**
+    - **str:** 10
+    - **dex:** 14
+    - **con:** 15
+    - **int:** 6
+    - **wis:** 8
+    - **cha:** 5
+  - **damage_vulnerabilities:** Bludgeoning
+  - **damage_immunities:** Poison
+  - **condition_immunities:** Exhaustion, Poisoned
+  - **senses:** Darkvision 60 ft., Passive Perception 9
+  - **actions:**
+    -
+      - **name:** Shortsword
+      - **type:** Melee Attack
+      - **bonus:** +4
+      - **reach:** 5 ft.
+      - **hit:** 5 (1d6 + 2) Piercing damage.
+    -
+      - **name:** Shortbow
+      - **type:** Ranged Attack
+      - **bonus:** +4
+      - **range:** 80/320 ft.
+      - **hit:** 5 (1d6 + 2) Piercing damage.
+-
+  - **name:** Tiger
+  - **cr:** 1
+  - **xp:** 200
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 12
+  - **hp:** 37 (5d10 + 10)
+  - **speed:** 40 ft.
+  - **scores:**
+    - **str:** 17
+    - **dex:** 15
+    - **con:** 14
+    - **int:** 3
+    - **wis:** 12
+    - **cha:** 8
+  - **skills:** Perception +3, Stealth +6
+  - **senses:** Darkvision 60 ft., Keen Smell
+  - **traits:**
+    -
+      - **name:** Pounce
+      - **description:** Moving 20+ ft and hitting with Claw forces DC 13 Str save or target is Prone; can make Bite as Bonus Action.
+  - **actions:**
+    -
+      - **name:** Bite
+      - **type:** Melee Attack
+      - **bonus:** +5
+      - **reach:** 5 ft.
+      - **hit:** 8 (1d10 + 3) Piercing damage.
+    -
+      - **name:** Claw
+      - **type:** Melee Attack
+      - **bonus:** +5
+      - **reach:** 5 ft.
+      - **hit:** 7 (1d8 + 3) Slashing damage.
+-
+  - **name:** Warhorse
+  - **cr:** 1/2
+  - **xp:** 100
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 11
+  - **hp:** 19 (3d10 + 3)
+  - **speed:** 60 ft.
+  - **scores:**
+    - **str:** 18
+    - **dex:** 12
+    - **con:** 13
+    - **int:** 2
+    - **wis:** 12
+    - **cha:** 7
+  - **senses:** Passive Perception 11
+  - **traits:**
+    -
+      - **name:** Trampling Charge
+      - **description:** Moving 20+ ft and hitting with Hooves forces DC 14 Str save or target is Prone; can make one Hooves attack as a Bonus Action.
+  - **actions:**
+    -
+      - **name:** Hooves
+      - **type:** Melee Attack
+      - **bonus:** +6
+      - **reach:** 5 ft.
+      - **hit:** 11 (2d6 + 4) Bludgeoning damage.
+-
+  - **name:** Wolf
+  - **cr:** 1/4
+  - **xp:** 50
+  - **size:** Medium
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 12
+  - **hp:** 11 (2d8 + 2)
+  - **speed:** 40 ft.
+  - **scores:**
+    - **str:** 12
+    - **dex:** 15
+    - **con:** 12
+    - **int:** 3
+    - **wis:** 12
+    - **cha:** 6
+  - **skills:** Perception +3, Stealth +4
+  - **senses:** Keen Hearing and Smell, Passive Perception 13
+  - **traits:**
+    -
+      - **name:** Pack Tactics
+      - **description:** Advantage on attack rolls against a creature if at least one ally is within 5 ft.
+  - **actions:**
+    -
+      - **name:** Bite
+      - **type:** Melee Attack
+      - **bonus:** +4
+      - **reach:** 5 ft.
+      - **hit:** 7 (2d4 + 2) Piercing damage. DC 11 Strength save or knocked Prone.
+-
+  - **name:** Zombie
+  - **cr:** 1/4
+  - **xp:** 50
+  - **size:** Medium
+  - **type:** Undead
+  - **alignment:** Neutral Evil
+  - **ac:** 8
+  - **hp:** 22 (3d8 + 9)
+  - **speed:** 20 ft.
+  - **scores:**
+    - **str:** 13
+    - **dex:** 6
+    - **con:** 16
+    - **int:** 3
+    - **wis:** 6
+    - **cha:** 5
+  - **damage_immunities:** Poison
+  - **condition_immunities:** Poisoned
+  - **senses:** Darkvision 60 ft., Passive Perception 8
+  - **traits:**
+    -
+      - **name:** Undead Fortitude
+      - **description:** If damage reduces zombie to 0 HP, it makes a Con save with DC 5 + damage taken (unless Radiant or Critical Hit). On success, drops to 1 HP instead.
+  - **actions:**
+    -
+      - **name:** Slam
+      - **type:** Melee Attack
+      - **bonus:** +3
+      - **reach:** 5 ft.
+      - **hit:** 4 (1d6 + 1) Bludgeoning damage.

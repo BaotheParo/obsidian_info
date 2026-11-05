@@ -1,0 +1,573 @@
+---
+id: "doc:adnd_01_races_classes_tables"
+package_id: "ADND_01_RACES_CLASSES_TABLES"
+title: "Bảng Tổng Hợp Tạo Nhân Vật: Thuộc Tính, Chủng Tộc, Yêu Cầu Lớp & Kỹ Năng Đạo Tặc"
+original_title: "Compiled Character Generation Tables (Attributes, Races, Classes & Thieving)"
+source_reference: "Advanced Dungeons & Dragons 2nd Edition Player's Handbook (Revised)"
+system_category: "00_System_Engines"
+associated_master_moc: "[[00_Master_MOC]]"
+---
+
+# Bảng Tổng Hợp Tạo Nhân Vật: Thuộc Tính, Chủng Tộc, Yêu Cầu Lớp & Kỹ Năng Đạo Tặc
+
+> **Mã gói (Package ID):** `ADND_01_RACES_CLASSES_TABLES` | **Nguồn khảo cứu:** *Advanced Dungeons & Dragons 2nd Edition Player's Handbook (Revised)*
+> **Phân loại hệ thống:** `[[00_System_Engines]]` | **Bản đồ não bộ:** [[00_Master_MOC]]
+
+## 1. Tóm Lược Nghiệp Vụ & Thiết Kế (Executive Summary)
+Bản cô đọng gom toàn bộ bảng thống kê quan trọng của Chương 1, 2, 3 trong 4 trang PDF (Tables 1-9, 13, 18, 21-22, 24, 26-30, 33-36).
+
+## 2. Ánh Xạ Cơ Chế Sang Sinh Tồn Thực Tế (Project Zomboid B42 / Hardcore RPG Mapping)
+**Ý nghĩa cốt lõi:** Mẹo tiết kiệm 30 trang: Thay vì nạp toàn bộ Chương 1, 2, 3, Phụ lục 8 này gom sẵn toàn bộ Bảng Chỉ số (Attributes 3-18), Chủng tộc (Races), Yêu cầu Class, Bảng Kỹ năng Đạo tặc (Thieving Skills) và Hệ số Đâm lén (Backstab).
+
+### Bảng Đối Chiếu Cơ Chế Tương Đương:
+- **adnd_mechanic:** Strength (18/01-18/00 Exceptional)
+- **b42_equivalent:** Strength Stat (1-10) + Trait Stout/Strong; tăng carry weight và melee damage
+
+- **adnd_mechanic:** Dexterity Adjustment to AC & Missiles
+- **b42_equivalent:** Nimble / Agility + Aiming stat; né đòn và bắn súng/cung
+
+- **adnd_mechanic:** Constitution HP & System Shock
+- **b42_equivalent:** Fitness Stat + Infection/Bleeding survival resistance
+
+- **adnd_mechanic:** Backstab Multipliers (x2 at L1 to x5 at L13+)
+- **b42_equivalent:** Jaw Stab / Critical Stealth Attack (One-hit kill from behind with hunting knife/spear)
+
+- **adnd_mechanic:** Thieving Skill Armor Adjustments (Table 29)
+- **b42_equivalent:** Weight and Armor encumbrance penalties on Sneak / Lightfoot
+
+
+## 3. Tables
+- **ability_scores_tables:**
+  - **table_1_strength:**
+    - **name:** Table 1: STRENGTH
+    - **pdf_page:** 246
+    - **book_page:** 245
+    - **entries:**
+      -
+        - **score:** 3
+        - **hit_prob:** -3
+        - **dmg_adj:** -1
+        - **weight_allow_lbs:** 5
+        - **max_press_lbs:** 10
+        - **open_doors:** 2
+        - **bend_bars:** 0%
+      -
+        - **score:** 4-5
+        - **hit_prob:** -2
+        - **dmg_adj:** -1
+        - **weight_allow_lbs:** 10
+        - **max_press_lbs:** 25
+        - **open_doors:** 3
+        - **bend_bars:** 0%
+      -
+        - **score:** 6-7
+        - **hit_prob:** -1
+        - **dmg_adj:** 0
+        - **weight_allow_lbs:** 20
+        - **max_press_lbs:** 55
+        - **open_doors:** 4
+        - **bend_bars:** 0%
+      -
+        - **score:** 8-9
+        - **hit_prob:** 0
+        - **dmg_adj:** 0
+        - **weight_allow_lbs:** 35
+        - **max_press_lbs:** 90
+        - **open_doors:** 5
+        - **bend_bars:** 1%
+      -
+        - **score:** 10-11
+        - **hit_prob:** 0
+        - **dmg_adj:** 0
+        - **weight_allow_lbs:** 40
+        - **max_press_lbs:** 115
+        - **open_doors:** 6
+        - **bend_bars:** 2%
+      -
+        - **score:** 12-13
+        - **hit_prob:** 0
+        - **dmg_adj:** 0
+        - **weight_allow_lbs:** 45
+        - **max_press_lbs:** 140
+        - **open_doors:** 7
+        - **bend_bars:** 4%
+      -
+        - **score:** 14-15
+        - **hit_prob:** 0
+        - **dmg_adj:** 0
+        - **weight_allow_lbs:** 55
+        - **max_press_lbs:** 170
+        - **open_doors:** 8
+        - **bend_bars:** 7%
+      -
+        - **score:** 16
+        - **hit_prob:** 0
+        - **dmg_adj:** 1
+        - **weight_allow_lbs:** 70
+        - **max_press_lbs:** 195
+        - **open_doors:** 9
+        - **bend_bars:** 10%
+      -
+        - **score:** 17
+        - **hit_prob:** 1
+        - **dmg_adj:** 1
+        - **weight_allow_lbs:** 85
+        - **max_press_lbs:** 220
+        - **open_doors:** 10
+        - **bend_bars:** 13%
+      -
+        - **score:** 18
+        - **hit_prob:** 1
+        - **dmg_adj:** 2
+        - **weight_allow_lbs:** 110
+        - **max_press_lbs:** 255
+        - **open_doors:** 11
+        - **bend_bars:** 16%
+      -
+        - **score:** 18/01-50
+        - **hit_prob:** 1
+        - **dmg_adj:** 3
+        - **weight_allow_lbs:** 135
+        - **max_press_lbs:** 280
+        - **open_doors:** 12
+        - **bend_bars:** 20%
+      -
+        - **score:** 18/51-75
+        - **hit_prob:** 2
+        - **dmg_adj:** 3
+        - **weight_allow_lbs:** 160
+        - **max_press_lbs:** 305
+        - **open_doors:** 13
+        - **bend_bars:** 25%
+      -
+        - **score:** 18/76-90
+        - **hit_prob:** 2
+        - **dmg_adj:** 4
+        - **weight_allow_lbs:** 185
+        - **max_press_lbs:** 330
+        - **open_doors:** 14
+        - **bend_bars:** 30%
+      -
+        - **score:** 18/91-99
+        - **hit_prob:** 2
+        - **dmg_adj:** 5
+        - **weight_allow_lbs:** 235
+        - **max_press_lbs:** 380
+        - **open_doors:** 15
+        - **bend_bars:** 35%
+      -
+        - **score:** 18/00
+        - **hit_prob:** 3
+        - **dmg_adj:** 6
+        - **weight_allow_lbs:** 335
+        - **max_press_lbs:** 480
+        - **open_doors:** 16
+        - **bend_bars:** 40%
+  - **table_2_dexterity:**
+    - **name:** Table 2: DEXTERITY
+    - **pdf_page:** 246
+    - **book_page:** 245
+    - **entries:**
+      -
+        - **score:** 3
+        - **surprise_adj:** -3
+        - **missile_att_adj:** -3
+        - **defensive_adj_ac:** 4
+      -
+        - **score:** 4
+        - **surprise_adj:** -2
+        - **missile_att_adj:** -2
+        - **defensive_adj_ac:** 3
+      -
+        - **score:** 5
+        - **surprise_adj:** -1
+        - **missile_att_adj:** -1
+        - **defensive_adj_ac:** 2
+      -
+        - **score:** 6
+        - **surprise_adj:** 0
+        - **missile_att_adj:** 0
+        - **defensive_adj_ac:** 1
+      -
+        - **score:** 7-14
+        - **surprise_adj:** 0
+        - **missile_att_adj:** 0
+        - **defensive_adj_ac:** 0
+      -
+        - **score:** 15
+        - **surprise_adj:** 0
+        - **missile_att_adj:** 0
+        - **defensive_adj_ac:** -1
+      -
+        - **score:** 16
+        - **surprise_adj:** 1
+        - **missile_att_adj:** 1
+        - **defensive_adj_ac:** -2
+      -
+        - **score:** 17
+        - **surprise_adj:** 2
+        - **missile_att_adj:** 2
+        - **defensive_adj_ac:** -3
+      -
+        - **score:** 18
+        - **surprise_adj:** 2
+        - **missile_att_adj:** 2
+        - **defensive_adj_ac:** -4
+      -
+        - **score:** 19
+        - **surprise_adj:** 3
+        - **missile_att_adj:** 3
+        - **defensive_adj_ac:** -4
+  - **table_3_constitution:**
+    - **name:** Table 3: CONSTITUTION
+    - **pdf_page:** 246
+    - **book_page:** 245
+    - **entries:**
+      -
+        - **score:** 3
+        - **hp_adj:** -2
+        - **system_shock:** 35%
+        - **resurrection_survival:** 40%
+        - **poison_save:** 0
+        - **regen:** Nil
+      -
+        - **score:** 4-6
+        - **hp_adj:** -1
+        - **system_shock:** 40-50%
+        - **resurrection_survival:** 45-55%
+        - **poison_save:** 0
+        - **regen:** Nil
+      -
+        - **score:** 7-14
+        - **hp_adj:** 0
+        - **system_shock:** 55-88%
+        - **resurrection_survival:** 60-92%
+        - **poison_save:** 0
+        - **regen:** Nil
+      -
+        - **score:** 15
+        - **hp_adj:** 1
+        - **system_shock:** 90%
+        - **resurrection_survival:** 94%
+        - **poison_save:** 0
+        - **regen:** Nil
+      -
+        - **score:** 16
+        - **hp_adj:** 2
+        - **system_shock:** 95%
+        - **resurrection_survival:** 96%
+        - **poison_save:** 0
+        - **regen:** Nil
+      -
+        - **score:** 17
+        - **hp_adj:** +2 (+3 for Warriors)
+        - **system_shock:** 97%
+        - **resurrection_survival:** 98%
+        - **poison_save:** 0
+        - **regen:** Nil
+      -
+        - **score:** 18
+        - **hp_adj:** +2 (+4 for Warriors)
+        - **system_shock:** 99%
+        - **resurrection_survival:** 100%
+        - **poison_save:** 0
+        - **regen:** Nil
+- **races_and_classes_tables:**
+  - **table_7_racial_ability_requirements:**
+    - **name:** Table 7: RACIAL ABILITY REQUIREMENTS
+    - **pdf_page:** 247
+    - **book_page:** 246
+    - **races:**
+      -
+        - **race:** Dwarf
+        - **str:** 8/18
+        - **dex:** 3/17
+        - **con:** 11/18
+        - **int:** 3/18
+        - **wis:** 3/18
+        - **cha:** 3/17
+      -
+        - **race:** Elf
+        - **str:** 3/18
+        - **dex:** 6/18
+        - **con:** 7/18
+        - **int:** 8/18
+        - **wis:** 3/18
+        - **cha:** 8/18
+      -
+        - **race:** Gnome
+        - **str:** 6/18
+        - **dex:** 3/18
+        - **con:** 8/18
+        - **int:** 6/18
+        - **wis:** 3/18
+        - **cha:** 3/18
+      -
+        - **race:** Half-Elf
+        - **str:** 3/18
+        - **dex:** 6/18
+        - **con:** 6/18
+        - **int:** 4/18
+        - **wis:** 3/18
+        - **cha:** 3/18
+      -
+        - **race:** Halfling
+        - **str:** 7/18
+        - **dex:** 7/18
+        - **con:** 10/18
+        - **int:** 6/18
+        - **wis:** 3/17
+        - **cha:** 3/18
+      -
+        - **race:** Human
+        - **str:** 3/18
+        - **dex:** 3/18
+        - **con:** 3/18
+        - **int:** 3/18
+        - **wis:** 3/18
+        - **cha:** 3/18
+  - **table_8_racial_ability_adjustments:**
+    - **name:** Table 8: RACIAL ABILITY ADJUSTMENTS
+    - **pdf_page:** 247
+    - **book_page:** 246
+    - **adjustments:**
+      -
+        - **race:** Dwarf
+        - **adjustments:** +1 Constitution, -1 Charisma
+      -
+        - **race:** Elf
+        - **adjustments:** +1 Dexterity, -1 Constitution
+      -
+        - **race:** Gnome
+        - **adjustments:** +1 Intelligence, -1 Wisdom
+      -
+        - **race:** Half-Elf
+        - **adjustments:** None
+      -
+        - **race:** Halfling
+        - **adjustments:** +1 Dexterity, -1 Strength
+      -
+        - **race:** Human
+        - **adjustments:** None
+  - **table_13_class_ability_minimums:**
+    - **name:** Table 13: CLASS ABILITY MINIMUMS
+    - **pdf_page:** 247
+    - **book_page:** 246
+    - **classes:**
+      -
+        - **class:** Fighter
+        - **str:** 9
+        - **dex:** -
+        - **con:** -
+        - **int:** -
+        - **wis:** -
+        - **cha:** -
+      -
+        - **class:** Paladin
+        - **str:** 12
+        - **dex:** -
+        - **con:** 9
+        - **int:** -
+        - **wis:** 13
+        - **cha:** 17
+      -
+        - **class:** Ranger
+        - **str:** 13
+        - **dex:** 13
+        - **con:** 14
+        - **int:** -
+        - **wis:** 14
+        - **cha:** -
+      -
+        - **class:** Mage
+        - **str:** -
+        - **dex:** -
+        - **con:** -
+        - **int:** 9
+        - **wis:** -
+        - **cha:** -
+      -
+        - **class:** Cleric
+        - **str:** -
+        - **dex:** -
+        - **con:** -
+        - **int:** -
+        - **wis:** 9
+        - **cha:** -
+      -
+        - **class:** Druid
+        - **str:** -
+        - **dex:** -
+        - **con:** -
+        - **int:** -
+        - **wis:** 12
+        - **cha:** 15
+      -
+        - **class:** Thief
+        - **str:** -
+        - **dex:** 9
+        - **con:** -
+        - **int:** -
+        - **wis:** -
+        - **cha:** -
+      -
+        - **class:** Bard
+        - **str:** -
+        - **dex:** 12
+        - **con:** -
+        - **int:** 13
+        - **wis:** -
+        - **cha:** 15
+- **thieving_skills_and_backstab:**
+  - **table_26_thieving_skill_base_scores:**
+    - **name:** Table 26: THIEVING SKILL BASE SCORES (LEVEL 1)
+    - **pdf_page:** 248
+    - **book_page:** 247
+    - **base_scores:**
+      - **pick_pockets:** 15%
+      - **open_locks:** 10%
+      - **find_remove_traps:** 5%
+      - **move_silently:** 10%
+      - **hide_in_shadows:** 5%
+      - **detect_noise:** 15%
+      - **climb_walls:** 60%
+      - **read_languages:** 0%
+  - **table_28_thieving_skill_dex_adjustments:**
+    - **name:** Table 28: THIEVING SKILL DEXTERITY ADJUSTMENTS
+    - **pdf_page:** 249
+    - **book_page:** 248
+    - **adjustments:**
+      -
+        - **dex:** 9
+        - **pick_pockets:** -15%
+        - **open_locks:** -10%
+        - **find_traps:** -10%
+        - **move_silently:** -20%
+        - **hide_shadows:** -10%
+      -
+        - **dex:** 10
+        - **pick_pockets:** -10%
+        - **open_locks:** -5%
+        - **find_traps:** -10%
+        - **move_silently:** -15%
+        - **hide_shadows:** -5%
+      -
+        - **dex:** 11
+        - **pick_pockets:** -5%
+        - **open_locks:** 0%
+        - **find_traps:** -5%
+        - **move_silently:** -10%
+        - **hide_shadows:** 0%
+      -
+        - **dex:** 12
+        - **pick_pockets:** 0%
+        - **open_locks:** 0%
+        - **find_traps:** 0%
+        - **move_silently:** -5%
+        - **hide_shadows:** 0%
+      -
+        - **dex:** 13-15
+        - **pick_pockets:** 0%
+        - **open_locks:** 0%
+        - **find_traps:** 0%
+        - **move_silently:** 0%
+        - **hide_shadows:** 0%
+      -
+        - **dex:** 16
+        - **pick_pockets:** 0%
+        - **open_locks:** +5%
+        - **find_traps:** 0%
+        - **move_silently:** 0%
+        - **hide_shadows:** 0%
+      -
+        - **dex:** 17
+        - **pick_pockets:** +5%
+        - **open_locks:** +10%
+        - **find_traps:** 0%
+        - **move_silently:** +5%
+        - **hide_shadows:** +5%
+      -
+        - **dex:** 18
+        - **pick_pockets:** +10%
+        - **open_locks:** +15%
+        - **find_traps:** +5%
+        - **move_silently:** +10%
+        - **hide_shadows:** +10%
+      -
+        - **dex:** 19
+        - **pick_pockets:** +15%
+        - **open_locks:** +20%
+        - **find_traps:** +10%
+        - **move_silently:** +15%
+        - **hide_shadows:** +12%
+  - **table_29_thieving_skill_armor_adjustments:**
+    - **name:** Table 29: THIEVING SKILL ARMOR ADJUSTMENTS
+    - **pdf_page:** 249
+    - **book_page:** 248
+    - **adjustments:**
+      -
+        - **armor:** No Armor
+        - **pick_pockets:** +5%
+        - **open_locks:** 0%
+        - **find_traps:** 0%
+        - **move_silently:** +10%
+        - **hide_shadows:** +5%
+        - **detect_noise:** 0%
+        - **climb_walls:** +10%
+      -
+        - **armor:** Padded Armor
+        - **pick_pockets:** -30%
+        - **open_locks:** -10%
+        - **find_traps:** -10%
+        - **move_silently:** -20%
+        - **hide_shadows:** -20%
+        - **detect_noise:** -10%
+        - **climb_walls:** -30%
+      -
+        - **armor:** Leather Armor
+        - **pick_pockets:** 0%
+        - **open_locks:** 0%
+        - **find_traps:** 0%
+        - **move_silently:** 0%
+        - **hide_shadows:** 0%
+        - **detect_noise:** 0%
+        - **climb_walls:** 0%
+      -
+        - **armor:** Studded Leather
+        - **pick_pockets:** -30%
+        - **open_locks:** -10%
+        - **find_traps:** -10%
+        - **move_silently:** -20%
+        - **hide_shadows:** -20%
+        - **detect_noise:** -10%
+        - **climb_walls:** -30%
+      -
+        - **armor:** Elven Chain Mail
+        - **pick_pockets:** -20%
+        - **open_locks:** -5%
+        - **find_traps:** -5%
+        - **move_silently:** -10%
+        - **hide_shadows:** -10%
+        - **detect_noise:** -5%
+        - **climb_walls:** -20%
+  - **table_30_backstab_damage_multipliers:**
+    - **name:** Table 30: BACKSTAB DAMAGE MULTIPLIERS
+    - **pdf_page:** 249
+    - **book_page:** 248
+    - **progression:**
+      -
+        - **thief_level:** Level 1-4
+        - **damage_multiplier:** x2 Damage
+        - **hit_bonus:** +4 to hit
+      -
+        - **thief_level:** Level 5-8
+        - **damage_multiplier:** x3 Damage
+        - **hit_bonus:** +4 to hit
+      -
+        - **thief_level:** Level 9-12
+        - **damage_multiplier:** x4 Damage
+        - **hit_bonus:** +4 to hit
+      -
+        - **thief_level:** Level 13+
+        - **damage_multiplier:** x5 Damage
+        - **hit_bonus:** +4 to hit

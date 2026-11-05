@@ -1,0 +1,777 @@
+---
+id: "doc:phb_02_equipment"
+package_id: "PHB_02_EQUIPMENT"
+title: "Trang Bị, Tinh Thông Vũ Khí (Weapon Mastery), Giáp Trụ, Dụng Cụ, Thú Cưỡi & Chế Tác"
+original_title: "Equipment, Weapon Mastery, Armor, Tools, Mounts & Crafting"
+source_reference: "Dungeons & Dragons 2024 Player's Handbook (5.5e)"
+system_category: "03_Arsenal_And_Bastions"
+associated_master_moc: "[[00_Master_MOC]]"
+---
+
+# Trang Bị, Tinh Thông Vũ Khí (Weapon Mastery), Giáp Trụ, Dụng Cụ, Thú Cưỡi & Chế Tác
+
+> **Mã gói (Package ID):** `PHB_02_EQUIPMENT` | **Nguồn khảo cứu:** *Dungeons & Dragons 2024 Player's Handbook (5.5e)*
+> **Phân loại hệ thống:** `[[03_Arsenal_And_Bastions]]` | **Bản đồ não bộ:** [[00_Master_MOC]]
+
+## 1. Tóm Lược Nghiệp Vụ & Thiết Kế (Executive Summary)
+Dữ liệu luật chơi và cơ chế đã qua chắt lọc.
+
+## 3. Sections
+- **weapon_mastery_properties:**
+  - **title:** 8 Weapon Mastery Properties
+  - **pdf_pages:** 216-217
+  - **book_pages:** 213-214
+  - **overview:** Weapon Mastery represents specialized tactical training unlocked by warrior classes (Barbarian, Fighter, Paladin, Ranger, Rogue) or feats. When you make an attack with a mastered weapon, you can activate its designated Mastery property.
+  - **mastery_catalog:**
+    -
+      - **name:** Cleave
+      - **type:** Melee attack
+      - **mechanics:** If you hit a creature with a melee attack roll using this weapon, you can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within your reach. On a hit, the second creature takes the weapon's damage die, but don't add your ability modifier to that damage unless the modifier is negative. You can make this extra attack only once per turn.
+    -
+      - **name:** Graze
+      - **type:** Melee attack
+      - **mechanics:** If your attack roll with this weapon misses a creature, you still deal damage to that creature equal to the ability modifier you used to make the attack roll. This damage can't be increased in any way other than increasing the ability modifier.
+    -
+      - **name:** Nick
+      - **type:** Light weapon attack
+      - **mechanics:** When you make the extra attack granted by the Light weapon property, you can make that extra attack as part of the Attack action instead of as a Bonus Action. You can make this extra attack only once per turn.
+    -
+      - **name:** Push
+      - **type:** Melee or Ranged attack
+      - **mechanics:** If you hit a creature with this weapon, you can push the creature up to 10 feet straight away from you, provided the creature is Large or smaller.
+    -
+      - **name:** Sap
+      - **type:** Melee attack
+      - **mechanics:** If you hit a creature with this weapon, that creature has Disadvantage on its next attack roll before the start of your next turn.
+    -
+      - **name:** Slow
+      - **type:** Melee or Ranged attack
+      - **mechanics:** If you hit a creature with this weapon and deal damage to it, you can reduce its Speed by 10 feet until the start of your next turn. If you hit the creature more than once with this property on a turn, the speed reductions don't stack.
+    -
+      - **name:** Topple
+      - **type:** Melee attack
+      - **mechanics:** If you hit a creature with this weapon, you can force the creature to make a Constitution saving throw (DC 8 + your Strength modifier + your Proficiency Bonus). On a failed save, the creature has the Prone condition.
+    -
+      - **name:** Vex
+      - **type:** Melee or Ranged attack
+      - **mechanics:** If you hit a creature with this weapon and deal damage to it, you have Advantage on your next attack roll against that creature before the end of your next turn.
+- **weapons_table:**
+  - **title:** Weapons Catalog
+  - **pdf_pages:** 218-221
+  - **book_pages:** 215-218
+  - **simple_melee_weapons:**
+    -
+      - **name:** Club
+      - **cost:** 1 SP
+      - **damage:** 1d4 Bludgeoning
+      - **weight:** 2 lb
+      - **properties:**
+        - Light
+      - **mastery:** Slow
+    -
+      - **name:** Dagger
+      - **cost:** 2 GP
+      - **damage:** 1d4 Piercing
+      - **weight:** 1 lb
+      - **properties:**
+        - Finesse
+        - Light
+        - Thrown (Range 20/60)
+      - **mastery:** Nick
+    -
+      - **name:** Greatclub
+      - **cost:** 2 SP
+      - **damage:** 1d8 Bludgeoning
+      - **weight:** 10 lb
+      - **properties:**
+        - Two-Handed
+      - **mastery:** Push
+    -
+      - **name:** Handaxe
+      - **cost:** 5 GP
+      - **damage:** 1d6 Slashing
+      - **weight:** 2 lb
+      - **properties:**
+        - Light
+        - Thrown (Range 20/60)
+      - **mastery:** Vex
+    -
+      - **name:** Javelin
+      - **cost:** 5 SP
+      - **damage:** 1d6 Piercing
+      - **weight:** 2 lb
+      - **properties:**
+        - Thrown (Range 30/120)
+      - **mastery:** Slow
+    -
+      - **name:** Light Hammer
+      - **cost:** 2 GP
+      - **damage:** 1d4 Bludgeoning
+      - **weight:** 2 lb
+      - **properties:**
+        - Light
+        - Thrown (Range 20/60)
+      - **mastery:** Nick
+    -
+      - **name:** Mace
+      - **cost:** 5 GP
+      - **damage:** 1d6 Bludgeoning
+      - **weight:** 4 lb
+      - **properties:**
+
+      - **mastery:** Sap
+    -
+      - **name:** Quarterstaff
+      - **cost:** 2 SP
+      - **damage:** 1d6 Bludgeoning
+      - **weight:** 4 lb
+      - **properties:**
+        - Versatile (1d8)
+      - **mastery:** Topple
+    -
+      - **name:** Sickle
+      - **cost:** 1 GP
+      - **damage:** 1d4 Slashing
+      - **weight:** 2 lb
+      - **properties:**
+        - Light
+      - **mastery:** Nick
+    -
+      - **name:** Spear
+      - **cost:** 1 GP
+      - **damage:** 1d6 Piercing
+      - **weight:** 3 lb
+      - **properties:**
+        - Thrown (Range 20/60)
+        - Versatile (1d8)
+      - **mastery:** Sap
+  - **simple_ranged_weapons:**
+    -
+      - **name:** Dart
+      - **cost:** 5 CP
+      - **damage:** 1d4 Piercing
+      - **weight:** 1/4 lb
+      - **properties:**
+        - Finesse
+        - Thrown (Range 20/60)
+      - **mastery:** Vex
+    -
+      - **name:** Light Crossbow
+      - **cost:** 25 GP
+      - **damage:** 1d8 Piercing
+      - **weight:** 5 lb
+      - **properties:**
+        - Ammunition (Range 80/320)
+        - Loading
+        - Two-Handed
+      - **mastery:** Slow
+    -
+      - **name:** Shortbow
+      - **cost:** 25 GP
+      - **damage:** 1d6 Piercing
+      - **weight:** 2 lb
+      - **properties:**
+        - Ammunition (Range 80/320)
+        - Two-Handed
+      - **mastery:** Vex
+    -
+      - **name:** Sling
+      - **cost:** 1 SP
+      - **damage:** 1d4 Bludgeoning
+      - **weight:** 0 lb
+      - **properties:**
+        - Ammunition (Range 30/120)
+      - **mastery:** Slow
+  - **martial_melee_weapons:**
+    -
+      - **name:** Battleaxe
+      - **cost:** 10 GP
+      - **damage:** 1d8 Slashing
+      - **weight:** 4 lb
+      - **properties:**
+        - Versatile (1d10)
+      - **mastery:** Topple
+    -
+      - **name:** Flail
+      - **cost:** 10 GP
+      - **damage:** 1d8 Bludgeoning
+      - **weight:** 2 lb
+      - **properties:**
+
+      - **mastery:** Sap
+    -
+      - **name:** Glaive
+      - **cost:** 20 GP
+      - **damage:** 1d10 Slashing
+      - **weight:** 6 lb
+      - **properties:**
+        - Heavy
+        - Reach
+        - Two-Handed
+      - **mastery:** Graze
+    -
+      - **name:** Greataxe
+      - **cost:** 30 GP
+      - **damage:** 1d12 Slashing
+      - **weight:** 7 lb
+      - **properties:**
+        - Heavy
+        - Two-Handed
+      - **mastery:** Cleave
+    -
+      - **name:** Greatsword
+      - **cost:** 50 GP
+      - **damage:** 2d6 Slashing
+      - **weight:** 6 lb
+      - **properties:**
+        - Heavy
+        - Two-Handed
+      - **mastery:** Graze
+    -
+      - **name:** Halberd
+      - **cost:** 20 GP
+      - **damage:** 1d10 Slashing
+      - **weight:** 6 lb
+      - **properties:**
+        - Heavy
+        - Reach
+        - Two-Handed
+      - **mastery:** Cleave
+    -
+      - **name:** Lance
+      - **cost:** 10 GP
+      - **damage:** 1d10 Piercing
+      - **weight:** 6 lb
+      - **properties:**
+        - Heavy
+        - Reach
+        - Two-Handed (unless mounted)
+      - **mastery:** Topple
+    -
+      - **name:** Longsword
+      - **cost:** 15 GP
+      - **damage:** 1d8 Slashing
+      - **weight:** 3 lb
+      - **properties:**
+        - Versatile (1d10)
+      - **mastery:** Sap
+    -
+      - **name:** Maul
+      - **cost:** 10 GP
+      - **damage:** 2d6 Bludgeoning
+      - **weight:** 10 lb
+      - **properties:**
+        - Heavy
+        - Two-Handed
+      - **mastery:** Topple
+    -
+      - **name:** Morningstar
+      - **cost:** 15 GP
+      - **damage:** 1d8 Piercing
+      - **weight:** 4 lb
+      - **properties:**
+
+      - **mastery:** Sap
+    -
+      - **name:** Pike
+      - **cost:** 5 GP
+      - **damage:** 1d10 Piercing
+      - **weight:** 18 lb
+      - **properties:**
+        - Heavy
+        - Reach
+        - Two-Handed
+      - **mastery:** Push
+    -
+      - **name:** Rapier
+      - **cost:** 25 GP
+      - **damage:** 1d8 Piercing
+      - **weight:** 2 lb
+      - **properties:**
+        - Finesse
+      - **mastery:** Vex
+    -
+      - **name:** Scimitar
+      - **cost:** 25 GP
+      - **damage:** 1d6 Slashing
+      - **weight:** 3 lb
+      - **properties:**
+        - Finesse
+        - Light
+      - **mastery:** Nick
+    -
+      - **name:** Shortsword
+      - **cost:** 10 GP
+      - **damage:** 1d6 Piercing
+      - **weight:** 2 lb
+      - **properties:**
+        - Finesse
+        - Light
+      - **mastery:** Vex
+    -
+      - **name:** Trident
+      - **cost:** 5 GP
+      - **damage:** 1d8 Piercing
+      - **weight:** 4 lb
+      - **properties:**
+        - Thrown (Range 20/60)
+        - Versatile (1d10)
+      - **mastery:** Topple
+    -
+      - **name:** War Pick
+      - **cost:** 5 GP
+      - **damage:** 1d8 Piercing
+      - **weight:** 2 lb
+      - **properties:**
+        - Versatile (1d10)
+      - **mastery:** Sap
+    -
+      - **name:** Warhammer
+      - **cost:** 15 GP
+      - **damage:** 1d8 Bludgeoning
+      - **weight:** 5 lb
+      - **properties:**
+        - Versatile (1d10)
+      - **mastery:** Push
+    -
+      - **name:** Whip
+      - **cost:** 2 GP
+      - **damage:** 1d4 Slashing
+      - **weight:** 3 lb
+      - **properties:**
+        - Finesse
+        - Reach
+      - **mastery:** Slow
+  - **martial_ranged_weapons:**
+    -
+      - **name:** Blowgun
+      - **cost:** 10 GP
+      - **damage:** 1 Piercing
+      - **weight:** 1 lb
+      - **properties:**
+        - Ammunition (Range 25/100)
+        - Loading
+      - **mastery:** Vex
+    -
+      - **name:** Heavy Crossbow
+      - **cost:** 50 GP
+      - **damage:** 1d10 Piercing
+      - **weight:** 18 lb
+      - **properties:**
+        - Ammunition (Range 100/400)
+        - Heavy
+        - Loading
+        - Two-Handed
+      - **mastery:** Push
+    -
+      - **name:** Hand Crossbow
+      - **cost:** 75 GP
+      - **damage:** 1d6 Piercing
+      - **weight:** 3 lb
+      - **properties:**
+        - Ammunition (Range 30/120)
+        - Light
+        - Loading
+      - **mastery:** Vex
+    -
+      - **name:** Longbow
+      - **cost:** 50 GP
+      - **damage:** 1d8 Piercing
+      - **weight:** 2 lb
+      - **properties:**
+        - Ammunition (Range 150/600)
+        - Heavy
+        - Two-Handed
+      - **mastery:** Slow
+    -
+      - **name:** Musket (if available)
+      - **cost:** 500 GP
+      - **damage:** 1d12 Piercing
+      - **weight:** 10 lb
+      - **properties:**
+        - Ammunition (Range 40/120)
+        - Loading
+        - Two-Handed
+      - **mastery:** Slow
+    -
+      - **name:** Pistol (if available)
+      - **cost:** 250 GP
+      - **damage:** 1d10 Piercing
+      - **weight:** 3 lb
+      - **properties:**
+        - Ammunition (Range 30/90)
+        - Loading
+      - **mastery:** Vex
+- **armor_and_shields:**
+  - **title:** Armor & Shields
+  - **pdf_pages:** 222
+  - **book_pages:** 219
+  - **categories:**
+    -
+      - **category:** Light Armor
+      - **don_doff_time:** Don 1 min, Doff 1 min
+      - **types:**
+        -
+          - **name:** Padded Armor
+          - **cost:** 5 GP
+          - **ac:** 11 + Dex modifier
+          - **strength:** -
+          - **stealth:** Disadvantage
+          - **weight:** 8 lb
+        -
+          - **name:** Leather Armor
+          - **cost:** 10 GP
+          - **ac:** 11 + Dex modifier
+          - **strength:** -
+          - **stealth:** -
+          - **weight:** 10 lb
+        -
+          - **name:** Studded Leather Armor
+          - **cost:** 45 GP
+          - **ac:** 12 + Dex modifier
+          - **strength:** -
+          - **stealth:** -
+          - **weight:** 13 lb
+    -
+      - **category:** Medium Armor
+      - **don_doff_time:** Don 5 min, Doff 1 min
+      - **types:**
+        -
+          - **name:** Hide Armor
+          - **cost:** 10 GP
+          - **ac:** 12 + Dex modifier (max 2)
+          - **strength:** -
+          - **stealth:** -
+          - **weight:** 12 lb
+        -
+          - **name:** Chain Shirt
+          - **cost:** 50 GP
+          - **ac:** 13 + Dex modifier (max 2)
+          - **strength:** -
+          - **stealth:** -
+          - **weight:** 20 lb
+        -
+          - **name:** Scale Mail
+          - **cost:** 50 GP
+          - **ac:** 14 + Dex modifier (max 2)
+          - **strength:** -
+          - **stealth:** Disadvantage
+          - **weight:** 45 lb
+        -
+          - **name:** Breastplate
+          - **cost:** 400 GP
+          - **ac:** 14 + Dex modifier (max 2)
+          - **strength:** -
+          - **stealth:** -
+          - **weight:** 20 lb
+        -
+          - **name:** Half Plate
+          - **cost:** 750 GP
+          - **ac:** 15 + Dex modifier (max 2)
+          - **strength:** -
+          - **stealth:** Disadvantage
+          - **weight:** 40 lb
+    -
+      - **category:** Heavy Armor
+      - **don_doff_time:** Don 10 min, Doff 5 min
+      - **types:**
+        -
+          - **name:** Ring Mail
+          - **cost:** 30 GP
+          - **ac:** 14
+          - **strength:** -
+          - **stealth:** Disadvantage
+          - **weight:** 40 lb
+        -
+          - **name:** Chain Mail
+          - **cost:** 75 GP
+          - **ac:** 16
+          - **strength:** Str 13
+          - **stealth:** Disadvantage
+          - **weight:** 55 lb
+        -
+          - **name:** Splint Armor
+          - **cost:** 200 GP
+          - **ac:** 17
+          - **strength:** Str 15
+          - **stealth:** Disadvantage
+          - **weight:** 60 lb
+        -
+          - **name:** Plate Armor
+          - **cost:** 1,500 GP
+          - **ac:** 18
+          - **strength:** Str 15
+          - **stealth:** Disadvantage
+          - **weight:** 65 lb
+    -
+      - **category:** Shield
+      - **don_doff_time:** 1 action (Utilize)
+      - **types:**
+        -
+          - **name:** Shield
+          - **cost:** 10 GP
+          - **ac:** +2
+          - **strength:** -
+          - **stealth:** -
+          - **weight:** 6 lb
+- **tools_and_artisan_proficiencies:**
+  - **title:** Tools Catalog & 2024 Utility Rules
+  - **pdf_pages:** 223-224
+  - **book_pages:** 220-221
+  - **mechanics:** If you are proficient with a tool and make an ability check utilizing that tool and a skill in which you also have proficiency, you roll with Advantage.
+  - **artisan_tools:**
+    -
+      - **name:** Alchemist's Supplies
+      - **cost:** 50 GP
+      - **weight:** 8 lb
+      - **craftable:** Acid, Alchemist's Fire, Antitoxin, Oil, Perfume, Soap
+    -
+      - **name:** Brewer's Supplies
+      - **cost:** 20 GP
+      - **weight:** 9 lb
+      - **craftable:** Beer, Ale, Spirits, Fermented rations
+    -
+      - **name:** Calligrapher's Supplies
+      - **cost:** 10 GP
+      - **weight:** 5 lb
+      - **craftable:** Maps, Spell Scrolls, Official Decrees, Illumination
+    -
+      - **name:** Carpenter's Tools
+      - **cost:** 8 GP
+      - **weight:** 6 lb
+      - **craftable:** Wooden weapons, furniture, barricades, carts, boats
+    -
+      - **name:** Cartographer's Tools
+      - **cost:** 15 GP
+      - **weight:** 6 lb
+      - **craftable:** Overland maps, dungeon architectural floorplans
+    -
+      - **name:** Cobbler's Tools
+      - **cost:** 5 GP
+      - **weight:** 5 lb
+      - **craftable:** Boots, concealed heel compartments, snowshoes
+    -
+      - **name:** Cook's Utensils
+      - **cost:** 1 GP
+      - **weight:** 8 lb
+      - **craftable:** Hearty meals (+1 HP per hit die spent during short rests)
+    -
+      - **name:** Glassblower's Tools
+      - **cost:** 30 GP
+      - **weight:** 5 lb
+      - **craftable:** Vials, flasks, lenses, magnifying glasses
+    -
+      - **name:** Jeweler's Tools
+      - **cost:** 25 GP
+      - **weight:** 2 lb
+      - **craftable:** Rings, gemstone setting, jewelry value appraisal
+    -
+      - **name:** Leatherworker's Tools
+      - **cost:** 5 GP
+      - **weight:** 5 lb
+      - **craftable:** Leather armor, saddles, scabbards, waterskins
+    -
+      - **name:** Mason's Tools
+      - **cost:** 10 GP
+      - **weight:** 8 lb
+      - **craftable:** Stone masonry, chiseled carvings, secret door seams
+    -
+      - **name:** Painter's Supplies
+      - **cost:** 10 GP
+      - **weight:** 5 lb
+      - **craftable:** Portraits, heraldic banners, camouflage
+    -
+      - **name:** Potter's Tools
+      - **cost:** 10 GP
+      - **weight:** 3 lb
+      - **craftable:** Ceramic jars, waterproof urns, tiles
+    -
+      - **name:** Smith's Tools
+      - **cost:** 20 GP
+      - **weight:** 8 lb
+      - **craftable:** Metal weapons, heavy armor, horseshoes, chains
+    -
+      - **name:** Tinker's Tools
+      - **cost:** 50 GP
+      - **weight:** 10 lb
+      - **craftable:** Lock mechanisms, clockwork toys, repair mundane gear
+    -
+      - **name:** Weaver's Tools
+      - **cost:** 1 GP
+      - **weight:** 5 lb
+      - **craftable:** Cloth armor, robes, sails, rope, cloaks
+    -
+      - **name:** Woodcarver's Tools
+      - **cost:** 1 GP
+      - **weight:** 5 lb
+      - **craftable:** Bows, arrows, wands, quarterstaffs, wooden totems
+  - **other_tools:**
+    -
+      - **name:** Disguise Kit
+      - **cost:** 25 GP
+      - **weight:** 3 lb
+      - **purpose:** Craft facial disguises, wigs, makeup to alter physical appearance.
+    -
+      - **name:** Forgery Kit
+      - **cost:** 15 GP
+      - **weight:** 5 lb
+      - **purpose:** Duplicate handwriting, forge royal seals and wax crests.
+    -
+      - **name:** Herbalism Kit
+      - **cost:** 5 GP
+      - **weight:** 3 lb
+      - **purpose:** Identify flora, brew Antitoxins and Potions of Healing.
+    -
+      - **name:** Navigator's Tools
+      - **cost:** 25 GP
+      - **weight:** 2 lb
+      - **purpose:** Read celestial coordinates, avoid getting lost at sea or wilderness.
+    -
+      - **name:** Poisoner's Kit
+      - **cost:** 50 GP
+      - **weight:** 2 lb
+      - **purpose:** Harvest and extract toxins safely; prepare weapon coatings.
+    -
+      - **name:** Thieves' Tools
+      - **cost:** 25 GP
+      - **weight:** 1 lb
+      - **purpose:** Pick locks and disarm mechanical/physical traps.
+- **adventuring_gear:**
+  - **title:** Adventuring Gear & Focuses
+  - **pdf_pages:** 225-231
+  - **book_pages:** 222-228
+  - **focuses:**
+    -
+      - **name:** Arcane Focus
+      - **variants:**
+        - Crystal (10 GP)
+        - Orb (20 GP)
+        - Rod (10 GP)
+        - Staff (5 GP)
+        - Wand (10 GP)
+      - **classes:** Sorcerer, Warlock, Wizard
+    -
+      - **name:** Druidic Focus
+      - **variants:**
+        - Sprig of Mistletoe (1 GP)
+        - Totem (1 GP)
+        - Wooden Staff (5 GP)
+        - Yew Wand (10 GP)
+      - **classes:** Druid, Ranger
+    -
+      - **name:** Holy Symbol
+      - **variants:**
+        - Amulet (5 GP)
+        - Emblem (5 GP)
+        - Reliquary (5 GP)
+      - **classes:** Cleric, Paladin
+  - **essential_gear:**
+    -
+      - **name:** Backpack
+      - **cost:** 2 GP
+      - **capacity:** 1 cubic foot / 30 lb
+    -
+      - **name:** Bedroll
+      - **cost:** 1 GP
+      - **weight:** 7 lb
+    -
+      - **name:** Crowbar
+      - **cost:** 2 GP
+      - **weight:** 5 lb
+      - **benefit:** Grants Advantage on Strength checks to open chests and doors.
+    -
+      - **name:** Healer's Kit
+      - **cost:** 5 GP
+      - **uses:** 10
+      - **weight:** 3 lb
+      - **benefit:** Stabilize a dying creature as an action without an ability check.
+    -
+      - **name:** Rations (1 day)
+      - **cost:** 5 SP
+      - **weight:** 2 lb
+    -
+      - **name:** Rope (Hempen / Silk)
+      - **cost:** 1 GP / 10 GP
+      - **length:** 50 feet
+      - **hp:** 4
+      - **dc_burst:** 17
+    -
+      - **name:** Torch
+      - **cost:** 1 CP
+      - **burn_time:** 1 hour
+      - **light:** 20 ft Bright Light, 20 ft Dim Light
+- **mounts_and_vehicles:**
+  - **title:** Mounts, Drawn Vehicles & Services
+  - **pdf_pages:** 232-235
+  - **book_pages:** 229-232
+  - **mounts:**
+    -
+      - **name:** Camel
+      - **cost:** 50 GP
+      - **speed:** 50 ft
+      - **carrying_capacity:** 480 lb
+    -
+      - **name:** Draft Horse
+      - **cost:** 50 GP
+      - **speed:** 40 ft
+      - **carrying_capacity:** 540 lb
+    -
+      - **name:** Elephant
+      - **cost:** 200 GP
+      - **speed:** 40 ft
+      - **carrying_capacity:** 1,320 lb
+    -
+      - **name:** Mastiff
+      - **cost:** 25 GP
+      - **speed:** 40 ft
+      - **carrying_capacity:** 195 lb (Small riders only)
+    -
+      - **name:** Mule
+      - **cost:** 8 GP
+      - **speed:** 40 ft
+      - **carrying_capacity:** 420 lb
+    -
+      - **name:** Pony
+      - **cost:** 30 GP
+      - **speed:** 40 ft
+      - **carrying_capacity:** 225 lb
+    -
+      - **name:** Riding Horse
+      - **cost:** 75 GP
+      - **speed:** 60 ft
+      - **carrying_capacity:** 480 lb
+    -
+      - **name:** Warhorse
+      - **cost:** 400 GP
+      - **speed:** 60 ft
+      - **carrying_capacity:** 540 lb
+  - **vehicles:**
+    -
+      - **name:** Carriage
+      - **cost:** 100 GP
+      - **weight:** 600 lb
+    -
+      - **name:** Cart
+      - **cost:** 15 GP
+      - **weight:** 200 lb
+    -
+      - **name:** Chariot
+      - **cost:** 250 GP
+      - **weight:** 100 lb
+    -
+      - **name:** Sled
+      - **cost:** 20 GP
+      - **weight:** 300 lb
+    -
+      - **name:** Wagon
+      - **cost:** 35 GP
+      - **weight:** 400 lb
+- **crafting_equipment:**
+  - **title:** Crafting Nonmagical Equipment Rules
+  - **pdf_pages:** 236-237
+  - **book_pages:** 233-234
+  - **rules:**
+    - **raw_materials_cost:** Raw materials equal half the item's purchase price (e.g., 750 GP in iron/leather to craft a 1,500 GP Plate Armor).
+    - **crafting_speed:** You can craft 10 GP worth of market value per day (8 hours of work). With the Crafter origin feat, crafting speed is doubled to 20 GP per day.
+    - **tools_required:** Must have proficiency with the appropriate Artisan's Tools and have access to those tools and workshop.
+    - **assistants:** Other characters proficient in the required tool can assist, dividing the total time required among all crafters.

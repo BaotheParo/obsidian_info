@@ -1,0 +1,875 @@
+---
+id: "doc:adnd_04_equipment_encumbrance"
+package_id: "ADND_04_EQUIPMENT_ENCUMBRANCE"
+title: "Chapter 6: Money and Equipment & Encumbrance"
+original_title: "Chapter 6: Money and Equipment & Encumbrance"
+source_reference: "D&D 5E / AD&D / RPG Advanced Design"
+system_category: "03_Arsenal_And_Bastions"
+associated_master_moc: "[[00_Master_MOC]]"
+---
+
+# Chapter 6: Money and Equipment & Encumbrance
+
+> **Mã gói (Package ID):** `ADND_04_EQUIPMENT_ENCUMBRANCE` | **Nguồn khảo cứu:** *D&D 5E / AD&D / RPG Advanced Design*
+> **Phân loại hệ thống:** `[[03_Arsenal_And_Bastions]]` | **Bản đồ não bộ:** [[00_Master_MOC]]
+
+## 1. Tóm Lược Nghiệp Vụ & Thiết Kế (Executive Summary)
+Dữ liệu luật chơi và cơ chế đã qua chắt lọc.
+
+## 2. Ánh Xạ Cơ Chế Sang Sinh Tồn Thực Tế (Project Zomboid B42 / Hardcore RPG Mapping)
+## 3. Currency And Exchange
+- **standard_exchange_rates:**
+  -
+    - **coin:** Copper Piece (cp)
+    - **cp:** 1
+    - **sp:** 0.1
+    - **ep:** 0.02
+    - **gp:** 0.01
+    - **pp:** 0.002
+  -
+    - **coin:** Silver Piece (sp)
+    - **cp:** 10
+    - **sp:** 1
+    - **ep:** 0.2
+    - **gp:** 0.1
+    - **pp:** 0.02
+  -
+    - **coin:** Electrum Piece (ep)
+    - **cp:** 50
+    - **sp:** 5
+    - **ep:** 1
+    - **gp:** 0.5
+    - **pp:** 0.1
+  -
+    - **coin:** Gold Piece (gp)
+    - **cp:** 100
+    - **sp:** 10
+    - **ep:** 2
+    - **gp:** 1
+    - **pp:** 0.2
+  -
+    - **coin:** Platinum Piece (pp)
+    - **cp:** 500
+    - **sp:** 50
+    - **ep:** 10
+    - **gp:** 5
+    - **pp:** 1
+- **weight_of_coins:** 50 coins of any type weigh approximately 1 pound (1 lb).
+
+## 4. Weapons
+- **table_44_master_weapon_list:**
+  -
+    - **item:** Arquebus
+    - **cost:** 500 gp
+    - **weight_lbs:** 10
+    - **size:** M
+    - **type:** P
+    - **speed_factor:** 15
+    - **damage_sm:** 1d10
+    - **damage_l:** 1d10
+    - **notes:** Requires matchcord & powder; misfires on attack roll of 1 or 2.
+  -
+    - **item:** Battle axe
+    - **cost:** 5 gp
+    - **weight_lbs:** 7
+    - **size:** M
+    - **type:** S
+    - **speed_factor:** 7
+    - **damage_sm:** 1d8
+    - **damage_l:** 1d8
+  -
+    - **item:** Blowgun
+    - **cost:** 5 gp
+    - **weight_lbs:** 2
+    - **size:** L
+    - **type:** P
+    - **speed_factor:** 5
+    - **damage_sm:** 1d3
+    - **damage_l:** 1d2
+  -
+    - **item:** Bow, composite long
+    - **cost:** 100 gp
+    - **weight_lbs:** 3
+    - **size:** L
+    - **type:** P
+    - **speed_factor:** 7
+    - **damage_sm:** 1d6
+    - **damage_l:** 1d6
+    - **strength_bonus:** True
+  -
+    - **item:** Bow, composite short
+    - **cost:** 75 gp
+    - **weight_lbs:** 2
+    - **size:** M
+    - **type:** P
+    - **speed_factor:** 6
+    - **damage_sm:** 1d6
+    - **damage_l:** 1d6
+    - **strength_bonus:** True
+  -
+    - **item:** Bow, long
+    - **cost:** 75 gp
+    - **weight_lbs:** 3
+    - **size:** L
+    - **type:** P
+    - **speed_factor:** 8
+    - **damage_sm:** 1d6
+    - **damage_l:** 1d6
+  -
+    - **item:** Bow, short
+    - **cost:** 30 gp
+    - **weight_lbs:** 2
+    - **size:** M
+    - **type:** P
+    - **speed_factor:** 7
+    - **damage_sm:** 1d6
+    - **damage_l:** 1d6
+  -
+    - **item:** Club
+    - **cost:** 0 gp
+    - **weight_lbs:** 3
+    - **size:** M
+    - **type:** B
+    - **speed_factor:** 4
+    - **damage_sm:** 1d6
+    - **damage_l:** 1d3
+  -
+    - **item:** Crossbow, hand
+    - **cost:** 300 gp
+    - **weight_lbs:** 2
+    - **size:** S
+    - **type:** P
+    - **speed_factor:** 5
+    - **damage_sm:** 1d3
+    - **damage_l:** 1d2
+  -
+    - **item:** Crossbow, heavy
+    - **cost:** 50 gp
+    - **weight_lbs:** 14
+    - **size:** M
+    - **type:** P
+    - **speed_factor:** 10
+    - **damage_sm:** 1d4+1
+    - **damage_l:** 1d6+1
+  -
+    - **item:** Crossbow, light
+    - **cost:** 35 gp
+    - **weight_lbs:** 7
+    - **size:** M
+    - **type:** P
+    - **speed_factor:** 7
+    - **damage_sm:** 1d4
+    - **damage_l:** 1d4
+  -
+    - **item:** Dagger
+    - **cost:** 2 gp
+    - **weight_lbs:** 1
+    - **size:** S
+    - **type:** P/S
+    - **speed_factor:** 2
+    - **damage_sm:** 1d4
+    - **damage_l:** 1d3
+  -
+    - **item:** Dart
+    - **cost:** 5 sp
+    - **weight_lbs:** 0.5
+    - **size:** S
+    - **type:** P
+    - **speed_factor:** 2
+    - **damage_sm:** 1d3
+    - **damage_l:** 1d2
+  -
+    - **item:** Flail, footman's
+    - **cost:** 15 gp
+    - **weight_lbs:** 15
+    - **size:** M
+    - **type:** B
+    - **speed_factor:** 7
+    - **damage_sm:** 1d6+1
+    - **damage_l:** 2d4
+  -
+    - **item:** Flail, horseman's
+    - **cost:** 8 gp
+    - **weight_lbs:** 5
+    - **size:** M
+    - **type:** B
+    - **speed_factor:** 6
+    - **damage_sm:** 1d4+1
+    - **damage_l:** 1d4+1
+  -
+    - **item:** Halberd
+    - **cost:** 10 gp
+    - **weight_lbs:** 15
+    - **size:** L
+    - **type:** P/S
+    - **speed_factor:** 9
+    - **damage_sm:** 1d10
+    - **damage_l:** 2d6
+  -
+    - **item:** Hand axe / Throwing axe
+    - **cost:** 1 gp
+    - **weight_lbs:** 5
+    - **size:** M
+    - **type:** S
+    - **speed_factor:** 4
+    - **damage_sm:** 1d6
+    - **damage_l:** 1d4
+  -
+    - **item:** Javelin
+    - **cost:** 5 sp
+    - **weight_lbs:** 2
+    - **size:** M
+    - **type:** P
+    - **speed_factor:** 4
+    - **damage_sm:** 1d6
+    - **damage_l:** 1d6
+  -
+    - **item:** Knife
+    - **cost:** 5 sp
+    - **weight_lbs:** 0.5
+    - **size:** S
+    - **type:** P/S
+    - **speed_factor:** 2
+    - **damage_sm:** 1d3
+    - **damage_l:** 1d2
+  -
+    - **item:** Lance, heavy
+    - **cost:** 15 gp
+    - **weight_lbs:** 15
+    - **size:** L
+    - **type:** P
+    - **speed_factor:** 8
+    - **damage_sm:** 1d8+1
+    - **damage_l:** 3d6
+  -
+    - **item:** Lance, light
+    - **cost:** 6 gp
+    - **weight_lbs:** 5
+    - **size:** L
+    - **type:** P
+    - **speed_factor:** 6
+    - **damage_sm:** 1d6
+    - **damage_l:** 1d8
+  -
+    - **item:** Mace, footman's
+    - **cost:** 8 gp
+    - **weight_lbs:** 10
+    - **size:** M
+    - **type:** B
+    - **speed_factor:** 7
+    - **damage_sm:** 1d6+1
+    - **damage_l:** 1d6
+  -
+    - **item:** Mace, horseman's
+    - **cost:** 5 gp
+    - **weight_lbs:** 6
+    - **size:** M
+    - **type:** B
+    - **speed_factor:** 6
+    - **damage_sm:** 1d6
+    - **damage_l:** 1d4
+  -
+    - **item:** Morning star
+    - **cost:** 10 gp
+    - **weight_lbs:** 12
+    - **size:** M
+    - **type:** B/P
+    - **speed_factor:** 7
+    - **damage_sm:** 2d4
+    - **damage_l:** 1d6+1
+  -
+    - **item:** Pike, awl
+    - **cost:** 5 gp
+    - **weight_lbs:** 12
+    - **size:** L
+    - **type:** P
+    - **speed_factor:** 13
+    - **damage_sm:** 1d6
+    - **damage_l:** 1d12
+  -
+    - **item:** Quarterstaff
+    - **cost:** 0 gp
+    - **weight_lbs:** 4
+    - **size:** L
+    - **type:** B
+    - **speed_factor:** 4
+    - **damage_sm:** 1d6
+    - **damage_l:** 1d6
+  -
+    - **item:** Scimitar
+    - **cost:** 15 gp
+    - **weight_lbs:** 4
+    - **size:** M
+    - **type:** S
+    - **speed_factor:** 5
+    - **damage_sm:** 1d8
+    - **damage_l:** 1d8
+  -
+    - **item:** Sling
+    - **cost:** 5 sp
+    - **weight_lbs:** 0.1
+    - **size:** S
+    - **type:** B
+    - **speed_factor:** 6
+    - **damage_sm:** 1d4+1
+    - **damage_l:** 1d6+1
+  -
+    - **item:** Spear
+    - **cost:** 8 sp
+    - **weight_lbs:** 5
+    - **size:** M
+    - **type:** P
+    - **speed_factor:** 6
+    - **damage_sm:** 1d6
+    - **damage_l:** 1d8
+  -
+    - **item:** Sword, bastard (1-handed)
+    - **cost:** 25 gp
+    - **weight_lbs:** 10
+    - **size:** M
+    - **type:** S
+    - **speed_factor:** 6
+    - **damage_sm:** 1d8
+    - **damage_l:** 1d12
+  -
+    - **item:** Sword, bastard (2-handed)
+    - **cost:** 25 gp
+    - **weight_lbs:** 10
+    - **size:** M
+    - **type:** S
+    - **speed_factor:** 8
+    - **damage_sm:** 2d4
+    - **damage_l:** 2d8
+  -
+    - **item:** Sword, broad
+    - **cost:** 10 gp
+    - **weight_lbs:** 4
+    - **size:** M
+    - **type:** S
+    - **speed_factor:** 5
+    - **damage_sm:** 2d4
+    - **damage_l:** 1d6+1
+  -
+    - **item:** Sword, long
+    - **cost:** 15 gp
+    - **weight_lbs:** 4
+    - **size:** M
+    - **type:** S
+    - **speed_factor:** 5
+    - **damage_sm:** 1d8
+    - **damage_l:** 1d12
+  -
+    - **item:** Sword, short
+    - **cost:** 10 gp
+    - **weight_lbs:** 3
+    - **size:** S
+    - **type:** P
+    - **speed_factor:** 3
+    - **damage_sm:** 1d6
+    - **damage_l:** 1d8
+  -
+    - **item:** Sword, two-handed
+    - **cost:** 50 gp
+    - **weight_lbs:** 15
+    - **size:** L
+    - **type:** S
+    - **speed_factor:** 10
+    - **damage_sm:** 1d10
+    - **damage_l:** 3d6
+  -
+    - **item:** Trident
+    - **cost:** 15 gp
+    - **weight_lbs:** 5
+    - **size:** L
+    - **type:** P
+    - **speed_factor:** 7
+    - **damage_sm:** 1d6+1
+    - **damage_l:** 3d4
+  -
+    - **item:** Warhammer
+    - **cost:** 2 gp
+    - **weight_lbs:** 6
+    - **size:** M
+    - **type:** B
+    - **speed_factor:** 4
+    - **damage_sm:** 1d4+1
+    - **damage_l:** 1d4
+  -
+    - **item:** Whip
+    - **cost:** 1 sp
+    - **weight_lbs:** 2
+    - **size:** M
+    - **type:** -
+    - **speed_factor:** 8
+    - **damage_sm:** 1d2
+    - **damage_l:** 1
+- **table_45_missile_ranges_and_rof:**
+  -
+    - **weapon:** Arquebus
+    - **rof:** 1/3
+    - **short_bonus_plus_2:** 1-5 yds
+    - **medium_normal:** 6-15 yds
+    - **long_penalty_minus_2:** 16-21 yds
+  -
+    - **weapon:** Blowgun (needle)
+    - **rof:** 2/1
+    - **short_bonus_plus_2:** 1-3 yds
+    - **medium_normal:** 4-5 yds
+    - **long_penalty_minus_2:** 6-8 yds
+  -
+    - **weapon:** Bow, composite long
+    - **rof:** 2/1
+    - **short_bonus_plus_2:** 1-7 yds
+    - **medium_normal:** 8-14 yds
+    - **long_penalty_minus_2:** 15-21 yds
+  -
+    - **weapon:** Bow, composite short
+    - **rof:** 2/1
+    - **short_bonus_plus_2:** 1-5 yds
+    - **medium_normal:** 6-10 yds
+    - **long_penalty_minus_2:** 11-18 yds
+  -
+    - **weapon:** Bow, long
+    - **rof:** 2/1
+    - **short_bonus_plus_2:** 1-7 yds
+    - **medium_normal:** 8-14 yds
+    - **long_penalty_minus_2:** 15-21 yds
+  -
+    - **weapon:** Bow, short
+    - **rof:** 2/1
+    - **short_bonus_plus_2:** 1-5 yds
+    - **medium_normal:** 6-10 yds
+    - **long_penalty_minus_2:** 11-15 yds
+  -
+    - **weapon:** Crossbow, hand
+    - **rof:** 1/1
+    - **short_bonus_plus_2:** 1-2 yds
+    - **medium_normal:** 3-4 yds
+    - **long_penalty_minus_2:** 5-6 yds
+  -
+    - **weapon:** Crossbow, heavy
+    - **rof:** 1/2
+    - **short_bonus_plus_2:** 1-8 yds
+    - **medium_normal:** 9-16 yds
+    - **long_penalty_minus_2:** 17-24 yds
+  -
+    - **weapon:** Crossbow, light
+    - **rof:** 1/1
+    - **short_bonus_plus_2:** 1-6 yds
+    - **medium_normal:** 7-12 yds
+    - **long_penalty_minus_2:** 13-18 yds
+  -
+    - **weapon:** Dagger, thrown
+    - **rof:** 2/1
+    - **short_bonus_plus_2:** 1-1 yds
+    - **medium_normal:** 2-2 yds
+    - **long_penalty_minus_2:** 3-3 yds
+  -
+    - **weapon:** Dart
+    - **rof:** 3/1
+    - **short_bonus_plus_2:** 1-1 yds
+    - **medium_normal:** 2-2 yds
+    - **long_penalty_minus_2:** 3-4 yds
+  -
+    - **weapon:** Hand axe / Throwing axe
+    - **rof:** 1/1
+    - **short_bonus_plus_2:** 1-1 yds
+    - **medium_normal:** 2-2 yds
+    - **long_penalty_minus_2:** 3-3 yds
+  -
+    - **weapon:** Javelin
+    - **rof:** 1/1
+    - **short_bonus_plus_2:** 1-2 yds
+    - **medium_normal:** 3-4 yds
+    - **long_penalty_minus_2:** 5-6 yds
+  -
+    - **weapon:** Sling (bullet)
+    - **rof:** 1/1
+    - **short_bonus_plus_2:** 1-5 yds
+    - **medium_normal:** 6-10 yds
+    - **long_penalty_minus_2:** 11-20 yds
+  -
+    - **weapon:** Sling (stone)
+    - **rof:** 1/1
+    - **short_bonus_plus_2:** 1-4 yds
+    - **medium_normal:** 5-8 yds
+    - **long_penalty_minus_2:** 9-16 yds
+  -
+    - **weapon:** Spear, thrown
+    - **rof:** 1/1
+    - **short_bonus_plus_2:** 1-1 yds
+    - **medium_normal:** 2-2 yds
+    - **long_penalty_minus_2:** 3-3 yds
+- **arquebus_special_rules:**
+  - **reload_time:** Requires 3 full rounds to reload (Rate of Fire = 1/3 rounds).
+  - **misfire_rule:** On a natural attack roll of 1 or 2, the arquebus misfires. Roll 1d6: 1-2 = gun fouls (takes 10 rounds to clean); 3-4 = hangfire (fires next round at random target); 5-6 = weapon explodes, dealing 1d10 damage to the shooter.
+  - **auditory_and_visual_effect:** Produces a thunderous boom heard up to 1 mile away, and a dense cloud of sulfurous smoke granting 50% concealment for 1 round in calm air.
+
+## 5. Armor
+- **table_46_armor_list:**
+  -
+    - **armor_type:** Banded mail
+    - **cost:** 200 gp
+    - **weight_lbs:** 35
+    - **ac_rating:** 4
+    - **don_time:** 1 turn
+    - **doff_time:** 1d4+1 rds
+  -
+    - **armor_type:** Brigandine
+    - **cost:** 120 gp
+    - **weight_lbs:** 35
+    - **ac_rating:** 6
+    - **don_time:** 1 turn
+    - **doff_time:** 1d4 rds
+  -
+    - **armor_type:** Chain mail
+    - **cost:** 75 gp
+    - **weight_lbs:** 40
+    - **ac_rating:** 5
+    - **don_time:** 1 turn
+    - **doff_time:** 1d4 rds
+  -
+    - **armor_type:** Field plate
+    - **cost:** 2000 gp
+    - **weight_lbs:** 60
+    - **ac_rating:** 2
+    - **don_time:** 2 turns
+    - **doff_time:** 1d4+1 rds
+  -
+    - **armor_type:** Full plate
+    - **cost:** 4000 gp
+    - **weight_lbs:** 70
+    - **ac_rating:** 1
+    - **don_time:** 2 turns
+    - **doff_time:** 1d6+1 rds
+  -
+    - **armor_type:** Hide
+    - **cost:** 15 gp
+    - **weight_lbs:** 30
+    - **ac_rating:** 6
+    - **don_time:** 1 turn
+    - **doff_time:** 1d4 rds
+  -
+    - **armor_type:** Leather
+    - **cost:** 5 gp
+    - **weight_lbs:** 15
+    - **ac_rating:** 8
+    - **don_time:** 1 turn
+    - **doff_time:** 1d4 rds
+  -
+    - **armor_type:** Padded
+    - **cost:** 4 gp
+    - **weight_lbs:** 10
+    - **ac_rating:** 8
+    - **don_time:** 1 turn
+    - **doff_time:** 1d4 rds
+  -
+    - **armor_type:** Plate mail
+    - **cost:** 600 gp
+    - **weight_lbs:** 50
+    - **ac_rating:** 3
+    - **don_time:** 2 turns
+    - **doff_time:** 1d4+1 rds
+  -
+    - **armor_type:** Ring mail
+    - **cost:** 100 gp
+    - **weight_lbs:** 30
+    - **ac_rating:** 7
+    - **don_time:** 1 turn
+    - **doff_time:** 1d4 rds
+  -
+    - **armor_type:** Scale mail
+    - **cost:** 120 gp
+    - **weight_lbs:** 40
+    - **ac_rating:** 6
+    - **don_time:** 1 turn
+    - **doff_time:** 1d4 rds
+  -
+    - **armor_type:** Splint mail
+    - **cost:** 80 gp
+    - **weight_lbs:** 40
+    - **ac_rating:** 4
+    - **don_time:** 1 turn
+    - **doff_time:** 1d4+1 rds
+  -
+    - **armor_type:** Studded leather
+    - **cost:** 20 gp
+    - **weight_lbs:** 25
+    - **ac_rating:** 7
+    - **don_time:** 1 turn
+    - **doff_time:** 1d4 rds
+  -
+    - **armor_type:** Shield, buckler
+    - **cost:** 1 gp
+    - **weight_lbs:** 3
+    - **ac_bonus:** +1 AC vs 1 melee attack per round
+  -
+    - **armor_type:** Shield, small
+    - **cost:** 3 gp
+    - **weight_lbs:** 5
+    - **ac_bonus:** +1 AC vs 2 melee or missile attacks per round
+  -
+    - **armor_type:** Shield, medium
+    - **cost:** 7 gp
+    - **weight_lbs:** 10
+    - **ac_bonus:** +1 AC vs 3 melee or missile attacks per round
+  -
+    - **armor_type:** Shield, body
+    - **cost:** 10 gp
+    - **weight_lbs:** 15
+    - **ac_bonus:** +1 AC vs any number of attacks from front/flank
+- **shield_facing_rules:** Shield AC bonus applies only to attacks directed at the front and shield flank of the character, never from the rear.
+
+## 6. Encumbrance System
+- **table_47_character_encumbrance_thresholds:**
+  - **strength_scores:**
+    -
+      - **str:** 3
+      - **unencumbered_max:** 5
+      - **light_max:** 10
+      - **moderate_max:** 15
+      - **heavy_max:** 20
+      - **severe_max:** 25
+    -
+      - **str:** 4-5
+      - **unencumbered_max:** 10
+      - **light_max:** 20
+      - **moderate_max:** 30
+      - **heavy_max:** 40
+      - **severe_max:** 50
+    -
+      - **str:** 6-7
+      - **unencumbered_max:** 20
+      - **light_max:** 35
+      - **moderate_max:** 50
+      - **heavy_max:** 65
+      - **severe_max:** 80
+    -
+      - **str:** 8-9
+      - **unencumbered_max:** 35
+      - **light_max:** 50
+      - **moderate_max:** 65
+      - **heavy_max:** 80
+      - **severe_max:** 95
+    -
+      - **str:** 10-11
+      - **unencumbered_max:** 40
+      - **light_max:** 55
+      - **moderate_max:** 70
+      - **heavy_max:** 85
+      - **severe_max:** 110
+    -
+      - **str:** 12-13
+      - **unencumbered_max:** 45
+      - **light_max:** 65
+      - **moderate_max:** 85
+      - **heavy_max:** 105
+      - **severe_max:** 140
+    -
+      - **str:** 14-15
+      - **unencumbered_max:** 55
+      - **light_max:** 85
+      - **moderate_max:** 115
+      - **heavy_max:** 145
+      - **severe_max:** 170
+    -
+      - **str:** 16
+      - **unencumbered_max:** 70
+      - **light_max:** 105
+      - **moderate_max:** 140
+      - **heavy_max:** 175
+      - **severe_max:** 195
+    -
+      - **str:** 17
+      - **unencumbered_max:** 85
+      - **light_max:** 125
+      - **moderate_max:** 165
+      - **heavy_max:** 205
+      - **severe_max:** 220
+    -
+      - **str:** 18
+      - **unencumbered_max:** 110
+      - **light_max:** 150
+      - **moderate_max:** 190
+      - **heavy_max:** 230
+      - **severe_max:** 255
+    -
+      - **str:** 18/01-50
+      - **unencumbered_max:** 135
+      - **light_max:** 185
+      - **moderate_max:** 235
+      - **heavy_max:** 285
+      - **severe_max:** 330
+    -
+      - **str:** 18/51-75
+      - **unencumbered_max:** 160
+      - **light_max:** 220
+      - **moderate_max:** 280
+      - **heavy_max:** 340
+      - **severe_max:** 380
+    -
+      - **str:** 18/76-90
+      - **unencumbered_max:** 185
+      - **light_max:** 255
+      - **moderate_max:** 325
+      - **heavy_max:** 395
+      - **severe_max:** 430
+    -
+      - **str:** 18/91-99
+      - **unencumbered_max:** 235
+      - **light_max:** 320
+      - **moderate_max:** 405
+      - **heavy_max:** 490
+      - **severe_max:** 530
+    -
+      - **str:** 18/00
+      - **unencumbered_max:** 335
+      - **light_max:** 445
+      - **moderate_max:** 555
+      - **heavy_max:** 665
+      - **severe_max:** 780
+- **table_48_movement_penalties_by_encumbrance:**
+  -
+    - **category:** Unencumbered
+    - **movement_multiplier:** 100%
+    - **base_12:** 12
+    - **base_9:** 9
+    - **base_6:** 6
+    - **initiative_penalty:** 0
+    - **combat_fatigue:** Normal
+  -
+    - **category:** Light Encumbrance
+    - **movement_multiplier:** 100%
+    - **base_12:** 12
+    - **base_9:** 9
+    - **base_6:** 6
+    - **initiative_penalty:** 1
+    - **combat_fatigue:** Normal
+  -
+    - **category:** Moderate Encumbrance
+    - **movement_multiplier:** 75%
+    - **base_12:** 9
+    - **base_9:** 6
+    - **base_6:** 4
+    - **initiative_penalty:** 2
+    - **combat_fatigue:** +1 round fatigue check
+  -
+    - **category:** Heavy Encumbrance
+    - **movement_multiplier:** 50%
+    - **base_12:** 6
+    - **base_9:** 4
+    - **base_6:** 3
+    - **initiative_penalty:** 3
+    - **combat_fatigue:** +2 round fatigue check
+  -
+    - **category:** Severe Encumbrance
+    - **movement_multiplier:** 25%
+    - **base_12:** 3
+    - **base_9:** 2
+    - **base_6:** 1
+    - **initiative_penalty:** 4
+    - **combat_fatigue:** Exhaustion after 3 combat rounds
+
+## 7. Transport And Stowage
+- **table_49_carrying_capacity_of_animals:**
+  -
+    - **animal:** Camel
+    - **max_load_lbs:** 500
+    - **pack_speed:** 12
+    - **draft_capacity_lbs:** 1000
+  -
+    - **animal:** Dog, guard / war
+    - **max_load_lbs:** 50
+    - **pack_speed:** 12
+    - **draft_capacity_lbs:** 100
+  -
+    - **animal:** Donkey / Mule
+    - **max_load_lbs:** 250
+    - **pack_speed:** 12
+    - **draft_capacity_lbs:** 500
+  -
+    - **animal:** Elephant
+    - **max_load_lbs:** 2000
+    - **pack_speed:** 12
+    - **draft_capacity_lbs:** 5000
+  -
+    - **animal:** Horse, draft
+    - **max_load_lbs:** 400
+    - **pack_speed:** 12
+    - **draft_capacity_lbs:** 1200
+  -
+    - **animal:** Horse, heavy war
+    - **max_load_lbs:** 360
+    - **pack_speed:** 15
+    - **draft_capacity_lbs:** 720
+  -
+    - **animal:** Horse, light war
+    - **max_load_lbs:** 260
+    - **pack_speed:** 24
+    - **draft_capacity_lbs:** 520
+  -
+    - **animal:** Horse, riding
+    - **max_load_lbs:** 220
+    - **pack_speed:** 24
+    - **draft_capacity_lbs:** 440
+  -
+    - **animal:** Ox
+    - **max_load_lbs:** 450
+    - **pack_speed:** 9
+    - **draft_capacity_lbs:** 1500
+  -
+    - **animal:** Pony
+    - **max_load_lbs:** 180
+    - **pack_speed:** 12
+    - **draft_capacity_lbs:** 360
+- **table_50_stowage_capacity_of_containers:**
+  -
+    - **container:** Backpack
+    - **capacity_lbs:** 40
+    - **internal_volume:** 3 cu ft
+    - **wearable:** True
+  -
+    - **container:** Chest, small
+    - **capacity_lbs:** 40
+    - **internal_volume:** 2 cu ft
+    - **wearable:** False
+  -
+    - **container:** Chest, large
+    - **capacity_lbs:** 100
+    - **internal_volume:** 8 cu ft
+    - **wearable:** False
+  -
+    - **container:** Pouch, belt (small)
+    - **capacity_lbs:** 2
+    - **internal_volume:** 0.2 cu ft
+    - **wearable:** True
+  -
+    - **container:** Pouch, belt (large)
+    - **capacity_lbs:** 8
+    - **internal_volume:** 0.5 cu ft
+    - **wearable:** True
+  -
+    - **container:** Sack, small
+    - **capacity_lbs:** 20
+    - **internal_volume:** 1.5 cu ft
+    - **wearable:** False
+  -
+    - **container:** Sack, large
+    - **capacity_lbs:** 50
+    - **internal_volume:** 4 cu ft
+    - **wearable:** False
+  -
+    - **container:** Saddlebags, pair
+    - **capacity_lbs:** 50
+    - **internal_volume:** 4 cu ft
+    - **wearable:** False
+  -
+    - **container:** Cart, 2-wheeled
+    - **capacity_lbs:** 400
+    - **internal_volume:** 30 cu ft
+    - **drawn_by:** 1 draft horse or 2 mules
+  -
+    - **container:** Wagon, 4-wheeled
+    - **capacity_lbs:** 1500
+    - **internal_volume:** 120 cu ft
+    - **drawn_by:** 2 to 4 draft horses or oxen

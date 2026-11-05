@@ -1,0 +1,292 @@
+---
+id: "doc:srd_01_origins_species_feats"
+package_id: "SRD_01_ORIGINS_SPECIES_FEATS"
+title: "Character Origins & Feats (Backgrounds, Species, Origin, General & Fighting Style Feats)"
+original_title: "Character Origins & Feats (Backgrounds, Species, Origin, General & Fighting Style Feats)"
+source_reference: "D&D 5E / AD&D / RPG Advanced Design"
+system_category: "04_Character_And_Med"
+associated_master_moc: "[[00_Master_MOC]]"
+---
+
+# Character Origins & Feats (Backgrounds, Species, Origin, General & Fighting Style Feats)
+
+> **Mã gói (Package ID):** `SRD_01_ORIGINS_SPECIES_FEATS` | **Nguồn khảo cứu:** *D&D 5E / AD&D / RPG Advanced Design*
+> **Phân loại hệ thống:** `[[04_Character_And_Med]]` | **Bản đồ não bộ:** [[00_Master_MOC]]
+
+## 1. Tóm Lược Nghiệp Vụ & Thiết Kế (Executive Summary)
+Dữ liệu luật chơi và cơ chế đã qua chắt lọc.
+
+## 2. Ánh Xạ Cơ Chế Sang Sinh Tồn Thực Tế (Project Zomboid B42 / Hardcore RPG Mapping)
+## 3. Character Backgrounds Framework
+- **definition:** A background represents a character's formative occupation and life history before adventuring. In the 2024 rules, backgrounds provide ability score adjustments, an Origin feat, and tool proficiencies.
+- **components:**
+  - **ability_scores:** Increase one ability score by 2 and another by 1, or increase three scores by 1 (max 20).
+  - **origin_feat:** Grants one specified Origin Feat at level 1 (e.g. Alert, Skilled, Savage Attacker, Magic Initiate).
+  - **skill_proficiencies:** Grants proficiency in 2 specific skills.
+  - **tool_proficiency:** Grants proficiency in 1 specific tool or chosen Artisan's Tool.
+  - **starting_equipment:** Standard package or 50 GP starting wealth allowance.
+
+## 4. Species Lineages
+-
+  - **name:** Dragonborn
+  - **creature_type:** Humanoid
+  - **size:** Medium (5-7 ft)
+  - **speed:** 30
+  - **traits:**
+    -
+      - **name:** Draconic Ancestry
+      - **description:** Choice of Black (Acid), Blue (Lightning), Brass (Fire), Bronze (Lightning), Copper (Acid), Gold (Fire), Green (Poison), Red (Fire), Silver (Cold), or White (Cold). Determines breath weapon and resistance.
+    -
+      - **name:** Breath Weapon
+      - **description:** Exhale energy in a 15-ft cone or 30-ft line (5 ft wide). Replaces one attack. Deals 1d10 damage (scales to 2d10 at lvl 5, 3d10 at lvl 11, 4d10 at lvl 17) on failed Dex/Con save, half on success. Uses per Long Rest = Proficiency Bonus.
+    -
+      - **name:** Damage Resistance
+      - **description:** Resistance to the damage type associated with draconic ancestor.
+    -
+      - **name:** Darkvision
+      - **description:** Range of 60 feet in dim light/darkness.
+-
+  - **name:** Dwarf
+  - **creature_type:** Humanoid
+  - **size:** Medium (4-5 ft)
+  - **speed:** 30
+  - **traits:**
+    -
+      - **name:** Darkvision
+      - **description:** Range of 120 feet.
+    -
+      - **name:** Dwarven Resilience
+      - **description:** Resistance to Poison damage; Advantage on saving throws to avoid or end Poisoned condition.
+    -
+      - **name:** Dwarven Toughness
+      - **description:** Hit point maximum increases by 1, and increases by 1 every time you gain a level.
+    -
+      - **name:** Stonecunning
+      - **description:** As a Bonus Action while touching stonework, gain Tremorsense within 60 ft for 10 minutes (PB uses per Long Rest).
+-
+  - **name:** Elf
+  - **creature_type:** Humanoid
+  - **size:** Medium (5-6 ft)
+  - **speed:** 30
+  - **traits:**
+    -
+      - **name:** Darkvision
+      - **description:** Range of 60 feet (120 feet for Drow lineage).
+    -
+      - **name:** Elven Lineage
+      - **description:** Choose Drow (Dancing Lights, Darkness, Faerie Fire), High Elf (Wizard cantrip, Detect Magic, Misty Step), or Wood Elf (Speed 35 ft, Druidcraft, Longstrider, Pass without Trace).
+    -
+      - **name:** Fey Ancestry
+      - **description:** Advantage on saving throws to avoid or end the Charmed condition.
+    -
+      - **name:** Keen Senses
+      - **description:** Proficiency in Insight, Perception, or Survival.
+    -
+      - **name:** Trance
+      - **description:** Does not need sleep; magic cannot put to sleep. Long Rest completed in 4 hours of meditation.
+-
+  - **name:** Gnome
+  - **creature_type:** Humanoid
+  - **size:** Small (3-4 ft)
+  - **speed:** 30
+  - **traits:**
+    -
+      - **name:** Darkvision
+      - **description:** Range of 60 feet.
+    -
+      - **name:** Gnomish Cunning
+      - **description:** Advantage on all Intelligence, Wisdom, and Charisma saving throws.
+    -
+      - **name:** Gnomish Lineage
+      - **description:** Choose Forest Gnome (Minor Illusion, Speak with Small Beasts) or Rock Gnome (Mending, Prestidigitation, craft clockwork devices).
+-
+  - **name:** Goliath
+  - **creature_type:** Humanoid
+  - **size:** Medium (7-8 ft)
+  - **speed:** 35
+  - **traits:**
+    -
+      - **name:** Giant Ancestry
+      - **description:** Choose Cloud (30-ft misty teleport), Fire (+1d10 fire damage on hit), Frost (+1d6 cold + -10 speed), Hill (knock prone), Stone (reaction reduce damage by 1d12+Con), or Storm (reaction deal 1d8 thunder when hit). PB uses per Long Rest.
+    -
+      - **name:** Large Form
+      - **description:** At level 5, Bonus Action transform to Large size for 10 minutes: Advantage on Strength checks, Speed increases by 10 ft (1/Long Rest).
+    -
+      - **name:** Powerful Build
+      - **description:** Advantage on checks to end Grappled condition; count as one size larger for carrying capacity and pushing/dragging.
+-
+  - **name:** Halfling
+  - **creature_type:** Humanoid
+  - **size:** Small (2-3 ft)
+  - **speed:** 30
+  - **traits:**
+    -
+      - **name:** Brave
+      - **description:** Advantage on saving throws to avoid or end the Frightened condition.
+    -
+      - **name:** Halfling Nimbleness
+      - **description:** Can move through the space of any creature that is a size larger than you.
+    -
+      - **name:** Luck
+      - **description:** When rolling a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.
+    -
+      - **name:** Naturally Stealthy
+      - **description:** Can take the Hide action even when obscured only by a creature at least one size larger.
+-
+  - **name:** Human
+  - **creature_type:** Humanoid
+  - **size:** Medium or Small (about 4-7 ft)
+  - **speed:** 30
+  - **traits:**
+    -
+      - **name:** Resourceful
+      - **description:** Gain Heroic Inspiration whenever you finish a Long Rest.
+    -
+      - **name:** Skillful
+      - **description:** Gain proficiency in one skill of your choice.
+    -
+      - **name:** Versatile
+      - **description:** Gain one Origin feat of your choice.
+-
+  - **name:** Orc
+  - **creature_type:** Humanoid
+  - **size:** Medium (6-7 ft)
+  - **speed:** 30
+  - **traits:**
+    -
+      - **name:** Adrenaline Rush
+      - **description:** Dash as a Bonus Action; gain Temporary Hit Points equal to your Proficiency Bonus (PB uses per Short/Long Rest).
+    -
+      - **name:** Darkvision
+      - **description:** Range of 120 feet.
+    -
+      - **name:** Relentless Endurance
+      - **description:** When reduced to 0 HP but not killed outright, drop to 1 HP instead (1/Long Rest).
+-
+  - **name:** Tiefling
+  - **creature_type:** Humanoid
+  - **size:** Medium or Small (about 4-7 ft)
+  - **speed:** 30
+  - **traits:**
+    -
+      - **name:** Darkvision
+      - **description:** Range of 60 feet.
+    -
+      - **name:** Fiendish Legacy
+      - **description:** Choose Abyssal (Poison resistance, Poison Spray, Ray of Sickness, Hold Person), Chthonic (Necrotic resistance, Chill Touch, False Life, Ray of Enfeeblement), or Infernal (Fire resistance, Fire Bolt, Hellish Rebuke, Darkness).
+    -
+      - **name:** Otherworldly Presence
+      - **description:** Know the Thaumaturgy cantrip.
+
+## 5. Feats Catalog
+- **origin_feats:**
+  -
+    - **name:** Alert
+    - **category:** Origin
+    - **prerequisite:** None
+    - **benefits:**
+      - Initiative Proficiency: Add your Proficiency Bonus to Initiative rolls.
+      - Initiative Swap: Immediately after rolling Initiative, you can swap your initiative with a willing ally in combat.
+  -
+    - **name:** Magic Initiate
+    - **category:** Origin
+    - **prerequisite:** None
+    - **benefits:**
+      - Two Cantrips: Learn two cantrips from the Cleric, Druid, or Wizard spell list.
+      - Level 1 Spell: Choose one 1st-level spell from that list to cast once per Long Rest without a spell slot, or using regular spell slots.
+      - Ability Choice: Choose Int, Wis, or Cha as spellcasting ability.
+  -
+    - **name:** Savage Attacker
+    - **category:** Origin
+    - **prerequisite:** None
+    - **benefits:**
+      - Once per turn when you hit a target with a weapon, you can roll the weapon's damage dice twice and use either total.
+  -
+    - **name:** Skilled
+    - **category:** Origin
+    - **prerequisite:** None
+    - **benefits:**
+      - Gain proficiency in any combination of three skills or tools of your choice. Repeatable.
+- **general_feats:**
+  -
+    - **name:** Ability Score Improvement
+    - **category:** General
+    - **prerequisite:** Level 4+
+    - **benefits:**
+      - Increase one ability score by 2, or two scores by 1 (max 20). Repeatable.
+  -
+    - **name:** Grappler
+    - **category:** General
+    - **prerequisite:** Level 4+, Str or Dex 13+
+    - **benefits:**
+      - Ability Score Increase: Increase Str or Dex by 1 (max 20).
+      - Punch and Grab: When you hit with an Unarmed Strike on your turn, you can deal damage and also grapple the target.
+      - Attack Advantage: Advantage on attack rolls against any creature grappled by you.
+      - Fast Wrestler: Moving a grappled creature does not halve your speed.
+- **fighting_style_feats:**
+  -
+    - **name:** Archery
+    - **category:** Fighting Style
+    - **prerequisite:** Fighting Style Feature
+    - **benefits:**
+      - Gain a +2 bonus to attack rolls made with Ranged weapons.
+  -
+    - **name:** Defense
+    - **category:** Fighting Style
+    - **prerequisite:** Fighting Style Feature
+    - **benefits:**
+      - Gain a +1 bonus to Armor Class while wearing Light, Medium, or Heavy armor.
+  -
+    - **name:** Dueling
+    - **category:** Fighting Style
+    - **prerequisite:** Fighting Style Feature
+    - **benefits:**
+      - When wielding a melee weapon in one hand and no other weapons, gain a +2 bonus to damage rolls with that weapon.
+  -
+    - **name:** Great Weapon Fighting
+    - **category:** Fighting Style
+    - **prerequisite:** Fighting Style Feature
+    - **benefits:**
+      - When rolling damage for a two-handed melee attack with Two-Handed or Versatile weapon, treat any 1 or 2 on damage dice as a 3.
+  -
+    - **name:** Two-Weapon Fighting
+    - **category:** Fighting Style
+    - **prerequisite:** Fighting Style Feature
+    - **benefits:**
+      - Add ability modifier to the damage roll of the extra attack granted by the Light weapon property.
+- **epic_boon_feats:**
+  -
+    - **name:** Boon of Combat Prowess
+    - **category:** Epic Boon
+    - **prerequisite:** Level 19+
+    - **effect:** When you miss with an attack roll, you can hit instead once per turn.
+  -
+    - **name:** Boon of Dimensional Travel
+    - **category:** Epic Boon
+    - **prerequisite:** Level 19+
+    - **effect:** Immediately after taking the Attack action or casting a spell, teleport up to 30 feet to an unoccupied space.
+  -
+    - **name:** Boon of Fate
+    - **category:** Epic Boon
+    - **prerequisite:** Level 19+
+    - **effect:** When you or another creature within 60 ft makes a d20 test, add or subtract 2d4 (recharges on 2d4 rest or initiative).
+  -
+    - **name:** Boon of Irresistible Offense
+    - **category:** Epic Boon
+    - **prerequisite:** Level 19+
+    - **effect:** Bludgeoning, piercing, and slashing damage ignore all damage resistance. Critical hits deal extra damage equal to ability score.
+  -
+    - **name:** Boon of Spell Recall
+    - **category:** Epic Boon
+    - **prerequisite:** Level 19+
+    - **effect:** Whenever you cast a level 1-4 spell, roll 1d4; on a 4, the slot is not expended.
+  -
+    - **name:** Boon of the Night Spirit
+    - **category:** Epic Boon
+    - **prerequisite:** Level 19+
+    - **effect:** Gain Invisibility as a Bonus Action while in dim light or darkness.
+  -
+    - **name:** Boon of Truesight
+    - **category:** Epic Boon
+    - **prerequisite:** Level 19+
+    - **effect:** Gain Truesight out to a range of 60 feet.

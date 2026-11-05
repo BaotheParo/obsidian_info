@@ -1,0 +1,380 @@
+---
+id: "doc:dmg_02_siege_traps"
+package_id: "DMG_02_SIEGE_TRAPS"
+title: "Vũ Khí Công Thành, Cạm Bẫy, Độc Dược, Đô Thị & Phước Lành Thần Thánh"
+original_title: "Siege, Traps, Poisons, Settlements & Supernatural Gifts"
+source_reference: "Dungeons & Dragons 2024 Dungeon Master's Guide"
+system_category: "00_System_Engines"
+associated_master_moc: "[[00_Master_MOC]]"
+---
+
+# Vũ Khí Công Thành, Cạm Bẫy, Độc Dược, Đô Thị & Phước Lành Thần Thánh
+
+> **Mã gói (Package ID):** `DMG_02_SIEGE_TRAPS` | **Nguồn khảo cứu:** *Dungeons & Dragons 2024 Dungeon Master's Guide*
+> **Phân loại hệ thống:** `[[00_System_Engines]]` | **Bản đồ não bộ:** [[00_Master_MOC]]
+
+## 1. Tóm Lược Nghiệp Vụ & Thiết Kế (Executive Summary)
+Dữ liệu luật chơi và cơ chế đã qua chắt lọc.
+
+## 3. Sections
+- **poisons:**
+  - **title:** Poisons & Toxicity Rules
+  - **pdf_pages:** 94-95
+  - **book_pages:** 90-91
+  - **poison_delivery_methods:**
+    -
+      - **method:** Contact
+      - **description:** Smeared on an object and remains potent until touched or washed off. A creature touching it with bare skin suffers its full effects.
+    -
+      - **method:** Ingested
+      - **description:** Must be swallowed in food or liquid. A partial dose may grant Advantage on the saving throw or deal half damage.
+    -
+      - **method:** Inhaled
+      - **description:** Powders or gases taking effect when breathed. Fills a 5-foot Cube. Holding one's breath is ineffective because it attacks mucous membranes and eyes.
+    -
+      - **method:** Injury
+      - **description:** Applied as a Bonus Action to a piercing/slashing weapon or piece of ammunition. The poison remains potent until delivered in a strike or washed away.
+  - **sample_poisons_catalog:**
+    -
+      - **name:** Assassin's Blood
+      - **method:** Ingested
+      - **price_gp:** 150
+      - **save_dc:** DC 10 Constitution saving throw
+      - **effect:** Takes 6 (1d12) Poison damage on a failed save and has the Poisoned condition for 24 hours. On a successful save, takes half damage and avoids the condition.
+    -
+      - **name:** Burnt Othur Fumes
+      - **method:** Inhaled
+      - **price_gp:** 500
+      - **save_dc:** DC 13 Constitution saving throw
+      - **effect:** Takes 10 (3d6) Acid damage on a failed save (half on success). Must repeat the save at the start of each of its turns; taking 3 (1d6) Acid damage per failure until 3 successful saves end it.
+    -
+      - **name:** Crawler Mucus
+      - **method:** Contact
+      - **price_gp:** 200
+      - **save_dc:** DC 13 Constitution saving throw
+      - **effect:** On a failed save, has the Poisoned condition for 1 minute and the Paralyzed condition while poisoned. Repeats the save at the end of each turn.
+    -
+      - **name:** Drow Poison (Lolth's Sting)
+      - **method:** Injury
+      - **price_gp:** 200
+      - **save_dc:** DC 13 Constitution saving throw
+      - **effect:** On a failed save, Poisoned for 1 hour. If the save is failed by 5 or more, the creature also gains the Unconscious condition while poisoned (wakes up upon taking damage or an action to shake awake).
+    -
+      - **name:** Essence of Ether
+      - **method:** Inhaled
+      - **price_gp:** 300
+      - **save_dc:** DC 15 Constitution saving throw
+      - **effect:** Poisoned for 8 hours and Unconscious while poisoned. Wakes up upon taking damage or an action to shake awake.
+    -
+      - **name:** Malice
+      - **method:** Inhaled
+      - **price_gp:** 250
+      - **save_dc:** DC 15 Constitution saving throw
+      - **effect:** Poisoned for 1 hour and Blinded while poisoned.
+    -
+      - **name:** Midnight Tears
+      - **method:** Ingested
+      - **price_gp:** 1500
+      - **save_dc:** DC 17 Constitution saving throw
+      - **effect:** A delayed insidious poison that produces no effect until midnight strikes. At midnight, the creature makes the save, taking 31 (9d6) Poison damage on a failed save (half on success).
+    -
+      - **name:** Oil of Taggit
+      - **method:** Contact
+      - **price_gp:** 400
+      - **save_dc:** DC 13 Constitution saving throw
+      - **effect:** Poisoned for 24 hours and Unconscious while poisoned. Wakes up upon taking damage or an action to shake awake.
+    -
+      - **name:** Pale Tincture
+      - **method:** Ingested
+      - **price_gp:** 250
+      - **save_dc:** DC 16 Constitution saving throw
+      - **effect:** Takes 3 (1d6) Poison damage and is Poisoned. At the end of each Long Rest, repeats the save; on failure, takes 3 (1d6) Poison damage and maximum HP drops by that amount. 7 consecutive successes cure it.
+    -
+      - **name:** Purple Worm Poison
+      - **method:** Injury
+      - **price_gp:** 2000
+      - **save_dc:** DC 19 Constitution saving throw
+      - **effect:** Takes 42 (12d6) Poison damage on a failed save, or half on a success.
+    -
+      - **name:** Serpent Venom
+      - **method:** Injury
+      - **price_gp:** 200
+      - **save_dc:** DC 11 Constitution saving throw
+      - **effect:** Takes 10 (3d6) Poison damage on a failed save, or half on a success.
+    -
+      - **name:** Torpor
+      - **method:** Ingested
+      - **price_gp:** 600
+      - **save_dc:** DC 15 Constitution saving throw
+      - **effect:** Poisoned and Incapacitated for 4d6 hours.
+    -
+      - **name:** Truth Serum
+      - **method:** Ingested
+      - **price_gp:** 150
+      - **save_dc:** DC 11 Constitution saving throw
+      - **effect:** Poisoned for 1 hour and cannot speak a deliberate lie (as if under Zone of Truth).
+    -
+      - **name:** Wyvern Poison
+      - **method:** Injury
+      - **price_gp:** 1200
+      - **save_dc:** DC 15 Constitution saving throw
+      - **effect:** Takes 24 (7d6) Poison damage on a failed save, or half on a success.
+- **renown:**
+  - **title:** Faction Renown System
+  - **pdf_pages:** 96
+  - **book_pages:** 92
+  - **mechanics:**
+    - **renown_score:** Tracks character status, trust, and rank within a faction, guild, or sovereign order.
+    - **perks_by_threshold:**
+      -
+        - **renown:** Score 3-10
+        - **perk:** Access to local safehouses, reliable informants, and minor discounts on mundane gear.
+      -
+        - **renown:** Score 11-25
+        - **perk:** Access to faction spellcasters, potions, spell scrolls, and backup hirelings.
+      -
+        - **renown:** Score 26-49
+        - **perk:** Command over a detachment of faction troops or a specialized outpost.
+      -
+        - **renown:** Score 50+
+        - **perk:** Highest leadership council, ability to marshal a private army, direct access to rare magic items, and sovereign authority.
+    - **losing_renown:** Renown is lost through public betrayal, failing critical assignments, or defying core faction tenets.
+- **settlements:**
+  - **title:** Settlements & Urban Environments
+  - **pdf_pages:** 97-99
+  - **book_pages:** 93-95
+  - **settlement_sizes:**
+    -
+      - **type:** Village
+      - **population:** 1 to 1,000
+      - **max_item_value_gp:** 100
+      - **services:** Blacksmith, general tavern, local shrine, basic provisions. Expensive magic items are nonexistent.
+    -
+      - **type:** Town
+      - **population:** 1,000 to 6,000
+      - **max_item_value_gp:** 1000
+      - **services:** Organized militia, specialized guildhalls, apothecaries, potion brewers, libraries, temple complexes.
+    -
+      - **type:** City
+      - **population:** 6,000 to 25,000+
+      - **max_item_value_gp:** 10,000+
+      - **services:** Arcane universities, grand cathedrals, sprawling black markets, high-tier artisan workshops, royal embassies.
+  - **settlement_generator_tables:**
+    - **claims_to_fame:**
+      - Famous brewery / vineyard exporting legendary vintage.
+      - Ancient ruins or catacombs buried beneath city streets.
+      - Site of a historic military victory or heroic sacrifice.
+      - Pilgrimage destination housing the relics of a saint.
+      - Seat of a decadent criminal syndicate or thieves' guild.
+    - **settlement_quirks:**
+      - Unusually strict curfews and night-time watch patrols.
+      - Local taboo against bare steel or openly displayed weapons.
+      - Heavy sulfur or mineral springs infusing the town water.
+      - Bioluminescent fungi or glowing streetlights line every thoroughfare.
+- **siege_equipment:**
+  - **title:** Siege Warfare Equipment
+  - **pdf_pages:** 100-101
+  - **book_pages:** 96-97
+  - **general_mechanics:**
+    - **actions:** Most siege weapons require multiple crew members taking the Utilize action to Load, Aim, and Fire.
+    - **structure_damage:** Siege engines deal double damage to objects and fortified structures (Siege Monster property equivalent).
+  - **equipment_catalog:**
+    -
+      - **name:** Ballista
+      - **size:** Large Object
+      - **ac:** 15
+      - **hp:** 50
+      - **crew:** 3 crew members recommended (1 to load, 1 to aim, 1 to fire)
+      - **actions_required:** 1 Utilize action to load, 1 Utilize action to aim
+      - **attack:**
+        - **name:** Ballista Bolt
+        - **attack_bonus:** +6
+        - **range:** 120/480 ft
+        - **damage:** 16 (3d10) Piercing damage
+    -
+      - **name:** Cannon
+      - **size:** Large Object
+      - **ac:** 19
+      - **hp:** 75
+      - **crew:** 3 crew members recommended
+      - **actions_required:** 1 Utilize action to load, 1 Utilize action to aim
+      - **attack:**
+        - **name:** Cannonball
+        - **attack_bonus:** +6
+        - **range:** 600/2,400 ft
+        - **damage:** 44 (8d10) Bludgeoning damage
+    -
+      - **name:** Lightning Cannon
+      - **size:** Large Magical Object
+      - **ac:** 19
+      - **hp:** 75
+      - **crew:** 1 arcane crew member
+      - **actions_required:** 1 Utilize action to aim, then take the Lightning Ball action
+      - **attack:**
+        - **name:** Lightning Ball
+        - **attack_bonus:** +6
+        - **range:** 300/1,200 ft
+        - **damage:** 33 (6d10) Lightning damage
+    -
+      - **name:** Mangonel (Catapult)
+      - **size:** Large Object
+      - **ac:** 15
+      - **hp:** 100
+      - **crew:** 5 crew members recommended
+      - **actions_required:** 2 Utilize actions to load, 2 Utilize actions to aim
+      - **attack:**
+        - **name:** Mangonel Stone
+        - **attack_bonus:** +5
+        - **range:** 200/800 ft (cannot target within 60 ft)
+        - **damage:** 27 (5d10) Bludgeoning damage
+    -
+      - **name:** Battering Ram
+      - **size:** Large Object
+      - **ac:** 15
+      - **hp:** 100
+      - **crew:** 4 crew members required
+      - **attack:**
+        - **name:** Ram
+        - **attack_bonus:** +8
+        - **range:** 5 ft
+        - **damage:** 16 (3d10) Bludgeoning damage
+        - **special:** Deals double damage (32 / 6d10) to doors and wooden/stone structures.
+    -
+      - **name:** Siege Tower
+      - **size:** Gargantuan Object
+      - **ac:** 15
+      - **hp:** 200
+      - **crew:** Up to 20 soldiers inside; 4 creatures to push
+      - **properties:** Provides Total Cover to all occupants inside. Features a top drop-bridge for boarding castle ramparts.
+    -
+      - **name:** Trebuchet
+      - **size:** Huge Object
+      - **ac:** 15
+      - **hp:** 150
+      - **crew:** 6 crew members recommended
+      - **actions_required:** 2 Utilize actions to load, 2 Utilize actions to aim, 1 action to release counterweight
+      - **attack:**
+        - **name:** Trebuchet Stone
+        - **attack_bonus:** +5
+        - **range:** 300/1,200 ft (cannot target within 60 ft)
+        - **damage:** 44 (8d10) Bludgeoning damage
+    -
+      - **name:** Cauldron of Boiling Oil
+      - **size:** Medium / Large Object
+      - **ac:** 19
+      - **hp:** 40
+      - **crew:** 1 crew member
+      - **actions_required:** Requires 3 Utilize actions to refill once emptied
+      - **attack:**
+        - **name:** Spill Oil
+        - **area:** 10-foot square directly beneath the cauldron
+        - **save:** DC 15 Dexterity saving throw
+        - **damage:** 10 (3d6) Fire damage, and 10 (3d6) Fire damage at the start of each turn until wiped off.
+- **supernatural_gifts:**
+  - **title:** Supernatural Gifts (Blessings & Charms)
+  - **pdf_pages:** 102-103
+  - **book_pages:** 98-99
+  - **blessings:**
+    - **nature:** Permanent divine enhancements bestowed by deities or planar powers for extraordinary service. A character rarely has more than one blessing.
+    - **catalog:**
+      -
+        - **name:** Blessing of Health
+        - **effect:** Your Constitution score increases by 2, up to a maximum of 22.
+      -
+        - **name:** Blessing of Magic Resistance
+        - **effect:** You have Advantage on saving throws against spells and other magical effects.
+      -
+        - **name:** Blessing of Protection
+        - **effect:** You gain a +1 bonus to Armor Class and all saving throws.
+      -
+        - **name:** Blessing of Understanding
+        - **effect:** Your Wisdom score increases by 2, up to a maximum of 22.
+      -
+        - **name:** Blessing of Valhalla
+        - **effect:** Summons spirit warriors as if blowing a silver Horn of Valhalla (recharges every 7 days).
+      -
+        - **name:** Blessing of Weapon Enhancement
+        - **effect:** One nonmagical weapon in your possession becomes a +1 Weapon while you wield it.
+      -
+        - **name:** Blessing of Wound Closure
+        - **effect:** Confers the benefits of a Periapt of Wound Closure (stabilizes automatically at start of turn, doubles HP regained from Hit Dice).
+  - **charms:**
+    - **nature:** Temporary infusions of magical energy, typically holding 1 to 3 charges before dissipating.
+    - **sample_charms:**
+      -
+        - **name:** Charm of Darkvision
+        - **effect:** Grants Darkvision out to 60 ft for 28 days.
+      -
+        - **name:** Charm of Feather Fall
+        - **effect:** Cast Feather Fall without expending a spell slot (3 charges).
+      -
+        - **name:** Charm of Heroism
+        - **effect:** Confers the benefits of a Potion of Heroism for 1 hour (1 charge).
+      -
+        - **name:** Charm of Restoration
+        - **effect:** Cast Lesser Restoration (up to 3 times) or Greater Restoration (1 time) without expending spell slots.
+- **traps:**
+  - **title:** Dungeon Traps & Mechanics
+  - **pdf_pages:** 104-107
+  - **book_pages:** 100-103
+  - **trap_design_guidelines:**
+    - **threat_levels:**
+      - Moderate (Levels 1-4)
+      - Dangerous (Levels 5-10)
+      - Deadly (Levels 11-16)
+      - Lethal (Levels 17-20)
+    - **trap_components:**
+      - Trigger (Pressure plate, trip wire, false handle, magical glyph)
+      - Duration / Reset time
+      - Countermeasures (Search action Perception check, Dexterity Thieves' Tools disarm, Arcana defacement)
+  - **sample_traps_catalog:**
+    -
+      - **name:** Collapsing Roof
+      - **threat:** Moderate (Levels 1-4)
+      - **trigger:** Trip wire stretched 3 inches above the floor across a 10-foot wide hallway.
+      - **effect:** Ceiling collapses over a 10-foot square. DC 15 Dexterity saving throw: 22 (4d10) Bludgeoning damage on a failed save, half on success. Area becomes Difficult Terrain.
+      - **detect_and_disarm:** DC 11 Wisdom (Perception) to detect trip wire. Cutting trip wire disarms without a roll.
+    -
+      - **name:** Falling Net
+      - **threat:** Moderate (Levels 1-4)
+      - **trigger:** Trip wire releases a weighted 10-foot square net from the ceiling.
+      - **effect:** DC 10 Dexterity saving throw or become Restrained. AC 10, HP 20, DC 10 Strength check to escape.
+      - **detect_and_disarm:** DC 10 Wisdom (Perception) to spot suspended net.
+    -
+      - **name:** Fire-Casting Statue
+      - **threat:** Deadly (Levels 1-4) / Moderate (Levels 5-10)
+      - **trigger:** Pressure plate stepped on or entered.
+      - **duration:** Instantaneous; resets automatically at the start of the next turn.
+      - **effect:** Statue exhales a 15-foot Cone of magical flame. DC 15 Dexterity saving throw, taking 11 (2d10) Fire damage on a failed save (half on success).
+      - **detect_and_disarm:** Detect Magic reveals Evocation aura. DC 10 Perception spots tiny glyph on statue. DC 15 Arcana determines glyph meaning ('fire'). Defacing glyph with sharp tool disarms trap.
+    -
+      - **name:** Hidden Spiked Pit
+      - **threat:** Dangerous (Levels 1-4)
+      - **trigger:** False floor concealed by dust, rugs, or plaster covers a 10-foot square pit.
+      - **depth:** 20 feet deep with iron spikes at the bottom.
+      - **effect:** DC 15 Dexterity save to avoid falling. On failure, takes 7 (2d6) Bludgeoning fall damage plus 11 (2d10) Piercing damage from spikes coated with Serpent Venom (DC 11 Con save or +10 (3d6) Poison damage).
+      - **detect_and_disarm:** DC 15 Wisdom (Perception) or Intelligence (Investigation) to spot uneven false flooring.
+    -
+      - **name:** Poison Darts
+      - **threat:** Moderate (Levels 1-4)
+      - **trigger:** Pressure plate connected to spring-loaded dart tubes in wall.
+      - **effect:** Darts make a Ranged Attack Roll (+8 to hit) against 1d4 targets. Hit deals 2 (1d4) Piercing damage plus 11 (2d10) Poison damage.
+      - **detect_and_disarm:** DC 15 Perception spots tiny holes in masonry. Wedging spikes into holes disarms.
+    -
+      - **name:** Poison Needle Lock
+      - **threat:** Moderate (Levels 1-4)
+      - **trigger:** Attempting to pick the lock or open chest without the proper key.
+      - **effect:** Small needle springs into hand, dealing 1 Piercing damage and 11 (2d10) Poison damage (DC 15 Con save halves).
+      - **detect_and_disarm:** DC 15 Intelligence (Investigation) spots spring trap inside keyhole. DC 15 Dexterity check with Thieves' Tools disarms.
+    -
+      - **name:** Rolling Giant Sphere
+      - **threat:** Deadly (Levels 1-4) / Dangerous (Levels 5-10)
+      - **trigger:** Stepping on a concealed pressure plate releases a 10-foot diameter solid stone sphere down a sloping 100-foot hallway.
+      - **effect:** Sphere rolls 60 feet per round. Any creature in its path must make a DC 15 Dexterity saving throw, taking 55 (10d10) Bludgeoning damage and knocked Prone on a failed save (half damage and dodges aside on success).
+      - **detect_and_disarm:** DC 15 Perception spots curved wear tracks on the stone floor.
+    -
+      - **name:** Scythe Blade
+      - **threat:** Moderate (Levels 1-4)
+      - **trigger:** Opening an unlocked door without turning the bypass switch.
+      - **effect:** Curved steel scythe swings down from ceiling frame. Melee Attack Roll (+8 to hit). Hit: 14 (4d6) Slashing damage.
+      - **detect_and_disarm:** DC 15 Perception spots blade groove in lintel.

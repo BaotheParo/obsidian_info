@@ -1,0 +1,336 @@
+---
+id: "doc:dmg_03_craft_relics"
+package_id: "DMG_03_CRAFT_RELICS"
+title: "Luật Chế Tạo Đồ Ma Thuật, Vật Phẩm Bị Nguyền, Độ Bền Cổ Vật & Cổ Vật Thần Thoại"
+original_title: "Crafting Magic Items, Cursed Items, Item Resilience, Artifacts & Sentient Items"
+source_reference: "Dungeons & Dragons 2024 Dungeon Master's Guide"
+system_category: "00_System_Engines"
+associated_master_moc: "[[00_Master_MOC]]"
+---
+
+# Luật Chế Tạo Đồ Ma Thuật, Vật Phẩm Bị Nguyền, Độ Bền Cổ Vật & Cổ Vật Thần Thoại
+
+> **Mã gói (Package ID):** `DMG_03_CRAFT_RELICS` | **Nguồn khảo cứu:** *Dungeons & Dragons 2024 Dungeon Master's Guide*
+> **Phân loại hệ thống:** `[[00_System_Engines]]` | **Bản đồ não bộ:** [[00_Master_MOC]]
+
+## 1. Tóm Lược Nghiệp Vụ & Thiết Kế (Executive Summary)
+Dữ liệu luật chơi và cơ chế đã qua chắt lọc.
+
+## 3. Sections
+- **magic_item_fundamentals:**
+  - **title:** Magic Item Categories, Rarity & Attunement
+  - **pdf_pages:** 220-221
+  - **book_pages:** 216-217
+  - **categories:**
+    -
+      - **category:** Armor
+      - **description:** Magical suits of armor or shields.
+    -
+      - **category:** Potions
+      - **description:** Consumable liquids granting temporary magical effects when drunk.
+    -
+      - **category:** Rings
+      - **description:** Magical bands worn on fingers.
+    -
+      - **category:** Rods
+      - **description:** Scepter-like focus instruments measuring 2 to 3 feet.
+    -
+      - **category:** Scrolls
+      - **description:** Inscribed spells or wards on parchment/paper/vellum.
+    -
+      - **category:** Staffs
+      - **description:** Focus devices 5 to 6 feet long, usable as Quarterstaffs and Arcane Focuses.
+    -
+      - **category:** Wands
+      - **description:** 12 to 15 inch instruments of wood, bone, or metal for channeling spells.
+    -
+      - **category:** Weapons
+      - **description:** Magical bladed or blunt armaments conferring offensive bonuses.
+    -
+      - **category:** Wondrous Items
+      - **description:** All other wearable, portable, or usable enchanted objects (cloaks, boots, wondrous figurines).
+  - **rarity_tiers:**
+    -
+      - **rarity:** Common
+      - **typical_character_level:** Level 1+
+    -
+      - **rarity:** Uncommon
+      - **typical_character_level:** Level 1+
+    -
+      - **rarity:** Rare
+      - **typical_character_level:** Level 5+
+    -
+      - **rarity:** Very Rare
+      - **typical_character_level:** Level 11+
+    -
+      - **rarity:** Legendary
+      - **typical_character_level:** Level 17+
+    -
+      - **rarity:** Artifact
+      - **typical_character_level:** Any (Plot Device / Campaign Climax)
+  - **attunement_rules:**
+    - **limit:** A character can be attuned to no more than 3 magic items simultaneously.
+    - **process:** Requires spending a Short Rest focused entirely on the item while maintaining physical contact.
+    - **breaking_attunement:** Voluntarily during a Short Rest, or if another creature attunes to it, or if the character is more than 100 feet away for 24 hours.
+  - **magic_items_awarded_by_tier_table:**
+    -
+      - **tier:** Tier 1 (Levels 1-4)
+      - **common:** 6
+      - **uncommon:** 4
+      - **rare:** 1
+      - **very_rare:** 0
+      - **legendary:** 0
+      - **total:** 11
+    -
+      - **tier:** Tier 2 (Levels 5-10)
+      - **common:** 10
+      - **uncommon:** 17
+      - **rare:** 6
+      - **very_rare:** 1
+      - **legendary:** 0
+      - **total:** 34
+    -
+      - **tier:** Tier 3 (Levels 11-16)
+      - **common:** 3
+      - **uncommon:** 7
+      - **rare:** 11
+      - **very_rare:** 7
+      - **legendary:** 2
+      - **total:** 30
+    -
+      - **tier:** Tier 4 (Levels 17-20)
+      - **common:** 0
+      - **uncommon:** 0
+      - **rare:** 5
+      - **very_rare:** 11
+      - **legendary:** 9
+      - **total:** 25
+    -
+      - **tier:** Full Campaign Total
+      - **common:** 19
+      - **uncommon:** 28
+      - **rare:** 23
+      - **very_rare:** 19
+      - **legendary:** 11
+      - **total:** 100
+- **activation_and_recharge:**
+  - **title:** Activating Magic Items & Recharge Mechanics
+  - **pdf_pages:** 221-222
+  - **book_pages:** 217-218
+  - **rules:**
+    - **command_word:** A spoken or signed word/phrase. Spoken command words fail in areas of magical silence.
+    - **consumable_items:** Consumed and destroyed upon use (potions drunk, scrolls crumble into ash).
+    - **spells_cast_from_items:** Cast at lowest possible spell level; expends no spell slots; requires no material components unless noted. Concentration is maintained by the user.
+    - **charges:** Items with charges specify maximum capacity and recharge formulas (e.g., 1d6+1 charges daily). Casting Identify reveals current charges.
+    - **the_next_dawn:** Properties that recharge 'at the next dawn' recharge on planar schedules determined by the DM when on planes without solar days.
+- **cursed_items:**
+  - **title:** Cursed Items
+  - **pdf_pages:** 221
+  - **book_pages:** 217
+  - **mechanics:**
+    - **concealment_rule:** Most methods of identifying items—including the Identify spell—completely fail to reveal that an item is cursed. The curse becomes apparent only when attuned, equipped, or triggered.
+    - **attunement_trap:** Attunement to a cursed item cannot be ended voluntarily by the wearer. The item remains bonded and cannot be parted with until the curse is broken.
+    - **breaking_curses:** Targeting the attuned creature with a Remove Curse spell or completing an arduous quest breaks the bond, allowing the cursed item to be removed.
+- **magic_item_resilience:**
+  - **title:** Magic Item Resilience & Durability
+  - **pdf_pages:** 221
+  - **book_pages:** 217
+  - **durability_rules:**
+    - **base_durability:** A magic item is at least as durable as a nonmagical item of its kind.
+    - **damage_resistance:** Most permanent magic items (other than Potions and Scrolls) have Resistance to all damage types.
+    - **artifact_invulnerability:** Artifacts are impervious to all normal damage and physical destruction. An Artifact can only be destroyed through one singular, thematic method (e.g., bathed in the breath of an ancient red dragon or cast into the Heart of the Sun).
+- **crafting_magic_items:**
+  - **title:** Crafting Magic Items System
+  - **pdf_pages:** 221, 226
+  - **book_pages:** 217, 222
+  - **requirements:**
+    - **arcana_proficiency:** The crafter and all participating assistants MUST have proficiency in the Arcana skill.
+    - **formula_requirement:** The crafter must possess a magical formula (blueprint/recipe) detailing creation steps.
+    - **tool_proficiency:** The crafter and assistants must have proficiency with the required artisan tool.
+    - **spell_preparation:** If the magic item allows its user to cast any spells from it, the crafter must have all those spells prepared every single day spent crafting.
+  - **required_tools_by_category_table:**
+    -
+      - **item_category:** Armor
+      - **required_tools:** Leatherworker's Tools, Smith's Tools, or Weaver's Tools (depending on armor material)
+    -
+      - **item_category:** Potion
+      - **required_tools:** Alchemist's Supplies or Herbalism Kit
+    -
+      - **item_category:** Ring
+      - **required_tools:** Jeweler's Tools
+    -
+      - **item_category:** Rod
+      - **required_tools:** Woodcarver's Tools or Jeweler's Tools
+    -
+      - **item_category:** Scroll
+      - **required_tools:** Calligrapher's Supplies
+    -
+      - **item_category:** Staff
+      - **required_tools:** Woodcarver's Tools or Jeweler's Tools
+    -
+      - **item_category:** Wand
+      - **required_tools:** Woodcarver's Tools or Jeweler's Tools
+    -
+      - **item_category:** Weapon
+      - **required_tools:** Leatherworker's Tools, Smith's Tools, or Woodcarver's Tools
+    -
+      - **item_category:** Wondrous Item
+      - **required_tools:** Tinker's Tools or the artisan tool required to craft the base nonmagical item
+  - **crafting_time_and_cost_table:**
+    -
+      - **rarity:** Common
+      - **crafting_time_days:** 5
+      - **raw_materials_cost_gp:** 50
+      - **consumable_time_days:** 2.5
+      - **consumable_cost_gp:** 25
+    -
+      - **rarity:** Uncommon
+      - **crafting_time_days:** 10
+      - **raw_materials_cost_gp:** 200
+      - **consumable_time_days:** 5
+      - **consumable_cost_gp:** 100
+    -
+      - **rarity:** Rare
+      - **crafting_time_days:** 50
+      - **raw_materials_cost_gp:** 2000
+      - **consumable_time_days:** 25
+      - **consumable_cost_gp:** 1000
+    -
+      - **rarity:** Very Rare
+      - **crafting_time_days:** 125
+      - **raw_materials_cost_gp:** 20000
+      - **consumable_time_days:** 62.5
+      - **consumable_cost_gp:** 10000
+    -
+      - **rarity:** Legendary
+      - **crafting_time_days:** 250
+      - **raw_materials_cost_gp:** 100000
+      - **consumable_time_days:** 125
+      - **consumable_cost_gp:** 50000
+  - **crafting_process_rules:**
+    - **work_hours:** Each day of crafting requires 8 hours of dedicated work. Days need not be consecutive.
+    - **assistants:** Characters can combine efforts to divide crafting time by the number of participating characters. Normally only one other character can assist, unless the DM permits more.
+    - **base_item_cost:** If the item requires an expensive physical base (e.g., Plate Armor for Armor of Invulnerability), the crafter must pay the full purchase cost of that base item or forge it first.
+    - **raw_material_availability:** 75% chance of finding raw materials in a City; 25% chance in any smaller settlement. If unavailable, wait at least 7 days before rechecking.
+- **magic_item_special_features:**
+  - **title:** Special Features Generator (Origin, History, Minor Properties, Quirks)
+  - **pdf_pages:** 222-223, 226-227
+  - **book_pages:** 218-219, 222-223
+  - **creator_origins:**
+    -
+      - **d20:** 1
+      - **origin:** Aberration
+      - **description:** Alien, flesh-like, disturbing chitinous construction; whispers in aberrant dialects.
+    -
+      - **d20:** 2
+      - **origin:** Celestial
+      - **description:** Luminous, polished white gold or platinum; radiates celestial warmth.
+    -
+      - **d20:** 3-4
+      - **origin:** Dragon
+      - **description:** Carved from dragon bone or scales; features Draconic runes and motifs.
+    -
+      - **d20:** 5
+      - **origin:** Drow
+      - **description:** Crafted from dark basalt or spider silk; black and purple hues; disintegrates in sunlight unless warded.
+    -
+      - **d20:** 6-7
+      - **origin:** Dwarf
+      - **description:** Impeccable geometric masonry and runic metalwork; extremely heavy and durable.
+    -
+      - **d20:** 8-9
+      - **origin:** Elf
+      - **description:** Graceful organic lines resembling flowing leaves, vines, or water; impossibly light.
+    -
+      - **d20:** 10
+      - **origin:** Fey
+      - **description:** Prismatic, capricious, woven from moonlight or autumn leaves; shifts subtle colors.
+    -
+      - **d20:** 11
+      - **origin:** Fiend
+      - **description:** Forged in the Lower Planes with brimstone, brass, or blackened iron; cold or scorching to the touch.
+    -
+      - **d20:** 12
+      - **origin:** Giant
+      - **description:** Oversized, bearing runic carvings of frost, fire, or stone giants.
+    -
+      - **d20:** 13
+      - **origin:** Gnome
+      - **description:** Intricate gears, clockwork embellishments, and whimsical mechanical dials.
+    -
+      - **d20:** 14-20
+      - **origin:** Human
+      - **description:** Versatile craftsmanship reflecting ancient fallen empires (Netheril, Greyhawk, Cormyr).
+  - **minor_properties_sample:**
+    -
+      - **name:** Beacon
+      - **effect:** As a Bonus Action, the bearer sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet.
+    -
+      - **name:** Compass
+      - **effect:** The bearer always knows which way is north while holding this item.
+    -
+      - **name:** Harmonious
+      - **effect:** Attuning to this item takes only 1 minute instead of a Short Rest.
+    -
+      - **name:** Temperate
+      - **effect:** The bearer suffers no ill effects from Extreme Cold or Extreme Heat.
+    -
+      - **name:** Unbreakable
+      - **effect:** The item cannot be broken by nonmagical means, except by immersion in magma.
+  - **quirks_sample:**
+    -
+      - **name:** Covetous
+      - **effect:** The bearer becomes possessive and reluctant to let others hold or inspect the item.
+    -
+      - **name:** Fragile
+      - **effect:** The item appears cracked or distressed, though its durability is unaffected.
+    -
+      - **name:** Loud
+      - **effect:** The item emits a subtle clinking, ticking, or humming sound audible within 10 feet.
+    -
+      - **name:** Ponderous
+      - **effect:** The item feels twice as heavy as a standard item of its kind.
+- **artifacts:**
+  - **title:** Artifacts: Majestic Relics of Creation
+  - **pdf_pages:** 228-229
+  - **book_pages:** 224-225
+  - **artifact_rules:**
+    - **nature:** Unique, world-altering masterworks tied to pivotal cosmological events. They serve as major narrative objectives.
+    - **impervious:** Artifacts cannot be destroyed by conventional attacks, spells, or Disintegrate.
+  - **beneficial_properties:**
+    - **minor_beneficial:**
+      - You gain a +1 bonus to Armor Class while attuned to the artifact.
+      - You gain proficiency in one skill of your choice.
+      - You learn one cantrip of your choice.
+      - You are immune to disease.
+      - You gain resistance to one damage type (acid, cold, fire, lightning, or thunder).
+    - **major_beneficial:**
+      - One ability score of your choice increases by 2 (up to a maximum of 24).
+      - You regain 1d6 Hit Points at the start of each of your turns if you have at least 1 HP.
+      - While attuned, you can cast one 6th-level, 7th-level, or 8th-level spell once per day.
+      - You gain truesight out to a range of 30 feet.
+      - You gain immunity to one damage type of your choice.
+  - **detrimental_properties:**
+    - **minor_detrimental:**
+      - While attuned, all holy water within 10 feet of you becomes desecrated/spoiled.
+      - Your appearance alters subtly (e.g., eyes glow red, skin turns pale).
+      - You emit a distinct foul odor or metallic scent detectable within 10 feet.
+      - You take 4d10 Psychic damage whenever you attune to or de-attune from the artifact.
+    - **major_detrimental:**
+      - You have Disadvantage on saving throws against spells and magical effects.
+      - Your alignment shifts toward the artifact's creator.
+      - While attuned, an aberrant or fiendish entity tracks your location across the planes.
+      - If you die while attuned, your soul is drawn into the artifact and cannot be resurrected.
+  - **destroying_artifacts:** Every Artifact has a specific, thematic destruction method: immersed in the Blood of an Archdevil, struck by the Hammer of Moradin, dissolved in the digestive acid of the Tarrasque, or cast into the Positive Plane.
+- **sentient_magic_items:**
+  - **title:** Sentient Magic Items
+  - **pdf_pages:** 230
+  - **book_pages:** 226
+  - **characteristics:**
+    - **ability_scores:** Int, Wis, and Cha scores typically ranging from 10 to 18.
+    - **communication:** Can communicate via empathy (transmitting emotions), telepathy (projecting thoughts into the wielder's mind), or audible speech (knowing 1 to 4 languages).
+    - **senses:** Hearing and normal vision out to 30, 60, or 120 ft; some possess Darkvision or Blindsight.
+    - **special_purpose:** Designed with a driving destiny: e.g., Bane (destroy fiends/undead), Defender of a royal lineage, Seeker of lost arcane knowledge, or Planar Crusader.
+  - **conflict_mechanics:**
+    - **trigger:** A conflict arises whenever the wielder acts counter to the sentient item's alignment or special purpose.
+    - **resolution:** The item forces a contested Charisma check against the wielder. If the item wins, it takes control of the wielder for 1d12 hours, demanding obedience to its imperatives.

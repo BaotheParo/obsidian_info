@@ -1,0 +1,404 @@
+---
+id: "doc:srd_05_animals_mounts_swarms"
+package_id: "SRD_05_ANIMALS_MOUNTS_SWARMS"
+title: "Animals: Wild Game, Livestock, Mounts & Swarms"
+original_title: "Animals: Wild Game, Livestock, Mounts & Swarms"
+source_reference: "D&D 5E / AD&D / RPG Advanced Design"
+system_category: "00_System_Engines"
+associated_master_moc: "[[00_Master_MOC]]"
+---
+
+# Animals: Wild Game, Livestock, Mounts & Swarms
+
+> **Mã gói (Package ID):** `SRD_05_ANIMALS_MOUNTS_SWARMS` | **Nguồn khảo cứu:** *D&D 5E / AD&D / RPG Advanced Design*
+> **Phân loại hệ thống:** `[[00_System_Engines]]` | **Bản đồ não bộ:** [[00_Master_MOC]]
+
+## 1. Tóm Lược Nghiệp Vụ & Thiết Kế (Executive Summary)
+Dữ liệu luật chơi và cơ chế đã qua chắt lọc.
+
+## 2. Ánh Xạ Cơ Chế Sang Sinh Tồn Thực Tế (Project Zomboid B42 / Hardcore RPG Mapping)
+## 3. Animals And Mounts
+-
+  - **name:** Black Bear
+  - **pdf_page:** 345
+  - **size:** Medium
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 11
+  - **hp:** 19 (3d8 + 6)
+  - **speed:** 40 ft., climb 30 ft.
+  - **cr:** 1/2 (100 XP)
+  - **traits:**
+    - Keen Smell (Advantage on Wisdom Perception checks relying on smell)
+  - **actions:**
+    - Multiattack: One Bite and one Claws.
+    - Bite. Melee: +4 to hit, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage.
+    - Claws. Melee: +4 to hit, reach 5 ft. Hit: 7 (2d4 + 2) Slashing damage.
+  - **pz_role:** Medium wilderness predator; high meat and pelt yield; attacks when cornered or near cubs.
+-
+  - **name:** Boar
+  - **pdf_page:** 346
+  - **size:** Medium
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 11
+  - **hp:** 11 (2d8 + 2)
+  - **speed:** 40 ft.
+  - **cr:** 1/4 (50 XP)
+  - **traits:**
+    - Charge: If the boar moves at least 20 feet straight toward a target and hits with a tusk attack, deals extra 1d6 Slashing damage and DC 11 Str save or knocked Prone.
+    - Relentless (Recharges on Short/Long Rest): If the boar takes 7 damage or less that would reduce it to 0 HP, it drops to 1 HP instead.
+  - **actions:**
+    - Tusk. Melee Attack: +3 to hit, reach 5 ft. Hit: 4 (1d6 + 1) Slashing damage.
+  - **pz_role:** Wild game hunting / aggressive charging boar; domesticable as swine livestock in B42.
+-
+  - **name:** Brown Bear
+  - **pdf_page:** 346
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 11
+  - **hp:** 34 (4d10 + 12)
+  - **speed:** 40 ft., climb 30 ft.
+  - **cr:** 1 (200 XP)
+  - **traits:**
+    - Keen Smell
+  - **actions:**
+    - Multiattack: One Bite and one Claws.
+    - Bite. Melee: +6 to hit, reach 5 ft. Hit: 8 (1d8 + 4) Piercing damage.
+    - Claws. Melee: +6 to hit, reach 5 ft. Hit: 11 (2d6 + 4) Slashing damage.
+  - **pz_role:** Apex wilderness predator; massive trauma potential against survivors; prized pelt and fat.
+-
+  - **name:** Camel
+  - **pdf_page:** 346
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 9
+  - **hp:** 15 (2d10 + 4)
+  - **speed:** 50 ft.
+  - **cr:** 1/8 (25 XP)
+  - **traits:**
+    - Endurance (Can go without water for 10 days)
+  - **actions:**
+    - Bite. Melee: +5 to hit, reach 5 ft. Hit: 2 (1d4) Bludgeoning damage.
+  - **pz_role:** Heavy desert/arid pack animal carrying up to 480 lbs.
+-
+  - **name:** Deer
+  - **pdf_page:** 347
+  - **size:** Medium
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 13
+  - **hp:** 4 (1d8)
+  - **speed:** 50 ft.
+  - **cr:** 0 (10 XP)
+  - **traits:**
+    - Skittish (Flees at first sign of sound or scent)
+    - Darkvision 60 ft.
+  - **actions:**
+    - Bite. Melee: +2 to hit, reach 5 ft. Hit: 2 (1d4) Bludgeoning damage.
+  - **pz_role:** Primary peaceful game animal for woodland trapping and rifle hunting.
+-
+  - **name:** Dire Wolf
+  - **pdf_page:** 347
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 14
+  - **hp:** 37 (5d10 + 10)
+  - **speed:** 50 ft.
+  - **cr:** 1 (200 XP)
+  - **traits:**
+    - Keen Hearing and Smell
+    - Pack Tactics (Advantage on attack rolls when an ally is within 5 ft)
+  - **actions:**
+    - Bite. Melee: +5 to hit, reach 5 ft. Hit: 10 (2d6 + 3) Piercing damage. DC 13 Str save or knocked Prone.
+  - **pz_role:** Giant pack predator; lethal knockdown bite leaving survivors vulnerable to swarms.
+-
+  - **name:** Draft Horse
+  - **pdf_page:** 347
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 10
+  - **hp:** 19 (3d10 + 3)
+  - **speed:** 40 ft.
+  - **cr:** 1/4 (50 XP)
+  - **traits:**
+    - Hauler (Carrying capacity is 540 lbs, can pull 2,700 lbs in wagon)
+  - **actions:**
+    - Hooves. Melee: +6 to hit, reach 5 ft. Hit: 9 (2d4 + 4) Bludgeoning damage.
+  - **pz_role:** Crucial agricultural workhorse for plowing and heavy caravan haulage.
+-
+  - **name:** Elk
+  - **pdf_page:** 348
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 10
+  - **hp:** 13 (2d10 + 2)
+  - **speed:** 50 ft.
+  - **cr:** 1/4 (50 XP)
+  - **traits:**
+    - Charge (Extra 2d6 damage and DC 13 Str save or Prone if moving 20+ ft)
+  - **actions:**
+    - Ram. Melee: +5 to hit, reach 5 ft. Hit: 6 (1d6 + 3) Bludgeoning damage.
+    - Hooves. Melee: +5 to hit. Hit: 8 (2d4 + 3) Bludgeoning.
+  - **pz_role:** Large trophy game providing heavy antlers, sinew for bowstrings, and venison.
+-
+  - **name:** Giant Boar
+  - **pdf_page:** 349
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 12
+  - **hp:** 42 (5d10 + 15)
+  - **speed:** 40 ft.
+  - **cr:** 2 (450 XP)
+  - **traits:**
+    - Charge (Extra 2d6 damage + knock prone)
+    - Relentless (Survives 10 or less damage at 0 HP dropping to 1 HP)
+  - **actions:**
+    - Tusk. Melee: +5 to hit, reach 5 ft. Hit: 10 (2d6 + 3) Slashing damage.
+  - **pz_role:** Fierce mutated/colossal boar encounter.
+-
+  - **name:** Giant Goat
+  - **pdf_page:** 351
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 11
+  - **hp:** 19 (3d10 + 3)
+  - **speed:** 40 ft.
+  - **cr:** 1/2 (100 XP)
+  - **traits:**
+    - Sure-Footed (Advantage on Str/Dex saves vs Prone)
+    - Charge
+  - **actions:**
+    - Ram. Melee: +5 to hit, reach 5 ft. Hit: 8 (2d4 + 3) Bludgeoning damage.
+  - **pz_role:** Mountain mount and sturdy pack beast.
+-
+  - **name:** Giant Rat
+  - **pdf_page:** 353
+  - **size:** Small
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 12
+  - **hp:** 7 (2d6)
+  - **speed:** 30 ft.
+  - **cr:** 1/8 (25 XP)
+  - **traits:**
+    - Keen Smell
+    - Pack Tactics
+  - **actions:**
+    - Bite. Melee: +4 to hit, reach 5 ft. Hit: 4 (1d4 + 2) Piercing damage (may transmit Sewer Plague).
+  - **pz_role:** Sewer and basement pest; vectors of deadly wound and blood contagions.
+-
+  - **name:** Giant Spider
+  - **pdf_page:** 353
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 14
+  - **hp:** 26 (4d10 + 4)
+  - **speed:** 30 ft., climb 30 ft.
+  - **cr:** 1 (200 XP)
+  - **traits:**
+    - Spider Climb
+    - Web Sense
+    - Web Walker
+  - **actions:**
+    - Bite. Melee: +5 to hit, reach 5 ft. Hit: 7 (1d8 + 3) Piercing + 9 (2d8) Poison damage. DC 11 Con save or Paralyzed for 1 hour.
+    - Web (Recharge 5-6). Ranged: +5 to hit, range 30/60 ft. Restrains target.
+  - **pz_role:** Ceiling ambusher; paralyzing venom and sticky web traps.
+-
+  - **name:** Goat
+  - **pdf_page:** 355
+  - **size:** Medium
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 10
+  - **hp:** 4 (1d8)
+  - **speed:** 40 ft.
+  - **cr:** 0 (10 XP)
+  - **traits:**
+    - Sure-Footed (Advantage on saves vs knocked Prone)
+    - Charge
+  - **actions:**
+    - Ram. Melee: +3 to hit, reach 5 ft. Hit: 3 (1d4 + 1) Bludgeoning damage.
+  - **pz_role:** Standard dairy and fiber livestock for sustainable base homesteading.
+-
+  - **name:** Mastiff
+  - **pdf_page:** 357
+  - **size:** Medium
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 12
+  - **hp:** 5 (1d8 + 1)
+  - **speed:** 40 ft.
+  - **cr:** 1/8 (25 XP)
+  - **traits:**
+    - Keen Hearing and Smell (Advantage on Perception checks)
+  - **actions:**
+    - Bite. Melee: +3 to hit, reach 5 ft. Hit: 4 (1d6 + 1) Piercing damage. DC 11 Str save or knocked Prone.
+  - **pz_role:** Loyal guard and hunting companion; barks to alert survivors of approaching zombies.
+-
+  - **name:** Mule
+  - **pdf_page:** 357
+  - **size:** Medium
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 10
+  - **hp:** 11 (2d8 + 2)
+  - **speed:** 40 ft.
+  - **cr:** 1/8 (25 XP)
+  - **traits:**
+    - Beast of Burden (Counts as Large for carrying capacity; carries 420 lbs)
+    - Sure-Footed
+  - **actions:**
+    - Hooves. Melee: +2 to hit, reach 5 ft. Hit: 4 (1d4 + 2) Bludgeoning damage.
+  - **pz_role:** Low-maintenance pack animal for long-distance scavenging trips.
+-
+  - **name:** Pony
+  - **pdf_page:** 359
+  - **size:** Medium
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 10
+  - **hp:** 11 (2d8 + 2)
+  - **speed:** 40 ft.
+  - **cr:** 1/8 (25 XP)
+  - **traits:**
+    - Carrying capacity 225 lbs
+  - **actions:**
+    - Hooves. Melee: +4 to hit, reach 5 ft. Hit: 7 (2d4 + 2) Bludgeoning damage.
+  - **pz_role:** Small mount and light cart puller.
+-
+  - **name:** Rat
+  - **pdf_page:** 359
+  - **size:** Tiny
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 10
+  - **hp:** 1 (1d4 - 1)
+  - **speed:** 20 ft.
+  - **cr:** 0 (10 XP)
+  - **traits:**
+    - Keen Smell
+    - Darkvision 30 ft.
+  - **actions:**
+    - Bite. Melee: +0 to hit, reach 5 ft. Hit: 1 Piercing damage.
+  - **pz_role:** Urban scavenger pest caught in wire traps for emergency rations.
+-
+  - **name:** Riding Horse
+  - **pdf_page:** 360
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 10
+  - **hp:** 13 (2d10 + 2)
+  - **speed:** 60 ft.
+  - **cr:** 1/4 (50 XP)
+  - **traits:**
+    - Carrying capacity 480 lbs, high travel speed (60 ft / 30 miles per day)
+  - **actions:**
+    - Hooves. Melee: +5 to hit, reach 5 ft. Hit: 8 (2d4 + 3) Bludgeoning damage.
+  - **pz_role:** Fast transport mount outrunning sprinters across Knox County open highways.
+-
+  - **name:** Swarm of Bats
+  - **pdf_page:** 361
+  - **size:** Medium Swarm
+  - **type:** Tiny Beasts
+  - **alignment:** Unaligned
+  - **ac:** 12
+  - **hp:** 22 (5d8)
+  - **speed:** 0 ft., fly 30 ft.
+  - **cr:** 1/4 (50 XP)
+  - **traits:**
+    - Blindsight 60 ft.
+    - Swarm mechanics
+    - Echolocation
+  - **actions:**
+    - Bites. Melee: +4 to hit, reach 0 ft. Hit: 5 (2d4) Piercing damage, or 2 (1d4) if bloodied.
+  - **pz_role:** Cave and dark attic flock hazard; causes disorientation and panic.
+-
+  - **name:** Swarm of Insects
+  - **pdf_page:** 361
+  - **size:** Medium Swarm
+  - **type:** Tiny Beasts
+  - **alignment:** Unaligned
+  - **ac:** 12
+  - **hp:** 22 (5d8)
+  - **speed:** 20 ft., climb 20 ft.
+  - **cr:** 1/2 (100 XP)
+  - **traits:**
+    - Swarm mechanics
+    - Damage Resistances: Bludgeoning, Piercing, Slashing
+  - **actions:**
+    - Bites. Melee: +3 to hit, reach 0 ft. Hit: 10 (4d4) Piercing damage, or 5 (2d4) if bloodied.
+  - **pz_role:** Rotting corpse flies/wasps causing rapid health drain in zombie hot zones.
+-
+  - **name:** Swarm of Rats
+  - **pdf_page:** 362
+  - **size:** Medium Swarm
+  - **type:** Tiny Beasts
+  - **alignment:** Unaligned
+  - **ac:** 10
+  - **hp:** 24 (7d8 - 7)
+  - **speed:** 30 ft.
+  - **cr:** 1/4 (50 XP)
+  - **traits:**
+    - Keen Smell
+    - Swarm mechanics
+    - Damage Resistances: Bludgeoning, Piercing, Slashing
+  - **actions:**
+    - Bites. Melee: +2 to hit, reach 0 ft. Hit: 7 (2d6) Piercing damage, or 3 (1d6) if bloodied.
+  - **pz_role:** Infestation in abandoned basements consuming food stores and biting survivors.
+-
+  - **name:** Swarm of Venomous Snakes
+  - **pdf_page:** 362
+  - **size:** Medium Swarm
+  - **type:** Tiny Beasts
+  - **alignment:** Unaligned
+  - **ac:** 14
+  - **hp:** 36 (8d8)
+  - **speed:** 30 ft., swim 30 ft.
+  - **cr:** 2 (450 XP)
+  - **traits:**
+    - Blindsight 10 ft.
+    - Swarm mechanics
+  - **actions:**
+    - Bites. Melee: +6 to hit, reach 0 ft. Hit: 8 (2d6 + 1) Piercing + 14 (4d6) Poison damage (half on DC 10 Con save).
+  - **pz_role:** Swamp and marshland lethal pit hazard.
+-
+  - **name:** Warhorse
+  - **pdf_page:** 364
+  - **size:** Large
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 11
+  - **hp:** 19 (3d10 + 3)
+  - **speed:** 60 ft.
+  - **cr:** 1/2 (100 XP)
+  - **traits:**
+    - Trampling Charge: If the horse moves at least 20 feet straight toward a creature and hits with hooves, DC 14 Str save or knocked Prone. Can make another hooves attack as Bonus Action.
+  - **actions:**
+    - Hooves. Melee: +6 to hit, reach 5 ft. Hit: 11 (2d6 + 4) Bludgeoning damage.
+  - **pz_role:** Armored combat steed capable of trampling zombie crawlers and fleeing mobs.
+-
+  - **name:** Wolf
+  - **pdf_page:** 364
+  - **size:** Medium
+  - **type:** Beast
+  - **alignment:** Unaligned
+  - **ac:** 13
+  - **hp:** 11 (2d8 + 2)
+  - **speed:** 40 ft.
+  - **cr:** 1/4 (50 XP)
+  - **traits:**
+    - Keen Hearing and Smell
+    - Pack Tactics
+  - **actions:**
+    - Bite. Melee: +4 to hit, reach 5 ft. Hit: 7 (2d4 + 2) Piercing damage. DC 11 Str save or knocked Prone.
+  - **pz_role:** Standard pack predator in deep forests; coordinates flanking maneuvers.

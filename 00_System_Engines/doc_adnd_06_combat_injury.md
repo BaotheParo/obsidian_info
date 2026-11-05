@@ -1,0 +1,386 @@
+---
+id: "doc:adnd_06_combat_injury"
+package_id: "ADND_06_COMBAT_INJURY"
+title: "Chapter 9: Combat, Weapon vs Armor, Turning Undead & Injury/Healing"
+original_title: "Chapter 9: Combat, Weapon vs Armor, Turning Undead & Injury/Healing"
+source_reference: "D&D 5E / AD&D / RPG Advanced Design"
+system_category: "00_System_Engines"
+associated_master_moc: "[[00_Master_MOC]]"
+---
+
+# Chapter 9: Combat, Weapon vs Armor, Turning Undead & Injury/Healing
+
+> **Mã gói (Package ID):** `ADND_06_COMBAT_INJURY` | **Nguồn khảo cứu:** *D&D 5E / AD&D / RPG Advanced Design*
+> **Phân loại hệ thống:** `[[00_System_Engines]]` | **Bản đồ não bộ:** [[00_Master_MOC]]
+
+## 1. Tóm Lược Nghiệp Vụ & Thiết Kế (Executive Summary)
+Dữ liệu luật chơi và cơ chế đã qua chắt lọc.
+
+## 2. Ánh Xạ Cơ Chế Sang Sinh Tồn Thực Tế (Project Zomboid B42 / Hardcore RPG Mapping)
+## 3. Combat Modifiers
+- **table_51_standard_modifiers:**
+  -
+    - **condition:** Attacking from behind / rear
+    - **attack_roll_modifier:** +2
+    - **defender_ac_penalty:** Loses shield and Dex bonus
+  -
+    - **condition:** Attacking from higher ground
+    - **attack_roll_modifier:** +1
+    - **defender_ac_penalty:** None
+  -
+    - **condition:** Defender sleeping or held / paralyzed
+    - **attack_roll_modifier:** +4
+    - **defender_ac_penalty:** Automatic max damage if unresisted
+  -
+    - **condition:** Defender stunned or prone
+    - **attack_roll_modifier:** +4
+    - **defender_ac_penalty:** Loses shield and Dex bonus
+  -
+    - **condition:** Defender invisible
+    - **attack_roll_modifier:** -4
+    - **defender_ac_penalty:** Attacker must pinpoint square
+  -
+    - **condition:** Attacker charging
+    - **attack_roll_modifier:** +2
+    - **defender_ac_penalty:** Attacker suffers -1 to AC and loses Dex bonus for 1 round
+  -
+    - **condition:** Attacker firing into melee
+    - **attack_roll_modifier:** 0
+    - **defender_ac_penalty:** Randomly allocates target based on participant sizes
+  -
+    - **condition:** Off-hand weapon attack (Two-weapon fighting)
+    - **attack_roll_modifier:** -4 (-2 if Dex 16+)
+    - **defender_ac_penalty:** Primary hand takes -2 penalty
+
+## 4. Weapon Type Vs Armor
+- **description:** Table 52 modifies the attacker's attack roll based on whether the weapon deals Slashing (S), Piercing (P), or Bludgeoning (B) damage against specific armor types.
+- **table_52_modifiers:**
+  -
+    - **armor_type:** Banded mail
+    - **ac:** 4
+    - **slash_mod:** -2
+    - **pierce_mod:** 0
+    - **bludgeon_mod:** 2
+  -
+    - **armor_type:** Brigandine
+    - **ac:** 6
+    - **slash_mod:** -1
+    - **pierce_mod:** -1
+    - **bludgeon_mod:** 1
+  -
+    - **armor_type:** Chain mail
+    - **ac:** 5
+    - **slash_mod:** -2
+    - **pierce_mod:** 0
+    - **bludgeon_mod:** 2
+  -
+    - **armor_type:** Field plate
+    - **ac:** 2
+    - **slash_mod:** -3
+    - **pierce_mod:** -1
+    - **bludgeon_mod:** 1
+  -
+    - **armor_type:** Full plate
+    - **ac:** 1
+    - **slash_mod:** -4
+    - **pierce_mod:** -3
+    - **bludgeon_mod:** 0
+  -
+    - **armor_type:** Hide armor
+    - **ac:** 6
+    - **slash_mod:** 0
+    - **pierce_mod:** -2
+    - **bludgeon_mod:** 0
+  -
+    - **armor_type:** Leather armor
+    - **ac:** 8
+    - **slash_mod:** 0
+    - **pierce_mod:** -2
+    - **bludgeon_mod:** 0
+  -
+    - **armor_type:** Padded armor
+    - **ac:** 8
+    - **slash_mod:** -2
+    - **pierce_mod:** -1
+    - **bludgeon_mod:** 0
+  -
+    - **armor_type:** Plate mail
+    - **ac:** 3
+    - **slash_mod:** -3
+    - **pierce_mod:** 0
+    - **bludgeon_mod:** 0
+  -
+    - **armor_type:** Ring mail
+    - **ac:** 7
+    - **slash_mod:** -1
+    - **pierce_mod:** -1
+    - **bludgeon_mod:** 1
+  -
+    - **armor_type:** Scale mail
+    - **ac:** 6
+    - **slash_mod:** 0
+    - **pierce_mod:** -1
+    - **bludgeon_mod:** 0
+  -
+    - **armor_type:** Splint mail
+    - **ac:** 4
+    - **slash_mod:** 0
+    - **pierce_mod:** -1
+    - **bludgeon_mod:** 2
+  -
+    - **armor_type:** Studded leather
+    - **ac:** 7
+    - **slash_mod:** -2
+    - **pierce_mod:** -1
+    - **bludgeon_mod:** 1
+
+## 5. Initiative And Tactics
+- **round_sequence:**
+  - 1. DM decides what monsters will do (spells, melee, flee).
+  - 2. Players declare actions (who is casting, who is attacking, movement).
+  - 3. Each side rolls 1d10 for initiative (lowest roll acts first).
+  - 4. Individual weapon speed factor or spell casting time is added to the initiative roll.
+  - 5. Actions resolve in ascending order of modified initiative (1 through 10+).
+- **table_55_standard_initiative_modifiers:**
+  -
+    - **factor:** Hasted character
+    - **modifier:** -2
+  -
+    - **factor:** Slowed character
+    - **modifier:** 2
+  -
+    - **factor:** On higher ground
+    - **modifier:** -1
+  -
+    - **factor:** Wading in mud / water
+    - **modifier:** 2
+  -
+    - **factor:** Drawing weapon from scabbard
+    - **modifier:** +Weapon Speed Factor
+  -
+    - **factor:** Weapon Speed Factor
+    - **modifier:** +1 to +13 (added to individual action)
+  -
+    - **factor:** Spell Casting Time
+    - **modifier:** +1 to +10 segments (added to initiative)
+- **parrying_mechanic:** A character who foregoes all attacks in a round may actively parry. Roll 1d20 + 1/2 character level; that result is subtracted from the attacker's roll.
+
+## 6. Grenade Like Missiles
+- **mechanic:** Thrown flasks of oil, acid, or holy water target a 10-ft square. If the attack roll misses, determine scatter using Table 57.
+- **table_57_scatter_direction:**
+  - **die_roll_d8:** 1 = Direct Short, 2 = Short Right, 3 = Long Right, 4 = Direct Long, 5 = Long Left, 6 = Short Left, 7 = Straight Up/Bounce, 8 = Direct Hit on Secondary
+  - **scatter_distance:** Short range: 1d6 feet; Medium range: 1d10 feet; Long range: 2d10 feet from intended target.
+- **flaming_oil_effects:**
+  - **direct_hit:** Takes 2d6 fire damage on round 1, and 1d6 fire damage on round 2 unless extinguished.
+  - **splash_damage:** All creatures within a 3-foot radius of impact take 1d3 fire damage from burning splash.
+  - **surface_fire:** Burning oil creates a 5-ft pool burning for 2 full rounds, causing 1d6 damage to anyone entering.
+
+## 7. Cover And Concealment
+- **table_58_cover_and_concealment_modifiers:**
+  -
+    - **degree:** 25% Cover / Concealment
+    - **ac_bonus:** +2 AC
+    - **saving_throw_bonus:** +1 Save vs breath/area
+  -
+    - **degree:** 50% Cover / Concealment
+    - **ac_bonus:** +4 AC
+    - **saving_throw_bonus:** +2 Save vs breath/area
+  -
+    - **degree:** 75% Cover / Concealment
+    - **ac_bonus:** +7 AC
+    - **saving_throw_bonus:** +3 Save vs breath/area
+  -
+    - **degree:** 90% Cover / Concealment
+    - **ac_bonus:** +10 AC
+    - **saving_throw_bonus:** +4 Save vs breath/area (half damage negates fully)
+
+## 8. Saving Throws Matrix
+- **table_60_character_saving_throws:**
+  -
+    - **group:** Warrior (Fighter, Paladin, Ranger)
+    - **tiers:**
+      -
+        - **level:** 1-2
+        - **poison_death:** 14
+        - **rod_staff_wand:** 16
+        - **petrify_polymorph:** 15
+        - **breath_weapon:** 17
+        - **spell:** 17
+      -
+        - **level:** 3-4
+        - **poison_death:** 13
+        - **rod_staff_wand:** 15
+        - **petrify_polymorph:** 14
+        - **breath_weapon:** 16
+        - **spell:** 16
+      -
+        - **level:** 5-6
+        - **poison_death:** 11
+        - **rod_staff_wand:** 13
+        - **petrify_polymorph:** 12
+        - **breath_weapon:** 13
+        - **spell:** 14
+      -
+        - **level:** 7-8
+        - **poison_death:** 10
+        - **rod_staff_wand:** 12
+        - **petrify_polymorph:** 11
+        - **breath_weapon:** 12
+        - **spell:** 13
+      -
+        - **level:** 9-10
+        - **poison_death:** 8
+        - **rod_staff_wand:** 10
+        - **petrify_polymorph:** 9
+        - **breath_weapon:** 9
+        - **spell:** 11
+  -
+    - **group:** Wizard (Mage, Specialist)
+    - **tiers:**
+      -
+        - **level:** 1-5
+        - **poison_death:** 14
+        - **rod_staff_wand:** 11
+        - **petrify_polymorph:** 13
+        - **breath_weapon:** 15
+        - **spell:** 12
+      -
+        - **level:** 6-10
+        - **poison_death:** 13
+        - **rod_staff_wand:** 9
+        - **petrify_polymorph:** 11
+        - **breath_weapon:** 13
+        - **spell:** 10
+  -
+    - **group:** Priest (Cleric, Druid)
+    - **tiers:**
+      -
+        - **level:** 1-3
+        - **poison_death:** 10
+        - **rod_staff_wand:** 14
+        - **petrify_polymorph:** 13
+        - **breath_weapon:** 16
+        - **spell:** 15
+      -
+        - **level:** 4-6
+        - **poison_death:** 9
+        - **rod_staff_wand:** 13
+        - **petrify_polymorph:** 12
+        - **breath_weapon:** 15
+        - **spell:** 14
+      -
+        - **level:** 7-9
+        - **poison_death:** 7
+        - **rod_staff_wand:** 11
+        - **petrify_polymorph:** 10
+        - **breath_weapon:** 13
+        - **spell:** 12
+  -
+    - **group:** Rogue (Thief, Bard)
+    - **tiers:**
+      -
+        - **level:** 1-4
+        - **poison_death:** 13
+        - **rod_staff_wand:** 14
+        - **petrify_polymorph:** 12
+        - **breath_weapon:** 16
+        - **spell:** 15
+      -
+        - **level:** 5-8
+        - **poison_death:** 12
+        - **rod_staff_wand:** 12
+        - **petrify_polymorph:** 11
+        - **breath_weapon:** 15
+        - **spell:** 13
+      -
+        - **level:** 9-12
+        - **poison_death:** 11
+        - **rod_staff_wand:** 10
+        - **petrify_polymorph:** 10
+        - **breath_weapon:** 14
+        - **spell:** 11
+
+## 9. Turning Undead
+- **table_61_turning_matrix:**
+  - **description:** Roll 1d20 on cleric level row. Number indicates required roll; 'T' means automatic Turn (2d6 undead flee); 'D' means automatic Destruction (2d6 undead obliterated).
+  - **cleric_levels:**
+    -
+      - **level:** 1
+      - **skeleton:** 10
+      - **zombie:** 13
+      - **ghoul:** 16
+      - **shadow:** 19
+      - **wight:** 20
+      - **ghast:** -
+      - **wraith:** -
+    -
+      - **level:** 2
+      - **skeleton:** 7
+      - **zombie:** 10
+      - **ghoul:** 13
+      - **shadow:** 16
+      - **wight:** 19
+      - **ghast:** 20
+      - **wraith:** -
+    -
+      - **level:** 3
+      - **skeleton:** 4
+      - **zombie:** 7
+      - **ghoul:** 10
+      - **shadow:** 13
+      - **wight:** 16
+      - **ghast:** 19
+      - **wraith:** 20
+    -
+      - **level:** 4
+      - **skeleton:** T
+      - **zombie:** 4
+      - **ghoul:** 7
+      - **shadow:** 10
+      - **wight:** 13
+      - **ghast:** 16
+      - **wraith:** 19
+    -
+      - **level:** 5
+      - **skeleton:** T
+      - **zombie:** T
+      - **ghoul:** 4
+      - **shadow:** 7
+      - **wight:** 10
+      - **ghast:** 13
+      - **wraith:** 16
+    -
+      - **level:** 6
+      - **skeleton:** D
+      - **zombie:** T
+      - **ghoul:** T
+      - **shadow:** 4
+      - **wight:** 7
+      - **ghast:** 10
+      - **wraith:** 13
+    -
+      - **level:** 7
+      - **skeleton:** D
+      - **zombie:** D
+      - **ghoul:** T
+      - **shadow:** T
+      - **wight:** 4
+      - **ghast:** 7
+      - **wraith:** 10
+    -
+      - **level:** 8
+      - **skeleton:** D
+      - **zombie:** D
+      - **ghoul:** D
+      - **shadow:** T
+      - **wight:** T
+      - **ghast:** 4
+      - **wraith:** 7
+
+## 10. Injury Death And Healing
+- **massive_damage_rule:** If a creature suffers 50 or more hit points of damage from a single blow or effect, it must immediately roll a successful saving throw vs. death / System Shock check, or die instantly from traumatic shock regardless of remaining HP.
+- **death_at_zero_hp:** At 0 HP, a character is incapacitated. Under optional rules, at 0 to -9 HP, character bleeds out at 1 HP per round unless bandaged. At -10 HP, character is irreversibly dead.
+- **natural_healing_rates:**
+  - **light_activity:** 1 hit point regained per full day (24 hours) of non-strenuous rest.
+  - **complete_bed_rest:** 3 hit points regained per full day (24 hours) of uninterrupted bed rest in comfortable shelter.
+  - **medical_care_bonus:** A caregiver with the Healing proficiency grants +1 additional HP per day of bed rest, or +2 HP if herbal poultices from Herbalism are applied.

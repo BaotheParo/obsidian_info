@@ -1,0 +1,446 @@
+---
+id: "doc:dmg_01_survival_box"
+package_id: "DMG_01_SURVIVAL_BOX"
+title: "Hộp Công Cụ Sinh Tồn, Khảo Sát Hầm Ngục & Môi Trường Nguy Hiểm"
+original_title: "Survival & Environmental Toolbox"
+source_reference: "Dungeons & Dragons 2024 Dungeon Master's Guide"
+system_category: "00_System_Engines"
+associated_master_moc: "[[00_Master_MOC]]"
+---
+
+# Hộp Công Cụ Sinh Tồn, Khảo Sát Hầm Ngục & Môi Trường Nguy Hiểm
+
+> **Mã gói (Package ID):** `DMG_01_SURVIVAL_BOX` | **Nguồn khảo cứu:** *Dungeons & Dragons 2024 Dungeon Master's Guide*
+> **Phân loại hệ thống:** `[[00_System_Engines]]` | **Bản đồ não bộ:** [[00_Master_MOC]]
+
+## 1. Tóm Lược Nghiệp Vụ & Thiết Kế (Executive Summary)
+Dữ liệu luật chơi và cơ chế đã qua chắt lọc.
+
+## 3. Sections
+- **curses_and_magical_contagions:**
+  - **title:** Curses and Magical Contagions
+  - **pdf_pages:** 64-65
+  - **book_pages:** 60-61
+  - **overview:** Curses and magical contagions are insidious afflictions that alter creatures physically, mentally, or spiritually. They cannot be cured by ordinary medicine and require magical remedies like Lesser Restoration, Greater Restoration, or Remove Curse.
+  - **general_rules:**
+    - **environmental_curses:** Some locations suffused with primordial evil (such as the Abyss or desecrated crypts) burden anyone who lingers there with an environmental curse.
+    - **rest_and_recuperation:** If an infected creature spends 3 days recuperating without interrupting Long Rests, it makes a DC 15 Constitution saving throw at the end. On a success, it gains Advantage on saves against the magical contagion for the next 24 hours.
+  - **sample_curses:**
+    -
+      - **name:** Demonic Possession
+      - **type:** Environmental Curse
+      - **trigger:** Arises from the chaos and evil of the Abyss; besets creatures interacting with demonic objects or lingering in desecrated locations.
+      - **save_dc:** DC 15 Charisma saving throw
+      - **effect:** On a failure, possessed by a bodiless demonic entity. Whenever the creature rolls a 1 on a D20 Test, the demonic entity takes control and determines behavior thereafter.
+      - **cure_condition:** At the end of each turn under possession, repeat the DC 15 Charisma save to regain control. After finishing a Long Rest, repeat save; on success, the possession ends entirely. Alternatively, targeted by Dispel Evil and Good.
+  - **magical_contagions:**
+    -
+      - **name:** Cackle Fever
+      - **target:** Humanoids only (Gnomes are strangely immune)
+      - **transmission:** Inhaling spores or drinking cheaply brewed tainted potions and elixirs.
+      - **incubation:** 1d4 days
+      - **save_dc:** DC 13 Constitution saving throw
+      - **symptoms:** High fever, disorientation, and frequent fits of uncontrollable, manic laughter.
+      - **mechanics:** While symptomatic, the creature takes 1 Exhaustion level. In combat or high stress, taking damage forces a DC 13 Con save or the creature incapacitates itself laughing for 1 minute (repeating save at the end of each turn). At the end of a Long Rest, rolling save cures on success; failure increases Exhaustion.
+    -
+      - **name:** Sewer Plague
+      - **target:** Creatures bitten by vermin (giant rats, otyughs) or exposed to contaminated filthy water/sewage.
+      - **transmission:** Contact / Injury / Ingestion
+      - **incubation:** 1d4 days
+      - **save_dc:** DC 11 Constitution saving throw
+      - **symptoms:** Severe cramps, fever, physical weakness, sweating.
+      - **mechanics:** The creature gains 1 Exhaustion level and regains only half the normal Hit Points from spending Hit Dice during a Short Rest, and regains no Hit Points from finishing a Long Rest. At the end of each Long Rest, repeating DC 11 Con save: on success, reduces 1 Exhaustion; 3 consecutive successes cure the plague.
+    -
+      - **name:** Sight Rot
+      - **target:** Beasts and Humanoids drinking stagnant contaminated water in tropical bogs or swamps.
+      - **transmission:** Ingestion
+      - **incubation:** 1 day
+      - **save_dc:** DC 15 Constitution saving throw
+      - **symptoms:** Painful burning in the eyes, bleeding tear ducts, progressive cloudiness.
+      - **mechanics:** On a failed save, the creature has Disadvantage on all Attack rolls and ability checks relying on sight. After 24 hours, if still uncured, the creature suffers the Blinded condition permanently until healed by Lesser Restoration or a specialized herbal poultice.
+- **death_and_dying_variants:**
+  - **title:** Death & Alternate Defeat Rules
+  - **pdf_pages:** 66-67
+  - **book_pages:** 62-63
+  - **dm_principles:**
+    - Death Must Be Fair: Roll openly in critical deadly encounters to prevent suspicion of bias.
+    - Don't Make It Personal: Never punish a player through character execution.
+    - Telegraph Lethality: Give clear sensory warnings before lethal traps, environmental collapse, or overwhelming monster nests.
+  - **variant_defeated_not_dead:**
+    - **rule_name:** Defeated, Not Dead
+    - **summary:** An optional rule system for campaigns prioritizing ongoing narrative over sudden character death.
+    - **mechanics:**
+      - **comatose_state:** A character who would otherwise suffer fatal damage is reduced to 1 HP and enters a Comatose state with the Unconscious condition.
+      - **healing_limitation:** The character can regain HP as normal, but remains completely Unconscious and cannot be woken by normal stimuli or standard short/long rest healing.
+      - **recovery_conditions:**
+        - Targeted by a Greater Restoration spell or Heal spell.
+        - Sudden Awakening: After finishing a Long Rest, the comatose character makes a DC 20 Constitution saving throw. On a success, the Unconscious condition ends.
+  - **death_scenes:** Encourage roleplaying during Death Saving Throws by asking the player to narrate memories, visions of their deity/ancestors, or unfinished desires.
+- **doors_and_secret_passages:**
+  - **title:** Doors & Secret Passages
+  - **pdf_pages:** 68
+  - **book_pages:** 64
+  - **common_doors_mechanics:**
+    - **utilize_action:** Forcing open a locked or barred door requires a Strength (Athletics) check via the Utilize action.
+    - **door_statistics_table:**
+      -
+        - **material:** Wooden Door (Simple / Interior)
+        - **ac:** 15
+        - **hp:** 15
+        - **break_dc:** 13
+        - **damage_threshold:** 0
+      -
+        - **material:** Sturdy Wooden Door (Reinforced with Iron)
+        - **ac:** 15
+        - **hp:** 25
+        - **break_dc:** 18
+        - **damage_threshold:** 0
+      -
+        - **material:** Stone Door
+        - **ac:** 17
+        - **hp:** 40
+        - **break_dc:** 22
+        - **damage_threshold:** 5
+      -
+        - **material:** Iron / Steel Door
+        - **ac:** 19
+        - **hp:** 50
+        - **break_dc:** 25
+        - **damage_threshold:** 10
+      -
+        - **material:** Portcullis (Iron Grate)
+        - **ac:** 19
+        - **hp:** 40
+        - **lift_dc:** 22
+        - **damage_threshold:** 10
+    - **size_scaling:** For Large doors, double Hit Points and increase Break DC by 5. For Huge doors, triple Hit Points and increase Break DC by 10.
+  - **secret_doors:**
+    - **detection_check:** Search action examining the wall section: Wisdom (Perception) to spot physical seams/air drafts, or Intelligence (Investigation) to deduce hidden mechanisms/scuff marks.
+    - **difficulty_table:**
+      -
+        - **stealth_tier:** Obvious / Hastily Built
+        - **perception_dc:** 10
+        - **investigation_dc:** 10
+      -
+        - **stealth_tier:** Typical Secret Door
+        - **perception_dc:** 15
+        - **investigation_dc:** 15
+      -
+        - **stealth_tier:** Masterwork Dwarven / Elven Secret Door
+        - **perception_dc:** 20
+        - **investigation_dc:** 20
+      -
+        - **stealth_tier:** Nearly Undetectable / Concealed by Magic
+        - **perception_dc:** 25
+        - **investigation_dc:** 25
+- **dungeons:**
+  - **title:** Dungeons & Subterranean Ecology
+  - **pdf_pages:** 69-71
+  - **book_pages:** 65-67
+  - **dungeon_elements:**
+    - **wear_and_tear:** Natural decay (water erosion, fungal growth, cracked masonry, collapsed beams, cobwebs) signals structural stability and age.
+    - **illumination:** Standard subterranean light is Total Darkness (Blinded condition without Darkvision/Light source). Inhabited dungeons feature braziers, torches, bioluminescent lichens, or driftglobes.
+    - **mapping_rules:** Grid mapping guidelines (1 square = 5 ft, or 1 square = 10 ft for megadungeons).
+    - **wandering_monsters:** Roll a d20 every 1 hour or when characters make loud noise/finish a Short Rest; on an 18-20, an encounter occurs from the dungeon faction table.
+- **environmental_effects:**
+  - **title:** Environmental Survival Effects
+  - **pdf_pages:** 72-73
+  - **book_pages:** 68-69
+  - **hazards_and_conditions:**
+    -
+      - **condition:** Extreme Cold
+      - **temperature:** Below 0 degrees Fahrenheit (-18 C)
+      - **save:** DC 10 Constitution saving throw at the end of each hour
+      - **failure_effect:** Gain 1 Exhaustion level
+      - **countermeasures:** Cold weather gear provides automatic success. Resistance or Immunity to Cold damage grants automatic success.
+    -
+      - **condition:** Extreme Heat
+      - **temperature:** 100 degrees Fahrenheit (38 C) or higher
+      - **save:** Constitution saving throw at the end of each hour (DC starts at 5 and increases by +1 per additional hour)
+      - **failure_effect:** Gain 1 Exhaustion level
+      - **penalties:** Creatures wearing Medium or Heavy armor have Disadvantage on the save.
+      - **countermeasures:** Access to 1 gallon of drinkable water per day. Resistance or Immunity to Fire damage grants automatic success.
+    -
+      - **condition:** Frigid Water
+      - **safe_duration:** Number of minutes equal to creature's Constitution score
+      - **save_after_safe:** DC 10 Constitution saving throw at the end of each additional minute
+      - **failure_effect:** Gain 1 Exhaustion level
+      - **countermeasures:** Resistance/Immunity to Cold, or creatures naturally adapted to aquatic arctic environments.
+    -
+      - **condition:** Heavy Precipitation (Rain / Snow)
+      - **effects:**
+        - Everything in the area is Lightly Obscured.
+        - Creatures have Disadvantage on all Wisdom (Perception) checks relying on sight or hearing.
+        - Heavy rain automatically extinguishes open flames (torches, campfires).
+    -
+      - **condition:** High Altitude
+      - **elevation:** 10,000 to 20,000 feet above sea level
+      - **effects:** Each hour of travel counts as 2 hours for travel pace calculations.
+      - **acclimation:** Creatures become acclimated after spending 30 continuous days at this altitude. Elevations above 20,000 feet cannot be acclimated to without magical adaptation.
+    -
+      - **condition:** Strong Winds
+      - **effects:**
+        - Disadvantage on ranged weapon attack rolls.
+        - Disadvantage on Wisdom (Perception) checks relying on hearing.
+        - Disperses fog, gases, and vapours within 1 round.
+  - **planar_environmental_effects:**
+    -
+      - **plane:** Acheronian Bloodlust
+      - **effect:** Creatures must make a DC 10 Wisdom save or enter a violent frenzy attacking the nearest creature.
+    -
+      - **plane:** Blessed Benevolence (Upper Planes)
+      - **effect:** Resting grants benefits as if under Aid and Protection from Evil and Good.
+    -
+      - **plane:** Psychic Dissonance (Astral / Far Realm)
+      - **effect:** Creatures suffer 2d10 Psychic damage at the end of each Long Rest on a failed DC 15 Int save.
+- **fear_and_mental_stress:**
+  - **title:** Fear & Mental Stress
+  - **pdf_pages:** 74-75
+  - **book_pages:** 70-71
+  - **fear_mechanics:**
+    - **baseline_effect:** Frightened condition (Disadvantage on ability checks and attack rolls while source of fear is in line of sight; cannot willingly move closer).
+    - **save_attribute:** Wisdom saving throw (DC typically 10 to 18 depending on horror severity).
+    - **panicked_condition_variant:** On a failure by 5 or more, the creature drops whatever it is holding and must use the Dash action to flee along the safest available route.
+  - **mental_stress_mechanics:**
+    - **damage_type:** Psychic damage is used to quantify extreme psychological trauma and eldritch horror.
+    - **sample_stress_triggers:**
+      -
+        - **trigger:** Witnessing the horrific death of a close companion
+        - **dc:** 12
+        - **psychic_damage:** 7 (2d6)
+      -
+        - **trigger:** Touching an aberrant cosmic entity or relic
+        - **dc:** 15
+        - **psychic_damage:** 14 (4d6)
+      -
+        - **trigger:** Glimpsing the mind of an Outer God / Great Old One
+        - **dc:** 18
+        - **psychic_damage:** 28 (8d6)
+    - **madness_tables:**
+      - **short_term_madness_1d10_minutes:**
+        - Retreats into catatonia, incapacitated and stunned.
+        - Compelled to flee in panic.
+        - Experiences vivid hallucinations, disadvantage on all checks.
+        - Attacks the nearest creature indiscriminately.
+      - **long_term_madness_1d10_days:**
+        - Suffers partial amnesia.
+        - Extreme paranoia: refuses all food and drink not prepared personally.
+        - Sensory tremors: loses ability to speak coherently.
+      - **indefinite_madness_permanent:**
+        - Permanent personality flaw or phobia (e.g., morbid dread of subterranean darkness).
+        - Requires Greater Restoration or Heal to purge.
+- **firearms_and_explosives:**
+  - **title:** Firearms & Explosives
+  - **pdf_pages:** 76-77
+  - **book_pages:** 72-73
+  - **firearms_rules:**
+    - **proficiency:** Martial Weapons proficiency typically covers firearms if they exist in the setting.
+    - **ammunition_depletion:** Standard bullets are destroyed on impact. Futuristic firearms use Energy Cells (weight 0.5 lb, provides 30 shots).
+  - **firearms_table:**
+    -
+      - **name:** Pistol
+      - **era:** Renaissance
+      - **cost:** 250 GP
+      - **damage:** 1d10 Piercing
+      - **weight:** 3 lb
+      - **range:** 30/90 ft
+      - **properties:**
+        - Ammunition
+        - Loading
+    -
+      - **name:** Musket
+      - **era:** Renaissance
+      - **cost:** 500 GP
+      - **damage:** 1d12 Piercing
+      - **weight:** 10 lb
+      - **range:** 40/120 ft
+      - **properties:**
+        - Ammunition
+        - Loading
+        - Two-Handed
+    -
+      - **name:** Pistol (Revolver)
+      - **era:** Modern
+      - **cost:** Rare
+      - **damage:** 2d8 Piercing
+      - **weight:** 3 lb
+      - **range:** 50/150 ft
+      - **properties:**
+        - Ammunition (Range 50/150)
+        - Reload (6 shots)
+    -
+      - **name:** Hunting Rifle
+      - **era:** Modern
+      - **cost:** Rare
+      - **damage:** 2d10 Piercing
+      - **weight:** 8 lb
+      - **range:** 80/240 ft
+      - **properties:**
+        - Ammunition (Range 80/240)
+        - Reload (5 shots)
+        - Two-Handed
+    -
+      - **name:** Shotgun
+      - **era:** Modern
+      - **cost:** Rare
+      - **damage:** 2d8 Piercing
+      - **weight:** 7 lb
+      - **range:** 30/90 ft
+      - **properties:**
+        - Ammunition (Range 30/90)
+        - Reload (2 shots)
+        - Two-Handed
+    -
+      - **name:** Automatic Rifle
+      - **era:** Modern
+      - **cost:** Very Rare
+      - **damage:** 2d8 Piercing
+      - **weight:** 8 lb
+      - **range:** 80/240 ft
+      - **properties:**
+        - Ammunition (Range 80/240)
+        - Burst Fire
+        - Reload (30 shots)
+        - Two-Handed
+    -
+      - **name:** Laser Pistol
+      - **era:** Futuristic
+      - **cost:** Very Rare
+      - **damage:** 3d6 Radiant
+      - **weight:** 2 lb
+      - **range:** 40/120 ft
+      - **properties:**
+        - Ammunition (Energy Cell)
+        - Reload (50 shots)
+    -
+      - **name:** Laser Rifle
+      - **era:** Futuristic
+      - **cost:** Legendary
+      - **damage:** 3d8 Radiant
+      - **weight:** 7 lb
+      - **range:** 100/300 ft
+      - **properties:**
+        - Ammunition (Energy Cell)
+        - Reload (30 shots)
+        - Two-Handed
+    -
+      - **name:** Antimatter Rifle
+      - **era:** Futuristic
+      - **cost:** Artifact Tier
+      - **damage:** 6d8 Necrotic
+      - **weight:** 10 lb
+      - **range:** 120/360 ft
+      - **properties:**
+        - Ammunition (Energy Cell)
+        - Reload (2 shots)
+        - Two-Handed
+  - **explosives_table:**
+    -
+      - **item:** Bomb
+      - **cost:** 150 GP
+      - **action:** Light and throw up to 60 ft
+      - **area:** 5-ft-radius Sphere
+      - **save:** DC 12 Dexterity saving throw
+      - **damage:** 3d6 Fire damage (half on success)
+    -
+      - **item:** Gunpowder (Keg)
+      - **cost:** 250 GP
+      - **weight:** 20 lb
+      - **area:** 10-ft-radius Sphere
+      - **save:** DC 12 Dexterity saving throw
+      - **damage:** 7d6 Fire damage (half on success)
+    -
+      - **item:** Dynamite Stick
+      - **cost:** Rare
+      - **action:** Light fuse (1-6 rounds) and throw up to 60 ft
+      - **area:** 5-ft-radius Sphere
+      - **save:** DC 12 Dexterity saving throw
+      - **damage:** 3d6 Force damage (each additional bound stick adds +1d6 Force, max 10d6)
+    -
+      - **item:** Fragmentation Grenade
+      - **cost:** Rare
+      - **action:** Pull pin and throw up to 60 ft
+      - **area:** 20-ft-radius Sphere
+      - **save:** DC 15 Dexterity saving throw
+      - **damage:** 5d6 Piercing damage
+    -
+      - **item:** Smoke Grenade
+      - **cost:** Uncommon
+      - **action:** Throw up to 60 ft
+      - **area:** 20-ft-radius Sphere of thick smoke
+      - **effect:** Heavily Obscured for 1 minute; strong wind disperses in 1 round.
+- **gods_and_other_powers:**
+  - **title:** Gods & Divine Interventions
+  - **pdf_pages:** 78-79
+  - **book_pages:** 74-75
+  - **mechanics:**
+    - **divine_knowledge:** Spells like Commune and Divination allow direct queries to deities; answers are framed in omens, poetic riddles, or cryptic signs.
+    - **piety_and_oaths:** Clerics and Paladins maintaining their vows receive spiritual boons, whereas transgressions induce omens of divine wrath (displeasure manifestations, holy water spoiling, symbols cracking).
+- **subterranean_hazards:**
+  - **title:** Hazards (Molds, Slimes, Traps & Perils)
+  - **pdf_pages:** 80-83
+  - **book_pages:** 76-79
+  - **hazard_catalog:**
+    -
+      - **name:** Brown Mold
+      - **threat:** Nuisance (Levels 1-4) / Deadly in large quantities
+      - **nature:** Draws heat from its environment. A 10-ft square patch radiates intense cold.
+      - **effect:** Any creature moving within 5 feet makes a DC 12 Constitution saving throw, taking 22 (4d10) Cold damage on a failed save, or half on a success.
+      - **flammability:** Fire causes it to instantly expand! Exposing it to flame causes it to double in size towards the heat source.
+      - **destruction:** Taking Cold damage instantly destroys a 5-ft patch of brown mold.
+    -
+      - **name:** Fireball Fungus
+      - **stats:** AC 10, HP 6, Immunity: Psychic
+      - **threat:** Deadly Hazard
+      - **effect:** When reduced to 0 HP, it explodes as if a Fireball spell (DC 15 Dexterity save, 28 (8d6) Fire damage) centered on it.
+      - **chain_reaction:** The explosion triggers all other fireball fungi caught in the blast, creating catastrophic cavern detonations.
+    -
+      - **name:** Green Slime
+      - **threat:** Nuisance Hazard (Levels 1-4)
+      - **senses:** Blindsight 30 ft (detects vibrations/movement below, drops from ceilings).
+      - **effect:** Avoided with a DC 10 Dexterity save. On contact, deals 5 (1d10) Acid damage immediately, and repeats 5 (1d10) Acid at start of each turn until scraped off (action) or burned.
+      - **material_corrosion:** Destroys nonmagical wood and metal: a nonmagical wooden weapon/armor touching it is instantly destroyed; metal armor takes a permanent -1 penalty to AC per turn.
+    -
+      - **name:** Poisonous Gas
+      - **threat:** Nuisance (Levels 1-4) to Deadly (Levels 17-20)
+      - **area:** Fills enclosed spaces up to ten 10-ft Cubes.
+      - **effect:** Entering or starting turn in gas: DC 12 Constitution saving throw, taking 5 (1d10) Poison damage (half on save). Creatures in the gas have Disadvantage on Death Saving Throws.
+      - **higher_levels_scaling:**
+        -
+          - **levels:** 5-10
+          - **damage:** 11 (2d10)
+          - **dc:** 14
+        -
+          - **levels:** 11-16
+          - **damage:** 22 (4d10)
+          - **dc:** 16
+        -
+          - **levels:** 17-20
+          - **damage:** 55 (10d10)
+          - **dc:** 18
+    -
+      - **name:** Quicksand
+      - **threat:** Deadly environmental hazard
+      - **detection:** DC 10 Wisdom (Survival) to recognize before stepping in.
+      - **mechanics:** Entering quicksand sinks the creature 1d4+1 feet immediately. At start of each turn, sinks another 1d4 feet. When submerged past height, creature suffocates.
+      - **escape:** Strength (Athletics) check with DC = 10 + depth in feet sunk. Another creature can pull them out with rope and DC 10 Strength check.
+    -
+      - **name:** Razorvine
+      - **stats:** AC 11, HP 25 per 10-ft section, Immunity: Bludgeoning, Piercing, Psychic.
+      - **effect:** Touching or moving through razorvine deals 5 (1d10) Slashing damage per 5 feet moved.
+      - **countermeasure:** Vulnerable to Fire.
+    -
+      - **name:** Rockslide / Avalanche
+      - **threat:** Deadly Hazard (Levels 5-10)
+      - **effect:** DC 15 Dexterity saving throw or take 22 (4d10) Bludgeoning damage and knocked Prone and buried under rubble (Restrained, Total Cover).
+      - **escape:** DC 15 Strength (Athletics) action to crawl out; on failure gains 1 Exhaustion level.
+    -
+      - **name:** Spider Webs
+      - **stats:** AC 10, HP 15 per 10-ft Cube, Vulnerable: Fire, Immune: Piercing, Poison, Psychic.
+      - **effect:** Difficult Terrain. DC 12 Dexterity saving throw upon entering or starting turn, or gain Restrained condition. Escape requires DC 12 Strength (Athletics) or Dexterity (Acrobatics) action.
+    -
+      - **name:** Yellow Mold
+      - **threat:** Deadly (Levels 1-4) / Nuisance (Levels 5-10)
+      - **trigger:** If touched, ejects spore cloud filling a 10-foot Cube.
+      - **effect:** DC 15 Constitution saving throw or take 11 (2d10) Poison damage and gain Poisoned condition for 1 minute (takes 5 (1d10) Poison damage each turn while poisoned).
+      - **destruction:** Direct sunlight or exposure to fire instantly destroys a patch.

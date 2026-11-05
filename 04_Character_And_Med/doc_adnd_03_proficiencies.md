@@ -1,0 +1,320 @@
+---
+id: "doc:adnd_03_proficiencies"
+package_id: "ADND_03_PROFICIENCIES"
+title: "Hệ Thống Nghề Nghiệp & Chế Tác Trung Cổ (Chuyên Sâu Vũ Khí & Kỹ Năng Nonweapon)"
+original_title: "Proficiencies: Weapon Specialization & Medieval Crafting Skills"
+source_reference: "Advanced Dungeons & Dragons 2nd Edition Player's Handbook (Revised)"
+system_category: "04_Character_And_Med"
+associated_master_moc: "[[00_Master_MOC]]"
+---
+
+# Hệ Thống Nghề Nghiệp & Chế Tác Trung Cổ (Chuyên Sâu Vũ Khí & Kỹ Năng Nonweapon)
+
+> **Mã gói (Package ID):** `ADND_03_PROFICIENCIES` | **Nguồn khảo cứu:** *Advanced Dungeons & Dragons 2nd Edition Player's Handbook (Revised)*
+> **Phân loại hệ thống:** `[[04_Character_And_Med]]` | **Bản đồ não bộ:** [[00_Master_MOC]]
+
+## 1. Tóm Lược Nghiệp Vụ & Thiết Kế (Executive Summary)
+Mỏ vàng quy tắc nghề nghiệp trung cổ hoàn chỉnh: Bảng 34-41, bao gồm Weapon Specialization, 60+ Nonweapon Proficiencies (rèn giáp, rèn vũ khí, bào chế thảo dược, cứu thương, đồ gốm, thợ mộc, đóng giày, nấu bia), Bảng Tracking Modifiers (Bảng 39) và Thời gian chế tạo vũ khí (Bảng 41).
+
+## 2. Ánh Xạ Cơ Chế Sang Sinh Tồn Thực Tế (Project Zomboid B42 / Hardcore RPG Mapping)
+**Ý nghĩa cốt lõi:** Khớp 1:1 với 10 ngành nghề chế tác mới và hệ thống kỹ năng sinh tồn của Project Zomboid Build 42 (Blacksmithing, Armor Making, Weaponsmithing, Bowcraft, Butchering/Hunting, Herbalism, Medical, Pottery, Stonework, Leathercraft, Brewing, Tracking).
+
+### Bảng Đối Chiếu Cơ Chế Tương Đương:
+- **adnd_proficiency:** Blacksmithing / Weaponsmithing
+- **b42_equivalent:** Blacksmithing Skill: Lò rèn than củi, đe rèn phôi sắt, đúc lưỡi rìu, rèn dao rựa và gia cố vũ khí.
+
+- **adnd_proficiency:** Armorer
+- **b42_equivalent:** Tailoring / Metalworking Armor: Chế tạo và sửa chữa giáp da thuộc, vảy sắt, giáp lưới chống cắn zombie.
+
+- **adnd_proficiency:** Bowyer / Fletcher
+- **b42_equivalent:** Bowcraft & Fletching: Đẽo thân cung từ gỗ sấy khô, vót tên gỗ, buộc lông chim và tra đầu tên kim loại.
+
+- **adnd_proficiency:** Herbalism
+- **b42_equivalent:** Foraging & Herbalist Magazine: Nhận diện thảo dược dại (Poultice: Plantain, Comfrey, Wild Garlic) chữa nhiễm trùng và gãy xương.
+
+- **adnd_proficiency:** Healing
+- **b42_equivalent:** First Aid Skill: Khâu vết rách (Suture), băng bó (Bandage), nẹp chân gãy (Splint) và sơ cứu giảm sốt.
+
+- **adnd_proficiency:** Leatherworking
+- **b42_equivalent:** Tanning & Leathercraft: Thuộc da thú săn, làm dây nịt, bao kiếm, túi đeo hông satchel.
+
+- **adnd_proficiency:** Pottery
+- **b42_equivalent:** Pottery & Masonry: Nặn đất sét nung bình chứa nước, nồi đất nấu ăn, chum trữ lương thực.
+
+- **adnd_proficiency:** Brewing
+- **b42_equivalent:** Brewing & Fermentation: Ủ bia men dại, rượu khử trùng vết thương.
+
+- **adnd_proficiency:** Tracking (Table 39)
+- **b42_equivalent:** Tracking & Animal Tracking: Dấu chân thú, dấu máu, vết cào cây rừng để săn bắt hươu/gấu.
+
+
+## 3. Sections
+- **weapon_proficiencies_and_specialization:**
+  - **title:** Weapon Proficiency Slots & Fighter Specialization
+  - **pdf_pages:** 51-53
+  - **book_pages:** 50-52
+  - **table_34_proficiency_slots:**
+    - **name:** Table 34: PROFICIENCY SLOTS
+    - **pdf_page:** 51
+    - **book_page:** 50
+    - **classes:**
+      -
+        - **group:** Warrior (Fighter, Paladin, Ranger)
+        - **initial_weapon_slots:** 4
+        - **weapon_penalty_nonproficient:** -2
+        - **weapon_gain_rate:** 1 slot per 3 levels
+        - **initial_nonweapon_slots:** 3
+        - **nonweapon_gain_rate:** 1 slot per 3 levels
+      -
+        - **group:** Wizard (Mage, Specialist)
+        - **initial_weapon_slots:** 1
+        - **weapon_penalty_nonproficient:** -5
+        - **weapon_gain_rate:** 1 slot per 6 levels
+        - **initial_nonweapon_slots:** 4
+        - **nonweapon_gain_rate:** 1 slot per 3 levels
+      -
+        - **group:** Priest (Cleric, Druid)
+        - **initial_weapon_slots:** 2
+        - **weapon_penalty_nonproficient:** -3
+        - **weapon_gain_rate:** 1 slot per 4 levels
+        - **initial_nonweapon_slots:** 4
+        - **nonweapon_gain_rate:** 1 slot per 3 levels
+      -
+        - **group:** Rogue (Thief, Bard)
+        - **initial_weapon_slots:** 2
+        - **weapon_penalty_nonproficient:** -3
+        - **weapon_gain_rate:** 1 slot per 4 levels
+        - **initial_nonweapon_slots:** 3
+        - **nonweapon_gain_rate:** 1 slot per 4 levels
+  - **fighter_weapon_specialization:**
+    - **rules:** Chỉ duy nhất Fighter (và Ranger/Paladin nếu DM cho phép) được chuyên môn hóa 1 loại vũ khí (tốn 2 slot vũ khí ban đầu).
+    - **melee_benefits:** +1 bonus to hit rolls, +2 bonus to damage rolls, và tăng số đòn tấn công mỗi round (Attacks Per Round).
+    - **ranged_benefits:** Tăng cự ly Point-Blank (được +2 to hit ở cự ly 6-30 ft) và tăng tốc độ bắn.
+    - **table_35_attacks_per_round:**
+      -
+        - **level:** Level 1-6
+        - **melee_attacks:** 3/2 (3 attacks every 2 rounds)
+        - **light_crossbow:** 1/1
+        - **heavy_crossbow:** 1/2
+        - **bow:** 2/1
+      -
+        - **level:** Level 7-12
+        - **melee_attacks:** 2/1 (2 attacks per round)
+        - **light_crossbow:** 3/2
+        - **heavy_crossbow:** 1/1
+        - **bow:** 5/2
+      -
+        - **level:** Level 13+
+        - **melee_attacks:** 5/2 (5 attacks every 2 rounds)
+        - **light_crossbow:** 2/1
+        - **heavy_crossbow:** 3/2
+        - **bow:** 3/1
+- **nonweapon_proficiencies_catalog:**
+  - **title:** Nonweapon Proficiencies (Medieval Crafting & Survival)
+  - **pdf_pages:** 54-64
+  - **book_pages:** 53-63
+  - **check_mechanic:** Đổ xúc xắc 1d20 <= (Chỉ số Thuộc tính liên quan + Hệ số Điều chỉnh Modifier). Nếu đổ nhỏ hơn hoặc bằng là THÀNH CÔNG.
+  - **crafting_and_survival_catalog:**
+    -
+      - **name:** Armorer
+      - **group:** Warrior
+      - **slots:** 2
+      - **ability:** Intelligence
+      - **modifier:** -2
+      - **description:** Can make all forms of nonmagical armor listed in Chapter 6. Making a suit of armor requires a fully equipped smithy. Time required: Padded (10 days), Leather (14 days), Chain Mail (90 days), Plate Mail (180 days), Full Plate (360 days). Can repair damaged armor at 1/10th creation time.
+    -
+      - **name:** Blacksmithing
+      - **group:** General
+      - **slots:** 1
+      - **ability:** Strength
+      - **modifier:** 0
+      - **description:** Can forge tools, horseshoes, iron chains, cookware, nails, and general iron implements from crude iron bars. Requires forge and bellows.
+    -
+      - **name:** Weaponsmithing
+      - **group:** Warrior
+      - **slots:** 3
+      - **ability:** Intelligence
+      - **modifier:** -3
+      - **description:** Master craft of forging bladed and blunt battle weapons (swords, daggers, halberds, maces). Can create masterwork balanced weapons with successful check.
+    -
+      - **name:** Bowyer / Fletcher
+      - **group:** Warrior
+      - **slots:** 1
+      - **ability:** Dexterity
+      - **modifier:** -1
+      - **description:** Can craft longbows, shortbows, composite bows, and fletch arrows. A bowyer can fashion 6 to 12 arrows per day of seasoned wood.
+    -
+      - **name:** Herbalism
+      - **group:** Priest, Wizard
+      - **slots:** 2
+      - **ability:** Intelligence
+      - **modifier:** -2
+      - **description:** Knowledge of medicinal herbs, poisonous plants, roots, and fungi. Can concoct herbal poultices that double natural healing rates when applied to wounds, identify toxic plant parts, and brew antitoxins.
+    -
+      - **name:** Healing
+      - **group:** Priest
+      - **slots:** 2
+      - **ability:** Wisdom
+      - **modifier:** -2
+      - **description:** Expert medical treatment. Immediately after combat, a healer can tend to wounded comrades, restoring 1d3 Hit Points per character (once per combat encounter). Can diagnose poisoning and treat diseases.
+    -
+      - **name:** Leatherworking
+      - **group:** General
+      - **slots:** 1
+      - **ability:** Intelligence
+      - **modifier:** 0
+      - **description:** Tanning animal hides, curing pelts, and fashioning leather garments, boots, scabbards, saddles, and leather armor.
+    -
+      - **name:** Pottery
+      - **group:** General
+      - **slots:** 1
+      - **ability:** Dexterity
+      - **modifier:** -2
+      - **description:** Shaping and firing clay pots, jugs, tiles, water storage jars, and amphorae. Requires clay pit and kiln.
+    -
+      - **name:** Stonemasonry
+      - **group:** Warrior
+      - **slots:** 1
+      - **ability:** Strength
+      - **modifier:** -2
+      - **description:** Quarrying stone blocks, building defensive stone walls, fortifications, fireplaces, and subterranean arches.
+    -
+      - **name:** Brewing
+      - **group:** General
+      - **slots:** 1
+      - **ability:** Intelligence
+      - **modifier:** 0
+      - **description:** Fermenting barley, hops, fruits, and honey to create ale, mead, beer, and distillation spirits.
+    -
+      - **name:** Carpentry
+      - **group:** General
+      - **slots:** 1
+      - **ability:** Strength
+      - **modifier:** 0
+      - **description:** Building wooden shelters, barricades, carts, chests, doors, and palisades.
+    -
+      - **name:** Cooking
+      - **group:** General
+      - **slots:** 1
+      - **ability:** Intelligence
+      - **modifier:** 0
+      - **description:** Preparing edible meals from forage/rations, smoking and salting meats for long-term preservation without spoilage.
+    -
+      - **name:** Fishing
+      - **group:** General
+      - **slots:** 1
+      - **ability:** Wisdom
+      - **modifier:** -1
+      - **description:** Catching edible freshwater and saltwater fish using nets, line, hooks, and fish traps.
+    -
+      - **name:** Hunting
+      - **group:** Warrior
+      - **slots:** 1
+      - **ability:** Wisdom
+      - **modifier:** -1
+      - **description:** Stalking, trapping, and harvesting game in the wilderness to feed an adventuring party.
+    -
+      - **name:** Survival
+      - **group:** Warrior
+      - **slots:** 2
+      - **ability:** Intelligence
+      - **modifier:** 0
+      - **description:** Enduring harsh wilderness environments (Arctic, Desert, Forest, Swamp). Finding emergency shelter, water, and food.
+- **tracking_system:**
+  - **title:** Tracking Mechanics & Table 39 Modifiers
+  - **pdf_pages:** 64-65
+  - **book_pages:** 63-64
+  - **proficiency_details:**
+    - **name:** Tracking
+    - **group:** Warrior
+    - **slots:** 2
+    - **ability:** Wisdom
+    - **modifier:** 0
+    - **rangers_bonus:** Rangers receive Tracking automatically for free, with a +1 bonus per 3 levels.
+  - **table_39_tracking_modifiers:**
+    -
+      - **condition:** Every 3 creatures in the quarry group
+      - **modifier:** +1
+    -
+      - **condition:** Every 24 hours elapsed since trail was made
+      - **modifier:** -1
+    -
+      - **condition:** Every 1 hour of precipitation (rain/snow)
+      - **modifier:** -5
+    -
+      - **condition:** Quarry moves on paved/cobbled city street
+      - **modifier:** -6
+    -
+      - **condition:** Quarry moves through muddy ground / soft snow
+      - **modifier:** +4
+    -
+      - **condition:** Quarry moves through heavy woods / thick brush
+      - **modifier:** +3
+    -
+      - **condition:** Quarry moves through grassland / meadow
+      - **modifier:** +2
+    -
+      - **condition:** Quarry moves through barren rock / bare stone
+      - **modifier:** -10
+    -
+      - **condition:** Tracking by night (torchlight / lantern)
+      - **modifier:** -3
+    -
+      - **condition:** Tracking by moonlight
+      - **modifier:** -2
+    -
+      - **condition:** Quarry spends effort hiding trail
+      - **modifier:** -5
+- **weapon_construction_times:**
+  - **title:** Weapon Construction (Table 41)
+  - **pdf_pages:** 66
+  - **book_pages:** 65
+  - **table_41:**
+    -
+      - **weapon:** Arrow (per dozen)
+      - **crafting_time:** 3 days
+      - **tool_required:** Bowyer/Fletcher
+    -
+      - **weapon:** Bow, Short
+      - **crafting_time:** 7 days
+      - **tool_required:** Bowyer/Fletcher
+    -
+      - **weapon:** Bow, Long
+      - **crafting_time:** 15 days
+      - **tool_required:** Bowyer/Fletcher
+    -
+      - **weapon:** Bow, Composite
+      - **crafting_time:** 30 days
+      - **tool_required:** Bowyer/Fletcher
+    -
+      - **weapon:** Crossbow, Light
+      - **crafting_time:** 20 days
+      - **tool_required:** Weaponsmith
+    -
+      - **weapon:** Crossbow, Heavy
+      - **crafting_time:** 30 days
+      - **tool_required:** Weaponsmith
+    -
+      - **weapon:** Dagger
+      - **crafting_time:** 3 days
+      - **tool_required:** Weaponsmith
+    -
+      - **weapon:** Spear
+      - **crafting_time:** 2 days
+      - **tool_required:** Weaponsmith / Carpenter
+    -
+      - **weapon:** Sword, Short
+      - **crafting_time:** 7 days
+      - **tool_required:** Weaponsmith
+    -
+      - **weapon:** Sword, Long
+      - **crafting_time:** 15 days
+      - **tool_required:** Weaponsmith
+    -
+      - **weapon:** Sword, Two-Handed
+      - **crafting_time:** 30 days
+      - **tool_required:** Weaponsmith
+    -
+      - **weapon:** Polearm (Halberd/Pike)
+      - **crafting_time:** 14 days
+      - **tool_required:** Weaponsmith / Carpenter

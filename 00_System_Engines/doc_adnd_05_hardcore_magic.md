@@ -1,0 +1,408 @@
+---
+id: "doc:adnd_05_hardcore_magic"
+package_id: "ADND_05_HARDCORE_MAGIC"
+title: "Chapter 7: Magic + Appendix 1, 5 & 6: Spell Lists, Schools, Spheres & Hardcore Casting Rules"
+original_title: "Chapter 7: Magic + Appendix 1, 5 & 6: Spell Lists, Schools, Spheres & Hardcore Casting Rules"
+source_reference: "D&D 5E / AD&D / RPG Advanced Design"
+system_category: "00_System_Engines"
+associated_master_moc: "[[00_Master_MOC]]"
+---
+
+# Chapter 7: Magic + Appendix 1, 5 & 6: Spell Lists, Schools, Spheres & Hardcore Casting Rules
+
+> **Mã gói (Package ID):** `ADND_05_HARDCORE_MAGIC` | **Nguồn khảo cứu:** *D&D 5E / AD&D / RPG Advanced Design*
+> **Phân loại hệ thống:** `[[00_System_Engines]]` | **Bản đồ não bộ:** [[00_Master_MOC]]
+
+## 1. Tóm Lược Nghiệp Vụ & Thiết Kế (Executive Summary)
+Dữ liệu luật chơi và cơ chế đã qua chắt lọc.
+
+## 2. Ánh Xạ Cơ Chế Sang Sinh Tồn Thực Tế (Project Zomboid B42 / Hardcore RPG Mapping)
+## 3. Schools Of Magic Wizard
+- **description:** Wizard magic is categorized into 8 distinct schools. Specialist wizards gain +1 spell per spell level from their specialty school and +15% learning chance, but are permanently forbidden from opposing schools.
+- **specialist_schools:**
+  -
+    - **school:** Abjuration
+    - **specialist_title:** Abjurer
+    - **ability_requirement:** Wisdom 15
+    - **race_allowed:**
+      - Human
+    - **opposing_schools:**
+      - Alteration
+      - Illusion/Phantasm
+    - **focus:** Protective wards, dispel magic, anti-magic barriers, magical shields.
+  -
+    - **school:** Alteration
+    - **specialist_title:** Transmuter
+    - **ability_requirement:** Dexterity 15
+    - **race_allowed:**
+      - Human
+      - Elf
+      - Half-Elf
+    - **opposing_schools:**
+      - Abjuration
+      - Necromancy
+    - **focus:** Physical transmutation, levitation, haste, slow, polymorph, telekinesis.
+  -
+    - **school:** Conjuration / Summoning
+    - **specialist_title:** Conjurer
+    - **ability_requirement:** Constitution 15
+    - **race_allowed:**
+      - Human
+      - Half-Elf
+    - **opposing_schools:**
+      - Greater Divination
+      - Invocation/Evocation
+    - **focus:** Summoning creatures from extraplanar realms, conjuring fog/webs/unseen servants.
+  -
+    - **school:** Enchantment / Charm
+    - **specialist_title:** Enchanter
+    - **ability_requirement:** Charisma 16
+    - **race_allowed:**
+      - Human
+      - Elf
+      - Half-Elf
+    - **opposing_schools:**
+      - Illusion/Phantasm
+      - Invocation/Evocation
+    - **focus:** Mind influence, sleep, charm person, suggestion, hold person/monster, confusion.
+  -
+    - **school:** Illusion / Phantasm
+    - **specialist_title:** Illusionist
+    - **ability_requirement:** Dexterity 16
+    - **race_allowed:**
+      - Human
+      - Gnome
+    - **opposing_schools:**
+      - Necromancy
+      - Invocation/Evocation
+      - Abjuration
+    - **focus:** Phantasmal forces, invisibility, mirror image, blur, sensory deception.
+  -
+    - **school:** Invocation / Evocation
+    - **specialist_title:** Invoker
+    - **ability_requirement:** Constitution 16
+    - **race_allowed:**
+      - Human
+    - **opposing_schools:**
+      - Enchantment/Charm
+      - Conjuration/Summoning
+    - **focus:** Raw elemental destruction, magic missile, fireball, lightning bolt, ice storm.
+  -
+    - **school:** Necromancy
+    - **specialist_title:** Necromancer
+    - **ability_requirement:** Wisdom 16
+    - **race_allowed:**
+      - Human
+    - **opposing_schools:**
+      - Illusion/Phantasm
+      - Enchantment/Charm
+    - **focus:** Life force manipulation, animate dead, chill touch, vampiric touch, finger of death.
+  -
+    - **school:** Greater Divination
+    - **specialist_title:** Diviner
+    - **ability_requirement:** Wisdom 16
+    - **race_allowed:**
+      - Human
+      - Elf
+      - Half-Elf
+    - **opposing_schools:**
+      - Conjuration/Summoning
+    - **focus:** Foresight, detection, locate object, clairvoyance, true seeing.
+- **lesser_divination_rule:** All wizards, regardless of specialization, have access to 1st to 4th level Divination spells (Detect Magic, Read Magic, Identify).
+
+## 4. Priest Spheres Of Influence
+- **description:** Priests and Druids draw power from deities who grant access to specific Spheres. Major access allows 1st through 7th level spells; Minor access allows only 1st through 3rd level spells.
+- **spheres:**
+  -
+    - **sphere:** All
+    - **description:** General clerical spells accessible to all priest types (Bless, Purify Food and Drink, Combine).
+  -
+    - **sphere:** Animal
+    - **description:** Influencing, commanding, or summoning wild animals and beasts.
+  -
+    - **sphere:** Astral
+    - **description:** Interplanar movement and dimensional conduits.
+  -
+    - **sphere:** Charm
+    - **description:** Influencing emotions, personal magnetism, and spiritual calm.
+  -
+    - **sphere:** Combat
+    - **description:** Offensive and battlefield spells (Spiritual Hammer, Flame Strike).
+  -
+    - **sphere:** Creation
+    - **description:** Bringing food, water, light, and physical materials into existence.
+  -
+    - **sphere:** Divination
+    - **description:** Oracles, augury, communion with deity, uncovering truth.
+  -
+    - **sphere:** Elemental
+    - **description:** Control over the four elements: Air, Earth, Fire, and Water.
+  -
+    - **sphere:** Guardian
+    - **description:** Wards, glyphs, and divine protection against incursions (Blade Barrier).
+  -
+    - **sphere:** Healing
+    - **description:** Cure Light Wounds, Cure Serious Wounds, Heal, restoration of vitality.
+  -
+    - **sphere:** Necromantic
+    - **description:** Manipulating life and death energies (Raise Dead, Resurrection, Slay Living).
+  -
+    - **sphere:** Plant
+    - **description:** Druidic growth, entangle, speak with plants, tree walk.
+  -
+    - **sphere:** Protection
+    - **description:** Sanctuary, Protection from Evil, magical resistance against attacks.
+  -
+    - **sphere:** Sun
+    - **description:** Radiant solar light, destruction of undead, daylight summoning.
+  -
+    - **sphere:** Thought
+    - **description:** Telepathic communion, thought reading, spiritual guidance.
+  -
+    - **sphere:** Weather
+    - **description:** Atmospheric manipulation: call lightning, control weather, wind wall.
+
+## 5. Hardcore Casting Rules
+- **spell_preparation:**
+  - **wizard_study:** Wizards must possess their spellbook, have 8 hours of uninterrupted rest, and spend 10 minutes of intense study per spell level to memorize spells.
+  - **priest_prayer:** Priests must pray at a designated hour of religious devotions (dawn, dusk, or midnight) after uninterrupted rest to be granted spells by their deity.
+  - **spell_books_and_cost:** A traveling spellbook holds up to 50 levels of spells; a standard tome holds 100 levels. Crafting/transcribing costs 100 gp per spell level.
+- **casting_constraints:**
+  - **verbal_component_v:** Requires clearly articulated, firm voice. Any silence effect, gag, or submersion underwater blocks casting.
+  - **somatic_component_s:** Requires free use of hands and arms. Bound, grappled, or weapon-holding hands prevent somatic gestures.
+  - **material_component_m:** Requires specific physical objects (guano, sulfur, diamond dust, fleece). If not held or consumed during casting, spell fails.
+  - **casting_time_and_initiative:** Spells have a casting time (e.g. 1-10 segments, or 1 round). The spell resolves on the caster's Initiative roll + Casting Time.
+  - **interruption_and_ruined_spell:** If the caster is struck for any damage, forced to make a successful saving throw, or jostled before their casting time resolves, the spell is ruined, casting fails instantly, and the spell slot is lost from memory.
+
+## 6. Magical Research And Item Crafting
+- **creating_new_spells:** Requires DM approval, minimum wizard level equal to spell tier, 1,000 gp per spell level in research costs, and 2-8 weeks of laboratory experimentation.
+- **scroll_scribing:** Requires 9th level Wizard, rare parchment, magical ink (100-500 gp per spell), and 1 day per spell level.
+- **potion_brewing:** Requires 9th level Alchemist or Wizard, laboratory setup (2,000 gp), rare monster essences, and 1-2 weeks per batch.
+- **permanent_item_enchantment:** Requires 12th level Wizard casting Enchant an Item, followed by Permanency and the target spells. Failure chance exists based on material purity.
+
+## 7. Curated Foundational Spells 25
+-
+  - **name:** Armor
+  - **class:** Wizard
+  - **level:** 1
+  - **school:** Conjuration
+  - **components:** V, S, M
+  - **casting_time:** 1 round
+  - **duration:** Until 8 pts + 1 pt/level damage absorbed
+  - **effect:** Grants base AC 6 to unarmored caster.
+-
+  - **name:** Burning Hands
+  - **class:** Wizard
+  - **level:** 1
+  - **school:** Alteration
+  - **components:** V, S
+  - **casting_time:** 1
+  - **duration:** Instantaneous
+  - **effect:** Cone of flame dealing 1d3 + 2/level damage in 5-ft arc.
+-
+  - **name:** Charm Person
+  - **class:** Wizard
+  - **level:** 1
+  - **school:** Enchantment/Charm
+  - **components:** V, S
+  - **casting_time:** 1
+  - **duration:** Special
+  - **effect:** Makes humanoid target view caster as trusted comrade.
+-
+  - **name:** Detect Magic
+  - **class:** Wizard
+  - **level:** 1
+  - **school:** Divination
+  - **components:** V, S
+  - **casting_time:** 1
+  - **duration:** 2 turns
+  - **effect:** Reveals aura of magical objects within 60 ft.
+-
+  - **name:** Light
+  - **class:** Wizard / Priest
+  - **level:** 1
+  - **school:** Alteration
+  - **components:** V, M
+  - **casting_time:** 1
+  - **duration:** 1 turn/level
+  - **effect:** Produces 20-ft radius sphere of daylight on object or target eyes to blind (-4 to hit).
+-
+  - **name:** Magic Missile
+  - **class:** Wizard
+  - **level:** 1
+  - **school:** Evocation
+  - **components:** V, S
+  - **casting_time:** 1
+  - **duration:** Instantaneous
+  - **effect:** Launches 1 missile (+1 per 2 levels, max 5) dealing 1d4+1 force damage each, never misses.
+-
+  - **name:** Shield
+  - **class:** Wizard
+  - **level:** 1
+  - **school:** Evocation
+  - **components:** V, S
+  - **casting_time:** 1
+  - **duration:** 5 rounds/level
+  - **effect:** Invisible barrier granting AC 2 vs missiles, AC 3 vs melee, complete immunity to Magic Missile.
+-
+  - **name:** Sleep
+  - **class:** Wizard
+  - **level:** 1
+  - **school:** Enchantment/Charm
+  - **components:** V, S, M
+  - **casting_time:** 1
+  - **duration:** 5 rounds/level
+  - **effect:** Puts 2d4 HD of living creatures under 5 HD into deep slumber with no saving throw.
+-
+  - **name:** Invisibility
+  - **class:** Wizard
+  - **level:** 2
+  - **school:** Illusion/Phantasm
+  - **components:** V, S, M
+  - **casting_time:** 2
+  - **duration:** Special
+  - **effect:** Subject vanishes until attacking or casting a spell.
+-
+  - **name:** Mirror Image
+  - **class:** Wizard
+  - **level:** 2
+  - **school:** Illusion/Phantasm
+  - **components:** V, S
+  - **casting_time:** 2
+  - **duration:** 3 rounds/level
+  - **effect:** Creates 1d4 illusory duplicates that absorb incoming attacks.
+-
+  - **name:** Web
+  - **class:** Wizard
+  - **level:** 2
+  - **school:** Evocation
+  - **components:** V, S, M
+  - **casting_time:** 2
+  - **duration:** 2 turns/level
+  - **effect:** Sticky fibers entangle creatures in 8,000 cu ft; requires Str 13+ to break out slowly.
+-
+  - **name:** Fireball
+  - **class:** Wizard
+  - **level:** 3
+  - **school:** Evocation
+  - **components:** V, S, M
+  - **casting_time:** 3
+  - **duration:** Instantaneous
+  - **effect:** 20-ft radius blast dealing 1d6 fire damage per level (max 10d6), half on save. Expands to fill volume in confined spaces!
+-
+  - **name:** Haste
+  - **class:** Wizard
+  - **level:** 3
+  - **school:** Alteration
+  - **components:** V, S, M
+  - **casting_time:** 3
+  - **duration:** 3 rounds + 1 rd/level
+  - **effect:** Doubles movement and attack rate for 1 creature/level; ages recipients 1 year per cast.
+-
+  - **name:** Lightning Bolt
+  - **class:** Wizard
+  - **level:** 3
+  - **school:** Evocation
+  - **components:** V, S, M
+  - **casting_time:** 3
+  - **duration:** Instantaneous
+  - **effect:** Line of electricity dealing 1d6/level damage; bounces back upon hitting solid stone barriers!
+-
+  - **name:** Polymorph Other
+  - **class:** Wizard
+  - **level:** 4
+  - **school:** Alteration
+  - **components:** V, S, M
+  - **casting_time:** 4
+  - **duration:** Permanent until dispelled
+  - **effect:** Transforms creature into another form; requires System Shock check or creature dies.
+-
+  - **name:** Bless
+  - **class:** Priest
+  - **level:** 1
+  - **sphere:** All
+  - **components:** V, S, M
+  - **casting_time:** 1 round
+  - **duration:** 6 rounds
+  - **effect:** Grants +1 to attack rolls and morale in 50-ft cube.
+-
+  - **name:** Cure Light Wounds
+  - **class:** Priest
+  - **level:** 1
+  - **sphere:** Healing
+  - **components:** V, S
+  - **casting_time:** 5
+  - **duration:** Instantaneous
+  - **effect:** Heals 1d8 points of physical damage by touch; reversible to Cause Light Wounds.
+-
+  - **name:** Sanctuary
+  - **class:** Priest
+  - **level:** 1
+  - **sphere:** Protection
+  - **components:** V, S, M
+  - **casting_time:** 4
+  - **duration:** 2 rounds + 1 rd/level
+  - **effect:** Enemies attempting to attack caster must save vs spell or ignore them entirely.
+-
+  - **name:** Hold Person
+  - **class:** Priest / Wizard
+  - **level:** 2
+  - **sphere:** Charm
+  - **components:** V, S, M
+  - **casting_time:** 5
+  - **duration:** 9 rounds (Priest)
+  - **effect:** Paralyzes 1 to 4 humanoid targets completely if they fail save vs spell.
+-
+  - **name:** Spiritual Hammer
+  - **class:** Priest
+  - **level:** 2
+  - **sphere:** Combat
+  - **components:** V, S, M
+  - **casting_time:** 5
+  - **duration:** 3 rounds + 1 rd/level
+  - **effect:** Summons floating magical warhammer attacking at caster's THAC0, dealing 1d4+1 damage.
+-
+  - **name:** Dispel Magic
+  - **class:** Priest / Wizard
+  - **level:** 3
+  - **sphere:** Protection
+  - **components:** V, S
+  - **casting_time:** 6
+  - **duration:** Instantaneous
+  - **effect:** Cancels magical spell effects or suppresses magic items in 30-ft cube.
+-
+  - **name:** Prayer
+  - **class:** Priest
+  - **level:** 3
+  - **sphere:** Combat
+  - **components:** V, S, M
+  - **casting_time:** 6
+  - **duration:** 1 round/level
+  - **effect:** Grants +1 to ally rolls and -1 to enemy attacks, damage, and saves.
+-
+  - **name:** Cure Serious Wounds
+  - **class:** Priest
+  - **level:** 4
+  - **sphere:** Healing
+  - **components:** V, S
+  - **casting_time:** 7
+  - **duration:** Instantaneous
+  - **effect:** Heals 2d8+1 hit points by touch; reversible to Cause Serious Wounds.
+-
+  - **name:** Flame Strike
+  - **class:** Priest
+  - **level:** 5
+  - **sphere:** Combat
+  - **components:** V, S, M
+  - **casting_time:** 8
+  - **duration:** Instantaneous
+  - **effect:** Vertical column of divine roaring fire dealing 6d8 damage, save for half.
+-
+  - **name:** Heal
+  - **class:** Priest
+  - **level:** 6
+  - **sphere:** Healing
+  - **components:** V, S
+  - **casting_time:** 1 round
+  - **duration:** Instantaneous
+  - **effect:** Completely restores all hit points except 1d4, cures blindness, disease, and poison.

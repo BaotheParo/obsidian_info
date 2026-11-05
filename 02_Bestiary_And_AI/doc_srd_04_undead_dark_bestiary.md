@@ -1,0 +1,628 @@
+---
+id: "doc:srd_04_undead_dark_bestiary"
+package_id: "SRD_04_UNDEAD_DARK_BESTIARY"
+title: "Monsters A-Z: Curated Undead & Dark Dungeon Bestiary"
+original_title: "Monsters A-Z: Curated Undead & Dark Dungeon Bestiary"
+source_reference: "D&D 5E / AD&D / RPG Advanced Design"
+system_category: "02_Bestiary_And_AI"
+associated_master_moc: "[[00_Master_MOC]]"
+---
+
+# Monsters A-Z: Curated Undead & Dark Dungeon Bestiary
+
+> **Mã gói (Package ID):** `SRD_04_UNDEAD_DARK_BESTIARY` | **Nguồn khảo cứu:** *D&D 5E / AD&D / RPG Advanced Design*
+> **Phân loại hệ thống:** `[[02_Bestiary_And_AI]]` | **Bản đồ não bộ:** [[00_Master_MOC]]
+
+## 1. Tóm Lược Nghiệp Vụ & Thiết Kế (Executive Summary)
+Dữ liệu luật chơi và cơ chế đã qua chắt lọc.
+
+## 2. Ánh Xạ Cơ Chế Sang Sinh Tồn Thực Tế (Project Zomboid B42 / Hardcore RPG Mapping)
+## 3. Curated Monsters
+-
+  - **name:** Crawling Claw
+  - **pdf_page:** 278
+  - **size:** Tiny
+  - **type:** Undead
+  - **alignment:** Neutral Evil
+  - **ac:** 12
+  - **hp:** 2 (1d4)
+  - **speed:** 20 ft., climb 20 ft.
+  - **cr:** 0 (10 XP)
+  - **traits:**
+    - Blindsight 30 ft. (blind beyond this radius)
+    - Turn Immunity
+  - **actions:**
+    - Claw. Melee Attack: +4 to hit, reach 5 ft. Hit: 3 (1d4 + 1) Bludgeoning or Slashing damage.
+-
+  - **name:** Swarm of Crawling Claws
+  - **pdf_page:** 278
+  - **size:** Medium Swarm
+  - **type:** Tiny Undead
+  - **alignment:** Neutral Evil
+  - **ac:** 12
+  - **hp:** 22 (5d8)
+  - **speed:** 20 ft., climb 20 ft.
+  - **cr:** 1/2 (100 XP)
+  - **traits:**
+    - Swarm (can occupy same space, cannot regain HP)
+    - Condition Immunities: Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned
+  - **actions:**
+    - Claws. Melee Attack: +4 to hit, reach 0 ft. Hit: 10 (4d4) Slashing damage, or 5 (2d4) if bloodied.
+-
+  - **name:** Cultist
+  - **pdf_page:** 278
+  - **size:** Medium or Small
+  - **type:** Humanoid
+  - **alignment:** Neutral
+  - **ac:** 12
+  - **hp:** 9 (2d8)
+  - **speed:** 30 ft.
+  - **cr:** 1/8 (25 XP)
+  - **traits:**
+    - Dark Devotion (Advantage on saving throws vs Charmed and Frightened)
+  - **actions:**
+    - Scimitar. Melee Attack: +3 to hit, reach 5 ft. Hit: 4 (1d6 + 1) Slashing damage.
+-
+  - **name:** Cultist Fanatic
+  - **pdf_page:** 278
+  - **size:** Medium or Small
+  - **type:** Humanoid
+  - **alignment:** Neutral Evil
+  - **ac:** 13
+  - **hp:** 33 (6d8 + 6)
+  - **speed:** 30 ft.
+  - **cr:** 2 (450 XP)
+  - **traits:**
+    - Dark Devotion
+    - Spellcasting (Cleric spells: Sacred Flame, Command, Hold Person, Spiritual Weapon)
+  - **actions:**
+    - Multiattack: Two Dagger attacks.
+    - Dagger. Melee/Ranged: +4 to hit, reach 5 ft / range 20/60 ft. Hit: 4 (1d4 + 2) Piercing damage.
+-
+  - **name:** Death Dog
+  - **pdf_page:** 279
+  - **size:** Medium
+  - **type:** Monstrosity
+  - **alignment:** Neutral Evil
+  - **ac:** 12
+  - **hp:** 39 (6d8 + 12)
+  - **speed:** 40 ft.
+  - **cr:** 1 (200 XP)
+  - **traits:**
+    - Two-Headed (Advantage on Perception and saves vs Blinded, Charmed, Deafened, Frightened, Stunned, Knocked Out)
+  - **actions:**
+    - Multiattack: Two Bite attacks.
+    - Bite. Melee: +4 to hit, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage. Target must succeed on DC 12 Con save or become diseased (blinded/fatigued).
+-
+  - **name:** Shrieker Fungus
+  - **pdf_page:** 286
+  - **size:** Medium
+  - **type:** Plant
+  - **alignment:** Unaligned
+  - **ac:** 5
+  - **hp:** 13 (3d8)
+  - **speed:** 0 ft.
+  - **cr:** 0 (10 XP)
+  - **traits:**
+    - False Appearance (Indistinguishable from an ordinary fungus while motionless)
+    - Blindsight 30 ft.
+  - **actions:**
+    - Shriek. When bright light or a creature moves within 30 ft of the shrieker, it emits an ear-piercing shriek audible up to 300 feet for 1d4 rounds.
+-
+  - **name:** Violet Fungus
+  - **pdf_page:** 286
+  - **size:** Medium
+  - **type:** Plant
+  - **alignment:** Unaligned
+  - **ac:** 5
+  - **hp:** 18 (4d8)
+  - **speed:** 5 ft.
+  - **cr:** 1/4 (50 XP)
+  - **traits:**
+    - False Appearance
+    - Blindsight 30 ft.
+  - **actions:**
+    - Multiattack: 1d4 Rotting Touch attacks.
+    - Rotting Touch. Melee Attack: +2 to hit, reach 10 ft. Hit: 4 (1d8) Necrotic damage.
+-
+  - **name:** Ghast
+  - **pdf_page:** 287
+  - **size:** Medium
+  - **type:** Undead
+  - **alignment:** Chaotic Evil
+  - **ac:** 13
+  - **hp:** 36 (8d8)
+  - **speed:** 30 ft.
+  - **cr:** 2 (450 XP)
+  - **traits:**
+    - Stench (Any creature starting turn within 5 ft must succeed DC 10 Con save or be Poisoned)
+    - Turning Defiance
+  - **actions:**
+    - Bite. Melee: +5 to hit, reach 5 ft. Hit: 12 (2d8 + 3) Piercing damage.
+    - Claws. Melee: +5 to hit, reach 5 ft. Hit: 10 (2d6 + 3) Slashing damage. Target must succeed DC 10 Con save or be Paralyzed for 1 minute.
+-
+  - **name:** Ghost
+  - **pdf_page:** 287
+  - **size:** Medium
+  - **type:** Undead
+  - **alignment:** Neutral
+  - **ac:** 11
+  - **hp:** 45 (10d8)
+  - **speed:** 0 ft., fly 40 ft. (hover)
+  - **cr:** 4 (1,100 XP)
+  - **traits:**
+    - Incorporeal Movement (moves through creatures and walls)
+    - Ethereal Sight
+  - **actions:**
+    - Withering Touch. Melee: +5 to hit, reach 5 ft. Hit: 17 (4d6 + 3) Necrotic damage.
+    - Horrifying Visage. DC 13 Wis save or be Frightened for 1 minute and age 1d4 x 10 years.
+    - Possession. DC 13 Cha save or ghost enters humanoid body and controls it.
+-
+  - **name:** Ghoul
+  - **pdf_page:** 288
+  - **size:** Medium
+  - **type:** Undead
+  - **alignment:** Chaotic Evil
+  - **ac:** 12
+  - **hp:** 22 (5d8)
+  - **speed:** 30 ft.
+  - **cr:** 1 (200 XP)
+  - **traits:**
+    - Damage Immunities: Poison
+    - Condition Immunities: Charmed, Exhaustion, Poisoned
+  - **actions:**
+    - Bite. Melee: +2 to hit, reach 5 ft. Hit: 9 (2d6 + 2) Piercing damage.
+    - Claws. Melee: +4 to hit, reach 5 ft. Hit: 7 (2d4 + 2) Slashing damage. DC 10 Con save or Paralyzed for 1 minute (non-elves).
+-
+  - **name:** Gibbering Mouther
+  - **pdf_page:** 288
+  - **size:** Medium
+  - **type:** Aberration
+  - **alignment:** Chaotic Neutral
+  - **ac:** 9
+  - **hp:** 67 (9d8 + 27)
+  - **speed:** 10 ft., swim 10 ft.
+  - **cr:** 2 (450 XP)
+  - **traits:**
+    - Aberrant Ground (Ground within 10 ft is difficult terrain)
+    - Gibbering (Creatures within 20 ft make DC 10 Wis save or act erratically)
+  - **actions:**
+    - Bites. Melee: +2 to hit, reach 5 ft. Hit: 17 (5d6) Piercing damage.
+    - Blinding Spittle. Ranged: +4 to hit, range 15/30 ft. DC 13 Dex save or Blinded for 1 minute.
+-
+  - **name:** Goblin Warrior
+  - **pdf_page:** 290
+  - **size:** Small
+  - **type:** Fey (Goblinoid)
+  - **alignment:** Neutral Evil
+  - **ac:** 15
+  - **hp:** 7 (2d6)
+  - **speed:** 30 ft.
+  - **cr:** 1/4 (50 XP)
+  - **traits:**
+    - Nimble Escape (Can take Disengage or Hide action as a Bonus Action on each turn)
+    - Darkvision 60 ft.
+  - **actions:**
+    - Scimitar. Melee: +4 to hit, reach 5 ft. Hit: 5 (1d6 + 2) Slashing damage.
+    - Shortbow. Ranged: +4 to hit, range 80/320 ft. Hit: 5 (1d6 + 2) Piercing damage.
+-
+  - **name:** Grimlock
+  - **pdf_page:** 296
+  - **size:** Medium
+  - **type:** Humanoid
+  - **alignment:** Neutral Evil
+  - **ac:** 11
+  - **hp:** 11 (2d8 + 2)
+  - **speed:** 30 ft.
+  - **cr:** 1/4 (50 XP)
+  - **traits:**
+    - Blind Senses (Blindsight 30 ft., blind beyond)
+    - Keen Hearing and Smell
+  - **actions:**
+    - Spiked Bone Club. Melee: +5 to hit, reach 5 ft. Hit: 5 (1d4 + 3) Bludgeoning + 2 (1d4) Piercing damage.
+-
+  - **name:** Hell Hound
+  - **pdf_page:** 297
+  - **size:** Medium
+  - **type:** Fiend
+  - **alignment:** Lawful Evil
+  - **ac:** 15
+  - **hp:** 45 (7d8 + 14)
+  - **speed:** 50 ft.
+  - **cr:** 3 (700 XP)
+  - **traits:**
+    - Keen Hearing and Smell
+    - Pack Tactics
+    - Fire Immunity
+  - **actions:**
+    - Bite. Melee: +5 to hit, reach 5 ft. Hit: 7 (1d8 + 3) Piercing + 7 (2d6) Fire damage.
+    - Fire Breath. 15-ft cone, DC 12 Dex save, deals 21 (6d6) Fire damage.
+-
+  - **name:** Kobold Warrior
+  - **pdf_page:** 302
+  - **size:** Small
+  - **type:** Humanoid
+  - **alignment:** Lawful Evil
+  - **ac:** 13
+  - **hp:** 5 (2d6 - 2)
+  - **speed:** 30 ft.
+  - **cr:** 1/8 (25 XP)
+  - **traits:**
+    - Pack Tactics (Advantage on attack rolls when ally is within 5 ft)
+    - Sunlight Sensitivity
+  - **actions:**
+    - Dagger. Melee/Ranged: +4 to hit, reach 5 ft / range 20/60 ft. Hit: 4 (1d4 + 2) Piercing damage.
+    - Sling. Ranged: +4 to hit, range 30/120 ft. Hit: 4 (1d4 + 2) Bludgeoning damage.
+-
+  - **name:** Lich
+  - **pdf_page:** 304
+  - **size:** Medium
+  - **type:** Undead (Wizard)
+  - **alignment:** Neutral Evil
+  - **ac:** 17
+  - **hp:** 135 (18d8 + 54)
+  - **speed:** 30 ft.
+  - **cr:** 21 (33,000 XP)
+  - **traits:**
+    - Legendary Resistance (3/day)
+    - Rejuvenation (Phylactery reforms body in 1d10 days)
+    - Turn Resistance
+  - **actions:**
+    - Paralyzing Touch. Melee: +12 to hit, reach 5 ft. Hit: 10 (3d6) Cold damage + DC 18 Con save or Paralyzed for 1 minute.
+    - Disrupt Life (Legendary Action)
+    - Spellcasting (Power Word Kill, Finger of Death, Disintegrate, Globe of Invulnerability).
+-
+  - **name:** Mimic
+  - **pdf_page:** 308
+  - **size:** Medium
+  - **type:** Monstrosity
+  - **alignment:** Neutral
+  - **ac:** 12
+  - **hp:** 58 (9d8 + 18)
+  - **speed:** 15 ft.
+  - **cr:** 2 (450 XP)
+  - **traits:**
+    - Shapechanger (Transforms into an object such as a door or wooden chest)
+    - Adhesive (Creature touching mimic is Grappled, escape DC 13)
+    - False Appearance
+  - **actions:**
+    - Pseudopod. Melee: +5 to hit, reach 5 ft. Hit: 7 (1d8 + 3) Bludgeoning damage + adhered.
+    - Bite. Melee: +5 to hit, reach 5 ft. Hit: 7 (1d8 + 3) Piercing + 4 (1d8) Acid damage.
+-
+  - **name:** Minotaur of Baphomet
+  - **pdf_page:** 309
+  - **size:** Large
+  - **type:** Monstrosity
+  - **alignment:** Chaotic Evil
+  - **ac:** 14
+  - **hp:** 76 (9d10 + 27)
+  - **speed:** 40 ft.
+  - **cr:** 3 (700 XP)
+  - **traits:**
+    - Charge (extra 2d8 damage if moving 10+ ft before hit)
+    - Labyrinthine Recall (perfect memory of paths)
+  - **actions:**
+    - Greataxe. Melee: +6 to hit, reach 5 ft. Hit: 17 (2d12 + 4) Slashing damage.
+    - Gore. Melee: +6 to hit, reach 5 ft. Hit: 13 (2d8 + 4) Piercing damage.
+-
+  - **name:** Mummy
+  - **pdf_page:** 309
+  - **size:** Medium
+  - **type:** Undead
+  - **alignment:** Lawful Evil
+  - **ac:** 11
+  - **hp:** 58 (9d8 + 18)
+  - **speed:** 20 ft.
+  - **cr:** 3 (700 XP)
+  - **traits:**
+    - Vulnerability: Fire
+    - Damage Immunities: Necrotic, Poison
+  - **actions:**
+    - Rotting Fist. Melee: +5 to hit, reach 5 ft. Hit: 10 (2d6 + 3) Bludgeoning + 10 (3d6) Necrotic damage. DC 12 Con save or cursed with Mummy Rot (cannot regain HP, max HP drops 10 per 24 hrs).
+    - Dreadful Glare. DC 11 Wis save or Frightened and Paralyzed.
+-
+  - **name:** Ogre
+  - **pdf_page:** 312
+  - **size:** Large
+  - **type:** Giant
+  - **alignment:** Chaotic Evil
+  - **ac:** 11
+  - **hp:** 59 (7d10 + 21)
+  - **speed:** 40 ft.
+  - **cr:** 2 (450 XP)
+  - **traits:**
+    - Darkvision 60 ft.
+  - **actions:**
+    - Greatclub. Melee: +6 to hit, reach 5 ft. Hit: 13 (2d8 + 4) Bludgeoning damage.
+    - Javelin. Ranged: +6 to hit, range 30/120 ft. Hit: 11 (2d6 + 4) Piercing damage.
+-
+  - **name:** Owlbear
+  - **pdf_page:** 313
+  - **size:** Large
+  - **type:** Monstrosity
+  - **alignment:** Unaligned
+  - **ac:** 13
+  - **hp:** 59 (7d10 + 21)
+  - **speed:** 40 ft.
+  - **cr:** 3 (700 XP)
+  - **traits:**
+    - Keen Sight and Smell (Advantage on Perception checks)
+  - **actions:**
+    - Multiattack: One Beak attack and one Claws attack.
+    - Beak. Melee: +7 to hit, reach 5 ft. Hit: 10 (1d10 + 5) Piercing damage.
+    - Claws. Melee: +7 to hit, reach 5 ft. Hit: 14 (2d8 + 5) Slashing damage.
+-
+  - **name:** Phase Spider
+  - **pdf_page:** 313
+  - **size:** Large
+  - **type:** Monstrosity
+  - **alignment:** Unaligned
+  - **ac:** 13
+  - **hp:** 32 (5d10 + 5)
+  - **speed:** 30 ft., climb 30 ft.
+  - **cr:** 3 (700 XP)
+  - **traits:**
+    - Ethereal Jaunt (Bonus action shift between Material Plane and Ethereal Plane)
+    - Spider Climb
+    - Web Walker
+  - **actions:**
+    - Bite. Melee: +5 to hit, reach 5 ft. Hit: 7 (1d10 + 2) Piercing + 18 (4d8) Poison damage (DC 11 Con save for half).
+-
+  - **name:** Rust Monster
+  - **pdf_page:** 320
+  - **size:** Medium
+  - **type:** Monstrosity
+  - **alignment:** Unaligned
+  - **ac:** 14
+  - **hp:** 33 (6d8 + 6)
+  - **speed:** 40 ft.
+  - **cr:** 1/2 (100 XP)
+  - **traits:**
+    - Iron Scent (Pinpoints nonmagical ferrous metal within 30 ft)
+    - Rust Metal (Any nonmagical metal weapon that hits the rust monster corrodes: permanent -1 penalty; destroyed at -5).
+  - **actions:**
+    - Bite. Melee: +3 to hit, reach 5 ft. Hit: 5 (1d8 + 1) Piercing damage.
+    - Antennae. Corrodes nonmagical ferrous armor or shield touched: armor permanently loses 1 AC and is destroyed if AC reaches 10.
+-
+  - **name:** Shadow
+  - **pdf_page:** 322
+  - **size:** Medium
+  - **type:** Undead
+  - **alignment:** Chaotic Evil
+  - **ac:** 12
+  - **hp:** 16 (3d8 + 3)
+  - **speed:** 40 ft.
+  - **cr:** 1/2 (100 XP)
+  - **traits:**
+    - Shadow Stealth (Hide as Bonus Action in dim light or darkness)
+    - Amorphous (squeeze through 1-inch gaps)
+    - Vulnerability: Radiant
+  - **actions:**
+    - Strength Drain. Melee: +4 to hit, reach 5 ft. Hit: 9 (2d6 + 2) Necrotic damage, and the target's Strength score is reduced by 1d4. Target dies if Strength reaches 0.
+-
+  - **name:** Skeleton
+  - **pdf_page:** 325
+  - **size:** Medium
+  - **type:** Undead
+  - **alignment:** Lawful Evil
+  - **ac:** 13
+  - **hp:** 13 (2d8 + 4)
+  - **speed:** 30 ft.
+  - **cr:** 1/4 (50 XP)
+  - **traits:**
+    - Vulnerability: Bludgeoning
+    - Damage Immunities: Poison
+    - Condition Immunities: Exhaustion, Poisoned
+  - **actions:**
+    - Shortsword. Melee: +4 to hit, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage.
+    - Shortbow. Ranged: +4 to hit, range 80/320 ft. Hit: 5 (1d6 + 2) Piercing damage.
+-
+  - **name:** Warhorse Skeleton
+  - **pdf_page:** 326
+  - **size:** Large
+  - **type:** Undead
+  - **alignment:** Lawful Evil
+  - **ac:** 13
+  - **hp:** 22 (3d10 + 6)
+  - **speed:** 60 ft.
+  - **cr:** 1/2 (100 XP)
+  - **traits:**
+    - Vulnerability: Bludgeoning
+    - Immunity: Poison
+  - **actions:**
+    - Hooves. Melee: +6 to hit, reach 5 ft. Hit: 11 (2d6 + 4) Bludgeoning damage.
+-
+  - **name:** Specter
+  - **pdf_page:** 327
+  - **size:** Medium
+  - **type:** Undead
+  - **alignment:** Chaotic Evil
+  - **ac:** 12
+  - **hp:** 22 (5d8)
+  - **speed:** 0 ft., fly 50 ft. (hover)
+  - **cr:** 1 (200 XP)
+  - **traits:**
+    - Incorporeal Movement
+    - Sunlight Sensitivity
+  - **actions:**
+    - Life Drain. Melee: +4 to hit, reach 5 ft. Hit: 10 (3d6) Necrotic damage. DC 10 Con save or HP max reduced by damage taken.
+-
+  - **name:** Stirge
+  - **pdf_page:** 329
+  - **size:** Tiny
+  - **type:** Monstrosity
+  - **alignment:** Unaligned
+  - **ac:** 14
+  - **hp:** 2 (1d4)
+  - **speed:** 10 ft., fly 40 ft.
+  - **cr:** 1/8 (25 XP)
+  - **traits:**
+    - Darkvision 60 ft.
+  - **actions:**
+    - Blood Drain. Melee: +5 to hit, reach 5 ft. Hit: 5 (1d4 + 3) Piercing damage, and stirge attaches. Each turn attached, drains 5 (1d4 + 3) hit points.
+-
+  - **name:** Troll
+  - **pdf_page:** 333
+  - **size:** Large
+  - **type:** Giant
+  - **alignment:** Chaotic Evil
+  - **ac:** 15
+  - **hp:** 84 (8d10 + 40)
+  - **speed:** 30 ft.
+  - **cr:** 5 (1,800 XP)
+  - **traits:**
+    - Regeneration (Regains 10 HP at start of each turn; acid or fire stops regeneration for 1 round)
+  - **actions:**
+    - Multiattack: One Bite and two Claw attacks.
+    - Bite. Melee: +7 to hit, reach 5 ft. Hit: 7 (1d6 + 4) Piercing damage.
+    - Claw. Melee: +7 to hit, reach 5 ft. Hit: 11 (2d6 + 4) Slashing damage.
+-
+  - **name:** Vampire Spawn
+  - **pdf_page:** 334
+  - **size:** Medium or Small
+  - **type:** Undead
+  - **alignment:** Neutral Evil
+  - **ac:** 16
+  - **hp:** 82 (11d8 + 33)
+  - **speed:** 30 ft., climb 30 ft.
+  - **cr:** 5 (1,800 XP)
+  - **traits:**
+    - Regeneration (10 HP/round unless in sunlight or running water)
+    - Spider Climb
+    - Vampire Weaknesses (Sunlight, Running Water, Stake to Heart)
+  - **actions:**
+    - Multiattack: Two Claws or one Bite.
+    - Claws. Melee: +6 to hit, reach 5 ft. Hit: 8 (2d4 + 3) Slashing + grapple.
+    - Bite. Melee: +6 to hit. Hit: 6 (1d6 + 3) Piercing + 7 (2d6) Necrotic damage; regains HP equal to necrotic damage.
+-
+  - **name:** Vampire
+  - **pdf_page:** 335
+  - **size:** Medium or Small
+  - **type:** Undead
+  - **alignment:** Lawful Evil
+  - **ac:** 16
+  - **hp:** 144 (17d8 + 68)
+  - **speed:** 30 ft., climb 30 ft.
+  - **cr:** 13 (10,000 XP)
+  - **traits:**
+    - Shapechanger (Bat or Mist)
+    - Legendary Resistance (3/day)
+    - Misty Escape (returns to coffin at 0 HP)
+    - Regeneration 20 HP/round
+  - **actions:**
+    - Multiattack: Two attacks (Claws or Unarmed).
+    - Bite. Melee: +9 to hit. Hit: 7 (1d8 + 3) Piercing + 10 (3d6) Necrotic damage + reduce HP max.
+    - Charm. DC 17 Wis save or target is Charmed for 24 hours.
+    - Children of the Night. Calls swarms of bats or wolves.
+-
+  - **name:** Werewolf
+  - **pdf_page:** 339
+  - **size:** Medium or Small
+  - **type:** Monstrosity (Lycanthrope)
+  - **alignment:** Chaotic Evil
+  - **ac:** 15
+  - **hp:** 58 (9d8 + 18)
+  - **speed:** 30 ft. (40 ft. in wolf form)
+  - **cr:** 3 (700 XP)
+  - **traits:**
+    - Shapechanger (Humanoid, Wolf, or Hybrid form)
+    - Damage Immunities: Bludgeoning, Piercing, and Slashing from nonmagical non-silvered attacks
+  - **actions:**
+    - Multiattack (Hybrid): One Bite and one Claw.
+    - Bite. Melee: +5 to hit. Hit: 6 (1d8 + 2) Piercing damage. DC 12 Con save or cursed with Lycanthropy.
+    - Claw. Melee: +5 to hit. Hit: 7 (2d4 + 2) Slashing damage.
+-
+  - **name:** Wight
+  - **pdf_page:** 341
+  - **size:** Medium
+  - **type:** Undead
+  - **alignment:** Neutral Evil
+  - **ac:** 14
+  - **hp:** 45 (6d8 + 18)
+  - **speed:** 30 ft.
+  - **cr:** 3 (700 XP)
+  - **traits:**
+    - Sunlight Sensitivity
+    - Darkvision 60 ft.
+  - **actions:**
+    - Multiattack: Two Longsword or Longbow attacks.
+    - Life Drain. Melee: +4 to hit. Hit: 5 (1d6 + 2) Necrotic. DC 13 Con save or HP max reduced. Humanoid slain rises as Zombie under wight's control.
+    - Longsword. Melee: +4 to hit. Hit: 6 (1d8 + 2) Slashing damage.
+-
+  - **name:** Will-o'-Wisp
+  - **pdf_page:** 341
+  - **size:** Tiny
+  - **type:** Undead
+  - **alignment:** Chaotic Evil
+  - **ac:** 19
+  - **hp:** 22 (9d4)
+  - **speed:** 0 ft., fly 50 ft. (hover)
+  - **cr:** 2 (450 XP)
+  - **traits:**
+    - Incorporeal Movement
+    - Variable Illumination (5-20 ft light, or Bonus action Invisibility)
+    - Consume Life (Bonus action instant kill on dying creature within 5 ft)
+  - **actions:**
+    - Shock. Melee Spell Attack: +4 to hit, reach 5 ft. Hit: 9 (2d8) Lightning damage.
+-
+  - **name:** Worg
+  - **pdf_page:** 342
+  - **size:** Large
+  - **type:** Fey
+  - **alignment:** Neutral Evil
+  - **ac:** 13
+  - **hp:** 26 (4d10 + 4)
+  - **speed:** 50 ft.
+  - **cr:** 1/2 (100 XP)
+  - **traits:**
+    - Keen Hearing and Smell
+  - **actions:**
+    - Bite. Melee: +5 to hit, reach 5 ft. Hit: 10 (2d6 + 3) Piercing damage. DC 13 Str save or knocked Prone.
+-
+  - **name:** Wraith
+  - **pdf_page:** 342
+  - **size:** Medium or Small
+  - **type:** Undead
+  - **alignment:** Neutral Evil
+  - **ac:** 13
+  - **hp:** 67 (9d8 + 27)
+  - **speed:** 0 ft., fly 60 ft. (hover)
+  - **cr:** 5 (1,800 XP)
+  - **traits:**
+    - Incorporeal Movement
+    - Sunlight Sensitivity
+  - **actions:**
+    - Life Drain. Melee: +6 to hit, reach 5 ft. Hit: 21 (4d8 + 3) Necrotic damage. DC 14 Con save or HP max reduced by damage.
+    - Create Specter. Targets humanoid corpse within 10 ft to rise as Specter under wraith's control.
+-
+  - **name:** Zombie
+  - **pdf_page:** 343
+  - **size:** Medium
+  - **type:** Undead
+  - **alignment:** Neutral Evil
+  - **ac:** 8
+  - **hp:** 22 (3d8 + 9)
+  - **speed:** 20 ft.
+  - **cr:** 1/4 (50 XP)
+  - **traits:**
+    - Undead Fortitude: If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is Radiant or from a Critical Hit. On a success, the zombie drops to 1 hit point instead.
+    - Damage Immunities: Poison
+    - Condition Immunities: Poisoned
+  - **actions:**
+    - Slam. Melee Attack: +3 to hit, reach 5 ft. Hit: 4 (1d6 + 1) Bludgeoning damage.
+-
+  - **name:** Ogre Zombie
+  - **pdf_page:** 344
+  - **size:** Large
+  - **type:** Undead
+  - **alignment:** Neutral Evil
+  - **ac:** 8
+  - **hp:** 85 (9d10 + 36)
+  - **speed:** 30 ft.
+  - **cr:** 2 (450 XP)
+  - **traits:**
+    - Undead Fortitude: DC 5 + damage taken to drop to 1 HP instead of 0.
+    - Damage Immunities: Poison
+    - Condition Immunities: Poisoned
+  - **actions:**
+    - Slam. Melee Attack: +6 to hit, reach 5 ft. Hit: 13 (2d8 + 4) Bludgeoning damage.

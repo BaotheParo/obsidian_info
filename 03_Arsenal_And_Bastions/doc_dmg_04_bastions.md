@@ -1,0 +1,413 @@
+---
+id: "doc:dmg_04_bastions"
+package_id: "DMG_04_BASTIONS"
+title: "Chương 8: Căn Cứ & Pháo Đài Nhân Vật (Hệ Thống Quản Lý Bastion Hoàn Chỉnh)"
+original_title: "Chapter 8: Bastions - Complete Player Stronghold & Base Management System"
+source_reference: "Dungeons & Dragons 2024 Dungeon Master's Guide"
+system_category: "03_Arsenal_And_Bastions"
+associated_master_moc: "[[00_Master_MOC]]"
+---
+
+# Chương 8: Căn Cứ & Pháo Đài Nhân Vật (Hệ Thống Quản Lý Bastion Hoàn Chỉnh)
+
+> **Mã gói (Package ID):** `DMG_04_BASTIONS` | **Nguồn khảo cứu:** *Dungeons & Dragons 2024 Dungeon Master's Guide*
+> **Phân loại hệ thống:** `[[03_Arsenal_And_Bastions]]` | **Bản đồ não bộ:** [[00_Master_MOC]]
+
+## 1. Tóm Lược Nghiệp Vụ & Thiết Kế (Executive Summary)
+Dữ liệu luật chơi và cơ chế đã qua chắt lọc.
+
+## 3. Sections
+- **bastion_fundamentals:**
+  - **title:** Bastion Core Rules & Architecture
+  - **pdf_pages:** 336-339
+  - **book_pages:** 332-335
+  - **overview:** A Bastion is a player character's personalized stronghold, sanctuary, and workshop. It provides a base of operations between adventures where hirelings execute projects, forge items, gather intelligence, and amass Bastion Points (BP).
+  - **core_rules:**
+    - **gaining_a_bastion:** Characters typically acquire a Bastion upon reaching Level 5 (as a royal land grant, inheritance, cleared ruin, or custom construction). Bastions are entirely opt-in.
+    - **bastion_turn_cadence:** A Bastion Turn occurs once every 7 in-game days, or whenever the characters finish an adventure/extended downtime. Characters issue orders to facilities, hirelings execute them, and the DM checks for Bastion Events.
+    - **bastion_points_bp:** Bastions generate Bastion Points (BP) through successful projects and downtime, which can be spent to buy exotic upgrades, hire specialized mercenaries, or fund grand rituals.
+    - **defensive_walls:** If a Bastion is completely enclosed by defensive stone walls and comes under hostile assault, reduce by 2 the number of dice rolled to determine casualties among Bastion Defenders.
+    - **combining_bastions:** Two or more player characters can combine their individual Bastions into a unified castle, guildhall compound, or sky-ship. Facilities remain independently commanded by their owners, but defenders can pool casualties during defensive battles.
+  - **facility_space_and_sizes:**
+    - **grid_unit:** Facility space is measured in 5-foot squares, which can be arranged in any configuration or across multiple vertical stories/levels.
+    - **space_categories:**
+      -
+        - **size:** Cramped
+        - **squares_5ft:** 4
+        - **dimensions_approx:** 10 ft x 10 ft (100 sq ft)
+        - **cost_to_enlarge:** N/A
+      -
+        - **size:** Roomy
+        - **squares_5ft:** 16
+        - **dimensions_approx:** 20 ft x 20 ft (400 sq ft)
+        - **cost_to_enlarge_from_cramped:** 500 GP and 25 days
+      -
+        - **size:** Vast
+        - **squares_5ft:** 64
+        - **dimensions_approx:** 40 ft x 40 ft (1,600 sq ft)
+        - **cost_to_enlarge_from_roomy:** 1,500 GP and 80 days
+  - **facility_acquisition_by_level:**
+    -
+      - **character_level:** Level 5
+      - **basic_facilities:** 2
+      - **special_facilities:** 2
+      - **max_defenders:** 4
+    -
+      - **character_level:** Level 9
+      - **basic_facilities:** 4
+      - **special_facilities:** 4
+      - **max_defenders:** 8
+    -
+      - **character_level:** Level 13
+      - **basic_facilities:** 5
+      - **special_facilities:** 5
+      - **max_defenders:** 12
+    -
+      - **character_level:** Level 17
+      - **basic_facilities:** 6
+      - **special_facilities:** 6
+      - **max_defenders:** 16
+- **basic_facilities:**
+  - **title:** Basic Facilities
+  - **pdf_pages:** 339
+  - **book_pages:** 335
+  - **description:** Mundane living quarters and utility spaces that require no level prerequisite and can be added or enlarged at will.
+  - **catalog:**
+    -
+      - **name:** Bedroom
+      - **default_space:** Cramped
+      - **purpose:** Private living quarters for the owner, guests, or high-ranking retainers.
+    -
+      - **name:** Dining Room
+      - **default_space:** Roomy
+      - **purpose:** Communal dining hall with long banquet tables and hearth.
+    -
+      - **name:** Kitchen
+      - **default_space:** Roomy
+      - **purpose:** Food preparation area with ovens, hearth, and pantry.
+    -
+      - **name:** Parlor
+      - **default_space:** Roomy
+      - **purpose:** Comfortable reception salon for entertaining visiting dignitaries and guests.
+    -
+      - **name:** Storage
+      - **default_space:** Cramped
+      - **purpose:** Secure room for provisions, bulk supplies, tools, and nonmagical equipment.
+    -
+      - **name:** Courtyard
+      - **default_space:** Roomy
+      - **purpose:** Open-air enclosed yard for staging caravans, training, or animal pens.
+- **special_facilities_catalog:**
+  - **title:** Special Facilities Catalog (Levels 5, 9, 13, 17)
+  - **pdf_pages:** 339-353
+  - **book_pages:** 335-349
+  - **level_5_facilities:**
+    -
+      - **name:** Arcane Study
+      - **level_prerequisite:** 5
+      - **character_prerequisite:** Ability to use an Arcane Focus or artisan tool as a Spellcasting Focus
+      - **space:** Roomy
+      - **hirelings:** 1
+      - **order:** Craft
+      - **benefit:** Arcane Study Charm: Finishing a Long Rest in your Bastion grants a charm lasting 7 days, allowing you to cast Identify without expending a spell slot or material components. Can also craft Spell Scrolls or minor arcana.
+    -
+      - **name:** Armory
+      - **level_prerequisite:** 5
+      - **character_prerequisite:** None
+      - **space:** Roomy
+      - **hirelings:** 1
+      - **order:** Trade
+      - **benefit:** Stores weapons and armor. When issued Trade order, buys/sells military equipment. Bastion Defenders armed from this facility gain a +1 bonus to their defense rolls during attacks.
+    -
+      - **name:** Barracks
+      - **level_prerequisite:** 5
+      - **character_prerequisite:** None
+      - **space:** Roomy
+      - **hirelings:** 1
+      - **order:** Recruit
+      - **benefit:** Houses up to 12 Bastion Defenders. When issued the Recruit order, recruit up to 4 new Bastion Defenders (to replace battle losses) up to maximum cap.
+    -
+      - **name:** Garden
+      - **level_prerequisite:** 5
+      - **character_prerequisite:** None
+      - **space:** Roomy
+      - **hirelings:** 1
+      - **order:** Harvest
+      - **benefit:** Cultivates flowers, vegetables, and medicinal flora. When issued Harvest order, produces 1 dose of Antitoxin or 1 dose of basic herbal medicine (or sells fresh produce for 25 GP).
+    -
+      - **name:** Library
+      - **level_prerequisite:** 5
+      - **character_prerequisite:** None
+      - **space:** Roomy
+      - **hirelings:** 1
+      - **order:** Research
+      - **benefit:** Finishing a Long Rest in your Bastion grants Advantage on all Intelligence (Arcana, History, Nature, Religion) checks for the next 24 hours. When issued Research order, hireling unearths specific lore or historical clues.
+    -
+      - **name:** Sanctuary
+      - **level_prerequisite:** 5
+      - **character_prerequisite:** Ability to use a Holy Symbol or Druidic Focus as a Spellcasting Focus
+      - **space:** Roomy
+      - **hirelings:** 1
+      - **order:** Craft
+      - **benefit:** Finishing a Long Rest grants a Charm of Healing (cast Cure Wounds at 1st level without spell slot). When issued Craft order, produces 1 flask of Holy Water.
+    -
+      - **name:** Smithy
+      - **level_prerequisite:** 5
+      - **character_prerequisite:** None
+      - **space:** Roomy
+      - **hirelings:** 1
+      - **order:** Craft
+      - **benefit:** Forges metal armor, weapons, and tools at half normal time. At level 9+, hirelings can craft Uncommon weapons/armor under your supervision.
+    -
+      - **name:** Storehouse
+      - **level_prerequisite:** 5
+      - **character_prerequisite:** None
+      - **space:** Roomy
+      - **hirelings:** 1
+      - **order:** Trade
+      - **benefit:** Stores up to 5,000 GP worth of trade goods. When issued Trade order, generates 100 GP in merchant profit on market price fluctuations.
+    -
+      - **name:** Workshop
+      - **level_prerequisite:** 5
+      - **character_prerequisite:** None
+      - **space:** Roomy
+      - **hirelings:** 1
+      - **order:** Craft
+      - **benefit:** Chosen tool proficiency workshop. Finishing a Short Rest here grants Heroic Inspiration. When issued Craft order, crafts adventuring gear or implements.
+  - **level_9_facilities:**
+    -
+      - **name:** Gaming Hall
+      - **level_prerequisite:** 9
+      - **character_prerequisite:** None
+      - **space:** Roomy
+      - **hirelings:** 1
+      - **order:** Trade
+      - **benefit:** Casino/gaming tables generating 1d10 x 50 GP per turn on Trade order, while collecting street rumors.
+    -
+      - **name:** Greenhouse
+      - **level_prerequisite:** 9
+      - **character_prerequisite:** None
+      - **space:** Roomy
+      - **hirelings:** 1
+      - **order:** Harvest
+      - **benefit:** Heated glasshouse harvesting rare botanicals: produces 1 Potion of Healing (Greater) or 1 dose of rare poison (such as Crawler Mucus or Assassin's Blood).
+    -
+      - **name:** Laboratory
+      - **level_prerequisite:** 9
+      - **character_prerequisite:** None (Alchemist's Supplies proficiency recommended)
+      - **space:** Roomy
+      - **hirelings:** 1
+      - **order:** Craft
+      - **benefit:** Hirelings brew potions, acids, and alchemical fire. Can brew Potions of Healing (Greater) or Oils at half time.
+    -
+      - **name:** Sacristy
+      - **level_prerequisite:** 9
+      - **character_prerequisite:** Ability to use a Holy Symbol or Druidic Focus as a Spellcasting Focus
+      - **space:** Roomy
+      - **hirelings:** 1
+      - **order:** Craft
+      - **benefit:** Holy preparation chamber. Finishing a Long Rest grants death ward protection: the first time you drop to 0 HP within 7 days, you drop to 1 HP instead.
+    -
+      - **name:** Scriptorium
+      - **level_prerequisite:** 9
+      - **character_prerequisite:** None
+      - **space:** Roomy
+      - **hirelings:** 1
+      - **order:** Craft
+      - **benefit:** Hireling scribes copy books, maps, and Spell Scrolls (up to 3rd-level spells) without requiring your direct presence.
+    -
+      - **name:** Stable
+      - **level_prerequisite:** 9
+      - **character_prerequisite:** None
+      - **space:** Vast
+      - **hirelings:** 2
+      - **order:** Trade
+      - **benefit:** Breeds and houses up to 8 Large mounts (Warhorses, Riding Horses, or exotic Hippogriffs). Trade order earns 200 GP breeding profit.
+    -
+      - **name:** Teleportation Circle
+      - **level_prerequisite:** 9
+      - **character_prerequisite:** None
+      - **space:** Roomy
+      - **hirelings:** 1
+      - **order:** Recruit
+      - **benefit:** Permanent teleportation rune circle etched into floor. Allows instantaneous transit to any known teleport circle across the Material Plane.
+    -
+      - **name:** Theater
+      - **level_prerequisite:** 9
+      - **character_prerequisite:** None
+      - **space:** Vast
+      - **hirelings:** 4
+      - **order:** Empower
+      - **benefit:** Orchestras, stage plays, and public speeches. Empower order increases character Renown by +1 and grants all allies Heroic Inspiration.
+    -
+      - **name:** Training Area
+      - **level_prerequisite:** 9
+      - **character_prerequisite:** None
+      - **space:** Vast
+      - **hirelings:** 2
+      - **order:** Empower
+      - **benefit:** Training for 8 hours on a Bastion Turn grants +1 bonus to weapon attack rolls or saving throws for the next 7 days.
+    -
+      - **name:** Trophy Room
+      - **level_prerequisite:** 9
+      - **character_prerequisite:** None
+      - **space:** Roomy
+      - **hirelings:** 1
+      - **order:** Research
+      - **benefit:** Displays preserved heads, pelts, and relics of conquered monsters. Grants Advantage on initiative rolls against monster types displayed.
+  - **level_13_facilities:**
+    -
+      - **name:** Archive
+      - **level_prerequisite:** 13
+      - **character_prerequisite:** None
+      - **space:** Vast
+      - **hirelings:** 2
+      - **order:** Research
+      - **benefit:** Houses secret histories and forbidden scrolls. Grants Advantage on all Intelligence checks to decipher ancient cyphers or planar portals.
+    -
+      - **name:** Meditation Chamber
+      - **level_prerequisite:** 13
+      - **character_prerequisite:** None
+      - **space:** Roomy
+      - **hirelings:** 1
+      - **order:** Empower
+      - **benefit:** Tranquil sensory deprivation pond. Finishing a Long Rest here grants Temporary HP equal to twice your character level and Immunity to the Frightened and Charmed conditions for 7 days.
+    -
+      - **name:** Menagerie
+      - **level_prerequisite:** 13
+      - **character_prerequisite:** None
+      - **space:** Vast
+      - **hirelings:** 4
+      - **order:** Recruit
+      - **benefit:** Enclosures housing exotic beasts and monstrosities (e.g., Owlbears, Griffons). Can tame and train exotic battle mounts.
+    -
+      - **name:** Observatory
+      - **level_prerequisite:** 13
+      - **character_prerequisite:** Ability to use a Spellcasting Focus
+      - **space:** Roomy
+      - **hirelings:** 1
+      - **order:** Empower
+      - **benefit:** Telescopic crystal dome aligned with the cosmos. Cast Scrying once every 7 days without expending a spell slot (target has Disadvantage on the save).
+    -
+      - **name:** Pub
+      - **level_prerequisite:** 13
+      - **character_prerequisite:** None
+      - **space:** Roomy
+      - **hirelings:** 2
+      - **order:** Research
+      - **benefit:** Lively tavern attracting traveling adventurers and spies. Gathers deep regional intelligence while keeping hireling morale at maximum.
+    -
+      - **name:** Reliquary
+      - **level_prerequisite:** 13
+      - **character_prerequisite:** Ability to use a Holy Symbol or Druidic Focus as a Spellcasting Focus
+      - **space:** Roomy
+      - **hirelings:** 1
+      - **order:** Harvest
+      - **benefit:** Enshrines sacred divine relics. Finishing a Long Rest grants the benefits of Bless for 24 hours.
+  - **level_17_facilities:**
+    -
+      - **name:** Demiplane
+      - **level_prerequisite:** 17
+      - **character_prerequisite:** Ability to use an Arcane Focus or tool as a Spellcasting Focus
+      - **space:** Vast
+      - **hirelings:** 1
+      - **order:** Empower
+      - **benefit:** An extradimensional sanctuary accessed through a magical door in your Bastion. Impervious to all scrying, planar tracking, and mundane siege weaponry.
+    -
+      - **name:** Guildhall
+      - **level_prerequisite:** 17
+      - **character_prerequisite:** Expertise in at least one skill
+      - **space:** Vast
+      - **hirelings:** 4
+      - **order:** Recruit
+      - **benefit:** Regional headquarters of a shadow syndicate, merchant consortium, or knightly order. Marshals an elite network of operatives across multiple nations.
+    -
+      - **name:** Sanctum
+      - **level_prerequisite:** 17
+      - **character_prerequisite:** Ability to use a Holy Symbol or Druidic Focus as a Spellcasting Focus
+      - **space:** Vast
+      - **hirelings:** 2
+      - **order:** Empower
+      - **benefit:** Divine hall suffused with the direct presence of your deity. If you die on any plane, your soul immediately reforms in your Sanctum as if by True Resurrection after 24 hours.
+    -
+      - **name:** War Room
+      - **level_prerequisite:** 17
+      - **character_prerequisite:** Fighting Style feature or Unarmored Defense feature
+      - **space:** Roomy
+      - **hirelings:** 2
+      - **order:** Recruit
+      - **benefit:** Strategic war planning theater with magical topographic sand tables. When issued Recruit order, marshals up to 20 elite veteran defenders.
+- **facility_orders:**
+  - **title:** Facility Orders
+  - **pdf_pages:** 340
+  - **book_pages:** 336
+  - **order_types:**
+    -
+      - **order:** Craft
+      - **description:** Hirelings forge, brew, scribe, or assemble items using the facility's specialized equipment.
+    -
+      - **order:** Harvest
+      - **description:** Hirelings harvest crops, poisons, medicinal herbs, honey, or magical distillations.
+    -
+      - **order:** Maintain
+      - **description:** Facility is cleaned, repaired, and fortified; hirelings gain Advantage against accidents or espionage.
+    -
+      - **order:** Recruit
+      - **description:** Hirelings recruit replacement defenders, soldiers, or exotic beasts to fill vacancies.
+    -
+      - **order:** Research
+      - **description:** Hirelings scour ancient libraries, interrogate contacts, or conduct experiments to uncover designated secrets.
+    -
+      - **order:** Trade
+      - **description:** Hirelings buy and sell goods produced in the facility, generating weekly gold profit for the Bastion owner.
+    -
+      - **order:** Empower
+      - **description:** The facility channels magical, celestial, or combat energy to confer personal boons onto the character.
+- **bastion_events_d100_table:**
+  - **title:** Bastion Events (d100 Table)
+  - **pdf_pages:** 354-356
+  - **book_pages:** 350-352
+  - **table:**
+    -
+      - **d100_range:** 01-40
+      - **event:** Hostile Attack
+      - **mechanics:** An enemy force (brigands, monsters, rival army) attacks the Bastion. Roll dice based on threat to determine casualties among Bastion Defenders. If defensive walls enclose the Bastion, reduce casualty dice rolled by 2. If all defenders fall, the Bastion is looted.
+    -
+      - **d100_range:** 41-63
+      - **event:** Friendly Visitors
+      - **mechanics:** Allied knights, traveling merchants, or sages visit to use a facility. They pay the owner 1d6 x 100 GP for brief hospitality.
+    -
+      - **d100_range:** 64-73
+      - **event:** Extraordinary Opportunity
+      - **mechanics:** Opportunity to host a grand festival, fund an archmage's research, or entertain a monarch. Paying 500 GP prompts an immediate reroll on this table with high rewards; declining costs nothing.
+    -
+      - **d100_range:** 74-75
+      - **event:** Lost Hirelings
+      - **mechanics:** One special facility (determined randomly) loses its hirelings due to illness or personal departure. Facility is inoperable for 1 turn, then replacements arrive at no cost.
+    -
+      - **d100_range:** 76-90
+      - **event:** Refugees
+      - **mechanics:** A group of 2d4 refugees fleeing war or calamity seek sanctuary. They pay 1d6 x 100 GP in collective gratitude and shelter in your basic facilities.
+    -
+      - **d100_range:** 91-98
+      - **event:** Request for Aid
+      - **mechanics:** A neighboring town or ally requests military assistance. Dispatching defenders: roll 1d6 per defender sent. If total >= 10, the mission succeeds, earning 1d6 x 100 GP. If total < 10, the reward is halved and 1 defender is lost.
+    -
+      - **d100_range:** 99-00
+      - **event:** Magical Discovery / Treasure
+      - **mechanics:** Hirelings unearth an Uncommon magic item (Potion or Scroll) or discover a treasure cache. Roll on the chapter 7 Art Objects or Magic Item tables to determine reward.
+- **fall_of_a_bastion:**
+  - **title:** Fall and Recovery of a Bastion
+  - **pdf_pages:** 356-357
+  - **book_pages:** 352-353
+  - **causes_of_fall:**
+    -
+      - **cause:** Divestiture
+      - **description:** The character voluntarily abdicates and abandons the Bastion, releasing all hirelings.
+    -
+      - **cause:** Neglect
+      - **description:** If a character issues no orders to their Bastion for a number of consecutive turns equal to the character's level (e.g., 9 turns for a Level 9 PC), hirelings abandon the site and it is looted.
+    -
+      - **cause:** Ruination
+      - **description:** Drawing the Ruin card from the Deck of Many Things instantly destroys the Bastion (by earthquake, infernal sinking, or monster invasion).
+  - **rebuilding:** If a Bastion falls, the player can establish a new one by working with the DM. The new Bastion starts with the allotted special facilities for the character's current level plus two basic facilities (one Cramped and one Roomy).
