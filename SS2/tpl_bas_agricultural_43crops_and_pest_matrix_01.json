@@ -1,0 +1,400 @@
+{
+  "blueprint_id": "tpl_bas:agricultural_43crops_and_pest_matrix_01",
+  "source_pz_reference": "SFarmingSystem.lua, farming_vegetableconf.lua & farming_vegetableconf_herbs.lua (Doc 08 - Section 2)",
+  "dnd_ontology_hooks": {
+    "bastion_facility_mapping": [
+      "GARDEN",
+      "GREENHOUSE"
+    ],
+    "tech_age": "AGE_0_PRIMITIVE_FLINT",
+    "harvest_tool_mastery": "SCYTHE_CLEAVE_HARVEST"
+  },
+  "pz_math_engine": {
+    "total_plant_species": 43,
+    "major_crops_count": 20,
+    "culinary_herbs_count": 23,
+    "checkerboard_isolation_gap_tiles": 1,
+    "crops_20_registry": [
+      {
+        "crop_id": "Cabbage",
+        "seeds": 9,
+        "water_min": 40,
+        "water_opt": 85,
+        "water_max_fatal": null,
+        "grow_hours": 144,
+        "grow_days": 6.0,
+        "yield_min": 4,
+        "yield_max": 8,
+        "sow_months": [
+          3,
+          8
+        ],
+        "cold_hardy": false
+      },
+      {
+        "crop_id": "Potato",
+        "seeds": 4,
+        "water_min": 45,
+        "water_opt": 70,
+        "water_max_fatal": null,
+        "grow_hours": 288,
+        "grow_days": 12.0,
+        "yield_min": 4,
+        "yield_max": 8,
+        "sow_months": [
+          3,
+          9
+        ],
+        "cold_hardy": true,
+        "fresh_shelf_life_days": 30
+      },
+      {
+        "crop_id": "Carrot",
+        "seeds": 12,
+        "water_min": 35,
+        "water_opt": 80,
+        "water_max_fatal": 85,
+        "grow_hours": 168,
+        "grow_days": 7.0,
+        "yield_min": 4,
+        "yield_max": 8,
+        "sow_months": [
+          3,
+          8
+        ],
+        "cold_hardy": false
+      },
+      {
+        "crop_id": "Tomato",
+        "seeds": 4,
+        "water_min": 50,
+        "water_opt": 85,
+        "water_max_fatal": null,
+        "grow_hours": 240,
+        "grow_days": 10.0,
+        "yield_min": 3,
+        "yield_max": 7,
+        "sow_months": [
+          4,
+          7
+        ],
+        "cold_hardy": false
+      },
+      {
+        "crop_id": "Radish",
+        "seeds": 6,
+        "water_min": 45,
+        "water_opt": 75,
+        "water_max_fatal": null,
+        "grow_hours": 168,
+        "grow_days": 7.0,
+        "yield_min": 4,
+        "yield_max": 8,
+        "sow_months": [
+          3,
+          8
+        ],
+        "cold_hardy": false
+      },
+      {
+        "crop_id": "Broccoli",
+        "seeds": 6,
+        "water_min": 50,
+        "water_opt": 80,
+        "water_max_fatal": null,
+        "grow_hours": 264,
+        "grow_days": 11.0,
+        "yield_min": 4,
+        "yield_max": 8,
+        "sow_months": [
+          3,
+          8
+        ],
+        "cold_hardy": true
+      },
+      {
+        "crop_id": "Strawberry",
+        "seeds": 8,
+        "water_min": 40,
+        "water_opt": 85,
+        "water_max_fatal": null,
+        "grow_hours": 360,
+        "grow_days": 15.0,
+        "yield_min": 8,
+        "yield_max": 14,
+        "sow_months": [
+          4,
+          7
+        ],
+        "cold_hardy": false,
+        "perennial_regrowth": true
+      },
+      {
+        "crop_id": "Barley",
+        "seeds": 10,
+        "water_min": 30,
+        "water_opt": 70,
+        "water_max_fatal": null,
+        "grow_hours": 432,
+        "grow_days": 18.0,
+        "yield_min": 2,
+        "yield_max": 8,
+        "sow_months": [
+          8,
+          10
+        ],
+        "cold_hardy": true,
+        "scythe_harvest": true
+      },
+      {
+        "crop_id": "BellPepper",
+        "seeds": 4,
+        "water_min": 70,
+        "water_opt": 70,
+        "water_max_fatal": null,
+        "grow_hours": 292,
+        "grow_days": 12.2,
+        "yield_min": 2,
+        "yield_max": 8,
+        "sow_months": [
+          4,
+          6
+        ],
+        "cold_hardy": false
+      },
+      {
+        "crop_id": "Corn",
+        "seeds": 6,
+        "water_min": 60,
+        "water_opt": 90,
+        "water_max_fatal": null,
+        "grow_hours": 480,
+        "grow_days": 20.0,
+        "yield_min": 3,
+        "yield_max": 8,
+        "sow_months": [
+          4,
+          6
+        ],
+        "cold_hardy": false
+      },
+      {
+        "crop_id": "Kale",
+        "seeds": 8,
+        "water_min": 40,
+        "water_opt": 75,
+        "water_max_fatal": null,
+        "grow_hours": 240,
+        "grow_days": 10.0,
+        "yield_min": 4,
+        "yield_max": 8,
+        "sow_months": [
+          4,
+          9
+        ],
+        "cold_hardy": true
+      },
+      {
+        "crop_id": "Garlic",
+        "seeds": 4,
+        "water_min": 30,
+        "water_opt": 65,
+        "water_max_fatal": null,
+        "grow_hours": 360,
+        "grow_days": 15.0,
+        "yield_min": 2,
+        "yield_max": 6,
+        "sow_months": [
+          9,
+          11
+        ],
+        "cold_hardy": true,
+        "natural_antibiotic": true
+      },
+      {
+        "crop_id": "SweetPotato",
+        "seeds": 4,
+        "water_min": 40,
+        "water_opt": 75,
+        "water_max_fatal": null,
+        "grow_hours": 384,
+        "grow_days": 16.0,
+        "yield_min": 3,
+        "yield_max": 7,
+        "sow_months": [
+          4,
+          6
+        ],
+        "cold_hardy": false
+      },
+      {
+        "crop_id": "GreenPea",
+        "seeds": 8,
+        "water_min": 35,
+        "water_opt": 70,
+        "water_max_fatal": null,
+        "grow_hours": 216,
+        "grow_days": 9.0,
+        "yield_min": 4,
+        "yield_max": 10,
+        "sow_months": [
+          3,
+          5
+        ],
+        "cold_hardy": true
+      },
+      {
+        "crop_id": "Soybean",
+        "seeds": 8,
+        "water_min": 45,
+        "water_opt": 80,
+        "water_max_fatal": null,
+        "grow_hours": 360,
+        "grow_days": 15.0,
+        "yield_min": 4,
+        "yield_max": 10,
+        "sow_months": [
+          5,
+          7
+        ],
+        "cold_hardy": false
+      },
+      {
+        "crop_id": "Onion",
+        "seeds": 6,
+        "water_min": 40,
+        "water_opt": 70,
+        "water_max_fatal": null,
+        "grow_hours": 264,
+        "grow_days": 11.0,
+        "yield_min": 3,
+        "yield_max": 7,
+        "sow_months": [
+          3,
+          8
+        ],
+        "cold_hardy": true
+      },
+      {
+        "crop_id": "Flax",
+        "seeds": 10,
+        "water_min": 35,
+        "water_opt": 70,
+        "water_max_fatal": null,
+        "grow_hours": 400,
+        "grow_days": 16.7,
+        "yield_min": 3,
+        "yield_max": 8,
+        "sow_months": [
+          4,
+          6
+        ],
+        "cold_hardy": true
+      },
+      {
+        "crop_id": "Hemp",
+        "seeds": 8,
+        "water_min": 40,
+        "water_opt": 75,
+        "water_max_fatal": null,
+        "grow_hours": 420,
+        "grow_days": 17.5,
+        "yield_min": 3,
+        "yield_max": 8,
+        "sow_months": [
+          4,
+          7
+        ],
+        "cold_hardy": false
+      },
+      {
+        "crop_id": "Hops",
+        "seeds": 6,
+        "water_min": 50,
+        "water_opt": 80,
+        "water_max_fatal": null,
+        "grow_hours": 450,
+        "grow_days": 18.8,
+        "yield_min": 4,
+        "yield_max": 8,
+        "sow_months": [
+          4,
+          6
+        ],
+        "cold_hardy": true
+      },
+      {
+        "crop_id": "Wheat",
+        "seeds": 10,
+        "water_min": 35,
+        "water_opt": 70,
+        "water_max_fatal": null,
+        "grow_hours": 432,
+        "grow_days": 18.0,
+        "yield_min": 3,
+        "yield_max": 8,
+        "sow_months": [
+          8,
+          10
+        ],
+        "cold_hardy": true,
+        "scythe_harvest": true
+      }
+    ],
+    "herbs_23_parameters": {
+      "grow_hours_min": 160,
+      "grow_hours_max": 240,
+      "water_requirement_min": 30,
+      "water_requirement_max": 60,
+      "stew_boredom_reduction": -15,
+      "stew_unhappiness_reduction": -10
+    },
+    "pest_control_formulas": {
+      "Mildew": {
+        "yield_penalty_pct": 50.0,
+        "cure_inputs": [
+          "Gardening_Spray_Can",
+          "50ml_Fresh_Milk",
+          "Clean_Water"
+        ]
+      },
+      "Aphids": {
+        "wither_death_hours": 48.0,
+        "cure_inputs": [
+          "Gardening_Spray_Can",
+          "5_Cigarettes",
+          "Clean_Water"
+        ]
+      },
+      "Flies": {
+        "effect": "ROOT_ROT_NO_FLOWERING",
+        "cure_inputs": [
+          "Gardening_Spray_Can",
+          "1_Minced_Garlic",
+          "Clean_Water"
+        ]
+      },
+      "Slugs": {
+        "effect": "SEEDLING_DECAPITATION_DEATH",
+        "cure_inputs": [
+          "Empty_Tin_Can",
+          "1_Sip_Fresh_Beer"
+        ]
+      }
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Hệ thống canh tác 43 giống thực vật (20 nông sản lương thực/sợi công nghiệp và 23 thảo mộc gia vị) với chu kỳ sinh trưởng chính xác theo giờ (từ 144h của Bắp cải đến 480h của Ngô), lịch gieo hạt theo tháng và thuộc tính chịu sương giá (coldHardy).",
+    "tactical_behavior_hint": "Đòi hỏi quy hoạch luống đất theo ô bàn cờ (cách nhau 1 ô trống) để chặn đứng sự lây lan của 4 đại dịch thực vật (Nấm mốc giảm 50% sản lượng, Rầy mềm giết cây trong 48h, Ruồi thối rễ và Ốc sên cắn đọt). Cà rốt cực kỳ nhạy cảm với úng nước (chết ngay nếu độ ẩm >85), trong khi Khoai tây giữ tươi được tới 30 ngày không cần bảo quản lạnh.",
+    "crafting_maintenance_hint": "Cung cấp đầu vào nguyên liệu thiết yếu cho các ngành khác: Lanh (Flax) và Gai dầu (Hemp) để dệt vải/bện dây thừng, Lúa mì/Lúa mạch thu hoạch bằng lưỡi hái để xay bột/ủ bia, và Tỏi làm kháng sinh tự nhiên hoặc thuốc trừ ruồi."
+  },
+  "cross_module_foreign_keys": {
+    "unlocked_by_media_doc07": [
+      "Growing Herbs at Home",
+      "Growing Fruit and Veg 1",
+      "Growing Fruit and Veg 2",
+      "Controlling Crop Pests"
+    ],
+    "supplies_textile_chain_doc03": "tpl_rcp:flax_textile_and_leather_01"
+  }
+}

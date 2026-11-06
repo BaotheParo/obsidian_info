@@ -1,0 +1,231 @@
+{
+  "blueprint_id": "tpl_bas:fortification_32floor_and_barricade_matrix_01",
+  "source_pz_reference": "ISBuildUtil.lua, IsoThumpable, ISWoodenWall.lua, ISBarricadeAction.lua & MOBarricade.lua (Doc 12 - Section 1, 2, 3, 6 & 7)",
+  "dnd_ontology_hooks": {
+    "bastion_facility_mapping": [
+      "BARRACKS",
+      "ARMORY",
+      "WAR_ROOM",
+      "STOREHOUSE",
+      "GARDEN"
+    ],
+    "tech_ages_covered": [
+      "AGE_0_PRIMITIVE_FLINT",
+      "AGE_1_CRUDE_FORGE",
+      "AGE_2_TEMPERED_STEEL"
+    ]
+  },
+  "pz_math_engine": {
+    "max_vertical_building_floors": 32,
+    "carpentry_hp_bonus_per_level": 50,
+    "handy_trait_flat_hp_bonus": 100,
+    "structural_elements_registry": [
+      {
+        "id": "WoodenFrame",
+        "skill": "Carpentry",
+        "req_lv": 2,
+        "inputs": [
+          "2_Planks",
+          "2_Nails"
+        ],
+        "base_hp": 50,
+        "lv10_max_hp": 550
+      },
+      {
+        "id": "WoodenWall_Lv1",
+        "skill": "Carpentry",
+        "req_lv": 2,
+        "inputs": [
+          "2_Planks",
+          "4_Nails"
+        ],
+        "base_hp": 200,
+        "lv10_max_hp": 700,
+        "handy_lv10_hp": 800
+      },
+      {
+        "id": "WoodenWall_Lv2",
+        "skill": "Carpentry",
+        "req_lv": 4,
+        "inputs": [
+          "2_Planks",
+          "4_Nails"
+        ],
+        "base_hp": 250,
+        "lv10_max_hp": 750,
+        "handy_lv10_hp": 850
+      },
+      {
+        "id": "WoodenWall_Lv3",
+        "skill": "Carpentry",
+        "req_lv": 7,
+        "inputs": [
+          "2_Planks",
+          "4_Nails"
+        ],
+        "base_hp": 300,
+        "lv10_max_hp": 800,
+        "handy_lv10_hp": 900,
+        "supports_plaster_and_paint": true
+      },
+      {
+        "id": "LogWall",
+        "skill": "Carpentry",
+        "req_lv": 0,
+        "inputs": [
+          "4_Logs",
+          "2_Twine_Or_Rope"
+        ],
+        "base_hp": 400,
+        "lv10_max_hp": 900,
+        "handy_lv10_hp": 1000
+      },
+      {
+        "id": "WoodenDoor_Single",
+        "skill": "Carpentry",
+        "req_lv": 3,
+        "inputs": [
+          "4_Planks",
+          "4_Nails",
+          "2_Hinges",
+          "1_Doorknob"
+        ],
+        "base_hp": 200,
+        "lv10_max_hp": 700
+      },
+      {
+        "id": "DoubleWoodenDoor_Gate",
+        "skill": "Carpentry",
+        "req_lv": 6,
+        "inputs": [
+          "12_Planks",
+          "12_Nails",
+          "4_Hinges",
+          "2_Doorknobs"
+        ],
+        "base_hp": 400,
+        "lv10_max_hp": 900,
+        "width_tiles": 4
+      },
+      {
+        "id": "WoodenFence_Low",
+        "skill": "Carpentry",
+        "req_lv": 2,
+        "inputs": [
+          "2_Planks",
+          "3_Nails"
+        ],
+        "base_hp": 100,
+        "lv10_max_hp": 600,
+        "triggers_fence_slump": true
+      },
+      {
+        "id": "WoodenStairs",
+        "skill": "Carpentry",
+        "req_lv": 6,
+        "inputs": [
+          "15_Planks",
+          "15_Nails"
+        ],
+        "invulnerable_to_zombies": true
+      },
+      {
+        "id": "Composter",
+        "skill": "Carpentry",
+        "req_lv": 2,
+        "inputs": [
+          "5_Planks",
+          "4_Nails"
+        ],
+        "invulnerable_to_zombies": true
+      },
+      {
+        "id": "MetalFrame",
+        "skill": "Metalworking",
+        "req_lv": 3,
+        "inputs": [
+          "3_MetalBars",
+          "Blowtorch"
+        ],
+        "base_hp": 150,
+        "lv10_max_hp": 850
+      },
+      {
+        "id": "WireFence",
+        "skill": "Metalworking",
+        "req_lv": 4,
+        "inputs": [
+          "2_MetalBars",
+          "Wire",
+          "Blowtorch"
+        ],
+        "base_hp": 300,
+        "lv10_max_hp": 1000,
+        "transparent_and_shoot_through": true
+      },
+      {
+        "id": "MetalPoleFence",
+        "skill": "Metalworking",
+        "req_lv": 6,
+        "inputs": [
+          "5_MetalBars",
+          "Blowtorch"
+        ],
+        "base_hp": 500,
+        "lv10_max_hp": 1200,
+        "transparent_and_shoot_through": true
+      }
+    ],
+    "dual_sided_barricade_modes_3": {
+      "WOODEN_PLANK": {
+        "hp_per_unit": 1000,
+        "max_per_side": 4,
+        "max_total_2sides_hp": 8000,
+        "vision_and_shooting_open_at_1_to_2_planks": true,
+        "vision_blocked_at_3_to_4_planks": true
+      },
+      "SHEET_METAL": {
+        "hp_per_unit": 5000,
+        "max_per_side": 1,
+        "max_total_2sides_hp": 10000,
+        "blocks_100pct_light_and_vision": true
+      },
+      "METAL_BARS": {
+        "hp_per_3bar_set": 3000,
+        "max_per_side": 1,
+        "max_total_2sides_hp": 6000,
+        "allows_spear_thrust_and_gunfire_through": true
+      }
+    },
+    "b42_advanced_architecture_features": {
+      "multi_stage_wall_pipeline": [
+        "1_WoodenFrame",
+        "2_WoodenWall_Lv3",
+        "3_PlasterPowder_Trowel",
+        "4_PaintBrush_Color"
+      ],
+      "vehicle_rooftop_ramp_cursor": "ISBuildRampCursor.lua",
+      "rooftop_soil_farming_cursor": "ISNaturalFloor.lua",
+      "basement_crop_freshness_extension_pct": 50.0,
+      "double_airlock_gate_spacing_meters": 6.0,
+      "sledgehammer_stairs_deletion_sheet_rope_meta": true
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Hệ thống kiến trúc đa tầng (hỗ trợ chiều cao lên tới 32 tầng và tầng hầm ngầm giữ lạnh thực phẩm tươi lâu hơn +50%) với các kết cấu chịu lực từ Tường gỗ tròn nguyên khối (Log Wall 400-1.000 HP buộc bằng dây thừng), Tường gỗ trát thạch cao sơn màu (300-900 HP), Cổng đôi rộng 4 ô cho đoàn xe tải đi qua, cho đến Hàng rào chông sắt (500-1.200 HP) và hệ thống gia cố cửa 2 mặt trong/ngoài.",
+    "tactical_behavior_hint": "Gia cố cửa sổ bằng Thanh sắt song thưa (Metal Bars: 3.000 HP/mặt, tổng 6.000 HP 2 mặt) hoặc Hàng rào chông sắt/thép gai cho phép người chơi đứng an toàn tuyệt đối bên trong để đâm giáo (Spear) hoặc bắn súng xuyên qua song sắt tiêu diệt bầy đàn bên ngoài. Nếu cần ẩn mình trong đêm, Tấm thép kín (Sheet Metal: 5.000 HP/mặt, tổng 10.000 HP) hoặc đóng 3-4 tấm ván gỗ (tối đa 8.000 HP 2 mặt) sẽ chặn 100% ánh sáng lọt ra ngoài. Chiến thuật tối thượng là thiết lập Cổng Airlock 2 lớp cách nhau 6 mét, đắp dốc thoải (Build Ramps) lái xe lên đỗ trên sân thượng, rải đất trồng rau trên nóc nhà, và dùng Búa tạ đập bỏ cầu thang tầng 1 để chỉ lên xuống tầng 2 bằng Dây vải (Sheet Rope).",
+    "crafting_maintenance_hint": "Tường gỗ tròn (Log Wall) có thể dựng ngay ở Carpentry Cấp 0 chỉ bằng 4 khúc gỗ và 2 sợi dây bện mà không tốn bất kỳ cây đinh nào, nhưng lại bền gấp đôi tường ván gỗ cấp thấp."
+  },
+  "cross_module_foreign_keys": {
+    "boosted_by_trait_doc04": "tpl_trait:handy",
+    "schematics_unlocked_by_vhs_doc07": [
+      "Adefope Fencing Special",
+      "nof vid",
+      "no 9"
+    ],
+    "synergizes_with_spear_and_firearms_doc11": [
+      "tpl_wpn:melee_6categories_and_maintenance_matrix_01",
+      "tpl_wpn:ranged_22firearms_and_11attachments_matrix_01"
+    ]
+  }
+}

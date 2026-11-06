@@ -1,0 +1,313 @@
+{
+  "blueprint_id": "tpl_mob:freshwater_21_fish_and_tension_engine_01",
+  "source_pz_reference": "TensionUI.lua & fishing_properties.lua (Doc 08 - Section 4)",
+  "dnd_ontology_hooks": {
+    "creature_category": "AQUATIC_FAUNA_AND_TROPHY_LEVIATHANS",
+    "skill_proficiency": "skill:fishing"
+  },
+  "pz_math_engine": {
+    "total_fish_species": 21,
+    "peak_bite_windows": [
+      "04:00-07:00",
+      "18:00-21:00"
+    ],
+    "peak_bite_rate_bonus_pct": 100.0,
+    "winter_subzero_bite_penalty_pct_range": [
+      50.0,
+      70.0
+    ],
+    "tension_gauge_zones": [
+      "GREEN_SAFE_REEL",
+      "YELLOW_WARNING",
+      "RED_CRITICAL_LINE_SNAP"
+    ],
+    "species_21_registry": [
+      {
+        "id": "Base.AligatorGar",
+        "max_cm": 180,
+        "max_kg": 45.0,
+        "trophy_cm": 243,
+        "trophy_kg": 150.0,
+        "predator": true,
+        "lures": {
+          "BaitFish": 0.7,
+          "FreshMeat": 0.5,
+          "Leech": 0.5,
+          "Worm": 0.5
+        }
+      },
+      {
+        "id": "Base.BlueCatfish",
+        "max_cm": 117,
+        "max_kg": 32.0,
+        "trophy_cm": 165,
+        "trophy_kg": 68.0,
+        "predator": true,
+        "lures": {
+          "FreshMeat": 0.7,
+          "Worm": 0.5,
+          "Dough_Cheese": 0.5
+        }
+      },
+      {
+        "id": "Base.FlatheadCatfish",
+        "max_cm": 140,
+        "max_kg": 27.0,
+        "trophy_cm": 147,
+        "trophy_kg": 55.0,
+        "predator": true,
+        "lures": {
+          "FreshMeat": 0.7,
+          "Worm": 0.5,
+          "FattyFood": 0.5
+        }
+      },
+      {
+        "id": "Base.Paddlefish",
+        "max_cm": 150,
+        "max_kg": 27.0,
+        "trophy_cm": 220,
+        "trophy_kg": 90.0,
+        "predator": false,
+        "lures": {
+          "AllSmallBaits_Plankton": 0.1
+        }
+      },
+      {
+        "id": "Base.Muskellunge",
+        "max_cm": 101,
+        "max_kg": 18.0,
+        "trophy_cm": 127,
+        "trophy_kg": 32.0,
+        "predator": true,
+        "lures": {
+          "BaitFish": 0.7,
+          "JigLure": 0.5,
+          "Meat": 0.5
+        }
+      },
+      {
+        "id": "Base.StripedBass",
+        "max_cm": 76,
+        "max_kg": 9.0,
+        "trophy_cm": 90,
+        "trophy_kg": 15.0,
+        "predator": false,
+        "lures": {
+          "BaitFish": 0.7,
+          "Worm": 0.7,
+          "Leech": 0.5
+        }
+      },
+      {
+        "id": "Base.Walleye",
+        "max_cm": 80,
+        "max_kg": 9.0,
+        "trophy_cm": 88,
+        "trophy_kg": 13.0,
+        "predator": false,
+        "lures": {
+          "Insects": 0.7,
+          "BaitFish": 0.7,
+          "Leech": 0.7
+        }
+      },
+      {
+        "id": "Base.FreshwaterDrum",
+        "max_cm": 76,
+        "max_kg": 4.5,
+        "trophy_cm": 95,
+        "trophy_kg": 24.5,
+        "predator": false,
+        "lures": {
+          "Worm": 0.7,
+          "Dough_Bread": 0.7,
+          "Leech": 0.5
+        }
+      },
+      {
+        "id": "Base.LargemouthBass",
+        "max_cm": 51,
+        "max_kg": 2.8,
+        "trophy_cm": 75,
+        "trophy_kg": 10.0,
+        "predator": false,
+        "lures": {
+          "BaitFish": 0.7,
+          "Worm": 0.7,
+          "Leech": 0.5
+        }
+      },
+      {
+        "id": "Base.SmallmouthBass",
+        "max_cm": 41,
+        "max_kg": 2.3,
+        "trophy_cm": 55,
+        "trophy_kg": 5.0,
+        "predator": false,
+        "lures": {
+          "BaitFish": 0.7,
+          "Worm": 0.7,
+          "Leech": 0.5
+        }
+      },
+      {
+        "id": "Base.ChannelCatfish",
+        "max_cm": 30,
+        "max_kg": 2.3,
+        "trophy_cm": 80,
+        "trophy_kg": 26.0,
+        "predator": false,
+        "lures": {
+          "FreshMeat": 0.7,
+          "Dough": 0.5,
+          "Worm": 0.5
+        }
+      },
+      {
+        "id": "Base.SpottedBass",
+        "max_cm": 38,
+        "max_kg": 1.8,
+        "trophy_cm": 45,
+        "trophy_kg": 5.0,
+        "predator": false,
+        "lures": {
+          "Leech": 0.7,
+          "Worm": 0.7,
+          "Insects": 0.3
+        }
+      },
+      {
+        "id": "Base.WhiteBass",
+        "max_cm": 38,
+        "max_kg": 1.5,
+        "trophy_cm": 40,
+        "trophy_kg": 3.0,
+        "predator": false,
+        "lures": {
+          "Leech": 0.7,
+          "Worm": 0.7,
+          "Insects": 0.3
+        }
+      },
+      {
+        "id": "Base.Sauger",
+        "max_cm": 45,
+        "max_kg": 1.9,
+        "trophy_cm": 50,
+        "trophy_kg": 1.8,
+        "predator": false,
+        "lures": {
+          "Leech": 0.7,
+          "Worm": 0.7,
+          "Insects": 0.5
+        }
+      },
+      {
+        "id": "Base.YellowPerch",
+        "max_cm": 30,
+        "max_kg": 1.0,
+        "trophy_cm": 30,
+        "trophy_kg": 1.9,
+        "predator": false,
+        "lures": {
+          "Insects": 0.7,
+          "Leech": 0.7,
+          "Worm": 0.5
+        }
+      },
+      {
+        "id": "Base.Bluegill",
+        "max_cm": 20,
+        "max_kg": 1.4,
+        "trophy_cm": 35,
+        "trophy_kg": 1.2,
+        "predator": false,
+        "lures": {
+          "Leech": 0.7,
+          "Worm": 0.7,
+          "Insects": 0.5
+        }
+      },
+      {
+        "id": "Base.RedearSunfish",
+        "max_cm": 20,
+        "max_kg": 1.4,
+        "trophy_cm": 24,
+        "trophy_kg": 0.9,
+        "predator": false,
+        "lures": {
+          "Insects": 0.7,
+          "Leech": 0.7,
+          "Worm": 0.5
+        }
+      },
+      {
+        "id": "Base.GreenSunfish",
+        "max_cm": 20,
+        "max_kg": 1.4,
+        "trophy_cm": 20,
+        "trophy_kg": 0.9,
+        "predator": false,
+        "lures": {
+          "Insects": 0.7,
+          "Worm": 0.7,
+          "Leech": 0.5
+        }
+      },
+      {
+        "id": "Base.WhiteCrappie",
+        "max_cm": 30,
+        "max_kg": 1.0,
+        "trophy_cm": 24,
+        "trophy_kg": 2.5,
+        "predator": false,
+        "lures": {
+          "BaitFish": 0.7,
+          "Leech": 0.7,
+          "Worm": 0.5
+        }
+      },
+      {
+        "id": "Base.BlackCrappie",
+        "max_cm": 25,
+        "max_kg": 1.0,
+        "trophy_cm": 28,
+        "trophy_kg": 2.7,
+        "predator": false,
+        "lures": {
+          "BaitFish": 0.7,
+          "Leech": 0.7,
+          "Worm": 0.5
+        }
+      },
+      {
+        "id": "Base.BaitFish",
+        "max_cm": 10,
+        "max_kg": 0.05,
+        "trophy_cm": null,
+        "trophy_kg": null,
+        "predator": false,
+        "lures": {
+          "FishingNet_Or_Dough_Worm": 1.0
+        }
+      }
+    ]
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Hệ sinh thái 21 loài thủy tộc nước ngọt phân tầng từ cá mồi nhỏ nặng 50 gram (10 cm) cho đến các loài cá săn mồi khổng lồ như Cá trê xanh (Trophy 68 kg), Cá thìa sông (Trophy 90 kg) và Cá sấu hỏa tiễn (Trophy dài 243 cm, nặng 150 kg).",
+    "tactical_behavior_hint": "Cơ chế đấu lực căng dây trực tiếp (Tension Gauge): khi kéo các loài cá săn mồi hạng nặng, nếu thanh lực căng chạm Vùng Đỏ mà không nhả dây sẽ lập tức làm đứt cước hoặc gãy cần. Đi câu vào đúng 2 khung giờ Bình minh (04:00-07:00) và Hoàng hôn (18:00-21:00) giúp nhân đôi (+100%) tốc độ cắn câu.",
+    "crafting_maintenance_hint": "Đòi hỏi chuỗi mồi câu hai bước: dùng bột bánh/trùn đất hoặc lưới cá bắt Cá mồi nhỏ (BaitFish), sau đó móc Cá mồi nhỏ hoặc Thịt tươi vào lưỡi câu để săn nhóm 4 loài cá dữ (Predator = true: Aligator Gar, Blue Catfish, Flathead Catfish, Muskellunge)."
+  },
+  "cross_module_foreign_keys": {
+    "rod_recipes_unlocked_by_doc07": [
+      "MakeFishingRod",
+      "FixFishingRod"
+    ],
+    "baits_harvested_via_foraging": [
+      "Earthworm",
+      "Leech",
+      "Insects"
+    ]
+  }
+}

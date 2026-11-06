@@ -1,0 +1,223 @@
+{
+  "blueprint_id": "tpl_item:surgical_procedures_and_pharmacopoeia_matrix_01",
+  "source_pz_reference": "ISStitch.lua, ISRemoveGlass.lua, ISRemoveBullet.lua, ISSplint.lua, ISHealthPanel.lua (Doc 13 - Section 4, 5, 6, 7 & 8)",
+  "dnd_ontology_hooks": {
+    "item_category": "SURGICAL_INSTRUMENTS_PHARMACOPOEIA_AND_TOXICOLOGY",
+    "bastion_facility_hook": "LABORATORY",
+    "skill_proficiency": "skill:doctor"
+  },
+  "pz_math_engine": {
+    "surgical_procedures_4": {
+      "STITCH_DEEP_WOUND": {
+        "needle_and_thread": {
+          "base_ticks": 200,
+          "tick_reduction_per_lv": 4,
+          "base_pain": 20,
+          "pain_reduction_per_lv": 1
+        },
+        "suture_needle": {
+          "base_ticks": 150,
+          "tick_reduction_per_lv": 4,
+          "base_pain": 10,
+          "pain_reduction_per_lv": 1
+        },
+        "suture_needle_holder": {
+          "base_ticks": 150,
+          "tick_reduction_per_lv": 4,
+          "base_pain": 5,
+          "pain_reduction_per_lv": 1
+        },
+        "infection_risk_formula": "1 / (5 + (DoctorLevel * 2.5))",
+        "lv0_infection_risk_pct": 20.0,
+        "lv10_infection_risk_pct": 3.3,
+        "stitch_time_max": 50.0,
+        "safe_removal_stitch_time_min": 30.0,
+        "doctor_lv7_good_stitch_threshold": 40.0
+      },
+      "EXTRACT_GLASS_SHARDS": {
+        "bleeding_time_floor_lock_while_lodged": 3.0,
+        "tweezers_or_forceps": {
+          "base_ticks": 150,
+          "tick_reduction_per_lv": 4,
+          "base_pain": 30,
+          "pain_reduction_per_lv": 1
+        },
+        "bare_hands_extraction": {
+          "base_ticks": 300,
+          "tick_reduction_per_lv": 4,
+          "inflicts_hand_scratch_and_extreme_pain": true
+        },
+        "b42_forged_variants": [
+          "Forceps_Forged",
+          "Tweezers_Forged"
+        ]
+      },
+      "EXTRACT_LODGED_BULLET": {
+        "required_tools": [
+          "SutureNeedleHolder",
+          "Forceps",
+          "Forceps_Forged"
+        ],
+        "base_ticks": 250,
+        "tick_reduction_per_lv": 6,
+        "base_pain": 80,
+        "pain_reduction_per_lv": 1,
+        "post_extraction_state": "CONVERTS_TO_DEEP_WOUND_REQUIRING_STITCH"
+      },
+      "SPLINT_FRACTURE": {
+        "inputs": [
+          "Plank_Or_TreeBranch_Or_WoodenStick",
+          "RippedSheets_Or_Bandage"
+        ],
+        "splint_factor_formula": "(DoctorLevel + 1) / 2",
+        "lv0_splint_factor": 0.5,
+        "lv10_splint_factor": 5.5
+      }
+    },
+    "herbal_cataplasms_and_remedies_7": [
+      {
+        "herb": "Comfrey",
+        "product": "ComfreyCataplasm",
+        "rate_per_tick": -5e-06,
+        "target": "FRACTURE"
+      },
+      {
+        "herb": "WildGarlic2",
+        "product": "WildGarlicCataplasm",
+        "rate_per_tick": -0.0002,
+        "target": "BACTERIAL_INFECTION"
+      },
+      {
+        "herb": "Plantain",
+        "product": "PlantainCataplasm",
+        "scratch_rate": -0.0001,
+        "cut_rate": -5e-05,
+        "deep_rate": -7e-06,
+        "target": "TISSUE_REGENERATION"
+      },
+      {
+        "herb": "BlackSage",
+        "product": "Raw_Or_Tea",
+        "target": "NEURAL_PAIN_REDUCTION"
+      },
+      {
+        "herb": "CommonMallow",
+        "product": "Raw_Or_Tea",
+        "target": "COLD_AND_FLU_COUGH_SUPPRESSION"
+      },
+      {
+        "herb": "Ginseng",
+        "product": "Raw_Chew",
+        "target": "ENDURANCE_AND_FATIGUE_RECOVERY"
+      },
+      {
+        "herb": "Lemongrass",
+        "product": "Raw_Chew",
+        "target": "FOOD_SICKNESS_AND_WILD_TOXIN_ANTIDOTE"
+      }
+    ],
+    "modern_pharmaceuticals_and_tools": [
+      {
+        "id": "AlcoholBandage",
+        "infection_reduction_per_tick": -0.0006
+      },
+      {
+        "id": "Antibiotics",
+        "weight_kg": 0.1,
+        "reduce_infection_power": 50.0,
+        "infection_reduction_per_tick": -0.0002
+      },
+      {
+        "id": "Disinfectant",
+        "weight_kg": 0.2,
+        "volume_liters": 0.5,
+        "rubbing_alcohol_power": 1.0
+      },
+      {
+        "id": "PillsVitamins",
+        "weight_kg": 0.2,
+        "fatigue_change": -4.0
+      },
+      {
+        "id": "Pills_Painkillers",
+        "weight_kg": 0.2,
+        "lethal_overdose_with_alcohol": true
+      },
+      {
+        "id": "PillsSleepingTablets",
+        "weight_kg": 0.2,
+        "allows_sleep_under_pain": true,
+        "lethal_overdose_with_alcohol": true
+      },
+      {
+        "id": "PillsBeta",
+        "weight_kg": 0.2,
+        "suppresses_panic_for_aiming": true
+      },
+      {
+        "id": "PillsAntiDep",
+        "weight_kg": 0.2,
+        "unhappiness_decay_delay_hours": [
+          1.0,
+          2.0
+        ]
+      },
+      {
+        "id": "SutureNeedleHolder",
+        "weight_kg": 0.3,
+        "tags": [
+          "base:removebullet",
+          "base:removeglass"
+        ]
+      }
+    ],
+    "environmental_toxicology_thresholds": {
+      "corpse_sickness_min_corpses_in_radius": 20,
+      "corpse_sickness_progression": [
+        "Queasy",
+        "Nauseous",
+        "Sick",
+        "Fever",
+        "Death"
+      ],
+      "indoor_generator_co_death_minutes_range": [
+        10.0,
+        15.0
+      ]
+    },
+    "doctor_diagnostic_unlock_tiers": {
+      "LV_0_TO_2": {
+        "bandaging_ticks": "120 - 4*Lv",
+        "severity_visible": false
+      },
+      "LV_3_TO_4": {
+        "scratch_cut_moderate_threshold": 14,
+        "scratch_cut_severe_threshold": 17,
+        "bandaging_speed_bonus_pct": 15.0
+      },
+      "LV_5_TO_6": {
+        "deep_wound_and_burn_wash_visible": true,
+        "splint_quality_visible": true
+      },
+      "LV_7_TO_8": {
+        "fracture_moderate_threshold": 20,
+        "fracture_severe_threshold": 50,
+        "safe_stitch_removal_threshold": 40.0
+      },
+      "LV_9_TO_10": {
+        "early_infection_detection_formula": "InfLevel * 10 >= 2.5 - DoctorLevel",
+        "splint_healing_vs_lv0_mult": 11.0
+      }
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Bộ quy trình ngoại khoa chiến trường (Khâu vết toác, Mổ gắp đầu đạn, Gắp mảnh kính vỡ, Bó nẹp xương gãy) kết hợp tủ thuốc Đông - Tây y (Cao Liên Mộc, Cao Tỏi Rừng, Cao Mã Đề, Sả Chanh, Cẩm Quỳ giã trong cối gốm/đá cùng Kẹp phẫu thuật, Kim khâu, Kháng sinh và Thuốc an thần).",
+    "tactical_behavior_hint": "Phẫu thuật gắp đầu đạn tạo ra cơn đau cực đại (80 - DoctorLevel) và biến vết đạn thành vết thương toác sâu (deepWounded) buộc phải khâu ngay; mảnh kính găm trong thịt sẽ khóa cứng tốc độ chảy máu ở mức >= 3.0 khiến máu chảy không ngừng cho đến khi được gắp ra (nếu mổ bằng tay không sẽ tốn gấp đôi thời gian 300 ticks và làm rách chính bàn tay mổ). Khi khâu vết thương, nếu tháo chỉ sớm trước khi stitchTime đạt 30.0-40.0 (khoảng 4-5 ngày), miệng vết thương sẽ toác lại ngay lập tức. Ngoài ra, đứng cạnh >20 xác chết phân hủy sẽ gây ngộ độc khí xác thối dẫn đến tử vong, còn uống Thuốc ngủ hoặc Thuốc giảm đau chung với rượu mạnh sẽ gây sốc thuốc chết người.",
+    "crafting_maintenance_hint": "Nghề Rèn (Blacksmithing) và Nghề Gốm (Pottery) trong B42 cho phép tự chế tạo Kẹp phẫu thuật rèn (Forceps_Forged), Nhíp rèn (Tweezers_Forged) và Cối chày gốm (CeramicMortarandPestle) để tự chủ hoàn toàn y tế khi cạn kiệt nguồn thuốc bệnh viện."
+  },
+  "cross_module_foreign_keys": {
+    "forged_instruments_from_doc03": "tpl_rcp:blacksmith_metallurgy_01",
+    "herbs_gathered_from_doc08": "tpl_item:foraging_27categories_and_herbal_medicine_01",
+    "co_poisoning_linked_to_generator_doc12": "tpl_bas:plumbing_3x3_purifier_and_generator_grid_01"
+  }
+}

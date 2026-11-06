@@ -1,0 +1,26 @@
+{
+  "blueprint_id": "tpl_item:medical_disinfection_dressing_01",
+  "source_pz_reference": "zombie.characters.BodyDamage (Doc 01 - Section 5: Medical Care)",
+  "dnd_ontology_hooks": {
+    "system_category": "MEDICAL_SUPPLY",
+    "sterility_level": "HOSPITAL_GRADE"
+  },
+  "pz_math_engine": {
+    "infection_cure_probability": 0.95,
+    "disinfection_potency": {
+      "alcohol_rub": 1.0,
+      "boiled_water": 0.75,
+      "antibiotics_course": 1.0
+    },
+    "bandage_durability_hours": 18.0
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Băng vải tiệt trùng, cồn y tế hoặc nước sôi khử khuẩn dùng để điều trị các vết thương bị nhiễm trùng vi khuẩn (infectedWound).",
+    "tactical_behavior_hint": "Cứu sống nhân vật khỏi cái chết do nhiễm độc máu thông thường; tuy nhiên hoàn toàn bất lực trước virus Knox tử thần (isInfected).",
+    "crafting_maintenance_hint": "Có thể chế tạo băng gạc tiệt trùng bằng cách đun sôi vải rách trong nồi nước sôi trên bếp lửa."
+  },
+  "cross_module_foreign_keys": {
+    "treats_condition_id": "tpl_aff:lethal_necrotic_pathogen_01",
+    "requires_item_tag": "item_tag:disinfectant_alcohol"
+  }
+}

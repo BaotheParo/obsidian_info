@@ -1,0 +1,104 @@
+{
+  "blueprint_id": "tpl_evt:sandbox_5_presets_and_population_director_01",
+  "source_pz_reference": "SandboxOptions.lua, Apocalypse.lua, Outbreak.lua, Extinction.lua, Rising.lua, SixMonthsLater.lua (Doc 10 - Section 1, 2 & 3.1)",
+  "dnd_ontology_hooks": {
+    "system_category": "CAMPAIGN_DIFFICULTY_DIRECTOR_AND_SPAWN_ENGINE",
+    "spatial_distribution_algorithm": "VORONOI_CELL_CLUSTER_NOISE"
+  },
+  "pz_math_engine": {
+    "sandbox_version": 6,
+    "official_presets_5": {
+      "APOCALYPSE": {
+        "zombies_enum": 4,
+        "respawn_enum": 4,
+        "multi_hit": false,
+        "start_date": "July_9",
+        "shutoff_days_range": [
+          0,
+          30
+        ],
+        "shutoff_avg_days": 14,
+        "skill_book_loot": 0.6,
+        "ranged_loot": 1.2,
+        "ammo_loot": 0.6,
+        "erosion_start_day": 0
+      },
+      "OUTBREAK": {
+        "zombies_enum": 4,
+        "respawn_enum": 4,
+        "multi_hit": true,
+        "start_date": "July_9",
+        "shutoff_months_range": [
+          2,
+          6
+        ],
+        "skill_book_loot": 1.0,
+        "ranged_loot": 1.2,
+        "ammo_loot": 0.6,
+        "erosion_start_day": 0
+      },
+      "EXTINCTION": {
+        "zombies_enum": 3,
+        "respawn_enum": 2,
+        "multi_hit": false,
+        "start_date": "July_9",
+        "shutoff_days_range": [
+          0,
+          30
+        ],
+        "skill_book_loot": 0.4,
+        "ranged_loot": 0.6,
+        "ammo_loot": 0.2,
+        "erosion_start_day": 0
+      },
+      "RISING": {
+        "zombies_enum": 5,
+        "respawn_enum": 3,
+        "multi_hit": true,
+        "start_date": "July_9",
+        "shutoff_months_range": [
+          2,
+          6
+        ],
+        "skill_book_loot": 0.4,
+        "ranged_loot": 0.4,
+        "ammo_loot": 0.4,
+        "erosion_start_day": 0
+      },
+      "SIX_MONTHS_LATER": {
+        "zombies_enum": 1,
+        "insane_pop_multiplier": 4.0,
+        "multi_hit": false,
+        "start_month": 12,
+        "shutoff_pre_cut_flag": -1,
+        "erosion_at_max": true
+      }
+    },
+    "voronoi_and_population_evolution": {
+      "zombie_distribution_urban_focused": 1,
+      "zombie_distribution_uniform": 2,
+      "zombie_voronoi_noise_enabled": true,
+      "population_multiplier_default": 1.0,
+      "population_start_multiplier_default": 1.0,
+      "population_peak_multiplier_default": 1.5,
+      "population_peak_day_default": 28,
+      "respawn_hours_default": 72.0,
+      "respawn_unseen_hours_default": 16.0,
+      "respawn_multiplier_default": 0.1,
+      "redistribute_hours_default": 12.0,
+      "follow_sound_distance_default_tiles": 100,
+      "follow_sound_distance_max_tiles": 1000,
+      "rally_group_size_default": 20,
+      "rally_travel_distance_tiles": 20
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Bộ điều phối quần thể vĩ mô sử dụng nhiễu tế bào Voronoi (ZombieVoronoiNoise) để kết tụ các thực thể thù địch thành từng bầy đàn tự nhiên (20 cá thể/bầy, bán kính di chuyển 20 ô) tập trung quanh các giao lộ đô thị thay vì rải đều vô hồn.",
+    "tactical_behavior_hint": "Mật độ kẻ địch không đứng yên mà leo thang tuyến tính từ hệ số 1.0x ở Ngày 1 lên đỉnh 1.5x ở Ngày thứ 28. Cơ chế hồi sinh (10% mỗi 72 giờ) bị khóa cứng bởi quy tắc 'Tầm nhìn 16 giờ': chỉ những khu vực người chơi không đặt chân tới hoặc không nhìn thấy trong suốt 16 giờ liên tục mới được phép sinh thêm kẻ địch; nếu tắt RespawnHours = 0, người chơi có thể quét sạch vĩnh viễn từng khu phố.",
+    "crafting_maintenance_hint": "Cung cấp 5 cấu hình thế giới chuẩn mực, khắc nghiệt nhất là kịch bản '6 Tháng Sau' (Six Months Later): bắt đầu ngay giữa tháng 12 băng giá, mật độ kẻ địch gấp 4 lần (Insane), hạ tầng năng lượng/nước đã sụp đổ hoàn toàn (-1) và cây cối đã mọc xuyên lòng đường."
+  },
+  "cross_module_foreign_keys": {
+    "drives_virtual_pop_manager_doc01": "tpl_mob:sensory_horde_undead_01",
+    "controls_erosion_state_doc09": "tpl_evt:world_erosion_100day_reclamation_01"
+  }
+}

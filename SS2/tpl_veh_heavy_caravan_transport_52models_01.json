@@ -1,0 +1,99 @@
+{
+  "blueprint_id": "tpl_veh:heavy_caravan_transport_52models_01",
+  "source_pz_reference": "52 Vehicles in media/scripts/generated/vehicles/ & PZBullet64.dll (Doc 06 - Section 1 & Section 5)",
+  "dnd_ontology_hooks": {
+    "system_category": "MOUNT_AND_HEAVY_CARAVAN_TRANSPORT",
+    "bastion_facility_hook": "STABLE",
+    "tech_age": "AGE_3_ALCHEMICAL_BLACKPOWDER"
+  },
+  "pz_math_engine": {
+    "total_vehicle_models": 52,
+    "physics_engine_binding": "PZBullet64_RigidBody_Traction_And_CenterOfMass",
+    "class_hierarchy_4": [
+      {
+        "class_id": "HEAVY_DUTY_TRANSPORT",
+        "pz_models": [
+          "PickUpTruck",
+          "PickUpVan",
+          "VanAmbulance",
+          "StepVan"
+        ],
+        "trunk_capacity_kg_min": 100.0,
+        "trunk_capacity_kg_max": 160.0,
+        "seat_count_min": 2,
+        "seat_count_max": 6,
+        "part_durability_bonus_pct": 50.0,
+        "high_ground_clearance_offroad": true,
+        "optimal_towing_tractor": true
+      },
+      {
+        "class_id": "STANDARD_UTILITY_TRANSPORT",
+        "pz_models": [
+          "CarNormal",
+          "CarLuxury",
+          "CarStationWagon",
+          "CarTaxi",
+          "SUV"
+        ],
+        "trunk_capacity_kg_min": 40.0,
+        "trunk_capacity_kg_max": 80.0,
+        "seat_count_min": 4,
+        "seat_count_max": 6,
+        "part_durability_bonus_pct": 0.0,
+        "high_part_interchangeability": true
+      },
+      {
+        "class_id": "HIGH_VELOCITY_SCOUT_TRANSPORT",
+        "pz_models": [
+          "SportsCar",
+          "RaceCar"
+        ],
+        "trunk_capacity_kg_min": 25.0,
+        "trunk_capacity_kg_max": 40.0,
+        "seat_count_fixed": 2,
+        "max_speed_mph_threshold": 100.0,
+        "low_clearance_offroad_bogging_penalty": true,
+        "high_acoustic_profile": true
+      },
+      {
+        "class_id": "TOWED_CARGO_AND_LIVESTOCK_TRAILERS_B42",
+        "pz_models": [
+          "Trailer",
+          "TrailerCover",
+          "Trailer_Horsebox",
+          "Trailer_Livestock"
+        ],
+        "trunk_capacity_kg_min": 100.0,
+        "trunk_capacity_kg_max": 250.0,
+        "seat_count_fixed": 0,
+        "supports_live_bovine_equine_transport": true
+      }
+    ],
+    "tactical_collision_and_escape_math": {
+      "frontal_ram_hood_break_hits_min": 3,
+      "frontal_ram_hood_break_hits_max": 5,
+      "reverse_spin_tail_sweep_engine_damage": 0.0,
+      "surrounded_horde_count_min": 10,
+      "surrounded_horde_count_max": 20,
+      "premature_door_exit_death_time_sec": 2.0,
+      "towing_constraints": {
+        "requires_rope_or_tow_cable": true,
+        "tractor_must_exceed_towed_horsepower_and_mass": true,
+        "requires_towed_parking_brake_release": true
+      }
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Hệ thống 52 cỗ xe vận tải và rơ-moóc (trừu tượng hóa thành Đoàn xe Cơ giới / Chiến xa / Thùng kéo Gia súc) chia làm 3 phân hạng phụ tùng không thể lắp lẫn (Tiêu chuẩn, Tải nặng bền hơn +50%, Tốc độ cao) cùng nhóm Thùng kéo Rơ-moóc sức chứa 100-250 kg chuyên chở hàng hóa hoặc ngựa/gia súc sống.",
+    "tactical_behavior_hint": "Đóng vai trò pháo đài di động và vũ khí nghiền nát bầy đàn. Nếu đâm trực diện bằng đầu xe, lớp giáp mũi (Hood) sẽ vỡ nát chỉ sau 3-5 cú đâm và truyền 100% chấn động làm hỏng động cơ; chiến thuật chuẩn là đánh lái lùi (Reverse Spin) dùng đuôi/hông quét ngã mục tiêu mà không hại máy. Khi bị 10-20 kẻ địch bao vây chết máy, mở cửa nhảy ra sẽ bị xé xác trong 2 giây; người lái buộc phải giữ kính cửa nguyên vẹn, chuyển sang ghế phụ đối diện (Seat Switch) rồi thoát ra ở hướng trống.",
+    "crafting_maintenance_hint": "Có thể nối dây thừng (Rope) hoặc cáp kéo (Tow Cable) giữa hai phương tiện nếu cỗ xe kéo phía trước có trọng lượng và mã lực lớn hơn xe phía sau (đã nhả phanh tay)."
+  },
+  "cross_module_foreign_keys": {
+    "transports_livestock_doc01_doc08": [
+      "tpl_mob:bovine_livestock",
+      "tpl_mob:ovine_porcine_livestock"
+    ],
+    "affected_by_trait_doc04": "tpl_trait:sunday_driver",
+    "salvaged_for_weapons_doc02_doc03": "tpl_wpn:salvaged_metal_flanged_cudgels_01"
+  }
+}

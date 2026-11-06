@@ -1,0 +1,53 @@
+{
+  "blueprint_id": "tpl_mob:animal_triangulated_navmesh_and_virtual_horde_01",
+  "source_pz_reference": "AnimalPathfind.java, Mesh.java, LowLevelAStar.java, OffMeshConnection.java & ZombiePopulationManager.java (Doc 15 - Section 4 & Section 6)",
+  "dnd_ontology_hooks": {
+    "system_category": "FAUNA_NAVMESH_FUNNEL_LOCOMOTION_AND_VIRTUAL_HORDE_POOLING",
+    "bastion_facility_hook": "MENAGERIE"
+  },
+  "pz_math_engine": {
+    "animal_triangulated_navmesh": {
+      "mesh_ topology_arrays": [
+        "triangles",
+        "adjacentTriangles",
+        "trianglesOnBoundaries",
+        "edgesOnBoundaries"
+      ],
+      "string_pulling_algorithm": "SIMPLE_STUPID_FUNNEL_ALGORITHM_SSFA",
+      "cross_product_determinant_function": "triarea2(a, b, c) = (b.x - a.x)*(c.y - a.y) - (c.x - a.x)*(b.y - a.y)",
+      "off_mesh_connections": [
+        "DEER_JUMP_OVER_LOW_WOODEN_FENCE",
+        "CATTLE_SHEEP_PASS_THROUGH_OPEN_ANIMAL_GATE",
+        "RABBIT_LEAP_ACROSS_DRAINAGE_DITCH"
+      ]
+    },
+    "virtual_horde_population_manager": {
+      "real_to_virtual_despawn_distance_chunks": 3,
+      "virtual_zombie_memory_footprint_bits": 32,
+      "active_loaded_real_zombies_range": [
+        200,
+        500
+      ],
+      "offscreen_virtual_zombies_capacity": 50000,
+      "world_sound_migration_filter": {
+        "min_sound_radius_tiles": 50,
+        "reject_if_source_is_zombie": true,
+        "require_stress_zombies_flag": true,
+        "native_dispatch_method": "n_worldSound"
+      }
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Hai phân hệ điều phối quần thể chuyên biệt: (1) Lưới tam giác hóa (Triangulated NavMesh) kết hợp thuật toán Phễu kéo căng dây (Funnel Algorithm / String Pulling) và điểm nhảy vượt biên (OffMeshConnection) dành cho động vật hoang dã/gia súc; (2) Bộ quản lý Đàn Ảo (ZombiePopulationManager) nén 50.000+ xác sống nằm ngoài bán kính 3 chunks thành các cấu trúc nhị phân 32-bit trong bộ nhớ C++.",
+    "tactical_behavior_hint": "Thuật toán Phễu (SSFA) dùng tích có hướng triarea2() để uốn quỹ đạo di chuyển của đàn thú qua các cạnh tam giác thành những đường thẳng căng mượt tự nhiên, đồng thời cho phép hươu nhảy qua hàng rào thấp và thỏ nhảy qua mương nước. Ở quy mô toàn bản đồ, cơ chế lọc âm thanh (sound.radius < 50 -> bỏ qua) giải thích tại sao các tiếng động dưới 50 ô (như bước chân, đập cửa, hay thậm chí tiếng hét phím Q 40-50 ô và súng đồ chơi 30 ô) chỉ thu hút kẻ địch thực đang đứng gần, trong khi bất kỳ tiếng nổ nào từ 50 ô trở lên (Revolver .38 ở mức 60 ô, Pistol .45 ở mức 70 ô, Shotgun 200 ô, Trực thăng >500 ô) sẽ lập tức đánh thức hàng nghìn xác sống ảo từ các chunk xa xăm di cư ngầm về bủa vây người chơi.",
+    "crafting_maintenance_hint": "Khi thiết kế máy chủ Minecraft Paper Java 21, kỹ thuật Virtualization (chỉ giữ 200-500 Entity thật quanh người chơi trong tầm 3 chunks và lưu 50.000 thực thể còn lại dưới dạng primitive struct 32-bit/64-bit trong bộ nhớ off-heap/fast-array) là chìa khóa vàng để duy trì 20.0 TPS tuyệt đối."
+  },
+  "cross_module_foreign_keys": {
+    "governs_livestock_and_wild_game_doc01_doc08": [
+      "tpl_mob:livestock_18genes_and_butchering_01",
+      "tpl_bas:husbandry_processing_stations_01"
+    ],
+    "explains_firearm_60tile_threshold_doc11": "tpl_wpn:ranged_22firearms_and_11attachments_matrix_01",
+    "connects_to_voronoi_respawn_doc10": "tpl_evt:sandbox_5_presets_and_population_director_01"
+  }
+}

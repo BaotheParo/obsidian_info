@@ -1,0 +1,2915 @@
+{
+  "session": "Session 3 - Arsenal, Bastions & Logistics",
+  "source_doc": "Doc 01, Doc 02, Doc 03, Doc 04, Doc 05, Doc 06, Doc 08, Doc 11, Doc 12",
+  "total_items": 28,
+  "blueprints": [
+    {
+      "blueprint_id": "tpl_wpn:heavy_breaching_axe_01",
+      "source_pz_reference": "Base.Fireaxe (Doc 01 - Section 6: Script Architecture)",
+      "dnd_ontology_hooks": {
+        "system_category": "MARTIAL_MELEE",
+        "damage_type": "SLASHING",
+        "weapon_mastery": "CLEAVE",
+        "adnd_speed_factor": 7,
+        "two_handed_property": true,
+        "armor_type_modifiers": {
+          "UNARMORED": 2,
+          "PADDED_CLOTH": 1,
+          "LEATHER_HIDE": 1,
+          "STUDDED_BRIGANDINE": 0,
+          "CHAIN_SCALE": -1,
+          "HEAVY_PLATE": -2
+        }
+      },
+      "pz_math_engine": {
+        "weight_kg": 3.0,
+        "min_damage": 1.2,
+        "max_damage": 2.7,
+        "max_range_blocks": 1.5,
+        "condition_max": 15,
+        "condition_lower_chance_one_in": 35,
+        "sound_radius_blocks": 10,
+        "door_damage": 35,
+        "tree_damage": 35,
+        "sub_category": "Swinging",
+        "two_hand_weapon": true
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Vũ khí cán dài cầm 2 tay nặng 3.0 kg, đầu lưỡi rìu bản rộng bằng thép đúc dày, trọng tâm dồn mạnh về phía đầu búa/lưỡi để tối đa hóa động năng bổ dọc và chém ngang.",
+        "tactical_behavior_hint": "Vũ khí công phá hạng nặng có tầm với xa (1.5 blocks), cực kỳ uy lực khi dùng để phá cửa gỗ/công trình (DoorDamage 35) hoặc đốn cây (TreeDamage 35). Tuy nhiên mỗi cú bổ tạo ra tiếng vang lớn trong bán kính 10 blocks, dễ thu hút kẻ địch xung quanh.",
+        "crafting_maintenance_hint": "Độ bền cơ học rất cao (15 điểm, xác suất hao mòn chỉ 1/35 mỗi đòn trúng). Khi hỏng có thể gia cố lại bằng keo, dây buộc hoặc đinh chốt nhưng hiệu suất sửa chữa sẽ suy giảm lũy tiến qua từng lần gia cố."
+      },
+      "cross_module_foreign_keys": {
+        "inflicts_wound_types": [
+          "LACERATION",
+          "DEEP_WOUND",
+          "FRACTURE"
+        ],
+        "requires_skill_id": "skill:axe",
+        "repair_material_tag": "mat_tag:wood_adhesive_or_fastener"
+      }
+    },
+    {
+      "blueprint_id": "tpl_bas:husbandry_processing_stations_01",
+      "source_pz_reference": "media/scripts/entities/animals/workstations (Doc 01 - Section 3: Animal Systems)",
+      "dnd_ontology_hooks": {
+        "system_category": "BASTION_FACILITY",
+        "facility_tier": "FARMING_HUSBANDRY",
+        "required_settlement_level": 2
+      },
+      "pz_math_engine": {
+        "station_work_efficiency_multiplier": 1.25,
+        "registered_sub_stations": [
+          "entity_butcher_hook",
+          "entity_leather_prep",
+          "entity_butter_churn",
+          "entity_chickenhutch",
+          "entity_feedingtrough",
+          "entity_spinning_wheel"
+        ],
+        "processing_outputs": {
+          "butcher_hook": [
+            "Carcase_Meat",
+            "Animal_Fat",
+            "Raw_Hide"
+          ],
+          "leather_prep": [
+            "Tanned_Leather",
+            "Cured_Pelt"
+          ],
+          "butter_churn": [
+            "Fresh_Butter",
+            "Buttermilk"
+          ],
+          "chickenhutch": [
+            "Fresh_Eggs",
+            "Fertile_Hatch_Egg"
+          ],
+          "feedingtrough": [
+            "Animal_Satiation_Buffer"
+          ],
+          "spinning_wheel": [
+            "Yarn_Wool_Spool"
+          ]
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Tổ hợp các trạm chế biến nông trại và gia súc được đóng từ gỗ xẻ, móc sắt rèn và đá mài.",
+        "tactical_behavior_hint": "Biến đổi chuỗi chăn nuôi gia súc thành thực phẩm dự trữ giàu Calo/Protein và nguyên liệu thuộc da may áo giáp ấm chống rét mùa đông.",
+        "crafting_maintenance_hint": "Cần bảo dưỡng định kỳ máng ăn và khử trùng móc treo thịt để tránh ô nhiễm vi sinh vật thu hút ruồi bọ và zombie."
+      },
+      "cross_module_foreign_keys": {
+        "consumes_livestock_id": "tpl_mob:animal_livestock_bovine_01",
+        "requires_bastion_component": "bst_lo_ren_than_da"
+      }
+    },
+    {
+      "blueprint_id": "tpl_sys:native_subsystem_polyglot_01",
+      "source_pz_reference": "Native C++ DLLs (Doc 01 - Section 2: Tri-layer Architecture)",
+      "dnd_ontology_hooks": {
+        "system_category": "CORE_NATIVE_ENGINE",
+        "execution_layer": "NATIVE_X86_64_JVM_JNI",
+        "gc_impact": "ZERO_STOP_THE_WORLD_GC"
+      },
+      "pz_math_engine": {
+        "registered_native_modules": {
+          "PZPathFind64.dll": "Tính toán A* cho 10.000 zombie mà không phân bổ object trên RAM Java",
+          "Lighting64.dll": "Raycasting và ma trận bitmask ánh sáng 60 Hz",
+          "PZPopMan64.dll": "Quản lý quần thể zombie ảo (Virtual Zombies) ngoài vùng hiển thị",
+          "PZBullet64.dll": "Vật lý va chạm xe, ma sát lốp và trọng tâm",
+          "RakNet64.dll": "Giao thức UDP tốc độ cao chống rớt gói và Client Prediction",
+          "fmod.dll": "Âm thanh không gian 3D, cản âm qua tường và cảnh báo nhịp tim hoảng loạn"
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Hệ thống module mã máy C++ nhị phân liên kết với Java qua JNI, chịu trách nhiệm cho các phép toán nặng hàng triệu chu kỳ mỗi giây.",
+        "tactical_behavior_hint": "Bảo đảm game chạy mượt mà ở mức 60 FPS ngay cả khi có bầy xác sống hàng ngàn con vây hãm căn cứ.",
+        "crafting_maintenance_hint": "Là nền tảng kiến trúc bắt buộc phải được duy trì khi thiết kế các hệ thống mở rộng hoặc modding quy mô lớn."
+      },
+      "cross_module_foreign_keys": {
+        "supports_entity_id": "tpl_mob:sensory_horde_undead_01",
+        "network_engine_id": "RakNet"
+      }
+    },
+    {
+      "blueprint_id": "tpl_item:nutrition_macronutrient_ration_01",
+      "source_pz_reference": "zombie.characters.Nutrition (Doc 01 - Section 5: Nutrition Systems)",
+      "dnd_ontology_hooks": {
+        "system_category": "SURVIVAL_RATION",
+        "nutritional_density": "BALANCED_MACRO"
+      },
+      "pz_math_engine": {
+        "calories_kcal": 650.0,
+        "carbohydrates_g": 75.0,
+        "proteins_g": 35.0,
+        "lipids_g": 20.0,
+        "weight_kg": 0.6
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Khẩu phần lương khô dinh dưỡng cao kết hợp ngũ cốc, thịt sấy và mỡ động vật.",
+        "tactical_behavior_hint": "Cung cấp năng lượng tức thì để duy trì thể trọng 80 kg, ngăn chặn teo cơ bắp và giảm mỏi mệt khi phải lao động nặng hoặc kéo xe thồ hàng.",
+        "crafting_maintenance_hint": "Được chế biến từ sản phẩm của trạm chăn nuôi entity_butcher_hook và entity_butter_churn."
+      },
+      "cross_module_foreign_keys": {
+        "produced_by_station": "tpl_bas:husbandry_processing_stations_01",
+        "regulates_system": "sys_metabolism_calories"
+      }
+    },
+    {
+      "blueprint_id": "tpl_wpn:scavenged_jawbone_morningstar_01",
+      "source_pz_reference": "Base.JawboneBovide_Morningstar (Doc 02 - Section 3: Weapon Registry)",
+      "dnd_ontology_hooks": {
+        "system_category": "MARTIAL_BLUNT_AND_PIERCING",
+        "damage_type": "BLUDGEONING",
+        "weapon_mastery": "SAP",
+        "adnd_speed_factor": 8,
+        "two_handed_property": true,
+        "armor_type_modifiers": {
+          "UNARMORED": 1,
+          "PADDED_CLOTH": 1,
+          "LEATHER_HIDE": 2,
+          "STUDDED_BRIGANDINE": 1,
+          "CHAIN_SCALE": 0,
+          "HEAVY_PLATE": -1
+        }
+      },
+      "pz_math_engine": {
+        "weight_kg": 4.0,
+        "min_damage": 1.3,
+        "max_damage": 3.0,
+        "max_range_blocks": 1.4,
+        "condition_max": 14,
+        "condition_lower_chance_one_in": 30,
+        "crit_chance": 0.5,
+        "crit_multiplier": 5.0,
+        "sound_radius_blocks": 8,
+        "sub_category": "Swinging"
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Vũ khí thô sơ rùng rợn được chế tác bằng cách gắn xương hàm bò đực có răng nhọn lên cán gỗ nặng bọc da thú.",
+        "tactical_behavior_hint": "Sát thương bạo kích kinh hoàng (50% cơ hội nhân 5 lần sát thương), chuyên dùng để đập nát sọ đầu (Head) của zombie chỉ với một đòn duy nhất.",
+        "crafting_maintenance_hint": "Được chế tác từ sản phẩm thu hoạch tại trạm mổ thịt entity_butcher_hook kết hợp gỗ xẻ rừng già."
+      },
+      "cross_module_foreign_keys": {
+        "inflicts_wound_types": [
+          "BLUNT_TRAUMA",
+          "FRACTURE",
+          "LACERATION"
+        ],
+        "harvested_from_livestock": "tpl_mob:animal_livestock_bovine_01",
+        "repair_material_tag": "mat_tag:wood_adhesive_or_fastener"
+      }
+    },
+    {
+      "blueprint_id": "tpl_wpn:scavenged_bucket_maul_metal_01",
+      "source_pz_reference": "Base.BucketMace_Metal (Doc 02 - Section 3: Weapon Registry)",
+      "dnd_ontology_hooks": {
+        "system_category": "MARTIAL_HEAVY_SIEGE",
+        "damage_type": "BLUDGEONING",
+        "weapon_mastery": "TOPPLE",
+        "adnd_speed_factor": 10,
+        "two_handed_property": true
+      },
+      "pz_math_engine": {
+        "weight_kg": 10.0,
+        "min_damage": 1.5,
+        "max_damage": 3.0,
+        "max_range_blocks": 1.3,
+        "condition_max": 20,
+        "condition_lower_chance_one_in": 40,
+        "crit_chance": 0.7,
+        "crit_multiplier": 2.0,
+        "sound_radius_blocks": 15,
+        "door_damage": 45
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Chùy sắt khổng lồ làm từ một chiếc xô kim loại đổ đầy bê tông hoặc kim loại đúc đặc, hàn chặt vào ống thép dày.",
+        "tactical_behavior_hint": "Vũ khí cực nặng (10 kg) tiêu hao thể lực gấp đôi mỗi lần vung, nhưng tỷ lệ bạo kích lên tới 70% và uy lực quật ngã (Topple) đối thủ lập tức.",
+        "crafting_maintenance_hint": "Độ bền siêu hạng 20 điểm, thích hợp làm vũ khí phòng thủ cửa ải hoặc phá chướng ngại vật."
+      },
+      "cross_module_foreign_keys": {
+        "requires_strength_tier": "STAT_STR_16_PLUS",
+        "crafted_at_bastion_station": "bst_lo_ren_than_da"
+      }
+    },
+    {
+      "blueprint_id": "tpl_arm:riot_anti_bite_helmet_01",
+      "source_pz_reference": "Base.Hat_RiotHelmet (Doc 02 - Section 3: Protective Armor Registry)",
+      "dnd_ontology_hooks": {
+        "system_category": "ARMOR_HEAD_NECK_FULL",
+        "protection_class": "RIOT_POLICE_GRADE",
+        "speed_penalty_multiplier": 0.98
+      },
+      "pz_math_engine": {
+        "weight_kg": 2.0,
+        "bite_defense_percent": 100,
+        "scratch_defense_percent": 100,
+        "bullet_defense_percent": 65,
+        "covered_parts": [
+          "HEAD",
+          "NECK"
+        ],
+        "insulation_value": 0.45,
+        "wind_resistance": 0.6
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Mũ bảo hiểm chống bạo động bằng nhựa polymer cao phân tử gia cố sợi carbon, có kính chắn gió dày bảo vệ mặt và dải giáp cổ che kín yết hầu.",
+        "tactical_behavior_hint": "Khắc chế hoàn toàn đòn cắn tử vong (Bite 100%) của zombie vào vùng đầu và vùng cổ (Neck), triệt tiêu nguy cơ tử vong trong 10-20 giây do đứt động mạch.",
+        "crafting_maintenance_hint": "Khi nhận đòn cào cắn, độ bền mũ suy giảm dần; cần thay kính chắn hoặc dùng keo dán gia cố khi nứt vỡ."
+      },
+      "cross_module_foreign_keys": {
+        "protects_vital_parts": [
+          "part_head",
+          "part_neck"
+        ],
+        "blocks_affliction_id": "tpl_aff:lethal_necrotic_pathogen_01"
+      }
+    },
+    {
+      "blueprint_id": "tpl_arm:police_bulletproof_vest_01",
+      "source_pz_reference": "Base.Vest_BulletPolice (Doc 02 - Section 3: Protective Armor Registry)",
+      "dnd_ontology_hooks": {
+        "system_category": "ARMOR_TORSO_HEAVY",
+        "protection_class": "BALLISTIC_KEVLAR",
+        "speed_penalty_multiplier": 0.95
+      },
+      "pz_math_engine": {
+        "weight_kg": 2.5,
+        "bite_defense_percent": 100,
+        "scratch_defense_percent": 100,
+        "bullet_defense_percent": 90,
+        "covered_parts": [
+          "TORSO_UPPER",
+          "TORSO_LOWER"
+        ],
+        "insulation_value": 0.5
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Áo giáp chống đạn tiêu chuẩn cảnh sát bằng các lớp vải dệt Kevlar đan khít, ôm sát lồng ngực và bụng.",
+        "tactical_behavior_hint": "Bảo vệ tuyệt đối 100% trước vết cắn rách ngực bụng, tuy nhiên làm tăng thân nhiệt vùng lõi khi mặc vào mùa hè nắng gắt.",
+        "crafting_maintenance_hint": "Không thể giặt bằng nước sôi; cần bảo quản nơi khô ráo để tránh mục sợi gia cường."
+      },
+      "cross_module_foreign_keys": {
+        "protects_vital_parts": [
+          "part_chest_upper",
+          "part_abdomen_lower"
+        ],
+        "interacts_with_system": "sys_thermoregulation"
+      }
+    },
+    {
+      "blueprint_id": "tpl_cnt:large_crafted_framepack_01",
+      "source_pz_reference": "Base.Bag_CraftedFramepack_Large3 (Doc 02 - Section 3: Backpack Registry)",
+      "dnd_ontology_hooks": {
+        "system_category": "CONTAINER_FRAME_PACK",
+        "capacity_volume": 35.0,
+        "tier": "MASTERWORK_SURVIVAL"
+      },
+      "pz_math_engine": {
+        "weight_empty_kg": 4.0,
+        "max_capacity_units": 35,
+        "weight_reduction_ratio": 0.75,
+        "run_speed_modifier": 0.94
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Balo khung gỗ xẻ lớn được chằng buộc bằng dây thừng gai và túi da động vật khâu thủ công.",
+        "tactical_behavior_hint": "Sức chứa lớn nhất trong game (35 đơn vị), giảm 75% trọng lượng của mọi vật tư chứa bên trong, trang bị sinh tử cho các chuyến hành quân vận chuyển quặng sắt và cổ vật.",
+        "crafting_maintenance_hint": "Có thể nâng cấp từ khung nhỏ lên khung lớn bằng da cừu thuộc tại trạm entity_leather_prep."
+      },
+      "cross_module_foreign_keys": {
+        "crafted_using_materials": [
+          "mat_go_nghien",
+          "mat_da_cop_ho_tinh"
+        ],
+        "used_by_class": "cls_tho_san_son_trang"
+      }
+    },
+    {
+      "blueprint_id": "tpl_food:pan_fried_vegetables_forged_01",
+      "source_pz_reference": "Base.PanFriedVegetablesForged (Doc 02 - Section 3: Food Registry)",
+      "dnd_ontology_hooks": {
+        "system_category": "COOKED_MEAL",
+        "quality_tier": "HOT_HOMESTEAD_DISH"
+      },
+      "pz_math_engine": {
+        "calories_kcal": 516.0,
+        "carbohydrates_g": 62.0,
+        "proteins_g": 18.0,
+        "lipids_g": 22.0,
+        "hunger_reduction": 45.0,
+        "unhappy_change": -15.0,
+        "spoilage_hours": 36.0
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Chảo rau rừng xào nóng sốt kết hợp nấm mộc nhĩ, măng rừng và mỡ lợn đun trên chảo gang.",
+        "tactical_behavior_hint": "Cung cấp ngay lập tức 516 calo và giảm 15 điểm u uất buồn phiền (Unhappiness), duy trì năng lượng bền bỉ cho ngày lao động tiếp theo.",
+        "crafting_maintenance_hint": "Cần nấu chín trên bếp lửa hoặc lò than đá bst_lo_ren_than_da để phát huy tối đa dinh dưỡng."
+      },
+      "cross_module_foreign_keys": {
+        "cooked_at_facility": "bst_lo_ren_than_da",
+        "regulates_system": "sys_metabolism_calories"
+      }
+    },
+    {
+      "blueprint_id": "tpl_bas:workstation_20_tech_matrix_01",
+      "source_pz_reference": "20 Workstation Entities & 5-Age Tech Tree (Doc 03 - Section 2 & Section 3)",
+      "dnd_ontology_hooks": {
+        "bastion_facility_mapping": [
+          "SMITHY",
+          "WORKSHOP",
+          "LABORATORY",
+          "GARDEN",
+          "STOREHOUSE",
+          "MENAGERIE",
+          "ARMORY"
+        ],
+        "tech_ages_progression": [
+          "AGE_0_PRIMITIVE_FLINT",
+          "AGE_1_CRUDE_FORGE",
+          "AGE_2_TEMPERED_STEEL",
+          "AGE_3_ALCHEMICAL_BLACKPOWDER",
+          "AGE_4_RELIC_ARTIFICERY"
+        ]
+      },
+      "pz_math_engine": {
+        "total_recipes_indexed": 1026,
+        "workstation_registry_20": [
+          {
+            "station_id": "furnace_t1_t2_t3",
+            "file": "entity_furnace_i/ii/iii.txt",
+            "skill": "skill:blacksmithing",
+            "bastion_type": "SMITHY",
+            "tech_age": "AGE_1_CRUDE_FORGE"
+          },
+          {
+            "station_id": "forge_t1_t2_t3",
+            "file": "entity_forge_i/ii/iii.txt",
+            "skill": "skill:blacksmithing",
+            "bastion_type": "SMITHY",
+            "tech_age": "AGE_1_CRUDE_FORGE"
+          },
+          {
+            "station_id": "dome_kiln",
+            "file": "entity_dome_kiln_craftRecipe.txt",
+            "skill": "skill:pottery_and_glassmaking",
+            "bastion_type": "WORKSHOP",
+            "tech_age": "AGE_1_CRUDE_FORGE",
+            "min_glass_temp_c": 1200.0
+          },
+          {
+            "station_id": "pottery_wheel",
+            "file": "craftrecipe_potterywheel.txt",
+            "skill": "skill:pottery",
+            "bastion_type": "WORKSHOP",
+            "tech_age": "AGE_1_CRUDE_FORGE"
+          },
+          {
+            "station_id": "handpress",
+            "file": "craftrecipe_handpress.txt",
+            "skill": "skill:pottery_and_masonry",
+            "bastion_type": "WORKSHOP",
+            "tech_age": "AGE_1_CRUDE_FORGE"
+          },
+          {
+            "station_id": "charcoal_pit",
+            "file": "entity_charcoal_pit.txt",
+            "skill": "skill:blacksmithing",
+            "bastion_type": "SMITHY",
+            "tech_age": "AGE_1_CRUDE_FORGE"
+          },
+          {
+            "station_id": "metal_bandsaw",
+            "file": "entity_metalbandsaw.txt",
+            "skill": "skill:metalworking",
+            "bastion_type": "SMITHY",
+            "tech_age": "AGE_2_TEMPERED_STEEL"
+          },
+          {
+            "station_id": "standing_drill",
+            "file": "entity_standingdrill.txt",
+            "skill": "skill:metalworking",
+            "bastion_type": "SMITHY",
+            "tech_age": "AGE_2_TEMPERED_STEEL"
+          },
+          {
+            "station_id": "grindstone",
+            "file": "entity_grindstone.txt",
+            "skill": "skill:maintenance",
+            "bastion_type": "ARMORY",
+            "tech_age": "AGE_1_CRUDE_FORGE"
+          },
+          {
+            "station_id": "leather_prep_table",
+            "file": "entity_leather_prep.txt",
+            "skill": "skill:tailoring",
+            "bastion_type": "WORKSHOP",
+            "tech_age": "AGE_2_TEMPERED_STEEL"
+          },
+          {
+            "station_id": "simple_loom",
+            "file": "entity_simple_loom_xuiSkin.txt",
+            "skill": "skill:tailoring",
+            "bastion_type": "WORKSHOP",
+            "tech_age": "AGE_2_TEMPERED_STEEL"
+          },
+          {
+            "station_id": "spinning_wheel",
+            "file": "entity_spinning_wheel.txt",
+            "skill": "skill:tailoring",
+            "bastion_type": "WORKSHOP",
+            "tech_age": "AGE_2_TEMPERED_STEEL"
+          },
+          {
+            "station_id": "scutching_board",
+            "file": "entity_scutching_board.txt",
+            "skill": "skill:farming_and_tailoring",
+            "bastion_type": "GARDEN",
+            "tech_age": "AGE_1_CRUDE_FORGE"
+          },
+          {
+            "station_id": "heckle_comb",
+            "file": "entity_heckle_comb.txt",
+            "skill": "skill:farming_and_tailoring",
+            "bastion_type": "GARDEN",
+            "tech_age": "AGE_1_CRUDE_FORGE"
+          },
+          {
+            "station_id": "butcher_hook",
+            "file": "entity_butcher_hook.txt",
+            "skill": "skill:cooking_and_butchering",
+            "bastion_type": "STOREHOUSE",
+            "tech_age": "AGE_1_CRUDE_FORGE"
+          },
+          {
+            "station_id": "butter_churn",
+            "file": "entity_butter_churn.txt",
+            "skill": "skill:cooking",
+            "bastion_type": "STOREHOUSE",
+            "tech_age": "AGE_1_CRUDE_FORGE"
+          },
+          {
+            "station_id": "chicken_hutch",
+            "file": "entity_chickenhutch.txt",
+            "skill": "skill:farming",
+            "bastion_type": "MENAGERIE",
+            "tech_age": "AGE_1_CRUDE_FORGE"
+          },
+          {
+            "station_id": "feeding_trough",
+            "file": "entity_feedingtrough.txt",
+            "skill": "skill:farming",
+            "bastion_type": "MENAGERIE",
+            "tech_age": "AGE_1_CRUDE_FORGE"
+          },
+          {
+            "station_id": "drying_rack",
+            "file": "entity_Drying_Rack.txt",
+            "skill": "skill:cooking",
+            "bastion_type": "STOREHOUSE",
+            "tech_age": "AGE_0_PRIMITIVE_FLINT"
+          },
+          {
+            "station_id": "herb_drying_rack",
+            "file": "entity_Herb_Drying_Rack.txt",
+            "skill": "skill:first_aid",
+            "bastion_type": "LABORATORY",
+            "tech_age": "AGE_0_PRIMITIVE_FLINT"
+          }
+        ]
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Hệ sinh thái 20 trạm công cụ và máy móc thủ công chia theo 5 thời kỳ kỹ thuật: từ hố đốt than yếm khí, bàn xoay gốm, lò nung vòm đất sét (>1.200°C), lò luyện quặng sắt cấp 1-3, lò rèn đe sắt, đá mài, bàn cưa/khoan cơ khí cho đến bộ khung đập-chải-kéo-dệt sợi lanh và giàn phơi thịt/thảo dược.",
+        "tactical_behavior_hint": "Loại bỏ hoàn toàn lối chơi chế đồ tay không trong túi; bắt buộc người chơi phải quy hoạch không gian căn cứ (Bastion) theo dây chuyền công nghiệp khép kín: Đất sét -> Gạch chịu lửa -> Lò nung vòm -> Lò luyện sắt -> Lò rèn vũ khí/giáp tấm.",
+        "crafting_maintenance_hint": "Các trạm cấp cao phụ thuộc chặt chẽ vào sản phẩm trung gian của trạm cấp thấp (ví dụ: Lò luyện sắt cần Gạch chịu lửa Firebrick từ Lò nung vòm và Than củi từ Hố đốt than)."
+      },
+      "cross_module_foreign_keys": {
+        "maps_to_bastion_facilities": [
+          "SMITHY",
+          "WORKSHOP",
+          "LABORATORY",
+          "GARDEN",
+          "STOREHOUSE",
+          "MENAGERIE",
+          "ARMORY"
+        ],
+        "unlocks_recipe_groups": [
+          "tpl_rcp:knapping_primitive_flint_01",
+          "tpl_rcp:pottery_and_glass_kiln_01",
+          "tpl_rcp:blacksmith_metallurgy_01",
+          "tpl_rcp:flax_textile_and_leather_01",
+          "tpl_rcp:alchemical_munitions_and_preservation_01"
+        ]
+      }
+    },
+    {
+      "blueprint_id": "tpl_rcp:knapping_primitive_flint_01",
+      "source_pz_reference": "Knapping & Primitive Tools Recipes (Doc 03 - Section 2 Age 0 & Section 4.2)",
+      "dnd_ontology_hooks": {
+        "crafting_discipline": "PRIMITIVE_SURVIVAL_KNAPPING",
+        "tech_age": "AGE_0_PRIMITIVE_FLINT"
+      },
+      "pz_math_engine": {
+        "tool_retention_mode": "mode:keep",
+        "degradation_flags": [
+          "MayDegradeLight",
+          "MayDegradeHeavy"
+        ],
+        "recipes": [
+          {
+            "recipe_id": "MakeSharpFlintFlake",
+            "inputs": [
+              "mat_tag:flint_or_chert_nodule",
+              "tool_tag:hammerstone (mode:keep)"
+            ],
+            "output": "tpl_item:sharp_flint_flake",
+            "time_ticks": 230,
+            "xp_award": {
+              "skill:knapping": 10
+            }
+          },
+          {
+            "recipe_id": "MakeStoneBlade",
+            "inputs": [
+              "mat_tag:flint_or_chert_nodule",
+              "tool_tag:hammerstone (mode:keep)"
+            ],
+            "output": "tpl_wpn:knapped_stone_blade",
+            "time_ticks": 230,
+            "xp_award": {
+              "skill:knapping": 20
+            }
+          },
+          {
+            "recipe_id": "MakeStoneAwl",
+            "inputs": [
+              "mat_tag:flint_or_chert_nodule",
+              "tool_tag:hammerstone (mode:keep)"
+            ],
+            "output": "tpl_item:knapped_stone_awl",
+            "time_ticks": 230,
+            "xp_award": {
+              "skill:knapping": 10
+            }
+          }
+        ]
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Kỹ thuật thời kỳ Đồ đá (Age 0) dùng đá búa cứng (Hammerstone) ghè trực tiếp vào hạch đá lửa (Flint/Chert) để bóc tách các mảnh tước sắc lẹm, lưỡi dao đá dài và mũi dùi đá nhọn.",
+        "tactical_behavior_hint": "Mỗi thao tác ghè đá tốn cố định 230 ticks; cung cấp bộ công cụ sinh tồn sơ khởi để xẻ thịt, gọt gỗ làm giáo/cung tên và đục lỗ khâu da thú khi người chơi chưa tiếp cận được kim loại.",
+        "crafting_maintenance_hint": "Đá búa (Hammerstone) được giữ lại qua cơ chế mode:keep nhưng chịu xác suất hao mòn độ bền (MayDegradeLight/MayDegradeHeavy) sau mỗi chu kỳ ghè 230 ticks."
+      },
+      "cross_module_foreign_keys": {
+        "awards_skill_id": "skill:knapping",
+        "enables_downstream_crafts": [
+          "tpl_rcp:flax_textile_and_leather_01"
+        ]
+      }
+    },
+    {
+      "blueprint_id": "tpl_rcp:pottery_and_glass_kiln_01",
+      "source_pz_reference": "Pottery, Brickmaking & Glassmaking Recipes (Doc 03 - Section 2 Age 1/3 & Section 4.3, 4.4)",
+      "dnd_ontology_hooks": {
+        "crafting_discipline": "MASONRY_POTTERY_AND_GLASSBLOWING",
+        "tech_age": "AGE_1_CRUDE_FORGE",
+        "advanced_glass_tech_age": "AGE_3_ALCHEMICAL_BLACKPOWDER"
+      },
+      "pz_math_engine": {
+        "water_shutoff_deadline_days": 30,
+        "dome_kiln_glass_fusion_temp_c": 1200.0,
+        "recipes": [
+          {
+            "recipe_id": "PressClayBrick",
+            "workstation": "handpress",
+            "inputs": [
+              "mat_tag:river_clay"
+            ],
+            "output": "tpl_item:unfired_clay_brick",
+            "time_ticks": 50,
+            "xp_award": {
+              "skill:pottery": 5
+            }
+          },
+          {
+            "recipe_id": "PressClayShingle",
+            "workstation": "handpress",
+            "inputs": [
+              "mat_tag:river_clay"
+            ],
+            "output": "tpl_item:unfired_clay_shingle",
+            "time_ticks": 50,
+            "xp_award": {
+              "skill:pottery": 5
+            }
+          },
+          {
+            "recipe_id": "PressBarMold",
+            "workstation": "pottery_wheel",
+            "inputs": [
+              "mat_tag:river_clay"
+            ],
+            "output": "tpl_item:refractory_ingot_bar_mold",
+            "time_ticks": 100,
+            "xp_award": {
+              "skill:pottery": 5
+            }
+          },
+          {
+            "recipe_id": "MeltSand_And_MeltGlass",
+            "workstation": "dome_kiln",
+            "min_temperature_c": 1200.0,
+            "inputs": [
+              "mat_tag:quartz_sand",
+              "mat_tag:plant_soda_ash"
+            ],
+            "output": "tpl_item:molten_glass_batch",
+            "time_ticks": 20,
+            "xp_award": {}
+          },
+          {
+            "recipe_id": "MakeGlassJar",
+            "workstation": "dome_kiln",
+            "min_temperature_c": 1200.0,
+            "inputs": [
+              "tpl_item:molten_glass_batch",
+              "tool_tag:glass_blowpipe (mode:keep)"
+            ],
+            "output": "tpl_item:airtight_glass_jar",
+            "time_ticks": 100,
+            "xp_award": {
+              "skill:glassmaking": 75
+            }
+          },
+          {
+            "recipe_id": "MakeGlassBottle",
+            "workstation": "dome_kiln",
+            "min_temperature_c": 1200.0,
+            "inputs": [
+              "tpl_item:molten_glass_batch",
+              "tool_tag:glass_blowpipe (mode:keep)"
+            ],
+            "output": "tpl_item:alchemical_glass_bottle",
+            "time_ticks": 120,
+            "xp_award": {
+              "skill:glassmaking": 60
+            }
+          }
+        ]
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Chuỗi công nghệ đất nung và silicat: dùng máy ép tay và bàn xoay gốm định hình đất sét bờ sông thành gạch xây, ngói lợp, gạch chịu nhiệt (Firebricks) và khuôn đúc thỏi kim loại; sau đó nung trong lò vòm (Dome Kiln) đốt than củi đạt ngưỡng >1.200°C để nấu chảy cát thạch anh trộn tro Soda thành thủy tinh lỏng thổi chai lọ.",
+        "tactical_behavior_hint": "Giải pháp sống còn để vượt qua mốc cạn kiệt nguồn nước tự nhiên sau ngày thứ 30 (nhờ chum gốm hứng nước mưa vĩnh cửu) và bảo quản nông sản ngâm chua (Jarring) qua mùa đông bằng lọ thủy tinh kín khí.",
+        "crafting_maintenance_hint": "Khuôn đúc thỏi (PressBarMold - 100 ticks) và Gạch chịu nhiệt (Firebricks) là điều kiện tiên quyết bắt buộc để xây dựng Lò luyện quặng (Furnace I) và Lò rèn (Forge I) của Thời kỳ 2."
+      },
+      "cross_module_foreign_keys": {
+        "required_workstations": [
+          "pottery_wheel",
+          "handpress",
+          "dome_kiln"
+        ],
+        "unlocks_metallurgy_blueprint": "tpl_rcp:blacksmith_metallurgy_01"
+      }
+    },
+    {
+      "blueprint_id": "tpl_rcp:blacksmith_metallurgy_01",
+      "source_pz_reference": "Blacksmithing & Metallurgy Recipes (Doc 03 - Section 2 Age 2/4 & Section 4.1)",
+      "dnd_ontology_hooks": {
+        "crafting_discipline": "BLACKSMITHING_ARMORER_WEAPONSMITH",
+        "tech_age": "AGE_2_TEMPERED_STEEL",
+        "masterwork_tech_age": "AGE_4_RELIC_ARTIFICERY",
+        "bastion_facility": "SMITHY"
+      },
+      "pz_math_engine": {
+        "core_inputs_required": [
+          "mat_tag:wood_charcoal",
+          "mat_tag:scrap_iron_or_ore",
+          "tpl_item:refractory_ingot_bar_mold"
+        ],
+        "core_tools_mode_keep": [
+          "tool_tag:anvil",
+          "tool_tag:blacksmith_hammer",
+          "tool_tag:metal_tongs"
+        ],
+        "recipes": [
+          {
+            "recipe_id": "Forge_Crude_Blade",
+            "workstation": "forge_t1_t2_t3",
+            "inputs": [
+              "mat_tag:iron_bar",
+              "mat_tag:wood_charcoal",
+              "tool_tag:blacksmith_hammer (mode:keep)",
+              "tool_tag:metal_tongs (mode:keep)"
+            ],
+            "output": "tpl_wpn:forged_crude_dagger_blade",
+            "time_ticks": 200,
+            "xp_award": {
+              "skill:blacksmithing": 25
+            }
+          },
+          {
+            "recipe_id": "Forge_Long_Crude_Blade",
+            "workstation": "forge_t1_t2_t3",
+            "inputs": [
+              "mat_tag:steel_or_iron_bar",
+              "mat_tag:wood_charcoal",
+              "tool_tag:blacksmith_hammer (mode:keep)",
+              "tool_tag:metal_tongs (mode:keep)"
+            ],
+            "output": "tpl_wpn:forged_longblade_katana_blank",
+            "time_ticks": 300,
+            "xp_award": {
+              "skill:blacksmithing": 45
+            }
+          },
+          {
+            "recipe_id": "Forge_Scrap_Shortsword",
+            "workstation": "forge_t1_t2_t3",
+            "inputs": [
+              "mat_tag:iron_bar",
+              "mat_tag:wood_charcoal",
+              "tool_tag:blacksmith_hammer (mode:keep)",
+              "tool_tag:metal_tongs (mode:keep)"
+            ],
+            "output": "tpl_wpn:forged_scrap_shortsword",
+            "time_ticks": 500,
+            "xp_award": {
+              "skill:blacksmithing": 50
+            }
+          },
+          {
+            "recipe_id": "Forge_Gorget_And_Armored_Gloves",
+            "workstation": "forge_t1_t2_t3",
+            "inputs": [
+              "mat_tag:steel_or_iron_bar",
+              "mat_tag:wood_charcoal",
+              "tool_tag:blacksmith_hammer (mode:keep)",
+              "tool_tag:metal_tongs (mode:keep)"
+            ],
+            "output": "tpl_arm:forged_gorget_and_gauntlets_100pct",
+            "time_ticks_min": 300,
+            "time_ticks_max": 600,
+            "bite_defense_pct": 100.0
+          }
+        ]
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Dây chuyền luyện kim và rèn vũ khí/giáp trụ: đốt gỗ yếm khí trong hố than (Charcoal Pit) lấy than củi, nấu chảy quặng/phế liệu sắt trong Lò luyện (Furnace I-III) thành thỏi sắt/thép (Iron/Steel Bar), sau đó nung đỏ trên Lò rèn (Forge I-III) và dùng kìm kẹp, búa đập trên đe sắt.",
+        "tactical_behavior_hint": "Cho phép tự rèn đoản kiếm (500 ticks, +50 XP), phôi trường đao/Katana (300 ticks, +45 XP) và đặc biệt là Giáp che cổ (Gorget) cùng Găng tay sắt (300-600 ticks) mang lại khả năng bảo vệ 100% trước vết cắn vào tử huyệt NECK và đôi bàn tay HAND_L/R.",
+        "crafting_maintenance_hint": "Vũ khí rèn bị cùn trong quá trình chiến đấu có thể đưa lên Đá mài xoay (entity_grindstone) để mài sắc lại, phục hồi trực tiếp độ bền và gia tăng sát thương chém."
+      },
+      "cross_module_foreign_keys": {
+        "protects_anatomy_parts": [
+          "NECK",
+          "HAND_L",
+          "HAND_R"
+        ],
+        "maintained_at_workstation": "grindstone",
+        "supplies_weapons_to_doc02": [
+          "tpl_wpn:masterwork_curved_longblade_01",
+          "tpl_wpn:heavy_forged_maul_archetypes_01"
+        ]
+      }
+    },
+    {
+      "blueprint_id": "tpl_rcp:flax_textile_and_leather_01",
+      "source_pz_reference": "Textiles & Leatherworking 5-Step Pipeline (Doc 03 - Section 2 Age 3 & Section 4.5)",
+      "dnd_ontology_hooks": {
+        "crafting_discipline": "WEAVING_AND_TANNERY",
+        "tech_age": "AGE_2_TEMPERED_STEEL",
+        "armor_class_output": "LEATHER_HIDE"
+      },
+      "pz_math_engine": {
+        "flax_to_linen_5_stages": [
+          {
+            "stage": 1,
+            "action": "Cultivate_And_Ret_Flax",
+            "input": "crop:flax_plant",
+            "output": "mat_tag:retted_flax_stalks"
+          },
+          {
+            "stage": 2,
+            "action": "ScutchFibre",
+            "workstation": "scutching_board",
+            "input": "mat_tag:retted_flax_stalks",
+            "output": "mat_tag:crushed_flax_fibre"
+          },
+          {
+            "stage": 3,
+            "action": "RippleFlax_And_HeckleFlax",
+            "workstation": "heckle_comb",
+            "input": "mat_tag:crushed_flax_fibre",
+            "output": "mat_tag:combed_pure_flax_tow"
+          },
+          {
+            "stage": 4,
+            "action": "Spin_Linen_Thread",
+            "workstation": "spinning_wheel",
+            "input": "mat_tag:combed_pure_flax_tow",
+            "output": "mat_tag:strong_linen_thread"
+          },
+          {
+            "stage": 5,
+            "action": "Weave_Linen_Cloth",
+            "workstation": "simple_loom",
+            "input": "mat_tag:strong_linen_thread",
+            "output": "tpl_item:woven_linen_fabric"
+          }
+        ],
+        "leather_tanning_pipeline": {
+          "workstation": "leather_prep_table",
+          "stages": [
+            "FLESH_AND_DEFAT_HIDE",
+            "LIME_ASH_TANNING_SOAK",
+            "TAILOR_PROTECTIVE_GARMENT"
+          ],
+          "output_bite_defense_pct_min": 80.0,
+          "output_bite_defense_pct_max": 100.0
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Chuỗi dệt may 5 công đoạn từ cây lanh (ngâm nước -> đập dập vỏ trên bàn đập Scutching Board -> chải tách xơ bằng lược sắt Heckle Comb -> kéo chỉ trên bàn quay Spinning Wheel -> dệt vải trên khung cửi Simple Loom) kết hợp quy trình cạo mỡ, ngâm nước vôi/tro thuộc da thú trên bàn Leather Prep.",
+        "tactical_behavior_hint": "Giáp da thuộc (áo khoác, găng tay, giáp ống chân) may từ da bò/hươu đã thuộc kết hợp chỉ lanh bền chắc cung cấp khả năng kháng vết cắn (Bite Defense) từ 80% đến 100% mà vẫn giữ được độ linh hoạt và giữ ấm mùa đông.",
+        "crafting_maintenance_hint": "Hoàn toàn tự chủ nguyên liệu từ nông nghiệp (trồng cây lanh, nuôi cừu lấy lông) và săn bắn/chăn nuôi (lột da trên móc Butcher Hook)."
+      },
+      "cross_module_foreign_keys": {
+        "requires_workstations": [
+          "scutching_board",
+          "heckle_comb",
+          "spinning_wheel",
+          "simple_loom",
+          "leather_prep_table"
+        ],
+        "supplies_leather_to_doc02": [
+          "tpl_item:load_bearing_backpacks_matrix_01"
+        ]
+      }
+    },
+    {
+      "blueprint_id": "tpl_rcp:alchemical_munitions_and_preservation_01",
+      "source_pz_reference": "Ammunition Reloading & Food Preservation (Doc 03 - Section 2 Age 4 & Section 4.6, 4.7)",
+      "dnd_ontology_hooks": {
+        "crafting_discipline": "ALCHEMICAL_MUNITIONS_AND_PROVISIONING",
+        "tech_age": "AGE_3_ALCHEMICAL_BLACKPOWDER",
+        "advanced_age": "AGE_4_RELIC_ARTIFICERY",
+        "bastion_facility": "LABORATORY"
+      },
+      "pz_math_engine": {
+        "ammunition_reloading_pipeline": {
+          "propellant_formula": [
+            "mat_tag:wood_charcoal",
+            "mat_tag:mineral_sulfur"
+          ],
+          "projectile_casting": "MELTED_SALVAGED_LEAD_TO_CAST_BULLETS",
+          "casing_recovery": "SPENT_BRASS_SHELL_CASINGS",
+          "supported_caliber_archetypes": [
+            "caliber:9mm_parabellum",
+            "caliber:45_heavy_pistol",
+            "caliber:308_high_powered_rifle",
+            "caliber:12g_scattershot"
+          ]
+        },
+        "food_preservation_math": {
+          "untreated_meat_spoil_days_min": 3.0,
+          "untreated_meat_spoil_days_max": 5.0,
+          "drying_rack_jerky_shelf_life_months_min": 6.0,
+          "drying_rack_jerky_shelf_life_months_max": 12.0,
+          "dairy_fermentation_outputs": [
+            "tpl_item:churned_butter_block",
+            "tpl_item:aged_hard_cheese"
+          ]
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Tổ hợp kỹ thuật hậu kỳ: (1) Nghiền than củi với lưu huỳnh trong cối giã làm thuốc nổ đen, nấu chảy chì phế liệu đúc đầu đạn và ép vào vỏ đạn đồng thu hồi sau giao tranh; (2) Phơi thịt thú săn trên giàn gỗ (Drying Rack) làm thịt khô (Jerky) và ủ sữa bò thành bơ khối/phô mai cứng.",
+        "tactical_behavior_hint": "Giải quyết triệt để hai cuộc khủng hoảng hậu kỳ: cạn kiệt đạn dược tầm xa và thối rữa lương thực (biến thịt tươi chỉ để được 3-5 ngày thành lương khô dự trữ suốt 6-12 tháng và phô mai giàu calo vượt qua mùa đông).",
+        "crafting_maintenance_hint": "Kết hợp cùng lọ thủy tinh (MakeGlassJar) từ lò nung vòm và giàn phơi thảo dược (Herb Drying Rack) để dự trữ cả rau củ muối chua lẫn bột thuốc trị thương."
+      },
+      "cross_module_foreign_keys": {
+        "requires_workstations": [
+          "drying_rack",
+          "herb_drying_rack",
+          "butter_churn"
+        ],
+        "connects_to_ballistics_doc11": [
+          "caliber:9mm_parabellum",
+          "caliber:45_heavy_pistol",
+          "caliber:308_high_powered_rifle",
+          "caliber:12g_scattershot"
+        ]
+      }
+    },
+    {
+      "blueprint_id": "tpl_prof:occupational_25_archetypes_matrix_01",
+      "source_pz_reference": "character_professions.txt (Doc 04 - Section 1 & Section 2: All 25 Occupations)",
+      "dnd_ontology_hooks": {
+        "system_category": "CHARACTER_BACKGROUND_AND_CLASS_ORIGIN",
+        "skill_proficiency_scaling": {
+          "UNPROFICIENT_LV0": 0.25,
+          "HALF_PROFICIENT_LV1": 0.75,
+          "PROFICIENT_LV2": 1.0,
+          "EXPERTISE_LV3_PLUS": 1.25
+        }
+      },
+      "pz_math_engine": {
+        "total_professions": 25,
+        "professions_registry": [
+          {
+            "pz_id": "base:fireofficer",
+            "cost": 0,
+            "tier": "S",
+            "skills": {
+              "Sprinting": 1,
+              "Strength": 1,
+              "Fitness": 1,
+              "Axe": 1
+            },
+            "innate_trait": null
+          },
+          {
+            "pz_id": "base:burglar",
+            "cost": -6,
+            "tier": "S",
+            "skills": {
+              "Nimble": 2,
+              "Sneak": 2,
+              "Lightfoot": 2
+            },
+            "innate_trait": "Burglar"
+          },
+          {
+            "pz_id": "base:lumberjack",
+            "cost": 0,
+            "tier": "S",
+            "skills": {
+              "Axe": 2,
+              "Strength": 1,
+              "Maintenance": 1
+            },
+            "innate_trait": "Ax-pert"
+          },
+          {
+            "pz_id": "base:veteran",
+            "cost": -8,
+            "tier": "S",
+            "skills": {
+              "Aiming": 2,
+              "Reloading": 2
+            },
+            "innate_trait": "Desensitized"
+          },
+          {
+            "pz_id": "base:smither",
+            "cost": -6,
+            "tier": "A",
+            "skills": {
+              "Blacksmith": 4,
+              "Maintenance": 1,
+              "SmallBlunt": 1
+            },
+            "innate_trait": "Blacksmith Knowledge"
+          },
+          {
+            "pz_id": "base:policeofficer",
+            "cost": -4,
+            "tier": "A",
+            "skills": {
+              "Aiming": 4,
+              "Reloading": 1,
+              "Nimble": 1
+            },
+            "innate_trait": null
+          },
+          {
+            "pz_id": "base:repairman",
+            "cost": -2,
+            "tier": "A",
+            "skills": {
+              "Woodwork": 1,
+              "Maintenance": 2,
+              "SmallBlunt": 1,
+              "Masonry": 1
+            },
+            "innate_trait": "Inventive"
+          },
+          {
+            "pz_id": "base:constructionworker",
+            "cost": -2,
+            "tier": "A",
+            "skills": {
+              "SmallBlunt": 2,
+              "Blunt": 1,
+              "Masonry": 2,
+              "Woodwork": 1,
+              "Maintenance": 1
+            },
+            "innate_trait": null
+          },
+          {
+            "pz_id": "base:unemployed",
+            "cost": 8,
+            "tier": "A",
+            "skills": {},
+            "innate_trait": null
+          },
+          {
+            "pz_id": "base:securityguard",
+            "cost": -2,
+            "tier": "B",
+            "skills": {
+              "Sprinting": 2,
+              "Lightfoot": 1,
+              "SmallBlunt": 1
+            },
+            "innate_trait": "Night Owl"
+          },
+          {
+            "pz_id": "base:rancher",
+            "cost": 0,
+            "tier": "B",
+            "skills": {
+              "Husbandry": 4,
+              "Butchering": 3,
+              "Fitness": 1
+            },
+            "innate_trait": null
+          },
+          {
+            "pz_id": "base:carpenter",
+            "cost": -2,
+            "tier": "B",
+            "skills": {
+              "Woodwork": 4,
+              "Carving": 1,
+              "SmallBlunt": 1,
+              "Masonry": 1,
+              "Maintenance": 1
+            },
+            "innate_trait": null
+          },
+          {
+            "pz_id": "base:parkranger",
+            "cost": -4,
+            "tier": "B",
+            "skills": {
+              "Trapping": 1,
+              "Doctor": 1,
+              "PlantScavenging": 1,
+              "FlintKnapping": 1,
+              "Carving": 1
+            },
+            "innate_trait": "Herbalist"
+          },
+          {
+            "pz_id": "base:mechanics",
+            "cost": -4,
+            "tier": "B",
+            "skills": {
+              "Mechanics": 4,
+              "MetalWelding": 1
+            },
+            "innate_trait": "Vehicle Knowledge"
+          },
+          {
+            "pz_id": "base:tailor",
+            "cost": 2,
+            "tier": "B",
+            "skills": {
+              "Tailoring": 4
+            },
+            "innate_trait": null
+          },
+          {
+            "pz_id": "base:fitnessinstructor",
+            "cost": -6,
+            "tier": "B",
+            "skills": {
+              "Fitness": 3,
+              "Sprinting": 2,
+              "Strength": 1
+            },
+            "innate_trait": "Nutritionist"
+          },
+          {
+            "pz_id": "base:metalworker",
+            "cost": -4,
+            "tier": "C",
+            "skills": {
+              "MetalWelding": 4
+            },
+            "innate_trait": null
+          },
+          {
+            "pz_id": "base:chef",
+            "cost": -2,
+            "tier": "C",
+            "skills": {
+              "Cooking": 4,
+              "Maintenance": 1,
+              "SmallBlade": 1,
+              "Butchering": 2
+            },
+            "innate_trait": "Keen Cook"
+          },
+          {
+            "pz_id": "base:doctor",
+            "cost": 0,
+            "tier": "C",
+            "skills": {
+              "Doctor": 6,
+              "SmallBlade": 1
+            },
+            "innate_trait": null
+          },
+          {
+            "pz_id": "base:farmer",
+            "cost": 0,
+            "tier": "C",
+            "skills": {
+              "Farming": 4,
+              "Husbandry": 1,
+              "Strength": 1
+            },
+            "innate_trait": null
+          },
+          {
+            "pz_id": "base:nurse",
+            "cost": 0,
+            "tier": "C",
+            "skills": {
+              "Doctor": 3,
+              "Lightfoot": 1,
+              "Fitness": 1
+            },
+            "innate_trait": "Night Owl"
+          },
+          {
+            "pz_id": "base:fisherman",
+            "cost": -2,
+            "tier": "C",
+            "skills": {
+              "Fishing": 3,
+              "PlantScavenging": 1,
+              "Butchering": 1
+            },
+            "innate_trait": null
+          },
+          {
+            "pz_id": "base:burgerflipper",
+            "cost": 2,
+            "tier": "C",
+            "skills": {
+              "Cooking": 2,
+              "Maintenance": 1,
+              "SmallBlade": 1
+            },
+            "innate_trait": "Keen Cook"
+          },
+          {
+            "pz_id": "base:electrician",
+            "cost": -2,
+            "tier": "D",
+            "skills": {
+              "Electricity": 5
+            },
+            "innate_trait": null
+          },
+          {
+            "pz_id": "base:engineer",
+            "cost": -4,
+            "tier": "D",
+            "skills": {
+              "Electricity": 1,
+              "Woodwork": 1,
+              "Masonry": 1
+            },
+            "innate_trait": null
+          }
+        ]
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Hệ thống 25 xuất thân nghề nghiệp định hình toàn bộ căn cơ thể chất, kỹ năng chiến đấu và tri thức chế tác của nhân vật ngay từ lúc khởi tạo, trải dài từ Chiến binh/Tiều phu/Đạo tặc cho tới Thợ rèn/Chủ trang trại/Thợ xây.",
+        "tactical_behavior_hint": "Điểm kỹ năng khởi đầu không chỉ là cấp độ tĩnh mà mở khóa hệ số nhân XP vĩnh viễn: Cấp 0 bị kìm hãm ở mức 25% XP, trong khi chỉ cần +1 điểm khởi đầu sẽ nhảy vọt lên 75% XP (nhanh gấp 3 lần), +2 điểm đạt 100% (gấp 4 lần) và >= +3 điểm đạt 125% (gấp 5 lần).",
+        "crafting_maintenance_hint": "Một số nghề sở hữu đặc quyền nội tại không thể học qua sách thông thường: Ax-pert (+25% tốc độ vung rìu/chặt cây), Desensitized (miễn nhiễm 100% hoảng loạn), Burglar (phá khóa cửa/kích hoạt cơ giới ngay ngày 1), và Blacksmith Knowledge (mở khóa đe sắt rèn kim loại B42)."
+      },
+      "cross_module_foreign_keys": {
+        "unlocks_workstations_doc03": [
+          "forge_t1_t2_t3",
+          "furnace_t1_t2_t3",
+          "butcher_hook"
+        ],
+        "grants_innate_traits": [
+          "tpl_trait:ax_pert",
+          "tpl_trait:burglar",
+          "tpl_trait:desensitized",
+          "tpl_trait:blacksmith_knowledge",
+          "tpl_trait:inventive",
+          "tpl_trait:night_owl",
+          "tpl_trait:herbalist",
+          "tpl_trait:vehicle_knowledge",
+          "tpl_trait:nutritionist",
+          "tpl_trait:keen_cook"
+        ]
+      }
+    },
+    {
+      "blueprint_id": "tpl_loot:procedural_distributions_weighted_roll_01",
+      "source_pz_reference": "ProceduralDistributions.lua (Doc 05 - Section 3)",
+      "dnd_ontology_hooks": {
+        "system_category": "CONTAINER_LOOT_GENERATION_AND_WEIGHTED_TABLES",
+        "loot_rarity_scaling": {
+          "COMMON": "Weight >= 10.0",
+          "UNCOMMON": "Weight 1.0 - 5.0",
+          "RARE": "Weight 0.1 - 0.9",
+          "LEGENDARY": "Weight 0.001 - 0.05"
+        }
+      },
+      "pz_math_engine": {
+        "loot_items_registry": [
+          {
+            "script_id": "Base.Sledgehammer",
+            "weight_range": [
+              0.01,
+              0.1
+            ],
+            "target_tables": [
+              "CrateTools",
+              "GarageTools",
+              "ArmyHangarTools",
+              "FireStorageTools"
+            ],
+            "tactical_purpose": "Wall/Security gate breaching"
+          },
+          {
+            "script_id": "Base.Generator",
+            "weight_range": [
+              10.0,
+              10.0
+            ],
+            "target_tables": [
+              "CrateGenerator"
+            ],
+            "tactical_purpose": "Blackout electrical power backup"
+          },
+          {
+            "script_id": "Base.ElectronicsMag4",
+            "weight_range": [
+              1.0,
+              5.0
+            ],
+            "target_tables": [
+              "BookstoreMisc",
+              "LibraryBooks",
+              "PostOfficeBooks"
+            ],
+            "tactical_purpose": "Generator operation recipe unlock"
+          },
+          {
+            "script_id": "Base.Katana",
+            "weight_range": [
+              0.001,
+              8.0
+            ],
+            "target_tables": [
+              "MedievalWeaponsJapan",
+              "ComicStoreCounter",
+              "CyberCafeDesk"
+            ],
+            "tactical_purpose": "Ultimate two-handed melee slashing"
+          },
+          {
+            "script_id": "Base.AssaultRifle",
+            "weight_range": [
+              4.0,
+              10.0
+            ],
+            "target_tables": [
+              "ArmyStorageGuns",
+              "SWATStorageGuns",
+              "DrugLabGuns"
+            ],
+            "tactical_purpose": "Military assault automatic firepower"
+          },
+          {
+            "script_id": "Base.Shotgun",
+            "weight_range": [
+              10.0,
+              10.0
+            ],
+            "target_tables": [
+              "FirearmWeapons",
+              "DrugLabGuns",
+              "PawnShopGunsSpecial"
+            ],
+            "tactical_purpose": "Crowd control multi-target projectile blast"
+          },
+          {
+            "script_id": "Base.Antibiotics",
+            "weight_range": [
+              0.5,
+              4.0
+            ],
+            "target_tables": [
+              "DoctorTools",
+              "DoctorOutfit",
+              "BathroomCabinet"
+            ],
+            "tactical_purpose": "Bacterial infection healing"
+          }
+        ]
+      },
+      "semantic_descriptors": {
+        "vietnamese_translation": "Khuôn mẫu bảng loot xác suất rơi đồ từ ProceduralDistributions cho 7 bảo bối sinh tồn B42",
+        "dnd_roleplay_anchor": "Bảng rơi vật phẩm bảo vật ngẫu nhiên theo trọng số xúc xắc"
+      }
+    },
+    {
+      "blueprint_id": "tpl_bas:procedural_362_underground_bunkers_01",
+      "source_pz_reference": "media/binmap/*.pzby (Doc 05 - Section 4: 362 Basements Engine)",
+      "dnd_ontology_hooks": {
+        "system_category": "VERTICAL_DEPTH_DUNGEON_AND_BUNKER_SYSTEM",
+        "environmental_hazards": [
+          "ABSOLUTE_DARKNESS",
+          "ACOUSTIC_ECHO",
+          "TRAPPED_ENCLOSED_SPACE"
+        ]
+      },
+      "pz_math_engine": {
+        "total_basement_lots": 362,
+        "base_spawn_rate": 0.08,
+        "lighting_lux_ambient": 0.0,
+        "featured_bunkers": [
+          {
+            "pzby_file": "lot_basement_jamieton_bunker_01.pzby",
+            "name": "Hầm Trú Ẩn Hạt Nhân Jamie Ton",
+            "guaranteed_loot": [
+              "Bed",
+              "WaterPurifier",
+              "PermanentCannedFood",
+              "AmmoCrater",
+              "MilitaryRadio"
+            ],
+            "tactical_value": "S-Tier Fallout Vault"
+          },
+          {
+            "pzby_file": "lot_basement_police_muldraugh.pzby",
+            "name": "Hầm Kho Vũ Khí Cảnh Sát Ngầm",
+            "guaranteed_loot": [
+              "HeavyArmorKevlar",
+              "GunRacks",
+              "AmmoBoxes",
+              "SWATShield"
+            ],
+            "tactical_value": "A-Tier Tactical Arsenal"
+          },
+          {
+            "pzby_file": "lot_basement_sanatorium_tunnel.pzby",
+            "name": "Đường Hầm Viện Điều Dưỡng Ngầm",
+            "guaranteed_loot": [
+              "SurgicalTools",
+              "AntibioticsCrate",
+              "SterileBandages",
+              "Morphine"
+            ],
+            "tactical_value": "A-Tier Medical Stockpile"
+          },
+          {
+            "pzby_file": "lot_basement_pawnshop_abandoned_01_FL.pzby",
+            "name": "Hầm Cửa Hàng Cầm Đồ Bỏ Hoang",
+            "guaranteed_loot": [
+              "AntiqueWeapons",
+              "GoldJewelry",
+              "RareMechanicalTools"
+            ],
+            "tactical_value": "B-Tier Barter & Relic Vault"
+          }
+        ]
+      },
+      "semantic_descriptors": {
+        "vietnamese_translation": "Chuẩn hóa hệ thống 362 hầm ngầm định dạng .pzby với độ sâu thẳng đứng và bóng tối tuyệt đối",
+        "dnd_roleplay_anchor": "Cấu trúc hầm ngục và boongke sinh tồn dưới lòng đất"
+      }
+    },
+    {
+      "blueprint_id": "tpl_veh:heavy_caravan_transport_52models_01",
+      "source_pz_reference": "52 Vehicles in media/scripts/generated/vehicles/ & PZBullet64.dll (Doc 06 - Section 1 & Section 5)",
+      "dnd_ontology_hooks": {
+        "system_category": "MOUNT_AND_HEAVY_CARAVAN_TRANSPORT",
+        "bastion_facility_hook": "STABLE",
+        "tech_age": "AGE_3_ALCHEMICAL_BLACKPOWDER"
+      },
+      "pz_math_engine": {
+        "total_vehicle_models": 52,
+        "physics_engine_binding": "PZBullet64_RigidBody_Traction_And_CenterOfMass",
+        "class_hierarchy_4": [
+          {
+            "class_id": "HEAVY_DUTY_TRANSPORT",
+            "pz_models": [
+              "PickUpTruck",
+              "PickUpVan",
+              "VanAmbulance",
+              "StepVan"
+            ],
+            "trunk_capacity_kg_min": 100.0,
+            "trunk_capacity_kg_max": 160.0,
+            "seat_count_min": 2,
+            "seat_count_max": 6,
+            "part_durability_bonus_pct": 50.0,
+            "high_ground_clearance_offroad": true,
+            "optimal_towing_tractor": true
+          },
+          {
+            "class_id": "STANDARD_UTILITY_TRANSPORT",
+            "pz_models": [
+              "CarNormal",
+              "CarLuxury",
+              "CarStationWagon",
+              "CarTaxi",
+              "SUV"
+            ],
+            "trunk_capacity_kg_min": 40.0,
+            "trunk_capacity_kg_max": 80.0,
+            "seat_count_min": 4,
+            "seat_count_max": 6,
+            "part_durability_bonus_pct": 0.0,
+            "high_part_interchangeability": true
+          },
+          {
+            "class_id": "HIGH_VELOCITY_SCOUT_TRANSPORT",
+            "pz_models": [
+              "SportsCar",
+              "RaceCar"
+            ],
+            "trunk_capacity_kg_min": 25.0,
+            "trunk_capacity_kg_max": 40.0,
+            "seat_count_fixed": 2,
+            "max_speed_mph_threshold": 100.0,
+            "low_clearance_offroad_bogging_penalty": true,
+            "high_acoustic_profile": true
+          },
+          {
+            "class_id": "TOWED_CARGO_AND_LIVESTOCK_TRAILERS_B42",
+            "pz_models": [
+              "Trailer",
+              "TrailerCover",
+              "Trailer_Horsebox",
+              "Trailer_Livestock"
+            ],
+            "trunk_capacity_kg_min": 100.0,
+            "trunk_capacity_kg_max": 250.0,
+            "seat_count_fixed": 0,
+            "supports_live_bovine_equine_transport": true
+          }
+        ],
+        "tactical_collision_and_escape_math": {
+          "frontal_ram_hood_break_hits_min": 3,
+          "frontal_ram_hood_break_hits_max": 5,
+          "reverse_spin_tail_sweep_engine_damage": 0.0,
+          "surrounded_horde_count_min": 10,
+          "surrounded_horde_count_max": 20,
+          "premature_door_exit_death_time_sec": 2.0,
+          "towing_constraints": {
+            "requires_rope_or_tow_cable": true,
+            "tractor_must_exceed_towed_horsepower_and_mass": true,
+            "requires_towed_parking_brake_release": true
+          }
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Hệ thống 52 cỗ xe vận tải và rơ-moóc (trừu tượng hóa thành Đoàn xe Cơ giới / Chiến xa / Thùng kéo Gia súc) chia làm 3 phân hạng phụ tùng không thể lắp lẫn (Tiêu chuẩn, Tải nặng bền hơn +50%, Tốc độ cao) cùng nhóm Thùng kéo Rơ-moóc sức chứa 100-250 kg chuyên chở hàng hóa hoặc ngựa/gia súc sống.",
+        "tactical_behavior_hint": "Đóng vai trò pháo đài di động và vũ khí nghiền nát bầy đàn. Nếu đâm trực diện bằng đầu xe, lớp giáp mũi (Hood) sẽ vỡ nát chỉ sau 3-5 cú đâm và truyền 100% chấn động làm hỏng động cơ; chiến thuật chuẩn là đánh lái lùi (Reverse Spin) dùng đuôi/hông quét ngã mục tiêu mà không hại máy. Khi bị 10-20 kẻ địch bao vây chết máy, mở cửa nhảy ra sẽ bị xé xác trong 2 giây; người lái buộc phải giữ kính cửa nguyên vẹn, chuyển sang ghế phụ đối diện (Seat Switch) rồi thoát ra ở hướng trống.",
+        "crafting_maintenance_hint": "Có thể nối dây thừng (Rope) hoặc cáp kéo (Tow Cable) giữa hai phương tiện nếu cỗ xe kéo phía trước có trọng lượng và mã lực lớn hơn xe phía sau (đã nhả phanh tay)."
+      },
+      "cross_module_foreign_keys": {
+        "transports_livestock_doc01_doc08": [
+          "tpl_mob:bovine_livestock",
+          "tpl_mob:ovine_porcine_livestock"
+        ],
+        "affected_by_trait_doc04": "tpl_trait:sunday_driver",
+        "salvaged_for_weapons_doc02_doc03": "tpl_wpn:salvaged_metal_flanged_cudgels_01"
+      }
+    },
+    {
+      "blueprint_id": "tpl_veh:mechanical_15parts_anatomy_and_hotwire_01",
+      "source_pz_reference": "ISVehicleMechanics.lua / 15 Vehicle Parts, Engine Quality & Hotwiring (Doc 06 - Section 2, 3, 4 & 6)",
+      "dnd_ontology_hooks": {
+        "system_category": "ARTIFICERY_VEHICLE_ANATOMY_AND_MAINTENANCE",
+        "bastion_facility_hook": "WORKSHOP",
+        "required_proficiencies": [
+          "skill:mechanics",
+          "skill:metalworking",
+          "skill:electricity"
+        ]
+      },
+      "pz_math_engine": {
+        "total_anatomical_vehicle_parts": 15,
+        "engine_vs_condition_duality": {
+          "engine_quality_min_pct": 0.0,
+          "engine_quality_max_pct": 100.0,
+          "engine_quality_is_immutable": true,
+          "reliable_cold_start_quality_threshold_pct": 85.0,
+          "poor_quality_threshold_pct": 50.0,
+          "poor_quality_crank_attempts_min": 3,
+          "poor_quality_crank_attempts_max": 5,
+          "engine_condition_stall_threshold_pct": 20.0
+        },
+        "battery_and_ignition_math": {
+          "min_battery_charge_for_ignition_pct": 10.0,
+          "overnight_drain_sources": [
+            "HEADLIGHTS_LEFT_ON",
+            "TRANSCEIVER_RADIO_LEFT_ON",
+            "ALARM_SIREN_TRIGGERED"
+          ],
+          "hotwire_bypass_trait": "tpl_trait:burglar",
+          "hotwire_skill_reqs": {
+            "skill:electricity": 1,
+            "skill:mechanics": 2,
+            "required_tool": "tool_tag:screwdriver"
+          },
+          "hotwire_execution_time_sec_min": 5.0,
+          "hotwire_execution_time_sec_max": 10.0
+        },
+        "part_failure_penalties_and_repairs": {
+          "HOOD": {
+            "zero_cond_engine_dmg_transfer_pct": 100.0,
+            "repair_tools": [
+              "Propane_Torch",
+              "Welding_Mask",
+              "Sheet_Metal"
+            ]
+          },
+          "ENGINE": {
+            "below_20_pct_effect": "RANDOM_MID_DRIVE_STALL",
+            "repair_tools": [
+              "Wrench",
+              "Spare_Engine_Parts"
+            ]
+          },
+          "GAS_TANK": {
+            "damaged_effect": "CONTINUOUS_FUEL_LEAK_EMPTY_IN_MINUTES",
+            "repair_tools": [
+              "Sheet_Metal_Or_Adhesive_Weld"
+            ]
+          },
+          "WINDSHIELD_AND_WINDOWS": {
+            "shattered_effect": "DIRECT_ANATOMICAL_BITE_TO_DRIVER_FACE_AND_ARMS",
+            "repair_tools": [
+              "Wrench_Same_Class_Glass_Swap"
+            ]
+          },
+          "TIRES_4": {
+            "optimal_psi_min": 30.0,
+            "optimal_psi_max": 35.0,
+            "flat_speed_penalty_pct": 70.0,
+            "repair_tools": [
+              "Tire_Pump",
+              "Car_Jack",
+              "Lug_Wrench"
+            ]
+          },
+          "BRAKES_4": {
+            "broken_stopping_distance_multiplier": 4.0,
+            "repair_tools": [
+              "Same_Class_Brake_Pads"
+            ]
+          },
+          "SUSPENSION_4": {
+            "broken_effect": "SEVERE_CHASSIS_BOUNCE_AND_ROLLOVER_ON_TURN",
+            "repair_tools": [
+              "Car_Jack",
+              "Replacement_Struts"
+            ]
+          },
+          "TRUNK": {
+            "crushed_effect": "DYNAMIC_CARGO_CAPACITY_SHRINKAGE",
+            "repair_tools": [
+              "Propane_Torch_Weld"
+            ]
+          },
+          "MUFFLER": {
+            "good_condition_threshold_pct": 80.0,
+            "good_sound_radius_meters_min": 20.0,
+            "good_sound_radius_meters_max": 30.0,
+            "broken_condition_threshold_pct": 20.0,
+            "broken_sound_radius_meters_min": 100.0,
+            "broken_sound_radius_meters_max": 150.0
+          }
+        },
+        "mechanics_xp_grinding_rules": {
+          "per_part_per_vehicle_xp_cooldown_hours": 24.0,
+          "daily_salvage_target_vehicles_min": 5,
+          "daily_salvage_target_vehicles_max": 10,
+          "recommended_daily_parts_to_cycle": [
+            "4_HEADLIGHT_BULBS",
+            "CABIN_RADIO",
+            "CAR_BATTERY",
+            "4_WHEELS_TIRES"
+          ],
+          "days_to_reach_level_4_to_6_min": 3,
+          "days_to_reach_level_4_to_6_max": 5
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Cấu trúc giải phẫu cơ khí 15 bộ phận độc lập của một cỗ xe vận tải: Nắp giáp mũi, Trái tim động cơ, Bình chứa nhiên liệu, Kính chắn phía trước, Kính chắn hai bên hông, 4 Bánh xe chịu áp suất, Hệ thống hãm phanh, Khung nhíp giảm xóc, Khoang chứa hàng sau và Ống tiêu âm.",
+        "tactical_behavior_hint": "Phân tách rạch ròi giữa Phẩm chất bẩm sinh (Engine Quality: cố định vĩnh viễn, >85% nổ máy tức thì, <50% đề 3-5 nhịp) và Độ bền hao mòn (Engine Condition: <20% gây chết máy giữa đường). Ống tiêu âm (Muffler) quyết định sự sống còn về âm học: khi tốt (>80%) chỉ phát tiếng động trong 20-30m, nhưng khi rách (<20%) sẽ gầm rú vang xa 100-150m gom toàn bộ xác sống trong thị trấn. Vỡ kính chắn gió hoặc kính bên ghế lái khiến người ngồi trong mất hoàn toàn lớp giáp bảo vệ, bị kẻ địch bên ngoài thò tay cắn trực tiếp vào mặt.",
+        "crafting_maintenance_hint": "Cơ chế chống cày cấp ảo: mỗi bộ phận trên một chiếc xe chỉ trao XP tháo/lắp đúng 1 lần mỗi 24 giờ. Lộ trình tối ưu là đọc Sách Tập 1 (x3-x5 XP) rồi tháo lắp cụm đèn, đài, bình điện và 4 bánh xe trên 5-10 xác xe bỏ hoang mỗi ngày để đạt Cấp 4-6 chỉ sau 3-5 ngày."
+      },
+      "cross_module_foreign_keys": {
+        "requires_occupation_or_trait_doc04": [
+          "base:mechanics",
+          "base:burglar",
+          "tpl_trait:vehicle_knowledge"
+        ],
+        "interacts_with_sound_wave_doc01": "sys_math:ai_sensory_perception_cone_and_sound_wave",
+        "boosted_by_instructional_records_doc07": [
+          "Carzone (Ep 1-3)",
+          "Z-Squad",
+          "OSCC '92",
+          "stock cars"
+        ]
+      }
+    },
+    {
+      "blueprint_id": "tpl_bas:agricultural_43crops_and_pest_matrix_01",
+      "source_pz_reference": "SFarmingSystem.lua, farming_vegetableconf.lua & farming_vegetableconf_herbs.lua (Doc 08 - Section 2)",
+      "dnd_ontology_hooks": {
+        "bastion_facility_mapping": [
+          "GARDEN",
+          "GREENHOUSE"
+        ],
+        "tech_age": "AGE_0_PRIMITIVE_FLINT",
+        "harvest_tool_mastery": "SCYTHE_CLEAVE_HARVEST"
+      },
+      "pz_math_engine": {
+        "total_plant_species": 43,
+        "major_crops_count": 20,
+        "culinary_herbs_count": 23,
+        "checkerboard_isolation_gap_tiles": 1,
+        "crops_20_registry": [
+          {
+            "crop_id": "Cabbage",
+            "seeds": 9,
+            "water_min": 40,
+            "water_opt": 85,
+            "water_max_fatal": null,
+            "grow_hours": 144,
+            "grow_days": 6.0,
+            "yield_min": 4,
+            "yield_max": 8,
+            "sow_months": [
+              3,
+              8
+            ],
+            "cold_hardy": false
+          },
+          {
+            "crop_id": "Potato",
+            "seeds": 4,
+            "water_min": 45,
+            "water_opt": 70,
+            "water_max_fatal": null,
+            "grow_hours": 288,
+            "grow_days": 12.0,
+            "yield_min": 4,
+            "yield_max": 8,
+            "sow_months": [
+              3,
+              9
+            ],
+            "cold_hardy": true,
+            "fresh_shelf_life_days": 30
+          },
+          {
+            "crop_id": "Carrot",
+            "seeds": 12,
+            "water_min": 35,
+            "water_opt": 80,
+            "water_max_fatal": 85,
+            "grow_hours": 168,
+            "grow_days": 7.0,
+            "yield_min": 4,
+            "yield_max": 8,
+            "sow_months": [
+              3,
+              8
+            ],
+            "cold_hardy": false
+          },
+          {
+            "crop_id": "Tomato",
+            "seeds": 4,
+            "water_min": 50,
+            "water_opt": 85,
+            "water_max_fatal": null,
+            "grow_hours": 240,
+            "grow_days": 10.0,
+            "yield_min": 3,
+            "yield_max": 7,
+            "sow_months": [
+              4,
+              7
+            ],
+            "cold_hardy": false
+          },
+          {
+            "crop_id": "Radish",
+            "seeds": 6,
+            "water_min": 45,
+            "water_opt": 75,
+            "water_max_fatal": null,
+            "grow_hours": 168,
+            "grow_days": 7.0,
+            "yield_min": 4,
+            "yield_max": 8,
+            "sow_months": [
+              3,
+              8
+            ],
+            "cold_hardy": false
+          },
+          {
+            "crop_id": "Broccoli",
+            "seeds": 6,
+            "water_min": 50,
+            "water_opt": 80,
+            "water_max_fatal": null,
+            "grow_hours": 264,
+            "grow_days": 11.0,
+            "yield_min": 4,
+            "yield_max": 8,
+            "sow_months": [
+              3,
+              8
+            ],
+            "cold_hardy": true
+          },
+          {
+            "crop_id": "Strawberry",
+            "seeds": 8,
+            "water_min": 40,
+            "water_opt": 85,
+            "water_max_fatal": null,
+            "grow_hours": 360,
+            "grow_days": 15.0,
+            "yield_min": 8,
+            "yield_max": 14,
+            "sow_months": [
+              4,
+              7
+            ],
+            "cold_hardy": false,
+            "perennial_regrowth": true
+          },
+          {
+            "crop_id": "Barley",
+            "seeds": 10,
+            "water_min": 30,
+            "water_opt": 70,
+            "water_max_fatal": null,
+            "grow_hours": 432,
+            "grow_days": 18.0,
+            "yield_min": 2,
+            "yield_max": 8,
+            "sow_months": [
+              8,
+              10
+            ],
+            "cold_hardy": true,
+            "scythe_harvest": true
+          },
+          {
+            "crop_id": "BellPepper",
+            "seeds": 4,
+            "water_min": 70,
+            "water_opt": 70,
+            "water_max_fatal": null,
+            "grow_hours": 292,
+            "grow_days": 12.2,
+            "yield_min": 2,
+            "yield_max": 8,
+            "sow_months": [
+              4,
+              6
+            ],
+            "cold_hardy": false
+          },
+          {
+            "crop_id": "Corn",
+            "seeds": 6,
+            "water_min": 60,
+            "water_opt": 90,
+            "water_max_fatal": null,
+            "grow_hours": 480,
+            "grow_days": 20.0,
+            "yield_min": 3,
+            "yield_max": 8,
+            "sow_months": [
+              4,
+              6
+            ],
+            "cold_hardy": false
+          },
+          {
+            "crop_id": "Kale",
+            "seeds": 8,
+            "water_min": 40,
+            "water_opt": 75,
+            "water_max_fatal": null,
+            "grow_hours": 240,
+            "grow_days": 10.0,
+            "yield_min": 4,
+            "yield_max": 8,
+            "sow_months": [
+              4,
+              9
+            ],
+            "cold_hardy": true
+          },
+          {
+            "crop_id": "Garlic",
+            "seeds": 4,
+            "water_min": 30,
+            "water_opt": 65,
+            "water_max_fatal": null,
+            "grow_hours": 360,
+            "grow_days": 15.0,
+            "yield_min": 2,
+            "yield_max": 6,
+            "sow_months": [
+              9,
+              11
+            ],
+            "cold_hardy": true,
+            "natural_antibiotic": true
+          },
+          {
+            "crop_id": "SweetPotato",
+            "seeds": 4,
+            "water_min": 40,
+            "water_opt": 75,
+            "water_max_fatal": null,
+            "grow_hours": 384,
+            "grow_days": 16.0,
+            "yield_min": 3,
+            "yield_max": 7,
+            "sow_months": [
+              4,
+              6
+            ],
+            "cold_hardy": false
+          },
+          {
+            "crop_id": "GreenPea",
+            "seeds": 8,
+            "water_min": 35,
+            "water_opt": 70,
+            "water_max_fatal": null,
+            "grow_hours": 216,
+            "grow_days": 9.0,
+            "yield_min": 4,
+            "yield_max": 10,
+            "sow_months": [
+              3,
+              5
+            ],
+            "cold_hardy": true
+          },
+          {
+            "crop_id": "Soybean",
+            "seeds": 8,
+            "water_min": 45,
+            "water_opt": 80,
+            "water_max_fatal": null,
+            "grow_hours": 360,
+            "grow_days": 15.0,
+            "yield_min": 4,
+            "yield_max": 10,
+            "sow_months": [
+              5,
+              7
+            ],
+            "cold_hardy": false
+          },
+          {
+            "crop_id": "Onion",
+            "seeds": 6,
+            "water_min": 40,
+            "water_opt": 70,
+            "water_max_fatal": null,
+            "grow_hours": 264,
+            "grow_days": 11.0,
+            "yield_min": 3,
+            "yield_max": 7,
+            "sow_months": [
+              3,
+              8
+            ],
+            "cold_hardy": true
+          },
+          {
+            "crop_id": "Flax",
+            "seeds": 10,
+            "water_min": 35,
+            "water_opt": 70,
+            "water_max_fatal": null,
+            "grow_hours": 400,
+            "grow_days": 16.7,
+            "yield_min": 3,
+            "yield_max": 8,
+            "sow_months": [
+              4,
+              6
+            ],
+            "cold_hardy": true
+          },
+          {
+            "crop_id": "Hemp",
+            "seeds": 8,
+            "water_min": 40,
+            "water_opt": 75,
+            "water_max_fatal": null,
+            "grow_hours": 420,
+            "grow_days": 17.5,
+            "yield_min": 3,
+            "yield_max": 8,
+            "sow_months": [
+              4,
+              7
+            ],
+            "cold_hardy": false
+          },
+          {
+            "crop_id": "Hops",
+            "seeds": 6,
+            "water_min": 50,
+            "water_opt": 80,
+            "water_max_fatal": null,
+            "grow_hours": 450,
+            "grow_days": 18.8,
+            "yield_min": 4,
+            "yield_max": 8,
+            "sow_months": [
+              4,
+              6
+            ],
+            "cold_hardy": true
+          },
+          {
+            "crop_id": "Wheat",
+            "seeds": 10,
+            "water_min": 35,
+            "water_opt": 70,
+            "water_max_fatal": null,
+            "grow_hours": 432,
+            "grow_days": 18.0,
+            "yield_min": 3,
+            "yield_max": 8,
+            "sow_months": [
+              8,
+              10
+            ],
+            "cold_hardy": true,
+            "scythe_harvest": true
+          }
+        ],
+        "herbs_23_parameters": {
+          "grow_hours_min": 160,
+          "grow_hours_max": 240,
+          "water_requirement_min": 30,
+          "water_requirement_max": 60,
+          "stew_boredom_reduction": -15,
+          "stew_unhappiness_reduction": -10
+        },
+        "pest_control_formulas": {
+          "Mildew": {
+            "yield_penalty_pct": 50.0,
+            "cure_inputs": [
+              "Gardening_Spray_Can",
+              "50ml_Fresh_Milk",
+              "Clean_Water"
+            ]
+          },
+          "Aphids": {
+            "wither_death_hours": 48.0,
+            "cure_inputs": [
+              "Gardening_Spray_Can",
+              "5_Cigarettes",
+              "Clean_Water"
+            ]
+          },
+          "Flies": {
+            "effect": "ROOT_ROT_NO_FLOWERING",
+            "cure_inputs": [
+              "Gardening_Spray_Can",
+              "1_Minced_Garlic",
+              "Clean_Water"
+            ]
+          },
+          "Slugs": {
+            "effect": "SEEDLING_DECAPITATION_DEATH",
+            "cure_inputs": [
+              "Empty_Tin_Can",
+              "1_Sip_Fresh_Beer"
+            ]
+          }
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Hệ thống canh tác 43 giống thực vật (20 nông sản lương thực/sợi công nghiệp và 23 thảo mộc gia vị) với chu kỳ sinh trưởng chính xác theo giờ (từ 144h của Bắp cải đến 480h của Ngô), lịch gieo hạt theo tháng và thuộc tính chịu sương giá (coldHardy).",
+        "tactical_behavior_hint": "Đòi hỏi quy hoạch luống đất theo ô bàn cờ (cách nhau 1 ô trống) để chặn đứng sự lây lan của 4 đại dịch thực vật (Nấm mốc giảm 50% sản lượng, Rầy mềm giết cây trong 48h, Ruồi thối rễ và Ốc sên cắn đọt). Cà rốt cực kỳ nhạy cảm với úng nước (chết ngay nếu độ ẩm >85), trong khi Khoai tây giữ tươi được tới 30 ngày không cần bảo quản lạnh.",
+        "crafting_maintenance_hint": "Cung cấp đầu vào nguyên liệu thiết yếu cho các ngành khác: Lanh (Flax) và Gai dầu (Hemp) để dệt vải/bện dây thừng, Lúa mì/Lúa mạch thu hoạch bằng lưỡi hái để xay bột/ủ bia, và Tỏi làm kháng sinh tự nhiên hoặc thuốc trừ ruồi."
+      },
+      "cross_module_foreign_keys": {
+        "unlocked_by_media_doc07": [
+          "Growing Herbs at Home",
+          "Growing Fruit and Veg 1",
+          "Growing Fruit and Veg 2",
+          "Controlling Crop Pests"
+        ],
+        "supplies_textile_chain_doc03": "tpl_rcp:flax_textile_and_leather_01"
+      }
+    },
+    {
+      "blueprint_id": "tpl_item:trapping_75tile_and_live_capture_matrix_01",
+      "source_pz_reference": "TrapDefinition.lua & STrapGlobalObject.lua (Doc 08 - Section 3)",
+      "dnd_ontology_hooks": {
+        "item_category": "HUNTER_SNARES_AND_LIVE_CAGES",
+        "skill_proficiency": "skill:trapping"
+      },
+      "pz_math_engine": {
+        "mandatory_player_exclusion_radius_tiles": 75.0,
+        "trap_devices_6": [
+          {
+            "trap_id": "TrapCage",
+            "craft_inputs": [
+              "1_Wire"
+            ],
+            "trap_strength": 20,
+            "targets": [
+              "Rabbit",
+              "Squirrel",
+              "Raccoon"
+            ],
+            "broken_debris": [
+              "Base.Wire"
+            ],
+            "live_capture_capable": true
+          },
+          {
+            "trap_id": "TrapCrate",
+            "craft_inputs": [
+              "4_Planks",
+              "6_Nails"
+            ],
+            "trap_strength": 15,
+            "targets": [
+              "Rabbit",
+              "Squirrel",
+              "Raccoon"
+            ],
+            "broken_debris": [
+              "UnusableWood",
+              "Nails"
+            ],
+            "live_capture_capable": true
+          },
+          {
+            "trap_id": "TrapBox",
+            "craft_inputs": [
+              "4_Planks",
+              "8_Nails"
+            ],
+            "trap_strength": 15,
+            "targets": [
+              "Rabbit",
+              "Squirrel",
+              "Raccoon"
+            ],
+            "broken_debris": [
+              "UnusableWood",
+              "Nails"
+            ],
+            "live_capture_capable": true
+          },
+          {
+            "trap_id": "TrapStick",
+            "craft_inputs": [
+              "4_Twigs",
+              "1_Twine"
+            ],
+            "trap_strength": 10,
+            "targets": [
+              "Bird"
+            ],
+            "broken_debris": [
+              "UnusableWood",
+              "Twine"
+            ],
+            "live_capture_capable": false
+          },
+          {
+            "trap_id": "TrapSnare",
+            "craft_inputs": [
+              "2_Planks",
+              "2_Twine"
+            ],
+            "trap_strength": 10,
+            "targets": [
+              "Rabbit",
+              "Squirrel"
+            ],
+            "broken_debris": [
+              "UnusableWood",
+              "Twine"
+            ],
+            "live_capture_capable": false
+          },
+          {
+            "trap_id": "TrapMouse",
+            "craft_inputs": [
+              "Looted_Only"
+            ],
+            "trap_strength": 5,
+            "targets": [
+              "Mouse",
+              "Rat"
+            ],
+            "broken_debris": [
+              "Destroyed_Permanently"
+            ],
+            "live_capture_capable": true
+          }
+        ],
+        "prey_ecology_and_bait_matrix": [
+          {
+            "prey_id": "Rabbit",
+            "live_variants": [
+              "rabbuck",
+              "rabdoe",
+              "rabkitten"
+            ],
+            "breeds": [
+              "Swamp",
+              "Appalachian",
+              "Cottontail"
+            ],
+            "active_hours": "19:00-05:00",
+            "trap_efficiency_pct": {
+              "TrapCage": 40,
+              "TrapCrate": 30,
+              "TrapSnare": 30
+            },
+            "bait_catch_rate_pct": {
+              "Carrot": 45,
+              "Cabbage": 40,
+              "Lettuce": 40,
+              "BellPepper": 40,
+              "Apple_Potato": 35
+            },
+            "zone_factors": {
+              "DeepForest": 15,
+              "OrganicForest": 15,
+              "Forest": 12
+            },
+            "weight_kg_range": [
+              1.5,
+              3.5
+            ],
+            "calories_range": [
+              1200,
+              2400
+            ]
+          },
+          {
+            "prey_id": "Squirrel",
+            "active_hours": "19:00-05:00",
+            "trap_efficiency_pct": {
+              "TrapCage": 40,
+              "TrapCrate": 30,
+              "TrapSnare": 30
+            },
+            "bait_catch_rate_pct": {
+              "PeanutButter": 45,
+              "Cereal": 45,
+              "Peanuts": 40,
+              "Popcorn": 40,
+              "Apple": 40
+            },
+            "zone_factors": {
+              "DeepForest": 15,
+              "OrganicForest": 15,
+              "Forest": 12
+            },
+            "weight_kg_range": [
+              0.5,
+              1.2
+            ],
+            "calories_range": [
+              600,
+              1000
+            ]
+          },
+          {
+            "prey_id": "Bird",
+            "active_hours": "00:00-24:00",
+            "trap_efficiency_pct": {
+              "TrapStick": 40
+            },
+            "bait_catch_rate_pct": {
+              "Earthworm": 50,
+              "Cricket": 50,
+              "Cockroach": 50,
+              "Centipede": 50,
+              "Bread": 50,
+              "Corn_Cereal": 45
+            },
+            "zone_factors": {
+              "FarmLand": 35,
+              "Town": 30,
+              "Vegetation": 30
+            },
+            "weight_kg_range": [
+              0.2,
+              0.8
+            ],
+            "calories_range": [
+              200,
+              450
+            ]
+          },
+          {
+            "prey_id": "Raccoon",
+            "live_variants": [
+              "raccoonboar",
+              "raccoonsow",
+              "raccoonkit"
+            ],
+            "active_hours": "19:00-05:00",
+            "trap_efficiency_pct": {
+              "TrapCage": 40,
+              "TrapCrate": 30
+            },
+            "baits": [
+              "RottenMeat",
+              "Apple",
+              "Carrot",
+              "PoultryEggs",
+              "Cheese"
+            ],
+            "zone_factors": {
+              "DeepForest": 15,
+              "FarmLand": 12
+            },
+            "weight_kg_range": [
+              2.0,
+              5.0
+            ],
+            "calories_range": [
+              1500,
+              3200
+            ]
+          },
+          {
+            "prey_id": "Mouse_And_Rat",
+            "live_variants": [
+              "rat",
+              "ratfemale",
+              "ratbaby",
+              "mouse",
+              "mousefemale",
+              "mousepups"
+            ],
+            "active_hours": "00:00-24:00",
+            "trap_efficiency_pct": {
+              "TrapMouse": 30
+            },
+            "bait_catch_rate_pct": {
+              "Cheese": 60,
+              "ProcessedCheese": 55,
+              "PeanutButter": 40,
+              "HamBits": 40,
+              "Chocolate": 30
+            },
+            "zone_factors": {
+              "FarmLand": 60,
+              "TrailerPark": 60,
+              "Town": 50
+            },
+            "weight_kg_range": [
+              0.1,
+              0.3
+            ],
+            "calories_range": [
+              100,
+              250
+            ]
+          }
+        ]
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Bộ 6 thiết bị bẫy cơ học (Lồng dây thép độ bền 20, Hộp ván gỗ độ bền 15, Lồng hộp kín độ bền 15, Bẫy que chống chim độ bền 10, Thòng lọng dây độ bền 10 và Bẫy kẹp chuột độ bền 5).",
+        "tactical_behavior_hint": "Bị chi phối bởi Quy tắc khứu giác 75-Tile: người chơi buộc phải rời xa vị trí đặt bẫy tối thiểu 75 ô gạch thì thú mới dám vào ăn bả; nếu đứng gần dưới 75 ô, thú sẽ chỉ ăn cắp bả và đạp gãy bẫy. Bẫy lồng và bẫy hộp trong B42 cho phép bắt sống nguyên vẹn các cặp Thỏ, Gấu mèo, Chuột đực/cái/con (canBeAlive = true) để đưa về chuồng nhân giống.",
+        "crafting_maintenance_hint": "Tạo thành vòng lặp cộng sinh với Nông nghiệp: trồng Cà rốt và Bắp cải làm bả nhử Thỏ ban đêm (19:00 - 05:00) với tỷ lệ sập bẫy 40-45%, thu về 1.200 - 2.400 Calo mỗi con mà không phát ra bất kỳ tiếng động nào."
+      },
+      "cross_module_foreign_keys": {
+        "uses_crops_as_bait": [
+          "Carrot",
+          "Cabbage",
+          "BellPepper",
+          "Corn"
+        ],
+        "supplies_live_animals_to_husbandry": "tpl_mob:livestock_18genes_and_butchering_01"
+      }
+    },
+    {
+      "blueprint_id": "tpl_wpn:melee_6classes_and_maintenance_matrix_01",
+      "source_pz_reference": "weapon.txt & ISMeleeWeapon.lua (Doc 11 - Section 2)",
+      "dnd_ontology_hooks": {
+        "system_category": "MELEE_WEAPONS_AND_PHYSICAL_COMBAT_ENGINE",
+        "damage_classes": [
+          "SLASHING",
+          "PIERCING",
+          "BLUDGEONING"
+        ],
+        "stomp_lethality_multiplier": 2.75
+      },
+      "pz_math_engine": {
+        "weapon_classes": [
+          "Axe",
+          "LongBlade",
+          "SmallBlade",
+          "LongBlunt",
+          "SmallBlunt",
+          "Spear"
+        ],
+        "featured_weapons": [
+          {
+            "id": "Base.Crowbar",
+            "class": "LongBlunt",
+            "base_decay_chance": 70,
+            "max_condition": 15,
+            "crit_chance": 0.2,
+            "tactical_role": "Endurance durability king"
+          },
+          {
+            "id": "Base.Axe",
+            "class": "Axe",
+            "base_decay_chance": 35,
+            "max_condition": 15,
+            "crit_chance": 0.25,
+            "tactical_role": "High damage door breaker"
+          },
+          {
+            "id": "Base.Katana",
+            "class": "LongBlade",
+            "base_decay_chance": 15,
+            "max_condition": 10,
+            "crit_chance": 0.35,
+            "tactical_role": "Multi-target 3-zombie cleaver"
+          },
+          {
+            "id": "Base.SpearCrafted",
+            "class": "Spear",
+            "base_decay_chance": 2,
+            "max_condition": 5,
+            "crit_chance": 0.3,
+            "tactical_role": "Long-range instant critical"
+          },
+          {
+            "id": "Base.HuntingKnife",
+            "class": "SmallBlade",
+            "base_decay_chance": 25,
+            "max_condition": 10,
+            "crit_chance": 0.5,
+            "tactical_role": "Low endurance Jaw Stab assassin"
+          }
+        ],
+        "moodle_damage_debuffs": {
+          "exhaustion_level_1": 0.5,
+          "exhaustion_level_2": 0.2,
+          "exhaustion_level_3": 0.1,
+          "exhaustion_level_4": 0.05
+        }
+      },
+      "semantic_descriptors": {
+        "vietnamese_translation": "Khuôn mẫu 6 hệ vũ khí cận chiến, ma trận độ bền Bernoulli và sự sụp đổ sát thương do thể lực",
+        "dnd_roleplay_anchor": "Quy tắc tấn công cận chiến, độ bền vũ khí và đòn dẫm đầu chí mạng"
+      }
+    },
+    {
+      "blueprint_id": "tpl_wpn:firearms_22guns_and_ballistics_engine_01",
+      "source_pz_reference": "weapon.txt & ISReloadWeaponAction.lua (Doc 11 - Section 3)",
+      "dnd_ontology_hooks": {
+        "system_category": "BALLISTIC_FIREARMS_AND_PROJECTILE_ACOUSTICS",
+        "bullet_calibers": [
+          "9mm",
+          ".45 Auto",
+          ".44 Mag",
+          ".357 Mag",
+          ".38 Special",
+          "5.56mm",
+          ".308 Win",
+          ".30-30 Win",
+          "Shotgun Shells"
+        ]
+      },
+      "pz_math_engine": {
+        "total_guns_catalogued": 22,
+        "featured_firearms": [
+          {
+            "id": "Base.AssaultRifle",
+            "name": "M16",
+            "caliber": "5.56mm",
+            "sound_radius": 150,
+            "mag_size": 30,
+            "range": 30,
+            "jam_rate": 0.01
+          },
+          {
+            "id": "Base.AssaultRifle2",
+            "name": "M14",
+            "caliber": ".308 Win",
+            "sound_radius": 170,
+            "mag_size": 20,
+            "range": 40,
+            "jam_rate": 0.01
+          },
+          {
+            "id": "Base.Shotgun",
+            "name": "JS-2000",
+            "caliber": "Shotgun Shells",
+            "sound_radius": 200,
+            "mag_size": 6,
+            "range": 12,
+            "jam_rate": 0.02
+          },
+          {
+            "id": "Base.DoubleBarrelShotgun",
+            "name": "Double Barrel",
+            "caliber": "Shotgun Shells",
+            "sound_radius": 200,
+            "mag_size": 2,
+            "range": 15,
+            "jam_rate": 0.0
+          },
+          {
+            "id": "Base.Pistol",
+            "name": "Beretta M9",
+            "caliber": "9mm",
+            "sound_radius": 100,
+            "mag_size": 15,
+            "range": 15,
+            "jam_rate": 0.01
+          },
+          {
+            "id": "Base.Pistol2",
+            "name": "Colt M1911",
+            "caliber": ".45 Auto",
+            "sound_radius": 70,
+            "mag_size": 7,
+            "range": 12,
+            "jam_rate": 0.01
+          },
+          {
+            "id": "Base.Revolver_Short",
+            "name": "Revolver .38",
+            "caliber": ".38 Special",
+            "sound_radius": 60,
+            "mag_size": 6,
+            "range": 8,
+            "jam_rate": 0.0
+          }
+        ],
+        "aiming_progression": {
+          "level_0_to_2": "Shotgun only (pellet spread 3-4 zombies, hit chance 65-70%)",
+          "level_5_to_7": "Pistols viable (85-90% hit chance on move)",
+          "level_8_to_10": "Piercing bullets unlocked (.308 Win pierces 2 zombies in line)"
+        }
+      },
+      "semantic_descriptors": {
+        "vietnamese_translation": "Khuôn mẫu đạn đạo 22 khẩu súng, bán kính âm thanh nổ súng và cơ chế đạn xuyên mục tiêu",
+        "dnd_roleplay_anchor": "Hệ thống vũ khí hỏa mai, súng trường và đạn đạo chiến trường"
+      }
+    },
+    {
+      "blueprint_id": "tpl_item:weapon_11attachments_and_recoil_01",
+      "source_pz_reference": "weaponpart.txt & ISRackFirearm.lua (Doc 11 - Section 3.3 & 3.4)",
+      "dnd_ontology_hooks": {
+        "system_category": "WEAPON_MODIFICATIONS_AND_JAM_CLEARING"
+      },
+      "pz_math_engine": {
+        "attachments_count": 11,
+        "featured_parts": [
+          {
+            "id": "Base.ChokeTubeFull",
+            "part_type": "Canon",
+            "effect": "Tightens shotgun pellet spread for long range"
+          },
+          {
+            "id": "Base.ChokeTubeImproved",
+            "part_type": "Canon",
+            "effect": "Widens pellet spread for 4-target close blast"
+          },
+          {
+            "id": "Base.RedDot",
+            "part_type": "Scope",
+            "effect": "Reduces aiming time by 20%"
+          },
+          {
+            "id": "Base.Laser",
+            "part_type": "CanonMod",
+            "effect": "Direct hit chance bonus & moving recoil stabilization"
+          },
+          {
+            "id": "Base.GunLight",
+            "part_type": "CanonMod",
+            "effect": "Illuminates night cone of vision hands-free"
+          },
+          {
+            "id": "Base.x2Scope",
+            "part_type": "Scope",
+            "effect": "+4 tiles effective range"
+          },
+          {
+            "id": "Base.x4Scope",
+            "part_type": "Scope",
+            "effect": "+8 tiles effective range"
+          },
+          {
+            "id": "Base.x8Scope",
+            "part_type": "Scope",
+            "effect": "+12 tiles sniper range"
+          },
+          {
+            "id": "Base.AmmoStraps",
+            "part_type": "Sling",
+            "effect": "Doubles reloading speed"
+          },
+          {
+            "id": "Base.Sling",
+            "part_type": "Sling",
+            "effect": "-30% equipped weapon weight"
+          },
+          {
+            "id": "Base.RecoilPad",
+            "part_type": "Stock",
+            "effect": "-20% recoil kickback"
+          }
+        ],
+        "jam_unloading_key": "Phím X (Rack slide to clear round)"
+      },
+      "semantic_descriptors": {
+        "vietnamese_translation": "Chuẩn hóa 11 phụ kiện súng đạn nâng cấp và quy trình gạt khóa nòng xử lý kẹt đạn",
+        "dnd_roleplay_anchor": "Phụ kiện gia cố binh khí và cơ chế bảo dưỡng súng đạn"
+      }
+    },
+    {
+      "blueprint_id": "tpl_bas:fortification_32floor_and_barricade_matrix_01",
+      "source_pz_reference": "ISBuildUtil.lua, IsoThumpable, ISWoodenWall.lua, ISBarricadeAction.lua & MOBarricade.lua (Doc 12 - Section 1, 2, 3, 6 & 7)",
+      "dnd_ontology_hooks": {
+        "bastion_facility_mapping": [
+          "BARRACKS",
+          "ARMORY",
+          "WAR_ROOM",
+          "STOREHOUSE",
+          "GARDEN"
+        ],
+        "tech_ages_covered": [
+          "AGE_0_PRIMITIVE_FLINT",
+          "AGE_1_CRUDE_FORGE",
+          "AGE_2_TEMPERED_STEEL"
+        ]
+      },
+      "pz_math_engine": {
+        "max_vertical_building_floors": 32,
+        "carpentry_hp_bonus_per_level": 50,
+        "handy_trait_flat_hp_bonus": 100,
+        "structural_elements_registry": [
+          {
+            "id": "WoodenFrame",
+            "skill": "Carpentry",
+            "req_lv": 2,
+            "inputs": [
+              "2_Planks",
+              "2_Nails"
+            ],
+            "base_hp": 50,
+            "lv10_max_hp": 550
+          },
+          {
+            "id": "WoodenWall_Lv1",
+            "skill": "Carpentry",
+            "req_lv": 2,
+            "inputs": [
+              "2_Planks",
+              "4_Nails"
+            ],
+            "base_hp": 200,
+            "lv10_max_hp": 700,
+            "handy_lv10_hp": 800
+          },
+          {
+            "id": "WoodenWall_Lv2",
+            "skill": "Carpentry",
+            "req_lv": 4,
+            "inputs": [
+              "2_Planks",
+              "4_Nails"
+            ],
+            "base_hp": 250,
+            "lv10_max_hp": 750,
+            "handy_lv10_hp": 850
+          },
+          {
+            "id": "WoodenWall_Lv3",
+            "skill": "Carpentry",
+            "req_lv": 7,
+            "inputs": [
+              "2_Planks",
+              "4_Nails"
+            ],
+            "base_hp": 300,
+            "lv10_max_hp": 800,
+            "handy_lv10_hp": 900,
+            "supports_plaster_and_paint": true
+          },
+          {
+            "id": "LogWall",
+            "skill": "Carpentry",
+            "req_lv": 0,
+            "inputs": [
+              "4_Logs",
+              "2_Twine_Or_Rope"
+            ],
+            "base_hp": 400,
+            "lv10_max_hp": 900,
+            "handy_lv10_hp": 1000
+          },
+          {
+            "id": "WoodenDoor_Single",
+            "skill": "Carpentry",
+            "req_lv": 3,
+            "inputs": [
+              "4_Planks",
+              "4_Nails",
+              "2_Hinges",
+              "1_Doorknob"
+            ],
+            "base_hp": 200,
+            "lv10_max_hp": 700
+          },
+          {
+            "id": "DoubleWoodenDoor_Gate",
+            "skill": "Carpentry",
+            "req_lv": 6,
+            "inputs": [
+              "12_Planks",
+              "12_Nails",
+              "4_Hinges",
+              "2_Doorknobs"
+            ],
+            "base_hp": 400,
+            "lv10_max_hp": 900,
+            "width_tiles": 4
+          },
+          {
+            "id": "WoodenFence_Low",
+            "skill": "Carpentry",
+            "req_lv": 2,
+            "inputs": [
+              "2_Planks",
+              "3_Nails"
+            ],
+            "base_hp": 100,
+            "lv10_max_hp": 600,
+            "triggers_fence_slump": true
+          },
+          {
+            "id": "WoodenStairs",
+            "skill": "Carpentry",
+            "req_lv": 6,
+            "inputs": [
+              "15_Planks",
+              "15_Nails"
+            ],
+            "invulnerable_to_zombies": true
+          },
+          {
+            "id": "Composter",
+            "skill": "Carpentry",
+            "req_lv": 2,
+            "inputs": [
+              "5_Planks",
+              "4_Nails"
+            ],
+            "invulnerable_to_zombies": true
+          },
+          {
+            "id": "MetalFrame",
+            "skill": "Metalworking",
+            "req_lv": 3,
+            "inputs": [
+              "3_MetalBars",
+              "Blowtorch"
+            ],
+            "base_hp": 150,
+            "lv10_max_hp": 850
+          },
+          {
+            "id": "WireFence",
+            "skill": "Metalworking",
+            "req_lv": 4,
+            "inputs": [
+              "2_MetalBars",
+              "Wire",
+              "Blowtorch"
+            ],
+            "base_hp": 300,
+            "lv10_max_hp": 1000,
+            "transparent_and_shoot_through": true
+          },
+          {
+            "id": "MetalPoleFence",
+            "skill": "Metalworking",
+            "req_lv": 6,
+            "inputs": [
+              "5_MetalBars",
+              "Blowtorch"
+            ],
+            "base_hp": 500,
+            "lv10_max_hp": 1200,
+            "transparent_and_shoot_through": true
+          }
+        ],
+        "dual_sided_barricade_modes_3": {
+          "WOODEN_PLANK": {
+            "hp_per_unit": 1000,
+            "max_per_side": 4,
+            "max_total_2sides_hp": 8000,
+            "vision_and_shooting_open_at_1_to_2_planks": true,
+            "vision_blocked_at_3_to_4_planks": true
+          },
+          "SHEET_METAL": {
+            "hp_per_unit": 5000,
+            "max_per_side": 1,
+            "max_total_2sides_hp": 10000,
+            "blocks_100pct_light_and_vision": true
+          },
+          "METAL_BARS": {
+            "hp_per_3bar_set": 3000,
+            "max_per_side": 1,
+            "max_total_2sides_hp": 6000,
+            "allows_spear_thrust_and_gunfire_through": true
+          }
+        },
+        "b42_advanced_architecture_features": {
+          "multi_stage_wall_pipeline": [
+            "1_WoodenFrame",
+            "2_WoodenWall_Lv3",
+            "3_PlasterPowder_Trowel",
+            "4_PaintBrush_Color"
+          ],
+          "vehicle_rooftop_ramp_cursor": "ISBuildRampCursor.lua",
+          "rooftop_soil_farming_cursor": "ISNaturalFloor.lua",
+          "basement_crop_freshness_extension_pct": 50.0,
+          "double_airlock_gate_spacing_meters": 6.0,
+          "sledgehammer_stairs_deletion_sheet_rope_meta": true
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Hệ thống kiến trúc đa tầng (hỗ trợ chiều cao lên tới 32 tầng và tầng hầm ngầm giữ lạnh thực phẩm tươi lâu hơn +50%) với các kết cấu chịu lực từ Tường gỗ tròn nguyên khối (Log Wall 400-1.000 HP buộc bằng dây thừng), Tường gỗ trát thạch cao sơn màu (300-900 HP), Cổng đôi rộng 4 ô cho đoàn xe tải đi qua, cho đến Hàng rào chông sắt (500-1.200 HP) và hệ thống gia cố cửa 2 mặt trong/ngoài.",
+        "tactical_behavior_hint": "Gia cố cửa sổ bằng Thanh sắt song thưa (Metal Bars: 3.000 HP/mặt, tổng 6.000 HP 2 mặt) hoặc Hàng rào chông sắt/thép gai cho phép người chơi đứng an toàn tuyệt đối bên trong để đâm giáo (Spear) hoặc bắn súng xuyên qua song sắt tiêu diệt bầy đàn bên ngoài. Nếu cần ẩn mình trong đêm, Tấm thép kín (Sheet Metal: 5.000 HP/mặt, tổng 10.000 HP) hoặc đóng 3-4 tấm ván gỗ (tối đa 8.000 HP 2 mặt) sẽ chặn 100% ánh sáng lọt ra ngoài. Chiến thuật tối thượng là thiết lập Cổng Airlock 2 lớp cách nhau 6 mét, đắp dốc thoải (Build Ramps) lái xe lên đỗ trên sân thượng, rải đất trồng rau trên nóc nhà, và dùng Búa tạ đập bỏ cầu thang tầng 1 để chỉ lên xuống tầng 2 bằng Dây vải (Sheet Rope).",
+        "crafting_maintenance_hint": "Tường gỗ tròn (Log Wall) có thể dựng ngay ở Carpentry Cấp 0 chỉ bằng 4 khúc gỗ và 2 sợi dây bện mà không tốn bất kỳ cây đinh nào, nhưng lại bền gấp đôi tường ván gỗ cấp thấp."
+      },
+      "cross_module_foreign_keys": {
+        "boosted_by_trait_doc04": "tpl_trait:handy",
+        "schematics_unlocked_by_vhs_doc07": [
+          "Adefope Fencing Special",
+          "nof vid",
+          "no 9"
+        ],
+        "synergizes_with_spear_and_firearms_doc11": [
+          "tpl_wpn:melee_6categories_and_maintenance_matrix_01",
+          "tpl_wpn:ranged_22firearms_and_11attachments_matrix_01"
+        ]
+      }
+    },
+    {
+      "blueprint_id": "tpl_bas:plumbing_3x3_purifier_and_generator_grid_01",
+      "source_pz_reference": "ISPlumbItem.lua & MOGenerator.lua (Doc 12 - Section 4 & Section 5)",
+      "dnd_ontology_hooks": {
+        "bastion_facility_mapping": [
+          "WORKSHOP",
+          "LABORATORY",
+          "STOREHOUSE",
+          "GARDEN"
+        ],
+        "tech_age": "AGE_3_ALCHEMICAL_BLACKPOWDER",
+        "hazard_damage_types": [
+          "FIRE",
+          "POISON"
+        ]
+      },
+      "pz_math_engine": {
+        "rain_collector_barrel_tiers": {
+          "small_barrel_carpentry_4": {
+            "inputs": [
+              "4_Planks",
+              "4_Nails",
+              "4_GarbageBags"
+            ],
+            "capacity_liters": 160.0
+          },
+          "large_barrel_carpentry_7": {
+            "inputs": [
+              "4_Planks",
+              "4_Nails",
+              "4_GarbageBags"
+            ],
+            "capacity_liters": 400.0
+          }
+        },
+        "plumbing_purification_rules": {
+          "required_tool": "PipeWrench",
+          "requires_fully_enclosed_room_non_nil": true,
+          "barrel_vertical_offset_z": 1,
+          "barrel_horizontal_matrix_grid": "3x3_TILES_AROUND_SINK",
+          "min_water_units_in_barrel_to_connect": 1,
+          "purifies_tainted_rainwater_100pct_without_boiling": true
+        },
+        "generator_power_grid_and_hazards": {
+          "horizontal_power_radius_tiles": 20,
+          "vertical_power_span_floors": 3,
+          "vertical_floor_offsets": [
+            -1,
+            0,
+            1
+          ],
+          "fuel_tank_max_pct": 100.0,
+          "fuel_tank_liters_equivalent_range": [
+            10.0,
+            12.0
+          ],
+          "gas_cans_to_fill_tank": 2.5,
+          "default_fuel_burn_rate_l_per_hr": 0.1,
+          "single_fridge_continuous_runtime_days_range": [
+            10.0,
+            14.0
+          ],
+          "explosion_fire_hazard_condition_threshold_pct": 20.0,
+          "recommended_maintenance_threshold_pct": 50.0,
+          "repair_material": "Electronics_Scrap",
+          "indoor_or_basement_carbon_monoxide_lethal_asphyxiation": true
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Hệ thống hạ tầng kỹ thuật tự hành của căn cứ: (1) Mạng lưới thủy lực nối Thùng hứng nước mưa trên mái nhà (160L hoặc 400L) xuống Bồn rửa tầng dưới bằng Cờ lê ống nước; (2) Trạm phát năng lượng phát sóng điện trường hình trụ bán kính ngang 20 ô gạch xuyên qua 3 tầng lầu.",
+        "tactical_behavior_hint": "Cơ chế lọc nước tự động (Plumbing) chỉ kích hoạt khi Bồn rửa nằm trong một căn phòng khép kín hoàn toàn (đủ 4 tường, sàn, trần) và Thùng nước mưa (có sẵn >= 1 đơn vị nước) nằm trong lưới 3x3 ô gạch ở tầng ngay phía trên (Z+1); khi kết nối thành công, nước mưa nhiễm khuẩn chảy qua ống xuống vòi sẽ tự động trở thành nước uống tinh khiết 100% không cần đun sôi. Đối với Máy phát năng lượng, người chơi đối mặt với 2 tử huyệt: nếu đặt máy trong phòng kín hoặc tầng hầm, khí độc CO sẽ giết chết nhân vật trong lúc ngủ mà không có cảnh báo; nếu để độ bền máy tụt xuống dưới 20%, máy sẽ xì khói đen và phát nổ thiêu rụi toàn bộ pháo đài.",
+        "crafting_maintenance_hint": "Máy phát điện tiêu thụ mặc định 0.1 L/giờ (bình đầy 10-12L tương đương 2.5 can nhiên liệu, nuôi 1 tủ lạnh suốt 10-14 ngày) và phải được tắt máy bảo dưỡng bằng Linh kiện điện tử vụn (Electronics Scrap) ngay khi độ bền xuống dưới 50%."
+      },
+      "cross_module_foreign_keys": {
+        "solves_day30_water_shutoff_doc03_doc10": "Water_Shutoff_Survival_Milestone",
+        "requires_manual_magazine_doc05": "tpl_item:dynamo_operation_codex_01",
+        "fuel_rate_configured_in_sandbox_doc10": "GeneratorFuelConsumption_Def"
+      }
+    }
+  ]
+}

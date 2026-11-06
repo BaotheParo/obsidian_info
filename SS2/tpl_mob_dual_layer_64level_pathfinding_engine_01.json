@@ -1,0 +1,74 @@
+{
+  "blueprint_id": "tpl_mob:dual_layer_64level_pathfinding_engine_01",
+  "source_pz_reference": "PolygonalMap2.java, HLAStar.java, VGAStar.java, VisibilityGraph.java, LiangBarsky.java, PathFindBehavior2.java & PathfindNative.java (Doc 15 - Section 1, 2, 3 & 5)",
+  "dnd_ontology_hooks": {
+    "system_category": "AUTONOMOUS_AGENT_NAVIGATION_AND_OBSTACLE_BREACHING",
+    "spatial_topology": "CONTINUOUS_POLYGONAL_64_LEVEL_VERTICAL_DUNGEON"
+  },
+  "pz_math_engine": {
+    "collision_capsule_geometry": {
+      "radius_blocks": 0.3,
+      "radius_diagonal_blocks": 0.42426,
+      "diagonal_squared_constant": 0.18,
+      "paths_under_vehicles_enabled": true,
+      "close_to_walls_hugging_enabled": true
+    },
+    "vertical_64_level_coordinate_system": {
+      "levels_per_chunk": 64,
+      "ground_level_internal_index": 32,
+      "z_internal_offset_constant": 32.0,
+      "deepest_basement_game_z": -32,
+      "deepest_basement_internal_z": 0,
+      "highest_skyscraper_game_z": 31,
+      "highest_skyscraper_internal_z": 63,
+      "stair_transition_nodes_6": [
+        "stairsTW",
+        "stairsMW",
+        "stairsBW",
+        "stairsTN",
+        "stairsMN",
+        "stairsBN"
+      ]
+    },
+    "bitmask_navigation_flags": {
+      "NODE_FLAG_CRAWL": 1,
+      "CXN_FLAG_THUMP": 2,
+      "NODE_FLAG_STAIR": 16
+    },
+    "hierarchical_pathfinding_layers": {
+      "macro_hlastar_min_distance_tiles": 10,
+      "macro_long_range_target_tiles": 50,
+      "macro_components": [
+        "HLChunkRegion",
+        "HLLevelTransition_Stairs_Ramps_SheetRopes"
+      ],
+      "micro_components": [
+        "VisibilityGraph_PolygonVertices",
+        "VGAStar",
+        "LiangBarsky_LineClipping",
+        "CollideWithObstaclesPoly"
+      ],
+      "native_jni_multithreading": [
+        "PathfindNative_DirectByteBuffer",
+        "n_findPath",
+        "n_updateSquare"
+      ]
+    },
+    "obstacle_interaction_and_anti_stuck_fsm": {
+      "door_handling": "CHECK_couldBeOpen_ELSE_SET_CXN_FLAG_THUMP_2_AND_GROUP_THUMP",
+      "window_handling": "CHECK_isGlassRemoved_LACERATION_HAZARD_THEN_faceThisObject_AND_climbThroughWindow",
+      "low_fence_handling": "DETECT_HoppableW_HoppableN_THEN_climbOverFence_OR_CROWD_FENCE_LUNGE",
+      "anti_stuck_sensor": "WalkingOnTheSpot_ZeroDisplacement_Triggers_isCancel_And_Repath_Or_Thump"
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Động cơ tìm đường đa giác 2 tầng (Vĩ mô liên vùng HLAStar + Vi mô đồ thị tầm nhìn VGAStar kết hợp cắt tia Liang-Barsky trên đa luồng C++ JNI), quản lý không gian 3 chiều xuyên suốt 64 tầng cao độ (từ tầng hầm sâu -32 đến đỉnh tháp +31 với mặt đất đặt tại mốc Z = 32) cho các thực thể có bán kính va chạm 0.3 ô (đường chéo 0.42426 ô).",
+    "tactical_behavior_hint": "Thực thể thù địch không đi zíc-zắc theo ô vuông mà cắt góc đi thẳng mượt mà bám sát mép tường (CLOSE_TO_WALLS = true). Khi gặp xe cộ chắn đường, thực thể bò trườn kích hoạt cờ NODE_FLAG_CRAWL = 1 để luồn thẳng qua gầm xe cắn vào mắt cá chân người chơi; khi gặp cửa khóa, chúng bật cờ CXN_FLAG_THUMP = 2 để gọi bầy đàn vây đập sập cửa; khi trèo qua cửa sổ còn mảnh kính vỡ (isGlassRemoved = false), chính xác sống cũng bị kính cứa rách thịt. Nếu bị kẹt địa hình (WalkingOnTheSpot), cảm biến chống kẹt sẽ tự hủy lộ trình và ra lệnh đập nát vật cản ngay trước mặt.",
+    "crafting_maintenance_hint": "Cung cấp nền tảng toán học để lập trình hệ thống AI thực thể trong Minecraft Paper Java 21 vượt qua giới hạn của Pathfinder thuần túy, biết phối hợp leo cầu thang 6 nút, đập cửa và luồn qua khe hẹp 1 block."
+  },
+  "cross_module_foreign_keys": {
+    "integrates_362_basements_doc05": "tpl_bas:subterranean_362_bunkers_and_safehouses_01",
+    "integrates_32_floors_and_doors_doc12": "tpl_bas:fortification_32floor_and_barricade_matrix_01",
+    "executes_undercarriage_crawl_doc06_doc10": "tpl_mob:zombie_lore_pathogen_and_cognition_matrix_01"
+  }
+}

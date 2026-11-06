@@ -1,0 +1,24 @@
+{
+  "blueprint_id": "tpl_item:nutrition_macronutrient_ration_01",
+  "source_pz_reference": "zombie.characters.Nutrition (Doc 01 - Section 5: Nutrition Systems)",
+  "dnd_ontology_hooks": {
+    "system_category": "SURVIVAL_RATION",
+    "nutritional_density": "BALANCED_MACRO"
+  },
+  "pz_math_engine": {
+    "calories_kcal": 650.0,
+    "carbohydrates_g": 75.0,
+    "proteins_g": 35.0,
+    "lipids_g": 20.0,
+    "weight_kg": 0.6
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Khẩu phần lương khô dinh dưỡng cao kết hợp ngũ cốc, thịt sấy và mỡ động vật.",
+    "tactical_behavior_hint": "Cung cấp năng lượng tức thì để duy trì thể trọng 80 kg, ngăn chặn teo cơ bắp và giảm mỏi mệt khi phải lao động nặng hoặc kéo xe thồ hàng.",
+    "crafting_maintenance_hint": "Được chế biến từ sản phẩm của trạm chăn nuôi entity_butcher_hook và entity_butter_churn."
+  },
+  "cross_module_foreign_keys": {
+    "produced_by_station": "tpl_bas:husbandry_processing_stations_01",
+    "regulates_system": "sys_metabolism_calories"
+  }
+}

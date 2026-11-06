@@ -1,0 +1,96 @@
+{
+  "blueprint_id": "tpl_aff:metabolic_80kg_caloric_and_weight_tiers_01",
+  "source_pz_reference": "Nutrition.java (Doc 14 - Section 4)",
+  "dnd_ontology_hooks": {
+    "system_category": "METABOLIC_HOMEOSTASIS_AND_DYNAMIC_PHYSIQUE_TIERS",
+    "stat_progression_hooks": [
+      "STRENGTH_XP_BONUS_30PCT",
+      "FITNESS_LEVEL_MODIFIER",
+      "MELEE_DAMAGE_MODIFIER",
+      "FALL_FRACTURE_VULNERABILITY"
+    ]
+  },
+  "pz_math_engine": {
+    "golden_reference_weight_kg": 80.0,
+    "calories_min_floor_kcal": -2200.0,
+    "calories_max_ceiling_kcal": 3700.0,
+    "activity_calorie_burn_per_tick": {
+      "SLEEPING": 0.003,
+      "NORMAL_IDLE_OR_WALK": 0.016,
+      "EXERCISE_SPRINT_OR_COMBAT": 0.13
+    },
+    "weight_change_kinetics": {
+      "max_fat_burn_rate_per_tick_at_minus_2200_kcal": -8.5e-06,
+      "rapid_gain_double_arrow_rate_per_tick": 1.3e-05,
+      "rapid_gain_carbohydrates_threshold_grams": 400.0,
+      "rapid_gain_lipids_threshold_grams": 400.0
+    },
+    "protein_anabolic_window": {
+      "min_grams": 50.0,
+      "max_grams": 300.0,
+      "strength_xp_gain_bonus_pct": 30.0
+    },
+    "dynamic_weight_trait_bands_7": [
+      {
+        "band_id": "LETHAL_STARVATION",
+        "weight_kg_max": 35.0,
+        "terminal_death": true
+      },
+      {
+        "band_id": "EMACIATED",
+        "weight_kg_min": 35.1,
+        "weight_kg_max": 50.0,
+        "melee_dmg_penalty_pct": -60.0,
+        "fitness_mod": -4,
+        "continuous_hp_drain": true
+      },
+      {
+        "band_id": "VERY_UNDERWEIGHT",
+        "weight_kg_min": 50.1,
+        "weight_kg_max": 65.0,
+        "melee_dmg_penalty_pct": -40.0,
+        "fitness_mod": -2,
+        "fence_vault_trip_hazard": true
+      },
+      {
+        "band_id": "UNDERWEIGHT",
+        "weight_kg_min": 65.1,
+        "weight_kg_max": 75.0,
+        "melee_dmg_penalty_pct": -20.0,
+        "fitness_mod": -1
+      },
+      {
+        "band_id": "GOLDEN_WEIGHT_OPTIMAL",
+        "weight_kg_min": 75.1,
+        "weight_kg_max": 84.9,
+        "melee_dmg_penalty_pct": 0.0,
+        "fitness_mod": 0,
+        "optimal_efficiency_pct": 100.0
+      },
+      {
+        "band_id": "OVERWEIGHT",
+        "weight_kg_min": 85.0,
+        "weight_kg_max": 99.9,
+        "fitness_mod": -1,
+        "endurance_depletion_increase_pct": 50.0
+      },
+      {
+        "band_id": "OBESE",
+        "weight_kg_min": 100.0,
+        "fitness_mod": -2,
+        "fall_fracture_risk_increase_pct": 200.0,
+        "severe_endurance_penalty": true
+      }
+    ]
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Động cơ trao đổi chất sinh học xoay quanh 'Con số vàng 80.0 kg' với bể dự trữ năng lượng từ -2.200 kcal đến +3.700 kcal, phân tách cơ thể thành 7 ngưỡng thể trạng động từ Chết đói (<=35.0 kg), Kiệt quệ (35.1-50.0 kg) cho đến Béo phì (>=100.0 kg).",
+    "tactical_behavior_hint": "Vận động nặng (chạy nước rút, vung rìu chiến đấu) đốt Calo ở mức 0.130/tick — gấp 43.3 lần khi ngủ (0.003/tick) và gấp 8.1 lần khi đi bộ (0.016/tick), đồng thời người nặng 100 kg đốt năng lượng nhanh hơn 25% so với người 80 kg. Duy trì cân nặng trong Vùng Hoàn Hảo (75.1 - 84.9 kg) là bắt buộc để không bị trừ từ -20% đến -60% sát thương cận chiến (khi thiếu cân) hoặc bị tăng +50% tiêu hao thể lực và +200% nguy cơ gãy xương chân khi nhảy từ trên cao xuống (khi béo phì >=100 kg).",
+    "crafting_maintenance_hint": "Để tăng cân thần tốc (kích hoạt mũi tên đôi ^^ đạt +1.3E-5 kg/tick nhằm xóa trait Underweight), nhân vật phải nạp >400g Tinh bột hoặc >400g Chất béo (bơ, mỡ cá); để rèn luyện Sức mạnh nhanh hơn +30% XP, phải giữ lượng Đạm (Proteins) từ thịt/cá/trứng trong dải 50.0g - 300.0g."
+  },
+  "cross_module_foreign_keys": {
+    "completes_nutrition_system_doc01_doc02": "tpl_item:metabolic_sustenance_rations_01",
+    "governs_dynamic_underweight_removal_doc04": "sys_math:dynamic_underweight_80kg_eradication",
+    "amplifies_fracture_risk_doc13": "tpl_aff:anatomy_17parts_modifiers_and_wound_kinetics_01"
+  }
+}

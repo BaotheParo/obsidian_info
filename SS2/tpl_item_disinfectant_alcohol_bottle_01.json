@@ -1,0 +1,25 @@
+{
+  "blueprint_id": "tpl_item:disinfectant_alcohol_bottle_01",
+  "source_pz_reference": "Base.Disinfectant (Doc 02 - Section 1: Drainable & Medical)",
+  "dnd_ontology_hooks": {
+    "system_category": "MEDICAL_ANTISEPTIC",
+    "purity_percent": 90.0,
+    "application_method": "TOPICAL_OR_DRESSING"
+  },
+  "pz_math_engine": {
+    "weight_kg": 0.4,
+    "total_uses": 10,
+    "disinfection_potency": 1.0,
+    "infection_cure_probability": 0.95,
+    "pain_increase_immediate": 25.0
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Chai thủy tinh chứa cồn y tế khử trùng nồng độ cao dùng trong phẫu thuật dã chiến.",
+    "tactical_behavior_hint": "Giải quyết dứt điểm tình trạng nhiễm trùng vết thương vi khuẩn (infectedWound), làm sạch băng gạc bẩn để tái sử dụng.",
+    "crafting_maintenance_hint": "Dung dịch tiêu hao (Drainable 10 lần dùng); có thể điều chế tại dược viện giả kim bst_duoc_vien_gia_kim."
+  },
+  "cross_module_foreign_keys": {
+    "resolves_pending_tag": "item_tag:disinfectant_alcohol",
+    "cures_wound_state": "infectedWound"
+  }
+}

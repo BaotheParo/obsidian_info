@@ -1,0 +1,114 @@
+{
+  "blueprint_id": "tpl_trait:negative_flaws_and_dynamic_afflictions_01",
+  "source_pz_reference": "character_traits.txt / Negative Traits: Free Points vs Lethal Traps (Doc 04 - Section 3)",
+  "dnd_ontology_hooks": {
+    "system_category": "CHARACTER_FLAWS_AND_DRAWBACKS",
+    "point_buy_economy_role": "POINT_GENERATION_OFFSET"
+  },
+  "pz_math_engine": {
+    "manageable_offset_traits": [
+      {
+        "trait_id": "tpl_trait:smoker",
+        "pz_id": "base:smoker",
+        "point_grant": 4,
+        "passive_stress_accumulation": true,
+        "instant_stress_and_unhappiness_clear_on_use": true
+      },
+      {
+        "trait_id": "tpl_trait:high_thirst",
+        "pz_id": "base:highthirst",
+        "point_grant": 6,
+        "water_consumption_rate_multiplier": 2.0
+      },
+      {
+        "trait_id": "tpl_trait:prone_to_illness",
+        "pz_id": "base:pronetoillness",
+        "point_grant": 4,
+        "cold_catch_speed_in_rain_boost": true,
+        "zombification_progression_speed_boost": true,
+        "bite_or_scratch_transmission_chance_increase": 0.0
+      },
+      {
+        "trait_id": "tpl_trait:slow_reader",
+        "pz_id": "base:slowreader",
+        "point_grant": 2,
+        "literature_reading_time_penalty": true
+      },
+      {
+        "trait_id": "tpl_trait:weak_stomach",
+        "pz_id": "base:weakstomach",
+        "point_grant": 3,
+        "rotten_or_raw_food_poisoning_multiplier": true
+      },
+      {
+        "trait_id": "tpl_trait:short_sighted",
+        "pz_id": "base:shortsighted",
+        "point_grant": 2,
+        "foraging_radius_penalty": true,
+        "nullified_by_equipped_item_tag": "item_tag:corrective_eyeglasses"
+      },
+      {
+        "trait_id": "tpl_trait:underweight",
+        "pz_id": "base:underweight",
+        "point_grant": 6,
+        "fitness_level_penalty": -1,
+        "minor_melee_damage_penalty": true,
+        "permanent_removal_weight_threshold_kg": 80.0,
+        "typical_recovery_window_days_min": 3,
+        "typical_recovery_window_days_max": 5
+      },
+      {
+        "trait_id": "tpl_trait:slow_healer",
+        "pz_id": "base:slowhealer",
+        "point_grant": 6,
+        "wound_recovery_time_penalty": true
+      },
+      {
+        "trait_id": "tpl_trait:disorganized",
+        "pz_id": "base:disorganized",
+        "point_grant": 4,
+        "container_capacity_penalty": true
+      }
+    ],
+    "high_risk_crippling_traits": [
+      {
+        "trait_id": "tpl_trait:deaf",
+        "pz_id": "base:deaf",
+        "point_grant": 12,
+        "audio_perception_loss_pct": 100.0
+      },
+      {
+        "trait_id": "tpl_trait:sunday_driver",
+        "pz_id": "base:sundaydriver",
+        "point_grant": 1,
+        "max_vehicle_speed_cap_mph": 30.0,
+        "severe_torque_traction_penalty": true
+      },
+      {
+        "trait_id": "tpl_trait:asthmatic",
+        "pz_id": "base:asthmatic",
+        "point_grant": 5,
+        "endurance_depletion_rate_multiplier": 2.0,
+        "exhaustion_swing_threshold_hits_min": 3,
+        "exhaustion_swing_threshold_hits_max": 4
+      },
+      {
+        "trait_id": "tpl_trait:clumsy",
+        "pz_id": "base:clumsy",
+        "point_grant": 2,
+        "running_sound_radius_penalty": true,
+        "fence_vault_trip_fall_chance_boost": true
+      }
+    ]
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Hệ thống khiếm khuyết cơ thể và thói quen sinh hoạt chia làm 2 phân lớp rõ rệt: nhóm khiếm khuyết có thể khắc phục bằng kỷ luật sinh tồn/trang bị và nhóm tàn tật chí mạng làm tê liệt khả năng chiến đấu.",
+    "tactical_behavior_hint": "Nhóm tối ưu điểm (+26 đến +30 điểm) tận dụng cơ chế xóa bỏ động: đeo kính mắt triệt tiêu Cận thị (+2), ăn chất béo lên 80.0 kg trong 3-5 ngày xóa vĩnh viễn Thiếu cân (+6), mang bình nước tự uống hóa giải Khát nước gấp đôi (+6), và không ăn đồ sống hóa giải Dạ dày yếu (+3). Ngược lại, Hen suyễn (+5) làm mất thể lực gấp đôi khiến nhân vật kiệt sức chỉ sau 3-4 cú vung vũ khí, còn Lái xe/Điều khiển chậm (+1) khóa tốc độ ở 30 mph và làm phương tiện chết máy ngay khi vướng địa hình hoặc bị 2-3 kẻ địch cản đầu.",
+    "crafting_maintenance_hint": "Prone to Illness (+4) chỉ làm đẩy nhanh tốc độ phát bệnh nếu đã trúng độc hoặc dầm mưa lạnh chứ hoàn toàn không làm tăng xác suất nhiễm bệnh gốc (7% / 25% / 100%) khi bị cào hoặc cắn."
+  },
+  "cross_module_foreign_keys": {
+    "interacts_with_pathogen_doc01": "tpl_aff:lethal_necrotic_pathogen_01",
+    "interacts_with_nutrition_doc02": "tpl_item:metabolic_sustenance_rations_01",
+    "interacts_with_caravan_vehicles_doc06": "max_vehicle_speed_cap_mph"
+  }
+}

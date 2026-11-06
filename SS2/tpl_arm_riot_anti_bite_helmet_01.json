@@ -1,0 +1,33 @@
+{
+  "blueprint_id": "tpl_arm:riot_anti_bite_helmet_01",
+  "source_pz_reference": "Base.Hat_RiotHelmet (Doc 02 - Section 3: Protective Armor Registry)",
+  "dnd_ontology_hooks": {
+    "system_category": "ARMOR_HEAD_NECK_FULL",
+    "protection_class": "RIOT_POLICE_GRADE",
+    "speed_penalty_multiplier": 0.98
+  },
+  "pz_math_engine": {
+    "weight_kg": 2.0,
+    "bite_defense_percent": 100,
+    "scratch_defense_percent": 100,
+    "bullet_defense_percent": 65,
+    "covered_parts": [
+      "HEAD",
+      "NECK"
+    ],
+    "insulation_value": 0.45,
+    "wind_resistance": 0.6
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Mũ bảo hiểm chống bạo động bằng nhựa polymer cao phân tử gia cố sợi carbon, có kính chắn gió dày bảo vệ mặt và dải giáp cổ che kín yết hầu.",
+    "tactical_behavior_hint": "Khắc chế hoàn toàn đòn cắn tử vong (Bite 100%) của zombie vào vùng đầu và vùng cổ (Neck), triệt tiêu nguy cơ tử vong trong 10-20 giây do đứt động mạch.",
+    "crafting_maintenance_hint": "Khi nhận đòn cào cắn, độ bền mũ suy giảm dần; cần thay kính chắn hoặc dùng keo dán gia cố khi nứt vỡ."
+  },
+  "cross_module_foreign_keys": {
+    "protects_vital_parts": [
+      "part_head",
+      "part_neck"
+    ],
+    "blocks_affliction_id": "tpl_aff:lethal_necrotic_pathogen_01"
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "blueprint_id": "tpl_evt:emergent_164stories_stash_and_meta_director_01",
+  "source_pz_reference": "zombie/randomizedWorld/*, StashSystem, StashUtil.lua, IsoMetaGrid & SLSoundManager.java (Doc 14 - Section 2, 3 & 5)",
+  "dnd_ontology_hooks": {
+    "system_category": "PROCEDURAL_ENCOUNTER_TABLES_HIDDEN_CACHES_AND_OVERWORLD_DIRECTOR",
+    "encounter_subsystems_4": [
+      "RANDOMIZED_DEAD_SURVIVOR_RDS",
+      "RANDOMIZED_BUILDING_RB",
+      "RANDOMIZED_ZONE_STORY_RZS",
+      "RANDOMIZED_VEHICLE_STORY_RVS"
+    ]
+  },
+  "pz_math_engine": {
+    "total_randomized_world_stories": 164,
+    "exemplar_story_archetypes": {
+      "RDS_DEAD_SURVIVORS": [
+        {
+          "class": "RDSHockeyPsycho",
+          "spawns": [
+            "1_Masked_Slasher_Undead",
+            "Hockey_Mask",
+            "Base.Machete",
+            "Multiple_Slain_Corpses"
+          ]
+        },
+        {
+          "class": "RDSRatKing_B42",
+          "spawns": [
+            "Entangled_Dead_Rats_Cluster",
+            "Mouse_Traps",
+            "Rotten_Cheese"
+          ]
+        },
+        {
+          "class": "RDSRatWar_RDSDevouredByRats",
+          "spawns": [
+            "Plague_Victim_Corpse",
+            "Gnawed_Food_Stores"
+          ]
+        },
+        {
+          "class": "RDSTinFoilHat",
+          "spawns": [
+            "Foil_Insulated_Room",
+            "Tin_Foil_Hat",
+            "Active_Anomaly_Frequency_Radio"
+          ]
+        },
+        {
+          "class": "RDSRPGNight",
+          "spawns": [
+            "4_Player_Undead_At_Table",
+            "D20_Dice_And_Character_Sheets",
+            "Snacks"
+          ]
+        },
+        {
+          "class": "RDSCorpsePsycho_RDSSkeletonPsycho",
+          "spawns": [
+            "Dozens_Of_Pre_Outbreak_Corpses_In_Wardrobes_And_Under_Beds"
+          ]
+        },
+        {
+          "class": "RDSBleach",
+          "spawns": [
+            "Poisoned_Survivor_Corpse",
+            "Empty_Bleach_Bottle"
+          ]
+        },
+        {
+          "class": "RDSPokerNight",
+          "spawns": [
+            "4_Gambler_Undead",
+            "Cash_Poker_Chips_Whisky_Pistol"
+          ]
+        },
+        {
+          "class": "RDSPrisonEscapeWithPolice",
+          "spawns": [
+            "2_Inmate_Undead",
+            "2_Police_Officer_Undead"
+          ]
+        }
+      ],
+      "RB_SPECIAL_BUILDINGS": [
+        {
+          "class": "RBKateAndBaldspot",
+          "spawns": [
+            "Fractured_Leg_Kate_2nd_Floor_Bed",
+            "Hammer_Wielding_Bob"
+          ]
+        },
+        {
+          "class": "RBGunstoreSiege_RBPoliceSiege",
+          "spawns": [
+            "Shattered_Barricades",
+            "Spent_Shell_Casings",
+            "Fallen_Defenders"
+          ]
+        },
+        {
+          "class": "RBToiletPaper",
+          "container_override": "100_PCT_TOILET_PAPER_IN_ALL_CONTAINERS"
+        }
+      ],
+      "RZS_WILDERNESS_ZONES": [
+        {
+          "class": "RZSOccultActivity",
+          "spawns": [
+            "Candle_Pentagram_Circle",
+            "Animal_Bones_In_Deep_Forest"
+          ]
+        },
+        {
+          "class": "RZSMusicFest_RZSMusicFestStage",
+          "spawns": [
+            "Field_Stage_Audio_Rig",
+            "Electric_Guitars",
+            "Tents",
+            "Dozens_Of_Festival_Undead"
+          ]
+        },
+        {
+          "class": "RZSMurderScene",
+          "spawns": [
+            "Half_Buried_Grave",
+            "Bloody_Shovel"
+          ]
+        }
+      ],
+      "RVS_HIGHWAY_VEHICLES": [
+        {
+          "class": "RVSAnimalTrailerOnRoad_B42",
+          "spawns": [
+            "Overturned_Pickup_And_Livestock_Trailer",
+            "Roaming_Live_Cattle_Sheep_Pigs"
+          ]
+        },
+        {
+          "class": "RVSChangingTire",
+          "spawns": [
+            "Jacked_Vehicle",
+            "Spare_Tire_And_Lug_Wrench",
+            "Slain_Driver"
+          ]
+        },
+        {
+          "class": "RVSPoliceBlockadeShooting",
+          "spawns": [
+            "Cruiser_Barricade_Breach",
+            "Abandoned_Firearms_And_Bodies"
+          ]
+        }
+      ]
+    },
+    "stash_system_and_floorboard_caches": {
+      "spawn_only_on_special_zed": true,
+      "hidden_floorboard_tile_id": "floors_interior_tilesandwood_01_60",
+      "required_extraction_tool": "Crowbar",
+      "hidden_container_type": "GunBox_GunCache1",
+      "trapped_safehouse_ambush_zeds_min": 10,
+      "trapped_safehouse_ambush_zeds_max": 30
+    },
+    "invisible_meta_director_acoustics": {
+      "meta_gunfire_migration_radius_tiles_min": 200,
+      "meta_gunfire_migration_radius_tiles_max": 400,
+      "minor_meta_sounds": [
+        "Meta_Scream",
+        "Barking_Dog"
+      ],
+      "helicopter_hunt_event": {
+        "trigger_day_window_min": 6,
+        "trigger_day_window_max": 9,
+        "acoustic_attraction_radius_tiles_min": 500,
+        "outdoor_target_hover_duration_hours_range": [
+          3.0,
+          6.0
+        ],
+        "indoor_hidden_departure_time_hours": 1.0
+      }
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Bộ máy kiến tạo biến cố thế giới gồm 164 kịch bản hiện trường ngẫu nhiên (4 phân hệ: Xác chết kể chuyện RDS, Tòa nhà dị biệt RB, Hiện trường hoang dã RZS và Tai nạn đoàn xe RVS), hệ thống kho báu giấu dưới tấm ván sàn lỏng lẻo (cạy bằng Xà beng) và Đạo diễn Âm thanh Vô hình (SLSoundManager).",
+    "tactical_behavior_hint": "Biến mỗi chuyến đi trinh sát thành một ẩn số: một ngôi nhà bình thường có thể là hiện trường của tên sát nhân đeo mặt nạ cầm Dao quắm (RDSHockeyPsycho), ổ dịch Vua Chuột B42 (RDSRatKing) hoặc cái bẫy tử thần nhốt từ 10 đến 30 xác sống bên trong theo tấm Bản đồ Chú thích (trapped = true). Trên đường quốc lộ, sự kiện lật thùng kéo gia súc (RVSAnimalTrailerOnRoad) là cơ hội vàng để thu phục bò, cừu, lợn sống ngay trên đường. Ở tầng vĩ mô, tiếng nổ xa xăm (bán kính 200-400 ô) và đặc biệt là Sự kiện Săn lùng Trên không vào Ngày 6-9 (bán kính >500 ô, bám đuổi 3-6 giờ liên tục nếu bị phát hiện ngoài trời, hoặc bỏ đi sau 1 giờ nếu trốn kín) liên tục điều hướng hàng nghìn kẻ địch quét qua bản đồ.",
+    "crafting_maintenance_hint": "Xà beng (Crowbar) không chỉ là vũ khí cận chiến bền nhất (1/70) mà còn là chìa khóa bắt buộc để cạy tấm ván sàn bí mật (floors_interior_tilesandwood_01_60) thu hồi hòm quân nhu GunBox."
+  },
+  "cross_module_foreign_keys": {
+    "completes_aerial_lure_event_doc01_doc07": "tpl_evt:aerial_acoustic_lure_01",
+    "completes_annotated_stash_maps_doc05": "tpl_bas:subterranean_362_bunkers_and_safehouses_01",
+    "spawns_livestock_trailers_doc06_doc08": "tpl_veh:heavy_caravan_transport_52models_01",
+    "requires_crowbar_tool_doc11": "tpl_wpn:melee_6categories_and_maintenance_matrix_01"
+  }
+}

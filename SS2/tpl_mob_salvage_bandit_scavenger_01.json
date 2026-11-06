@@ -1,0 +1,25 @@
+{
+  "blueprint_id": "tpl_mob:salvage_bandit_scavenger_01",
+  "source_pz_reference": "Improvised Weapons Scavenger (Doc 02 - Section 3: Scavenged Blacksmithing)",
+  "dnd_ontology_hooks": {
+    "creature_type": "HUMANOID_OUTLAW",
+    "behavior_alignment": "CHAOTIC_HOSTILE",
+    "threat_tier": "VETERAN_SCAVENGER"
+  },
+  "pz_math_engine": {
+    "equipped_weapon": "tpl_wpn:scavenged_jawbone_morningstar_01",
+    "worn_armor": "tpl_arm:riot_anti_bite_helmet_01",
+    "health_hp": 120.0,
+    "melee_crit_chance": 0.5,
+    "movement_speed_tiles_per_sec": 1.4
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Lâm tặc thượng du trang bị nón bảo hộ chống cắn nhặt được từ xác cảnh sát, tay lăm lăm chùy xương bò sắc nhọn.",
+    "tactical_behavior_hint": "Tận dụng tỷ lệ bạo kích 50% của chùy xương hàm để phục kích người chơi từ các lùm cây rậm rạp theo kiểu hình sys_ai_ambush_hit_and_run.",
+    "crafting_maintenance_hint": "Khi tiêu diệt sẽ rơi ra chùy xương hàm bò và nón bảo hộ còn nguyên vẹn."
+  },
+  "cross_module_foreign_keys": {
+    "spawns_in_zone": "zone_rung_thieng_lam_chuong",
+    "drops_item_id": "tpl_wpn:scavenged_jawbone_morningstar_01"
+  }
+}

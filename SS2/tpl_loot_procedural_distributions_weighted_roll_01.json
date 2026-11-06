@@ -1,0 +1,111 @@
+{
+  "blueprint_id": "tpl_loot:procedural_distributions_weighted_roll_01",
+  "source_pz_reference": "ProceduralDistributions.lua (Doc 05 - Section 3)",
+  "dnd_ontology_hooks": {
+    "system_category": "CONTAINER_LOOT_GENERATION_AND_WEIGHTED_TABLES",
+    "loot_rarity_scaling": {
+      "COMMON": "Weight >= 10.0",
+      "UNCOMMON": "Weight 1.0 - 5.0",
+      "RARE": "Weight 0.1 - 0.9",
+      "LEGENDARY": "Weight 0.001 - 0.05"
+    }
+  },
+  "pz_math_engine": {
+    "loot_items_registry": [
+      {
+        "script_id": "Base.Sledgehammer",
+        "weight_range": [
+          0.01,
+          0.1
+        ],
+        "target_tables": [
+          "CrateTools",
+          "GarageTools",
+          "ArmyHangarTools",
+          "FireStorageTools"
+        ],
+        "tactical_purpose": "Wall/Security gate breaching"
+      },
+      {
+        "script_id": "Base.Generator",
+        "weight_range": [
+          10.0,
+          10.0
+        ],
+        "target_tables": [
+          "CrateGenerator"
+        ],
+        "tactical_purpose": "Blackout electrical power backup"
+      },
+      {
+        "script_id": "Base.ElectronicsMag4",
+        "weight_range": [
+          1.0,
+          5.0
+        ],
+        "target_tables": [
+          "BookstoreMisc",
+          "LibraryBooks",
+          "PostOfficeBooks"
+        ],
+        "tactical_purpose": "Generator operation recipe unlock"
+      },
+      {
+        "script_id": "Base.Katana",
+        "weight_range": [
+          0.001,
+          8.0
+        ],
+        "target_tables": [
+          "MedievalWeaponsJapan",
+          "ComicStoreCounter",
+          "CyberCafeDesk"
+        ],
+        "tactical_purpose": "Ultimate two-handed melee slashing"
+      },
+      {
+        "script_id": "Base.AssaultRifle",
+        "weight_range": [
+          4.0,
+          10.0
+        ],
+        "target_tables": [
+          "ArmyStorageGuns",
+          "SWATStorageGuns",
+          "DrugLabGuns"
+        ],
+        "tactical_purpose": "Military assault automatic firepower"
+      },
+      {
+        "script_id": "Base.Shotgun",
+        "weight_range": [
+          10.0,
+          10.0
+        ],
+        "target_tables": [
+          "FirearmWeapons",
+          "DrugLabGuns",
+          "PawnShopGunsSpecial"
+        ],
+        "tactical_purpose": "Crowd control multi-target projectile blast"
+      },
+      {
+        "script_id": "Base.Antibiotics",
+        "weight_range": [
+          0.5,
+          4.0
+        ],
+        "target_tables": [
+          "DoctorTools",
+          "DoctorOutfit",
+          "BathroomCabinet"
+        ],
+        "tactical_purpose": "Bacterial infection healing"
+      }
+    ]
+  },
+  "semantic_descriptors": {
+    "vietnamese_translation": "Khuôn mẫu bảng loot xác suất rơi đồ từ ProceduralDistributions cho 7 bảo bối sinh tồn B42",
+    "dnd_roleplay_anchor": "Bảng rơi vật phẩm bảo vật ngẫu nhiên theo trọng số xúc xắc"
+  }
+}

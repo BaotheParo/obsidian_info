@@ -1,0 +1,204 @@
+{
+  "blueprint_id": "tpl_evt:early_9day_live_instructional_schedule_01",
+  "source_pz_reference": "RadioData.xml / Life and Living TV (Channel 203) 9-Day Schedule (Doc 07 - Section 3.1 & Section 7)",
+  "dnd_ontology_hooks": {
+    "system_category": "TIME_LIMITED_WORLD_LORE_AND_TUTORIAL_TRANSMISSION",
+    "skill_progression_tier": "EARLY_GAME_ACCELERATOR"
+  },
+  "pz_math_engine": {
+    "channel_id": 203,
+    "active_day_start": 0,
+    "active_day_end": 8,
+    "safe_listening_volume_bars_min": 1,
+    "safe_listening_volume_bars_max": 2,
+    "base_episode_xp_reference": 75,
+    "vol1_boosted_episode_xp_min": 225,
+    "vol1_boosted_episode_xp_max": 300,
+    "broadcast_slots_25": [
+      {
+        "day": 0,
+        "hour": "06:00",
+        "program": "The Cook Show",
+        "skill_code": "COO+1",
+        "recipe_unlock": null
+      },
+      {
+        "day": 0,
+        "hour": "12:00",
+        "program": "Woodcraft",
+        "skill_code": "CRP+1",
+        "recipe_unlock": null
+      },
+      {
+        "day": 0,
+        "hour": "18:00",
+        "program": "Exposure Survival",
+        "skill_code": "FIS+1",
+        "recipe_unlock": null
+      },
+      {
+        "day": 1,
+        "hour": "06:00",
+        "program": "The Cook Show",
+        "skill_code": "COO+1",
+        "recipe_unlock": null
+      },
+      {
+        "day": 1,
+        "hour": "12:00",
+        "program": "Woodcraft",
+        "skill_code": "CRP+1",
+        "recipe_unlock": null
+      },
+      {
+        "day": 1,
+        "hour": "18:00",
+        "program": "Exposure Survival",
+        "skill_code": "FRM+1",
+        "recipe_unlock": null
+      },
+      {
+        "day": 2,
+        "hour": "06:00",
+        "program": "The Cook Show",
+        "skill_code": "COO+1",
+        "recipe_unlock": null
+      },
+      {
+        "day": 2,
+        "hour": "12:00",
+        "program": "Woodcraft",
+        "skill_code": "CRP+1",
+        "recipe_unlock": null
+      },
+      {
+        "day": 2,
+        "hour": "18:00",
+        "program": "Exposure Survival",
+        "skill_code": "FIS+1",
+        "recipe_unlock": "Make Fishing Rod"
+      },
+      {
+        "day": 3,
+        "hour": "06:00",
+        "program": "The Cook Show",
+        "skill_code": "COO+1",
+        "recipe_unlock": null
+      },
+      {
+        "day": 3,
+        "hour": "12:00",
+        "program": "Woodcraft",
+        "skill_code": "CRP+1",
+        "recipe_unlock": null
+      },
+      {
+        "day": 3,
+        "hour": "18:00",
+        "program": "Exposure Survival",
+        "skill_code": null,
+        "recipe_unlock": null
+      },
+      {
+        "day": 4,
+        "hour": "06:00",
+        "program": "The Cook Show",
+        "skill_code": "COO+1",
+        "recipe_unlock": null
+      },
+      {
+        "day": 4,
+        "hour": "12:00",
+        "program": "Woodcraft",
+        "skill_code": "CRP+1",
+        "recipe_unlock": null
+      },
+      {
+        "day": 4,
+        "hour": "18:00",
+        "program": "Exposure Survival",
+        "skill_code": "FOR+1",
+        "recipe_unlock": null
+      },
+      {
+        "day": 5,
+        "hour": "06:00",
+        "program": "The Cook Show",
+        "skill_code": "COO+1",
+        "recipe_unlock": "Make Pie Dough"
+      },
+      {
+        "day": 5,
+        "hour": "12:00",
+        "program": "Woodcraft",
+        "skill_code": "CRP+1",
+        "recipe_unlock": null
+      },
+      {
+        "day": 5,
+        "hour": "18:00",
+        "program": "Exposure Survival",
+        "skill_code": "TRA+1",
+        "recipe_unlock": "Make Crate Trap"
+      },
+      {
+        "day": 6,
+        "hour": "06:00",
+        "program": "The Cook Show",
+        "skill_code": "COO+1",
+        "recipe_unlock": "Make Cake Batter"
+      },
+      {
+        "day": 6,
+        "hour": "12:00",
+        "program": "Woodcraft",
+        "skill_code": "CRP+1",
+        "recipe_unlock": null
+      },
+      {
+        "day": 6,
+        "hour": "18:00",
+        "program": "Exposure Survival",
+        "skill_code": "FOR+1",
+        "recipe_unlock": null
+      },
+      {
+        "day": 7,
+        "hour": "06:00",
+        "program": "The Cook Show",
+        "skill_code": "COO+1",
+        "recipe_unlock": null
+      },
+      {
+        "day": 7,
+        "hour": "12:00",
+        "program": "Woodcraft",
+        "skill_code": null,
+        "recipe_unlock": null
+      },
+      {
+        "day": 7,
+        "hour": "18:00",
+        "program": "Exposure Survival",
+        "skill_code": "CRP+1",
+        "recipe_unlock": null
+      },
+      {
+        "day": 8,
+        "hour": "06:00",
+        "program": "The Cook Show",
+        "skill_code": "COO+1",
+        "recipe_unlock": null
+      }
+    ]
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Chuỗi tín hiệu truyền đạt tri thức định kỳ phát đi vào 3 mốc giờ cố định mỗi ngày (06:00, 12:00, 18:00) trong đúng 9 ngày đầu tiên của thế giới trước khi toàn bộ mạng lưới truyền dẫn sụp đổ thành nhiễu trắng vào sau 06:00 sáng Ngày 8.",
+    "tactical_behavior_hint": "Tạo ra áp lực quản lý thời gian cực lớn trong tuần đầu tiên: người chơi phải lùng sục Sách Kỹ năng Tập 1 để đọc xong trước giờ phát sóng (biến 75 XP gốc thành 225-300 XP), đồng thời phải vặn nhỏ âm lượng thiết bị xuống mức 1-2 vạch để sóng âm không lọt qua tường thu hút xác sống bên ngoài.",
+    "crafting_maintenance_hint": "Trực tiếp mở khóa 4 công thức sinh tồn sơ khởi ngay khi theo dõi: Cần câu cá (Ngày 2 - 18:00), Vỏ bánh nướng (Ngày 5 - 06:00), Bẫy hộp gỗ (Ngày 5 - 18:00) và Bột bánh ngọt (Ngày 6 - 06:00)."
+  },
+  "cross_module_foreign_keys": {
+    "interacts_with_sound_radius_doc01": "sys_math:ai_sensory_perception_cone_and_sound_wave",
+    "amplified_by_fast_learner_doc04": "tpl_trait:fast_learner"
+  }
+}

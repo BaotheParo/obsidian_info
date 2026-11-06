@@ -1,0 +1,104 @@
+{
+  "blueprint_id": "tpl_rcp:pottery_and_glass_kiln_01",
+  "source_pz_reference": "Pottery, Brickmaking & Glassmaking Recipes (Doc 03 - Section 2 Age 1/3 & Section 4.3, 4.4)",
+  "dnd_ontology_hooks": {
+    "crafting_discipline": "MASONRY_POTTERY_AND_GLASSBLOWING",
+    "tech_age": "AGE_1_CRUDE_FORGE",
+    "advanced_glass_tech_age": "AGE_3_ALCHEMICAL_BLACKPOWDER"
+  },
+  "pz_math_engine": {
+    "water_shutoff_deadline_days": 30,
+    "dome_kiln_glass_fusion_temp_c": 1200.0,
+    "recipes": [
+      {
+        "recipe_id": "PressClayBrick",
+        "workstation": "handpress",
+        "inputs": [
+          "mat_tag:river_clay"
+        ],
+        "output": "tpl_item:unfired_clay_brick",
+        "time_ticks": 50,
+        "xp_award": {
+          "skill:pottery": 5
+        }
+      },
+      {
+        "recipe_id": "PressClayShingle",
+        "workstation": "handpress",
+        "inputs": [
+          "mat_tag:river_clay"
+        ],
+        "output": "tpl_item:unfired_clay_shingle",
+        "time_ticks": 50,
+        "xp_award": {
+          "skill:pottery": 5
+        }
+      },
+      {
+        "recipe_id": "PressBarMold",
+        "workstation": "pottery_wheel",
+        "inputs": [
+          "mat_tag:river_clay"
+        ],
+        "output": "tpl_item:refractory_ingot_bar_mold",
+        "time_ticks": 100,
+        "xp_award": {
+          "skill:pottery": 5
+        }
+      },
+      {
+        "recipe_id": "MeltSand_And_MeltGlass",
+        "workstation": "dome_kiln",
+        "min_temperature_c": 1200.0,
+        "inputs": [
+          "mat_tag:quartz_sand",
+          "mat_tag:plant_soda_ash"
+        ],
+        "output": "tpl_item:molten_glass_batch",
+        "time_ticks": 20,
+        "xp_award": {}
+      },
+      {
+        "recipe_id": "MakeGlassJar",
+        "workstation": "dome_kiln",
+        "min_temperature_c": 1200.0,
+        "inputs": [
+          "tpl_item:molten_glass_batch",
+          "tool_tag:glass_blowpipe (mode:keep)"
+        ],
+        "output": "tpl_item:airtight_glass_jar",
+        "time_ticks": 100,
+        "xp_award": {
+          "skill:glassmaking": 75
+        }
+      },
+      {
+        "recipe_id": "MakeGlassBottle",
+        "workstation": "dome_kiln",
+        "min_temperature_c": 1200.0,
+        "inputs": [
+          "tpl_item:molten_glass_batch",
+          "tool_tag:glass_blowpipe (mode:keep)"
+        ],
+        "output": "tpl_item:alchemical_glass_bottle",
+        "time_ticks": 120,
+        "xp_award": {
+          "skill:glassmaking": 60
+        }
+      }
+    ]
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Chuỗi công nghệ đất nung và silicat: dùng máy ép tay và bàn xoay gốm định hình đất sét bờ sông thành gạch xây, ngói lợp, gạch chịu nhiệt (Firebricks) và khuôn đúc thỏi kim loại; sau đó nung trong lò vòm (Dome Kiln) đốt than củi đạt ngưỡng >1.200°C để nấu chảy cát thạch anh trộn tro Soda thành thủy tinh lỏng thổi chai lọ.",
+    "tactical_behavior_hint": "Giải pháp sống còn để vượt qua mốc cạn kiệt nguồn nước tự nhiên sau ngày thứ 30 (nhờ chum gốm hứng nước mưa vĩnh cửu) và bảo quản nông sản ngâm chua (Jarring) qua mùa đông bằng lọ thủy tinh kín khí.",
+    "crafting_maintenance_hint": "Khuôn đúc thỏi (PressBarMold - 100 ticks) và Gạch chịu nhiệt (Firebricks) là điều kiện tiên quyết bắt buộc để xây dựng Lò luyện quặng (Furnace I) và Lò rèn (Forge I) của Thời kỳ 2."
+  },
+  "cross_module_foreign_keys": {
+    "required_workstations": [
+      "pottery_wheel",
+      "handpress",
+      "dome_kiln"
+    ],
+    "unlocks_metallurgy_blueprint": "tpl_rcp:blacksmith_metallurgy_01"
+  }
+}

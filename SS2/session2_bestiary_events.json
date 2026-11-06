@@ -1,0 +1,1915 @@
+{
+  "session": "Session 2 - Bestiary, AI & Events",
+  "source_doc": "Doc 01, Doc 02, Doc 05, Doc 08, Doc 09, Doc 10, Doc 11, Doc 14",
+  "total_items": 20,
+  "blueprints": [
+    {
+      "blueprint_id": "tpl_mob:sensory_horde_undead_01",
+      "source_pz_reference": "IsoZombie / PZPathFind64 / PZPopMan64 (Doc 01 - Section 2 & Section 4: Horde Dynamics)",
+      "dnd_ontology_hooks": {
+        "creature_type": "UNDEAD",
+        "behavior_alignment": "UNALIGNED_PREDATORY",
+        "sensory_capabilities": [
+          "VISION_CONE_120",
+          "GRID_WAVE_HEARING",
+          "OLFACTORY_BLOOD_SENSE"
+        ]
+      },
+      "pz_math_engine": {
+        "vision_fov_degrees": 120.0,
+        "lighting_los_raycast_hz": 60,
+        "hearing_sound_threshold_blocks": {
+          "footstep_walk": 4,
+          "footstep_sprint": 12,
+          "window_smash": 18,
+          "gunshot_shotgun": 150
+        },
+        "blood_scent_detection_radius": 25.0,
+        "attack_transmission_probabilities": {
+          "scratch": 0.07,
+          "laceration": 0.25,
+          "bite": 1.0
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Thực thể xác chết biết đi mang dấu hiệu hoại tử, cơ hàm biến dạng và móng tay sắc nhọn dính máu đông.",
+        "tactical_behavior_hint": "Vận hành theo máy trạng thái kích thích giác quan: chuyển từ Lang Thang (WANDER) sang Điều Tra (INVESTIGATE) khi bắt được sóng âm hoặc mùi máu; chuyển sang Truy Đuổi (PURSUIT) khi mục tiêu nằm trong nón nhìn 120 độ có đường ngắm quang học rõ ràng.",
+        "crafting_maintenance_hint": "Khi tiêu diệt có thể phân giải xác chết để lấy quần áo cũ, mảnh vải rách hoặc mẫu máu nhiễm bệnh."
+      },
+      "cross_module_foreign_keys": {
+        "inflicts_affliction_id": "tpl_aff:lethal_necrotic_pathogen_01",
+        "native_pathfinder_module": "PZPathFind64.dll",
+        "virtual_population_manager": "PZPopMan64.dll"
+      }
+    },
+    {
+      "blueprint_id": "tpl_evt:aerial_acoustic_lure_01",
+      "source_pz_reference": "MetaEvents / HelicopterEvent (Doc 01 - Section 4: Metagame Events)",
+      "dnd_ontology_hooks": {
+        "system_category": "WORLD_META_EVENT",
+        "threat_level": "EXTREME_MIGRATION",
+        "event_frequency_days": [
+          6,
+          12
+        ]
+      },
+      "pz_math_engine": {
+        "event_sound_radius_blocks": 250.0,
+        "hover_duration_game_minutes": [
+          60,
+          180
+        ],
+        "virtual_zombie_pull_velocity": 0.85,
+        "event_flight_pattern": "ORBITING_OVER_TARGET"
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Hiện tượng âm thanh di động cực lớn trên không trung (máy bay trực thăng hoặc đại phong lôi chấn động).",
+        "tactical_behavior_hint": "Âm thanh vang dội 250 blocks kích hoạt toàn bộ thực thể Undead trên hàng chục chunk rừng và đô thị chuyển sang trạng thái di cư ồ ạt, phá vỡ hoàn toàn sự an toàn của các căn cứ định cư.",
+        "crafting_maintenance_hint": "Chỉ có thể phòng tránh bằng cách trú ẩn sâu trong nhà kín trước khi sự kiện bắt đầu, che rèm cửa và tắt toàn bộ nguồn sáng."
+      },
+      "cross_module_foreign_keys": {
+        "affects_entity_id": "tpl_mob:sensory_horde_undead_01",
+        "monitored_by_system": "sys_ai_sensory"
+      }
+    },
+    {
+      "blueprint_id": "tpl_mob:animal_wildlife_cervidae_01",
+      "source_pz_reference": "zombie.characters.animals (Doc 01 - Section 3: Animal Systems - Cervidae & Wild Game)",
+      "dnd_ontology_hooks": {
+        "creature_type": "BEAST",
+        "behavior_alignment": "UNALIGNED_HERBIVORE",
+        "sensory_capabilities": [
+          "VISION_CONE_300",
+          "ACUTE_HEARING",
+          "UPWIND_OLFACTORY"
+        ]
+      },
+      "pz_math_engine": {
+        "catalog_species": [
+          "Buck",
+          "Doe",
+          "Fawn",
+          "Boar",
+          "Rabbit",
+          "Raccoon"
+        ],
+        "vision_fov_degrees": 300.0,
+        "hearing_detection_radius": 35.0,
+        "flee_speed_multiplier": 1.75,
+        "migration_group_size": [
+          3,
+          8
+        ],
+        "tracking_footprint_decay_hours": 12.0
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Thú rừng hoang dã (hươu sao, nai sừng tấm, lợn rừng) có khứu giác và thính giác cực kỳ nhạy bén, tầm nhìn ngoại vi mở rộng đến 300 độ.",
+        "tactical_behavior_hint": "Di chuyển theo bầy đàn (MigrationGroup). Luôn tháo chạy khi phát hiện tiếng chân người hoặc zombie trong bán kính 35 blocks; để lại dấu vết chân cỏ dập (AnimalTracks) cho thợ săn lần theo.",
+        "crafting_maintenance_hint": "Khi săn bắn thành công mang lại thịt tươi nguyên tảng giàu protein và da thú thô (Raw_Hide) để thuộc da tại trạm entity_leather_prep."
+      },
+      "cross_module_foreign_keys": {
+        "harvested_at_station": "tpl_bas:husbandry_processing_stations_01",
+        "tracks_system_id": "AnimalTracks"
+      }
+    },
+    {
+      "blueprint_id": "tpl_mob:animal_livestock_bovine_01",
+      "source_pz_reference": "zombie.characters.animals (Doc 01 - Section 3: Animal Systems - Bovines & Ovines)",
+      "dnd_ontology_hooks": {
+        "creature_type": "BEAST_DOMESTIC",
+        "behavior_alignment": "UNALIGNED_PASSIVE",
+        "husbandry_tier": "SELECTIVE_BREEDING"
+      },
+      "pz_math_engine": {
+        "catalog_species": [
+          "Bull",
+          "Cow",
+          "Calf",
+          "Sheep",
+          "Lamb",
+          "Sow",
+          "Piglet"
+        ],
+        "gestation_period_game_days": 28.0,
+        "milk_yield_liters_per_day": [
+          4.0,
+          12.0
+        ],
+        "wool_yield_kg_per_shear": [
+          2.5,
+          5.0
+        ],
+        "genetic_traits": [
+          "SIZE",
+          "MILK_YIELD",
+          "GROWTH_RATE",
+          "TAMENESS"
+        ]
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Gia súc chăn nuôi thuần dưỡng (bò sữa, bò mộng, cừu, heo) sở hữu bộ gene di truyền qua các thế hệ phối giống có chọn lọc.",
+        "tactical_behavior_hint": "Cần được bảo vệ trong chuồng trại kiên cố; phát ra tiếng kêu khi đói hoặc bị zombie đe dọa, có nguy cơ thu hút bầy zombie nếu đồn trại bị hở tường rào.",
+        "crafting_maintenance_hint": "Cung cấp nguồn sữa tươi ổn định để làm bơ (Butter) tại entity_butter_churn và lông cừu để kéo sợi tại entity_spinning_wheel."
+      },
+      "cross_module_foreign_keys": {
+        "requires_workstation_hook": "tpl_bas:husbandry_processing_stations_01",
+        "uses_genetics_engine": "AnimalGenomeDefinitions"
+      }
+    },
+    {
+      "blueprint_id": "tpl_mob:salvage_bandit_scavenger_01",
+      "source_pz_reference": "Improvised Weapons Scavenger (Doc 02 - Section 3: Scavenged Blacksmithing)",
+      "dnd_ontology_hooks": {
+        "creature_type": "HUMANOID_OUTLAW",
+        "behavior_alignment": "CHAOTIC_HOSTILE",
+        "threat_tier": "VETERAN_SCAVENGER"
+      },
+      "pz_math_engine": {
+        "equipped_weapon": "tpl_wpn:scavenged_jawbone_morningstar_01",
+        "worn_armor": "tpl_arm:riot_anti_bite_helmet_01",
+        "health_hp": 120.0,
+        "melee_crit_chance": 0.5,
+        "movement_speed_tiles_per_sec": 1.4
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Lâm tặc thượng du trang bị nón bảo hộ chống cắn nhặt được từ xác cảnh sát, tay lăm lăm chùy xương bò sắc nhọn.",
+        "tactical_behavior_hint": "Tận dụng tỷ lệ bạo kích 50% của chùy xương hàm để phục kích người chơi từ các lùm cây rậm rạp theo kiểu hình sys_ai_ambush_hit_and_run.",
+        "crafting_maintenance_hint": "Khi tiêu diệt sẽ rơi ra chùy xương hàm bò và nón bảo hộ còn nguyên vẹn."
+      },
+      "cross_module_foreign_keys": {
+        "spawns_in_zone": "zone_rung_thieng_lam_chuong",
+        "drops_item_id": "tpl_wpn:scavenged_jawbone_morningstar_01"
+      }
+    },
+    {
+      "blueprint_id": "tpl_zone:knox_11_regions_distribution_matrix_01",
+      "source_pz_reference": "ProceduralDistributions.lua & media/maps/ (Doc 05 - Section 1 & 2)",
+      "dnd_ontology_hooks": {
+        "system_category": "WORLD_EXPLORATION_AND_REGIONAL_DANGER_MATRIX",
+        "danger_tier_classification": {
+          "LOW": "Riverside / Irvington (Tier 1 Safe Zone)",
+          "MEDIUM": "Rosewood / Fallas Lake (Tier 2 Early Bastion)",
+          "HIGH": "Muldraugh / Brandenburg / Valley Station / March Ridge (Tier 3 Industrial)",
+          "EXTREME": "West Point / Louisville Checkpoint (Tier 4 Endgame Extraction)"
+        }
+      },
+      "pz_math_engine": {
+        "total_regions": 11,
+        "regions_registry": [
+          {
+            "zone_id": "zone:rosewood",
+            "base_density": 0.35,
+            "tier": "MEDIUM",
+            "loot_priority": [
+              "FireStation",
+              "PoliceArmory",
+              "Bookstore",
+              "PrisonArmory"
+            ]
+          },
+          {
+            "zone_id": "zone:riverside",
+            "base_density": 0.2,
+            "tier": "LOW",
+            "loot_priority": [
+              "HardwareStore",
+              "Pharmacy",
+              "SchoolLibrary",
+              "GatedCommunity"
+            ]
+          },
+          {
+            "zone_id": "zone:muldraugh",
+            "base_density": 0.85,
+            "tier": "HIGH",
+            "loot_priority": [
+              "LargeWarehousesNorth",
+              "CortmanMedical",
+              "DixieHighwayShops"
+            ]
+          },
+          {
+            "zone_id": "zone:westpoint",
+            "base_density": 1.6,
+            "tier": "EXTREME",
+            "loot_priority": [
+              "TwiggysGunShop",
+              "HardwareStore",
+              "PoliceDepartment"
+            ]
+          },
+          {
+            "zone_id": "zone:brandenburg",
+            "base_density": 1.2,
+            "tier": "HIGH",
+            "loot_priority": [
+              "ShipyardMechanical",
+              "MetalBandsawShop",
+              "ContainerTerminal"
+            ]
+          },
+          {
+            "zone_id": "zone:irvington_echocreek",
+            "base_density": 0.4,
+            "tier": "LOW",
+            "loot_priority": [
+              "RanchingFacilities",
+              "ClayCreekBed",
+              "Flint deposits"
+            ]
+          },
+          {
+            "zone_id": "zone:louisville",
+            "base_density": 5.0,
+            "tier": "EXTREME",
+            "loot_priority": [
+              "MilitaryCheckpoint",
+              "StPeregrinHospital",
+              "ArtifactMuseumKatana"
+            ]
+          },
+          {
+            "zone_id": "zone:fallas_lake",
+            "base_density": 0.45,
+            "tier": "MEDIUM",
+            "loot_priority": [
+              "RuralGunStore",
+              "GeneralStore",
+              "GasStation"
+            ]
+          },
+          {
+            "zone_id": "zone:valley_station",
+            "base_density": 1.4,
+            "tier": "HIGH",
+            "loot_priority": [
+              "CrossroadMall",
+              "IntersectionGunStore"
+            ]
+          },
+          {
+            "zone_id": "zone:march_ridge",
+            "base_density": 1.1,
+            "tier": "HIGH",
+            "loot_priority": [
+              "MilitaryDormitories",
+              "ElementarySchool",
+              "PostOffice"
+            ]
+          }
+        ]
+      },
+      "semantic_descriptors": {
+        "vietnamese_translation": "Ma trận phân bổ 11 vùng địa lý Knox County, mật độ xác sống và các điểm nóng tài nguyên tối thượng",
+        "dnd_roleplay_anchor": "Bản đồ phân vùng lãnh thổ từ vùng ven sông an toàn tới đại đô thị tử địa"
+      }
+    },
+    {
+      "blueprint_id": "tpl_evt:annotated_maps_and_survivor_house_01",
+      "source_pz_reference": "WorldEvents & IsoMetaGrid (Doc 05 - Section 5)",
+      "dnd_ontology_hooks": {
+        "system_category": "DYNAMIC_META_WORLD_EVENTS_AND_MAP_MARKERS",
+        "event_type": "SURVIVOR_BARRICADE_AND_PARTY_STORY"
+      },
+      "pz_math_engine": {
+        "annotated_map_drop_rate": 0.015,
+        "survivor_house_spawn_rate": 0.05,
+        "survivor_house_mechanics": {
+          "barricade_planks_per_window": 3,
+          "plank_hp": 1000,
+          "kitchen_canned_food_chance": 1.0,
+          "wardrobe_weapon_cache_chance": 0.6,
+          "inhabitant_zombies_min": 3,
+          "inhabitant_zombies_max": 8
+        },
+        "party_house_mechanics": {
+          "zombie_hat_cosmetics": "Base.Hat_Party",
+          "cake_food_spawn": "Base.CakeSliced",
+          "audio_record_spawn": "Base.Vinyl_MusicRecord"
+        }
+      },
+      "semantic_descriptors": {
+        "vietnamese_translation": "Hệ thống sự kiện bản đồ chú thích, nhà cố thủ đóng ván gỗ 3 tầng và nhà tiệc tùng",
+        "dnd_roleplay_anchor": "Bản đồ kho báu viết tay và cứ điểm cố thủ của người tiền nhiệm"
+      }
+    },
+    {
+      "blueprint_id": "tpl_mob:freshwater_21_fish_and_tension_engine_01",
+      "source_pz_reference": "TensionUI.lua & fishing_properties.lua (Doc 08 - Section 4)",
+      "dnd_ontology_hooks": {
+        "creature_category": "AQUATIC_FAUNA_AND_TROPHY_LEVIATHANS",
+        "skill_proficiency": "skill:fishing"
+      },
+      "pz_math_engine": {
+        "total_fish_species": 21,
+        "peak_bite_windows": [
+          "04:00-07:00",
+          "18:00-21:00"
+        ],
+        "peak_bite_rate_bonus_pct": 100.0,
+        "winter_subzero_bite_penalty_pct_range": [
+          50.0,
+          70.0
+        ],
+        "tension_gauge_zones": [
+          "GREEN_SAFE_REEL",
+          "YELLOW_WARNING",
+          "RED_CRITICAL_LINE_SNAP"
+        ],
+        "species_21_registry": [
+          {
+            "id": "Base.AligatorGar",
+            "max_cm": 180,
+            "max_kg": 45.0,
+            "trophy_cm": 243,
+            "trophy_kg": 150.0,
+            "predator": true,
+            "lures": {
+              "BaitFish": 0.7,
+              "FreshMeat": 0.5,
+              "Leech": 0.5,
+              "Worm": 0.5
+            }
+          },
+          {
+            "id": "Base.BlueCatfish",
+            "max_cm": 117,
+            "max_kg": 32.0,
+            "trophy_cm": 165,
+            "trophy_kg": 68.0,
+            "predator": true,
+            "lures": {
+              "FreshMeat": 0.7,
+              "Worm": 0.5,
+              "Dough_Cheese": 0.5
+            }
+          },
+          {
+            "id": "Base.FlatheadCatfish",
+            "max_cm": 140,
+            "max_kg": 27.0,
+            "trophy_cm": 147,
+            "trophy_kg": 55.0,
+            "predator": true,
+            "lures": {
+              "FreshMeat": 0.7,
+              "Worm": 0.5,
+              "FattyFood": 0.5
+            }
+          },
+          {
+            "id": "Base.Paddlefish",
+            "max_cm": 150,
+            "max_kg": 27.0,
+            "trophy_cm": 220,
+            "trophy_kg": 90.0,
+            "predator": false,
+            "lures": {
+              "AllSmallBaits_Plankton": 0.1
+            }
+          },
+          {
+            "id": "Base.Muskellunge",
+            "max_cm": 101,
+            "max_kg": 18.0,
+            "trophy_cm": 127,
+            "trophy_kg": 32.0,
+            "predator": true,
+            "lures": {
+              "BaitFish": 0.7,
+              "JigLure": 0.5,
+              "Meat": 0.5
+            }
+          },
+          {
+            "id": "Base.StripedBass",
+            "max_cm": 76,
+            "max_kg": 9.0,
+            "trophy_cm": 90,
+            "trophy_kg": 15.0,
+            "predator": false,
+            "lures": {
+              "BaitFish": 0.7,
+              "Worm": 0.7,
+              "Leech": 0.5
+            }
+          },
+          {
+            "id": "Base.Walleye",
+            "max_cm": 80,
+            "max_kg": 9.0,
+            "trophy_cm": 88,
+            "trophy_kg": 13.0,
+            "predator": false,
+            "lures": {
+              "Insects": 0.7,
+              "BaitFish": 0.7,
+              "Leech": 0.7
+            }
+          },
+          {
+            "id": "Base.FreshwaterDrum",
+            "max_cm": 76,
+            "max_kg": 4.5,
+            "trophy_cm": 95,
+            "trophy_kg": 24.5,
+            "predator": false,
+            "lures": {
+              "Worm": 0.7,
+              "Dough_Bread": 0.7,
+              "Leech": 0.5
+            }
+          },
+          {
+            "id": "Base.LargemouthBass",
+            "max_cm": 51,
+            "max_kg": 2.8,
+            "trophy_cm": 75,
+            "trophy_kg": 10.0,
+            "predator": false,
+            "lures": {
+              "BaitFish": 0.7,
+              "Worm": 0.7,
+              "Leech": 0.5
+            }
+          },
+          {
+            "id": "Base.SmallmouthBass",
+            "max_cm": 41,
+            "max_kg": 2.3,
+            "trophy_cm": 55,
+            "trophy_kg": 5.0,
+            "predator": false,
+            "lures": {
+              "BaitFish": 0.7,
+              "Worm": 0.7,
+              "Leech": 0.5
+            }
+          },
+          {
+            "id": "Base.ChannelCatfish",
+            "max_cm": 30,
+            "max_kg": 2.3,
+            "trophy_cm": 80,
+            "trophy_kg": 26.0,
+            "predator": false,
+            "lures": {
+              "FreshMeat": 0.7,
+              "Dough": 0.5,
+              "Worm": 0.5
+            }
+          },
+          {
+            "id": "Base.SpottedBass",
+            "max_cm": 38,
+            "max_kg": 1.8,
+            "trophy_cm": 45,
+            "trophy_kg": 5.0,
+            "predator": false,
+            "lures": {
+              "Leech": 0.7,
+              "Worm": 0.7,
+              "Insects": 0.3
+            }
+          },
+          {
+            "id": "Base.WhiteBass",
+            "max_cm": 38,
+            "max_kg": 1.5,
+            "trophy_cm": 40,
+            "trophy_kg": 3.0,
+            "predator": false,
+            "lures": {
+              "Leech": 0.7,
+              "Worm": 0.7,
+              "Insects": 0.3
+            }
+          },
+          {
+            "id": "Base.Sauger",
+            "max_cm": 45,
+            "max_kg": 1.9,
+            "trophy_cm": 50,
+            "trophy_kg": 1.8,
+            "predator": false,
+            "lures": {
+              "Leech": 0.7,
+              "Worm": 0.7,
+              "Insects": 0.5
+            }
+          },
+          {
+            "id": "Base.YellowPerch",
+            "max_cm": 30,
+            "max_kg": 1.0,
+            "trophy_cm": 30,
+            "trophy_kg": 1.9,
+            "predator": false,
+            "lures": {
+              "Insects": 0.7,
+              "Leech": 0.7,
+              "Worm": 0.5
+            }
+          },
+          {
+            "id": "Base.Bluegill",
+            "max_cm": 20,
+            "max_kg": 1.4,
+            "trophy_cm": 35,
+            "trophy_kg": 1.2,
+            "predator": false,
+            "lures": {
+              "Leech": 0.7,
+              "Worm": 0.7,
+              "Insects": 0.5
+            }
+          },
+          {
+            "id": "Base.RedearSunfish",
+            "max_cm": 20,
+            "max_kg": 1.4,
+            "trophy_cm": 24,
+            "trophy_kg": 0.9,
+            "predator": false,
+            "lures": {
+              "Insects": 0.7,
+              "Leech": 0.7,
+              "Worm": 0.5
+            }
+          },
+          {
+            "id": "Base.GreenSunfish",
+            "max_cm": 20,
+            "max_kg": 1.4,
+            "trophy_cm": 20,
+            "trophy_kg": 0.9,
+            "predator": false,
+            "lures": {
+              "Insects": 0.7,
+              "Worm": 0.7,
+              "Leech": 0.5
+            }
+          },
+          {
+            "id": "Base.WhiteCrappie",
+            "max_cm": 30,
+            "max_kg": 1.0,
+            "trophy_cm": 24,
+            "trophy_kg": 2.5,
+            "predator": false,
+            "lures": {
+              "BaitFish": 0.7,
+              "Leech": 0.7,
+              "Worm": 0.5
+            }
+          },
+          {
+            "id": "Base.BlackCrappie",
+            "max_cm": 25,
+            "max_kg": 1.0,
+            "trophy_cm": 28,
+            "trophy_kg": 2.7,
+            "predator": false,
+            "lures": {
+              "BaitFish": 0.7,
+              "Leech": 0.7,
+              "Worm": 0.5
+            }
+          },
+          {
+            "id": "Base.BaitFish",
+            "max_cm": 10,
+            "max_kg": 0.05,
+            "trophy_cm": null,
+            "trophy_kg": null,
+            "predator": false,
+            "lures": {
+              "FishingNet_Or_Dough_Worm": 1.0
+            }
+          }
+        ]
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Hệ sinh thái 21 loài thủy tộc nước ngọt phân tầng từ cá mồi nhỏ nặng 50 gram (10 cm) cho đến các loài cá săn mồi khổng lồ như Cá trê xanh (Trophy 68 kg), Cá thìa sông (Trophy 90 kg) và Cá sấu hỏa tiễn (Trophy dài 243 cm, nặng 150 kg).",
+        "tactical_behavior_hint": "Cơ chế đấu lực căng dây trực tiếp (Tension Gauge): khi kéo các loài cá săn mồi hạng nặng, nếu thanh lực căng chạm Vùng Đỏ mà không nhả dây sẽ lập tức làm đứt cước hoặc gãy cần. Đi câu vào đúng 2 khung giờ Bình minh (04:00-07:00) và Hoàng hôn (18:00-21:00) giúp nhân đôi (+100%) tốc độ cắn câu.",
+        "crafting_maintenance_hint": "Đòi hỏi chuỗi mồi câu hai bước: dùng bột bánh/trùn đất hoặc lưới cá bắt Cá mồi nhỏ (BaitFish), sau đó móc Cá mồi nhỏ hoặc Thịt tươi vào lưỡi câu để săn nhóm 4 loài cá dữ (Predator = true: Aligator Gar, Blue Catfish, Flathead Catfish, Muskellunge)."
+      },
+      "cross_module_foreign_keys": {
+        "rod_recipes_unlocked_by_doc07": [
+          "MakeFishingRod",
+          "FixFishingRod"
+        ],
+        "baits_harvested_via_foraging": [
+          "Earthworm",
+          "Leech",
+          "Insects"
+        ]
+      }
+    },
+    {
+      "blueprint_id": "tpl_mob:livestock_18genes_and_butchering_01",
+      "source_pz_reference": "AnimalGenomeDefinitions.lua & Butchering Hook Pipeline (Doc 08 - Section 5)",
+      "dnd_ontology_hooks": {
+        "bastion_facility_mapping": [
+          "MENAGERIE",
+          "STABLE",
+          "STOREHOUSE"
+        ],
+        "skill_proficiencies": [
+          "skill:husbandry",
+          "skill:butchering"
+        ]
+      },
+      "pz_math_engine": {
+        "total_genetic_loci": 18,
+        "genetic_inheritance_model": "DIPLOID_DOMINANT_RECESSIVE_ALLELE_PAIR",
+        "genome_18_definitions": {
+          "maxSize": {
+            "default_min": 0.85,
+            "default_max": 0.95,
+            "effect": "3D_SKELETAL_FRAME_SCALE"
+          },
+          "maxWeight": {
+            "effect": "MAX_DRESSED_CARCASS_MEAT_WEIGHT"
+          },
+          "meatRatio": {
+            "effect": "LEAN_MEAT_TO_FAT_WASTE_RATIO"
+          },
+          "maxMilk": {
+            "elite_yield_liters_per_day_min": 20.0,
+            "elite_yield_liters_per_day_max": 30.0
+          },
+          "milkInc": {
+            "effect": "DAILY_MILK_REGENERATION_RATE"
+          },
+          "maxWool": {
+            "effect": "MAX_RAW_WOOL_FLEECE_YIELD"
+          },
+          "woolInc": {
+            "effect": "WOOL_REGROWTH_VELOCITY_AFTER_SHEARING"
+          },
+          "eggSize": {
+            "effect": "EGG_CALORIE_AND_PROTEIN_DENSITY"
+          },
+          "eggClutch": {
+            "base_eggs_min": 1,
+            "base_eggs_max": 2,
+            "elite_eggs_min": 6,
+            "elite_eggs_max": 8
+          },
+          "fertility": {
+            "effect": "CONCEPTION_PROBABILITY_PER_ESTRUS_CYCLE"
+          },
+          "ageToGrow": {
+            "effect": "JUVENILE_TO_ADULT_MATURATION_TIME"
+          },
+          "lifeExpectancy": {
+            "effect": "NATURAL_LIFESPAN_LIMIT"
+          },
+          "resistance": {
+            "effect": "DISEASE_AND_EXTREME_WEATHER_IMMUNITY"
+          },
+          "strength": {
+            "effect": "MUSCLE_POWER_AND_ZOMBIE_FENCE_DEFENSE"
+          },
+          "aggressiveness": {
+            "effect": "PLAYER_GORE_ATTACK_HAZARD_BY_BULLS_AND_BOARS"
+          },
+          "thirstResistance": {
+            "effect": "SUMMER_DROUGHT_SURVIVAL_DURATION"
+          },
+          "hungerResistance": {
+            "effect": "WINTER_SNOW_PASTURE_STARVATION_BUFFER"
+          },
+          "stress": {
+            "effect": "STRESS_INDUCED_EGG_AND_MILK_CESSATION_SENSITIVITY"
+          }
+        },
+        "butcher_hook_5_step_extraction": [
+          {
+            "step": 1,
+            "method": "ISGatherBloodFromAnimal",
+            "tool": "Bucket",
+            "output": "Animal_Blood_For_Sausage"
+          },
+          {
+            "step": 2,
+            "method": "ISRemoveLeatherFromAnimal",
+            "tool": "Hunting_Knife",
+            "output": "Raw_Animal_Hide_Leather"
+          },
+          {
+            "step": 3,
+            "method": "ISRemoveHeadFromAnimal",
+            "tool": "Cleaver_Or_Knife",
+            "output": "Animal_Head_Trophy_Or_Broth_Stock"
+          },
+          {
+            "step": 4,
+            "method": "ISRemoveMeatFromAnimal",
+            "tool": "Butcher_Knife",
+            "output": "Prime_Meat_Cuts_Loin_Ribs_Belly"
+          },
+          {
+            "step": 5,
+            "method": "ISGetAnimalBones",
+            "tool": "Knife_Or_Saw",
+            "output": "Animal_Bones_For_Glue_Needles_BoneMeal"
+          }
+        ]
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Hệ thống di truyền sinh học 18 cặp gen (Allele trội/lặn) điều khiển toàn bộ hình thái, năng suất và tập tính của 4 nhóm gia súc/gia cầm chủ lực (Bò Cow/Bull/Calf, Cừu Ewe/Ram/Lamb, Lợn Sow/Boar/Piglet, Gà/Gà tây Hen/Cockerel/Chick/Turkey).",
+        "tactical_behavior_hint": "Lai tạo chọn lọc giúp nhân giống được bò mẹ vắt 20-30 lít sữa/ngày và gà mái đẻ 6-8 trứng/lứa; tuy nhiên nếu để gen hung dữ (aggressiveness) cao, bò đực và lợn đực sẽ húc trọng thương chính người chăn nuôi, còn nếu để gia súc bị căng thẳng (stress), chúng sẽ ngừng đẻ trứng và tắt sữa hoàn toàn.",
+        "crafting_maintenance_hint": "Quy trình giết mổ trên Móc treo (Butcher Hook) được chuẩn hóa thành 5 bước tách biệt: Hứng tiết vào xô -> Lột da nguyên tấm -> Cắt thủ cấp -> Xẻ thịt thăn/sườn -> Lọc xương (dùng nấu keo da Glue, gọt kim khâu xương hoặc nghiền bột xương Bone Meal bón ruộng)."
+      },
+      "cross_module_foreign_keys": {
+        "executed_at_workstation_doc01_doc03": "entity_butcher_hook",
+        "bones_used_for_weapon_doc02": "tpl_wpn:bovine_jawbone_morningstar_01",
+        "transported_via_trailer_doc06": "TOWED_CARGO_AND_LIVESTOCK_TRAILERS_B42"
+      }
+    },
+    {
+      "blueprint_id": "tpl_evt:climate_12months_and_severe_weather_01",
+      "source_pz_reference": "ClimateManager, WeatherPeriod.java & seasonProps.lua (Doc 09 - Section 1, 2 & 3)",
+      "dnd_ontology_hooks": {
+        "system_category": "ENVIRONMENTAL_HAZARDS_AND_SEASONAL_CYCLE",
+        "planar_latitude_reference": "38_DEGREES_NORTH_TEMPERATE_CONTINENTAL"
+      },
+      "pz_math_engine": {
+        "campaign_start_date": "1993-07-09",
+        "monthly_climate_matrix_12": [
+          {
+            "month": 1,
+            "season": "WINTER",
+            "temp_min_c": -6.0,
+            "night_extreme_c": -15.0,
+            "temp_max_c": 14.0,
+            "dawn": "07:45",
+            "dusk": "17:15",
+            "unprotected_hypothermia_death_hours": 1.0
+          },
+          {
+            "month": 2,
+            "season": "WINTER",
+            "temp_min_c": -3.0,
+            "night_extreme_c": -12.0,
+            "temp_max_c": 17.0,
+            "dawn": "07:30",
+            "dusk": "17:30"
+          },
+          {
+            "month": 3,
+            "season": "SPRING",
+            "temp_min_c": 1.0,
+            "temp_max_c": 24.0,
+            "dawn": "07:00",
+            "dusk": "18:00",
+            "thaw_mud_vehicle_drag": true
+          },
+          {
+            "month": 4,
+            "season": "SPRING",
+            "temp_min_c": 8.0,
+            "temp_max_c": 23.0,
+            "dawn": "06:30",
+            "dusk": "18:30"
+          },
+          {
+            "month": 5,
+            "season": "SPRING",
+            "temp_min_c": 16.0,
+            "temp_max_c": 28.0,
+            "dawn": "06:00",
+            "dusk": "19:30"
+          },
+          {
+            "month": 6,
+            "season": "SUMMER",
+            "temp_min_c": 16.0,
+            "temp_max_c": 33.0,
+            "dawn": "05:30",
+            "dusk": "20:30"
+          },
+          {
+            "month": 7,
+            "season": "SUMMER",
+            "temp_min_c": 26.0,
+            "noon_extreme_c": 38.0,
+            "temp_max_c": 34.0,
+            "dawn": "05:15",
+            "dusk": "21:00"
+          },
+          {
+            "month": 8,
+            "season": "SUMMER",
+            "temp_min_c": 22.0,
+            "temp_max_c": 29.0,
+            "dawn": "05:45",
+            "dusk": "20:30"
+          },
+          {
+            "month": 9,
+            "season": "AUTUMN",
+            "temp_min_c": 13.0,
+            "temp_max_c": 28.0,
+            "dawn": "06:15",
+            "dusk": "19:30"
+          },
+          {
+            "month": 10,
+            "season": "AUTUMN",
+            "temp_min_c": 6.0,
+            "temp_max_c": 22.0,
+            "dawn": "06:45",
+            "dusk": "18:30",
+            "fog_visibility_reduction_pct": 70.0
+          },
+          {
+            "month": 11,
+            "season": "AUTUMN",
+            "temp_min_c": 4.0,
+            "night_extreme_c": -2.0,
+            "temp_max_c": 20.0,
+            "dawn": "07:15",
+            "dusk": "17:45",
+            "first_frost_kills_non_cold_hardy_crops": true
+          },
+          {
+            "month": 12,
+            "season": "WINTER",
+            "temp_min_c": -1.0,
+            "night_extreme_c": -10.0,
+            "temp_max_c": 14.0,
+            "dawn": "07:45",
+            "dusk": "17:00",
+            "night_duration_hours": 14.0
+          }
+        ],
+        "severe_weather_archetypes_3": {
+          "TROPICAL_STORM": {
+            "max_visibility_tiles_min": 3,
+            "max_visibility_tiles_max": 5,
+            "ambient_rain_masks_footstep_audio": true,
+            "thunder_meta_sound_radius_tiles_min": 100,
+            "thunder_meta_sound_radius_tiles_max": 200
+          },
+          "ARCTIC_BLIZZARD": {
+            "active_months": [
+              12,
+              1,
+              2
+            ],
+            "ambient_temp_c_min": -25.0,
+            "ambient_temp_c_max": -15.0,
+            "max_wind_chill_factor": true,
+            "player_run_speed_penalty_pct": 50.0,
+            "vehicle_ice_skid_loss_of_control": true
+          },
+          "HEAVY_PEA_SOUP_FOG": {
+            "peak_months": [
+              9,
+              10,
+              11
+            ],
+            "optical_visibility_reduction_pct": 70.0,
+            "entity_reveal_distance_steps_min": 2,
+            "entity_reveal_distance_steps_max": 3
+          }
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Mô hình tuần hoàn khí quyển 12 tháng ở vĩ độ 38° Bắc với giờ bình minh/hoàng hôn dịch chuyển thực tế (đêm tháng 12 dài 14 tiếng, trưa tháng 7 nóng 38°C, đêm tháng 1 rét -15°C đến -25°C) cùng 3 hiện tượng khí tượng cực đoan: Dông bão nhiệt đới, Bão tuyết trắng xóa và Sương mù đặc quánh.",
+        "tactical_behavior_hint": "Thời tiết trực tiếp thay đổi luật giao tranh: Sương mù mùa thu cắt giảm 70% tầm nhìn khiến kẻ địch chỉ lộ diện khi cách 2-3 bước chân; Dông bão thu hẹp tầm nhìn còn 3-5 ô, tiếng mưa át tiếng bước chân nhưng mỗi tiếng sét đánh lại tạo sóng âm 100-200 ô khuấy động bầy đàn; Bão tuyết mùa đông làm giảm 50% tốc độ chạy bộ, làm đóng băng mặt hồ và giết chết người chơi không mặc đồ giữ ấm chỉ trong 1 giờ.",
+        "crafting_maintenance_hint": "Đợt sương muối đầu tiên vào Tháng 11 (-2°C ban đêm) sẽ xóa sổ toàn bộ cây trồng có thuộc tính coldHardy = false; người chơi buộc phải tìm Lò sưởi gang đốt củi (Antique Stove) để sưởi ấm 24/24 mà không tốn nhiên liệu máy phát."
+      },
+      "cross_module_foreign_keys": {
+        "forecasted_by_aebs_oracle_doc07": "tpl_evt:world_telemetry_oracle_aebs_01",
+        "affects_crop_survival_doc08": "tpl_bas:agricultural_43crops_and_pest_matrix_01",
+        "affects_foraging_radius_doc08": "sys_math:foraging_optical_search_radius_equation"
+      }
+    },
+    {
+      "blueprint_id": "tpl_evt:world_erosion_100day_reclamation_01",
+      "source_pz_reference": "zombie.erosion.ErosionMain (Doc 09 - Section 5)",
+      "dnd_ontology_hooks": {
+        "system_category": "WORLD_DECAY_AND_OVERGROWTH_TIMELINE",
+        "terrain_hazard_type": "VEGETATION_OBSTRUCTION_AND_ROAD_CRACKING"
+      },
+      "pz_math_engine": {
+        "default_max_erosion_days": 100,
+        "sandbox_erosion_speed_presets": {
+          "1_VERY_FAST": 20,
+          "2_FAST": 50,
+          "3_NORMAL_DEFAULT": 100,
+          "4_SLOW": 200,
+          "5_VERY_SLOW": 500
+        },
+        "custom_erosion_days_range": [
+          -1,
+          365
+        ],
+        "erosion_4_stages": [
+          {
+            "stage": 1,
+            "days_range": [
+              0,
+              20
+            ],
+            "phenomena": [
+              "SPROUTING_WEEDS",
+              "WALL_BASE_MOSS"
+            ]
+          },
+          {
+            "stage": 2,
+            "days_range": [
+              20,
+              50
+            ],
+            "phenomena": [
+              "WAIST_HIGH_TALL_GRASS_HIDES_CRAWLERS",
+              "SIDEWALK_BUSH_ENCROACHMENT"
+            ]
+          },
+          {
+            "stage": 3,
+            "days_range": [
+              50,
+              80
+            ],
+            "phenomena": [
+              "FULL_WALL_VINE_COVERAGE_CLIMBABLE_TO_2ND_FLOOR",
+              "ASPHALT_ROAD_CRACKING"
+            ]
+          },
+          {
+            "stage": 4,
+            "days_range": [
+              80,
+              100
+            ],
+            "phenomena": [
+              "ROADWAY_SAPLINGS_AND_TREES",
+              "FOREST_SWALLOWS_URBAN_ZONES"
+            ]
+          }
+        ],
+        "gameplay_interactions": {
+          "tall_grass_clearing_tools": [
+            "Machete",
+            "Scythe",
+            "Shovel"
+          ],
+          "vine_clearing_tools": [
+            "Knife",
+            "Axe"
+          ],
+          "vine_second_floor_climbing_enabled": true,
+          "road_sapling_high_speed_collision_damage": [
+            "DESTROYED_RADIATOR",
+            "CRACKED_ENGINE_BLOCK",
+            "BURST_TIRES"
+          ]
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Động cơ biến đổi địa hình tự động theo thời gian thực qua 4 giai đoạn (chuẩn 100 ngày đạt 100%): cỏ dại mọc cao ngang hông, rêu và dây leo phủ kín tường gạch, mặt đường nứt toác và cây gỗ đâm chồi thẳng giữa lòng đường.",
+        "tactical_behavior_hint": "Sau ngày thứ 20-50, lớp cỏ cao sẽ che khuất hoàn toàn các thực thể bò trườn dưới đất (Crawlers); sau ngày thứ 80-100, các cây non mọc giữa đường trở thành cái bẫy chết người đối với phương tiện di chuyển tốc độ cao (đâm trúng sẽ làm vỡ lốc máy, nát két nước và nổ lốp tức thì). Tuy nhiên người chơi có thể tận dụng dây leo bám tường (sau ngày 50) để leo thẳng lên cửa sổ tầng 2.",
+        "crafting_maintenance_hint": "Buộc người chơi phải định kỳ mang Dao rựa, Liềm, Rìu và Xẻng đi phát quang cỏ dại quanh pháo đài và chặt bỏ cây non trên các tuyến đường vận tải huyết mạch."
+      },
+      "cross_module_foreign_keys": {
+        "damages_vehicle_parts_doc06": "tpl_veh:mechanical_15parts_anatomy_and_hotwire_01",
+        "configurable_in_sandbox_doc10": "ErosionSpeed_And_ErosionDays"
+      }
+    },
+    {
+      "blueprint_id": "tpl_evt:sandbox_5_presets_and_population_director_01",
+      "source_pz_reference": "SandboxOptions.lua, Apocalypse.lua, Outbreak.lua, Extinction.lua, Rising.lua, SixMonthsLater.lua (Doc 10 - Section 1, 2 & 3.1)",
+      "dnd_ontology_hooks": {
+        "system_category": "CAMPAIGN_DIFFICULTY_DIRECTOR_AND_SPAWN_ENGINE",
+        "spatial_distribution_algorithm": "VORONOI_CELL_CLUSTER_NOISE"
+      },
+      "pz_math_engine": {
+        "sandbox_version": 6,
+        "official_presets_5": {
+          "APOCALYPSE": {
+            "zombies_enum": 4,
+            "respawn_enum": 4,
+            "multi_hit": false,
+            "start_date": "July_9",
+            "shutoff_days_range": [
+              0,
+              30
+            ],
+            "shutoff_avg_days": 14,
+            "skill_book_loot": 0.6,
+            "ranged_loot": 1.2,
+            "ammo_loot": 0.6,
+            "erosion_start_day": 0
+          },
+          "OUTBREAK": {
+            "zombies_enum": 4,
+            "respawn_enum": 4,
+            "multi_hit": true,
+            "start_date": "July_9",
+            "shutoff_months_range": [
+              2,
+              6
+            ],
+            "skill_book_loot": 1.0,
+            "ranged_loot": 1.2,
+            "ammo_loot": 0.6,
+            "erosion_start_day": 0
+          },
+          "EXTINCTION": {
+            "zombies_enum": 3,
+            "respawn_enum": 2,
+            "multi_hit": false,
+            "start_date": "July_9",
+            "shutoff_days_range": [
+              0,
+              30
+            ],
+            "skill_book_loot": 0.4,
+            "ranged_loot": 0.6,
+            "ammo_loot": 0.2,
+            "erosion_start_day": 0
+          },
+          "RISING": {
+            "zombies_enum": 5,
+            "respawn_enum": 3,
+            "multi_hit": true,
+            "start_date": "July_9",
+            "shutoff_months_range": [
+              2,
+              6
+            ],
+            "skill_book_loot": 0.4,
+            "ranged_loot": 0.4,
+            "ammo_loot": 0.4,
+            "erosion_start_day": 0
+          },
+          "SIX_MONTHS_LATER": {
+            "zombies_enum": 1,
+            "insane_pop_multiplier": 4.0,
+            "multi_hit": false,
+            "start_month": 12,
+            "shutoff_pre_cut_flag": -1,
+            "erosion_at_max": true
+          }
+        },
+        "voronoi_and_population_evolution": {
+          "zombie_distribution_urban_focused": 1,
+          "zombie_distribution_uniform": 2,
+          "zombie_voronoi_noise_enabled": true,
+          "population_multiplier_default": 1.0,
+          "population_start_multiplier_default": 1.0,
+          "population_peak_multiplier_default": 1.5,
+          "population_peak_day_default": 28,
+          "respawn_hours_default": 72.0,
+          "respawn_unseen_hours_default": 16.0,
+          "respawn_multiplier_default": 0.1,
+          "redistribute_hours_default": 12.0,
+          "follow_sound_distance_default_tiles": 100,
+          "follow_sound_distance_max_tiles": 1000,
+          "rally_group_size_default": 20,
+          "rally_travel_distance_tiles": 20
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Bộ điều phối quần thể vĩ mô sử dụng nhiễu tế bào Voronoi (ZombieVoronoiNoise) để kết tụ các thực thể thù địch thành từng bầy đàn tự nhiên (20 cá thể/bầy, bán kính di chuyển 20 ô) tập trung quanh các giao lộ đô thị thay vì rải đều vô hồn.",
+        "tactical_behavior_hint": "Mật độ kẻ địch không đứng yên mà leo thang tuyến tính từ hệ số 1.0x ở Ngày 1 lên đỉnh 1.5x ở Ngày thứ 28. Cơ chế hồi sinh (10% mỗi 72 giờ) bị khóa cứng bởi quy tắc 'Tầm nhìn 16 giờ': chỉ những khu vực người chơi không đặt chân tới hoặc không nhìn thấy trong suốt 16 giờ liên tục mới được phép sinh thêm kẻ địch; nếu tắt RespawnHours = 0, người chơi có thể quét sạch vĩnh viễn từng khu phố.",
+        "crafting_maintenance_hint": "Cung cấp 5 cấu hình thế giới chuẩn mực, khắc nghiệt nhất là kịch bản '6 Tháng Sau' (Six Months Later): bắt đầu ngay giữa tháng 12 băng giá, mật độ kẻ địch gấp 4 lần (Insane), hạ tầng năng lượng/nước đã sụp đổ hoàn toàn (-1) và cây cối đã mọc xuyên lòng đường."
+      },
+      "cross_module_foreign_keys": {
+        "drives_virtual_pop_manager_doc01": "tpl_mob:sensory_horde_undead_01",
+        "controls_erosion_state_doc09": "tpl_evt:world_erosion_100day_reclamation_01"
+      }
+    },
+    {
+      "blueprint_id": "tpl_mob:zombie_lore_pathogen_and_cognition_matrix_01",
+      "source_pz_reference": "SandboxVars.ZombieLore (Doc 10 - Section 3.2 & Section 4)",
+      "dnd_ontology_hooks": {
+        "creature_type": "UNDEAD_CUSTOMIZABLE_VARIANT",
+        "locomotion_modes": [
+          "SHAMBLER",
+          "FAST_SHAMBLER",
+          "SPRINTER_APEX_PREDATOR"
+        ],
+        "intelligence_tiers": [
+          "MINDLESS_BASIC",
+          "PATHFIND_NAVIGATE",
+          "DOOR_OPENING_COGNITION"
+        ]
+      },
+      "pz_math_engine": {
+        "speed_tiers_4": {
+          "1_SPRINTERS": "ATHLETE_SPRINT_VELOCITY_OUTRUNS_ENCUMBERED_PLAYERS",
+          "2_FAST_SHAMBLERS_DEFAULT": "STANDARD_BRISK_WALK",
+          "3_SHAMBLERS": "SLOW_LIMPING_GAIT",
+          "4_RANDOM": "MIXED_VELOCITY_HORDE"
+        },
+        "transmission_modes_4": {
+          "1_BLOOD_AND_SALIVA_DEFAULT": {
+            "SCRATCH": 7.0,
+            "LACERATION": 25.0,
+            "INFECTED_BITE": 100.0
+          },
+          "2_SALIVA_ONLY_REALISTIC": {
+            "SCRATCH": 0.0,
+            "LACERATION": 0.0,
+            "INFECTED_BITE": 100.0
+          },
+          "3_NONE": {
+            "SCRATCH": 0.0,
+            "LACERATION": 0.0,
+            "INFECTED_BITE": 0.0
+          },
+          "4_EVERYONES_INFECTED": {
+            "ANY_DEATH_CAUSES_REANIMATION": true
+          }
+        },
+        "infection_mortality_8_tiers": {
+          "1": "INSTANT_0_SEC",
+          "2": "0_TO_30_SECONDS",
+          "3": "1_TO_2_MINUTES",
+          "4": "1_TO_2_HOURS",
+          "5": "12_TO_24_HOURS",
+          "6_DEFAULT": "2_TO_3_DAYS",
+          "7": "1_TO_2_WEEKS",
+          "8": "NEVER_NON_LETHAL_FEVER"
+        },
+        "cognition_and_behavior_flags": {
+          "cognition_1_navigate_and_open_doors": 1,
+          "cognition_2_navigate_only": 2,
+          "cognition_3_basic": 3,
+          "active_time_1_both": 1,
+          "active_time_2_night_only_i_am_legend": 2,
+          "active_time_3_day_only": 3,
+          "crawl_under_vehicle_default_sometimes": 3,
+          "trigger_house_alarm_on_window_break": true
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Bộ gen hành vi và độc lực của thực thể xác sống, cho phép biến đổi từ những xác chết chậm chạp vô tri thành những kẻ săn mồi chạy nước rút (Sprinters) biết vặn tay nắm mở cửa và bò luồn qua gầm xe.",
+        "tactical_behavior_hint": "Ở chế độ Sprinters (Speed = 1), chỉ 1 cá thể cũng đuổi kịp người chơi đang mang vác nặng và 3 cá thể đồng nghĩa với cái chết chắc chắn; khi kết hợp với ActiveTime = 2 (Night Only),Cognition = 1 (Biết mở cửa) và NightDarkness = 1 (Đen kịt), ban đêm trở thành cơn ác mộng tuyệt đối nơi kẻ địch tự mở cửa không khóa xông vào nhà. Chuyển Transmission sang mức 2 (Saliva Only) giúp loại bỏ xác suất chết oan 7% của vết cào và 25% của vết rách, chỉ giữ lại án tử 100% cho vết cắn.",
+        "crafting_maintenance_hint": "Khi bật TriggerHouseAlarm = true, chính xác sống đập vỡ cửa sổ nhà dân cũng sẽ kích hoạt chuông báo động chống trộm, tạo ra chuỗi phản ứng dây chuyền gom toàn bộ bầy đàn trong vùng."
+      },
+      "cross_module_foreign_keys": {
+        "overrides_pathogen_matrix_doc01": "tpl_aff:lethal_necrotic_pathogen_01",
+        "interacts_with_vehicle_undercarriage_doc06": "tpl_veh:heavy_caravan_transport_52models_01"
+      }
+    },
+    {
+      "blueprint_id": "tpl_evt:sandbox_21loot_35xp_and_world_rules_01",
+      "source_pz_reference": "SandboxVars.lua / 21 Loot Categories, 35 Skill Multipliers & Utilities (Doc 10 - Section 3.3, 3.4, 3.5, 3.6 & 3.7)",
+      "dnd_ontology_hooks": {
+        "system_category": "WORLD_ECONOMY_TIME_DILATION_AND_XP_SCALING_RULES",
+        "admin_runtime_hook": "HOT_RELOADABLE_SERVER_CONFIG"
+      },
+      "pz_math_engine": {
+        "time_and_utility_parameters": {
+          "day_length_enum_1_to_14": {
+            "1": "15_MIN",
+            "2": "30_MIN",
+            "3_DEFAULT": "1_HOUR",
+            "4": "1.5_HOURS",
+            "5_OPTIMAL": "2_HOURS",
+            "6": "3_HOURS",
+            "14": "24_HOURS_REALTIME"
+          },
+          "water_and_elec_shutoff_default_range_days": [
+            0,
+            30
+          ],
+          "water_and_elec_shutoff_modifier_avg_days": 14,
+          "generator_fuel_consumption_default_l_per_hr": 0.1,
+          "generator_fuel_consumption_range": [
+            0.0,
+            10.0
+          ],
+          "generator_fuel_consumption_optimal_10_to_14_days": 0.05,
+          "vehicle_zombie_attraction_multiplier_default": 1.0,
+          "vehicle_zombie_attraction_multiplier_range": [
+            0.0,
+            10.0
+          ]
+        },
+        "loot_rarity_6_tiers_float": {
+          "InsaneLootFactor": 0.05,
+          "ExtremeLootFactor": 0.2,
+          "RareLootFactor_ApocalypseDefault": 0.6,
+          "NormalLootFactor": 1.0,
+          "CommonLootFactor": 2.0,
+          "AbundantLootFactor": 3.0
+        },
+        "granular_21_loot_variables": [
+          "FoodLootNew",
+          "CannedFoodLootNew",
+          "CookwareLootNew",
+          "LiteratureLootNew",
+          "SkillBookLoot",
+          "RecipeResourceLoot",
+          "MedicalLootNew",
+          "SurvivalGearsLootNew",
+          "WeaponLootNew",
+          "RangedWeaponLootNew",
+          "AmmoLootNew",
+          "MechanicsLootNew",
+          "FarmingLootNew",
+          "ToolLootNew",
+          "MaterialLootNew",
+          "MediaLootNew",
+          "KeyLootNew",
+          "ClothingLootNew",
+          "ContainerLootNew",
+          "MementoLootNew",
+          "OtherLootNew"
+        ],
+        "xp_multiplier_config_35_skills": {
+          "global_xp_multiplier_range": [
+            1.0,
+            100.0
+          ],
+          "vanilla_strength_lv5_to_lv10_grind_years": 1.0,
+          "recommended_b42_skill_multipliers": {
+            "Aiming": 2.0,
+            "Reloading": 2.0,
+            "Woodwork": 1.0,
+            "Blacksmith": 3.0,
+            "FlintKnapping": 3.0,
+            "Husbandry": 2.5,
+            "Pottery": 3.0,
+            "Masonry": 2.0,
+            "Glassmaking": 2.0,
+            "Butchering": 2.0,
+            "Fitness": 5.0,
+            "Strength": 5.0
+          }
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Bộ biến số điều khiển nhịp đập thời gian (từ 15 phút đến 24 giờ thực cho mỗi ngày đêm), định mức tiêu hao nhiên liệu máy phát (0.1 L/giờ), 21 kênh phân phối tài nguyên độc lập (từ 5% đến 300%) và ma trận tốc độ lĩnh hội cho toàn bộ 35 kỹ năng.",
+        "tactical_behavior_hint": "Cho phép thiết kế các kịch bản kinh tế khắc nghiệt có chọn lọc: ép độ hiếm Vũ khí, Đạn dược và Đồ hộp xuống mức 0.2 - 0.4 (20% - 40%) nhưng đẩy Tài nguyên thiên nhiên (Đá lửa, Cành cây, Đất sét) lên mức Dồi dào và nhân x2.0 - x3.0 tốc độ học Rèn sắt, Đẽo đá, Làm gốm, Chăn nuôi để buộc người chơi phải tự rèn kiếm và trồng trọt. Đặc biệt, việc nâng hệ số Fitness và Strength lên 5.0x giúp rút ngắn quá trình rèn luyện thể chất từ 1 năm ròng rã xuống mức hợp lý cho máy chủ nhiều người chơi.",
+        "crafting_maintenance_hint": "Quản trị viên máy chủ có thể chỉnh sửa trực tiếp tệp <ServerName>_SandboxVars.lua và gọi lệnh /reloadoptions ngay trong lúc máy chủ đang chạy để cập nhật tức thì mọi hệ số mà không cần khởi động lại."
+      },
+      "cross_module_foreign_keys": {
+        "scales_loot_tables_doc05": "sys_math:procedural_loot_weighted_random_roll",
+        "scales_crafting_xp_doc03_doc04": "sys_math:starting_skill_permanent_xp_multiplier",
+        "modifies_vehicle_noise_doc06": "sys_math:muffler_degradation_acoustic_amplification"
+      }
+    },
+    {
+      "blueprint_id": "tpl_mob:stealth_senses_and_jawstab_execution_01",
+      "source_pz_reference": "ZombieVision & ISOPlayer.lua (Doc 11 - Section 4)",
+      "dnd_ontology_hooks": {
+        "system_category": "STEALTH_OPTICAL_ACOUSTIC_SENSORY_AND_ASSASSINATION",
+        "vision_cones": {
+          "FOCUS_VISION": "120 degrees, 15-20 tiles daytime",
+          "PERIPHERAL_VISION": "180 degrees, motion sensitive (-70% detection when crouching)",
+          "BLIND_SPOT": "180 degrees rear hemisphere (Absolute blindness)"
+        }
+      },
+      "pz_math_engine": {
+        "footstep_noise_matrix": {
+          "sneak_barefoot": 1,
+          "sneak_sneakers": 2,
+          "sneak_boots": 3,
+          "walk_sneakers": 6,
+          "sprint_boots": 20
+        },
+        "jaw_stab_mechanics": {
+          "required_weapon_type": "SmallBlade",
+          "approach_vector": "Rear blind spot",
+          "trigger_distance_tiles": 0.5,
+          "lethality_rate": 1.0,
+          "sound_radius_tiles": 0,
+          "clothing_damage_rate": 0.0
+        }
+      },
+      "semantic_descriptors": {
+        "vietnamese_translation": "Cơ chế thị giác 3 vùng của xác sống, bán kính tiếng bước chân và đòn ám sát đâm xuyên cằm 1-hit không vấy máu áo giáp",
+        "dnd_roleplay_anchor": "Kỹ năng đạo tặc đâm lén (Backstab / Sneak Attack) và di chuyển không tiếng động"
+      }
+    },
+    {
+      "blueprint_id": "tpl_evt:emergent_164stories_stash_and_meta_director_01",
+      "source_pz_reference": "zombie/randomizedWorld/*, StashSystem, StashUtil.lua, IsoMetaGrid & SLSoundManager.java (Doc 14 - Section 2, 3 & 5)",
+      "dnd_ontology_hooks": {
+        "system_category": "PROCEDURAL_ENCOUNTER_TABLES_HIDDEN_CACHES_AND_OVERWORLD_DIRECTOR",
+        "encounter_subsystems_4": [
+          "RANDOMIZED_DEAD_SURVIVOR_RDS",
+          "RANDOMIZED_BUILDING_RB",
+          "RANDOMIZED_ZONE_STORY_RZS",
+          "RANDOMIZED_VEHICLE_STORY_RVS"
+        ]
+      },
+      "pz_math_engine": {
+        "total_randomized_world_stories": 164,
+        "exemplar_story_archetypes": {
+          "RDS_DEAD_SURVIVORS": [
+            {
+              "class": "RDSHockeyPsycho",
+              "spawns": [
+                "1_Masked_Slasher_Undead",
+                "Hockey_Mask",
+                "Base.Machete",
+                "Multiple_Slain_Corpses"
+              ]
+            },
+            {
+              "class": "RDSRatKing_B42",
+              "spawns": [
+                "Entangled_Dead_Rats_Cluster",
+                "Mouse_Traps",
+                "Rotten_Cheese"
+              ]
+            },
+            {
+              "class": "RDSRatWar_RDSDevouredByRats",
+              "spawns": [
+                "Plague_Victim_Corpse",
+                "Gnawed_Food_Stores"
+              ]
+            },
+            {
+              "class": "RDSTinFoilHat",
+              "spawns": [
+                "Foil_Insulated_Room",
+                "Tin_Foil_Hat",
+                "Active_Anomaly_Frequency_Radio"
+              ]
+            },
+            {
+              "class": "RDSRPGNight",
+              "spawns": [
+                "4_Player_Undead_At_Table",
+                "D20_Dice_And_Character_Sheets",
+                "Snacks"
+              ]
+            },
+            {
+              "class": "RDSCorpsePsycho_RDSSkeletonPsycho",
+              "spawns": [
+                "Dozens_Of_Pre_Outbreak_Corpses_In_Wardrobes_And_Under_Beds"
+              ]
+            },
+            {
+              "class": "RDSBleach",
+              "spawns": [
+                "Poisoned_Survivor_Corpse",
+                "Empty_Bleach_Bottle"
+              ]
+            },
+            {
+              "class": "RDSPokerNight",
+              "spawns": [
+                "4_Gambler_Undead",
+                "Cash_Poker_Chips_Whisky_Pistol"
+              ]
+            },
+            {
+              "class": "RDSPrisonEscapeWithPolice",
+              "spawns": [
+                "2_Inmate_Undead",
+                "2_Police_Officer_Undead"
+              ]
+            }
+          ],
+          "RB_SPECIAL_BUILDINGS": [
+            {
+              "class": "RBKateAndBaldspot",
+              "spawns": [
+                "Fractured_Leg_Kate_2nd_Floor_Bed",
+                "Hammer_Wielding_Bob"
+              ]
+            },
+            {
+              "class": "RBGunstoreSiege_RBPoliceSiege",
+              "spawns": [
+                "Shattered_Barricades",
+                "Spent_Shell_Casings",
+                "Fallen_Defenders"
+              ]
+            },
+            {
+              "class": "RBToiletPaper",
+              "container_override": "100_PCT_TOILET_PAPER_IN_ALL_CONTAINERS"
+            }
+          ],
+          "RZS_WILDERNESS_ZONES": [
+            {
+              "class": "RZSOccultActivity",
+              "spawns": [
+                "Candle_Pentagram_Circle",
+                "Animal_Bones_In_Deep_Forest"
+              ]
+            },
+            {
+              "class": "RZSMusicFest_RZSMusicFestStage",
+              "spawns": [
+                "Field_Stage_Audio_Rig",
+                "Electric_Guitars",
+                "Tents",
+                "Dozens_Of_Festival_Undead"
+              ]
+            },
+            {
+              "class": "RZSMurderScene",
+              "spawns": [
+                "Half_Buried_Grave",
+                "Bloody_Shovel"
+              ]
+            }
+          ],
+          "RVS_HIGHWAY_VEHICLES": [
+            {
+              "class": "RVSAnimalTrailerOnRoad_B42",
+              "spawns": [
+                "Overturned_Pickup_And_Livestock_Trailer",
+                "Roaming_Live_Cattle_Sheep_Pigs"
+              ]
+            },
+            {
+              "class": "RVSChangingTire",
+              "spawns": [
+                "Jacked_Vehicle",
+                "Spare_Tire_And_Lug_Wrench",
+                "Slain_Driver"
+              ]
+            },
+            {
+              "class": "RVSPoliceBlockadeShooting",
+              "spawns": [
+                "Cruiser_Barricade_Breach",
+                "Abandoned_Firearms_And_Bodies"
+              ]
+            }
+          ]
+        },
+        "stash_system_and_floorboard_caches": {
+          "spawn_only_on_special_zed": true,
+          "hidden_floorboard_tile_id": "floors_interior_tilesandwood_01_60",
+          "required_extraction_tool": "Crowbar",
+          "hidden_container_type": "GunBox_GunCache1",
+          "trapped_safehouse_ambush_zeds_min": 10,
+          "trapped_safehouse_ambush_zeds_max": 30
+        },
+        "invisible_meta_director_acoustics": {
+          "meta_gunfire_migration_radius_tiles_min": 200,
+          "meta_gunfire_migration_radius_tiles_max": 400,
+          "minor_meta_sounds": [
+            "Meta_Scream",
+            "Barking_Dog"
+          ],
+          "helicopter_hunt_event": {
+            "trigger_day_window_min": 6,
+            "trigger_day_window_max": 9,
+            "acoustic_attraction_radius_tiles_min": 500,
+            "outdoor_target_hover_duration_hours_range": [
+              3.0,
+              6.0
+            ],
+            "indoor_hidden_departure_time_hours": 1.0
+          }
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Bộ máy kiến tạo biến cố thế giới gồm 164 kịch bản hiện trường ngẫu nhiên (4 phân hệ: Xác chết kể chuyện RDS, Tòa nhà dị biệt RB, Hiện trường hoang dã RZS và Tai nạn đoàn xe RVS), hệ thống kho báu giấu dưới tấm ván sàn lỏng lẻo (cạy bằng Xà beng) và Đạo diễn Âm thanh Vô hình (SLSoundManager).",
+        "tactical_behavior_hint": "Biến mỗi chuyến đi trinh sát thành một ẩn số: một ngôi nhà bình thường có thể là hiện trường của tên sát nhân đeo mặt nạ cầm Dao quắm (RDSHockeyPsycho), ổ dịch Vua Chuột B42 (RDSRatKing) hoặc cái bẫy tử thần nhốt từ 10 đến 30 xác sống bên trong theo tấm Bản đồ Chú thích (trapped = true). Trên đường quốc lộ, sự kiện lật thùng kéo gia súc (RVSAnimalTrailerOnRoad) là cơ hội vàng để thu phục bò, cừu, lợn sống ngay trên đường. Ở tầng vĩ mô, tiếng nổ xa xăm (bán kính 200-400 ô) và đặc biệt là Sự kiện Săn lùng Trên không vào Ngày 6-9 (bán kính >500 ô, bám đuổi 3-6 giờ liên tục nếu bị phát hiện ngoài trời, hoặc bỏ đi sau 1 giờ nếu trốn kín) liên tục điều hướng hàng nghìn kẻ địch quét qua bản đồ.",
+        "crafting_maintenance_hint": "Xà beng (Crowbar) không chỉ là vũ khí cận chiến bền nhất (1/70) mà còn là chìa khóa bắt buộc để cạy tấm ván sàn bí mật (floors_interior_tilesandwood_01_60) thu hồi hòm quân nhu GunBox."
+      },
+      "cross_module_foreign_keys": {
+        "completes_aerial_lure_event_doc01_doc07": "tpl_evt:aerial_acoustic_lure_01",
+        "completes_annotated_stash_maps_doc05": "tpl_bas:subterranean_362_bunkers_and_safehouses_01",
+        "spawns_livestock_trailers_doc06_doc08": "tpl_veh:heavy_caravan_transport_52models_01",
+        "requires_crowbar_tool_doc11": "tpl_wpn:melee_6categories_and_maintenance_matrix_01"
+      }
+    },
+    {
+      "blueprint_id": "tpl_mob:dual_layer_64level_pathfinding_engine_01",
+      "source_pz_reference": "PolygonalMap2.java, HLAStar.java, VGAStar.java, VisibilityGraph.java, LiangBarsky.java, PathFindBehavior2.java & PathfindNative.java (Doc 15 - Section 1, 2, 3 & 5)",
+      "dnd_ontology_hooks": {
+        "system_category": "AUTONOMOUS_AGENT_NAVIGATION_AND_OBSTACLE_BREACHING",
+        "spatial_topology": "CONTINUOUS_POLYGONAL_64_LEVEL_VERTICAL_DUNGEON"
+      },
+      "pz_math_engine": {
+        "collision_capsule_geometry": {
+          "radius_blocks": 0.3,
+          "radius_diagonal_blocks": 0.42426,
+          "diagonal_squared_constant": 0.18,
+          "paths_under_vehicles_enabled": true,
+          "close_to_walls_hugging_enabled": true
+        },
+        "vertical_64_level_coordinate_system": {
+          "levels_per_chunk": 64,
+          "ground_level_internal_index": 32,
+          "z_internal_offset_constant": 32.0,
+          "deepest_basement_game_z": -32,
+          "deepest_basement_internal_z": 0,
+          "highest_skyscraper_game_z": 31,
+          "highest_skyscraper_internal_z": 63,
+          "stair_transition_nodes_6": [
+            "stairsTW",
+            "stairsMW",
+            "stairsBW",
+            "stairsTN",
+            "stairsMN",
+            "stairsBN"
+          ]
+        },
+        "bitmask_navigation_flags": {
+          "NODE_FLAG_CRAWL": 1,
+          "CXN_FLAG_THUMP": 2,
+          "NODE_FLAG_STAIR": 16
+        },
+        "hierarchical_pathfinding_layers": {
+          "macro_hlastar_min_distance_tiles": 10,
+          "macro_long_range_target_tiles": 50,
+          "macro_components": [
+            "HLChunkRegion",
+            "HLLevelTransition_Stairs_Ramps_SheetRopes"
+          ],
+          "micro_components": [
+            "VisibilityGraph_PolygonVertices",
+            "VGAStar",
+            "LiangBarsky_LineClipping",
+            "CollideWithObstaclesPoly"
+          ],
+          "native_jni_multithreading": [
+            "PathfindNative_DirectByteBuffer",
+            "n_findPath",
+            "n_updateSquare"
+          ]
+        },
+        "obstacle_interaction_and_anti_stuck_fsm": {
+          "door_handling": "CHECK_couldBeOpen_ELSE_SET_CXN_FLAG_THUMP_2_AND_GROUP_THUMP",
+          "window_handling": "CHECK_isGlassRemoved_LACERATION_HAZARD_THEN_faceThisObject_AND_climbThroughWindow",
+          "low_fence_handling": "DETECT_HoppableW_HoppableN_THEN_climbOverFence_OR_CROWD_FENCE_LUNGE",
+          "anti_stuck_sensor": "WalkingOnTheSpot_ZeroDisplacement_Triggers_isCancel_And_Repath_Or_Thump"
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Động cơ tìm đường đa giác 2 tầng (Vĩ mô liên vùng HLAStar + Vi mô đồ thị tầm nhìn VGAStar kết hợp cắt tia Liang-Barsky trên đa luồng C++ JNI), quản lý không gian 3 chiều xuyên suốt 64 tầng cao độ (từ tầng hầm sâu -32 đến đỉnh tháp +31 với mặt đất đặt tại mốc Z = 32) cho các thực thể có bán kính va chạm 0.3 ô (đường chéo 0.42426 ô).",
+        "tactical_behavior_hint": "Thực thể thù địch không đi zíc-zắc theo ô vuông mà cắt góc đi thẳng mượt mà bám sát mép tường (CLOSE_TO_WALLS = true). Khi gặp xe cộ chắn đường, thực thể bò trườn kích hoạt cờ NODE_FLAG_CRAWL = 1 để luồn thẳng qua gầm xe cắn vào mắt cá chân người chơi; khi gặp cửa khóa, chúng bật cờ CXN_FLAG_THUMP = 2 để gọi bầy đàn vây đập sập cửa; khi trèo qua cửa sổ còn mảnh kính vỡ (isGlassRemoved = false), chính xác sống cũng bị kính cứa rách thịt. Nếu bị kẹt địa hình (WalkingOnTheSpot), cảm biến chống kẹt sẽ tự hủy lộ trình và ra lệnh đập nát vật cản ngay trước mặt.",
+        "crafting_maintenance_hint": "Cung cấp nền tảng toán học để lập trình hệ thống AI thực thể trong Minecraft Paper Java 21 vượt qua giới hạn của Pathfinder thuần túy, biết phối hợp leo cầu thang 6 nút, đập cửa và luồn qua khe hẹp 1 block."
+      },
+      "cross_module_foreign_keys": {
+        "integrates_362_basements_doc05": "tpl_bas:subterranean_362_bunkers_and_safehouses_01",
+        "integrates_32_floors_and_doors_doc12": "tpl_bas:fortification_32floor_and_barricade_matrix_01",
+        "executes_undercarriage_crawl_doc06_doc10": "tpl_mob:zombie_lore_pathogen_and_cognition_matrix_01"
+      }
+    },
+    {
+      "blueprint_id": "tpl_mob:animal_triangulated_navmesh_and_virtual_horde_01",
+      "source_pz_reference": "AnimalPathfind.java, Mesh.java, LowLevelAStar.java, OffMeshConnection.java & ZombiePopulationManager.java (Doc 15 - Section 4 & Section 6)",
+      "dnd_ontology_hooks": {
+        "system_category": "FAUNA_NAVMESH_FUNNEL_LOCOMOTION_AND_VIRTUAL_HORDE_POOLING",
+        "bastion_facility_hook": "MENAGERIE"
+      },
+      "pz_math_engine": {
+        "animal_triangulated_navmesh": {
+          "mesh_ topology_arrays": [
+            "triangles",
+            "adjacentTriangles",
+            "trianglesOnBoundaries",
+            "edgesOnBoundaries"
+          ],
+          "string_pulling_algorithm": "SIMPLE_STUPID_FUNNEL_ALGORITHM_SSFA",
+          "cross_product_determinant_function": "triarea2(a, b, c) = (b.x - a.x)*(c.y - a.y) - (c.x - a.x)*(b.y - a.y)",
+          "off_mesh_connections": [
+            "DEER_JUMP_OVER_LOW_WOODEN_FENCE",
+            "CATTLE_SHEEP_PASS_THROUGH_OPEN_ANIMAL_GATE",
+            "RABBIT_LEAP_ACROSS_DRAINAGE_DITCH"
+          ]
+        },
+        "virtual_horde_population_manager": {
+          "real_to_virtual_despawn_distance_chunks": 3,
+          "virtual_zombie_memory_footprint_bits": 32,
+          "active_loaded_real_zombies_range": [
+            200,
+            500
+          ],
+          "offscreen_virtual_zombies_capacity": 50000,
+          "world_sound_migration_filter": {
+            "min_sound_radius_tiles": 50,
+            "reject_if_source_is_zombie": true,
+            "require_stress_zombies_flag": true,
+            "native_dispatch_method": "n_worldSound"
+          }
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Hai phân hệ điều phối quần thể chuyên biệt: (1) Lưới tam giác hóa (Triangulated NavMesh) kết hợp thuật toán Phễu kéo căng dây (Funnel Algorithm / String Pulling) và điểm nhảy vượt biên (OffMeshConnection) dành cho động vật hoang dã/gia súc; (2) Bộ quản lý Đàn Ảo (ZombiePopulationManager) nén 50.000+ xác sống nằm ngoài bán kính 3 chunks thành các cấu trúc nhị phân 32-bit trong bộ nhớ C++.",
+        "tactical_behavior_hint": "Thuật toán Phễu (SSFA) dùng tích có hướng triarea2() để uốn quỹ đạo di chuyển của đàn thú qua các cạnh tam giác thành những đường thẳng căng mượt tự nhiên, đồng thời cho phép hươu nhảy qua hàng rào thấp và thỏ nhảy qua mương nước. Ở quy mô toàn bản đồ, cơ chế lọc âm thanh (sound.radius < 50 -> bỏ qua) giải thích tại sao các tiếng động dưới 50 ô (như bước chân, đập cửa, hay thậm chí tiếng hét phím Q 40-50 ô và súng đồ chơi 30 ô) chỉ thu hút kẻ địch thực đang đứng gần, trong khi bất kỳ tiếng nổ nào từ 50 ô trở lên (Revolver .38 ở mức 60 ô, Pistol .45 ở mức 70 ô, Shotgun 200 ô, Trực thăng >500 ô) sẽ lập tức đánh thức hàng nghìn xác sống ảo từ các chunk xa xăm di cư ngầm về bủa vây người chơi.",
+        "crafting_maintenance_hint": "Khi thiết kế máy chủ Minecraft Paper Java 21, kỹ thuật Virtualization (chỉ giữ 200-500 Entity thật quanh người chơi trong tầm 3 chunks và lưu 50.000 thực thể còn lại dưới dạng primitive struct 32-bit/64-bit trong bộ nhớ off-heap/fast-array) là chìa khóa vàng để duy trì 20.0 TPS tuyệt đối."
+      },
+      "cross_module_foreign_keys": {
+        "governs_livestock_and_wild_game_doc01_doc08": [
+          "tpl_mob:livestock_18genes_and_butchering_01",
+          "tpl_bas:husbandry_processing_stations_01"
+        ],
+        "explains_firearm_60tile_threshold_doc11": "tpl_wpn:ranged_22firearms_and_11attachments_matrix_01",
+        "connects_to_voronoi_respawn_doc10": "tpl_evt:sandbox_5_presets_and_population_director_01"
+      }
+    },
+    {
+      "blueprint_id": "tpl_evt:world_telemetry_oracle_aebs_01",
+      "source_pz_reference": "ISDynamicRadio.lua / Automated Emergency Broadcast System (AEBS) (Doc 07 - Section 1.3 & Section 5)",
+      "dnd_ontology_hooks": {
+        "system_category": "DIVINATION_OMEN_AND_WORLD_TELEMETRY_ORACLE",
+        "bastion_facility_hook": "OBSERVATORY",
+        "tech_age": "AGE_4_RELIC_ARTIFICERY"
+      },
+      "pz_math_engine": {
+        "frequency_min_khz": 88000,
+        "frequency_max_khz": 108000,
+        "frequency_step_khz": 200,
+        "total_possible_frequencies": 101,
+        "broadcast_cron_schedule": "0 * * * * (Top of every hour XX:00)",
+        "weather_forecast_horizon_hours_min": 24,
+        "weather_forecast_horizon_hours_max": 48,
+        "aerial_lure_omen_parameters": {
+          "warning_signal_key": "Air Activity detected.",
+          "earliest_warning_hour": 9,
+          "event_arrival_hour_min": 12,
+          "event_arrival_hour_max": 19
+        },
+        "infrastructure_collapse_3_stages": [
+          {
+            "stage": 1,
+            "signal_key": "Knox Power Grid: Power fluctuations detected.",
+            "time_to_blackout_hours_min": 48,
+            "time_to_blackout_hours_max": 72
+          },
+          {
+            "stage": 2,
+            "signal_key": "Knox Power Grid: Systems failing. Network compromised.",
+            "time_to_blackout_hours_min": 1,
+            "time_to_blackout_hours_max": 48
+          },
+          {
+            "stage": 3,
+            "signal_key": "Knox Power Grid: Blackout.",
+            "permanent_grid_shutdown": true
+          }
+        ]
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Hệ thống tín hiệu dự báo tự động phát sóng định kỳ mỗi giờ trên một tần số bí ẩn duy nhất được khóa ngẫu nhiên khi khởi tạo thế giới (trong dải 88.0 - 108.0 với bước nhảy 0.2), chỉ có thể thu nhận qua các thiết bị thu tín hiệu/la bàn thấu thị chuyên dụng.",
+        "tactical_behavior_hint": "Cơ chế cảnh báo sinh tử duy nhất giúp người chơi biết trước 24-48 giờ các đợt sương mù dày đặc hoặc bão tuyết, biết trước 48-72 giờ thời điểm sụp đổ mạng lưới năng lượng, và đặc biệt là cảnh báo từ 09:00 sáng về Siêu sự kiện Trên không (diễn ra lúc 12:00 - 19:00) để kịp thời rút vào nơi trú ẩn kín, che rèm và tắt mọi nguồn sáng.",
+        "crafting_maintenance_hint": "Tần số phải được dò tìm từ các thiết bị thu tín hiệu quân sự/khẩn cấp có cài đặt sẵn hoặc lắp ráp thiết bị thu tự chế (CraftMakeshiftRadio)."
+      },
+      "cross_module_foreign_keys": {
+        "predicts_world_event_doc01": "tpl_evt:aerial_acoustic_lure_01",
+        "predicts_climate_system_doc09": "WEATHER_WIND_FOG_BLIZZARD_FORECAST",
+        "crafted_via_home_record": "Muldraugh AV Club (CraftMakeshiftRadio)"
+      }
+    },
+    {
+      "blueprint_id": "tpl_evt:early_9day_live_instructional_schedule_01",
+      "source_pz_reference": "RadioData.xml / Life and Living TV (Channel 203) 9-Day Schedule (Doc 07 - Section 3.1 & Section 7)",
+      "dnd_ontology_hooks": {
+        "system_category": "TIME_LIMITED_WORLD_LORE_AND_TUTORIAL_TRANSMISSION",
+        "skill_progression_tier": "EARLY_GAME_ACCELERATOR"
+      },
+      "pz_math_engine": {
+        "channel_id": 203,
+        "active_day_start": 0,
+        "active_day_end": 8,
+        "safe_listening_volume_bars_min": 1,
+        "safe_listening_volume_bars_max": 2,
+        "base_episode_xp_reference": 75,
+        "vol1_boosted_episode_xp_min": 225,
+        "vol1_boosted_episode_xp_max": 300,
+        "broadcast_slots_25": [
+          {
+            "day": 0,
+            "hour": "06:00",
+            "program": "The Cook Show",
+            "skill_code": "COO+1",
+            "recipe_unlock": null
+          },
+          {
+            "day": 0,
+            "hour": "12:00",
+            "program": "Woodcraft",
+            "skill_code": "CRP+1",
+            "recipe_unlock": null
+          },
+          {
+            "day": 0,
+            "hour": "18:00",
+            "program": "Exposure Survival",
+            "skill_code": "FIS+1",
+            "recipe_unlock": null
+          },
+          {
+            "day": 1,
+            "hour": "06:00",
+            "program": "The Cook Show",
+            "skill_code": "COO+1",
+            "recipe_unlock": null
+          },
+          {
+            "day": 1,
+            "hour": "12:00",
+            "program": "Woodcraft",
+            "skill_code": "CRP+1",
+            "recipe_unlock": null
+          },
+          {
+            "day": 1,
+            "hour": "18:00",
+            "program": "Exposure Survival",
+            "skill_code": "FRM+1",
+            "recipe_unlock": null
+          },
+          {
+            "day": 2,
+            "hour": "06:00",
+            "program": "The Cook Show",
+            "skill_code": "COO+1",
+            "recipe_unlock": null
+          },
+          {
+            "day": 2,
+            "hour": "12:00",
+            "program": "Woodcraft",
+            "skill_code": "CRP+1",
+            "recipe_unlock": null
+          },
+          {
+            "day": 2,
+            "hour": "18:00",
+            "program": "Exposure Survival",
+            "skill_code": "FIS+1",
+            "recipe_unlock": "Make Fishing Rod"
+          },
+          {
+            "day": 3,
+            "hour": "06:00",
+            "program": "The Cook Show",
+            "skill_code": "COO+1",
+            "recipe_unlock": null
+          },
+          {
+            "day": 3,
+            "hour": "12:00",
+            "program": "Woodcraft",
+            "skill_code": "CRP+1",
+            "recipe_unlock": null
+          },
+          {
+            "day": 3,
+            "hour": "18:00",
+            "program": "Exposure Survival",
+            "skill_code": null,
+            "recipe_unlock": null
+          },
+          {
+            "day": 4,
+            "hour": "06:00",
+            "program": "The Cook Show",
+            "skill_code": "COO+1",
+            "recipe_unlock": null
+          },
+          {
+            "day": 4,
+            "hour": "12:00",
+            "program": "Woodcraft",
+            "skill_code": "CRP+1",
+            "recipe_unlock": null
+          },
+          {
+            "day": 4,
+            "hour": "18:00",
+            "program": "Exposure Survival",
+            "skill_code": "FOR+1",
+            "recipe_unlock": null
+          },
+          {
+            "day": 5,
+            "hour": "06:00",
+            "program": "The Cook Show",
+            "skill_code": "COO+1",
+            "recipe_unlock": "Make Pie Dough"
+          },
+          {
+            "day": 5,
+            "hour": "12:00",
+            "program": "Woodcraft",
+            "skill_code": "CRP+1",
+            "recipe_unlock": null
+          },
+          {
+            "day": 5,
+            "hour": "18:00",
+            "program": "Exposure Survival",
+            "skill_code": "TRA+1",
+            "recipe_unlock": "Make Crate Trap"
+          },
+          {
+            "day": 6,
+            "hour": "06:00",
+            "program": "The Cook Show",
+            "skill_code": "COO+1",
+            "recipe_unlock": "Make Cake Batter"
+          },
+          {
+            "day": 6,
+            "hour": "12:00",
+            "program": "Woodcraft",
+            "skill_code": "CRP+1",
+            "recipe_unlock": null
+          },
+          {
+            "day": 6,
+            "hour": "18:00",
+            "program": "Exposure Survival",
+            "skill_code": "FOR+1",
+            "recipe_unlock": null
+          },
+          {
+            "day": 7,
+            "hour": "06:00",
+            "program": "The Cook Show",
+            "skill_code": "COO+1",
+            "recipe_unlock": null
+          },
+          {
+            "day": 7,
+            "hour": "12:00",
+            "program": "Woodcraft",
+            "skill_code": null,
+            "recipe_unlock": null
+          },
+          {
+            "day": 7,
+            "hour": "18:00",
+            "program": "Exposure Survival",
+            "skill_code": "CRP+1",
+            "recipe_unlock": null
+          },
+          {
+            "day": 8,
+            "hour": "06:00",
+            "program": "The Cook Show",
+            "skill_code": "COO+1",
+            "recipe_unlock": null
+          }
+        ]
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Chuỗi tín hiệu truyền đạt tri thức định kỳ phát đi vào 3 mốc giờ cố định mỗi ngày (06:00, 12:00, 18:00) trong đúng 9 ngày đầu tiên của thế giới trước khi toàn bộ mạng lưới truyền dẫn sụp đổ thành nhiễu trắng vào sau 06:00 sáng Ngày 8.",
+        "tactical_behavior_hint": "Tạo ra áp lực quản lý thời gian cực lớn trong tuần đầu tiên: người chơi phải lùng sục Sách Kỹ năng Tập 1 để đọc xong trước giờ phát sóng (biến 75 XP gốc thành 225-300 XP), đồng thời phải vặn nhỏ âm lượng thiết bị xuống mức 1-2 vạch để sóng âm không lọt qua tường thu hút xác sống bên ngoài.",
+        "crafting_maintenance_hint": "Trực tiếp mở khóa 4 công thức sinh tồn sơ khởi ngay khi theo dõi: Cần câu cá (Ngày 2 - 18:00), Vỏ bánh nướng (Ngày 5 - 06:00), Bẫy hộp gỗ (Ngày 5 - 18:00) và Bột bánh ngọt (Ngày 6 - 06:00)."
+      },
+      "cross_module_foreign_keys": {
+        "interacts_with_sound_radius_doc01": "sys_math:ai_sensory_perception_cone_and_sound_wave",
+        "amplified_by_fast_learner_doc04": "tpl_trait:fast_learner"
+      }
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "blueprint_id": "tpl_trait:positive_combat_and_artisan_perks_01",
+  "source_pz_reference": "character_traits.txt / Top Positive Traits & Innate Perks (Doc 04 - Section 2, 4 & 5)",
+  "dnd_ontology_hooks": {
+    "system_category": "CHARACTER_FEATS_AND_BOONS",
+    "stat_modifiers": [
+      "PERCEPTION_REAR_RADIUS",
+      "STRENGTH_CARRY_AND_DAMAGE",
+      "CONSTITUTION_ENDURANCE",
+      "SLEIGHT_OF_HAND_TRANSFER"
+    ]
+  },
+  "pz_math_engine": {
+    "positive_traits_catalog": [
+      {
+        "trait_id": "tpl_trait:keen_hearing",
+        "pz_id": "base:keenhearing",
+        "point_cost": -6,
+        "rear_vision_radius_multiplier": 2.0
+      },
+      {
+        "trait_id": "tpl_trait:strong",
+        "pz_id": "base:strong",
+        "point_cost": -10,
+        "Alternate_tier_stout_cost": -6,
+        "target_strength_level_min": 9,
+        "target_strength_level_max": 10,
+        "melee_damage_bonus_pct": 40.0,
+        "knockdown_push_bonus": true,
+        "max_carry_weight_kg_min": 18.0,
+        "max_carry_weight_kg_max": 20.0
+      },
+      {
+        "trait_id": "tpl_trait:athletic",
+        "pz_id": "base:athletic",
+        "point_cost": -10,
+        "alternate_tier_fit_cost": -6,
+        "endurance_regeneration_boost": true,
+        "continuous_sprint_and_swing_stamina": true
+      },
+      {
+        "trait_id": "tpl_trait:dextrous",
+        "pz_id": "base:dextrous",
+        "point_cost": -2,
+        "inventory_transfer_speed_multiplier": 2.0
+      },
+      {
+        "trait_id": "tpl_trait:fast_learner",
+        "pz_id": "base:fastlearner",
+        "point_cost": -6,
+        "global_xp_bonus_pct": 30.0,
+        "excluded_skills": [
+          "Strength",
+          "Fitness"
+        ]
+      },
+      {
+        "trait_id": "tpl_trait:inconspicuous",
+        "pz_id": "base:inconspicuous",
+        "point_cost": -4,
+        "stealth_detection_chance_reduction_pct": 50.0
+      },
+      {
+        "trait_id": "tpl_trait:graceful",
+        "pz_id": "base:graceful",
+        "point_cost": -4,
+        "footstep_noise_suppression": true
+      },
+      {
+        "trait_id": "tpl_trait:brave",
+        "pz_id": "base:brave",
+        "point_cost": -4,
+        "panic_accumulation_reduction": true
+      },
+      {
+        "trait_id": "tpl_trait:handy",
+        "pz_id": "base:handy",
+        "point_cost": -8,
+        "structure_max_hp_and_build_speed_boost": true
+      },
+      {
+        "trait_id": "tpl_trait:artisan_and_crafty",
+        "pz_id": "base:artisan / base:crafty",
+        "point_cost_artisan": -2,
+        "point_cost_crafty": -3,
+        "b42_pottery_glass_blacksmith_speed_and_xp_boost": true
+      }
+    ]
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Tập hợp các phẩm chất ưu việt về giác quan, cơ bắp, tim mạch và sự khéo léo của đôi bàn tay.",
+    "tactical_behavior_hint": "Keen Hearing (-6) nhân đôi bán kính cảnh giới sau lưng để chống bị cắn trộm âm thầm; Strong (-10) cộng +40% sát thương cận chiến và nâng tải trọng mang vác lên 18-20 kg; Dextrous (-2) nhân đôi tốc độ rút vũ khí và lấy băng gạc cấp cứu khi đứt mạch máu cổ; Inconspicuous (-4) giảm 50% tỷ lệ bị phát hiện trong nón thị giác kẻ địch.",
+    "crafting_maintenance_hint": "Kết hợp Fast Learner (+30% XP toàn cục) với Crafty (-3) và Artisan (-2) tạo thành bộ gia tốc tối đa cho việc lĩnh hội 1.026 công thức chế tác của Build 42."
+  },
+  "cross_module_foreign_keys": {
+    "modifies_combat_equations_doc11": [
+      "melee_damage_bonus_pct",
+      "stealth_detection_chance_reduction_pct"
+    ],
+    "modifies_fortification_hp_doc12": [
+      "structure_max_hp_and_build_speed_boost"
+    ]
+  }
+}

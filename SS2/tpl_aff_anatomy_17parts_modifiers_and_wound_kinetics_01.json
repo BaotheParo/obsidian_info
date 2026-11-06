@@ -1,0 +1,299 @@
+{
+  "blueprint_id": "tpl_aff:anatomy_17parts_modifiers_and_wound_kinetics_01",
+  "source_pz_reference": "BodyPartType.java, BodyPart.java & BodyDamage.java (Doc 13 - Section 1, 2 & 3)",
+  "dnd_ontology_hooks": {
+    "system_category": "ANATOMICAL_HIT_LOCATIONS_AND_WOUND_HEALING_KINETICS",
+    "target_anatomy_enum": [
+      "HEAD",
+      "NECK",
+      "TORSO_UPPER",
+      "TORSO_LOWER",
+      "GROIN",
+      "UPPER_ARM_L",
+      "UPPER_ARM_R",
+      "FOREARM_L",
+      "FOREARM_R",
+      "HAND_L",
+      "HAND_R",
+      "UPPER_LEG_L",
+      "UPPER_LEG_R",
+      "LOWER_LEG_L",
+      "LOWER_LEG_R",
+      "FOOT_L",
+      "FOOT_R"
+    ],
+    "wound_types_enum": [
+      "SCRATCH",
+      "LACERATION",
+      "DEEP_WOUND",
+      "LODGED_PROJECTILE",
+      "FRACTURE",
+      "BURN",
+      "INFECTED_BITE"
+    ]
+  },
+  "pz_math_engine": {
+    "anatomy_17_matrix": [
+      {
+        "part": "HEAD",
+        "skin_surface": 0.08,
+        "pain_mod": 0.8,
+        "dmg_mod": 0.6,
+        "bleed_mod": 1.0,
+        "umbrella": 0.05,
+        "max_action_penalty_pct": 40.0,
+        "max_move_penalty_pct": 25.0
+      },
+      {
+        "part": "NECK",
+        "skin_surface": 0.02,
+        "pain_mod": 0.8,
+        "dmg_mod": 0.7,
+        "bleed_mod": 1.5,
+        "umbrella": 0.1,
+        "max_action_penalty_pct": 5.0,
+        "max_move_penalty_pct": 5.0,
+        "exanguination_death_sec_range": [
+          12.0,
+          18.0
+        ]
+      },
+      {
+        "part": "TORSO_UPPER",
+        "skin_surface": 0.18,
+        "pain_mod": 0.7,
+        "dmg_mod": 0.35,
+        "bleed_mod": 0.5,
+        "umbrella": 0.2,
+        "max_action_penalty_pct": 20.0,
+        "max_move_penalty_pct": 5.0
+      },
+      {
+        "part": "TORSO_LOWER",
+        "skin_surface": 0.12,
+        "pain_mod": 0.78,
+        "dmg_mod": 0.4,
+        "bleed_mod": 0.9,
+        "umbrella": 0.25,
+        "max_action_penalty_pct": 10.0,
+        "max_move_penalty_pct": 5.0
+      },
+      {
+        "part": "GROIN",
+        "skin_surface": 0.06,
+        "pain_mod": 0.7,
+        "dmg_mod": 0.4,
+        "bleed_mod": 0.5,
+        "umbrella": 0.3,
+        "max_action_penalty_pct": 5.0,
+        "max_move_penalty_pct": 15.0
+      },
+      {
+        "part": "UPPER_ARM_L",
+        "skin_surface": 0.045,
+        "pain_mod": 0.6,
+        "dmg_mod": 0.3,
+        "bleed_mod": 0.4,
+        "umbrella": 0.25,
+        "max_action_penalty_pct": 40.0,
+        "max_move_penalty_pct": 10.0
+      },
+      {
+        "part": "UPPER_ARM_R",
+        "skin_surface": 0.045,
+        "pain_mod": 0.6,
+        "dmg_mod": 0.3,
+        "bleed_mod": 0.4,
+        "umbrella": 0.25,
+        "max_action_penalty_pct": 40.0,
+        "max_move_penalty_pct": 10.0
+      },
+      {
+        "part": "FOREARM_L",
+        "skin_surface": 0.035,
+        "pain_mod": 0.6,
+        "dmg_mod": 0.2,
+        "bleed_mod": 0.3,
+        "umbrella": 0.3,
+        "max_action_penalty_pct": 60.0,
+        "max_move_penalty_pct": 10.0
+      },
+      {
+        "part": "FOREARM_R",
+        "skin_surface": 0.035,
+        "pain_mod": 0.6,
+        "dmg_mod": 0.2,
+        "bleed_mod": 0.3,
+        "umbrella": 0.3,
+        "max_action_penalty_pct": 60.0,
+        "max_move_penalty_pct": 10.0
+      },
+      {
+        "part": "HAND_L",
+        "skin_surface": 0.01,
+        "pain_mod": 0.5,
+        "dmg_mod": 0.1,
+        "bleed_mod": 0.2,
+        "umbrella": 0.35,
+        "max_action_penalty_pct": 100.0,
+        "max_move_penalty_pct": 5.0
+      },
+      {
+        "part": "HAND_R",
+        "skin_surface": 0.01,
+        "pain_mod": 0.5,
+        "dmg_mod": 0.1,
+        "bleed_mod": 0.2,
+        "umbrella": 0.35,
+        "max_action_penalty_pct": 100.0,
+        "max_move_penalty_pct": 5.0
+      },
+      {
+        "part": "UPPER_LEG_L",
+        "skin_surface": 0.09,
+        "pain_mod": 0.7,
+        "dmg_mod": 0.3,
+        "bleed_mod": 0.4,
+        "umbrella": 0.55,
+        "max_action_penalty_pct": 10.0,
+        "max_move_penalty_pct": 40.0
+      },
+      {
+        "part": "UPPER_LEG_R",
+        "skin_surface": 0.09,
+        "pain_mod": 0.7,
+        "dmg_mod": 0.3,
+        "bleed_mod": 0.4,
+        "umbrella": 0.55,
+        "max_action_penalty_pct": 10.0,
+        "max_move_penalty_pct": 40.0
+      },
+      {
+        "part": "LOWER_LEG_L",
+        "skin_surface": 0.07,
+        "pain_mod": 0.6,
+        "dmg_mod": 0.2,
+        "bleed_mod": 0.3,
+        "umbrella": 0.75,
+        "max_action_penalty_pct": 10.0,
+        "max_move_penalty_pct": 60.0
+      },
+      {
+        "part": "LOWER_LEG_R",
+        "skin_surface": 0.07,
+        "pain_mod": 0.6,
+        "dmg_mod": 0.2,
+        "bleed_mod": 0.3,
+        "umbrella": 0.75,
+        "max_action_penalty_pct": 10.0,
+        "max_move_penalty_pct": 60.0
+      },
+      {
+        "part": "FOOT_L",
+        "skin_surface": 0.02,
+        "pain_mod": 0.5,
+        "dmg_mod": 0.2,
+        "bleed_mod": 0.2,
+        "umbrella": 1.0,
+        "max_action_penalty_pct": 10.0,
+        "max_move_penalty_pct": 100.0
+      },
+      {
+        "part": "FOOT_R",
+        "skin_surface": 0.02,
+        "pain_mod": 0.5,
+        "dmg_mod": 0.2,
+        "bleed_mod": 0.2,
+        "umbrella": 1.0,
+        "max_action_penalty_pct": 10.0,
+        "max_move_penalty_pct": 100.0
+      }
+    ],
+    "wound_recovery_rates_per_tick": {
+      "SCRATCH": {
+        "bandaged": -0.00015,
+        "unbandaged": -1e-05,
+        "speedup_mult": 15,
+        "bandage_life_decay": -8e-05,
+        "plantain_bonus": -0.0001,
+        "plantain_total_mult": 25
+      },
+      "LACERATION_CUT": {
+        "bandaged": -5e-05,
+        "unbandaged": -1e-06,
+        "speedup_mult": 50,
+        "bandage_life_decay": -1e-05,
+        "plantain_bonus": -5e-05,
+        "plantain_total_mult": 100
+      },
+      "DEEP_WOUND": {
+        "bandaged": -2e-05,
+        "unbandaged": -2e-06,
+        "speedup_mult": 10,
+        "bandage_life_decay": -0.005,
+        "plantain_bonus": -7e-06
+      },
+      "INFECTED_BITE": {
+        "bandaged": -0.0001,
+        "unbandaged": -5e-06,
+        "speedup_mult": 20,
+        "bandage_life_decay": -0.0001
+      },
+      "BURN": {
+        "bandaged": -0.0001,
+        "unbandaged": -5e-06,
+        "speedup_mult": 20,
+        "bandage_life_decay": -0.0001,
+        "requires_burn_wash": true
+      },
+      "FRACTURE": {
+        "splinted_base_factor": -5e-05,
+        "unsplinted": -5e-06,
+        "speedup_mult_range": [
+          10,
+          55
+        ],
+        "comfrey_bonus": -5e-06
+      }
+    },
+    "dual_infection_mechanics": {
+      "knox_virus_isInfected": {
+        "default_mortality_hours_range": [
+          48.0,
+          72.0
+        ],
+        "resilient_trait_del_mult": 1.25,
+        "prone_to_illness_trait_del_mult": 0.75,
+        "post_death_reanimation_sec_range": [
+          30.0,
+          120.0
+        ]
+      },
+      "bacterial_sepsis_isInfectedWound": {
+        "base_chance_denominator": 40000,
+        "min_floor_denominator": 5000,
+        "risk_deductions": {
+          "unbandaged": 10000,
+          "dirty_bandage_life_zero": 35000,
+          "scratch": 20000,
+          "cut_laceration": 25000,
+          "deep_wound": 30000,
+          "lodged_glass": 24000,
+          "unwashed_burn_total": 30000,
+          "dirty_clothing": 20000,
+          "bloody_clothing": 24000
+        }
+      }
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Ma trận sinh lý học 17 bộ phận cơ thể với 7 tham số độc lập cho từng vị trí: Diện tích bề mặt da (tổng = 1.00, ngực 18%, bụng 12%, cổ 2%, bàn tay 1%), Hệ số đau thần kinh, Hệ số truyền sát thương vào máu tổng, Hệ số tốc độ chảy máu, Hệ số che mưa (Umbrella), Phạt thao tác tay và Phạt tốc độ chạy.",
+    "tactical_behavior_hint": "Vùng Cổ (NECK) có diện tích da chỉ 2% nhưng mang hệ số chảy máu 1.50 và hệ số sát thương 0.70, rút cạn 100% máu tổng chỉ trong 12-18 giây. Chấn thương Bàn tay (HAND_L/R) gây phạt 100% tốc độ vung vũ khí/thao tác, trong khi chấn thương Bàn chân (FOOT_L/R) gây phạt 100% tốc độ di chuyển. Băng bó giúp vết rách sâu lành nhanh gấp 50 lần (kết hợp đắp Cao Mã Đề tăng lên gấp 100 lần), nhưng nếu để băng gạc thấm máu chuyển sang bẩn (BandageLife = 0, đặc biệt vết thương toác sâu hút bẩn với tốc độ -0.005/tick), mẫu số xác suất nhiễm trùng sẽ tụt từ 40.000 xuống sàn 5.000 (tăng nguy cơ nhiễm khuẩn lên gấp 7-8 lần).",
+    "crafting_maintenance_hint": "Người chơi bắt buộc phải để sẵn băng gạc tiệt trùng ở túi thắt lưng (không để trong balo sâu) để kịp băng ép vết thương cổ trong dưới 15 giây."
+  },
+  "cross_module_foreign_keys": {
+    "completes_anatomy_contract_doc01": "tpl_aff:lethal_necrotic_pathogen_01",
+    "protected_by_armor_doc02_doc03": "tpl_arm:impervious_anatomical_guards_01",
+    "modified_by_dextrous_trait_doc04": "tpl_trait:dextrous"
+  }
+}

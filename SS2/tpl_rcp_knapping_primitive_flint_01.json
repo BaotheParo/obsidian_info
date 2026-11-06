@@ -1,0 +1,64 @@
+{
+  "blueprint_id": "tpl_rcp:knapping_primitive_flint_01",
+  "source_pz_reference": "Knapping & Primitive Tools Recipes (Doc 03 - Section 2 Age 0 & Section 4.2)",
+  "dnd_ontology_hooks": {
+    "crafting_discipline": "PRIMITIVE_SURVIVAL_KNAPPING",
+    "tech_age": "AGE_0_PRIMITIVE_FLINT"
+  },
+  "pz_math_engine": {
+    "tool_retention_mode": "mode:keep",
+    "degradation_flags": [
+      "MayDegradeLight",
+      "MayDegradeHeavy"
+    ],
+    "recipes": [
+      {
+        "recipe_id": "MakeSharpFlintFlake",
+        "inputs": [
+          "mat_tag:flint_or_chert_nodule",
+          "tool_tag:hammerstone (mode:keep)"
+        ],
+        "output": "tpl_item:sharp_flint_flake",
+        "time_ticks": 230,
+        "xp_award": {
+          "skill:knapping": 10
+        }
+      },
+      {
+        "recipe_id": "MakeStoneBlade",
+        "inputs": [
+          "mat_tag:flint_or_chert_nodule",
+          "tool_tag:hammerstone (mode:keep)"
+        ],
+        "output": "tpl_wpn:knapped_stone_blade",
+        "time_ticks": 230,
+        "xp_award": {
+          "skill:knapping": 20
+        }
+      },
+      {
+        "recipe_id": "MakeStoneAwl",
+        "inputs": [
+          "mat_tag:flint_or_chert_nodule",
+          "tool_tag:hammerstone (mode:keep)"
+        ],
+        "output": "tpl_item:knapped_stone_awl",
+        "time_ticks": 230,
+        "xp_award": {
+          "skill:knapping": 10
+        }
+      }
+    ]
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Kỹ thuật thời kỳ Đồ đá (Age 0) dùng đá búa cứng (Hammerstone) ghè trực tiếp vào hạch đá lửa (Flint/Chert) để bóc tách các mảnh tước sắc lẹm, lưỡi dao đá dài và mũi dùi đá nhọn.",
+    "tactical_behavior_hint": "Mỗi thao tác ghè đá tốn cố định 230 ticks; cung cấp bộ công cụ sinh tồn sơ khởi để xẻ thịt, gọt gỗ làm giáo/cung tên và đục lỗ khâu da thú khi người chơi chưa tiếp cận được kim loại.",
+    "crafting_maintenance_hint": "Đá búa (Hammerstone) được giữ lại qua cơ chế mode:keep nhưng chịu xác suất hao mòn độ bền (MayDegradeLight/MayDegradeHeavy) sau mỗi chu kỳ ghè 230 ticks."
+  },
+  "cross_module_foreign_keys": {
+    "awards_skill_id": "skill:knapping",
+    "enables_downstream_crafts": [
+      "tpl_rcp:flax_textile_and_leather_01"
+    ]
+  }
+}

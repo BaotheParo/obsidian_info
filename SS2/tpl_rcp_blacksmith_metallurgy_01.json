@@ -1,0 +1,100 @@
+{
+  "blueprint_id": "tpl_rcp:blacksmith_metallurgy_01",
+  "source_pz_reference": "Blacksmithing & Metallurgy Recipes (Doc 03 - Section 2 Age 2/4 & Section 4.1)",
+  "dnd_ontology_hooks": {
+    "crafting_discipline": "BLACKSMITHING_ARMORER_WEAPONSMITH",
+    "tech_age": "AGE_2_TEMPERED_STEEL",
+    "masterwork_tech_age": "AGE_4_RELIC_ARTIFICERY",
+    "bastion_facility": "SMITHY"
+  },
+  "pz_math_engine": {
+    "core_inputs_required": [
+      "mat_tag:wood_charcoal",
+      "mat_tag:scrap_iron_or_ore",
+      "tpl_item:refractory_ingot_bar_mold"
+    ],
+    "core_tools_mode_keep": [
+      "tool_tag:anvil",
+      "tool_tag:blacksmith_hammer",
+      "tool_tag:metal_tongs"
+    ],
+    "recipes": [
+      {
+        "recipe_id": "Forge_Crude_Blade",
+        "workstation": "forge_t1_t2_t3",
+        "inputs": [
+          "mat_tag:iron_bar",
+          "mat_tag:wood_charcoal",
+          "tool_tag:blacksmith_hammer (mode:keep)",
+          "tool_tag:metal_tongs (mode:keep)"
+        ],
+        "output": "tpl_wpn:forged_crude_dagger_blade",
+        "time_ticks": 200,
+        "xp_award": {
+          "skill:blacksmithing": 25
+        }
+      },
+      {
+        "recipe_id": "Forge_Long_Crude_Blade",
+        "workstation": "forge_t1_t2_t3",
+        "inputs": [
+          "mat_tag:steel_or_iron_bar",
+          "mat_tag:wood_charcoal",
+          "tool_tag:blacksmith_hammer (mode:keep)",
+          "tool_tag:metal_tongs (mode:keep)"
+        ],
+        "output": "tpl_wpn:forged_longblade_katana_blank",
+        "time_ticks": 300,
+        "xp_award": {
+          "skill:blacksmithing": 45
+        }
+      },
+      {
+        "recipe_id": "Forge_Scrap_Shortsword",
+        "workstation": "forge_t1_t2_t3",
+        "inputs": [
+          "mat_tag:iron_bar",
+          "mat_tag:wood_charcoal",
+          "tool_tag:blacksmith_hammer (mode:keep)",
+          "tool_tag:metal_tongs (mode:keep)"
+        ],
+        "output": "tpl_wpn:forged_scrap_shortsword",
+        "time_ticks": 500,
+        "xp_award": {
+          "skill:blacksmithing": 50
+        }
+      },
+      {
+        "recipe_id": "Forge_Gorget_And_Armored_Gloves",
+        "workstation": "forge_t1_t2_t3",
+        "inputs": [
+          "mat_tag:steel_or_iron_bar",
+          "mat_tag:wood_charcoal",
+          "tool_tag:blacksmith_hammer (mode:keep)",
+          "tool_tag:metal_tongs (mode:keep)"
+        ],
+        "output": "tpl_arm:forged_gorget_and_gauntlets_100pct",
+        "time_ticks_min": 300,
+        "time_ticks_max": 600,
+        "bite_defense_pct": 100.0
+      }
+    ]
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Dây chuyền luyện kim và rèn vũ khí/giáp trụ: đốt gỗ yếm khí trong hố than (Charcoal Pit) lấy than củi, nấu chảy quặng/phế liệu sắt trong Lò luyện (Furnace I-III) thành thỏi sắt/thép (Iron/Steel Bar), sau đó nung đỏ trên Lò rèn (Forge I-III) và dùng kìm kẹp, búa đập trên đe sắt.",
+    "tactical_behavior_hint": "Cho phép tự rèn đoản kiếm (500 ticks, +50 XP), phôi trường đao/Katana (300 ticks, +45 XP) và đặc biệt là Giáp che cổ (Gorget) cùng Găng tay sắt (300-600 ticks) mang lại khả năng bảo vệ 100% trước vết cắn vào tử huyệt NECK và đôi bàn tay HAND_L/R.",
+    "crafting_maintenance_hint": "Vũ khí rèn bị cùn trong quá trình chiến đấu có thể đưa lên Đá mài xoay (entity_grindstone) để mài sắc lại, phục hồi trực tiếp độ bền và gia tăng sát thương chém."
+  },
+  "cross_module_foreign_keys": {
+    "protects_anatomy_parts": [
+      "NECK",
+      "HAND_L",
+      "HAND_R"
+    ],
+    "maintained_at_workstation": "grindstone",
+    "supplies_weapons_to_doc02": [
+      "tpl_wpn:masterwork_curved_longblade_01",
+      "tpl_wpn:heavy_forged_maul_archetypes_01"
+    ]
+  }
+}

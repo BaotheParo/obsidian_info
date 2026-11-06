@@ -1,0 +1,140 @@
+{
+  "blueprint_id": "tpl_veh:mechanical_15parts_anatomy_and_hotwire_01",
+  "source_pz_reference": "ISVehicleMechanics.lua / 15 Vehicle Parts, Engine Quality & Hotwiring (Doc 06 - Section 2, 3, 4 & 6)",
+  "dnd_ontology_hooks": {
+    "system_category": "ARTIFICERY_VEHICLE_ANATOMY_AND_MAINTENANCE",
+    "bastion_facility_hook": "WORKSHOP",
+    "required_proficiencies": [
+      "skill:mechanics",
+      "skill:metalworking",
+      "skill:electricity"
+    ]
+  },
+  "pz_math_engine": {
+    "total_anatomical_vehicle_parts": 15,
+    "engine_vs_condition_duality": {
+      "engine_quality_min_pct": 0.0,
+      "engine_quality_max_pct": 100.0,
+      "engine_quality_is_immutable": true,
+      "reliable_cold_start_quality_threshold_pct": 85.0,
+      "poor_quality_threshold_pct": 50.0,
+      "poor_quality_crank_attempts_min": 3,
+      "poor_quality_crank_attempts_max": 5,
+      "engine_condition_stall_threshold_pct": 20.0
+    },
+    "battery_and_ignition_math": {
+      "min_battery_charge_for_ignition_pct": 10.0,
+      "overnight_drain_sources": [
+        "HEADLIGHTS_LEFT_ON",
+        "TRANSCEIVER_RADIO_LEFT_ON",
+        "ALARM_SIREN_TRIGGERED"
+      ],
+      "hotwire_bypass_trait": "tpl_trait:burglar",
+      "hotwire_skill_reqs": {
+        "skill:electricity": 1,
+        "skill:mechanics": 2,
+        "required_tool": "tool_tag:screwdriver"
+      },
+      "hotwire_execution_time_sec_min": 5.0,
+      "hotwire_execution_time_sec_max": 10.0
+    },
+    "part_failure_penalties_and_repairs": {
+      "HOOD": {
+        "zero_cond_engine_dmg_transfer_pct": 100.0,
+        "repair_tools": [
+          "Propane_Torch",
+          "Welding_Mask",
+          "Sheet_Metal"
+        ]
+      },
+      "ENGINE": {
+        "below_20_pct_effect": "RANDOM_MID_DRIVE_STALL",
+        "repair_tools": [
+          "Wrench",
+          "Spare_Engine_Parts"
+        ]
+      },
+      "GAS_TANK": {
+        "damaged_effect": "CONTINUOUS_FUEL_LEAK_EMPTY_IN_MINUTES",
+        "repair_tools": [
+          "Sheet_Metal_Or_Adhesive_Weld"
+        ]
+      },
+      "WINDSHIELD_AND_WINDOWS": {
+        "shattered_effect": "DIRECT_ANATOMICAL_BITE_TO_DRIVER_FACE_AND_ARMS",
+        "repair_tools": [
+          "Wrench_Same_Class_Glass_Swap"
+        ]
+      },
+      "TIRES_4": {
+        "optimal_psi_min": 30.0,
+        "optimal_psi_max": 35.0,
+        "flat_speed_penalty_pct": 70.0,
+        "repair_tools": [
+          "Tire_Pump",
+          "Car_Jack",
+          "Lug_Wrench"
+        ]
+      },
+      "BRAKES_4": {
+        "broken_stopping_distance_multiplier": 4.0,
+        "repair_tools": [
+          "Same_Class_Brake_Pads"
+        ]
+      },
+      "SUSPENSION_4": {
+        "broken_effect": "SEVERE_CHASSIS_BOUNCE_AND_ROLLOVER_ON_TURN",
+        "repair_tools": [
+          "Car_Jack",
+          "Replacement_Struts"
+        ]
+      },
+      "TRUNK": {
+        "crushed_effect": "DYNAMIC_CARGO_CAPACITY_SHRINKAGE",
+        "repair_tools": [
+          "Propane_Torch_Weld"
+        ]
+      },
+      "MUFFLER": {
+        "good_condition_threshold_pct": 80.0,
+        "good_sound_radius_meters_min": 20.0,
+        "good_sound_radius_meters_max": 30.0,
+        "broken_condition_threshold_pct": 20.0,
+        "broken_sound_radius_meters_min": 100.0,
+        "broken_sound_radius_meters_max": 150.0
+      }
+    },
+    "mechanics_xp_grinding_rules": {
+      "per_part_per_vehicle_xp_cooldown_hours": 24.0,
+      "daily_salvage_target_vehicles_min": 5,
+      "daily_salvage_target_vehicles_max": 10,
+      "recommended_daily_parts_to_cycle": [
+        "4_HEADLIGHT_BULBS",
+        "CABIN_RADIO",
+        "CAR_BATTERY",
+        "4_WHEELS_TIRES"
+      ],
+      "days_to_reach_level_4_to_6_min": 3,
+      "days_to_reach_level_4_to_6_max": 5
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Cấu trúc giải phẫu cơ khí 15 bộ phận độc lập của một cỗ xe vận tải: Nắp giáp mũi, Trái tim động cơ, Bình chứa nhiên liệu, Kính chắn phía trước, Kính chắn hai bên hông, 4 Bánh xe chịu áp suất, Hệ thống hãm phanh, Khung nhíp giảm xóc, Khoang chứa hàng sau và Ống tiêu âm.",
+    "tactical_behavior_hint": "Phân tách rạch ròi giữa Phẩm chất bẩm sinh (Engine Quality: cố định vĩnh viễn, >85% nổ máy tức thì, <50% đề 3-5 nhịp) và Độ bền hao mòn (Engine Condition: <20% gây chết máy giữa đường). Ống tiêu âm (Muffler) quyết định sự sống còn về âm học: khi tốt (>80%) chỉ phát tiếng động trong 20-30m, nhưng khi rách (<20%) sẽ gầm rú vang xa 100-150m gom toàn bộ xác sống trong thị trấn. Vỡ kính chắn gió hoặc kính bên ghế lái khiến người ngồi trong mất hoàn toàn lớp giáp bảo vệ, bị kẻ địch bên ngoài thò tay cắn trực tiếp vào mặt.",
+    "crafting_maintenance_hint": "Cơ chế chống cày cấp ảo: mỗi bộ phận trên một chiếc xe chỉ trao XP tháo/lắp đúng 1 lần mỗi 24 giờ. Lộ trình tối ưu là đọc Sách Tập 1 (x3-x5 XP) rồi tháo lắp cụm đèn, đài, bình điện và 4 bánh xe trên 5-10 xác xe bỏ hoang mỗi ngày để đạt Cấp 4-6 chỉ sau 3-5 ngày."
+  },
+  "cross_module_foreign_keys": {
+    "requires_occupation_or_trait_doc04": [
+      "base:mechanics",
+      "base:burglar",
+      "tpl_trait:vehicle_knowledge"
+    ],
+    "interacts_with_sound_wave_doc01": "sys_math:ai_sensory_perception_cone_and_sound_wave",
+    "boosted_by_instructional_records_doc07": [
+      "Carzone (Ep 1-3)",
+      "Z-Squad",
+      "OSCC '92",
+      "stock cars"
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "blueprint_id": "tpl_evt:world_erosion_100day_reclamation_01",
+  "source_pz_reference": "zombie.erosion.ErosionMain (Doc 09 - Section 5)",
+  "dnd_ontology_hooks": {
+    "system_category": "WORLD_DECAY_AND_OVERGROWTH_TIMELINE",
+    "terrain_hazard_type": "VEGETATION_OBSTRUCTION_AND_ROAD_CRACKING"
+  },
+  "pz_math_engine": {
+    "default_max_erosion_days": 100,
+    "sandbox_erosion_speed_presets": {
+      "1_VERY_FAST": 20,
+      "2_FAST": 50,
+      "3_NORMAL_DEFAULT": 100,
+      "4_SLOW": 200,
+      "5_VERY_SLOW": 500
+    },
+    "custom_erosion_days_range": [
+      -1,
+      365
+    ],
+    "erosion_4_stages": [
+      {
+        "stage": 1,
+        "days_range": [
+          0,
+          20
+        ],
+        "phenomena": [
+          "SPROUTING_WEEDS",
+          "WALL_BASE_MOSS"
+        ]
+      },
+      {
+        "stage": 2,
+        "days_range": [
+          20,
+          50
+        ],
+        "phenomena": [
+          "WAIST_HIGH_TALL_GRASS_HIDES_CRAWLERS",
+          "SIDEWALK_BUSH_ENCROACHMENT"
+        ]
+      },
+      {
+        "stage": 3,
+        "days_range": [
+          50,
+          80
+        ],
+        "phenomena": [
+          "FULL_WALL_VINE_COVERAGE_CLIMBABLE_TO_2ND_FLOOR",
+          "ASPHALT_ROAD_CRACKING"
+        ]
+      },
+      {
+        "stage": 4,
+        "days_range": [
+          80,
+          100
+        ],
+        "phenomena": [
+          "ROADWAY_SAPLINGS_AND_TREES",
+          "FOREST_SWALLOWS_URBAN_ZONES"
+        ]
+      }
+    ],
+    "gameplay_interactions": {
+      "tall_grass_clearing_tools": [
+        "Machete",
+        "Scythe",
+        "Shovel"
+      ],
+      "vine_clearing_tools": [
+        "Knife",
+        "Axe"
+      ],
+      "vine_second_floor_climbing_enabled": true,
+      "road_sapling_high_speed_collision_damage": [
+        "DESTROYED_RADIATOR",
+        "CRACKED_ENGINE_BLOCK",
+        "BURST_TIRES"
+      ]
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Động cơ biến đổi địa hình tự động theo thời gian thực qua 4 giai đoạn (chuẩn 100 ngày đạt 100%): cỏ dại mọc cao ngang hông, rêu và dây leo phủ kín tường gạch, mặt đường nứt toác và cây gỗ đâm chồi thẳng giữa lòng đường.",
+    "tactical_behavior_hint": "Sau ngày thứ 20-50, lớp cỏ cao sẽ che khuất hoàn toàn các thực thể bò trườn dưới đất (Crawlers); sau ngày thứ 80-100, các cây non mọc giữa đường trở thành cái bẫy chết người đối với phương tiện di chuyển tốc độ cao (đâm trúng sẽ làm vỡ lốc máy, nát két nước và nổ lốp tức thì). Tuy nhiên người chơi có thể tận dụng dây leo bám tường (sau ngày 50) để leo thẳng lên cửa sổ tầng 2.",
+    "crafting_maintenance_hint": "Buộc người chơi phải định kỳ mang Dao rựa, Liềm, Rìu và Xẻng đi phát quang cỏ dại quanh pháo đài và chặt bỏ cây non trên các tuyến đường vận tải huyết mạch."
+  },
+  "cross_module_foreign_keys": {
+    "damages_vehicle_parts_doc06": "tpl_veh:mechanical_15parts_anatomy_and_hotwire_01",
+    "configurable_in_sandbox_doc10": "ErosionSpeed_And_ErosionDays"
+  }
+}

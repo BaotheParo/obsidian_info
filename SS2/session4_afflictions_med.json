@@ -1,0 +1,1514 @@
+{
+  "session": "Session 4 - Afflictions, Pathology & Medical",
+  "source_doc": "Doc 01, Doc 02, Doc 04, Doc 08, Doc 09, Doc 13, Doc 14",
+  "total_items": 13,
+  "blueprints": [
+    {
+      "blueprint_id": "tpl_aff:lethal_necrotic_pathogen_01",
+      "source_pz_reference": "BodyDamage / BodyPartType (Doc 01 - Section 5: Human Physiology)",
+      "dnd_ontology_hooks": {
+        "system_category": "PATHOLOGY_AFFLICTION",
+        "virulence_severity": "TERMINAL_LETHAL",
+        "incubation_period_hours": 72.0
+      },
+      "pz_math_engine": {
+        "transmission_matrix": {
+          "SCRATCH": 0.07,
+          "LACERATION": 0.25,
+          "BITE": 1.0
+        },
+        "vital_neck_bleed_multiplier": 1.5,
+        "neck_bleed_death_seconds": [
+          10.0,
+          20.0
+        ],
+        "pathology_flags": {
+          "is_infected": "Vô phương cứu chữa trong vanilla; tiến triển qua Sốt, Lo âu, Suy kiệt và Chết biến thành zombie",
+          "is_fake_infected": "Hội chứng giả nhiễm do sợ hãi/Hypochondriac; sốt buồn nôn nhưng tự khỏi sau 48-72h",
+          "infected_wound": "Nhiễm khuẩn thông thường do vết thương bẩn; chữa khỏi bằng cồn, nước sôi, kháng sinh"
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Mầm bệnh ký sinh trong máu làm suy đồi tế bào sống, đẩy thân nhiệt lên cao và phá hủy hệ miễn dịch.",
+        "tactical_behavior_hint": "Khi bị cắn tại vùng cổ (Neck), tốc độ xuất huyết nhân 1.5x khiến người chơi tử vong trong 10-20 giây nếu không có băng gạc vô trùng sẵn trên tay.",
+        "crafting_maintenance_hint": "Vết thương nhiễm khuẩn (infectedWound) đòi hỏi cồn y tế hoặc nước sôi khử trùng để ngăn ngừa hoại tử mô mềm."
+      },
+      "cross_module_foreign_keys": {
+        "targeted_body_parts": [
+          "HEAD",
+          "NECK",
+          "TORSO_UPPER",
+          "TORSO_LOWER",
+          "GROIN",
+          "UPPER_ARM_L",
+          "UPPER_ARM_R",
+          "FOREARM_L",
+          "FOREARM_R",
+          "HAND_L",
+          "HAND_R",
+          "UPPER_LEG_L",
+          "UPPER_LEG_R",
+          "LOWER_LEG_L",
+          "LOWER_LEG_R",
+          "FOOT_L",
+          "FOOT_R"
+        ],
+        "curative_item_tag": "item_tag:disinfectant_alcohol"
+      }
+    },
+    {
+      "blueprint_id": "tpl_item:medical_disinfection_dressing_01",
+      "source_pz_reference": "zombie.characters.BodyDamage (Doc 01 - Section 5: Medical Care)",
+      "dnd_ontology_hooks": {
+        "system_category": "MEDICAL_SUPPLY",
+        "sterility_level": "HOSPITAL_GRADE"
+      },
+      "pz_math_engine": {
+        "infection_cure_probability": 0.95,
+        "disinfection_potency": {
+          "alcohol_rub": 1.0,
+          "boiled_water": 0.75,
+          "antibiotics_course": 1.0
+        },
+        "bandage_durability_hours": 18.0
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Băng vải tiệt trùng, cồn y tế hoặc nước sôi khử khuẩn dùng để điều trị các vết thương bị nhiễm trùng vi khuẩn (infectedWound).",
+        "tactical_behavior_hint": "Cứu sống nhân vật khỏi cái chết do nhiễm độc máu thông thường; tuy nhiên hoàn toàn bất lực trước virus Knox tử thần (isInfected).",
+        "crafting_maintenance_hint": "Có thể chế tạo băng gạc tiệt trùng bằng cách đun sôi vải rách trong nồi nước sôi trên bếp lửa."
+      },
+      "cross_module_foreign_keys": {
+        "treats_condition_id": "tpl_aff:lethal_necrotic_pathogen_01",
+        "requires_item_tag": "item_tag:disinfectant_alcohol"
+      }
+    },
+    {
+      "blueprint_id": "tpl_item:disinfectant_alcohol_bottle_01",
+      "source_pz_reference": "Base.Disinfectant (Doc 02 - Section 1: Drainable & Medical)",
+      "dnd_ontology_hooks": {
+        "system_category": "MEDICAL_ANTISEPTIC",
+        "purity_percent": 90.0,
+        "application_method": "TOPICAL_OR_DRESSING"
+      },
+      "pz_math_engine": {
+        "weight_kg": 0.4,
+        "total_uses": 10,
+        "disinfection_potency": 1.0,
+        "infection_cure_probability": 0.95,
+        "pain_increase_immediate": 25.0
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Chai thủy tinh chứa cồn y tế khử trùng nồng độ cao dùng trong phẫu thuật dã chiến.",
+        "tactical_behavior_hint": "Giải quyết dứt điểm tình trạng nhiễm trùng vết thương vi khuẩn (infectedWound), làm sạch băng gạc bẩn để tái sử dụng.",
+        "crafting_maintenance_hint": "Dung dịch tiêu hao (Drainable 10 lần dùng); có thể điều chế tại dược viện giả kim bst_duoc_vien_gia_kim."
+      },
+      "cross_module_foreign_keys": {
+        "resolves_pending_tag": "item_tag:disinfectant_alcohol",
+        "cures_wound_state": "infectedWound"
+      }
+    },
+    {
+      "blueprint_id": "tpl_item:boiled_sterile_dressing_01",
+      "source_pz_reference": "Base.BandageDirty / BoiledWater (Doc 02 - Section 1: Drainable)",
+      "dnd_ontology_hooks": {
+        "system_category": "STERILE_DRESSING",
+        "cleanliness_level": "ASEPTIC_BOILED"
+      },
+      "pz_math_engine": {
+        "weight_kg": 0.1,
+        "hemostatic_speed_multiplier": 1.5,
+        "sterility_duration_hours": 24.0,
+        "reusable_cycles": 5
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Băng vải lanh hoặc gạc bông được luộc trong nồi nước sôi tiệt trùng và phơi khô trong phòng kín.",
+        "tactical_behavior_hint": "Bịt kín vết thương rách sâu (Laceration), ngăn chặn 100% nguy cơ xâm nhập của vi khuẩn gây mưng mủ.",
+        "crafting_maintenance_hint": "Khi băng bị bẩn (BandageDirty) có thể giặt lại và đun sôi nước để tái tiệt trùng."
+      },
+      "cross_module_foreign_keys": {
+        "resolves_pending_tag": "item_tag:boiled_sterile_water",
+        "applied_to_wound": "wnd_laceration"
+      }
+    },
+    {
+      "blueprint_id": "tpl_item:antibiotic_tablets_01",
+      "source_pz_reference": "Base.Antibiotics (Doc 02 - Section 1: Medical Consumables)",
+      "dnd_ontology_hooks": {
+        "system_category": "PHARMACEUTICAL_DRUG",
+        "administration_route": "ORAL"
+      },
+      "pz_math_engine": {
+        "weight_kg": 0.1,
+        "total_uses": 6,
+        "infection_reduction_per_hour": 0.35,
+        "fatigue_side_effect": 15.0
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Vỉ thuốc kháng sinh phổ rộng đóng viên con nhộng trong bao bì nhôm quân sự.",
+        "tactical_behavior_hint": "Dùng đường uống khi vết thương nhiễm trùng đã lan vào máu gây sốt cao toàn thân; làm giảm nhanh chóng chỉ số nhiễm độc nội tạng.",
+        "crafting_maintenance_hint": "Dược phẩm hiện đại cực kỳ quý hiếm không thể tự chế tạo thủ công; chỉ có thể tìm thấy trong các hầm ngục y tế hoặc trạm xá bỏ hoang."
+      },
+      "cross_module_foreign_keys": {
+        "resolves_pending_tag": "item_tag:antibiotic_medicine",
+        "cures_disease": "dis_trung_doc_o_huyet"
+      }
+    },
+    {
+      "blueprint_id": "tpl_trait:positive_combat_and_artisan_perks_01",
+      "source_pz_reference": "character_traits.txt / Top Positive Traits & Innate Perks (Doc 04 - Section 2, 4 & 5)",
+      "dnd_ontology_hooks": {
+        "system_category": "CHARACTER_FEATS_AND_BOONS",
+        "stat_modifiers": [
+          "PERCEPTION_REAR_RADIUS",
+          "STRENGTH_CARRY_AND_DAMAGE",
+          "CONSTITUTION_ENDURANCE",
+          "SLEIGHT_OF_HAND_TRANSFER"
+        ]
+      },
+      "pz_math_engine": {
+        "positive_traits_catalog": [
+          {
+            "trait_id": "tpl_trait:keen_hearing",
+            "pz_id": "base:keenhearing",
+            "point_cost": -6,
+            "rear_vision_radius_multiplier": 2.0
+          },
+          {
+            "trait_id": "tpl_trait:strong",
+            "pz_id": "base:strong",
+            "point_cost": -10,
+            "Alternate_tier_stout_cost": -6,
+            "target_strength_level_min": 9,
+            "target_strength_level_max": 10,
+            "melee_damage_bonus_pct": 40.0,
+            "knockdown_push_bonus": true,
+            "max_carry_weight_kg_min": 18.0,
+            "max_carry_weight_kg_max": 20.0
+          },
+          {
+            "trait_id": "tpl_trait:athletic",
+            "pz_id": "base:athletic",
+            "point_cost": -10,
+            "alternate_tier_fit_cost": -6,
+            "endurance_regeneration_boost": true,
+            "continuous_sprint_and_swing_stamina": true
+          },
+          {
+            "trait_id": "tpl_trait:dextrous",
+            "pz_id": "base:dextrous",
+            "point_cost": -2,
+            "inventory_transfer_speed_multiplier": 2.0
+          },
+          {
+            "trait_id": "tpl_trait:fast_learner",
+            "pz_id": "base:fastlearner",
+            "point_cost": -6,
+            "global_xp_bonus_pct": 30.0,
+            "excluded_skills": [
+              "Strength",
+              "Fitness"
+            ]
+          },
+          {
+            "trait_id": "tpl_trait:inconspicuous",
+            "pz_id": "base:inconspicuous",
+            "point_cost": -4,
+            "stealth_detection_chance_reduction_pct": 50.0
+          },
+          {
+            "trait_id": "tpl_trait:graceful",
+            "pz_id": "base:graceful",
+            "point_cost": -4,
+            "footstep_noise_suppression": true
+          },
+          {
+            "trait_id": "tpl_trait:brave",
+            "pz_id": "base:brave",
+            "point_cost": -4,
+            "panic_accumulation_reduction": true
+          },
+          {
+            "trait_id": "tpl_trait:handy",
+            "pz_id": "base:handy",
+            "point_cost": -8,
+            "structure_max_hp_and_build_speed_boost": true
+          },
+          {
+            "trait_id": "tpl_trait:artisan_and_crafty",
+            "pz_id": "base:artisan / base:crafty",
+            "point_cost_artisan": -2,
+            "point_cost_crafty": -3,
+            "b42_pottery_glass_blacksmith_speed_and_xp_boost": true
+          }
+        ]
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Tập hợp các phẩm chất ưu việt về giác quan, cơ bắp, tim mạch và sự khéo léo của đôi bàn tay.",
+        "tactical_behavior_hint": "Keen Hearing (-6) nhân đôi bán kính cảnh giới sau lưng để chống bị cắn trộm âm thầm; Strong (-10) cộng +40% sát thương cận chiến và nâng tải trọng mang vác lên 18-20 kg; Dextrous (-2) nhân đôi tốc độ rút vũ khí và lấy băng gạc cấp cứu khi đứt mạch máu cổ; Inconspicuous (-4) giảm 50% tỷ lệ bị phát hiện trong nón thị giác kẻ địch.",
+        "crafting_maintenance_hint": "Kết hợp Fast Learner (+30% XP toàn cục) với Crafty (-3) và Artisan (-2) tạo thành bộ gia tốc tối đa cho việc lĩnh hội 1.026 công thức chế tác của Build 42."
+      },
+      "cross_module_foreign_keys": {
+        "modifies_combat_equations_doc11": [
+          "melee_damage_bonus_pct",
+          "stealth_detection_chance_reduction_pct"
+        ],
+        "modifies_fortification_hp_doc12": [
+          "structure_max_hp_and_build_speed_boost"
+        ]
+      }
+    },
+    {
+      "blueprint_id": "tpl_trait:negative_flaws_and_dynamic_afflictions_01",
+      "source_pz_reference": "character_traits.txt / Negative Traits: Free Points vs Lethal Traps (Doc 04 - Section 3)",
+      "dnd_ontology_hooks": {
+        "system_category": "CHARACTER_FLAWS_AND_DRAWBACKS",
+        "point_buy_economy_role": "POINT_GENERATION_OFFSET"
+      },
+      "pz_math_engine": {
+        "manageable_offset_traits": [
+          {
+            "trait_id": "tpl_trait:smoker",
+            "pz_id": "base:smoker",
+            "point_grant": 4,
+            "passive_stress_accumulation": true,
+            "instant_stress_and_unhappiness_clear_on_use": true
+          },
+          {
+            "trait_id": "tpl_trait:high_thirst",
+            "pz_id": "base:highthirst",
+            "point_grant": 6,
+            "water_consumption_rate_multiplier": 2.0
+          },
+          {
+            "trait_id": "tpl_trait:prone_to_illness",
+            "pz_id": "base:pronetoillness",
+            "point_grant": 4,
+            "cold_catch_speed_in_rain_boost": true,
+            "zombification_progression_speed_boost": true,
+            "bite_or_scratch_transmission_chance_increase": 0.0
+          },
+          {
+            "trait_id": "tpl_trait:slow_reader",
+            "pz_id": "base:slowreader",
+            "point_grant": 2,
+            "literature_reading_time_penalty": true
+          },
+          {
+            "trait_id": "tpl_trait:weak_stomach",
+            "pz_id": "base:weakstomach",
+            "point_grant": 3,
+            "rotten_or_raw_food_poisoning_multiplier": true
+          },
+          {
+            "trait_id": "tpl_trait:short_sighted",
+            "pz_id": "base:shortsighted",
+            "point_grant": 2,
+            "foraging_radius_penalty": true,
+            "nullified_by_equipped_item_tag": "item_tag:corrective_eyeglasses"
+          },
+          {
+            "trait_id": "tpl_trait:underweight",
+            "pz_id": "base:underweight",
+            "point_grant": 6,
+            "fitness_level_penalty": -1,
+            "minor_melee_damage_penalty": true,
+            "permanent_removal_weight_threshold_kg": 80.0,
+            "typical_recovery_window_days_min": 3,
+            "typical_recovery_window_days_max": 5
+          },
+          {
+            "trait_id": "tpl_trait:slow_healer",
+            "pz_id": "base:slowhealer",
+            "point_grant": 6,
+            "wound_recovery_time_penalty": true
+          },
+          {
+            "trait_id": "tpl_trait:disorganized",
+            "pz_id": "base:disorganized",
+            "point_grant": 4,
+            "container_capacity_penalty": true
+          }
+        ],
+        "high_risk_crippling_traits": [
+          {
+            "trait_id": "tpl_trait:deaf",
+            "pz_id": "base:deaf",
+            "point_grant": 12,
+            "audio_perception_loss_pct": 100.0
+          },
+          {
+            "trait_id": "tpl_trait:sunday_driver",
+            "pz_id": "base:sundaydriver",
+            "point_grant": 1,
+            "max_vehicle_speed_cap_mph": 30.0,
+            "severe_torque_traction_penalty": true
+          },
+          {
+            "trait_id": "tpl_trait:asthmatic",
+            "pz_id": "base:asthmatic",
+            "point_grant": 5,
+            "endurance_depletion_rate_multiplier": 2.0,
+            "exhaustion_swing_threshold_hits_min": 3,
+            "exhaustion_swing_threshold_hits_max": 4
+          },
+          {
+            "trait_id": "tpl_trait:clumsy",
+            "pz_id": "base:clumsy",
+            "point_grant": 2,
+            "running_sound_radius_penalty": true,
+            "fence_vault_trip_fall_chance_boost": true
+          }
+        ]
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Hệ thống khiếm khuyết cơ thể và thói quen sinh hoạt chia làm 2 phân lớp rõ rệt: nhóm khiếm khuyết có thể khắc phục bằng kỷ luật sinh tồn/trang bị và nhóm tàn tật chí mạng làm tê liệt khả năng chiến đấu.",
+        "tactical_behavior_hint": "Nhóm tối ưu điểm (+26 đến +30 điểm) tận dụng cơ chế xóa bỏ động: đeo kính mắt triệt tiêu Cận thị (+2), ăn chất béo lên 80.0 kg trong 3-5 ngày xóa vĩnh viễn Thiếu cân (+6), mang bình nước tự uống hóa giải Khát nước gấp đôi (+6), và không ăn đồ sống hóa giải Dạ dày yếu (+3). Ngược lại, Hen suyễn (+5) làm mất thể lực gấp đôi khiến nhân vật kiệt sức chỉ sau 3-4 cú vung vũ khí, còn Lái xe/Điều khiển chậm (+1) khóa tốc độ ở 30 mph và làm phương tiện chết máy ngay khi vướng địa hình hoặc bị 2-3 kẻ địch cản đầu.",
+        "crafting_maintenance_hint": "Prone to Illness (+4) chỉ làm đẩy nhanh tốc độ phát bệnh nếu đã trúng độc hoặc dầm mưa lạnh chứ hoàn toàn không làm tăng xác suất nhiễm bệnh gốc (7% / 25% / 100%) khi bị cào hoặc cắn."
+      },
+      "cross_module_foreign_keys": {
+        "interacts_with_pathogen_doc01": "tpl_aff:lethal_necrotic_pathogen_01",
+        "interacts_with_nutrition_doc02": "tpl_item:metabolic_sustenance_rations_01",
+        "interacts_with_caravan_vehicles_doc06": "max_vehicle_speed_cap_mph"
+      }
+    },
+    {
+      "blueprint_id": "tpl_item:foraging_27categories_and_herbal_medicine_01",
+      "source_pz_reference": "forageSystem.lua & forageCategories.lua (Doc 08 - Section 6)",
+      "dnd_ontology_hooks": {
+        "item_category": "WILDERNESS_REAGENTS_AND_HERBAL_POULTICES",
+        "required_feat_for_toxin_detection": "tpl_trait:herbalist"
+      },
+      "pz_math_engine": {
+        "total_forage_categories": 27,
+        "search_radius_tiles_lv0": 3.0,
+        "search_radius_tiles_lv10": 10.5,
+        "per_level_radius_scaling_factor": 0.25,
+        "optical_penalties_pct": {
+          "moonless_darkness": -60.0,
+          "heavy_fog": -50.0,
+          "heavy_rain": -30.0,
+          "exhausted_moodle_range": [
+            -10.0,
+            -30.0
+          ],
+          "drowsy_moodle_range": [
+            -15.0,
+            -40.0
+          ],
+          "full_helmet_or_welding_mask": -30.0
+        },
+        "medicinal_plants_5": [
+          {
+            "herb_id": "Plantain",
+            "application": "CRUSHED_POULTICE",
+            "effect": "ACCELERATED_OPEN_WOUND_EPITHELIAL_HEALING"
+          },
+          {
+            "herb_id": "Comfrey",
+            "application": "SPLINT_BONE_POULTICE",
+            "effect": "FRACTURE_HEALING_SPEED_MULTIPLIER_2X",
+            "healing_speed_mult": 2.0
+          },
+          {
+            "herb_id": "WildGarlic",
+            "application": "ANTISEPTIC_POULTICE",
+            "effect": "LACERATION_AND_BITE_BACTERIAL_DISINFECTION"
+          },
+          {
+            "herb_id": "Ginseng",
+            "application": "RAW_ORAL_CHEW",
+            "effect": "INSTANT_ENDURANCE_STAMINA_RESTORATION"
+          },
+          {
+            "herb_id": "BlackSage",
+            "application": "ORAL_ANALGESIC",
+            "effect": "POTENT_PAIN_SUPPRESSION_EQUIVALENT_TO_PAINKILLERS"
+          }
+        ],
+        "wild_toxin_lethality": {
+          "poisonous_mushrooms_and_berries_time_to_death_hours": 24.0,
+          "identified_by_trait_or_magazine": [
+            "tpl_trait:herbalist",
+            "The_Herbalist_Magazine"
+          ]
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Hệ thống 27 nhóm tài nguyên thiên nhiên quét qua tầm nhìn quang học (từ 3.0 đến 10.5 ô gạch): bao gồm dấu chân/phân thú hoang (Tracks), đá lửa/đá cuội (Flint/Stones), côn trùng mồi câu, nấm/quả mọng và 5 vị thảo dược y học cổ truyền.",
+        "tactical_behavior_hint": "Bán kính tìm kiếm bị suy giảm mạnh theo điều kiện quang học (-60% trong đêm tối, -50% trong sương mù, -30% khi đội mũ giáp kín mặt). Ăn nhầm nấm độc hoặc quả dại kịch độc khi chưa có tri thức Thảo dược học (Herbalist) sẽ dẫn tới ngộ độc tử vong trong vòng 24 giờ.",
+        "crafting_maintenance_hint": "5 loại thảo dược rừng thay thế hoàn toàn tủ thuốc tân dược: Mã đề đắp lành vết thương hở, Cỏ liên mộc giúp xương gãy liền nhanh gấp đôi (x2), Tỏi dại sát trùng vết rách, Nhân sâm hồi phục thể lực tức thì và Xô thơm đen giảm đau tương đương thuốc giảm đau."
+      },
+      "cross_module_foreign_keys": {
+        "treats_wounds_doc01_doc13": [
+          "SCRATCH",
+          "LACERATION",
+          "DEEP_WOUND",
+          "FRACTURE"
+        ],
+        "supplies_knapping_stone_doc03": "tpl_rcp:knapping_primitive_flint_01"
+      }
+    },
+    {
+      "blueprint_id": "tpl_aff:thermoregulation_37c_and_cold_affliction_01",
+      "source_pz_reference": "Thermoregulator, ThermoDebug.lua & PlayerClimateDebug.lua (Doc 09 - Section 4)",
+      "dnd_ontology_hooks": {
+        "affliction_category": "EXTREME_TEMPERATURE_EXPOSURE_AND_RESPIRATORY_ILLNESS",
+        "target_anatomy_enum": [
+          "HEAD",
+          "NECK",
+          "TORSO_UPPER",
+          "TORSO_LOWER",
+          "GROIN",
+          "UPPER_ARM_L",
+          "UPPER_ARM_R",
+          "FOREARM_L",
+          "FOREARM_R",
+          "HAND_L",
+          "HAND_R",
+          "UPPER_LEG_L",
+          "UPPER_LEG_R",
+          "LOWER_LEG_L",
+          "LOWER_LEG_R",
+          "FOOT_L",
+          "FOOT_R"
+        ]
+      },
+      "pz_math_engine": {
+        "equilibrium_core_temp_c": 37.0,
+        "equilibrium_core_temp_f": 98.6,
+        "core_temp_bands": [
+          {
+            "band_id": "SEVERE_HYPOTHERMIA",
+            "temp_c_max": 30.0,
+            "effect": "CONTINUOUS_HP_DRAIN_TO_DEATH"
+          },
+          {
+            "band_id": "MILD_HYPOTHERMIA_FROSTBITE",
+            "temp_c_min": 30.0,
+            "temp_c_max": 35.0,
+            "move_speed_penalty_pct": 50.0,
+            "weapon_swing_penalty_pct": 50.0,
+            "action_speed_penalty_pct": 40.0
+          },
+          {
+            "band_id": "SHIVERING",
+            "temp_c_min": 35.0,
+            "temp_c_max": 36.5,
+            "energy_and_calorie_drain_multiplier_min": 3.0,
+            "energy_and_calorie_drain_multiplier_max": 5.0
+          },
+          {
+            "band_id": "SAFE_HOMEOSTASIS",
+            "temp_c_min": 36.5,
+            "temp_c_max": 37.5
+          },
+          {
+            "band_id": "SWEATING",
+            "temp_c_min": 37.5,
+            "temp_c_max": 39.0,
+            "thirst_rate_multiplier": 4.0,
+            "soaks_inner_clothing_layers": true
+          },
+          {
+            "band_id": "HYPERTHERMIA_HEATSTROKE",
+            "temp_c_min": 39.0,
+            "effect": "DIZZINESS_EXHAUSTION_AND_HP_LOSS"
+          }
+        ],
+        "clothing_thermal_attributes_3": {
+          "Insulation": "THERMAL_RETENTION_FACTOR",
+          "WindResistance": "WIND_CHILL_MITIGATION_FACTOR",
+          "WaterResistance": "RAIN_PENETRATION_BLOCK_PONCHO_100PCT"
+        },
+        "catching_a_cold_mechanics": {
+          "accumulator_variable": "CatchAColdDelta",
+          "infection_trigger_threshold_pct": 100.0,
+          "cough_and_sneeze_sound_radius_tiles_min": 15,
+          "cough_and_sneeze_sound_radius_tiles_max": 20,
+          "acoustic_suppressor_offhand_items": [
+            "Handkerchief",
+            "Tissue"
+          ],
+          "curative_treatments": [
+            "Cold_Medicine",
+            "Hot_Onion_Garlic_Soup",
+            "Warm_Bed_Rest"
+          ]
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Mô hình cân bằng nhiệt động học trên 17 bộ phận cơ thể xoay quanh điểm chuẩn 37.0°C, kết nối trực tiếp với 3 thuộc tính vật lý của từng lớp y phục: Độ cách nhiệt (Insulation), Độ cản gió (Wind Resistance) và Độ kháng nước (Water Resistance - đạt 100% với áo tơi/áo mưa).",
+        "tactical_behavior_hint": "Trừng phạt nặng nề việc mặc giáp nặng kín mít giữa mùa hè: khi thân nhiệt vượt 37.5°C, nhân vật khát nước gấp 4 lần và mồ hôi làm ướt sũng lớp áo lót bên trong; ngay khi dừng chiến đấu, lớp áo ướt gặp gió sẽ gây hạ nhiệt ngược làm mắc chứng Cảm lạnh. Khi thân nhiệt tụt xuống 35.0-36.5°C, cơn rét run đốt cháy Calo gấp 3-5 lần; xuống dưới 35.0°C làm tê cóng giảm 50% tốc độ chạy và 50% tốc độ vung vũ khí. Đặc biệt, khi bị Cảm lạnh (CatchAColdDelta = 100%), nhân vật sẽ ho và hắt hơi không kiểm soát với bán kính âm thanh 15-20 ô gạch (ngang tiếng đập vỡ cửa kính), buộc phải cầm Khăn tay hoặc Giấy mềm ở tay phụ để bịt miệng tiêu âm.",
+        "crafting_maintenance_hint": "Đòi hỏi người chơi phải thay đổi cấu hình trang phục theo mùa (1 lớp thoáng khí mùa hè vs phối nhiều lớp Layering mùa đông) và hơ khô quần áo ướt bên lò sưởi."
+      },
+      "cross_module_foreign_keys": {
+        "interacts_with_sound_wave_doc01": "sys_math:ai_sensory_perception_cone_and_sound_wave",
+        "interacts_with_caloric_burn_doc02_doc14": "sys_math:daily_caloric_burn_and_macronutrient_partition",
+        "accelerated_by_trait_doc04": "tpl_trait:prone_to_illness"
+      }
+    },
+    {
+      "blueprint_id": "tpl_aff:anatomy_17parts_modifiers_and_wound_kinetics_01",
+      "source_pz_reference": "BodyPartType.java, BodyPart.java & BodyDamage.java (Doc 13 - Section 1, 2 & 3)",
+      "dnd_ontology_hooks": {
+        "system_category": "ANATOMICAL_HIT_LOCATIONS_AND_WOUND_HEALING_KINETICS",
+        "target_anatomy_enum": [
+          "HEAD",
+          "NECK",
+          "TORSO_UPPER",
+          "TORSO_LOWER",
+          "GROIN",
+          "UPPER_ARM_L",
+          "UPPER_ARM_R",
+          "FOREARM_L",
+          "FOREARM_R",
+          "HAND_L",
+          "HAND_R",
+          "UPPER_LEG_L",
+          "UPPER_LEG_R",
+          "LOWER_LEG_L",
+          "LOWER_LEG_R",
+          "FOOT_L",
+          "FOOT_R"
+        ],
+        "wound_types_enum": [
+          "SCRATCH",
+          "LACERATION",
+          "DEEP_WOUND",
+          "LODGED_PROJECTILE",
+          "FRACTURE",
+          "BURN",
+          "INFECTED_BITE"
+        ]
+      },
+      "pz_math_engine": {
+        "anatomy_17_matrix": [
+          {
+            "part": "HEAD",
+            "skin_surface": 0.08,
+            "pain_mod": 0.8,
+            "dmg_mod": 0.6,
+            "bleed_mod": 1.0,
+            "umbrella": 0.05,
+            "max_action_penalty_pct": 40.0,
+            "max_move_penalty_pct": 25.0
+          },
+          {
+            "part": "NECK",
+            "skin_surface": 0.02,
+            "pain_mod": 0.8,
+            "dmg_mod": 0.7,
+            "bleed_mod": 1.5,
+            "umbrella": 0.1,
+            "max_action_penalty_pct": 5.0,
+            "max_move_penalty_pct": 5.0,
+            "exanguination_death_sec_range": [
+              12.0,
+              18.0
+            ]
+          },
+          {
+            "part": "TORSO_UPPER",
+            "skin_surface": 0.18,
+            "pain_mod": 0.7,
+            "dmg_mod": 0.35,
+            "bleed_mod": 0.5,
+            "umbrella": 0.2,
+            "max_action_penalty_pct": 20.0,
+            "max_move_penalty_pct": 5.0
+          },
+          {
+            "part": "TORSO_LOWER",
+            "skin_surface": 0.12,
+            "pain_mod": 0.78,
+            "dmg_mod": 0.4,
+            "bleed_mod": 0.9,
+            "umbrella": 0.25,
+            "max_action_penalty_pct": 10.0,
+            "max_move_penalty_pct": 5.0
+          },
+          {
+            "part": "GROIN",
+            "skin_surface": 0.06,
+            "pain_mod": 0.7,
+            "dmg_mod": 0.4,
+            "bleed_mod": 0.5,
+            "umbrella": 0.3,
+            "max_action_penalty_pct": 5.0,
+            "max_move_penalty_pct": 15.0
+          },
+          {
+            "part": "UPPER_ARM_L",
+            "skin_surface": 0.045,
+            "pain_mod": 0.6,
+            "dmg_mod": 0.3,
+            "bleed_mod": 0.4,
+            "umbrella": 0.25,
+            "max_action_penalty_pct": 40.0,
+            "max_move_penalty_pct": 10.0
+          },
+          {
+            "part": "UPPER_ARM_R",
+            "skin_surface": 0.045,
+            "pain_mod": 0.6,
+            "dmg_mod": 0.3,
+            "bleed_mod": 0.4,
+            "umbrella": 0.25,
+            "max_action_penalty_pct": 40.0,
+            "max_move_penalty_pct": 10.0
+          },
+          {
+            "part": "FOREARM_L",
+            "skin_surface": 0.035,
+            "pain_mod": 0.6,
+            "dmg_mod": 0.2,
+            "bleed_mod": 0.3,
+            "umbrella": 0.3,
+            "max_action_penalty_pct": 60.0,
+            "max_move_penalty_pct": 10.0
+          },
+          {
+            "part": "FOREARM_R",
+            "skin_surface": 0.035,
+            "pain_mod": 0.6,
+            "dmg_mod": 0.2,
+            "bleed_mod": 0.3,
+            "umbrella": 0.3,
+            "max_action_penalty_pct": 60.0,
+            "max_move_penalty_pct": 10.0
+          },
+          {
+            "part": "HAND_L",
+            "skin_surface": 0.01,
+            "pain_mod": 0.5,
+            "dmg_mod": 0.1,
+            "bleed_mod": 0.2,
+            "umbrella": 0.35,
+            "max_action_penalty_pct": 100.0,
+            "max_move_penalty_pct": 5.0
+          },
+          {
+            "part": "HAND_R",
+            "skin_surface": 0.01,
+            "pain_mod": 0.5,
+            "dmg_mod": 0.1,
+            "bleed_mod": 0.2,
+            "umbrella": 0.35,
+            "max_action_penalty_pct": 100.0,
+            "max_move_penalty_pct": 5.0
+          },
+          {
+            "part": "UPPER_LEG_L",
+            "skin_surface": 0.09,
+            "pain_mod": 0.7,
+            "dmg_mod": 0.3,
+            "bleed_mod": 0.4,
+            "umbrella": 0.55,
+            "max_action_penalty_pct": 10.0,
+            "max_move_penalty_pct": 40.0
+          },
+          {
+            "part": "UPPER_LEG_R",
+            "skin_surface": 0.09,
+            "pain_mod": 0.7,
+            "dmg_mod": 0.3,
+            "bleed_mod": 0.4,
+            "umbrella": 0.55,
+            "max_action_penalty_pct": 10.0,
+            "max_move_penalty_pct": 40.0
+          },
+          {
+            "part": "LOWER_LEG_L",
+            "skin_surface": 0.07,
+            "pain_mod": 0.6,
+            "dmg_mod": 0.2,
+            "bleed_mod": 0.3,
+            "umbrella": 0.75,
+            "max_action_penalty_pct": 10.0,
+            "max_move_penalty_pct": 60.0
+          },
+          {
+            "part": "LOWER_LEG_R",
+            "skin_surface": 0.07,
+            "pain_mod": 0.6,
+            "dmg_mod": 0.2,
+            "bleed_mod": 0.3,
+            "umbrella": 0.75,
+            "max_action_penalty_pct": 10.0,
+            "max_move_penalty_pct": 60.0
+          },
+          {
+            "part": "FOOT_L",
+            "skin_surface": 0.02,
+            "pain_mod": 0.5,
+            "dmg_mod": 0.2,
+            "bleed_mod": 0.2,
+            "umbrella": 1.0,
+            "max_action_penalty_pct": 10.0,
+            "max_move_penalty_pct": 100.0
+          },
+          {
+            "part": "FOOT_R",
+            "skin_surface": 0.02,
+            "pain_mod": 0.5,
+            "dmg_mod": 0.2,
+            "bleed_mod": 0.2,
+            "umbrella": 1.0,
+            "max_action_penalty_pct": 10.0,
+            "max_move_penalty_pct": 100.0
+          }
+        ],
+        "wound_recovery_rates_per_tick": {
+          "SCRATCH": {
+            "bandaged": -0.00015,
+            "unbandaged": -1e-05,
+            "speedup_mult": 15,
+            "bandage_life_decay": -8e-05,
+            "plantain_bonus": -0.0001,
+            "plantain_total_mult": 25
+          },
+          "LACERATION_CUT": {
+            "bandaged": -5e-05,
+            "unbandaged": -1e-06,
+            "speedup_mult": 50,
+            "bandage_life_decay": -1e-05,
+            "plantain_bonus": -5e-05,
+            "plantain_total_mult": 100
+          },
+          "DEEP_WOUND": {
+            "bandaged": -2e-05,
+            "unbandaged": -2e-06,
+            "speedup_mult": 10,
+            "bandage_life_decay": -0.005,
+            "plantain_bonus": -7e-06
+          },
+          "INFECTED_BITE": {
+            "bandaged": -0.0001,
+            "unbandaged": -5e-06,
+            "speedup_mult": 20,
+            "bandage_life_decay": -0.0001
+          },
+          "BURN": {
+            "bandaged": -0.0001,
+            "unbandaged": -5e-06,
+            "speedup_mult": 20,
+            "bandage_life_decay": -0.0001,
+            "requires_burn_wash": true
+          },
+          "FRACTURE": {
+            "splinted_base_factor": -5e-05,
+            "unsplinted": -5e-06,
+            "speedup_mult_range": [
+              10,
+              55
+            ],
+            "comfrey_bonus": -5e-06
+          }
+        },
+        "dual_infection_mechanics": {
+          "knox_virus_isInfected": {
+            "default_mortality_hours_range": [
+              48.0,
+              72.0
+            ],
+            "resilient_trait_del_mult": 1.25,
+            "prone_to_illness_trait_del_mult": 0.75,
+            "post_death_reanimation_sec_range": [
+              30.0,
+              120.0
+            ]
+          },
+          "bacterial_sepsis_isInfectedWound": {
+            "base_chance_denominator": 40000,
+            "min_floor_denominator": 5000,
+            "risk_deductions": {
+              "unbandaged": 10000,
+              "dirty_bandage_life_zero": 35000,
+              "scratch": 20000,
+              "cut_laceration": 25000,
+              "deep_wound": 30000,
+              "lodged_glass": 24000,
+              "unwashed_burn_total": 30000,
+              "dirty_clothing": 20000,
+              "bloody_clothing": 24000
+            }
+          }
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Ma trận sinh lý học 17 bộ phận cơ thể với 7 tham số độc lập cho từng vị trí: Diện tích bề mặt da (tổng = 1.00, ngực 18%, bụng 12%, cổ 2%, bàn tay 1%), Hệ số đau thần kinh, Hệ số truyền sát thương vào máu tổng, Hệ số tốc độ chảy máu, Hệ số che mưa (Umbrella), Phạt thao tác tay và Phạt tốc độ chạy.",
+        "tactical_behavior_hint": "Vùng Cổ (NECK) có diện tích da chỉ 2% nhưng mang hệ số chảy máu 1.50 và hệ số sát thương 0.70, rút cạn 100% máu tổng chỉ trong 12-18 giây. Chấn thương Bàn tay (HAND_L/R) gây phạt 100% tốc độ vung vũ khí/thao tác, trong khi chấn thương Bàn chân (FOOT_L/R) gây phạt 100% tốc độ di chuyển. Băng bó giúp vết rách sâu lành nhanh gấp 50 lần (kết hợp đắp Cao Mã Đề tăng lên gấp 100 lần), nhưng nếu để băng gạc thấm máu chuyển sang bẩn (BandageLife = 0, đặc biệt vết thương toác sâu hút bẩn với tốc độ -0.005/tick), mẫu số xác suất nhiễm trùng sẽ tụt từ 40.000 xuống sàn 5.000 (tăng nguy cơ nhiễm khuẩn lên gấp 7-8 lần).",
+        "crafting_maintenance_hint": "Người chơi bắt buộc phải để sẵn băng gạc tiệt trùng ở túi thắt lưng (không để trong balo sâu) để kịp băng ép vết thương cổ trong dưới 15 giây."
+      },
+      "cross_module_foreign_keys": {
+        "completes_anatomy_contract_doc01": "tpl_aff:lethal_necrotic_pathogen_01",
+        "protected_by_armor_doc02_doc03": "tpl_arm:impervious_anatomical_guards_01",
+        "modified_by_dextrous_trait_doc04": "tpl_trait:dextrous"
+      }
+    },
+    {
+      "blueprint_id": "tpl_item:surgical_procedures_and_pharmacopoeia_matrix_01",
+      "source_pz_reference": "ISStitch.lua, ISRemoveGlass.lua, ISRemoveBullet.lua, ISSplint.lua, ISHealthPanel.lua (Doc 13 - Section 4, 5, 6, 7 & 8)",
+      "dnd_ontology_hooks": {
+        "item_category": "SURGICAL_INSTRUMENTS_PHARMACOPOEIA_AND_TOXICOLOGY",
+        "bastion_facility_hook": "LABORATORY",
+        "skill_proficiency": "skill:doctor"
+      },
+      "pz_math_engine": {
+        "surgical_procedures_4": {
+          "STITCH_DEEP_WOUND": {
+            "needle_and_thread": {
+              "base_ticks": 200,
+              "tick_reduction_per_lv": 4,
+              "base_pain": 20,
+              "pain_reduction_per_lv": 1
+            },
+            "suture_needle": {
+              "base_ticks": 150,
+              "tick_reduction_per_lv": 4,
+              "base_pain": 10,
+              "pain_reduction_per_lv": 1
+            },
+            "suture_needle_holder": {
+              "base_ticks": 150,
+              "tick_reduction_per_lv": 4,
+              "base_pain": 5,
+              "pain_reduction_per_lv": 1
+            },
+            "infection_risk_formula": "1 / (5 + (DoctorLevel * 2.5))",
+            "lv0_infection_risk_pct": 20.0,
+            "lv10_infection_risk_pct": 3.3,
+            "stitch_time_max": 50.0,
+            "safe_removal_stitch_time_min": 30.0,
+            "doctor_lv7_good_stitch_threshold": 40.0
+          },
+          "EXTRACT_GLASS_SHARDS": {
+            "bleeding_time_floor_lock_while_lodged": 3.0,
+            "tweezers_or_forceps": {
+              "base_ticks": 150,
+              "tick_reduction_per_lv": 4,
+              "base_pain": 30,
+              "pain_reduction_per_lv": 1
+            },
+            "bare_hands_extraction": {
+              "base_ticks": 300,
+              "tick_reduction_per_lv": 4,
+              "inflicts_hand_scratch_and_extreme_pain": true
+            },
+            "b42_forged_variants": [
+              "Forceps_Forged",
+              "Tweezers_Forged"
+            ]
+          },
+          "EXTRACT_LODGED_BULLET": {
+            "required_tools": [
+              "SutureNeedleHolder",
+              "Forceps",
+              "Forceps_Forged"
+            ],
+            "base_ticks": 250,
+            "tick_reduction_per_lv": 6,
+            "base_pain": 80,
+            "pain_reduction_per_lv": 1,
+            "post_extraction_state": "CONVERTS_TO_DEEP_WOUND_REQUIRING_STITCH"
+          },
+          "SPLINT_FRACTURE": {
+            "inputs": [
+              "Plank_Or_TreeBranch_Or_WoodenStick",
+              "RippedSheets_Or_Bandage"
+            ],
+            "splint_factor_formula": "(DoctorLevel + 1) / 2",
+            "lv0_splint_factor": 0.5,
+            "lv10_splint_factor": 5.5
+          }
+        },
+        "herbal_cataplasms_and_remedies_7": [
+          {
+            "herb": "Comfrey",
+            "product": "ComfreyCataplasm",
+            "rate_per_tick": -5e-06,
+            "target": "FRACTURE"
+          },
+          {
+            "herb": "WildGarlic2",
+            "product": "WildGarlicCataplasm",
+            "rate_per_tick": -0.0002,
+            "target": "BACTERIAL_INFECTION"
+          },
+          {
+            "herb": "Plantain",
+            "product": "PlantainCataplasm",
+            "scratch_rate": -0.0001,
+            "cut_rate": -5e-05,
+            "deep_rate": -7e-06,
+            "target": "TISSUE_REGENERATION"
+          },
+          {
+            "herb": "BlackSage",
+            "product": "Raw_Or_Tea",
+            "target": "NEURAL_PAIN_REDUCTION"
+          },
+          {
+            "herb": "CommonMallow",
+            "product": "Raw_Or_Tea",
+            "target": "COLD_AND_FLU_COUGH_SUPPRESSION"
+          },
+          {
+            "herb": "Ginseng",
+            "product": "Raw_Chew",
+            "target": "ENDURANCE_AND_FATIGUE_RECOVERY"
+          },
+          {
+            "herb": "Lemongrass",
+            "product": "Raw_Chew",
+            "target": "FOOD_SICKNESS_AND_WILD_TOXIN_ANTIDOTE"
+          }
+        ],
+        "modern_pharmaceuticals_and_tools": [
+          {
+            "id": "AlcoholBandage",
+            "infection_reduction_per_tick": -0.0006
+          },
+          {
+            "id": "Antibiotics",
+            "weight_kg": 0.1,
+            "reduce_infection_power": 50.0,
+            "infection_reduction_per_tick": -0.0002
+          },
+          {
+            "id": "Disinfectant",
+            "weight_kg": 0.2,
+            "volume_liters": 0.5,
+            "rubbing_alcohol_power": 1.0
+          },
+          {
+            "id": "PillsVitamins",
+            "weight_kg": 0.2,
+            "fatigue_change": -4.0
+          },
+          {
+            "id": "Pills_Painkillers",
+            "weight_kg": 0.2,
+            "lethal_overdose_with_alcohol": true
+          },
+          {
+            "id": "PillsSleepingTablets",
+            "weight_kg": 0.2,
+            "allows_sleep_under_pain": true,
+            "lethal_overdose_with_alcohol": true
+          },
+          {
+            "id": "PillsBeta",
+            "weight_kg": 0.2,
+            "suppresses_panic_for_aiming": true
+          },
+          {
+            "id": "PillsAntiDep",
+            "weight_kg": 0.2,
+            "unhappiness_decay_delay_hours": [
+              1.0,
+              2.0
+            ]
+          },
+          {
+            "id": "SutureNeedleHolder",
+            "weight_kg": 0.3,
+            "tags": [
+              "base:removebullet",
+              "base:removeglass"
+            ]
+          }
+        ],
+        "environmental_toxicology_thresholds": {
+          "corpse_sickness_min_corpses_in_radius": 20,
+          "corpse_sickness_progression": [
+            "Queasy",
+            "Nauseous",
+            "Sick",
+            "Fever",
+            "Death"
+          ],
+          "indoor_generator_co_death_minutes_range": [
+            10.0,
+            15.0
+          ]
+        },
+        "doctor_diagnostic_unlock_tiers": {
+          "LV_0_TO_2": {
+            "bandaging_ticks": "120 - 4*Lv",
+            "severity_visible": false
+          },
+          "LV_3_TO_4": {
+            "scratch_cut_moderate_threshold": 14,
+            "scratch_cut_severe_threshold": 17,
+            "bandaging_speed_bonus_pct": 15.0
+          },
+          "LV_5_TO_6": {
+            "deep_wound_and_burn_wash_visible": true,
+            "splint_quality_visible": true
+          },
+          "LV_7_TO_8": {
+            "fracture_moderate_threshold": 20,
+            "fracture_severe_threshold": 50,
+            "safe_stitch_removal_threshold": 40.0
+          },
+          "LV_9_TO_10": {
+            "early_infection_detection_formula": "InfLevel * 10 >= 2.5 - DoctorLevel",
+            "splint_healing_vs_lv0_mult": 11.0
+          }
+        }
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Bộ quy trình ngoại khoa chiến trường (Khâu vết toác, Mổ gắp đầu đạn, Gắp mảnh kính vỡ, Bó nẹp xương gãy) kết hợp tủ thuốc Đông - Tây y (Cao Liên Mộc, Cao Tỏi Rừng, Cao Mã Đề, Sả Chanh, Cẩm Quỳ giã trong cối gốm/đá cùng Kẹp phẫu thuật, Kim khâu, Kháng sinh và Thuốc an thần).",
+        "tactical_behavior_hint": "Phẫu thuật gắp đầu đạn tạo ra cơn đau cực đại (80 - DoctorLevel) và biến vết đạn thành vết thương toác sâu (deepWounded) buộc phải khâu ngay; mảnh kính găm trong thịt sẽ khóa cứng tốc độ chảy máu ở mức >= 3.0 khiến máu chảy không ngừng cho đến khi được gắp ra (nếu mổ bằng tay không sẽ tốn gấp đôi thời gian 300 ticks và làm rách chính bàn tay mổ). Khi khâu vết thương, nếu tháo chỉ sớm trước khi stitchTime đạt 30.0-40.0 (khoảng 4-5 ngày), miệng vết thương sẽ toác lại ngay lập tức. Ngoài ra, đứng cạnh >20 xác chết phân hủy sẽ gây ngộ độc khí xác thối dẫn đến tử vong, còn uống Thuốc ngủ hoặc Thuốc giảm đau chung với rượu mạnh sẽ gây sốc thuốc chết người.",
+        "crafting_maintenance_hint": "Nghề Rèn (Blacksmithing) và Nghề Gốm (Pottery) trong B42 cho phép tự chế tạo Kẹp phẫu thuật rèn (Forceps_Forged), Nhíp rèn (Tweezers_Forged) và Cối chày gốm (CeramicMortarandPestle) để tự chủ hoàn toàn y tế khi cạn kiệt nguồn thuốc bệnh viện."
+      },
+      "cross_module_foreign_keys": {
+        "forged_instruments_from_doc03": "tpl_rcp:blacksmith_metallurgy_01",
+        "herbs_gathered_from_doc08": "tpl_item:foraging_27categories_and_herbal_medicine_01",
+        "co_poisoning_linked_to_generator_doc12": "tpl_bas:plumbing_3x3_purifier_and_generator_grid_01"
+      }
+    },
+    {
+      "blueprint_id": "tpl_aff:metabolic_80kg_caloric_and_weight_tiers_01",
+      "source_pz_reference": "Nutrition.java (Doc 14 - Section 4)",
+      "dnd_ontology_hooks": {
+        "system_category": "METABOLIC_HOMEOSTASIS_AND_DYNAMIC_PHYSIQUE_TIERS",
+        "stat_progression_hooks": [
+          "STRENGTH_XP_BONUS_30PCT",
+          "FITNESS_LEVEL_MODIFIER",
+          "MELEE_DAMAGE_MODIFIER",
+          "FALL_FRACTURE_VULNERABILITY"
+        ]
+      },
+      "pz_math_engine": {
+        "golden_reference_weight_kg": 80.0,
+        "calories_min_floor_kcal": -2200.0,
+        "calories_max_ceiling_kcal": 3700.0,
+        "activity_calorie_burn_per_tick": {
+          "SLEEPING": 0.003,
+          "NORMAL_IDLE_OR_WALK": 0.016,
+          "EXERCISE_SPRINT_OR_COMBAT": 0.13
+        },
+        "weight_change_kinetics": {
+          "max_fat_burn_rate_per_tick_at_minus_2200_kcal": -8.5e-06,
+          "rapid_gain_double_arrow_rate_per_tick": 1.3e-05,
+          "rapid_gain_carbohydrates_threshold_grams": 400.0,
+          "rapid_gain_lipids_threshold_grams": 400.0
+        },
+        "protein_anabolic_window": {
+          "min_grams": 50.0,
+          "max_grams": 300.0,
+          "strength_xp_gain_bonus_pct": 30.0
+        },
+        "dynamic_weight_trait_bands_7": [
+          {
+            "band_id": "LETHAL_STARVATION",
+            "weight_kg_max": 35.0,
+            "terminal_death": true
+          },
+          {
+            "band_id": "EMACIATED",
+            "weight_kg_min": 35.1,
+            "weight_kg_max": 50.0,
+            "melee_dmg_penalty_pct": -60.0,
+            "fitness_mod": -4,
+            "continuous_hp_drain": true
+          },
+          {
+            "band_id": "VERY_UNDERWEIGHT",
+            "weight_kg_min": 50.1,
+            "weight_kg_max": 65.0,
+            "melee_dmg_penalty_pct": -40.0,
+            "fitness_mod": -2,
+            "fence_vault_trip_hazard": true
+          },
+          {
+            "band_id": "UNDERWEIGHT",
+            "weight_kg_min": 65.1,
+            "weight_kg_max": 75.0,
+            "melee_dmg_penalty_pct": -20.0,
+            "fitness_mod": -1
+          },
+          {
+            "band_id": "GOLDEN_WEIGHT_OPTIMAL",
+            "weight_kg_min": 75.1,
+            "weight_kg_max": 84.9,
+            "melee_dmg_penalty_pct": 0.0,
+            "fitness_mod": 0,
+            "optimal_efficiency_pct": 100.0
+          },
+          {
+            "band_id": "OVERWEIGHT",
+            "weight_kg_min": 85.0,
+            "weight_kg_max": 99.9,
+            "fitness_mod": -1,
+            "endurance_depletion_increase_pct": 50.0
+          },
+          {
+            "band_id": "OBESE",
+            "weight_kg_min": 100.0,
+            "fitness_mod": -2,
+            "fall_fracture_risk_increase_pct": 200.0,
+            "severe_endurance_penalty": true
+          }
+        ]
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Động cơ trao đổi chất sinh học xoay quanh 'Con số vàng 80.0 kg' với bể dự trữ năng lượng từ -2.200 kcal đến +3.700 kcal, phân tách cơ thể thành 7 ngưỡng thể trạng động từ Chết đói (<=35.0 kg), Kiệt quệ (35.1-50.0 kg) cho đến Béo phì (>=100.0 kg).",
+        "tactical_behavior_hint": "Vận động nặng (chạy nước rút, vung rìu chiến đấu) đốt Calo ở mức 0.130/tick — gấp 43.3 lần khi ngủ (0.003/tick) và gấp 8.1 lần khi đi bộ (0.016/tick), đồng thời người nặng 100 kg đốt năng lượng nhanh hơn 25% so với người 80 kg. Duy trì cân nặng trong Vùng Hoàn Hảo (75.1 - 84.9 kg) là bắt buộc để không bị trừ từ -20% đến -60% sát thương cận chiến (khi thiếu cân) hoặc bị tăng +50% tiêu hao thể lực và +200% nguy cơ gãy xương chân khi nhảy từ trên cao xuống (khi béo phì >=100 kg).",
+        "crafting_maintenance_hint": "Để tăng cân thần tốc (kích hoạt mũi tên đôi ^^ đạt +1.3E-5 kg/tick nhằm xóa trait Underweight), nhân vật phải nạp >400g Tinh bột hoặc >400g Chất béo (bơ, mỡ cá); để rèn luyện Sức mạnh nhanh hơn +30% XP, phải giữ lượng Đạm (Proteins) từ thịt/cá/trứng trong dải 50.0g - 300.0g."
+      },
+      "cross_module_foreign_keys": {
+        "completes_nutrition_system_doc01_doc02": "tpl_item:metabolic_sustenance_rations_01",
+        "governs_dynamic_underweight_removal_doc04": "sys_math:dynamic_underweight_80kg_eradication",
+        "amplifies_fracture_risk_doc13": "tpl_aff:anatomy_17parts_modifiers_and_wound_kinetics_01"
+      }
+    },
+    {
+      "blueprint_id": "tpl_item:instructional_records_64_vhs_matrix_01",
+      "source_pz_reference": "recorded_media.lua & Recorded_Media.json (352 Total Media: 155 Retail-VHS, 128 Home-VHS, 69 CDs; 64 Skill/Recipe Tapes) (Doc 07 - Section 2 & Section 4)",
+      "dnd_ontology_hooks": {
+        "item_category": "ANCIENT_INSTRUCTIONAL_RECORD_AND_SCHEMATIC_TOMES",
+        "skill_book_synergy_multipliers": {
+          "VOL_1_LV_1_2": 3.0,
+          "VOL_2_LV_3_4": 5.0,
+          "VOL_3_LV_5_6": 8.0,
+          "VOL_4_LV_7_8": 12.0,
+          "VOL_5_LV_9_10": 16.0
+        }
+      },
+      "pz_math_engine": {
+        "total_media_items": 352,
+        "retail_archive_count": 155,
+        "home_field_record_count": 128,
+        "audio_disc_count": 69,
+        "skill_granting_record_count": 64,
+        "b42_new_tech_tree_records_13": [
+          {
+            "title": "The Petting Zoo",
+            "type": "RETAIL",
+            "skill_code": "HUS+1",
+            "recipes": []
+          },
+          {
+            "title": "A Day on the Farm",
+            "type": "RETAIL",
+            "skill_code": "HUS+1",
+            "recipes": []
+          },
+          {
+            "title": "Knapping: The Ancient Art",
+            "type": "RETAIL",
+            "skill_code": "FKN+1",
+            "recipes": []
+          },
+          {
+            "title": "From Ore to Store",
+            "type": "RETAIL",
+            "skill_code": "BLA+1",
+            "recipes": []
+          },
+          {
+            "title": "Working Clay at Home",
+            "type": "RETAIL",
+            "skill_code": "POT+1",
+            "recipes": []
+          },
+          {
+            "title": "Pottery for Anyone",
+            "type": "RETAIL",
+            "skill_code": "POT+1",
+            "recipes": []
+          },
+          {
+            "title": "Making Sushi at Home",
+            "type": "RETAIL",
+            "skill_code": "COO+1",
+            "recipes": [
+              "MakeSushi",
+              "MakeMaki",
+              "MakeOnigiri",
+              "MakeFriedShrimp",
+              "MakeCabbageRolls"
+            ]
+          },
+          {
+            "title": "Growing Herbs at Home",
+            "type": "RETAIL",
+            "skill_code": "FRM+1",
+            "recipes": [
+              "8_HERB_GROWING_SEASONS_BASIL_CHIVES_CILANTRO_OREGANO_PARSLEY_SAGE_ROSEMARY_THYME"
+            ]
+          },
+          {
+            "title": "Growing Fruit and Veg 1",
+            "type": "RETAIL",
+            "skill_code": "FRM+1",
+            "recipes": [
+              "8_CROP_SEASONS_CABBAGE_POTATO_RADISH_CARROT_ONION_BROCCOLI_STRAWBERRY_TOMATO"
+            ]
+          },
+          {
+            "title": "Growing Fruit and Veg 2",
+            "type": "RETAIL",
+            "skill_code": "FRM+1",
+            "recipes": [
+              "6_CROP_SEASONS_GREENPEA_SOYBEAN_KALE_GARLIC_SWEETPOTATO_CORN"
+            ]
+          },
+          {
+            "title": "Controlling Crop Pests",
+            "type": "RETAIL",
+            "skill_code": "FRM+1",
+            "recipes": [
+              "MakeMildewCure",
+              "MakeFliesCure",
+              "MakeSlugTrap",
+              "MakeAphidsCure"
+            ]
+          },
+          {
+            "title": "Better Fishing With Jason Master",
+            "type": "RETAIL",
+            "skill_code": "FIS+1",
+            "recipes": [
+              "MakeFishingRod",
+              "FixFishingRod"
+            ]
+          },
+          {
+            "title": "Adefope Fencing Special",
+            "type": "RETAIL",
+            "skill_code": "MTL+1",
+            "recipes": [
+              "10_METAL_FENCE_AND_GATE_SCHEMATICS"
+            ]
+          }
+        ],
+        "standard_retail_records": [
+          {
+            "title": "Dead Wrong",
+            "skills": [
+              "AIM+1",
+              "REL+1"
+            ],
+            "recipes": []
+          },
+          {
+            "title": "Mother's Boy",
+            "skills": [
+              "SBA+1"
+            ],
+            "recipes": []
+          },
+          {
+            "title": "Z-Squad",
+            "skills": [
+              "MTL+1",
+              "MEC+1"
+            ],
+            "recipes": []
+          },
+          {
+            "title": "The Dog Goblin",
+            "skills": [],
+            "stat_effects": {
+              "stress_delta": 0.2,
+              "panic_spike": true
+            }
+          },
+          {
+            "title": "The Cook Show (Ep 1-7)",
+            "skills": [
+              "COO+1 per ep"
+            ],
+            "recipes": [
+              "MakePieDough (Ep 5)",
+              "MakeCakeBatter (Ep 6)"
+            ]
+          },
+          {
+            "title": "Woodcraft (Ep 1-7)",
+            "skills": [
+              "CRP+1 per ep"
+            ],
+            "recipes": []
+          },
+          {
+            "title": "Exposure Survival (Ep 1-8)",
+            "skills": [
+              "FIS+1",
+              "FRM+1",
+              "CRP+1",
+              "FOR+1",
+              "TRA+1"
+            ],
+            "recipes": [
+              "MakeFishingRod (Ep 1)",
+              "MakeWoodenBoxTrap (Ep 6)"
+            ]
+          },
+          {
+            "title": "Carzone (Ep 1-3)",
+            "skills": [
+              "MEC+1 per ep"
+            ],
+            "recipes": []
+          },
+          {
+            "title": "How Electricity Works",
+            "skills": [
+              "ELC+1"
+            ],
+            "recipes": []
+          },
+          {
+            "title": "Combat Wound Management / Rosewood Medical / Emergency First Aid",
+            "skills": [
+              "DOC+1 each"
+            ],
+            "recipes": []
+          },
+          {
+            "title": "Home Welding Guide",
+            "skills": [
+              "MTL+1"
+            ],
+            "recipes": []
+          },
+          {
+            "title": "A Stitch in Time",
+            "skills": [
+              "TAI+1"
+            ],
+            "recipes": []
+          }
+        ],
+        "secret_home_field_records_11": [
+          {
+            "title": "Basic Gun Handling (Officer Use Only)",
+            "skills": [
+              "AIM+2",
+              "REL+2",
+              "AIM+1",
+              "REL+1"
+            ],
+            "total_levels_granted": {
+              "Aiming": 3,
+              "Reloading": 3
+            },
+            "recipes": []
+          },
+          {
+            "title": "nof vid",
+            "skills": [
+              "MTL+1"
+            ],
+            "recipes": [
+              "MetalFloorLvl1",
+              "MetalWallLvl1"
+            ]
+          },
+          {
+            "title": "no 9",
+            "skills": [
+              "MTL+1"
+            ],
+            "recipes": [
+              "10_ADVANCED_METAL_GATE_AND_FENCE_SCHEMATICS"
+            ]
+          },
+          {
+            "title": "Muldraugh AV Club",
+            "skills": [
+              "ELC+1"
+            ],
+            "recipes": [
+              "CraftMakeshiftRadio"
+            ]
+          },
+          {
+            "title": "TV repair",
+            "skills": [
+              "ELC+1"
+            ],
+            "recipes": []
+          },
+          {
+            "title": "OSCC '92",
+            "skills": [
+              "MEC+1"
+            ],
+            "recipes": []
+          },
+          {
+            "title": "stock cars",
+            "skills": [
+              "MEC+1"
+            ],
+            "recipes": []
+          },
+          {
+            "title": "Granny Nani",
+            "skills": [
+              "TAI+1"
+            ],
+            "recipes": []
+          },
+          {
+            "title": "Tailoring 101",
+            "skills": [
+              "TAI+1"
+            ],
+            "recipes": []
+          },
+          {
+            "title": "RMFA",
+            "skills": [
+              "DOC+1"
+            ],
+            "recipes": []
+          },
+          {
+            "title": "Tree Planting Guide",
+            "skills": [
+              "FRM+1"
+            ],
+            "recipes": []
+          }
+        ]
+      },
+      "semantic_descriptors": {
+        "physical_form_hint": "Kho tàng 352 bản ghi tri thức cổ xưa (trừu tượng hóa từ băng VHS/CD), chia thành 155 Bản ghi Phổ thông (Retail) và 128 Bản ghi Thực địa Độc bản (Home) có nhãn viết tay giấu trong các tầng hầm hoặc tủ đầu giường.",
+        "tactical_behavior_hint": "Bản ghi Phổ thông chia sẻ chung cờ nhận XP với tín hiệu phát sóng trực tiếp (nếu đã nghe trực tiếp sẽ không nhận lại XP), trong khi 128 Bản ghi Thực địa Độc bản luôn luôn cộng dồn XP độc lập 100%. Đặc biệt, bản ghi 'Basic Gun Handling' cộng thẳng +3 Aiming và +3 Reloading mà không tiêu tốn bất kỳ viên đạn thực chiến nào.",
+        "crafting_maintenance_hint": "13 bản ghi mới của Build 42 là chìa khóa mở toàn bộ công thức trị 4 bệnh cây trồng (Phấn trắng, Ruồi, Sên, Rệp), 22 lịch gieo trồng thảo mộc/nông sản, 10 bản vẽ tường/cổng kim loại và nâng cấp trực tiếp các nghề Chăn nuôi (HUS+1), Đẽo đá lửa (FKN+1), Rèn sắt (BLA+1) và Làm gốm (POT+1)."
+      },
+      "cross_module_foreign_keys": {
+        "unlocks_crafting_recipes_doc03": [
+          "MakeSushi",
+          "MakeMaki",
+          "MakeOnigiri",
+          "MakeFriedShrimp",
+          "MakeCabbageRolls",
+          "MakeMildewCure",
+          "MakeFliesCure",
+          "MakeSlugTrap",
+          "MakeAphidsCure",
+          "MakeFishingRod",
+          "FixFishingRod",
+          "MetalFloorLvl1",
+          "MetalWallLvl1",
+          "CraftMakeshiftRadio"
+        ],
+        "connects_to_farming_husbandry_doc08": [
+          "HUS+1",
+          "FRM+1",
+          "FIS+1",
+          "TRA+1",
+          "FOR+1"
+        ]
+      }
+    }
+  ]
+}

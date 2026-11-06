@@ -1,0 +1,53 @@
+{
+  "blueprint_id": "tpl_evt:world_telemetry_oracle_aebs_01",
+  "source_pz_reference": "ISDynamicRadio.lua / Automated Emergency Broadcast System (AEBS) (Doc 07 - Section 1.3 & Section 5)",
+  "dnd_ontology_hooks": {
+    "system_category": "DIVINATION_OMEN_AND_WORLD_TELEMETRY_ORACLE",
+    "bastion_facility_hook": "OBSERVATORY",
+    "tech_age": "AGE_4_RELIC_ARTIFICERY"
+  },
+  "pz_math_engine": {
+    "frequency_min_khz": 88000,
+    "frequency_max_khz": 108000,
+    "frequency_step_khz": 200,
+    "total_possible_frequencies": 101,
+    "broadcast_cron_schedule": "0 * * * * (Top of every hour XX:00)",
+    "weather_forecast_horizon_hours_min": 24,
+    "weather_forecast_horizon_hours_max": 48,
+    "aerial_lure_omen_parameters": {
+      "warning_signal_key": "Air Activity detected.",
+      "earliest_warning_hour": 9,
+      "event_arrival_hour_min": 12,
+      "event_arrival_hour_max": 19
+    },
+    "infrastructure_collapse_3_stages": [
+      {
+        "stage": 1,
+        "signal_key": "Knox Power Grid: Power fluctuations detected.",
+        "time_to_blackout_hours_min": 48,
+        "time_to_blackout_hours_max": 72
+      },
+      {
+        "stage": 2,
+        "signal_key": "Knox Power Grid: Systems failing. Network compromised.",
+        "time_to_blackout_hours_min": 1,
+        "time_to_blackout_hours_max": 48
+      },
+      {
+        "stage": 3,
+        "signal_key": "Knox Power Grid: Blackout.",
+        "permanent_grid_shutdown": true
+      }
+    ]
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Hệ thống tín hiệu dự báo tự động phát sóng định kỳ mỗi giờ trên một tần số bí ẩn duy nhất được khóa ngẫu nhiên khi khởi tạo thế giới (trong dải 88.0 - 108.0 với bước nhảy 0.2), chỉ có thể thu nhận qua các thiết bị thu tín hiệu/la bàn thấu thị chuyên dụng.",
+    "tactical_behavior_hint": "Cơ chế cảnh báo sinh tử duy nhất giúp người chơi biết trước 24-48 giờ các đợt sương mù dày đặc hoặc bão tuyết, biết trước 48-72 giờ thời điểm sụp đổ mạng lưới năng lượng, và đặc biệt là cảnh báo từ 09:00 sáng về Siêu sự kiện Trên không (diễn ra lúc 12:00 - 19:00) để kịp thời rút vào nơi trú ẩn kín, che rèm và tắt mọi nguồn sáng.",
+    "crafting_maintenance_hint": "Tần số phải được dò tìm từ các thiết bị thu tín hiệu quân sự/khẩn cấp có cài đặt sẵn hoặc lắp ráp thiết bị thu tự chế (CraftMakeshiftRadio)."
+  },
+  "cross_module_foreign_keys": {
+    "predicts_world_event_doc01": "tpl_evt:aerial_acoustic_lure_01",
+    "predicts_climate_system_doc09": "WEATHER_WIND_FOG_BLIZZARD_FORECAST",
+    "crafted_via_home_record": "Muldraugh AV Club (CraftMakeshiftRadio)"
+  }
+}

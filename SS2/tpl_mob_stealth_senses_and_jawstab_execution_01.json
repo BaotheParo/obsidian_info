@@ -1,0 +1,33 @@
+{
+  "blueprint_id": "tpl_mob:stealth_senses_and_jawstab_execution_01",
+  "source_pz_reference": "ZombieVision & ISOPlayer.lua (Doc 11 - Section 4)",
+  "dnd_ontology_hooks": {
+    "system_category": "STEALTH_OPTICAL_ACOUSTIC_SENSORY_AND_ASSASSINATION",
+    "vision_cones": {
+      "FOCUS_VISION": "120 degrees, 15-20 tiles daytime",
+      "PERIPHERAL_VISION": "180 degrees, motion sensitive (-70% detection when crouching)",
+      "BLIND_SPOT": "180 degrees rear hemisphere (Absolute blindness)"
+    }
+  },
+  "pz_math_engine": {
+    "footstep_noise_matrix": {
+      "sneak_barefoot": 1,
+      "sneak_sneakers": 2,
+      "sneak_boots": 3,
+      "walk_sneakers": 6,
+      "sprint_boots": 20
+    },
+    "jaw_stab_mechanics": {
+      "required_weapon_type": "SmallBlade",
+      "approach_vector": "Rear blind spot",
+      "trigger_distance_tiles": 0.5,
+      "lethality_rate": 1.0,
+      "sound_radius_tiles": 0,
+      "clothing_damage_rate": 0.0
+    }
+  },
+  "semantic_descriptors": {
+    "vietnamese_translation": "Cơ chế thị giác 3 vùng của xác sống, bán kính tiếng bước chân và đòn ám sát đâm xuyên cằm 1-hit không vấy máu áo giáp",
+    "dnd_roleplay_anchor": "Kỹ năng đạo tặc đâm lén (Backstab / Sneak Attack) và di chuyển không tiếng động"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "blueprint_id": "tpl_rcp:alchemical_munitions_and_preservation_01",
+  "source_pz_reference": "Ammunition Reloading & Food Preservation (Doc 03 - Section 2 Age 4 & Section 4.6, 4.7)",
+  "dnd_ontology_hooks": {
+    "crafting_discipline": "ALCHEMICAL_MUNITIONS_AND_PROVISIONING",
+    "tech_age": "AGE_3_ALCHEMICAL_BLACKPOWDER",
+    "advanced_age": "AGE_4_RELIC_ARTIFICERY",
+    "bastion_facility": "LABORATORY"
+  },
+  "pz_math_engine": {
+    "ammunition_reloading_pipeline": {
+      "propellant_formula": [
+        "mat_tag:wood_charcoal",
+        "mat_tag:mineral_sulfur"
+      ],
+      "projectile_casting": "MELTED_SALVAGED_LEAD_TO_CAST_BULLETS",
+      "casing_recovery": "SPENT_BRASS_SHELL_CASINGS",
+      "supported_caliber_archetypes": [
+        "caliber:9mm_parabellum",
+        "caliber:45_heavy_pistol",
+        "caliber:308_high_powered_rifle",
+        "caliber:12g_scattershot"
+      ]
+    },
+    "food_preservation_math": {
+      "untreated_meat_spoil_days_min": 3.0,
+      "untreated_meat_spoil_days_max": 5.0,
+      "drying_rack_jerky_shelf_life_months_min": 6.0,
+      "drying_rack_jerky_shelf_life_months_max": 12.0,
+      "dairy_fermentation_outputs": [
+        "tpl_item:churned_butter_block",
+        "tpl_item:aged_hard_cheese"
+      ]
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Tổ hợp kỹ thuật hậu kỳ: (1) Nghiền than củi với lưu huỳnh trong cối giã làm thuốc nổ đen, nấu chảy chì phế liệu đúc đầu đạn và ép vào vỏ đạn đồng thu hồi sau giao tranh; (2) Phơi thịt thú săn trên giàn gỗ (Drying Rack) làm thịt khô (Jerky) và ủ sữa bò thành bơ khối/phô mai cứng.",
+    "tactical_behavior_hint": "Giải quyết triệt để hai cuộc khủng hoảng hậu kỳ: cạn kiệt đạn dược tầm xa và thối rữa lương thực (biến thịt tươi chỉ để được 3-5 ngày thành lương khô dự trữ suốt 6-12 tháng và phô mai giàu calo vượt qua mùa đông).",
+    "crafting_maintenance_hint": "Kết hợp cùng lọ thủy tinh (MakeGlassJar) từ lò nung vòm và giàn phơi thảo dược (Herb Drying Rack) để dự trữ cả rau củ muối chua lẫn bột thuốc trị thương."
+  },
+  "cross_module_foreign_keys": {
+    "requires_workstations": [
+      "drying_rack",
+      "herb_drying_rack",
+      "butter_churn"
+    ],
+    "connects_to_ballistics_doc11": [
+      "caliber:9mm_parabellum",
+      "caliber:45_heavy_pistol",
+      "caliber:308_high_powered_rifle",
+      "caliber:12g_scattershot"
+    ]
+  }
+}

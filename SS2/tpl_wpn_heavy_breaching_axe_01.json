@@ -1,0 +1,46 @@
+{
+  "blueprint_id": "tpl_wpn:heavy_breaching_axe_01",
+  "source_pz_reference": "Base.Fireaxe (Doc 01 - Section 6: Script Architecture)",
+  "dnd_ontology_hooks": {
+    "system_category": "MARTIAL_MELEE",
+    "damage_type": "SLASHING",
+    "weapon_mastery": "CLEAVE",
+    "adnd_speed_factor": 7,
+    "two_handed_property": true,
+    "armor_type_modifiers": {
+      "UNARMORED": 2,
+      "PADDED_CLOTH": 1,
+      "LEATHER_HIDE": 1,
+      "STUDDED_BRIGANDINE": 0,
+      "CHAIN_SCALE": -1,
+      "HEAVY_PLATE": -2
+    }
+  },
+  "pz_math_engine": {
+    "weight_kg": 3.0,
+    "min_damage": 1.2,
+    "max_damage": 2.7,
+    "max_range_blocks": 1.5,
+    "condition_max": 15,
+    "condition_lower_chance_one_in": 35,
+    "sound_radius_blocks": 10,
+    "door_damage": 35,
+    "tree_damage": 35,
+    "sub_category": "Swinging",
+    "two_hand_weapon": true
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Vũ khí cán dài cầm 2 tay nặng 3.0 kg, đầu lưỡi rìu bản rộng bằng thép đúc dày, trọng tâm dồn mạnh về phía đầu búa/lưỡi để tối đa hóa động năng bổ dọc và chém ngang.",
+    "tactical_behavior_hint": "Vũ khí công phá hạng nặng có tầm với xa (1.5 blocks), cực kỳ uy lực khi dùng để phá cửa gỗ/công trình (DoorDamage 35) hoặc đốn cây (TreeDamage 35). Tuy nhiên mỗi cú bổ tạo ra tiếng vang lớn trong bán kính 10 blocks, dễ thu hút kẻ địch xung quanh.",
+    "crafting_maintenance_hint": "Độ bền cơ học rất cao (15 điểm, xác suất hao mòn chỉ 1/35 mỗi đòn trúng). Khi hỏng có thể gia cố lại bằng keo, dây buộc hoặc đinh chốt nhưng hiệu suất sửa chữa sẽ suy giảm lũy tiến qua từng lần gia cố."
+  },
+  "cross_module_foreign_keys": {
+    "inflicts_wound_types": [
+      "LACERATION",
+      "DEEP_WOUND",
+      "FRACTURE"
+    ],
+    "requires_skill_id": "skill:axe",
+    "repair_material_tag": "mat_tag:wood_adhesive_or_fastener"
+  }
+}

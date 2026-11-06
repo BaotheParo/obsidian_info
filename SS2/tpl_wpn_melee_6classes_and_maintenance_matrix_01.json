@@ -1,0 +1,75 @@
+{
+  "blueprint_id": "tpl_wpn:melee_6classes_and_maintenance_matrix_01",
+  "source_pz_reference": "weapon.txt & ISMeleeWeapon.lua (Doc 11 - Section 2)",
+  "dnd_ontology_hooks": {
+    "system_category": "MELEE_WEAPONS_AND_PHYSICAL_COMBAT_ENGINE",
+    "damage_classes": [
+      "SLASHING",
+      "PIERCING",
+      "BLUDGEONING"
+    ],
+    "stomp_lethality_multiplier": 2.75
+  },
+  "pz_math_engine": {
+    "weapon_classes": [
+      "Axe",
+      "LongBlade",
+      "SmallBlade",
+      "LongBlunt",
+      "SmallBlunt",
+      "Spear"
+    ],
+    "featured_weapons": [
+      {
+        "id": "Base.Crowbar",
+        "class": "LongBlunt",
+        "base_decay_chance": 70,
+        "max_condition": 15,
+        "crit_chance": 0.2,
+        "tactical_role": "Endurance durability king"
+      },
+      {
+        "id": "Base.Axe",
+        "class": "Axe",
+        "base_decay_chance": 35,
+        "max_condition": 15,
+        "crit_chance": 0.25,
+        "tactical_role": "High damage door breaker"
+      },
+      {
+        "id": "Base.Katana",
+        "class": "LongBlade",
+        "base_decay_chance": 15,
+        "max_condition": 10,
+        "crit_chance": 0.35,
+        "tactical_role": "Multi-target 3-zombie cleaver"
+      },
+      {
+        "id": "Base.SpearCrafted",
+        "class": "Spear",
+        "base_decay_chance": 2,
+        "max_condition": 5,
+        "crit_chance": 0.3,
+        "tactical_role": "Long-range instant critical"
+      },
+      {
+        "id": "Base.HuntingKnife",
+        "class": "SmallBlade",
+        "base_decay_chance": 25,
+        "max_condition": 10,
+        "crit_chance": 0.5,
+        "tactical_role": "Low endurance Jaw Stab assassin"
+      }
+    ],
+    "moodle_damage_debuffs": {
+      "exhaustion_level_1": 0.5,
+      "exhaustion_level_2": 0.2,
+      "exhaustion_level_3": 0.1,
+      "exhaustion_level_4": 0.05
+    }
+  },
+  "semantic_descriptors": {
+    "vietnamese_translation": "Khuôn mẫu 6 hệ vũ khí cận chiến, ma trận độ bền Bernoulli và sự sụp đổ sát thương do thể lực",
+    "dnd_roleplay_anchor": "Quy tắc tấn công cận chiến, độ bền vũ khí và đòn dẫm đầu chí mạng"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "blueprint_id": "tpl_bas:procedural_362_underground_bunkers_01",
+  "source_pz_reference": "media/binmap/*.pzby (Doc 05 - Section 4: 362 Basements Engine)",
+  "dnd_ontology_hooks": {
+    "system_category": "VERTICAL_DEPTH_DUNGEON_AND_BUNKER_SYSTEM",
+    "environmental_hazards": [
+      "ABSOLUTE_DARKNESS",
+      "ACOUSTIC_ECHO",
+      "TRAPPED_ENCLOSED_SPACE"
+    ]
+  },
+  "pz_math_engine": {
+    "total_basement_lots": 362,
+    "base_spawn_rate": 0.08,
+    "lighting_lux_ambient": 0.0,
+    "featured_bunkers": [
+      {
+        "pzby_file": "lot_basement_jamieton_bunker_01.pzby",
+        "name": "Hầm Trú Ẩn Hạt Nhân Jamie Ton",
+        "guaranteed_loot": [
+          "Bed",
+          "WaterPurifier",
+          "PermanentCannedFood",
+          "AmmoCrater",
+          "MilitaryRadio"
+        ],
+        "tactical_value": "S-Tier Fallout Vault"
+      },
+      {
+        "pzby_file": "lot_basement_police_muldraugh.pzby",
+        "name": "Hầm Kho Vũ Khí Cảnh Sát Ngầm",
+        "guaranteed_loot": [
+          "HeavyArmorKevlar",
+          "GunRacks",
+          "AmmoBoxes",
+          "SWATShield"
+        ],
+        "tactical_value": "A-Tier Tactical Arsenal"
+      },
+      {
+        "pzby_file": "lot_basement_sanatorium_tunnel.pzby",
+        "name": "Đường Hầm Viện Điều Dưỡng Ngầm",
+        "guaranteed_loot": [
+          "SurgicalTools",
+          "AntibioticsCrate",
+          "SterileBandages",
+          "Morphine"
+        ],
+        "tactical_value": "A-Tier Medical Stockpile"
+      },
+      {
+        "pzby_file": "lot_basement_pawnshop_abandoned_01_FL.pzby",
+        "name": "Hầm Cửa Hàng Cầm Đồ Bỏ Hoang",
+        "guaranteed_loot": [
+          "AntiqueWeapons",
+          "GoldJewelry",
+          "RareMechanicalTools"
+        ],
+        "tactical_value": "B-Tier Barter & Relic Vault"
+      }
+    ]
+  },
+  "semantic_descriptors": {
+    "vietnamese_translation": "Chuẩn hóa hệ thống 362 hầm ngầm định dạng .pzby với độ sâu thẳng đứng và bóng tối tuyệt đối",
+    "dnd_roleplay_anchor": "Cấu trúc hầm ngục và boongke sinh tồn dưới lòng đất"
+  }
+}

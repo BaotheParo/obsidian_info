@@ -1,0 +1,345 @@
+{
+  "blueprint_id": "tpl_item:instructional_records_64_vhs_matrix_01",
+  "source_pz_reference": "recorded_media.lua & Recorded_Media.json (352 Total Media: 155 Retail-VHS, 128 Home-VHS, 69 CDs; 64 Skill/Recipe Tapes) (Doc 07 - Section 2 & Section 4)",
+  "dnd_ontology_hooks": {
+    "item_category": "ANCIENT_INSTRUCTIONAL_RECORD_AND_SCHEMATIC_TOMES",
+    "skill_book_synergy_multipliers": {
+      "VOL_1_LV_1_2": 3.0,
+      "VOL_2_LV_3_4": 5.0,
+      "VOL_3_LV_5_6": 8.0,
+      "VOL_4_LV_7_8": 12.0,
+      "VOL_5_LV_9_10": 16.0
+    }
+  },
+  "pz_math_engine": {
+    "total_media_items": 352,
+    "retail_archive_count": 155,
+    "home_field_record_count": 128,
+    "audio_disc_count": 69,
+    "skill_granting_record_count": 64,
+    "b42_new_tech_tree_records_13": [
+      {
+        "title": "The Petting Zoo",
+        "type": "RETAIL",
+        "skill_code": "HUS+1",
+        "recipes": []
+      },
+      {
+        "title": "A Day on the Farm",
+        "type": "RETAIL",
+        "skill_code": "HUS+1",
+        "recipes": []
+      },
+      {
+        "title": "Knapping: The Ancient Art",
+        "type": "RETAIL",
+        "skill_code": "FKN+1",
+        "recipes": []
+      },
+      {
+        "title": "From Ore to Store",
+        "type": "RETAIL",
+        "skill_code": "BLA+1",
+        "recipes": []
+      },
+      {
+        "title": "Working Clay at Home",
+        "type": "RETAIL",
+        "skill_code": "POT+1",
+        "recipes": []
+      },
+      {
+        "title": "Pottery for Anyone",
+        "type": "RETAIL",
+        "skill_code": "POT+1",
+        "recipes": []
+      },
+      {
+        "title": "Making Sushi at Home",
+        "type": "RETAIL",
+        "skill_code": "COO+1",
+        "recipes": [
+          "MakeSushi",
+          "MakeMaki",
+          "MakeOnigiri",
+          "MakeFriedShrimp",
+          "MakeCabbageRolls"
+        ]
+      },
+      {
+        "title": "Growing Herbs at Home",
+        "type": "RETAIL",
+        "skill_code": "FRM+1",
+        "recipes": [
+          "8_HERB_GROWING_SEASONS_BASIL_CHIVES_CILANTRO_OREGANO_PARSLEY_SAGE_ROSEMARY_THYME"
+        ]
+      },
+      {
+        "title": "Growing Fruit and Veg 1",
+        "type": "RETAIL",
+        "skill_code": "FRM+1",
+        "recipes": [
+          "8_CROP_SEASONS_CABBAGE_POTATO_RADISH_CARROT_ONION_BROCCOLI_STRAWBERRY_TOMATO"
+        ]
+      },
+      {
+        "title": "Growing Fruit and Veg 2",
+        "type": "RETAIL",
+        "skill_code": "FRM+1",
+        "recipes": [
+          "6_CROP_SEASONS_GREENPEA_SOYBEAN_KALE_GARLIC_SWEETPOTATO_CORN"
+        ]
+      },
+      {
+        "title": "Controlling Crop Pests",
+        "type": "RETAIL",
+        "skill_code": "FRM+1",
+        "recipes": [
+          "MakeMildewCure",
+          "MakeFliesCure",
+          "MakeSlugTrap",
+          "MakeAphidsCure"
+        ]
+      },
+      {
+        "title": "Better Fishing With Jason Master",
+        "type": "RETAIL",
+        "skill_code": "FIS+1",
+        "recipes": [
+          "MakeFishingRod",
+          "FixFishingRod"
+        ]
+      },
+      {
+        "title": "Adefope Fencing Special",
+        "type": "RETAIL",
+        "skill_code": "MTL+1",
+        "recipes": [
+          "10_METAL_FENCE_AND_GATE_SCHEMATICS"
+        ]
+      }
+    ],
+    "standard_retail_records": [
+      {
+        "title": "Dead Wrong",
+        "skills": [
+          "AIM+1",
+          "REL+1"
+        ],
+        "recipes": []
+      },
+      {
+        "title": "Mother's Boy",
+        "skills": [
+          "SBA+1"
+        ],
+        "recipes": []
+      },
+      {
+        "title": "Z-Squad",
+        "skills": [
+          "MTL+1",
+          "MEC+1"
+        ],
+        "recipes": []
+      },
+      {
+        "title": "The Dog Goblin",
+        "skills": [],
+        "stat_effects": {
+          "stress_delta": 0.2,
+          "panic_spike": true
+        }
+      },
+      {
+        "title": "The Cook Show (Ep 1-7)",
+        "skills": [
+          "COO+1 per ep"
+        ],
+        "recipes": [
+          "MakePieDough (Ep 5)",
+          "MakeCakeBatter (Ep 6)"
+        ]
+      },
+      {
+        "title": "Woodcraft (Ep 1-7)",
+        "skills": [
+          "CRP+1 per ep"
+        ],
+        "recipes": []
+      },
+      {
+        "title": "Exposure Survival (Ep 1-8)",
+        "skills": [
+          "FIS+1",
+          "FRM+1",
+          "CRP+1",
+          "FOR+1",
+          "TRA+1"
+        ],
+        "recipes": [
+          "MakeFishingRod (Ep 1)",
+          "MakeWoodenBoxTrap (Ep 6)"
+        ]
+      },
+      {
+        "title": "Carzone (Ep 1-3)",
+        "skills": [
+          "MEC+1 per ep"
+        ],
+        "recipes": []
+      },
+      {
+        "title": "How Electricity Works",
+        "skills": [
+          "ELC+1"
+        ],
+        "recipes": []
+      },
+      {
+        "title": "Combat Wound Management / Rosewood Medical / Emergency First Aid",
+        "skills": [
+          "DOC+1 each"
+        ],
+        "recipes": []
+      },
+      {
+        "title": "Home Welding Guide",
+        "skills": [
+          "MTL+1"
+        ],
+        "recipes": []
+      },
+      {
+        "title": "A Stitch in Time",
+        "skills": [
+          "TAI+1"
+        ],
+        "recipes": []
+      }
+    ],
+    "secret_home_field_records_11": [
+      {
+        "title": "Basic Gun Handling (Officer Use Only)",
+        "skills": [
+          "AIM+2",
+          "REL+2",
+          "AIM+1",
+          "REL+1"
+        ],
+        "total_levels_granted": {
+          "Aiming": 3,
+          "Reloading": 3
+        },
+        "recipes": []
+      },
+      {
+        "title": "nof vid",
+        "skills": [
+          "MTL+1"
+        ],
+        "recipes": [
+          "MetalFloorLvl1",
+          "MetalWallLvl1"
+        ]
+      },
+      {
+        "title": "no 9",
+        "skills": [
+          "MTL+1"
+        ],
+        "recipes": [
+          "10_ADVANCED_METAL_GATE_AND_FENCE_SCHEMATICS"
+        ]
+      },
+      {
+        "title": "Muldraugh AV Club",
+        "skills": [
+          "ELC+1"
+        ],
+        "recipes": [
+          "CraftMakeshiftRadio"
+        ]
+      },
+      {
+        "title": "TV repair",
+        "skills": [
+          "ELC+1"
+        ],
+        "recipes": []
+      },
+      {
+        "title": "OSCC '92",
+        "skills": [
+          "MEC+1"
+        ],
+        "recipes": []
+      },
+      {
+        "title": "stock cars",
+        "skills": [
+          "MEC+1"
+        ],
+        "recipes": []
+      },
+      {
+        "title": "Granny Nani",
+        "skills": [
+          "TAI+1"
+        ],
+        "recipes": []
+      },
+      {
+        "title": "Tailoring 101",
+        "skills": [
+          "TAI+1"
+        ],
+        "recipes": []
+      },
+      {
+        "title": "RMFA",
+        "skills": [
+          "DOC+1"
+        ],
+        "recipes": []
+      },
+      {
+        "title": "Tree Planting Guide",
+        "skills": [
+          "FRM+1"
+        ],
+        "recipes": []
+      }
+    ]
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Kho tàng 352 bản ghi tri thức cổ xưa (trừu tượng hóa từ băng VHS/CD), chia thành 155 Bản ghi Phổ thông (Retail) và 128 Bản ghi Thực địa Độc bản (Home) có nhãn viết tay giấu trong các tầng hầm hoặc tủ đầu giường.",
+    "tactical_behavior_hint": "Bản ghi Phổ thông chia sẻ chung cờ nhận XP với tín hiệu phát sóng trực tiếp (nếu đã nghe trực tiếp sẽ không nhận lại XP), trong khi 128 Bản ghi Thực địa Độc bản luôn luôn cộng dồn XP độc lập 100%. Đặc biệt, bản ghi 'Basic Gun Handling' cộng thẳng +3 Aiming và +3 Reloading mà không tiêu tốn bất kỳ viên đạn thực chiến nào.",
+    "crafting_maintenance_hint": "13 bản ghi mới của Build 42 là chìa khóa mở toàn bộ công thức trị 4 bệnh cây trồng (Phấn trắng, Ruồi, Sên, Rệp), 22 lịch gieo trồng thảo mộc/nông sản, 10 bản vẽ tường/cổng kim loại và nâng cấp trực tiếp các nghề Chăn nuôi (HUS+1), Đẽo đá lửa (FKN+1), Rèn sắt (BLA+1) và Làm gốm (POT+1)."
+  },
+  "cross_module_foreign_keys": {
+    "unlocks_crafting_recipes_doc03": [
+      "MakeSushi",
+      "MakeMaki",
+      "MakeOnigiri",
+      "MakeFriedShrimp",
+      "MakeCabbageRolls",
+      "MakeMildewCure",
+      "MakeFliesCure",
+      "MakeSlugTrap",
+      "MakeAphidsCure",
+      "MakeFishingRod",
+      "FixFishingRod",
+      "MetalFloorLvl1",
+      "MetalWallLvl1",
+      "CraftMakeshiftRadio"
+    ],
+    "connects_to_farming_husbandry_doc08": [
+      "HUS+1",
+      "FRM+1",
+      "FIS+1",
+      "TRA+1",
+      "FOR+1"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "blueprint_id": "tpl_mob:animal_wildlife_cervidae_01",
+  "source_pz_reference": "zombie.characters.animals (Doc 01 - Section 3: Animal Systems - Cervidae & Wild Game)",
+  "dnd_ontology_hooks": {
+    "creature_type": "BEAST",
+    "behavior_alignment": "UNALIGNED_HERBIVORE",
+    "sensory_capabilities": [
+      "VISION_CONE_300",
+      "ACUTE_HEARING",
+      "UPWIND_OLFACTORY"
+    ]
+  },
+  "pz_math_engine": {
+    "catalog_species": [
+      "Buck",
+      "Doe",
+      "Fawn",
+      "Boar",
+      "Rabbit",
+      "Raccoon"
+    ],
+    "vision_fov_degrees": 300.0,
+    "hearing_detection_radius": 35.0,
+    "flee_speed_multiplier": 1.75,
+    "migration_group_size": [
+      3,
+      8
+    ],
+    "tracking_footprint_decay_hours": 12.0
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Thú rừng hoang dã (hươu sao, nai sừng tấm, lợn rừng) có khứu giác và thính giác cực kỳ nhạy bén, tầm nhìn ngoại vi mở rộng đến 300 độ.",
+    "tactical_behavior_hint": "Di chuyển theo bầy đàn (MigrationGroup). Luôn tháo chạy khi phát hiện tiếng chân người hoặc zombie trong bán kính 35 blocks; để lại dấu vết chân cỏ dập (AnimalTracks) cho thợ săn lần theo.",
+    "crafting_maintenance_hint": "Khi săn bắn thành công mang lại thịt tươi nguyên tảng giàu protein và da thú thô (Raw_Hide) để thuộc da tại trạm entity_leather_prep."
+  },
+  "cross_module_foreign_keys": {
+    "harvested_at_station": "tpl_bas:husbandry_processing_stations_01",
+    "tracks_system_id": "AnimalTracks"
+  }
+}

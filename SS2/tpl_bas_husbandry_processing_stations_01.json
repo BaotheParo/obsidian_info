@@ -1,0 +1,54 @@
+{
+  "blueprint_id": "tpl_bas:husbandry_processing_stations_01",
+  "source_pz_reference": "media/scripts/entities/animals/workstations (Doc 01 - Section 3: Animal Systems)",
+  "dnd_ontology_hooks": {
+    "system_category": "BASTION_FACILITY",
+    "facility_tier": "FARMING_HUSBANDRY",
+    "required_settlement_level": 2
+  },
+  "pz_math_engine": {
+    "station_work_efficiency_multiplier": 1.25,
+    "registered_sub_stations": [
+      "entity_butcher_hook",
+      "entity_leather_prep",
+      "entity_butter_churn",
+      "entity_chickenhutch",
+      "entity_feedingtrough",
+      "entity_spinning_wheel"
+    ],
+    "processing_outputs": {
+      "butcher_hook": [
+        "Carcase_Meat",
+        "Animal_Fat",
+        "Raw_Hide"
+      ],
+      "leather_prep": [
+        "Tanned_Leather",
+        "Cured_Pelt"
+      ],
+      "butter_churn": [
+        "Fresh_Butter",
+        "Buttermilk"
+      ],
+      "chickenhutch": [
+        "Fresh_Eggs",
+        "Fertile_Hatch_Egg"
+      ],
+      "feedingtrough": [
+        "Animal_Satiation_Buffer"
+      ],
+      "spinning_wheel": [
+        "Yarn_Wool_Spool"
+      ]
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Tổ hợp các trạm chế biến nông trại và gia súc được đóng từ gỗ xẻ, móc sắt rèn và đá mài.",
+    "tactical_behavior_hint": "Biến đổi chuỗi chăn nuôi gia súc thành thực phẩm dự trữ giàu Calo/Protein và nguyên liệu thuộc da may áo giáp ấm chống rét mùa đông.",
+    "crafting_maintenance_hint": "Cần bảo dưỡng định kỳ máng ăn và khử trùng móc treo thịt để tránh ô nhiễm vi sinh vật thu hút ruồi bọ và zombie."
+  },
+  "cross_module_foreign_keys": {
+    "consumes_livestock_id": "tpl_mob:animal_livestock_bovine_01",
+    "requires_bastion_component": "bst_lo_ren_than_da"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "blueprint_id": "tpl_bas:plumbing_3x3_purifier_and_generator_grid_01",
+  "source_pz_reference": "ISPlumbItem.lua & MOGenerator.lua (Doc 12 - Section 4 & Section 5)",
+  "dnd_ontology_hooks": {
+    "bastion_facility_mapping": [
+      "WORKSHOP",
+      "LABORATORY",
+      "STOREHOUSE",
+      "GARDEN"
+    ],
+    "tech_age": "AGE_3_ALCHEMICAL_BLACKPOWDER",
+    "hazard_damage_types": [
+      "FIRE",
+      "POISON"
+    ]
+  },
+  "pz_math_engine": {
+    "rain_collector_barrel_tiers": {
+      "small_barrel_carpentry_4": {
+        "inputs": [
+          "4_Planks",
+          "4_Nails",
+          "4_GarbageBags"
+        ],
+        "capacity_liters": 160.0
+      },
+      "large_barrel_carpentry_7": {
+        "inputs": [
+          "4_Planks",
+          "4_Nails",
+          "4_GarbageBags"
+        ],
+        "capacity_liters": 400.0
+      }
+    },
+    "plumbing_purification_rules": {
+      "required_tool": "PipeWrench",
+      "requires_fully_enclosed_room_non_nil": true,
+      "barrel_vertical_offset_z": 1,
+      "barrel_horizontal_matrix_grid": "3x3_TILES_AROUND_SINK",
+      "min_water_units_in_barrel_to_connect": 1,
+      "purifies_tainted_rainwater_100pct_without_boiling": true
+    },
+    "generator_power_grid_and_hazards": {
+      "horizontal_power_radius_tiles": 20,
+      "vertical_power_span_floors": 3,
+      "vertical_floor_offsets": [
+        -1,
+        0,
+        1
+      ],
+      "fuel_tank_max_pct": 100.0,
+      "fuel_tank_liters_equivalent_range": [
+        10.0,
+        12.0
+      ],
+      "gas_cans_to_fill_tank": 2.5,
+      "default_fuel_burn_rate_l_per_hr": 0.1,
+      "single_fridge_continuous_runtime_days_range": [
+        10.0,
+        14.0
+      ],
+      "explosion_fire_hazard_condition_threshold_pct": 20.0,
+      "recommended_maintenance_threshold_pct": 50.0,
+      "repair_material": "Electronics_Scrap",
+      "indoor_or_basement_carbon_monoxide_lethal_asphyxiation": true
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Hệ thống hạ tầng kỹ thuật tự hành của căn cứ: (1) Mạng lưới thủy lực nối Thùng hứng nước mưa trên mái nhà (160L hoặc 400L) xuống Bồn rửa tầng dưới bằng Cờ lê ống nước; (2) Trạm phát năng lượng phát sóng điện trường hình trụ bán kính ngang 20 ô gạch xuyên qua 3 tầng lầu.",
+    "tactical_behavior_hint": "Cơ chế lọc nước tự động (Plumbing) chỉ kích hoạt khi Bồn rửa nằm trong một căn phòng khép kín hoàn toàn (đủ 4 tường, sàn, trần) và Thùng nước mưa (có sẵn >= 1 đơn vị nước) nằm trong lưới 3x3 ô gạch ở tầng ngay phía trên (Z+1); khi kết nối thành công, nước mưa nhiễm khuẩn chảy qua ống xuống vòi sẽ tự động trở thành nước uống tinh khiết 100% không cần đun sôi. Đối với Máy phát năng lượng, người chơi đối mặt với 2 tử huyệt: nếu đặt máy trong phòng kín hoặc tầng hầm, khí độc CO sẽ giết chết nhân vật trong lúc ngủ mà không có cảnh báo; nếu để độ bền máy tụt xuống dưới 20%, máy sẽ xì khói đen và phát nổ thiêu rụi toàn bộ pháo đài.",
+    "crafting_maintenance_hint": "Máy phát điện tiêu thụ mặc định 0.1 L/giờ (bình đầy 10-12L tương đương 2.5 can nhiên liệu, nuôi 1 tủ lạnh suốt 10-14 ngày) và phải được tắt máy bảo dưỡng bằng Linh kiện điện tử vụn (Electronics Scrap) ngay khi độ bền xuống dưới 50%."
+  },
+  "cross_module_foreign_keys": {
+    "solves_day30_water_shutoff_doc03_doc10": "Water_Shutoff_Survival_Milestone",
+    "requires_manual_magazine_doc05": "tpl_item:dynamo_operation_codex_01",
+    "fuel_rate_configured_in_sandbox_doc10": "GeneratorFuelConsumption_Def"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "blueprint_id": "tpl_evt:annotated_maps_and_survivor_house_01",
+  "source_pz_reference": "WorldEvents & IsoMetaGrid (Doc 05 - Section 5)",
+  "dnd_ontology_hooks": {
+    "system_category": "DYNAMIC_META_WORLD_EVENTS_AND_MAP_MARKERS",
+    "event_type": "SURVIVOR_BARRICADE_AND_PARTY_STORY"
+  },
+  "pz_math_engine": {
+    "annotated_map_drop_rate": 0.015,
+    "survivor_house_spawn_rate": 0.05,
+    "survivor_house_mechanics": {
+      "barricade_planks_per_window": 3,
+      "plank_hp": 1000,
+      "kitchen_canned_food_chance": 1.0,
+      "wardrobe_weapon_cache_chance": 0.6,
+      "inhabitant_zombies_min": 3,
+      "inhabitant_zombies_max": 8
+    },
+    "party_house_mechanics": {
+      "zombie_hat_cosmetics": "Base.Hat_Party",
+      "cake_food_spawn": "Base.CakeSliced",
+      "audio_record_spawn": "Base.Vinyl_MusicRecord"
+    }
+  },
+  "semantic_descriptors": {
+    "vietnamese_translation": "Hệ thống sự kiện bản đồ chú thích, nhà cố thủ đóng ván gỗ 3 tầng và nhà tiệc tùng",
+    "dnd_roleplay_anchor": "Bản đồ kho báu viết tay và cứ điểm cố thủ của người tiền nhiệm"
+  }
+}

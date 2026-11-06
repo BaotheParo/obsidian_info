@@ -1,0 +1,27 @@
+{
+  "blueprint_id": "tpl_cnt:large_crafted_framepack_01",
+  "source_pz_reference": "Base.Bag_CraftedFramepack_Large3 (Doc 02 - Section 3: Backpack Registry)",
+  "dnd_ontology_hooks": {
+    "system_category": "CONTAINER_FRAME_PACK",
+    "capacity_volume": 35.0,
+    "tier": "MASTERWORK_SURVIVAL"
+  },
+  "pz_math_engine": {
+    "weight_empty_kg": 4.0,
+    "max_capacity_units": 35,
+    "weight_reduction_ratio": 0.75,
+    "run_speed_modifier": 0.94
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Balo khung gỗ xẻ lớn được chằng buộc bằng dây thừng gai và túi da động vật khâu thủ công.",
+    "tactical_behavior_hint": "Sức chứa lớn nhất trong game (35 đơn vị), giảm 75% trọng lượng của mọi vật tư chứa bên trong, trang bị sinh tử cho các chuyến hành quân vận chuyển quặng sắt và cổ vật.",
+    "crafting_maintenance_hint": "Có thể nâng cấp từ khung nhỏ lên khung lớn bằng da cừu thuộc tại trạm entity_leather_prep."
+  },
+  "cross_module_foreign_keys": {
+    "crafted_using_materials": [
+      "mat_go_nghien",
+      "mat_da_cop_ho_tinh"
+    ],
+    "used_by_class": "cls_tho_san_son_trang"
+  }
+}

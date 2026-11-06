@@ -1,0 +1,72 @@
+{
+  "blueprint_id": "tpl_item:weapon_11attachments_and_recoil_01",
+  "source_pz_reference": "weaponpart.txt & ISRackFirearm.lua (Doc 11 - Section 3.3 & 3.4)",
+  "dnd_ontology_hooks": {
+    "system_category": "WEAPON_MODIFICATIONS_AND_JAM_CLEARING"
+  },
+  "pz_math_engine": {
+    "attachments_count": 11,
+    "featured_parts": [
+      {
+        "id": "Base.ChokeTubeFull",
+        "part_type": "Canon",
+        "effect": "Tightens shotgun pellet spread for long range"
+      },
+      {
+        "id": "Base.ChokeTubeImproved",
+        "part_type": "Canon",
+        "effect": "Widens pellet spread for 4-target close blast"
+      },
+      {
+        "id": "Base.RedDot",
+        "part_type": "Scope",
+        "effect": "Reduces aiming time by 20%"
+      },
+      {
+        "id": "Base.Laser",
+        "part_type": "CanonMod",
+        "effect": "Direct hit chance bonus & moving recoil stabilization"
+      },
+      {
+        "id": "Base.GunLight",
+        "part_type": "CanonMod",
+        "effect": "Illuminates night cone of vision hands-free"
+      },
+      {
+        "id": "Base.x2Scope",
+        "part_type": "Scope",
+        "effect": "+4 tiles effective range"
+      },
+      {
+        "id": "Base.x4Scope",
+        "part_type": "Scope",
+        "effect": "+8 tiles effective range"
+      },
+      {
+        "id": "Base.x8Scope",
+        "part_type": "Scope",
+        "effect": "+12 tiles sniper range"
+      },
+      {
+        "id": "Base.AmmoStraps",
+        "part_type": "Sling",
+        "effect": "Doubles reloading speed"
+      },
+      {
+        "id": "Base.Sling",
+        "part_type": "Sling",
+        "effect": "-30% equipped weapon weight"
+      },
+      {
+        "id": "Base.RecoilPad",
+        "part_type": "Stock",
+        "effect": "-20% recoil kickback"
+      }
+    ],
+    "jam_unloading_key": "Phím X (Rack slide to clear round)"
+  },
+  "semantic_descriptors": {
+    "vietnamese_translation": "Chuẩn hóa 11 phụ kiện súng đạn nâng cấp và quy trình gạt khóa nòng xử lý kẹt đạn",
+    "dnd_roleplay_anchor": "Phụ kiện gia cố binh khí và cơ chế bảo dưỡng súng đạn"
+  }
+}

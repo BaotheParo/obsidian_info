@@ -1,0 +1,53 @@
+{
+  "blueprint_id": "tpl_aff:lethal_necrotic_pathogen_01",
+  "source_pz_reference": "BodyDamage / BodyPartType (Doc 01 - Section 5: Human Physiology)",
+  "dnd_ontology_hooks": {
+    "system_category": "PATHOLOGY_AFFLICTION",
+    "virulence_severity": "TERMINAL_LETHAL",
+    "incubation_period_hours": 72.0
+  },
+  "pz_math_engine": {
+    "transmission_matrix": {
+      "SCRATCH": 0.07,
+      "LACERATION": 0.25,
+      "BITE": 1.0
+    },
+    "vital_neck_bleed_multiplier": 1.5,
+    "neck_bleed_death_seconds": [
+      10.0,
+      20.0
+    ],
+    "pathology_flags": {
+      "is_infected": "Vô phương cứu chữa trong vanilla; tiến triển qua Sốt, Lo âu, Suy kiệt và Chết biến thành zombie",
+      "is_fake_infected": "Hội chứng giả nhiễm do sợ hãi/Hypochondriac; sốt buồn nôn nhưng tự khỏi sau 48-72h",
+      "infected_wound": "Nhiễm khuẩn thông thường do vết thương bẩn; chữa khỏi bằng cồn, nước sôi, kháng sinh"
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Mầm bệnh ký sinh trong máu làm suy đồi tế bào sống, đẩy thân nhiệt lên cao và phá hủy hệ miễn dịch.",
+    "tactical_behavior_hint": "Khi bị cắn tại vùng cổ (Neck), tốc độ xuất huyết nhân 1.5x khiến người chơi tử vong trong 10-20 giây nếu không có băng gạc vô trùng sẵn trên tay.",
+    "crafting_maintenance_hint": "Vết thương nhiễm khuẩn (infectedWound) đòi hỏi cồn y tế hoặc nước sôi khử trùng để ngăn ngừa hoại tử mô mềm."
+  },
+  "cross_module_foreign_keys": {
+    "targeted_body_parts": [
+      "HEAD",
+      "NECK",
+      "TORSO_UPPER",
+      "TORSO_LOWER",
+      "GROIN",
+      "UPPER_ARM_L",
+      "UPPER_ARM_R",
+      "FOREARM_L",
+      "FOREARM_R",
+      "HAND_L",
+      "HAND_R",
+      "UPPER_LEG_L",
+      "UPPER_LEG_R",
+      "LOWER_LEG_L",
+      "LOWER_LEG_R",
+      "FOOT_L",
+      "FOOT_R"
+    ],
+    "curative_item_tag": "item_tag:disinfectant_alcohol"
+  }
+}

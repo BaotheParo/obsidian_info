@@ -1,0 +1,23 @@
+{
+  "blueprint_id": "tpl_item:antibiotic_tablets_01",
+  "source_pz_reference": "Base.Antibiotics (Doc 02 - Section 1: Medical Consumables)",
+  "dnd_ontology_hooks": {
+    "system_category": "PHARMACEUTICAL_DRUG",
+    "administration_route": "ORAL"
+  },
+  "pz_math_engine": {
+    "weight_kg": 0.1,
+    "total_uses": 6,
+    "infection_reduction_per_hour": 0.35,
+    "fatigue_side_effect": 15.0
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Vỉ thuốc kháng sinh phổ rộng đóng viên con nhộng trong bao bì nhôm quân sự.",
+    "tactical_behavior_hint": "Dùng đường uống khi vết thương nhiễm trùng đã lan vào máu gây sốt cao toàn thân; làm giảm nhanh chóng chỉ số nhiễm độc nội tạng.",
+    "crafting_maintenance_hint": "Dược phẩm hiện đại cực kỳ quý hiếm không thể tự chế tạo thủ công; chỉ có thể tìm thấy trong các hầm ngục y tế hoặc trạm xá bỏ hoang."
+  },
+  "cross_module_foreign_keys": {
+    "resolves_pending_tag": "item_tag:antibiotic_medicine",
+    "cures_disease": "dis_trung_doc_o_huyet"
+  }
+}

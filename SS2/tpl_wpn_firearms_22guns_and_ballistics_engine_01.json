@@ -1,0 +1,95 @@
+{
+  "blueprint_id": "tpl_wpn:firearms_22guns_and_ballistics_engine_01",
+  "source_pz_reference": "weapon.txt & ISReloadWeaponAction.lua (Doc 11 - Section 3)",
+  "dnd_ontology_hooks": {
+    "system_category": "BALLISTIC_FIREARMS_AND_PROJECTILE_ACOUSTICS",
+    "bullet_calibers": [
+      "9mm",
+      ".45 Auto",
+      ".44 Mag",
+      ".357 Mag",
+      ".38 Special",
+      "5.56mm",
+      ".308 Win",
+      ".30-30 Win",
+      "Shotgun Shells"
+    ]
+  },
+  "pz_math_engine": {
+    "total_guns_catalogued": 22,
+    "featured_firearms": [
+      {
+        "id": "Base.AssaultRifle",
+        "name": "M16",
+        "caliber": "5.56mm",
+        "sound_radius": 150,
+        "mag_size": 30,
+        "range": 30,
+        "jam_rate": 0.01
+      },
+      {
+        "id": "Base.AssaultRifle2",
+        "name": "M14",
+        "caliber": ".308 Win",
+        "sound_radius": 170,
+        "mag_size": 20,
+        "range": 40,
+        "jam_rate": 0.01
+      },
+      {
+        "id": "Base.Shotgun",
+        "name": "JS-2000",
+        "caliber": "Shotgun Shells",
+        "sound_radius": 200,
+        "mag_size": 6,
+        "range": 12,
+        "jam_rate": 0.02
+      },
+      {
+        "id": "Base.DoubleBarrelShotgun",
+        "name": "Double Barrel",
+        "caliber": "Shotgun Shells",
+        "sound_radius": 200,
+        "mag_size": 2,
+        "range": 15,
+        "jam_rate": 0.0
+      },
+      {
+        "id": "Base.Pistol",
+        "name": "Beretta M9",
+        "caliber": "9mm",
+        "sound_radius": 100,
+        "mag_size": 15,
+        "range": 15,
+        "jam_rate": 0.01
+      },
+      {
+        "id": "Base.Pistol2",
+        "name": "Colt M1911",
+        "caliber": ".45 Auto",
+        "sound_radius": 70,
+        "mag_size": 7,
+        "range": 12,
+        "jam_rate": 0.01
+      },
+      {
+        "id": "Base.Revolver_Short",
+        "name": "Revolver .38",
+        "caliber": ".38 Special",
+        "sound_radius": 60,
+        "mag_size": 6,
+        "range": 8,
+        "jam_rate": 0.0
+      }
+    ],
+    "aiming_progression": {
+      "level_0_to_2": "Shotgun only (pellet spread 3-4 zombies, hit chance 65-70%)",
+      "level_5_to_7": "Pistols viable (85-90% hit chance on move)",
+      "level_8_to_10": "Piercing bullets unlocked (.308 Win pierces 2 zombies in line)"
+    }
+  },
+  "semantic_descriptors": {
+    "vietnamese_translation": "Khuôn mẫu đạn đạo 22 khẩu súng, bán kính âm thanh nổ súng và cơ chế đạn xuyên mục tiêu",
+    "dnd_roleplay_anchor": "Hệ thống vũ khí hỏa mai, súng trường và đạn đạo chiến trường"
+  }
+}

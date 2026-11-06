@@ -1,0 +1,32 @@
+{
+  "blueprint_id": "tpl_arm:police_bulletproof_vest_01",
+  "source_pz_reference": "Base.Vest_BulletPolice (Doc 02 - Section 3: Protective Armor Registry)",
+  "dnd_ontology_hooks": {
+    "system_category": "ARMOR_TORSO_HEAVY",
+    "protection_class": "BALLISTIC_KEVLAR",
+    "speed_penalty_multiplier": 0.95
+  },
+  "pz_math_engine": {
+    "weight_kg": 2.5,
+    "bite_defense_percent": 100,
+    "scratch_defense_percent": 100,
+    "bullet_defense_percent": 90,
+    "covered_parts": [
+      "TORSO_UPPER",
+      "TORSO_LOWER"
+    ],
+    "insulation_value": 0.5
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Áo giáp chống đạn tiêu chuẩn cảnh sát bằng các lớp vải dệt Kevlar đan khít, ôm sát lồng ngực và bụng.",
+    "tactical_behavior_hint": "Bảo vệ tuyệt đối 100% trước vết cắn rách ngực bụng, tuy nhiên làm tăng thân nhiệt vùng lõi khi mặc vào mùa hè nắng gắt.",
+    "crafting_maintenance_hint": "Không thể giặt bằng nước sôi; cần bảo quản nơi khô ráo để tránh mục sợi gia cường."
+  },
+  "cross_module_foreign_keys": {
+    "protects_vital_parts": [
+      "part_chest_upper",
+      "part_abdomen_lower"
+    ],
+    "interacts_with_system": "sys_thermoregulation"
+  }
+}

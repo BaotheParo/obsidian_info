@@ -1,0 +1,313 @@
+{
+  "blueprint_id": "tpl_prof:occupational_25_archetypes_matrix_01",
+  "source_pz_reference": "character_professions.txt (Doc 04 - Section 1 & Section 2: All 25 Occupations)",
+  "dnd_ontology_hooks": {
+    "system_category": "CHARACTER_BACKGROUND_AND_CLASS_ORIGIN",
+    "skill_proficiency_scaling": {
+      "UNPROFICIENT_LV0": 0.25,
+      "HALF_PROFICIENT_LV1": 0.75,
+      "PROFICIENT_LV2": 1.0,
+      "EXPERTISE_LV3_PLUS": 1.25
+    }
+  },
+  "pz_math_engine": {
+    "total_professions": 25,
+    "professions_registry": [
+      {
+        "pz_id": "base:fireofficer",
+        "cost": 0,
+        "tier": "S",
+        "skills": {
+          "Sprinting": 1,
+          "Strength": 1,
+          "Fitness": 1,
+          "Axe": 1
+        },
+        "innate_trait": null
+      },
+      {
+        "pz_id": "base:burglar",
+        "cost": -6,
+        "tier": "S",
+        "skills": {
+          "Nimble": 2,
+          "Sneak": 2,
+          "Lightfoot": 2
+        },
+        "innate_trait": "Burglar"
+      },
+      {
+        "pz_id": "base:lumberjack",
+        "cost": 0,
+        "tier": "S",
+        "skills": {
+          "Axe": 2,
+          "Strength": 1,
+          "Maintenance": 1
+        },
+        "innate_trait": "Ax-pert"
+      },
+      {
+        "pz_id": "base:veteran",
+        "cost": -8,
+        "tier": "S",
+        "skills": {
+          "Aiming": 2,
+          "Reloading": 2
+        },
+        "innate_trait": "Desensitized"
+      },
+      {
+        "pz_id": "base:smither",
+        "cost": -6,
+        "tier": "A",
+        "skills": {
+          "Blacksmith": 4,
+          "Maintenance": 1,
+          "SmallBlunt": 1
+        },
+        "innate_trait": "Blacksmith Knowledge"
+      },
+      {
+        "pz_id": "base:policeofficer",
+        "cost": -4,
+        "tier": "A",
+        "skills": {
+          "Aiming": 4,
+          "Reloading": 1,
+          "Nimble": 1
+        },
+        "innate_trait": null
+      },
+      {
+        "pz_id": "base:repairman",
+        "cost": -2,
+        "tier": "A",
+        "skills": {
+          "Woodwork": 1,
+          "Maintenance": 2,
+          "SmallBlunt": 1,
+          "Masonry": 1
+        },
+        "innate_trait": "Inventive"
+      },
+      {
+        "pz_id": "base:constructionworker",
+        "cost": -2,
+        "tier": "A",
+        "skills": {
+          "SmallBlunt": 2,
+          "Blunt": 1,
+          "Masonry": 2,
+          "Woodwork": 1,
+          "Maintenance": 1
+        },
+        "innate_trait": null
+      },
+      {
+        "pz_id": "base:unemployed",
+        "cost": 8,
+        "tier": "A",
+        "skills": {},
+        "innate_trait": null
+      },
+      {
+        "pz_id": "base:securityguard",
+        "cost": -2,
+        "tier": "B",
+        "skills": {
+          "Sprinting": 2,
+          "Lightfoot": 1,
+          "SmallBlunt": 1
+        },
+        "innate_trait": "Night Owl"
+      },
+      {
+        "pz_id": "base:rancher",
+        "cost": 0,
+        "tier": "B",
+        "skills": {
+          "Husbandry": 4,
+          "Butchering": 3,
+          "Fitness": 1
+        },
+        "innate_trait": null
+      },
+      {
+        "pz_id": "base:carpenter",
+        "cost": -2,
+        "tier": "B",
+        "skills": {
+          "Woodwork": 4,
+          "Carving": 1,
+          "SmallBlunt": 1,
+          "Masonry": 1,
+          "Maintenance": 1
+        },
+        "innate_trait": null
+      },
+      {
+        "pz_id": "base:parkranger",
+        "cost": -4,
+        "tier": "B",
+        "skills": {
+          "Trapping": 1,
+          "Doctor": 1,
+          "PlantScavenging": 1,
+          "FlintKnapping": 1,
+          "Carving": 1
+        },
+        "innate_trait": "Herbalist"
+      },
+      {
+        "pz_id": "base:mechanics",
+        "cost": -4,
+        "tier": "B",
+        "skills": {
+          "Mechanics": 4,
+          "MetalWelding": 1
+        },
+        "innate_trait": "Vehicle Knowledge"
+      },
+      {
+        "pz_id": "base:tailor",
+        "cost": 2,
+        "tier": "B",
+        "skills": {
+          "Tailoring": 4
+        },
+        "innate_trait": null
+      },
+      {
+        "pz_id": "base:fitnessinstructor",
+        "cost": -6,
+        "tier": "B",
+        "skills": {
+          "Fitness": 3,
+          "Sprinting": 2,
+          "Strength": 1
+        },
+        "innate_trait": "Nutritionist"
+      },
+      {
+        "pz_id": "base:metalworker",
+        "cost": -4,
+        "tier": "C",
+        "skills": {
+          "MetalWelding": 4
+        },
+        "innate_trait": null
+      },
+      {
+        "pz_id": "base:chef",
+        "cost": -2,
+        "tier": "C",
+        "skills": {
+          "Cooking": 4,
+          "Maintenance": 1,
+          "SmallBlade": 1,
+          "Butchering": 2
+        },
+        "innate_trait": "Keen Cook"
+      },
+      {
+        "pz_id": "base:doctor",
+        "cost": 0,
+        "tier": "C",
+        "skills": {
+          "Doctor": 6,
+          "SmallBlade": 1
+        },
+        "innate_trait": null
+      },
+      {
+        "pz_id": "base:farmer",
+        "cost": 0,
+        "tier": "C",
+        "skills": {
+          "Farming": 4,
+          "Husbandry": 1,
+          "Strength": 1
+        },
+        "innate_trait": null
+      },
+      {
+        "pz_id": "base:nurse",
+        "cost": 0,
+        "tier": "C",
+        "skills": {
+          "Doctor": 3,
+          "Lightfoot": 1,
+          "Fitness": 1
+        },
+        "innate_trait": "Night Owl"
+      },
+      {
+        "pz_id": "base:fisherman",
+        "cost": -2,
+        "tier": "C",
+        "skills": {
+          "Fishing": 3,
+          "PlantScavenging": 1,
+          "Butchering": 1
+        },
+        "innate_trait": null
+      },
+      {
+        "pz_id": "base:burgerflipper",
+        "cost": 2,
+        "tier": "C",
+        "skills": {
+          "Cooking": 2,
+          "Maintenance": 1,
+          "SmallBlade": 1
+        },
+        "innate_trait": "Keen Cook"
+      },
+      {
+        "pz_id": "base:electrician",
+        "cost": -2,
+        "tier": "D",
+        "skills": {
+          "Electricity": 5
+        },
+        "innate_trait": null
+      },
+      {
+        "pz_id": "base:engineer",
+        "cost": -4,
+        "tier": "D",
+        "skills": {
+          "Electricity": 1,
+          "Woodwork": 1,
+          "Masonry": 1
+        },
+        "innate_trait": null
+      }
+    ]
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Hệ thống 25 xuất thân nghề nghiệp định hình toàn bộ căn cơ thể chất, kỹ năng chiến đấu và tri thức chế tác của nhân vật ngay từ lúc khởi tạo, trải dài từ Chiến binh/Tiều phu/Đạo tặc cho tới Thợ rèn/Chủ trang trại/Thợ xây.",
+    "tactical_behavior_hint": "Điểm kỹ năng khởi đầu không chỉ là cấp độ tĩnh mà mở khóa hệ số nhân XP vĩnh viễn: Cấp 0 bị kìm hãm ở mức 25% XP, trong khi chỉ cần +1 điểm khởi đầu sẽ nhảy vọt lên 75% XP (nhanh gấp 3 lần), +2 điểm đạt 100% (gấp 4 lần) và >= +3 điểm đạt 125% (gấp 5 lần).",
+    "crafting_maintenance_hint": "Một số nghề sở hữu đặc quyền nội tại không thể học qua sách thông thường: Ax-pert (+25% tốc độ vung rìu/chặt cây), Desensitized (miễn nhiễm 100% hoảng loạn), Burglar (phá khóa cửa/kích hoạt cơ giới ngay ngày 1), và Blacksmith Knowledge (mở khóa đe sắt rèn kim loại B42)."
+  },
+  "cross_module_foreign_keys": {
+    "unlocks_workstations_doc03": [
+      "forge_t1_t2_t3",
+      "furnace_t1_t2_t3",
+      "butcher_hook"
+    ],
+    "grants_innate_traits": [
+      "tpl_trait:ax_pert",
+      "tpl_trait:burglar",
+      "tpl_trait:desensitized",
+      "tpl_trait:blacksmith_knowledge",
+      "tpl_trait:inventive",
+      "tpl_trait:night_owl",
+      "tpl_trait:herbalist",
+      "tpl_trait:vehicle_knowledge",
+      "tpl_trait:nutritionist",
+      "tpl_trait:keen_cook"
+    ]
+  }
+}

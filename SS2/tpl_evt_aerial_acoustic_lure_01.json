@@ -1,0 +1,30 @@
+{
+  "blueprint_id": "tpl_evt:aerial_acoustic_lure_01",
+  "source_pz_reference": "MetaEvents / HelicopterEvent (Doc 01 - Section 4: Metagame Events)",
+  "dnd_ontology_hooks": {
+    "system_category": "WORLD_META_EVENT",
+    "threat_level": "EXTREME_MIGRATION",
+    "event_frequency_days": [
+      6,
+      12
+    ]
+  },
+  "pz_math_engine": {
+    "event_sound_radius_blocks": 250.0,
+    "hover_duration_game_minutes": [
+      60,
+      180
+    ],
+    "virtual_zombie_pull_velocity": 0.85,
+    "event_flight_pattern": "ORBITING_OVER_TARGET"
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Hiện tượng âm thanh di động cực lớn trên không trung (máy bay trực thăng hoặc đại phong lôi chấn động).",
+    "tactical_behavior_hint": "Âm thanh vang dội 250 blocks kích hoạt toàn bộ thực thể Undead trên hàng chục chunk rừng và đô thị chuyển sang trạng thái di cư ồ ạt, phá vỡ hoàn toàn sự an toàn của các căn cứ định cư.",
+    "crafting_maintenance_hint": "Chỉ có thể phòng tránh bằng cách trú ẩn sâu trong nhà kín trước khi sự kiện bắt đầu, che rèm cửa và tắt toàn bộ nguồn sáng."
+  },
+  "cross_module_foreign_keys": {
+    "affects_entity_id": "tpl_mob:sensory_horde_undead_01",
+    "monitored_by_system": "sys_ai_sensory"
+  }
+}

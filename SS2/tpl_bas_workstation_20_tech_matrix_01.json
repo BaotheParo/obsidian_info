@@ -1,0 +1,191 @@
+{
+  "blueprint_id": "tpl_bas:workstation_20_tech_matrix_01",
+  "source_pz_reference": "20 Workstation Entities & 5-Age Tech Tree (Doc 03 - Section 2 & Section 3)",
+  "dnd_ontology_hooks": {
+    "bastion_facility_mapping": [
+      "SMITHY",
+      "WORKSHOP",
+      "LABORATORY",
+      "GARDEN",
+      "STOREHOUSE",
+      "MENAGERIE",
+      "ARMORY"
+    ],
+    "tech_ages_progression": [
+      "AGE_0_PRIMITIVE_FLINT",
+      "AGE_1_CRUDE_FORGE",
+      "AGE_2_TEMPERED_STEEL",
+      "AGE_3_ALCHEMICAL_BLACKPOWDER",
+      "AGE_4_RELIC_ARTIFICERY"
+    ]
+  },
+  "pz_math_engine": {
+    "total_recipes_indexed": 1026,
+    "workstation_registry_20": [
+      {
+        "station_id": "furnace_t1_t2_t3",
+        "file": "entity_furnace_i/ii/iii.txt",
+        "skill": "skill:blacksmithing",
+        "bastion_type": "SMITHY",
+        "tech_age": "AGE_1_CRUDE_FORGE"
+      },
+      {
+        "station_id": "forge_t1_t2_t3",
+        "file": "entity_forge_i/ii/iii.txt",
+        "skill": "skill:blacksmithing",
+        "bastion_type": "SMITHY",
+        "tech_age": "AGE_1_CRUDE_FORGE"
+      },
+      {
+        "station_id": "dome_kiln",
+        "file": "entity_dome_kiln_craftRecipe.txt",
+        "skill": "skill:pottery_and_glassmaking",
+        "bastion_type": "WORKSHOP",
+        "tech_age": "AGE_1_CRUDE_FORGE",
+        "min_glass_temp_c": 1200.0
+      },
+      {
+        "station_id": "pottery_wheel",
+        "file": "craftrecipe_potterywheel.txt",
+        "skill": "skill:pottery",
+        "bastion_type": "WORKSHOP",
+        "tech_age": "AGE_1_CRUDE_FORGE"
+      },
+      {
+        "station_id": "handpress",
+        "file": "craftrecipe_handpress.txt",
+        "skill": "skill:pottery_and_masonry",
+        "bastion_type": "WORKSHOP",
+        "tech_age": "AGE_1_CRUDE_FORGE"
+      },
+      {
+        "station_id": "charcoal_pit",
+        "file": "entity_charcoal_pit.txt",
+        "skill": "skill:blacksmithing",
+        "bastion_type": "SMITHY",
+        "tech_age": "AGE_1_CRUDE_FORGE"
+      },
+      {
+        "station_id": "metal_bandsaw",
+        "file": "entity_metalbandsaw.txt",
+        "skill": "skill:metalworking",
+        "bastion_type": "SMITHY",
+        "tech_age": "AGE_2_TEMPERED_STEEL"
+      },
+      {
+        "station_id": "standing_drill",
+        "file": "entity_standingdrill.txt",
+        "skill": "skill:metalworking",
+        "bastion_type": "SMITHY",
+        "tech_age": "AGE_2_TEMPERED_STEEL"
+      },
+      {
+        "station_id": "grindstone",
+        "file": "entity_grindstone.txt",
+        "skill": "skill:maintenance",
+        "bastion_type": "ARMORY",
+        "tech_age": "AGE_1_CRUDE_FORGE"
+      },
+      {
+        "station_id": "leather_prep_table",
+        "file": "entity_leather_prep.txt",
+        "skill": "skill:tailoring",
+        "bastion_type": "WORKSHOP",
+        "tech_age": "AGE_2_TEMPERED_STEEL"
+      },
+      {
+        "station_id": "simple_loom",
+        "file": "entity_simple_loom_xuiSkin.txt",
+        "skill": "skill:tailoring",
+        "bastion_type": "WORKSHOP",
+        "tech_age": "AGE_2_TEMPERED_STEEL"
+      },
+      {
+        "station_id": "spinning_wheel",
+        "file": "entity_spinning_wheel.txt",
+        "skill": "skill:tailoring",
+        "bastion_type": "WORKSHOP",
+        "tech_age": "AGE_2_TEMPERED_STEEL"
+      },
+      {
+        "station_id": "scutching_board",
+        "file": "entity_scutching_board.txt",
+        "skill": "skill:farming_and_tailoring",
+        "bastion_type": "GARDEN",
+        "tech_age": "AGE_1_CRUDE_FORGE"
+      },
+      {
+        "station_id": "heckle_comb",
+        "file": "entity_heckle_comb.txt",
+        "skill": "skill:farming_and_tailoring",
+        "bastion_type": "GARDEN",
+        "tech_age": "AGE_1_CRUDE_FORGE"
+      },
+      {
+        "station_id": "butcher_hook",
+        "file": "entity_butcher_hook.txt",
+        "skill": "skill:cooking_and_butchering",
+        "bastion_type": "STOREHOUSE",
+        "tech_age": "AGE_1_CRUDE_FORGE"
+      },
+      {
+        "station_id": "butter_churn",
+        "file": "entity_butter_churn.txt",
+        "skill": "skill:cooking",
+        "bastion_type": "STOREHOUSE",
+        "tech_age": "AGE_1_CRUDE_FORGE"
+      },
+      {
+        "station_id": "chicken_hutch",
+        "file": "entity_chickenhutch.txt",
+        "skill": "skill:farming",
+        "bastion_type": "MENAGERIE",
+        "tech_age": "AGE_1_CRUDE_FORGE"
+      },
+      {
+        "station_id": "feeding_trough",
+        "file": "entity_feedingtrough.txt",
+        "skill": "skill:farming",
+        "bastion_type": "MENAGERIE",
+        "tech_age": "AGE_1_CRUDE_FORGE"
+      },
+      {
+        "station_id": "drying_rack",
+        "file": "entity_Drying_Rack.txt",
+        "skill": "skill:cooking",
+        "bastion_type": "STOREHOUSE",
+        "tech_age": "AGE_0_PRIMITIVE_FLINT"
+      },
+      {
+        "station_id": "herb_drying_rack",
+        "file": "entity_Herb_Drying_Rack.txt",
+        "skill": "skill:first_aid",
+        "bastion_type": "LABORATORY",
+        "tech_age": "AGE_0_PRIMITIVE_FLINT"
+      }
+    ]
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Hệ sinh thái 20 trạm công cụ và máy móc thủ công chia theo 5 thời kỳ kỹ thuật: từ hố đốt than yếm khí, bàn xoay gốm, lò nung vòm đất sét (>1.200°C), lò luyện quặng sắt cấp 1-3, lò rèn đe sắt, đá mài, bàn cưa/khoan cơ khí cho đến bộ khung đập-chải-kéo-dệt sợi lanh và giàn phơi thịt/thảo dược.",
+    "tactical_behavior_hint": "Loại bỏ hoàn toàn lối chơi chế đồ tay không trong túi; bắt buộc người chơi phải quy hoạch không gian căn cứ (Bastion) theo dây chuyền công nghiệp khép kín: Đất sét -> Gạch chịu lửa -> Lò nung vòm -> Lò luyện sắt -> Lò rèn vũ khí/giáp tấm.",
+    "crafting_maintenance_hint": "Các trạm cấp cao phụ thuộc chặt chẽ vào sản phẩm trung gian của trạm cấp thấp (ví dụ: Lò luyện sắt cần Gạch chịu lửa Firebrick từ Lò nung vòm và Than củi từ Hố đốt than)."
+  },
+  "cross_module_foreign_keys": {
+    "maps_to_bastion_facilities": [
+      "SMITHY",
+      "WORKSHOP",
+      "LABORATORY",
+      "GARDEN",
+      "STOREHOUSE",
+      "MENAGERIE",
+      "ARMORY"
+    ],
+    "unlocks_recipe_groups": [
+      "tpl_rcp:knapping_primitive_flint_01",
+      "tpl_rcp:pottery_and_glass_kiln_01",
+      "tpl_rcp:blacksmith_metallurgy_01",
+      "tpl_rcp:flax_textile_and_leather_01",
+      "tpl_rcp:alchemical_munitions_and_preservation_01"
+    ]
+  }
+}

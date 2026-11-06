@@ -1,0 +1,26 @@
+{
+  "blueprint_id": "tpl_food:pan_fried_vegetables_forged_01",
+  "source_pz_reference": "Base.PanFriedVegetablesForged (Doc 02 - Section 3: Food Registry)",
+  "dnd_ontology_hooks": {
+    "system_category": "COOKED_MEAL",
+    "quality_tier": "HOT_HOMESTEAD_DISH"
+  },
+  "pz_math_engine": {
+    "calories_kcal": 516.0,
+    "carbohydrates_g": 62.0,
+    "proteins_g": 18.0,
+    "lipids_g": 22.0,
+    "hunger_reduction": 45.0,
+    "unhappy_change": -15.0,
+    "spoilage_hours": 36.0
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Chảo rau rừng xào nóng sốt kết hợp nấm mộc nhĩ, măng rừng và mỡ lợn đun trên chảo gang.",
+    "tactical_behavior_hint": "Cung cấp ngay lập tức 516 calo và giảm 15 điểm u uất buồn phiền (Unhappiness), duy trì năng lượng bền bỉ cho ngày lao động tiếp theo.",
+    "crafting_maintenance_hint": "Cần nấu chín trên bếp lửa hoặc lò than đá bst_lo_ren_than_da để phát huy tối đa dinh dưỡng."
+  },
+  "cross_module_foreign_keys": {
+    "cooked_at_facility": "bst_lo_ren_than_da",
+    "regulates_system": "sys_metabolism_calories"
+  }
+}

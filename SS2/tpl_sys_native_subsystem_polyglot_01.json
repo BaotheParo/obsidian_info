@@ -1,0 +1,28 @@
+{
+  "blueprint_id": "tpl_sys:native_subsystem_polyglot_01",
+  "source_pz_reference": "Native C++ DLLs (Doc 01 - Section 2: Tri-layer Architecture)",
+  "dnd_ontology_hooks": {
+    "system_category": "CORE_NATIVE_ENGINE",
+    "execution_layer": "NATIVE_X86_64_JVM_JNI",
+    "gc_impact": "ZERO_STOP_THE_WORLD_GC"
+  },
+  "pz_math_engine": {
+    "registered_native_modules": {
+      "PZPathFind64.dll": "Tính toán A* cho 10.000 zombie mà không phân bổ object trên RAM Java",
+      "Lighting64.dll": "Raycasting và ma trận bitmask ánh sáng 60 Hz",
+      "PZPopMan64.dll": "Quản lý quần thể zombie ảo (Virtual Zombies) ngoài vùng hiển thị",
+      "PZBullet64.dll": "Vật lý va chạm xe, ma sát lốp và trọng tâm",
+      "RakNet64.dll": "Giao thức UDP tốc độ cao chống rớt gói và Client Prediction",
+      "fmod.dll": "Âm thanh không gian 3D, cản âm qua tường và cảnh báo nhịp tim hoảng loạn"
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Hệ thống module mã máy C++ nhị phân liên kết với Java qua JNI, chịu trách nhiệm cho các phép toán nặng hàng triệu chu kỳ mỗi giây.",
+    "tactical_behavior_hint": "Bảo đảm game chạy mượt mà ở mức 60 FPS ngay cả khi có bầy xác sống hàng ngàn con vây hãm căn cứ.",
+    "crafting_maintenance_hint": "Là nền tảng kiến trúc bắt buộc phải được duy trì khi thiết kế các hệ thống mở rộng hoặc modding quy mô lớn."
+  },
+  "cross_module_foreign_keys": {
+    "supports_entity_id": "tpl_mob:sensory_horde_undead_01",
+    "network_engine_id": "RakNet"
+  }
+}

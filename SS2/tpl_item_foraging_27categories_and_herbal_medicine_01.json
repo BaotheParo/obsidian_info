@@ -1,0 +1,77 @@
+{
+  "blueprint_id": "tpl_item:foraging_27categories_and_herbal_medicine_01",
+  "source_pz_reference": "forageSystem.lua & forageCategories.lua (Doc 08 - Section 6)",
+  "dnd_ontology_hooks": {
+    "item_category": "WILDERNESS_REAGENTS_AND_HERBAL_POULTICES",
+    "required_feat_for_toxin_detection": "tpl_trait:herbalist"
+  },
+  "pz_math_engine": {
+    "total_forage_categories": 27,
+    "search_radius_tiles_lv0": 3.0,
+    "search_radius_tiles_lv10": 10.5,
+    "per_level_radius_scaling_factor": 0.25,
+    "optical_penalties_pct": {
+      "moonless_darkness": -60.0,
+      "heavy_fog": -50.0,
+      "heavy_rain": -30.0,
+      "exhausted_moodle_range": [
+        -10.0,
+        -30.0
+      ],
+      "drowsy_moodle_range": [
+        -15.0,
+        -40.0
+      ],
+      "full_helmet_or_welding_mask": -30.0
+    },
+    "medicinal_plants_5": [
+      {
+        "herb_id": "Plantain",
+        "application": "CRUSHED_POULTICE",
+        "effect": "ACCELERATED_OPEN_WOUND_EPITHELIAL_HEALING"
+      },
+      {
+        "herb_id": "Comfrey",
+        "application": "SPLINT_BONE_POULTICE",
+        "effect": "FRACTURE_HEALING_SPEED_MULTIPLIER_2X",
+        "healing_speed_mult": 2.0
+      },
+      {
+        "herb_id": "WildGarlic",
+        "application": "ANTISEPTIC_POULTICE",
+        "effect": "LACERATION_AND_BITE_BACTERIAL_DISINFECTION"
+      },
+      {
+        "herb_id": "Ginseng",
+        "application": "RAW_ORAL_CHEW",
+        "effect": "INSTANT_ENDURANCE_STAMINA_RESTORATION"
+      },
+      {
+        "herb_id": "BlackSage",
+        "application": "ORAL_ANALGESIC",
+        "effect": "POTENT_PAIN_SUPPRESSION_EQUIVALENT_TO_PAINKILLERS"
+      }
+    ],
+    "wild_toxin_lethality": {
+      "poisonous_mushrooms_and_berries_time_to_death_hours": 24.0,
+      "identified_by_trait_or_magazine": [
+        "tpl_trait:herbalist",
+        "The_Herbalist_Magazine"
+      ]
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Hệ thống 27 nhóm tài nguyên thiên nhiên quét qua tầm nhìn quang học (từ 3.0 đến 10.5 ô gạch): bao gồm dấu chân/phân thú hoang (Tracks), đá lửa/đá cuội (Flint/Stones), côn trùng mồi câu, nấm/quả mọng và 5 vị thảo dược y học cổ truyền.",
+    "tactical_behavior_hint": "Bán kính tìm kiếm bị suy giảm mạnh theo điều kiện quang học (-60% trong đêm tối, -50% trong sương mù, -30% khi đội mũ giáp kín mặt). Ăn nhầm nấm độc hoặc quả dại kịch độc khi chưa có tri thức Thảo dược học (Herbalist) sẽ dẫn tới ngộ độc tử vong trong vòng 24 giờ.",
+    "crafting_maintenance_hint": "5 loại thảo dược rừng thay thế hoàn toàn tủ thuốc tân dược: Mã đề đắp lành vết thương hở, Cỏ liên mộc giúp xương gãy liền nhanh gấp đôi (x2), Tỏi dại sát trùng vết rách, Nhân sâm hồi phục thể lực tức thì và Xô thơm đen giảm đau tương đương thuốc giảm đau."
+  },
+  "cross_module_foreign_keys": {
+    "treats_wounds_doc01_doc13": [
+      "SCRATCH",
+      "LACERATION",
+      "DEEP_WOUND",
+      "FRACTURE"
+    ],
+    "supplies_knapping_stone_doc03": "tpl_rcp:knapping_primitive_flint_01"
+  }
+}

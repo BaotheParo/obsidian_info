@@ -1,0 +1,123 @@
+{
+  "blueprint_id": "tpl_mob:livestock_18genes_and_butchering_01",
+  "source_pz_reference": "AnimalGenomeDefinitions.lua & Butchering Hook Pipeline (Doc 08 - Section 5)",
+  "dnd_ontology_hooks": {
+    "bastion_facility_mapping": [
+      "MENAGERIE",
+      "STABLE",
+      "STOREHOUSE"
+    ],
+    "skill_proficiencies": [
+      "skill:husbandry",
+      "skill:butchering"
+    ]
+  },
+  "pz_math_engine": {
+    "total_genetic_loci": 18,
+    "genetic_inheritance_model": "DIPLOID_DOMINANT_RECESSIVE_ALLELE_PAIR",
+    "genome_18_definitions": {
+      "maxSize": {
+        "default_min": 0.85,
+        "default_max": 0.95,
+        "effect": "3D_SKELETAL_FRAME_SCALE"
+      },
+      "maxWeight": {
+        "effect": "MAX_DRESSED_CARCASS_MEAT_WEIGHT"
+      },
+      "meatRatio": {
+        "effect": "LEAN_MEAT_TO_FAT_WASTE_RATIO"
+      },
+      "maxMilk": {
+        "elite_yield_liters_per_day_min": 20.0,
+        "elite_yield_liters_per_day_max": 30.0
+      },
+      "milkInc": {
+        "effect": "DAILY_MILK_REGENERATION_RATE"
+      },
+      "maxWool": {
+        "effect": "MAX_RAW_WOOL_FLEECE_YIELD"
+      },
+      "woolInc": {
+        "effect": "WOOL_REGROWTH_VELOCITY_AFTER_SHEARING"
+      },
+      "eggSize": {
+        "effect": "EGG_CALORIE_AND_PROTEIN_DENSITY"
+      },
+      "eggClutch": {
+        "base_eggs_min": 1,
+        "base_eggs_max": 2,
+        "elite_eggs_min": 6,
+        "elite_eggs_max": 8
+      },
+      "fertility": {
+        "effect": "CONCEPTION_PROBABILITY_PER_ESTRUS_CYCLE"
+      },
+      "ageToGrow": {
+        "effect": "JUVENILE_TO_ADULT_MATURATION_TIME"
+      },
+      "lifeExpectancy": {
+        "effect": "NATURAL_LIFESPAN_LIMIT"
+      },
+      "resistance": {
+        "effect": "DISEASE_AND_EXTREME_WEATHER_IMMUNITY"
+      },
+      "strength": {
+        "effect": "MUSCLE_POWER_AND_ZOMBIE_FENCE_DEFENSE"
+      },
+      "aggressiveness": {
+        "effect": "PLAYER_GORE_ATTACK_HAZARD_BY_BULLS_AND_BOARS"
+      },
+      "thirstResistance": {
+        "effect": "SUMMER_DROUGHT_SURVIVAL_DURATION"
+      },
+      "hungerResistance": {
+        "effect": "WINTER_SNOW_PASTURE_STARVATION_BUFFER"
+      },
+      "stress": {
+        "effect": "STRESS_INDUCED_EGG_AND_MILK_CESSATION_SENSITIVITY"
+      }
+    },
+    "butcher_hook_5_step_extraction": [
+      {
+        "step": 1,
+        "method": "ISGatherBloodFromAnimal",
+        "tool": "Bucket",
+        "output": "Animal_Blood_For_Sausage"
+      },
+      {
+        "step": 2,
+        "method": "ISRemoveLeatherFromAnimal",
+        "tool": "Hunting_Knife",
+        "output": "Raw_Animal_Hide_Leather"
+      },
+      {
+        "step": 3,
+        "method": "ISRemoveHeadFromAnimal",
+        "tool": "Cleaver_Or_Knife",
+        "output": "Animal_Head_Trophy_Or_Broth_Stock"
+      },
+      {
+        "step": 4,
+        "method": "ISRemoveMeatFromAnimal",
+        "tool": "Butcher_Knife",
+        "output": "Prime_Meat_Cuts_Loin_Ribs_Belly"
+      },
+      {
+        "step": 5,
+        "method": "ISGetAnimalBones",
+        "tool": "Knife_Or_Saw",
+        "output": "Animal_Bones_For_Glue_Needles_BoneMeal"
+      }
+    ]
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Hệ thống di truyền sinh học 18 cặp gen (Allele trội/lặn) điều khiển toàn bộ hình thái, năng suất và tập tính của 4 nhóm gia súc/gia cầm chủ lực (Bò Cow/Bull/Calf, Cừu Ewe/Ram/Lamb, Lợn Sow/Boar/Piglet, Gà/Gà tây Hen/Cockerel/Chick/Turkey).",
+    "tactical_behavior_hint": "Lai tạo chọn lọc giúp nhân giống được bò mẹ vắt 20-30 lít sữa/ngày và gà mái đẻ 6-8 trứng/lứa; tuy nhiên nếu để gen hung dữ (aggressiveness) cao, bò đực và lợn đực sẽ húc trọng thương chính người chăn nuôi, còn nếu để gia súc bị căng thẳng (stress), chúng sẽ ngừng đẻ trứng và tắt sữa hoàn toàn.",
+    "crafting_maintenance_hint": "Quy trình giết mổ trên Móc treo (Butcher Hook) được chuẩn hóa thành 5 bước tách biệt: Hứng tiết vào xô -> Lột da nguyên tấm -> Cắt thủ cấp -> Xẻ thịt thăn/sườn -> Lọc xương (dùng nấu keo da Glue, gọt kim khâu xương hoặc nghiền bột xương Bone Meal bón ruộng)."
+  },
+  "cross_module_foreign_keys": {
+    "executed_at_workstation_doc01_doc03": "entity_butcher_hook",
+    "bones_used_for_weapon_doc02": "tpl_wpn:bovine_jawbone_morningstar_01",
+    "transported_via_trailer_doc06": "TOWED_CARGO_AND_LIVESTOCK_TRAILERS_B42"
+  }
+}

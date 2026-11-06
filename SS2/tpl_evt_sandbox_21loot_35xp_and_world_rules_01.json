@@ -1,0 +1,99 @@
+{
+  "blueprint_id": "tpl_evt:sandbox_21loot_35xp_and_world_rules_01",
+  "source_pz_reference": "SandboxVars.lua / 21 Loot Categories, 35 Skill Multipliers & Utilities (Doc 10 - Section 3.3, 3.4, 3.5, 3.6 & 3.7)",
+  "dnd_ontology_hooks": {
+    "system_category": "WORLD_ECONOMY_TIME_DILATION_AND_XP_SCALING_RULES",
+    "admin_runtime_hook": "HOT_RELOADABLE_SERVER_CONFIG"
+  },
+  "pz_math_engine": {
+    "time_and_utility_parameters": {
+      "day_length_enum_1_to_14": {
+        "1": "15_MIN",
+        "2": "30_MIN",
+        "3_DEFAULT": "1_HOUR",
+        "4": "1.5_HOURS",
+        "5_OPTIMAL": "2_HOURS",
+        "6": "3_HOURS",
+        "14": "24_HOURS_REALTIME"
+      },
+      "water_and_elec_shutoff_default_range_days": [
+        0,
+        30
+      ],
+      "water_and_elec_shutoff_modifier_avg_days": 14,
+      "generator_fuel_consumption_default_l_per_hr": 0.1,
+      "generator_fuel_consumption_range": [
+        0.0,
+        10.0
+      ],
+      "generator_fuel_consumption_optimal_10_to_14_days": 0.05,
+      "vehicle_zombie_attraction_multiplier_default": 1.0,
+      "vehicle_zombie_attraction_multiplier_range": [
+        0.0,
+        10.0
+      ]
+    },
+    "loot_rarity_6_tiers_float": {
+      "InsaneLootFactor": 0.05,
+      "ExtremeLootFactor": 0.2,
+      "RareLootFactor_ApocalypseDefault": 0.6,
+      "NormalLootFactor": 1.0,
+      "CommonLootFactor": 2.0,
+      "AbundantLootFactor": 3.0
+    },
+    "granular_21_loot_variables": [
+      "FoodLootNew",
+      "CannedFoodLootNew",
+      "CookwareLootNew",
+      "LiteratureLootNew",
+      "SkillBookLoot",
+      "RecipeResourceLoot",
+      "MedicalLootNew",
+      "SurvivalGearsLootNew",
+      "WeaponLootNew",
+      "RangedWeaponLootNew",
+      "AmmoLootNew",
+      "MechanicsLootNew",
+      "FarmingLootNew",
+      "ToolLootNew",
+      "MaterialLootNew",
+      "MediaLootNew",
+      "KeyLootNew",
+      "ClothingLootNew",
+      "ContainerLootNew",
+      "MementoLootNew",
+      "OtherLootNew"
+    ],
+    "xp_multiplier_config_35_skills": {
+      "global_xp_multiplier_range": [
+        1.0,
+        100.0
+      ],
+      "vanilla_strength_lv5_to_lv10_grind_years": 1.0,
+      "recommended_b42_skill_multipliers": {
+        "Aiming": 2.0,
+        "Reloading": 2.0,
+        "Woodwork": 1.0,
+        "Blacksmith": 3.0,
+        "FlintKnapping": 3.0,
+        "Husbandry": 2.5,
+        "Pottery": 3.0,
+        "Masonry": 2.0,
+        "Glassmaking": 2.0,
+        "Butchering": 2.0,
+        "Fitness": 5.0,
+        "Strength": 5.0
+      }
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Bộ biến số điều khiển nhịp đập thời gian (từ 15 phút đến 24 giờ thực cho mỗi ngày đêm), định mức tiêu hao nhiên liệu máy phát (0.1 L/giờ), 21 kênh phân phối tài nguyên độc lập (từ 5% đến 300%) và ma trận tốc độ lĩnh hội cho toàn bộ 35 kỹ năng.",
+    "tactical_behavior_hint": "Cho phép thiết kế các kịch bản kinh tế khắc nghiệt có chọn lọc: ép độ hiếm Vũ khí, Đạn dược và Đồ hộp xuống mức 0.2 - 0.4 (20% - 40%) nhưng đẩy Tài nguyên thiên nhiên (Đá lửa, Cành cây, Đất sét) lên mức Dồi dào và nhân x2.0 - x3.0 tốc độ học Rèn sắt, Đẽo đá, Làm gốm, Chăn nuôi để buộc người chơi phải tự rèn kiếm và trồng trọt. Đặc biệt, việc nâng hệ số Fitness và Strength lên 5.0x giúp rút ngắn quá trình rèn luyện thể chất từ 1 năm ròng rã xuống mức hợp lý cho máy chủ nhiều người chơi.",
+    "crafting_maintenance_hint": "Quản trị viên máy chủ có thể chỉnh sửa trực tiếp tệp <ServerName>_SandboxVars.lua và gọi lệnh /reloadoptions ngay trong lúc máy chủ đang chạy để cập nhật tức thì mọi hệ số mà không cần khởi động lại."
+  },
+  "cross_module_foreign_keys": {
+    "scales_loot_tables_doc05": "sys_math:procedural_loot_weighted_random_roll",
+    "scales_crafting_xp_doc03_doc04": "sys_math:starting_skill_permanent_xp_multiplier",
+    "modifies_vehicle_noise_doc06": "sys_math:muffler_degradation_acoustic_amplification"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "blueprint_id": "tpl_mob:animal_livestock_bovine_01",
+  "source_pz_reference": "zombie.characters.animals (Doc 01 - Section 3: Animal Systems - Bovines & Ovines)",
+  "dnd_ontology_hooks": {
+    "creature_type": "BEAST_DOMESTIC",
+    "behavior_alignment": "UNALIGNED_PASSIVE",
+    "husbandry_tier": "SELECTIVE_BREEDING"
+  },
+  "pz_math_engine": {
+    "catalog_species": [
+      "Bull",
+      "Cow",
+      "Calf",
+      "Sheep",
+      "Lamb",
+      "Sow",
+      "Piglet"
+    ],
+    "gestation_period_game_days": 28.0,
+    "milk_yield_liters_per_day": [
+      4.0,
+      12.0
+    ],
+    "wool_yield_kg_per_shear": [
+      2.5,
+      5.0
+    ],
+    "genetic_traits": [
+      "SIZE",
+      "MILK_YIELD",
+      "GROWTH_RATE",
+      "TAMENESS"
+    ]
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Gia súc chăn nuôi thuần dưỡng (bò sữa, bò mộng, cừu, heo) sở hữu bộ gene di truyền qua các thế hệ phối giống có chọn lọc.",
+    "tactical_behavior_hint": "Cần được bảo vệ trong chuồng trại kiên cố; phát ra tiếng kêu khi đói hoặc bị zombie đe dọa, có nguy cơ thu hút bầy zombie nếu đồn trại bị hở tường rào.",
+    "crafting_maintenance_hint": "Cung cấp nguồn sữa tươi ổn định để làm bơ (Butter) tại entity_butter_churn và lông cừu để kéo sợi tại entity_spinning_wheel."
+  },
+  "cross_module_foreign_keys": {
+    "requires_workstation_hook": "tpl_bas:husbandry_processing_stations_01",
+    "uses_genetics_engine": "AnimalGenomeDefinitions"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "blueprint_id": "tpl_aff:thermoregulation_37c_and_cold_affliction_01",
+  "source_pz_reference": "Thermoregulator, ThermoDebug.lua & PlayerClimateDebug.lua (Doc 09 - Section 4)",
+  "dnd_ontology_hooks": {
+    "affliction_category": "EXTREME_TEMPERATURE_EXPOSURE_AND_RESPIRATORY_ILLNESS",
+    "target_anatomy_enum": [
+      "HEAD",
+      "NECK",
+      "TORSO_UPPER",
+      "TORSO_LOWER",
+      "GROIN",
+      "UPPER_ARM_L",
+      "UPPER_ARM_R",
+      "FOREARM_L",
+      "FOREARM_R",
+      "HAND_L",
+      "HAND_R",
+      "UPPER_LEG_L",
+      "UPPER_LEG_R",
+      "LOWER_LEG_L",
+      "LOWER_LEG_R",
+      "FOOT_L",
+      "FOOT_R"
+    ]
+  },
+  "pz_math_engine": {
+    "equilibrium_core_temp_c": 37.0,
+    "equilibrium_core_temp_f": 98.6,
+    "core_temp_bands": [
+      {
+        "band_id": "SEVERE_HYPOTHERMIA",
+        "temp_c_max": 30.0,
+        "effect": "CONTINUOUS_HP_DRAIN_TO_DEATH"
+      },
+      {
+        "band_id": "MILD_HYPOTHERMIA_FROSTBITE",
+        "temp_c_min": 30.0,
+        "temp_c_max": 35.0,
+        "move_speed_penalty_pct": 50.0,
+        "weapon_swing_penalty_pct": 50.0,
+        "action_speed_penalty_pct": 40.0
+      },
+      {
+        "band_id": "SHIVERING",
+        "temp_c_min": 35.0,
+        "temp_c_max": 36.5,
+        "energy_and_calorie_drain_multiplier_min": 3.0,
+        "energy_and_calorie_drain_multiplier_max": 5.0
+      },
+      {
+        "band_id": "SAFE_HOMEOSTASIS",
+        "temp_c_min": 36.5,
+        "temp_c_max": 37.5
+      },
+      {
+        "band_id": "SWEATING",
+        "temp_c_min": 37.5,
+        "temp_c_max": 39.0,
+        "thirst_rate_multiplier": 4.0,
+        "soaks_inner_clothing_layers": true
+      },
+      {
+        "band_id": "HYPERTHERMIA_HEATSTROKE",
+        "temp_c_min": 39.0,
+        "effect": "DIZZINESS_EXHAUSTION_AND_HP_LOSS"
+      }
+    ],
+    "clothing_thermal_attributes_3": {
+      "Insulation": "THERMAL_RETENTION_FACTOR",
+      "WindResistance": "WIND_CHILL_MITIGATION_FACTOR",
+      "WaterResistance": "RAIN_PENETRATION_BLOCK_PONCHO_100PCT"
+    },
+    "catching_a_cold_mechanics": {
+      "accumulator_variable": "CatchAColdDelta",
+      "infection_trigger_threshold_pct": 100.0,
+      "cough_and_sneeze_sound_radius_tiles_min": 15,
+      "cough_and_sneeze_sound_radius_tiles_max": 20,
+      "acoustic_suppressor_offhand_items": [
+        "Handkerchief",
+        "Tissue"
+      ],
+      "curative_treatments": [
+        "Cold_Medicine",
+        "Hot_Onion_Garlic_Soup",
+        "Warm_Bed_Rest"
+      ]
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Mô hình cân bằng nhiệt động học trên 17 bộ phận cơ thể xoay quanh điểm chuẩn 37.0°C, kết nối trực tiếp với 3 thuộc tính vật lý của từng lớp y phục: Độ cách nhiệt (Insulation), Độ cản gió (Wind Resistance) và Độ kháng nước (Water Resistance - đạt 100% với áo tơi/áo mưa).",
+    "tactical_behavior_hint": "Trừng phạt nặng nề việc mặc giáp nặng kín mít giữa mùa hè: khi thân nhiệt vượt 37.5°C, nhân vật khát nước gấp 4 lần và mồ hôi làm ướt sũng lớp áo lót bên trong; ngay khi dừng chiến đấu, lớp áo ướt gặp gió sẽ gây hạ nhiệt ngược làm mắc chứng Cảm lạnh. Khi thân nhiệt tụt xuống 35.0-36.5°C, cơn rét run đốt cháy Calo gấp 3-5 lần; xuống dưới 35.0°C làm tê cóng giảm 50% tốc độ chạy và 50% tốc độ vung vũ khí. Đặc biệt, khi bị Cảm lạnh (CatchAColdDelta = 100%), nhân vật sẽ ho và hắt hơi không kiểm soát với bán kính âm thanh 15-20 ô gạch (ngang tiếng đập vỡ cửa kính), buộc phải cầm Khăn tay hoặc Giấy mềm ở tay phụ để bịt miệng tiêu âm.",
+    "crafting_maintenance_hint": "Đòi hỏi người chơi phải thay đổi cấu hình trang phục theo mùa (1 lớp thoáng khí mùa hè vs phối nhiều lớp Layering mùa đông) và hơ khô quần áo ướt bên lò sưởi."
+  },
+  "cross_module_foreign_keys": {
+    "interacts_with_sound_wave_doc01": "sys_math:ai_sensory_perception_cone_and_sound_wave",
+    "interacts_with_caloric_burn_doc02_doc14": "sys_math:daily_caloric_burn_and_macronutrient_partition",
+    "accelerated_by_trait_doc04": "tpl_trait:prone_to_illness"
+  }
+}

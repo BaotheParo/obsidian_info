@@ -1,0 +1,123 @@
+{
+  "blueprint_id": "tpl_zone:knox_11_regions_distribution_matrix_01",
+  "source_pz_reference": "ProceduralDistributions.lua & media/maps/ (Doc 05 - Section 1 & 2)",
+  "dnd_ontology_hooks": {
+    "system_category": "WORLD_EXPLORATION_AND_REGIONAL_DANGER_MATRIX",
+    "danger_tier_classification": {
+      "LOW": "Riverside / Irvington (Tier 1 Safe Zone)",
+      "MEDIUM": "Rosewood / Fallas Lake (Tier 2 Early Bastion)",
+      "HIGH": "Muldraugh / Brandenburg / Valley Station / March Ridge (Tier 3 Industrial)",
+      "EXTREME": "West Point / Louisville Checkpoint (Tier 4 Endgame Extraction)"
+    }
+  },
+  "pz_math_engine": {
+    "total_regions": 11,
+    "regions_registry": [
+      {
+        "zone_id": "zone:rosewood",
+        "base_density": 0.35,
+        "tier": "MEDIUM",
+        "loot_priority": [
+          "FireStation",
+          "PoliceArmory",
+          "Bookstore",
+          "PrisonArmory"
+        ]
+      },
+      {
+        "zone_id": "zone:riverside",
+        "base_density": 0.2,
+        "tier": "LOW",
+        "loot_priority": [
+          "HardwareStore",
+          "Pharmacy",
+          "SchoolLibrary",
+          "GatedCommunity"
+        ]
+      },
+      {
+        "zone_id": "zone:muldraugh",
+        "base_density": 0.85,
+        "tier": "HIGH",
+        "loot_priority": [
+          "LargeWarehousesNorth",
+          "CortmanMedical",
+          "DixieHighwayShops"
+        ]
+      },
+      {
+        "zone_id": "zone:westpoint",
+        "base_density": 1.6,
+        "tier": "EXTREME",
+        "loot_priority": [
+          "TwiggysGunShop",
+          "HardwareStore",
+          "PoliceDepartment"
+        ]
+      },
+      {
+        "zone_id": "zone:brandenburg",
+        "base_density": 1.2,
+        "tier": "HIGH",
+        "loot_priority": [
+          "ShipyardMechanical",
+          "MetalBandsawShop",
+          "ContainerTerminal"
+        ]
+      },
+      {
+        "zone_id": "zone:irvington_echocreek",
+        "base_density": 0.4,
+        "tier": "LOW",
+        "loot_priority": [
+          "RanchingFacilities",
+          "ClayCreekBed",
+          "Flint deposits"
+        ]
+      },
+      {
+        "zone_id": "zone:louisville",
+        "base_density": 5.0,
+        "tier": "EXTREME",
+        "loot_priority": [
+          "MilitaryCheckpoint",
+          "StPeregrinHospital",
+          "ArtifactMuseumKatana"
+        ]
+      },
+      {
+        "zone_id": "zone:fallas_lake",
+        "base_density": 0.45,
+        "tier": "MEDIUM",
+        "loot_priority": [
+          "RuralGunStore",
+          "GeneralStore",
+          "GasStation"
+        ]
+      },
+      {
+        "zone_id": "zone:valley_station",
+        "base_density": 1.4,
+        "tier": "HIGH",
+        "loot_priority": [
+          "CrossroadMall",
+          "IntersectionGunStore"
+        ]
+      },
+      {
+        "zone_id": "zone:march_ridge",
+        "base_density": 1.1,
+        "tier": "HIGH",
+        "loot_priority": [
+          "MilitaryDormitories",
+          "ElementarySchool",
+          "PostOffice"
+        ]
+      }
+    ]
+  },
+  "semantic_descriptors": {
+    "vietnamese_translation": "Ma trận phân bổ 11 vùng địa lý Knox County, mật độ xác sống và các điểm nóng tài nguyên tối thượng",
+    "dnd_roleplay_anchor": "Bản đồ phân vùng lãnh thổ từ vùng ven sông an toàn tới đại đô thị tử địa"
+  }
+}

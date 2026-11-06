@@ -1,0 +1,160 @@
+{
+  "blueprint_id": "tpl_evt:climate_12months_and_severe_weather_01",
+  "source_pz_reference": "ClimateManager, WeatherPeriod.java & seasonProps.lua (Doc 09 - Section 1, 2 & 3)",
+  "dnd_ontology_hooks": {
+    "system_category": "ENVIRONMENTAL_HAZARDS_AND_SEASONAL_CYCLE",
+    "planar_latitude_reference": "38_DEGREES_NORTH_TEMPERATE_CONTINENTAL"
+  },
+  "pz_math_engine": {
+    "campaign_start_date": "1993-07-09",
+    "monthly_climate_matrix_12": [
+      {
+        "month": 1,
+        "season": "WINTER",
+        "temp_min_c": -6.0,
+        "night_extreme_c": -15.0,
+        "temp_max_c": 14.0,
+        "dawn": "07:45",
+        "dusk": "17:15",
+        "unprotected_hypothermia_death_hours": 1.0
+      },
+      {
+        "month": 2,
+        "season": "WINTER",
+        "temp_min_c": -3.0,
+        "night_extreme_c": -12.0,
+        "temp_max_c": 17.0,
+        "dawn": "07:30",
+        "dusk": "17:30"
+      },
+      {
+        "month": 3,
+        "season": "SPRING",
+        "temp_min_c": 1.0,
+        "temp_max_c": 24.0,
+        "dawn": "07:00",
+        "dusk": "18:00",
+        "thaw_mud_vehicle_drag": true
+      },
+      {
+        "month": 4,
+        "season": "SPRING",
+        "temp_min_c": 8.0,
+        "temp_max_c": 23.0,
+        "dawn": "06:30",
+        "dusk": "18:30"
+      },
+      {
+        "month": 5,
+        "season": "SPRING",
+        "temp_min_c": 16.0,
+        "temp_max_c": 28.0,
+        "dawn": "06:00",
+        "dusk": "19:30"
+      },
+      {
+        "month": 6,
+        "season": "SUMMER",
+        "temp_min_c": 16.0,
+        "temp_max_c": 33.0,
+        "dawn": "05:30",
+        "dusk": "20:30"
+      },
+      {
+        "month": 7,
+        "season": "SUMMER",
+        "temp_min_c": 26.0,
+        "noon_extreme_c": 38.0,
+        "temp_max_c": 34.0,
+        "dawn": "05:15",
+        "dusk": "21:00"
+      },
+      {
+        "month": 8,
+        "season": "SUMMER",
+        "temp_min_c": 22.0,
+        "temp_max_c": 29.0,
+        "dawn": "05:45",
+        "dusk": "20:30"
+      },
+      {
+        "month": 9,
+        "season": "AUTUMN",
+        "temp_min_c": 13.0,
+        "temp_max_c": 28.0,
+        "dawn": "06:15",
+        "dusk": "19:30"
+      },
+      {
+        "month": 10,
+        "season": "AUTUMN",
+        "temp_min_c": 6.0,
+        "temp_max_c": 22.0,
+        "dawn": "06:45",
+        "dusk": "18:30",
+        "fog_visibility_reduction_pct": 70.0
+      },
+      {
+        "month": 11,
+        "season": "AUTUMN",
+        "temp_min_c": 4.0,
+        "night_extreme_c": -2.0,
+        "temp_max_c": 20.0,
+        "dawn": "07:15",
+        "dusk": "17:45",
+        "first_frost_kills_non_cold_hardy_crops": true
+      },
+      {
+        "month": 12,
+        "season": "WINTER",
+        "temp_min_c": -1.0,
+        "night_extreme_c": -10.0,
+        "temp_max_c": 14.0,
+        "dawn": "07:45",
+        "dusk": "17:00",
+        "night_duration_hours": 14.0
+      }
+    ],
+    "severe_weather_archetypes_3": {
+      "TROPICAL_STORM": {
+        "max_visibility_tiles_min": 3,
+        "max_visibility_tiles_max": 5,
+        "ambient_rain_masks_footstep_audio": true,
+        "thunder_meta_sound_radius_tiles_min": 100,
+        "thunder_meta_sound_radius_tiles_max": 200
+      },
+      "ARCTIC_BLIZZARD": {
+        "active_months": [
+          12,
+          1,
+          2
+        ],
+        "ambient_temp_c_min": -25.0,
+        "ambient_temp_c_max": -15.0,
+        "max_wind_chill_factor": true,
+        "player_run_speed_penalty_pct": 50.0,
+        "vehicle_ice_skid_loss_of_control": true
+      },
+      "HEAVY_PEA_SOUP_FOG": {
+        "peak_months": [
+          9,
+          10,
+          11
+        ],
+        "optical_visibility_reduction_pct": 70.0,
+        "entity_reveal_distance_steps_min": 2,
+        "entity_reveal_distance_steps_max": 3
+      }
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Mô hình tuần hoàn khí quyển 12 tháng ở vĩ độ 38° Bắc với giờ bình minh/hoàng hôn dịch chuyển thực tế (đêm tháng 12 dài 14 tiếng, trưa tháng 7 nóng 38°C, đêm tháng 1 rét -15°C đến -25°C) cùng 3 hiện tượng khí tượng cực đoan: Dông bão nhiệt đới, Bão tuyết trắng xóa và Sương mù đặc quánh.",
+    "tactical_behavior_hint": "Thời tiết trực tiếp thay đổi luật giao tranh: Sương mù mùa thu cắt giảm 70% tầm nhìn khiến kẻ địch chỉ lộ diện khi cách 2-3 bước chân; Dông bão thu hẹp tầm nhìn còn 3-5 ô, tiếng mưa át tiếng bước chân nhưng mỗi tiếng sét đánh lại tạo sóng âm 100-200 ô khuấy động bầy đàn; Bão tuyết mùa đông làm giảm 50% tốc độ chạy bộ, làm đóng băng mặt hồ và giết chết người chơi không mặc đồ giữ ấm chỉ trong 1 giờ.",
+    "crafting_maintenance_hint": "Đợt sương muối đầu tiên vào Tháng 11 (-2°C ban đêm) sẽ xóa sổ toàn bộ cây trồng có thuộc tính coldHardy = false; người chơi buộc phải tìm Lò sưởi gang đốt củi (Antique Stove) để sưởi ấm 24/24 mà không tốn nhiên liệu máy phát."
+  },
+  "cross_module_foreign_keys": {
+    "forecasted_by_aebs_oracle_doc07": "tpl_evt:world_telemetry_oracle_aebs_01",
+    "affects_crop_survival_doc08": "tpl_bas:agricultural_43crops_and_pest_matrix_01",
+    "affects_foraging_radius_doc08": "sys_math:foraging_optical_search_radius_equation"
+  }
+}

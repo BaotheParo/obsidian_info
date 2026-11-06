@@ -1,0 +1,74 @@
+{
+  "blueprint_id": "tpl_mob:zombie_lore_pathogen_and_cognition_matrix_01",
+  "source_pz_reference": "SandboxVars.ZombieLore (Doc 10 - Section 3.2 & Section 4)",
+  "dnd_ontology_hooks": {
+    "creature_type": "UNDEAD_CUSTOMIZABLE_VARIANT",
+    "locomotion_modes": [
+      "SHAMBLER",
+      "FAST_SHAMBLER",
+      "SPRINTER_APEX_PREDATOR"
+    ],
+    "intelligence_tiers": [
+      "MINDLESS_BASIC",
+      "PATHFIND_NAVIGATE",
+      "DOOR_OPENING_COGNITION"
+    ]
+  },
+  "pz_math_engine": {
+    "speed_tiers_4": {
+      "1_SPRINTERS": "ATHLETE_SPRINT_VELOCITY_OUTRUNS_ENCUMBERED_PLAYERS",
+      "2_FAST_SHAMBLERS_DEFAULT": "STANDARD_BRISK_WALK",
+      "3_SHAMBLERS": "SLOW_LIMPING_GAIT",
+      "4_RANDOM": "MIXED_VELOCITY_HORDE"
+    },
+    "transmission_modes_4": {
+      "1_BLOOD_AND_SALIVA_DEFAULT": {
+        "SCRATCH": 7.0,
+        "LACERATION": 25.0,
+        "INFECTED_BITE": 100.0
+      },
+      "2_SALIVA_ONLY_REALISTIC": {
+        "SCRATCH": 0.0,
+        "LACERATION": 0.0,
+        "INFECTED_BITE": 100.0
+      },
+      "3_NONE": {
+        "SCRATCH": 0.0,
+        "LACERATION": 0.0,
+        "INFECTED_BITE": 0.0
+      },
+      "4_EVERYONES_INFECTED": {
+        "ANY_DEATH_CAUSES_REANIMATION": true
+      }
+    },
+    "infection_mortality_8_tiers": {
+      "1": "INSTANT_0_SEC",
+      "2": "0_TO_30_SECONDS",
+      "3": "1_TO_2_MINUTES",
+      "4": "1_TO_2_HOURS",
+      "5": "12_TO_24_HOURS",
+      "6_DEFAULT": "2_TO_3_DAYS",
+      "7": "1_TO_2_WEEKS",
+      "8": "NEVER_NON_LETHAL_FEVER"
+    },
+    "cognition_and_behavior_flags": {
+      "cognition_1_navigate_and_open_doors": 1,
+      "cognition_2_navigate_only": 2,
+      "cognition_3_basic": 3,
+      "active_time_1_both": 1,
+      "active_time_2_night_only_i_am_legend": 2,
+      "active_time_3_day_only": 3,
+      "crawl_under_vehicle_default_sometimes": 3,
+      "trigger_house_alarm_on_window_break": true
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Bộ gen hành vi và độc lực của thực thể xác sống, cho phép biến đổi từ những xác chết chậm chạp vô tri thành những kẻ săn mồi chạy nước rút (Sprinters) biết vặn tay nắm mở cửa và bò luồn qua gầm xe.",
+    "tactical_behavior_hint": "Ở chế độ Sprinters (Speed = 1), chỉ 1 cá thể cũng đuổi kịp người chơi đang mang vác nặng và 3 cá thể đồng nghĩa với cái chết chắc chắn; khi kết hợp với ActiveTime = 2 (Night Only),Cognition = 1 (Biết mở cửa) và NightDarkness = 1 (Đen kịt), ban đêm trở thành cơn ác mộng tuyệt đối nơi kẻ địch tự mở cửa không khóa xông vào nhà. Chuyển Transmission sang mức 2 (Saliva Only) giúp loại bỏ xác suất chết oan 7% của vết cào và 25% của vết rách, chỉ giữ lại án tử 100% cho vết cắn.",
+    "crafting_maintenance_hint": "Khi bật TriggerHouseAlarm = true, chính xác sống đập vỡ cửa sổ nhà dân cũng sẽ kích hoạt chuông báo động chống trộm, tạo ra chuỗi phản ứng dây chuyền gom toàn bộ bầy đàn trong vùng."
+  },
+  "cross_module_foreign_keys": {
+    "overrides_pathogen_matrix_doc01": "tpl_aff:lethal_necrotic_pathogen_01",
+    "interacts_with_vehicle_undercarriage_doc06": "tpl_veh:heavy_caravan_transport_52models_01"
+  }
+}

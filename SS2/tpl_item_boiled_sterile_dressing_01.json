@@ -1,0 +1,23 @@
+{
+  "blueprint_id": "tpl_item:boiled_sterile_dressing_01",
+  "source_pz_reference": "Base.BandageDirty / BoiledWater (Doc 02 - Section 1: Drainable)",
+  "dnd_ontology_hooks": {
+    "system_category": "STERILE_DRESSING",
+    "cleanliness_level": "ASEPTIC_BOILED"
+  },
+  "pz_math_engine": {
+    "weight_kg": 0.1,
+    "hemostatic_speed_multiplier": 1.5,
+    "sterility_duration_hours": 24.0,
+    "reusable_cycles": 5
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Băng vải lanh hoặc gạc bông được luộc trong nồi nước sôi tiệt trùng và phơi khô trong phòng kín.",
+    "tactical_behavior_hint": "Bịt kín vết thương rách sâu (Laceration), ngăn chặn 100% nguy cơ xâm nhập của vi khuẩn gây mưng mủ.",
+    "crafting_maintenance_hint": "Khi băng bị bẩn (BandageDirty) có thể giặt lại và đun sôi nước để tái tiệt trùng."
+  },
+  "cross_module_foreign_keys": {
+    "resolves_pending_tag": "item_tag:boiled_sterile_water",
+    "applied_to_wound": "wnd_laceration"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "blueprint_id": "tpl_rcp:flax_textile_and_leather_01",
+  "source_pz_reference": "Textiles & Leatherworking 5-Step Pipeline (Doc 03 - Section 2 Age 3 & Section 4.5)",
+  "dnd_ontology_hooks": {
+    "crafting_discipline": "WEAVING_AND_TANNERY",
+    "tech_age": "AGE_2_TEMPERED_STEEL",
+    "armor_class_output": "LEATHER_HIDE"
+  },
+  "pz_math_engine": {
+    "flax_to_linen_5_stages": [
+      {
+        "stage": 1,
+        "action": "Cultivate_And_Ret_Flax",
+        "input": "crop:flax_plant",
+        "output": "mat_tag:retted_flax_stalks"
+      },
+      {
+        "stage": 2,
+        "action": "ScutchFibre",
+        "workstation": "scutching_board",
+        "input": "mat_tag:retted_flax_stalks",
+        "output": "mat_tag:crushed_flax_fibre"
+      },
+      {
+        "stage": 3,
+        "action": "RippleFlax_And_HeckleFlax",
+        "workstation": "heckle_comb",
+        "input": "mat_tag:crushed_flax_fibre",
+        "output": "mat_tag:combed_pure_flax_tow"
+      },
+      {
+        "stage": 4,
+        "action": "Spin_Linen_Thread",
+        "workstation": "spinning_wheel",
+        "input": "mat_tag:combed_pure_flax_tow",
+        "output": "mat_tag:strong_linen_thread"
+      },
+      {
+        "stage": 5,
+        "action": "Weave_Linen_Cloth",
+        "workstation": "simple_loom",
+        "input": "mat_tag:strong_linen_thread",
+        "output": "tpl_item:woven_linen_fabric"
+      }
+    ],
+    "leather_tanning_pipeline": {
+      "workstation": "leather_prep_table",
+      "stages": [
+        "FLESH_AND_DEFAT_HIDE",
+        "LIME_ASH_TANNING_SOAK",
+        "TAILOR_PROTECTIVE_GARMENT"
+      ],
+      "output_bite_defense_pct_min": 80.0,
+      "output_bite_defense_pct_max": 100.0
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Chuỗi dệt may 5 công đoạn từ cây lanh (ngâm nước -> đập dập vỏ trên bàn đập Scutching Board -> chải tách xơ bằng lược sắt Heckle Comb -> kéo chỉ trên bàn quay Spinning Wheel -> dệt vải trên khung cửi Simple Loom) kết hợp quy trình cạo mỡ, ngâm nước vôi/tro thuộc da thú trên bàn Leather Prep.",
+    "tactical_behavior_hint": "Giáp da thuộc (áo khoác, găng tay, giáp ống chân) may từ da bò/hươu đã thuộc kết hợp chỉ lanh bền chắc cung cấp khả năng kháng vết cắn (Bite Defense) từ 80% đến 100% mà vẫn giữ được độ linh hoạt và giữ ấm mùa đông.",
+    "crafting_maintenance_hint": "Hoàn toàn tự chủ nguyên liệu từ nông nghiệp (trồng cây lanh, nuôi cừu lấy lông) và săn bắn/chăn nuôi (lột da trên móc Butcher Hook)."
+  },
+  "cross_module_foreign_keys": {
+    "requires_workstations": [
+      "scutching_board",
+      "heckle_comb",
+      "spinning_wheel",
+      "simple_loom",
+      "leather_prep_table"
+    ],
+    "supplies_leather_to_doc02": [
+      "tpl_item:load_bearing_backpacks_matrix_01"
+    ]
+  }
+}

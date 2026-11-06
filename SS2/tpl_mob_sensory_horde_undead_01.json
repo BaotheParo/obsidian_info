@@ -1,0 +1,39 @@
+{
+  "blueprint_id": "tpl_mob:sensory_horde_undead_01",
+  "source_pz_reference": "IsoZombie / PZPathFind64 / PZPopMan64 (Doc 01 - Section 2 & Section 4: Horde Dynamics)",
+  "dnd_ontology_hooks": {
+    "creature_type": "UNDEAD",
+    "behavior_alignment": "UNALIGNED_PREDATORY",
+    "sensory_capabilities": [
+      "VISION_CONE_120",
+      "GRID_WAVE_HEARING",
+      "OLFACTORY_BLOOD_SENSE"
+    ]
+  },
+  "pz_math_engine": {
+    "vision_fov_degrees": 120.0,
+    "lighting_los_raycast_hz": 60,
+    "hearing_sound_threshold_blocks": {
+      "footstep_walk": 4,
+      "footstep_sprint": 12,
+      "window_smash": 18,
+      "gunshot_shotgun": 150
+    },
+    "blood_scent_detection_radius": 25.0,
+    "attack_transmission_probabilities": {
+      "scratch": 0.07,
+      "laceration": 0.25,
+      "bite": 1.0
+    }
+  },
+  "semantic_descriptors": {
+    "physical_form_hint": "Thực thể xác chết biết đi mang dấu hiệu hoại tử, cơ hàm biến dạng và móng tay sắc nhọn dính máu đông.",
+    "tactical_behavior_hint": "Vận hành theo máy trạng thái kích thích giác quan: chuyển từ Lang Thang (WANDER) sang Điều Tra (INVESTIGATE) khi bắt được sóng âm hoặc mùi máu; chuyển sang Truy Đuổi (PURSUIT) khi mục tiêu nằm trong nón nhìn 120 độ có đường ngắm quang học rõ ràng.",
+    "crafting_maintenance_hint": "Khi tiêu diệt có thể phân giải xác chết để lấy quần áo cũ, mảnh vải rách hoặc mẫu máu nhiễm bệnh."
+  },
+  "cross_module_foreign_keys": {
+    "inflicts_affliction_id": "tpl_aff:lethal_necrotic_pathogen_01",
+    "native_pathfinder_module": "PZPathFind64.dll",
+    "virtual_population_manager": "PZPopMan64.dll"
+  }
+}
