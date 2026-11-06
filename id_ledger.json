@@ -1,0 +1,2086 @@
+{
+  "ledger_metadata": {
+    "title": "Cross-Document Foreign Key Audit Ledger (15 Docs Total - 100% Fully Reconciled)",
+    "last_updated_doc": "Doc 07 (Media Broadcasts, Knox Lore & 64 Skill VHS Bible - Complete Reconciliation)",
+    "total_defined_ids": 251,
+    "total_pending_ids": 82,
+    "resolved_percentage": "100.0%",
+    "resolved_ids_count": 82,
+    "current_document_processed": "Full 15/15 Reconciled",
+    "last_updated": "2026-11-05T16:27:52.574856",
+    "status": "100% COMPLETE - ZERO ORPHAN KEYS - ALL 15 DOCS VERIFIED"
+  },
+  "defined_ids": {
+    "sys_math:ai_sensory_perception_cone_and_sound_wave": {
+      "id": "sys_math:ai_sensory_perception_cone_and_sound_wave",
+      "description": "Phương trình nón thị giác $120^\\circ$, Raycast $60\text{ Hz}$, sóng âm $3\text{--}200\text{ blocks}$ và khứu giác máu",
+      "defined_in_doc": "Doc 01",
+      "status": "DEFINED"
+    },
+    "sys_math:anatomy_17parts_bleed_and_infection_matrix": {
+      "id": "sys_math:anatomy_17parts_bleed_and_infection_matrix",
+      "description": "Phương trình tử huyệt cổ `bleedingTimeModifier = 1.5`, chết sau $10\text{--}20\text{s}$, và ma trận lây nhiễm $7\\% / 25\\% / 100\\%$",
+      "defined_in_doc": "Doc 01",
+      "status": "DEFINED"
+    },
+    "sys_math:weapon_durability_bernoulli_decay": {
+      "id": "sys_math:weapon_durability_bernoulli_decay",
+      "description": "Phương trình suy giảm độ bền $P = 1 / \text{ConditionLowerChanceOneIn}$",
+      "defined_in_doc": "Doc 01",
+      "status": "DEFINED"
+    },
+    "sys_math:internal_economy_balance_4elements": {
+      "id": "sys_math:internal_economy_balance_4elements",
+      "description": "Phương trình bảo toàn 4 thành phần Source, Drain, Pool, Converter",
+      "defined_in_doc": "Doc 01",
+      "status": "DEFINED"
+    },
+    "sys_math:thermoregulation_multilayer_core_equilibrium": {
+      "id": "sys_math:thermoregulation_multilayer_core_equilibrium",
+      "description": "Phương trình thân nhiệt đa tầng lõi $37^\\circ\text{C}$ và sốc nhiệt",
+      "defined_in_doc": "Doc 01",
+      "status": "DEFINED"
+    },
+    "sys_math:macronutrient_nutrition_weight_dynamics": {
+      "id": "sys_math:macronutrient_nutrition_weight_dynamics",
+      "description": "Phương trình dinh dưỡng 4 chất và thể trọng $80\text{ kg}$",
+      "defined_in_doc": "Doc 01",
+      "status": "DEFINED"
+    },
+    "sys_math:fixing_progressive_repair_degradation": {
+      "id": "sys_math:fixing_progressive_repair_degradation",
+      "description": "Phương trình suy giảm xác suất sửa đồ trong `fixing.txt`",
+      "defined_in_doc": "Doc 01",
+      "status": "DEFINED"
+    },
+    "sys_math:animal_genetics_mendelian_inheritance": {
+      "id": "sys_math:animal_genetics_mendelian_inheritance",
+      "description": "Phương trình kế thừa alen di truyền 5 tính trạng động vật",
+      "defined_in_doc": "Doc 01",
+      "status": "DEFINED"
+    },
+    "sys_math:native_polyglot_network_client_prediction": {
+      "id": "sys_math:native_polyglot_network_client_prediction",
+      "description": "Mô hình tính toán UDP RakNet & bù trễ 60 Hz",
+      "defined_in_doc": "Doc 01",
+      "status": "DEFINED"
+    },
+    "tpl_wpn:heavy_breaching_axe_01": {
+      "id": "tpl_wpn:heavy_breaching_axe_01",
+      "description": "Khuôn mẫu chuẩn hóa từ `Base.Fireaxe`",
+      "defined_in_doc": "Doc 01",
+      "status": "DEFINED"
+    },
+    "tpl_mob:sensory_horde_undead_01": {
+      "id": "tpl_mob:sensory_horde_undead_01",
+      "description": "Khuôn mẫu AI bầy đàn xác sống 3 giác quan",
+      "defined_in_doc": "Doc 01",
+      "status": "DEFINED"
+    },
+    "tpl_aff:lethal_necrotic_pathogen_01": {
+      "id": "tpl_aff:lethal_necrotic_pathogen_01",
+      "description": "Khuôn mẫu 3 tầng bệnh lý: `isInfected`, `isFakeInfected`, `infectedWound`",
+      "defined_in_doc": "Doc 01",
+      "status": "DEFINED"
+    },
+    "tpl_bas:husbandry_processing_stations_01": {
+      "id": "tpl_bas:husbandry_processing_stations_01",
+      "description": "Tổ hợp 6 trạm làm việc chăn nuôi/sơ chế Build 42",
+      "defined_in_doc": "Doc 01",
+      "status": "DEFINED"
+    },
+    "tpl_evt:aerial_acoustic_lure_01": {
+      "id": "tpl_evt:aerial_acoustic_lure_01",
+      "description": "Khuôn mẫu siêu sự kiện âm thanh di động trên không & tiếng động xa xăm",
+      "defined_in_doc": "Doc 01",
+      "status": "DEFINED"
+    },
+    "tpl_mob:animal_wildlife_cervidae_01": {
+      "id": "tpl_mob:animal_wildlife_cervidae_01",
+      "description": "Khuôn mẫu thú hoang hoang dã, di cư đàn và dấu vết `AnimalTracks`",
+      "defined_in_doc": "Doc 01",
+      "status": "DEFINED"
+    },
+    "tpl_mob:animal_livestock_bovine_01": {
+      "id": "tpl_mob:animal_livestock_bovine_01",
+      "description": "Khuôn mẫu gia súc thuần dưỡng, di truyền học và sản lượng",
+      "defined_in_doc": "Doc 01",
+      "status": "DEFINED"
+    },
+    "tpl_sys:native_subsystem_polyglot_01": {
+      "id": "tpl_sys:native_subsystem_polyglot_01",
+      "description": "Đặc tả 6 module C++ Native: PZPathFind64, Lighting64, PZPopMan64, PZBullet64, RakNet64, FMOD",
+      "defined_in_doc": "Doc 01",
+      "status": "DEFINED"
+    },
+    "tpl_item:medical_disinfection_dressing_01": {
+      "id": "tpl_item:medical_disinfection_dressing_01",
+      "description": "Khuôn mẫu vật phẩm tiệt trùng cứu chữa `infectedWound`",
+      "defined_in_doc": "Doc 01",
+      "status": "DEFINED"
+    },
+    "tpl_item:nutrition_macronutrient_ration_01": {
+      "id": "tpl_item:nutrition_macronutrient_ration_01",
+      "description": "Khuôn mẫu khẩu phần dinh dưỡng đa vi lượng duy trì thể trọng",
+      "defined_in_doc": "Doc 01",
+      "status": "DEFINED"
+    },
+    "sys_math:melee_crit_multiplier_and_kinetic_distribution": {
+      "id": "sys_math:melee_crit_multiplier_and_kinetic_distribution",
+      "description": "Phương trình sát thương bạo kích và bảng hằng số 10 vũ khí đỉnh cao",
+      "defined_in_doc": "Doc 02",
+      "status": "DEFINED"
+    },
+    "sys_math:container_weight_reduction_dynamics": {
+      "id": "sys_math:container_weight_reduction_dynamics",
+      "description": "Phương trình giảm tải trọng 65%-85% của 308 loại balo",
+      "defined_in_doc": "Doc 02",
+      "status": "DEFINED"
+    },
+    "sys_math:armor_100percent_bite_scratch_matrix": {
+      "id": "sys_math:armor_100percent_bite_scratch_matrix",
+      "description": "Ma trận phòng hộ 100% kháng cắn của mũ bảo hiểm và áo giáp",
+      "defined_in_doc": "Doc 02",
+      "status": "DEFINED"
+    },
+    "sys_math:daily_caloric_expenditure_and_macro_absorption": {
+      "id": "sys_math:daily_caloric_expenditure_and_macro_absorption",
+      "description": "Phương trình tiêu thụ calo 1500-4000 kcal và chuyển hóa năng lượng",
+      "defined_in_doc": "Doc 02",
+      "status": "DEFINED"
+    },
+    "tpl_wpn:scavenged_jawbone_morningstar_01": {
+      "id": "tpl_wpn:scavenged_jawbone_morningstar_01",
+      "description": "Chùy xương hàm bò đực Build 42, bạo kích x5",
+      "defined_in_doc": "Doc 02",
+      "status": "DEFINED"
+    },
+    "tpl_wpn:scavenged_bucket_maul_metal_01": {
+      "id": "tpl_wpn:scavenged_bucket_maul_metal_01",
+      "description": "Chùy xô kim loại đúc 10kg, bạo kích 70%, phá cửa 45",
+      "defined_in_doc": "Doc 02",
+      "status": "DEFINED"
+    },
+    "tpl_arm:riot_anti_bite_helmet_01": {
+      "id": "tpl_arm:riot_anti_bite_helmet_01",
+      "description": "Mũ chống bạo động che kín đầu & cổ, 100% chống cắn cào",
+      "defined_in_doc": "Doc 02",
+      "status": "DEFINED"
+    },
+    "tpl_arm:police_bulletproof_vest_01": {
+      "id": "tpl_arm:police_bulletproof_vest_01",
+      "description": "Áo giáp Kevlar cảnh sát che ngực bụng, 100% chống cắn cào",
+      "defined_in_doc": "Doc 02",
+      "status": "DEFINED"
+    },
+    "tpl_cnt:large_crafted_framepack_01": {
+      "id": "tpl_cnt:large_crafted_framepack_01",
+      "description": "Balo khung gỗ da thú lớn nhất game, sức chứa 35, giảm tải 75%",
+      "defined_in_doc": "Doc 02",
+      "status": "DEFINED"
+    },
+    "tpl_item:disinfectant_alcohol_bottle_01": {
+      "id": "tpl_item:disinfectant_alcohol_bottle_01",
+      "description": "Chai cồn y tế sát trùng vết thương vi khuẩn",
+      "defined_in_doc": "Doc 02",
+      "status": "DEFINED"
+    },
+    "tpl_item:boiled_sterile_dressing_01": {
+      "id": "tpl_item:boiled_sterile_dressing_01",
+      "description": "Băng gạc đun sôi tiệt trùng vết thương rách sâu",
+      "defined_in_doc": "Doc 02",
+      "status": "DEFINED"
+    },
+    "tpl_item:antibiotic_tablets_01": {
+      "id": "tpl_item:antibiotic_tablets_01",
+      "description": "Vỉ thuốc kháng sinh điều trị nhiễm trùng máu",
+      "defined_in_doc": "Doc 02",
+      "status": "DEFINED"
+    },
+    "tpl_food:pan_fried_vegetables_forged_01": {
+      "id": "tpl_food:pan_fried_vegetables_forged_01",
+      "description": "Món xào B42 nóng hổi 516 kcal chống tụt cân",
+      "defined_in_doc": "Doc 02",
+      "status": "DEFINED"
+    },
+    "tpl_mob:salvage_bandit_scavenger_01": {
+      "id": "tpl_mob:salvage_bandit_scavenger_01",
+      "description": "Lâm tặc thượng du trang bị giáp chống cắn và chùy xương bò",
+      "defined_in_doc": "Doc 02",
+      "status": "DEFINED"
+    },
+    "sys_math:craft_recipe_tool_degradation_and_xp_award": {
+      "id": "sys_math:craft_recipe_tool_degradation_and_xp_award",
+      "description": "Phương trình thực thi `craftRecipe`, giữ công cụ `mode:keep`, xử lý cờ hao mòn `MayDegradeLight`/`MayDegradeHeavy` và thưởng `xpAward = Skill:XP`",
+      "defined_in_doc": "Doc 03",
+      "status": "DEFINED"
+    },
+    "sys_math:food_preservation_shelf_life_multiplier": {
+      "id": "sys_math:food_preservation_shelf_life_multiplier",
+      "description": "Phương trình kéo dài hạn sử dụng từ thịt tươi $3\\text{--}5\\text{ ngày}$ lên thịt sấy khô `Jerky` $6\\text{--}12\\text{ tháng}$ tại `entity_Drying_Rack`",
+      "defined_in_doc": "Doc 03",
+      "status": "DEFINED"
+    },
+    "tpl_bas:workstation_20_tech_matrix_01": {
+      "id": "tpl_bas:workstation_20_tech_matrix_01",
+      "description": "Danh mục chuẩn hóa toàn bộ 20 trạm làm việc thực thể ánh xạ vào `BASTION_FACILITY_TYPES` và `TECH_AGES_5`",
+      "defined_in_doc": "Doc 03",
+      "status": "DEFINED"
+    },
+    "tpl_rcp:knapping_primitive_flint_01": {
+      "id": "tpl_rcp:knapping_primitive_flint_01",
+      "description": "`MakeSharpFlintFlake`, `MakeStoneBlade`, `MakeStoneAwl` — $230\\text{ ticks}$, $+10\\text{--}20\\text{ XP}$",
+      "defined_in_doc": "Doc 03",
+      "status": "DEFINED"
+    },
+    "tpl_rcp:pottery_and_glass_kiln_01": {
+      "id": "tpl_rcp:pottery_and_glass_kiln_01",
+      "description": "`PressClayBrick` $50\\text{ ticks}$, `PressClayShingle` $50\\text{ ticks}$, `PressBarMold` $100\\text{ ticks}$, `MeltSand`/`MeltGlass` $20\\text{ ticks}$ ở $>1200^\\circ\\text{C}$, `MakeGlassJar` $100\\text{ ticks} / +75\\text{ XP}$, `MakeGlassBottle` $120\\text{ ticks} / +60\\text{ XP}$, mốc cắt nước ngày 30",
+      "defined_in_doc": "Doc 03",
+      "status": "DEFINED"
+    },
+    "tpl_rcp:blacksmith_metallurgy_01": {
+      "id": "tpl_rcp:blacksmith_metallurgy_01",
+      "description": "`Forge_Crude_Blade` $200\\text{ ticks} / +25\\text{ XP}$, `Forge_Long_Crude_Blade` $300\\text{ ticks} / +45\\text{ XP}$, `Forge_Scrap_Shortsword` $500\\text{ ticks} / +50\\text{ XP}$, `Forge_Gorget` & `Forge_Armored_Gloves` $300\\text{--}600\\text{ ticks}$ chống cắn $100\\%$",
+      "defined_in_doc": "Doc 03",
+      "status": "DEFINED"
+    },
+    "tpl_rcp:flax_textile_and_leather_01": {
+      "id": "tpl_rcp:flax_textile_and_leather_01",
+      "description": "Quy trình 5 bước chế biến sợi lanh `ScutchFibre` $\\rightarrow$ `RippleFlax`/`HeckleFlax` $\\rightarrow$ `Spinning Wheel` $\\rightarrow$ `Simple Loom` và thuộc da chống cắn $80\\text{--}100\\%$",
+      "defined_in_doc": "Doc 03",
+      "status": "DEFINED"
+    },
+    "tpl_rcp:alchemical_munitions_and_preservation_01": {
+      "id": "tpl_rcp:alchemical_munitions_and_preservation_01",
+      "description": "Quy trình tái chế thuốc nổ từ lưu huỳnh + than củi, đúc đầu đạn chì cho 4 cỡ đạn `9mm`, `.45`, `.308`, `12G` và bảo quản thực phẩm mùa đông",
+      "defined_in_doc": "Doc 03",
+      "status": "DEFINED"
+    },
+    "sys_math:starting_skill_permanent_xp_multiplier": {
+      "id": "sys_math:starting_skill_permanent_xp_multiplier",
+      "description": "Phương trình bậc thang XP vĩnh viễn (Cấp 0: 0.25x, Cấp 1: 0.75x, Cấp 2: 1.00x, Cấp >=3: 1.25x, Fast Learner +30%)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "sys_math:character_point_buy_zero_sum_constraint": {
+      "id": "sys_math:character_point_buy_zero_sum_constraint",
+      "description": "Phương trình cân bằng điểm khởi tạo giữa 25 Nghề nghiệp và 95 Traits",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "sys_math:dynamic_underweight_80kg_eradication": {
+      "id": "sys_math:dynamic_underweight_80kg_eradication",
+      "description": "Phương trình tự xóa bỏ vĩnh viễn trait Underweight khi nạp calo đạt mốc 80.0 kg",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "tpl_prof:occupational_25_archetypes_matrix_01": {
+      "id": "tpl_prof:occupational_25_archetypes_matrix_01",
+      "description": "Ma trận chuẩn hóa toàn bộ 25 Nghề nghiệp kèm chi phí điểm, kỹ năng cộng thêm và đặc quyền nội tại",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "tpl_trait:positive_combat_and_artisan_perks_01": {
+      "id": "tpl_trait:positive_combat_and_artisan_perks_01",
+      "description": "Chuẩn hóa các Trait tích cực chủ lực (Keen Hearing, Strong, Dextrous, Fast Learner, Inconspicuous, Ax-pert, Desensitized)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "tpl_trait:negative_flaws_and_dynamic_afflictions_01": {
+      "id": "tpl_trait:negative_flaws_and_dynamic_afflictions_01",
+      "description": "Chuẩn hóa các Trait tiêu cực (Smoker, High Thirst, Prone to Illness, Slow Reader, Weak Stomach, Short Sighted, Underweight, Deaf, Sunday Driver, Asthmatic)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:fireofficer": {
+      "id": "base:fireofficer",
+      "description": "Nghề Fire Officer (Cost: 0, Tier: S, Sprinting+1, Strength+1, Fitness+1, Axe+1)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:burglar": {
+      "id": "base:burglar",
+      "description": "Nghề Burglar (Cost: -6, Tier: S, Nimble+2, Sneak+2, Lightfoot+2, Innate: Burglar hotwire)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:lumberjack": {
+      "id": "base:lumberjack",
+      "description": "Nghề Lumberjack (Cost: 0, Tier: S, Axe+2, Strength+1, Maintenance+1, Innate: Ax-pert)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:veteran": {
+      "id": "base:veteran",
+      "description": "Nghề Veteran (Cost: -8, Tier: S, Aiming+2, Reloading+2, Innate: Desensitized)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:smither": {
+      "id": "base:smither",
+      "description": "Nghề Smither (Cost: -6, Tier: A, Blacksmith+4, Maintenance+1, SmallBlunt+1, Innate: Blacksmith Knowledge)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:policeofficer": {
+      "id": "base:policeofficer",
+      "description": "Nghề Police Officer (Cost: -4, Tier: A, Aiming+4, Reloading+1, Nimble+1)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:repairman": {
+      "id": "base:repairman",
+      "description": "Nghề Repairman (Cost: -2, Tier: A, Woodwork+1, Maintenance+2, SmallBlunt+1, Masonry+1, Innate: Inventive)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:constructionworker": {
+      "id": "base:constructionworker",
+      "description": "Nghề Construction Worker (Cost: -2, Tier: A, SmallBlunt+2, Blunt+1, Masonry+2, Woodwork+1, Maintenance+1)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:unemployed": {
+      "id": "base:unemployed",
+      "description": "Nghề Unemployed (Cost: +8, Tier: A, 8 điểm tự do tuyệt đối)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:securityguard": {
+      "id": "base:securityguard",
+      "description": "Nghề Security Guard (Cost: -2, Tier: B, Sprinting+2, Lightfoot+1, SmallBlunt+1, Innate: Night Owl)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:rancher": {
+      "id": "base:rancher",
+      "description": "Nghề Rancher (Cost: 0, Tier: B, Husbandry+4, Butchering+3, Fitness+1)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:carpenter": {
+      "id": "base:carpenter",
+      "description": "Nghề Carpenter (Cost: -2, Tier: B, Woodwork+4, Carving+1, SmallBlunt+1, Masonry+1, Maintenance+1)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:parkranger": {
+      "id": "base:parkranger",
+      "description": "Nghề Park Ranger (Cost: -4, Tier: B, Trapping+1, Doctor+1, PlantScavenging+1, FlintKnapping+1, Carving+1, Innate: Herbalist)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:mechanics": {
+      "id": "base:mechanics",
+      "description": "Nghề Mechanics (Cost: -4, Tier: B, Mechanics+4, MetalWelding+1, Innate: Vehicle Knowledge)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:tailor": {
+      "id": "base:tailor",
+      "description": "Nghề Tailor (Cost: +2, Tier: B, Tailoring+4)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:fitnessinstructor": {
+      "id": "base:fitnessinstructor",
+      "description": "Nghề Fitness Instructor (Cost: -6, Tier: B, Fitness+3, Sprinting+2, Strength+1, Innate: Nutritionist)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:metalworker": {
+      "id": "base:metalworker",
+      "description": "Nghề Metalworker (Cost: -4, Tier: C, MetalWelding+4)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:chef": {
+      "id": "base:chef",
+      "description": "Nghề Chef (Cost: -2, Tier: C, Cooking+4, Maintenance+1, SmallBlade+1, Butchering+2, Innate: Keen Cook)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:doctor": {
+      "id": "base:doctor",
+      "description": "Nghề Doctor (Cost: 0, Tier: C, Doctor+6, SmallBlade+1)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:farmer": {
+      "id": "base:farmer",
+      "description": "Nghề Farmer (Cost: 0, Tier: C, Farming+4, Husbandry+1, Strength+1)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:nurse": {
+      "id": "base:nurse",
+      "description": "Nghề Nurse (Cost: 0, Tier: C, Doctor+3, Lightfoot+1, Fitness+1, Innate: Night Owl)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:fisherman": {
+      "id": "base:fisherman",
+      "description": "Nghề Fisherman (Cost: -2, Tier: C, Fishing+3, PlantScavenging+1, Butchering+1)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:burgerflipper": {
+      "id": "base:burgerflipper",
+      "description": "Nghề Burger Flipper (Cost: +2, Tier: C, Cooking+2, Maintenance+1, SmallBlade+1, Innate: Keen Cook)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:electrician": {
+      "id": "base:electrician",
+      "description": "Nghề Electrician (Cost: -2, Tier: D, Electricity+5)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "base:engineer": {
+      "id": "base:engineer",
+      "description": "Nghề Engineer (Cost: -4, Tier: D, Electricity+1, Woodwork+1, Masonry+1)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "trait:keen_hearing": {
+      "id": "trait:keen_hearing",
+      "description": "Trait Keen Hearing (-6 điểm, nhân đôi bán kính nhận diện sau lưng)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "trait:strong": {
+      "id": "trait:strong",
+      "description": "Trait Strong (-10 điểm, +40% sát thương cận chiến, tăng tải trọng mang vác)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "trait:dextrous": {
+      "id": "trait:dextrous",
+      "description": "Trait Dextrous (-2 điểm, nhân đôi tốc độ chuyển đồ qua lại)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "trait:fast_learner": {
+      "id": "trait:fast_learner",
+      "description": "Trait Fast Learner (-6 điểm, +30% tích lũy XP mọi kỹ năng)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "trait:inconspicuous": {
+      "id": "trait:inconspicuous",
+      "description": "Trait Inconspicuous (-4 điểm, giảm 50% nguy cơ bị xác sống phát hiện)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "trait:ax_pert": {
+      "id": "trait:ax_pert",
+      "description": "Trait Ax-pert (+25% tốc độ vung rìu)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "trait:desensitized": {
+      "id": "trait:desensitized",
+      "description": "Trait Desensitized (Miễn nhiễm 100% Panic)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "trait:smoker": {
+      "id": "trait:smoker",
+      "description": "Trait Smoker (+4 điểm tiêu cực)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "trait:high_thirst": {
+      "id": "trait:high_thirst",
+      "description": "Trait High Thirst (+6 điểm tiêu cực, nhân đôi tốc độ tiêu thụ nước)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "trait:prone_to_illness": {
+      "id": "trait:prone_to_illness",
+      "description": "Trait Prone to Illness (+4 điểm tiêu cực)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "trait:slow_reader": {
+      "id": "trait:slow_reader",
+      "description": "Trait Slow Reader (+2 điểm tiêu cực)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "trait:weak_stomach": {
+      "id": "trait:weak_stomach",
+      "description": "Trait Weak Stomach (+3 điểm tiêu cực)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "trait:short_sighted": {
+      "id": "trait:short_sighted",
+      "description": "Trait Short Sighted (+2 điểm tiêu cực)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "trait:underweight": {
+      "id": "trait:underweight",
+      "description": "Trait Underweight (+12 điểm tiêu cực, tự xóa bỏ khi đạt 80.0 kg)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "trait:deaf": {
+      "id": "trait:deaf",
+      "description": "Trait Deaf (+12 điểm tiêu cực, mất 100% âm thanh)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "trait:sunday_driver": {
+      "id": "trait:sunday_driver",
+      "description": "Trait Sunday Driver (+1 điểm tiêu cực, giới hạn tốc độ lái xe 30 mph)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "trait:asthmatic": {
+      "id": "trait:asthmatic",
+      "description": "Trait Asthmatic (+5 điểm tiêu cực, tiêu hao thể lực gấp đôi)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "trait:clumsy": {
+      "id": "trait:clumsy",
+      "description": "Trait Clumsy (+2 điểm tiêu cực, tăng nguy cơ vấp ngã khi vượt rào)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "trait:handy": {
+      "id": "trait:handy",
+      "description": "Trait Handy (-8 điểm, tăng độ bền công trình và tốc độ xây dựng)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "trait:slow_healer": {
+      "id": "trait:slow_healer",
+      "description": "Trait Slow Healer (+6 điểm tiêu cực, kéo dài thời gian hồi phục chấn thương)",
+      "defined_in_doc": "Doc 04",
+      "status": "DEFINED"
+    },
+    "sys_math:procedural_loot_weighted_roll_dynamics": {
+      "id": "sys_math:procedural_loot_weighted_roll_dynamics",
+      "description": "Phương trình xác suất rơi đồ theo trọng số ngẫu nhiên từ ProceduralDistributions.lua",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "sys_math:procedural_basement_362_generation_matrix": {
+      "id": "sys_math:procedural_basement_362_generation_matrix",
+      "description": "Thuật toán thủ tục khởi tạo hầm ngầm 362 lô .pzby và triệt tiêu ánh sáng 0 Lux",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "sys_math:regional_zombie_density_11_zones": {
+      "id": "sys_math:regional_zombie_density_11_zones",
+      "description": "Ma trận mật độ zombie cơ sở và rủi ro trên 11 vùng địa lý Knox County",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "tpl_zone:knox_11_regions_distribution_matrix_01": {
+      "id": "tpl_zone:knox_11_regions_distribution_matrix_01",
+      "description": "Khuôn mẫu phân loại cấp độ rủi ro, mật độ và POI chiến lược 11 vùng Knox County",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "tpl_loot:procedural_distributions_weighted_roll_01": {
+      "id": "tpl_loot:procedural_distributions_weighted_roll_01",
+      "description": "Khuôn mẫu bảng loot xác suất rơi đồ cho 7 bảo bối sinh tồn B42",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "tpl_bas:procedural_362_underground_bunkers_01": {
+      "id": "tpl_bas:procedural_362_underground_bunkers_01",
+      "description": "Chuẩn hóa hệ thống 362 hầm ngầm định dạng .pzby với độ sâu thẳng đứng",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "tpl_evt:annotated_maps_and_survivor_house_01": {
+      "id": "tpl_evt:annotated_maps_and_survivor_house_01",
+      "description": "Hệ thống sự kiện bản đồ chú thích 1.5%, nhà cố thủ đóng ván gỗ 3 tầng 5% và nhà tiệc tùng",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "zone:rosewood": {
+      "id": "zone:rosewood",
+      "description": "Vùng Rosewood, KY (Mật độ 0.35, Trạm cứu hỏa, Đồn CS, Hiệu sách, Nhà tù)",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "zone:riverside": {
+      "id": "zone:riverside",
+      "description": "Vùng Riverside, KY (Mật độ 0.20, Ven sông Ohio, Cửa hàng kim khí, Hiệu thuốc, Thư viện)",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "zone:muldraugh": {
+      "id": "zone:muldraugh",
+      "description": "Vùng Muldraugh, KY (Mật độ 0.85, Dãy nhà kho lớn, Cortman Medical, Dixie Highway)",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "zone:westpoint": {
+      "id": "zone:westpoint",
+      "description": "Vùng West Point, KY (Mật độ 1.60, Tiệm súng Twiggys, Đồn CS hạng nặng)",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "zone:brandenburg": {
+      "id": "zone:brandenburg",
+      "description": "Vùng Brandenburg, KY (Mật độ 1.20, Cảng công nghiệp, Cưa kim loại, Đe sắt lớn)",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "zone:irvington_echocreek": {
+      "id": "zone:irvington_echocreek",
+      "description": "Vùng Irvington & Echo Creek (Mật độ 0.40, Đại trang trại gia súc, Đất sét & Đá lửa)",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "zone:louisville": {
+      "id": "zone:louisville",
+      "description": "Đại đô thị Louisville (Mật độ 5.00, Checkpoint quân sự, Bảo tàng katana, Bệnh viện St. Peregrin)",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "zone:fallas_lake": {
+      "id": "zone:fallas_lake",
+      "description": "Vùng Fallas Lake / Ekron (Mật độ 0.45, Tiệm súng nông thôn, Trạm xăng)",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "zone:valley_station": {
+      "id": "zone:valley_station",
+      "description": "Vùng Valley Station (Mật độ 1.40, Ngã 3 chiến lược, Trung tâm mua sắm)",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "zone:march_ridge": {
+      "id": "zone:march_ridge",
+      "description": "Vùng March Ridge (Mật độ 1.10, Căn hộ quân đội cao tầng)",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "basement:jamieton_bunker": {
+      "id": "basement:jamieton_bunker",
+      "description": "Hầm ngầm trú ẩn hạt nhân Jamie Ton (lot_basement_jamieton_bunker_01.pzby)",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "basement:police_muldraugh": {
+      "id": "basement:police_muldraugh",
+      "description": "Hầm kho vũ khí cảnh sát ngầm (lot_basement_police_muldraugh.pzby)",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "basement:sanatorium_tunnel": {
+      "id": "basement:sanatorium_tunnel",
+      "description": "Đường hầm viện điều dưỡng ngầm (lot_basement_sanatorium_tunnel.pzby)",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "basement:pawnshop_abandoned": {
+      "id": "basement:pawnshop_abandoned",
+      "description": "Hầm cửa hàng cầm đồ bỏ hoang (lot_basement_pawnshop_abandoned_01_FL.pzby)",
+      "defined_in_doc": "Doc 05",
+      "status": "DEFINED"
+    },
+    "sys_math:vehicle_ignition_quality_vs_condition_stall": {
+      "id": "sys_math:vehicle_ignition_quality_vs_condition_stall",
+      "description": "Phương trình tách biệt Engine Quality (>85% vs <50%), Battery >= 10%, và hư hại Engine",
+      "defined_in_doc": "Doc 06",
+      "status": "DEFINED"
+    },
+    "sys_math:muffler_degradation_acoustic_amplification": {
+      "id": "sys_math:muffler_degradation_acoustic_amplification",
+      "description": "Phương trình khuếch đại bán kính âm thanh từ 20-30m lên 100-150m khi Muffler hỏng",
+      "defined_in_doc": "Doc 06",
+      "status": "DEFINED"
+    },
+    "sys_math:tire_psi_drag_and_brake_distance_multiplier": {
+      "id": "sys_math:tire_psi_drag_and_brake_distance_multiplier",
+      "description": "Phương trình áp suất lốp 30-35 psi, phạt tốc độ khi nổ lốp, và tăng quãng đường phanh",
+      "defined_in_doc": "Doc 06",
+      "status": "DEFINED"
+    },
+    "sys_math:hotwire_access_and_24h_mechanics_xp_cooldown": {
+      "id": "sys_math:hotwire_access_and_24h_mechanics_xp_cooldown",
+      "description": "Phương trình điều kiện câu dây nổ máy 5-10s và khóa nhận XP 24h mỗi bộ phận",
+      "defined_in_doc": "Doc 06",
+      "status": "DEFINED"
+    },
+    "tpl_veh:heavy_caravan_transport_52models_01": {
+      "id": "tpl_veh:heavy_caravan_transport_52models_01",
+      "description": "Khuôn mẫu 52 phương tiện chia theo 3 phân hạng + Rơ-moóc chở hàng/gia súc sống 100-250 kg, kéo xe và Reverse Spin",
+      "defined_in_doc": "Doc 06",
+      "status": "DEFINED"
+    },
+    "tpl_veh:mechanical_15parts_anatomy_and_hotwire_01": {
+      "id": "tpl_veh:mechanical_15parts_anatomy_and_hotwire_01",
+      "description": "Khuôn mẫu giải phẫu 15 bộ phận cơ khí, công cụ sửa chữa và lộ trình cày cấp Mechanics Cấp 4-6 trong 3-5 ngày",
+      "defined_in_doc": "Doc 06",
+      "status": "DEFINED"
+    },
+    "veh_part:engine": {
+      "id": "veh_part:engine",
+      "description": "Động cơ phương tiện (Engine Quality vs Engine Condition)",
+      "defined_in_doc": "Doc 06",
+      "status": "DEFINED"
+    },
+    "veh_part:battery": {
+      "id": "veh_part:battery",
+      "description": "Bình ắc quy ô tô (Car Battery, sạc qua máy sạc hoặc nổ máy)",
+      "defined_in_doc": "Doc 06",
+      "status": "DEFINED"
+    },
+    "veh_part:muffler": {
+      "id": "veh_part:muffler",
+      "description": "Ống xả và bộ giảm thanh (Muffler, tiêu âm tiếng động cơ)",
+      "defined_in_doc": "Doc 06",
+      "status": "DEFINED"
+    },
+    "veh_part:hood": {
+      "id": "veh_part:hood",
+      "description": "Nắp capo che chắn động cơ (Hood, hấp thụ sát thương đâm va)",
+      "defined_in_doc": "Doc 06",
+      "status": "DEFINED"
+    },
+    "veh_part:trunk": {
+      "id": "veh_part:trunk",
+      "description": "Thùng sau / Cốp xe (Trunk, sức chứa đồ 100-250 kg)",
+      "defined_in_doc": "Doc 06",
+      "status": "DEFINED"
+    },
+    "veh_part:tires": {
+      "id": "veh_part:tires",
+      "description": "Bánh xe & Lốp xe (Standard, Heavy-Duty, Sport Tires, 30-35 psi)",
+      "defined_in_doc": "Doc 06",
+      "status": "DEFINED"
+    },
+    "veh_part:brakes": {
+      "id": "veh_part:brakes",
+      "description": "Hệ thống má phanh & Đĩa phanh (Brake Disc, giảm tốc độ)",
+      "defined_in_doc": "Doc 06",
+      "status": "DEFINED"
+    },
+    "veh_part:gas_tank": {
+      "id": "veh_part:gas_tank",
+      "description": "Bình nhiên liệu xăng (Gas Tank, rò rỉ khi rách)",
+      "defined_in_doc": "Doc 06",
+      "status": "DEFINED"
+    },
+    "veh_type:standard": {
+      "id": "veh_type:standard",
+      "description": "Phân hạng xe Sedan / Xe gia đình tiêu chuẩn",
+      "defined_in_doc": "Doc 06",
+      "status": "DEFINED"
+    },
+    "veh_type:heavy_duty": {
+      "id": "veh_type:heavy_duty",
+      "description": "Phân hạng xe Tải / Xe Bán tải / Xe Cứu thương công nghiệp",
+      "defined_in_doc": "Doc 06",
+      "status": "DEFINED"
+    },
+    "veh_type:sport": {
+      "id": "veh_type:sport",
+      "description": "Phân hạng xe Thể thao phân khối lớn (Tốc độ > 100 mph)",
+      "defined_in_doc": "Doc 06",
+      "status": "DEFINED"
+    },
+    "sys_math:foraging_optical_search_radius_equation": {
+      "id": "sys_math:foraging_optical_search_radius_equation",
+      "description": "Phương trình bán kính tìm kiếm quang học R_eff = 3.0 * (1 + 0.25 * Level) từ 3.0 đến 10.5 ô",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "sys_math:trapping_75tile_exclusion_and_nocturnal_matrix": {
+      "id": "sys_math:trapping_75tile_exclusion_and_nocturnal_matrix",
+      "description": "Phương trình khoảng cách tối thiểu 75 ô, khung giờ săn đêm 19:00-05:00 và bắt sống",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "sys_math:fishing_peak_hours_and_tension_gauge": {
+      "id": "sys_math:fishing_peak_hours_and_tension_gauge",
+      "description": "Phương trình khung giờ vàng 04:00-07:00 & 18:00-21:00, phạt mùa đông, và thanh lực căng Tension UI",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "tpl_bas:agricultural_43crops_and_pest_matrix_01": {
+      "id": "tpl_bas:agricultural_43crops_and_pest_matrix_01",
+      "description": "Ma trận 20 cây trồng chủ lực, 23 thảo mộc gia vị, cách ly bàn cờ 1 ô, và 4 thuốc trị sâu bệnh",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "tpl_item:trapping_75tile_and_live_capture_matrix_01": {
+      "id": "tpl_item:trapping_75tile_and_live_capture_matrix_01",
+      "description": "Ma trận 6 loại bẫy thú, trapStrength 5-20, bả nhử và sinh cảnh",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "tpl_mob:freshwater_21_fish_and_tension_engine_01": {
+      "id": "tpl_mob:freshwater_21_fish_and_tension_engine_01",
+      "description": "Danh mục 21 loài cá nước ngọt, cân nặng tiêu chuẩn và Trophy lên tới 150 kg",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "tpl_mob:livestock_18genes_and_butchering_01": {
+      "id": "tpl_mob:livestock_18genes_and_butchering_01",
+      "description": "Hệ thống 18 mã gen di truyền động vật AnimalGenomeDefinitions và quy trình giết mổ 5 bước",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "tpl_item:foraging_27categories_and_herbal_medicine_01": {
+      "id": "tpl_item:foraging_27categories_and_herbal_medicine_01",
+      "description": "Hệ thống 27 danh mục thu lượm, 5 vị thảo dược rừng, và độc tính nấm dại",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "crop:cabbage": {
+      "id": "crop:cabbage",
+      "description": "Cây bắp cải (Tăng trưởng nhanh nhất 12 ngày, calo cao)",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "crop:potato": {
+      "id": "crop:potato",
+      "description": "Cây khoai tây (Bảo quản tươi lâu nhất 28 ngày, kháng bệnh)",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "herb:comfrey": {
+      "id": "herb:comfrey",
+      "description": "Cỏ liên mộc (Bó lá Comfrey liền xương gãy x2 tốc độ)",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "herb:plantain": {
+      "id": "herb:plantain",
+      "description": "Lá mã đề (Thuốc đắp Plantain cầm máu và tiêu viêm vết thương)",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "herb:wild_garlic": {
+      "id": "herb:wild_garlic",
+      "description": "Tỏi dại (Khử trùng chống nhiễm trùng vi khuẩn)",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "herb:black_sage": {
+      "id": "herb:black_sage",
+      "description": "Xô thơm đen (Trà thuốc giảm đau nhức cơ thể)",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "trap:cage_trap": {
+      "id": "trap:cage_trap",
+      "description": "Bẫy lồng sắt (Bắt sống thỏ, chim, chuột, trapStrength = 20)",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "trap:box_trap": {
+      "id": "trap:box_trap",
+      "description": "Bẫy hộp gỗ (Bắt sống thỏ và sóc, trapStrength = 15)",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "fish:largemouth_bass": {
+      "id": "fish:largemouth_bass",
+      "description": "Cá vược miệng lớn (Cá chủ lực, Trophy 90 cm / 10 kg)",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "fish:alligator_gar": {
+      "id": "fish:alligator_gar",
+      "description": "Cá láng đốm / Thủy quái sông Ohio (Trophy 243 cm / 150 kg)",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "gene:milk_yield": {
+      "id": "gene:milk_yield",
+      "description": "Gen sản lượng sữa gia súc (Sản xuất sữa bò, cừu, dê)",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "gene:meat_quality": {
+      "id": "gene:meat_quality",
+      "description": "Gen chất lượng thịt gia súc (Tăng trọng lượng thịt khi mổ)",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "gene:disease_resistance": {
+      "id": "gene:disease_resistance",
+      "description": "Gen kháng bệnh động vật (Bảo vệ đàn trước dịch bệnh)",
+      "defined_in_doc": "Doc 08",
+      "status": "DEFINED"
+    },
+    "sys_math:thermoregulation_37c_17parts_energy_and_speed_matrix": {
+      "id": "sys_math:thermoregulation_37c_17parts_energy_and_speed_matrix",
+      "description": "Phương trình cân bằng nhiệt độ lõi 37.0°C, rét run đốt calo x3-x5, tê cóng phạt 50% chạy/vũ khí, và chết cóng <30°C",
+      "defined_in_doc": "Doc 09",
+      "status": "DEFINED"
+    },
+    "sys_math:catch_a_cold_100pct_and_sneeze_acoustic_wave": {
+      "id": "sys_math:catch_a_cold_100pct_and_sneeze_acoustic_wave",
+      "description": "Phương trình tích lũy CatchAColdDelta >= 100%, phát sóng âm hắt hơi 15-20 ô và bịt miệng giảm âm",
+      "defined_in_doc": "Doc 09",
+      "status": "DEFINED"
+    },
+    "sys_math:severe_weather_visibility_and_erosion_100day_curve": {
+      "id": "sys_math:severe_weather_visibility_and_erosion_100day_curve",
+      "description": "Phương trình sương mù giảm 70% tầm nhìn, bão nhiệt đới, bão tuyết -15°C đến -25°C, và đường cong bào mòn 100 ngày",
+      "defined_in_doc": "Doc 09",
+      "status": "DEFINED"
+    },
+    "tpl_evt:climate_12months_and_severe_weather_01": {
+      "id": "tpl_evt:climate_12months_and_severe_weather_01",
+      "description": "Ma trận thông số khí hậu 12 tháng từ seasonProps.lua kèm giờ mặt trời và 3 hiện tượng thời tiết cực đoan",
+      "defined_in_doc": "Doc 09",
+      "status": "DEFINED"
+    },
+    "tpl_aff:thermoregulation_37c_and_cold_affliction_01": {
+      "id": "tpl_aff:thermoregulation_37c_and_cold_affliction_01",
+      "description": "Khuôn mẫu hệ thống điều hòa thân nhiệt 17 bộ phận, 3 chỉ số trang phục và bệnh lý cảm lạnh",
+      "defined_in_doc": "Doc 09",
+      "status": "DEFINED"
+    },
+    "tpl_evt:world_erosion_100day_reclamation_01": {
+      "id": "tpl_evt:world_erosion_100day_reclamation_01",
+      "description": "Khuôn mẫu hệ thống bào mòn tự nhiên ErosionMain với 5 mức ErosionSpeed, dây leo tầng 2 và cây cản đường",
+      "defined_in_doc": "Doc 09",
+      "status": "DEFINED"
+    },
+    "weather:tropical_storm": {
+      "id": "weather:tropical_storm",
+      "description": "Hiện tượng bão nhiệt đới (Mưa xối xả, gió giật, sấm sét 100-200 ô, tầm nhìn 3-5 ô)",
+      "defined_in_doc": "Doc 09",
+      "status": "DEFINED"
+    },
+    "weather:arctic_blizzard": {
+      "id": "weather:arctic_blizzard",
+      "description": "Hiện tượng bão tuyết Bắc Cực (Nhiệt độ -15°C đến -25°C, tuyết dày phạt 50% chạy, gió rít)",
+      "defined_in_doc": "Doc 09",
+      "status": "DEFINED"
+    },
+    "weather:pea_soup_fog": {
+      "id": "weather:pea_soup_fog",
+      "description": "Hiện tượng sương mù dày đặc (Tầm nhìn giảm 70%, zombie ẩn hiện 2-3 ô)",
+      "defined_in_doc": "Doc 09",
+      "status": "DEFINED"
+    },
+    "affliction:hypothermia": {
+      "id": "affliction:hypothermia",
+      "description": "Hạ thân nhiệt sinh học (T_core < 35°C lạnh run, < 30°C tử vong)",
+      "defined_in_doc": "Doc 09",
+      "status": "DEFINED"
+    },
+    "affliction:hyperthermia": {
+      "id": "affliction:hyperthermia",
+      "description": "Sốc nhiệt sinh học (T_core > 37.5°C khát nước x4, > 39°C co giật tử vong)",
+      "defined_in_doc": "Doc 09",
+      "status": "DEFINED"
+    },
+    "affliction:cold_and_sneeze": {
+      "id": "affliction:cold_and_sneeze",
+      "description": "Bệnh cảm lạnh thông thường (Hắt hơi/ho phát tán âm thanh 15-20 ô)",
+      "defined_in_doc": "Doc 09",
+      "status": "DEFINED"
+    },
+    "erosion:stage_1_cracks": {
+      "id": "erosion:stage_1_cracks",
+      "description": "Giai đoạn bào mòn 1 (Ngày 1-20: Nứt vỡ bê tông, cỏ dại mọc)",
+      "defined_in_doc": "Doc 09",
+      "status": "DEFINED"
+    },
+    "erosion:stage_2_tall_grass": {
+      "id": "erosion:stage_2_tall_grass",
+      "description": "Giai đoạn bào mòn 2 (Ngày 20-50: Cỏ cao che khuất zombie bò trườn)",
+      "defined_in_doc": "Doc 09",
+      "status": "DEFINED"
+    },
+    "erosion:stage_3_vines": {
+      "id": "erosion:stage_3_vines",
+      "description": "Giai đoạn bào mòn 3 (Ngày 50-80: Dây leo bám tường trèo tầng 2)",
+      "defined_in_doc": "Doc 09",
+      "status": "DEFINED"
+    },
+    "erosion:stage_4_tree_reclamation": {
+      "id": "erosion:stage_4_tree_reclamation",
+      "description": "Giai đoạn bào mòn 4 (Ngày 80-100: Cây non mọc giữa đường đâm hỏng xe)",
+      "defined_in_doc": "Doc 09",
+      "status": "DEFINED"
+    },
+    "sys_math:sandbox_population_peak_and_unseen_respawn_curve": {
+      "id": "sys_math:sandbox_population_peak_and_unseen_respawn_curve",
+      "description": "Phương trình tăng trưởng quần thể StartMultiplier 1.0x lên PeakMultiplier 1.5x Day 28, hồi sinh 10% mỗi 72h khi Unseen >= 16h",
+      "defined_in_doc": "Doc 10",
+      "status": "DEFINED"
+    },
+    "sys_math:granular_21_loot_category_scaling": {
+      "id": "sys_math:granular_21_loot_category_scaling",
+      "description": "Phương trình điều biến xác suất rơi đồ 6 bậc (0.05-3.0) trên 21 danh mục vật phẩm B42",
+      "defined_in_doc": "Doc 10",
+      "status": "DEFINED"
+    },
+    "sys_math:per_skill_35_xp_multiplier_pipeline": {
+      "id": "sys_math:per_skill_35_xp_multiplier_pipeline",
+      "description": "Phương trình nhân kinh nghiệm riêng biệt cho 35 kỹ năng trong MultiplierConfig",
+      "defined_in_doc": "Doc 10",
+      "status": "DEFINED"
+    },
+    "tpl_evt:sandbox_5_presets_and_population_director_01": {
+      "id": "tpl_evt:sandbox_5_presets_and_population_director_01",
+      "description": "Ma trận 5 preset chính thức Apocalypse, Outbreak, Extinction, Rising, Six Months Later và ZombieVoronoiNoise",
+      "defined_in_doc": "Doc 10",
+      "status": "DEFINED"
+    },
+    "tpl_mob:zombie_lore_pathogen_and_cognition_matrix_01": {
+      "id": "tpl_mob:zombie_lore_pathogen_and_cognition_matrix_01",
+      "description": "Ma trận sinh học xác sống: tốc độ Sprinters/Shamblers, lây nhiễm Saliva, 8 bậc InfectionMortality, Cognition mở cửa",
+      "defined_in_doc": "Doc 10",
+      "status": "DEFINED"
+    },
+    "tpl_evt:sandbox_21loot_35xp_and_world_rules_01": {
+      "id": "tpl_evt:sandbox_21loot_35xp_and_world_rules_01",
+      "description": "Khuôn mẫu 21 biến số loot, cấu hình MultiplierConfig cho kỹ năng B42, xăng máy phát 0.1 L/h, và /reloadoptions",
+      "defined_in_doc": "Doc 10",
+      "status": "DEFINED"
+    },
+    "preset:apocalypse": {
+      "id": "preset:apocalypse",
+      "description": "Preset Apocalypse (Chuẩn hardcore, không minimap, multi-hit off, xác sống nhanh)",
+      "defined_in_doc": "Doc 10",
+      "status": "DEFINED"
+    },
+    "preset:survivor": {
+      "id": "preset:survivor",
+      "description": "Preset Survivor (Chuẩn cân bằng, multi-hit on, cận chiến linh hoạt)",
+      "defined_in_doc": "Doc 10",
+      "status": "DEFINED"
+    },
+    "preset:builder": {
+      "id": "preset:builder",
+      "description": "Preset Builder (Tập trung xây dựng, mật độ zombie thấp 0.2x)",
+      "defined_in_doc": "Doc 10",
+      "status": "DEFINED"
+    },
+    "preset:six_months_later": {
+      "id": "preset:six_months_later",
+      "description": "Preset Six Months Later (Hậu tận thế 6 tháng, điện nước cúp, bào mòn cực đại, đồ cực hiếm)",
+      "defined_in_doc": "Doc 10",
+      "status": "DEFINED"
+    },
+    "rule:multi_hit": {
+      "id": "rule:multi_hit",
+      "description": "Luật cận chiến chém đa mục tiêu (MultiHit = true/false)",
+      "defined_in_doc": "Doc 10",
+      "status": "DEFINED"
+    },
+    "rule:zombie_cognition": {
+      "id": "rule:zombie_cognition",
+      "description": "Trí tuệ nhận thức xác sống (Cognition: Navigate + Use Doors)",
+      "defined_in_doc": "Doc 10",
+      "status": "DEFINED"
+    },
+    "sys_math:melee_final_damage_and_moodle_collapse": {
+      "id": "sys_math:melee_final_damage_and_moodle_collapse",
+      "description": "Phương trình sát thương cận chiến 7 biến số, hệ số Strength, Skill và sự sụp đổ sát thương -95% do kiệt sức Exhaustion",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "sys_math:weapon_maintenance_bernoulli_durability": {
+      "id": "sys_math:weapon_maintenance_bernoulli_durability",
+      "description": "Phương trình độ bền vũ khí Bernoulli 1 / (Chance + Maint*2 + Skill/2) và tuổi thọ 1.000 zombie của Xà beng",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "sys_math:firearms_ballistics_and_aiming_accuracy_curve": {
+      "id": "sys_math:firearms_ballistics_and_aiming_accuracy_curve",
+      "description": "Phương trình đạn đạo, Aiming 0-10, bắn chùm Shotgun cày cấp và đạn xuyên mục tiêu Aiming 8+",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "sys_math:stealth_footstep_sound_and_jaw_stab_physics": {
+      "id": "sys_math:stealth_footstep_sound_and_jaw_stab_physics",
+      "description": "Phương trình âm thanh bước chân 1-20 ô, nón tầm nhìn 120/180 độ và đòn ám sát đâm xuyên cằm 100% không hỏng áo giáp",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "tpl_wpn:melee_6classes_and_maintenance_matrix_01": {
+      "id": "tpl_wpn:melee_6classes_and_maintenance_matrix_01",
+      "description": "Khuôn mẫu 6 hệ vũ khí cận chiến: Axe, Long Blade, Small Blade, Long Blunt, Small Blunt, Spear",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "tpl_wpn:firearms_22guns_and_ballistics_engine_01": {
+      "id": "tpl_wpn:firearms_22guns_and_ballistics_engine_01",
+      "description": "Khuôn mẫu đạn đạo 22 khẩu súng, bán kính âm thanh 60-200 ô, và 8 cỡ đạn",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "tpl_item:weapon_11attachments_and_recoil_01": {
+      "id": "tpl_item:weapon_11attachments_and_recoil_01",
+      "description": "Khuôn mẫu 11 phụ kiện súng đạn: Nòng, Ống ngắm x2/x4/x8, RedDot, Laser, Đèn pin, Dây đeo",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "tpl_mob:stealth_senses_and_jawstab_execution_01": {
+      "id": "tpl_mob:stealth_senses_and_jawstab_execution_01",
+      "description": "Khuôn mẫu giác quan zombie, nón tầm nhìn và đòn ám sát Jaw Stab",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "ammo:9mm": {
+      "id": "ammo:9mm",
+      "description": "Cỡ đạn súng ngắn 9mm Parabellum (Beretta M9)",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "ammo:45auto": {
+      "id": "ammo:45auto",
+      "description": "Cỡ đạn .45 Auto (Colt M1911, Trapper Carbine)",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "ammo:308win": {
+      "id": "ammo:308win",
+      "description": "Cỡ đạn súng trường .308 Winchester (M14, MSR700, đạn xuyên mục tiêu)",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "ammo:12g_shotgunshells": {
+      "id": "ammo:12g_shotgunshells",
+      "description": "Cỡ đạn ghém Shotgun Shells 12-Gauge (JS-2000, Double Barrel, bắn chùm 3-4 zombie)",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "ammo:556mm": {
+      "id": "ammo:556mm",
+      "description": "Cỡ đạn súng trường tự động 5.56x45mm NATO (M16, Varmint)",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "ammo:357mag": {
+      "id": "ammo:357mag",
+      "description": "Cỡ đạn ổ xoay .357 Magnum (Revolver Magnum, L92 Carbine)",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "ammo:38special": {
+      "id": "ammo:38special",
+      "description": "Cỡ đạn súng ngắn .38 Special (Revolver Short, âm thanh êm nhất 60 ô)",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "ammo:44mag": {
+      "id": "ammo:44mag",
+      "description": "Cỡ đạn công lực cao .44 Magnum (Desert Eagle, Revolver Long)",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "entity:grindstone": {
+      "id": "entity:grindstone",
+      "description": "Bàn mài phục hồi độ bền vũ khí cận chiến và gia công lưỡi đao",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "wpn:crowbar": {
+      "id": "wpn:crowbar",
+      "description": "Xà beng (Long Blunt, bền nhất game 1/70 decay chance)",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "wpn:fireaxe": {
+      "id": "wpn:fireaxe",
+      "description": "Rìu cứu hỏa (Axe, sát thương cực cao, phá cửa)",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "wpn:katana": {
+      "id": "wpn:katana",
+      "description": "Thanh kiếm Katana Nhật (Long Blade, chém 3 zombie cùng lúc)",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "wpn:hunting_knife": {
+      "id": "wpn:hunting_knife",
+      "description": "Dao săn (Small Blade, đòn Jaw Stab 1-hit không vấy máu)",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "wpn:shotgun_js2000": {
+      "id": "wpn:shotgun_js2000",
+      "description": "Súng shotgun JS-2000 (Shotgun, cày cấp Aiming 0 lên 5)",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "wpn:m16": {
+      "id": "wpn:m16",
+      "description": "Súng trường tự động M16 (Assault Rifle, 30 viên 5.56mm)",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "wpn:colt_m1911": {
+      "id": "wpn:colt_m1911",
+      "description": "Súng ngắn bán tự động Colt M1911 (.45 Auto, âm thanh trầm 70 ô)",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "wpn:revolver_38": {
+      "id": "wpn:revolver_38",
+      "description": "Súng lục ổ xoay .38 Special (Âm thanh nhỏ nhất 60 ô, không kẹt đạn)",
+      "defined_in_doc": "Doc 11",
+      "status": "DEFINED"
+    },
+    "sys_math:iso_thumpable_structural_hp_and_handy_formula": {
+      "id": "sys_math:iso_thumpable_structural_hp_and_handy_formula",
+      "description": "Phương trình máu công trình kiến trúc HP = BaseHP + 50*Carpentry + 100*Handy trong khung 32 tầng",
+      "defined_in_doc": "Doc 12",
+      "status": "DEFINED"
+    },
+    "sys_math:dual_sided_barricade_hp_and_line_of_fire": {
+      "id": "sys_math:dual_sided_barricade_hp_and_line_of_fire",
+      "description": "Phương trình máu gia cố 2 mặt cửa: Ván gỗ 8000 HP, Tấm thép 10000 HP, Song sắt 6000 HP",
+      "defined_in_doc": "Doc 12",
+      "status": "DEFINED"
+    },
+    "sys_math:plumbing_3x3_zplus1_auto_purification_constraint": {
+      "id": "sys_math:plumbing_3x3_zplus1_auto_purification_constraint",
+      "description": "Thuật toán 4 điều kiện nối ống nước tự lọc sạch 100% vi khuẩn từ thùng nước mưa ma trận 3x3 Z+1",
+      "defined_in_doc": "Doc 12",
+      "status": "DEFINED"
+    },
+    "sys_math:generator_20tile_3floor_grid_and_20pct_explosion_co_hazard": {
+      "id": "sys_math:generator_20tile_3floor_grid_and_20pct_explosion_co_hazard",
+      "description": "Phương trình điện trường máy phát 20 ô x 3 tầng, nổ cháy <20% và ngộ độc khí CO",
+      "defined_in_doc": "Doc 12",
+      "status": "DEFINED"
+    },
+    "tpl_bas:fortification_32floor_and_barricade_matrix_01": {
+      "id": "tpl_bas:fortification_32floor_and_barricade_matrix_01",
+      "description": "Khuôn mẫu thông số vật liệu và HP toàn bộ công trình gỗ/thép, 3 chế độ gia cố và xây 4 bước",
+      "defined_in_doc": "Doc 12",
+      "status": "DEFINED"
+    },
+    "tpl_bas:plumbing_3x3_purifier_and_generator_grid_01": {
+      "id": "tpl_bas:plumbing_3x3_purifier_and_generator_grid_01",
+      "description": "Khuôn mẫu hạ tầng lọc nước tự động và lưới điện máy phát kèm quy tắc an toàn",
+      "defined_in_doc": "Doc 12",
+      "status": "DEFINED"
+    },
+    "struct:wooden_wall": {
+      "id": "struct:wooden_wall",
+      "description": "Tường gỗ công trình (Cấp 1-3, HP 400-600, trát vữa và sơn)",
+      "defined_in_doc": "Doc 12",
+      "status": "DEFINED"
+    },
+    "struct:wooden_door": {
+      "id": "struct:wooden_door",
+      "description": "Cửa gỗ ra vào (Khóa chốt chống zombie, HP 500-700)",
+      "defined_in_doc": "Doc 12",
+      "status": "DEFINED"
+    },
+    "struct:rain_barrel": {
+      "id": "struct:rain_barrel",
+      "description": "Thùng hứng nước mưa (Dung tích 160L hoặc 400L)",
+      "defined_in_doc": "Doc 12",
+      "status": "DEFINED"
+    },
+    "struct:sheet_rope": {
+      "id": "struct:sheet_rope",
+      "description": "Dây vải thoát hiểm (Leo trèo vượt tầng, chiến thuật phá cầu thang)",
+      "defined_in_doc": "Doc 12",
+      "status": "DEFINED"
+    },
+    "struct:metal_fence": {
+      "id": "struct:metal_fence",
+      "description": "Hàng rào song sắt kiên cố (Tầm nhìn xuyên thấu, HP 1000)",
+      "defined_in_doc": "Doc 12",
+      "status": "DEFINED"
+    },
+    "struct:log_wall": {
+      "id": "struct:log_wall",
+      "description": "Tường thân cây gỗ tròn (HP 600-800, tốn nhiều gỗ)",
+      "defined_in_doc": "Doc 12",
+      "status": "DEFINED"
+    },
+    "tool:pipe_wrench": {
+      "id": "tool:pipe_wrench",
+      "description": "Cờ lê ống nước (Công cụ chuyên dụng thao tác Plumbing nối ống)",
+      "defined_in_doc": "Doc 12",
+      "status": "DEFINED"
+    },
+    "sys_math:anatomy_17parts_7modifiers_matrix": {
+      "id": "sys_math:anatomy_17parts_7modifiers_matrix",
+      "description": "Ma trận 7 hệ số giải phẫu chính xác tuyệt đối cho toàn bộ 17 bộ phận: skinSurface, painMod, dmgMod, bleedMod, umbrella, maxActionPenalty, maxMovementPenalty",
+      "defined_in_doc": "Doc 13",
+      "status": "DEFINED"
+    },
+    "sys_math:wound_healing_kinetics_and_poultice_acceleration": {
+      "id": "sys_math:wound_healing_kinetics_and_poultice_acceleration",
+      "description": "Phương trình vi phân tốc độ lành 6 loại vết thương: trần vs băng gạc vs đắp Plantain 25x/100x và Comfrey nẹp xương",
+      "defined_in_doc": "Doc 13",
+      "status": "DEFINED"
+    },
+    "sys_math:bacterial_infection_40000_denominator_and_cures": {
+      "id": "sys_math:bacterial_infection_40000_denominator_and_cures",
+      "description": "Phương trình trừ mẫu số xác suất nhiễm trùng vi khuẩn từ 40000 xuống sàn 5000 và tốc độ diệt khuẩn của cồn, kháng sinh, tỏi dại",
+      "defined_in_doc": "Doc 13",
+      "status": "DEFINED"
+    },
+    "sys_math:surgical_ticks_pain_and_stitch_maturity_equations": {
+      "id": "sys_math:surgical_ticks_pain_and_stitch_maturity_equations",
+      "description": "Phương trình thời gian ticks, điểm đau và rủi ro nhiễm trùng cho 4 thủ thuật ngoại khoa: khâu vết thương, gắp kính, mổ đạn, nẹp xương",
+      "defined_in_doc": "Doc 13",
+      "status": "DEFINED"
+    },
+    "tpl_aff:anatomy_17parts_modifiers_and_wound_kinetics_01": {
+      "id": "tpl_aff:anatomy_17parts_modifiers_and_wound_kinetics_01",
+      "description": "Khuôn mẫu toàn bộ 17 bộ phận giải phẫu, động lực học vết thương và cơ chế nhiễm trùng kép",
+      "defined_in_doc": "Doc 13",
+      "status": "DEFINED"
+    },
+    "tpl_item:surgical_procedures_and_pharmacopoeia_matrix_01": {
+      "id": "tpl_item:surgical_procedures_and_pharmacopoeia_matrix_01",
+      "description": "Khuôn mẫu dụng cụ phẫu thuật, 7 bài thuốc Nam Dược, danh mục dược phẩm Tây y, bậc thang chẩn đoán First Aid và độc học",
+      "defined_in_doc": "Doc 13",
+      "status": "DEFINED"
+    },
+    "surgery:suture_needle_and_holder": {
+      "id": "surgery:suture_needle_and_holder",
+      "description": "Kim khâu y tế và Kẹp giữ kim phẫu thuật (Suture Needle & Holder)",
+      "defined_in_doc": "Doc 13",
+      "status": "DEFINED"
+    },
+    "surgery:tweezers": {
+      "id": "surgery:tweezers",
+      "description": "Nhíp y tế gắp dị vật kính vỡ và đầu đạn (Tweezers)",
+      "defined_in_doc": "Doc 13",
+      "status": "DEFINED"
+    },
+    "med_item:splint": {
+      "id": "med_item:splint",
+      "description": "Nẹp gỗ liền xương gãy (Splint, phục hồi tốc độ di chuyển)",
+      "defined_in_doc": "Doc 13",
+      "status": "DEFINED"
+    },
+    "med_item:disinfectant_alcohol": {
+      "id": "med_item:disinfectant_alcohol",
+      "description": "Cồn khử trùng y tế tiệt trùng băng gạc (AlcoholBandage)",
+      "defined_in_doc": "Doc 13",
+      "status": "DEFINED"
+    },
+    "pathology:knox_virus": {
+      "id": "pathology:knox_virus",
+      "description": "Virus Knox zombie (isInfected = true, sốt tử vong sau 2-3 ngày)",
+      "defined_in_doc": "Doc 13",
+      "status": "DEFINED"
+    },
+    "pathology:wound_infection": {
+      "id": "pathology:wound_infection",
+      "description": "Nhiễm trùng vi khuẩn vết thương thông thường (isInfectedWound = true, đau nhức tụt máu)",
+      "defined_in_doc": "Doc 13",
+      "status": "DEFINED"
+    },
+    "sys_math:metabolic_80kg_calorie_derivative_and_protein_xp": {
+      "id": "sys_math:metabolic_80kg_calorie_derivative_and_protein_xp",
+      "description": "Phương trình đạo hàm calo dW/dt, con số vàng 80.0 kg, bẫy carbs/lipids >400g tăng cân đôi, và thần dược Protein 50-300g tăng +30% XP Strength",
+      "defined_in_doc": "Doc 14",
+      "status": "DEFINED"
+    },
+    "sys_math:dynamic_7weight_tiers_and_trait_mutation": {
+      "id": "sys_math:dynamic_7weight_tiers_and_trait_mutation",
+      "description": "Hàm phân bậc 7 ngưỡng cân nặng: từ chết đói <35kg, Very Underweight, Underweight, Chuẩn vàng 80kg, Overweight, Obese >=100kg",
+      "defined_in_doc": "Doc 14",
+      "status": "DEFINED"
+    },
+    "sys_math:stash_system_floorboard_unlock_and_traps": {
+      "id": "sys_math:stash_system_floorboard_unlock_and_traps",
+      "description": "Thuật toán mở khóa kho báu dưới ván sàn, bẫy nhà cố thủ và 164 kịch bản thế giới ngẫu nhiên RDS/RB/RZS/RVS",
+      "defined_in_doc": "Doc 14",
+      "status": "DEFINED"
+    },
+    "sys_math:meta_director_ambient_sound_and_helicopter_ai": {
+      "id": "sys_math:meta_director_ambient_sound_and_helicopter_ai",
+      "description": "Thuật toán đạo diễn âm thanh ảo ban đêm và trực thăng bay lượn lôi kéo bầy xác sống hàng ngàn con",
+      "defined_in_doc": "Doc 14",
+      "status": "DEFINED"
+    },
+    "tpl_aff:metabolic_80kg_caloric_and_weight_tiers_01": {
+      "id": "tpl_aff:metabolic_80kg_caloric_and_weight_tiers_01",
+      "description": "Khuôn mẫu trao đổi chất calo, con số vàng 80.0 kg và 7 bậc thể trạng động",
+      "defined_in_doc": "Doc 14",
+      "status": "DEFINED"
+    },
+    "tpl_evt:emergent_164stories_stash_and_meta_director_01": {
+      "id": "tpl_evt:emergent_164stories_stash_and_meta_director_01",
+      "description": "Khuôn mẫu 164 kịch bản thế giới, hệ thống cạy ván sàn StashSystem và Đạo diễn vô hình Meta Director",
+      "defined_in_doc": "Doc 14",
+      "status": "DEFINED"
+    },
+    "meta_evt:helicopter": {
+      "id": "meta_evt:helicopter",
+      "description": "Sự kiện trực thăng săn lùng (The Helicopter Event, di chuyển kéo bầy zombie toàn bản đồ)",
+      "defined_in_doc": "Doc 14",
+      "status": "DEFINED"
+    },
+    "meta_evt:ambient_sound": {
+      "id": "meta_evt:ambient_sound",
+      "description": "Bộ phân phối âm thanh ảo (Tiếng súng nổ xa, tiếng thét đêm lôi kéo zombie)",
+      "defined_in_doc": "Doc 14",
+      "status": "DEFINED"
+    },
+    "meta_story:rds_dead_survivor": {
+      "id": "meta_story:rds_dead_survivor",
+      "description": "Xác chết kể chuyện (RandomizedDeadSurvivor - 164 kịch bản)",
+      "defined_in_doc": "Doc 14",
+      "status": "DEFINED"
+    },
+    "meta_story:rvs_vehicle_accident": {
+      "id": "meta_story:rvs_vehicle_accident",
+      "description": "Tai nạn xe cộ cao tốc (RandomizedVehicleStory - xe chở búa tạ, vũ khí cảnh sát)",
+      "defined_in_doc": "Doc 14",
+      "status": "DEFINED"
+    },
+    "meta_story:stash_floorboard": {
+      "id": "meta_story:stash_floorboard",
+      "description": "Hòm báu ngầm dưới ván sàn nhà dân (StashSystem Floorboard)",
+      "defined_in_doc": "Doc 14",
+      "status": "DEFINED"
+    },
+    "sys_math:polygonal_capsule_radius_and_64level_z_mapping": {
+      "defined_in": "Doc 15",
+      "description": "Collision capsule radius 0.3f, diagonal 0.42426f and 64-level vertical mapping with ground level 32",
+      "category": "ai_pathfinding_geometry"
+    },
+    "sys_math:funnel_algorithm_triarea2_string_pulling": {
+      "defined_in": "Doc 15",
+      "description": "Simple Stupid Funnel Algorithm SSFA string pulling with cross product determinant triarea2()",
+      "category": "animal_navmesh_geometry"
+    },
+    "sys_math:virtual_horde_3chunk_pooling_and_50tile_sound_gate": {
+      "defined_in": "Doc 15",
+      "description": "Virtual zombie pooling beyond 3 chunks into 32-bit C++ struct and 50-tile sound trigger gate",
+      "category": "virtual_population_simulation"
+    },
+    "tpl_mob:dual_layer_64level_pathfinding_engine_01": {
+      "defined_in": "Doc 15",
+      "description": "Dual-layer HLAStar + VGAStar pathfinding blueprint with Liang-Barsky line clipping, 6 stair nodes and anti-stuck",
+      "category": "ai_navigation_blueprint"
+    },
+    "tpl_mob:animal_triangulated_navmesh_and_virtual_horde_01": {
+      "defined_in": "Doc 15",
+      "description": "Animal triangulated NavMesh and virtual horde population manager blueprint",
+      "category": "animal_navmesh_and_horde_blueprint"
+    },
+    "sys_math:skill_book_5tier_and_media_xp_multiplier": {
+      "defined_in": "Doc 07",
+      "description": "5-tier skill book multiplier formula (x3, x5, x8, x12, x16) combined with Fast Learner x1.30",
+      "category": "instructional_progression_math"
+    },
+    "sys_math:media_xp_stacking_idempotency_rule": {
+      "defined_in": "Doc 07",
+      "description": "Idempotency and stacking exclusion rule between live broadcast, retail VHS and home VHS",
+      "category": "instructional_progression_math"
+    },
+    "sys_math:aebs_random_frequency_and_omen_scheduler": {
+      "defined_in": "Doc 07",
+      "description": "AEBS random emergency frequency (88.0-108.0 MHz, step 0.2) and hourly weather/power grid omen scheduler",
+      "category": "world_event_oracle_math"
+    },
+    "tpl_evt:world_telemetry_oracle_aebs_01": {
+      "defined_in": "Doc 07",
+      "description": "Automated Emergency Broadcast System AEBS world telemetry and disaster prediction oracle blueprint",
+      "category": "world_event_oracle_blueprint"
+    },
+    "tpl_evt:early_9day_live_instructional_schedule_01": {
+      "defined_in": "Doc 07",
+      "description": "Early 9-day live television instructional broadcast schedule blueprint (Life and Living TV Channel 203)",
+      "category": "instructional_media_blueprint"
+    },
+    "tpl_item:instructional_records_64_vhs_matrix_01": {
+      "defined_in": "Doc 07",
+      "description": "Standardized 64 skill and crafting recipe VHS tapes matrix blueprint",
+      "category": "instructional_item_blueprint"
+    }
+  },
+  "pending_external_ids": {
+    "mat_tag:wood_adhesive_or_fastener": {
+      "id": "mat_tag:wood_adhesive_or_fastener",
+      "waiting_for": "Doc 03 (`Crafting Tech Tree Guide`)",
+      "first_referenced_in": "Doc 01",
+      "resolved": true,
+      "resolved_in_doc": "Doc 03"
+    },
+    "tpl_trait:hypochondriac": {
+      "id": "tpl_trait:hypochondriac",
+      "waiting_for": "Doc 04 (`Professions & Traits Bible`)",
+      "first_referenced_in": "Doc 01",
+      "resolved": true,
+      "resolved_in_doc": "Doc 04"
+    },
+    "skill:axe": {
+      "id": "skill:axe",
+      "waiting_for": "Doc 04 (`Professions & Traits Bible`)",
+      "first_referenced_in": "Doc 01",
+      "resolved": true,
+      "resolved_in_doc": "Doc 04"
+    },
+    "Recipe_MakeJawboneMorningstar": {
+      "id": "Recipe_MakeJawboneMorningstar",
+      "waiting_for": "Doc 03 (`Crafting Tech Tree Guide`)",
+      "first_referenced_in": "Doc 02",
+      "resolved": true,
+      "resolved_in_doc": "Doc 03"
+    },
+    "Recipe_MakeBucketMaul": {
+      "id": "Recipe_MakeBucketMaul",
+      "waiting_for": "Doc 03 (`Crafting Tech Tree Guide`)",
+      "first_referenced_in": "Doc 02",
+      "resolved": true,
+      "resolved_in_doc": "Doc 03"
+    },
+    "Recipe_CraftFramepackLarge": {
+      "id": "Recipe_CraftFramepackLarge",
+      "waiting_for": "Doc 03 (`Crafting Tech Tree Guide`)",
+      "first_referenced_in": "Doc 02",
+      "resolved": true,
+      "resolved_in_doc": "Doc 03"
+    },
+    "tpl_trait:packmule": {
+      "id": "tpl_trait:packmule",
+      "waiting_for": "Doc 04 (`Professions & Traits Bible`)",
+      "first_referenced_in": "Doc 02",
+      "resolved": true,
+      "resolved_in_doc": "Doc 04"
+    },
+    "tpl_trait:dextrous": {
+      "id": "tpl_trait:dextrous",
+      "waiting_for": "Doc 04 (`Professions & Traits Bible`)",
+      "first_referenced_in": "Doc 02",
+      "resolved": true,
+      "resolved_in_doc": "Doc 04"
+    },
+    "Skill Books": {
+      "id": "Skill Books",
+      "waiting_for": "Doc 04 (`Professions & Traits Bible`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 04"
+    },
+    "Blacksmithing": {
+      "id": "Blacksmithing",
+      "waiting_for": "Doc 04 (`Professions & Traits Bible`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 04"
+    },
+    "Pottery": {
+      "id": "Pottery",
+      "waiting_for": "Doc 04 (`Professions & Traits Bible`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 04"
+    },
+    "Glassmaking": {
+      "id": "Glassmaking",
+      "waiting_for": "Doc 04 (`Professions & Traits Bible`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 04"
+    },
+    "Knapping": {
+      "id": "Knapping",
+      "waiting_for": "Doc 04 (`Professions & Traits Bible`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 04"
+    },
+    "Metalworking": {
+      "id": "Metalworking",
+      "waiting_for": "Doc 04 (`Professions & Traits Bible`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 04"
+    },
+    "Tailoring": {
+      "id": "Tailoring",
+      "waiting_for": "Doc 04 (`Professions & Traits Bible`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 04"
+    },
+    "Maintenance": {
+      "id": "Maintenance",
+      "waiting_for": "Doc 04 (`Professions & Traits Bible`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 04"
+    },
+    "Cooking": {
+      "id": "Cooking",
+      "waiting_for": "Doc 04 (`Professions & Traits Bible`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 04"
+    },
+    "Butchering": {
+      "id": "Butchering",
+      "waiting_for": "Doc 04 (`Professions & Traits Bible`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 04"
+    },
+    "Farming": {
+      "id": "Farming",
+      "waiting_for": "Doc 04 (`Professions & Traits Bible`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 04"
+    },
+    "First Aid": {
+      "id": "First Aid",
+      "waiting_for": "Doc 04 (`Professions & Traits Bible`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 04"
+    },
+    "Scrap Metal": {
+      "id": "Scrap Metal",
+      "waiting_for": "Doc 06 (`Vehicles & Mechanics Handbook`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 06"
+    },
+    "Brake Disc": {
+      "id": "Brake Disc",
+      "waiting_for": "Doc 06 (`Vehicles & Mechanics Handbook`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 06"
+    },
+    "Flax plant": {
+      "id": "Flax plant",
+      "waiting_for": "Doc 08 (`Farming, Trapping, Fishing & Wilderness Survival`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 08"
+    },
+    "Foraging": {
+      "id": "Foraging",
+      "waiting_for": "Doc 08 (`Farming, Trapping, Fishing & Wilderness Survival`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 08"
+    },
+    "Flint/Chert": {
+      "id": "Flint/Chert",
+      "waiting_for": "Doc 08 (`Farming, Trapping, Fishing & Wilderness Survival`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 08"
+    },
+    "Hammerstone": {
+      "id": "Hammerstone",
+      "waiting_for": "Doc 08 (`Farming, Trapping, Fishing & Wilderness Survival`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 08"
+    },
+    "Clay": {
+      "id": "Clay",
+      "waiting_for": "Doc 08 (`Farming, Trapping, Fishing & Wilderness Survival`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 08"
+    },
+    "9mm": {
+      "id": "9mm",
+      "waiting_for": "Doc 11 (`Combat, Ballistics & Stealth`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 11"
+    },
+    ".45": {
+      "id": ".45",
+      "waiting_for": "Doc 11 (`Combat, Ballistics & Stealth`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 11"
+    },
+    ".308": {
+      "id": ".308",
+      "waiting_for": "Doc 11 (`Combat, Ballistics & Stealth`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 11"
+    },
+    "12G": {
+      "id": "12G",
+      "waiting_for": "Doc 11 (`Combat, Ballistics & Stealth`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 11"
+    },
+    "entity_grindstone": {
+      "id": "entity_grindstone",
+      "waiting_for": "Doc 11 (`Combat, Ballistics & Stealth`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 11"
+    },
+    "IsoThumpable": {
+      "id": "IsoThumpable",
+      "waiting_for": "Doc 12 (`Base Building & Fortifications`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 12"
+    },
+    "Clay Brick": {
+      "id": "Clay Brick",
+      "waiting_for": "Doc 12 (`Base Building & Fortifications`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 12"
+    },
+    "Clay Shingle": {
+      "id": "Clay Shingle",
+      "waiting_for": "Doc 12 (`Base Building & Fortifications`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 12"
+    },
+    "Document 04: project_zomboid_v42_professions_and_traits_bible.md": {
+      "id": "Document 04: project_zomboid_v42_professions_and_traits_bible.md",
+      "waiting_for": "Doc 12 (`Base Building & Fortifications`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 12"
+    },
+    "pz_b42_professions_traits_database.json": {
+      "id": "pz_b42_professions_traits_database.json",
+      "waiting_for": "Doc 12 (`Base Building & Fortifications`)",
+      "first_referenced_in": "Doc 03",
+      "resolved": true,
+      "resolved_in_doc": "Doc 12"
+    },
+    "vehicle:burglar_hotwire_day1": {
+      "id": "vehicle:burglar_hotwire_day1",
+      "waiting_for": "Doc 06 (`Vehicles & Mechanics Handbook`)",
+      "first_referenced_in": "Doc 04",
+      "resolved": true,
+      "resolved_in_doc": "Doc 06"
+    },
+    "vehicle:mechanics_vehicle_knowledge": {
+      "id": "vehicle:mechanics_vehicle_knowledge",
+      "waiting_for": "Doc 06 (`Vehicles & Mechanics Handbook`)",
+      "first_referenced_in": "Doc 04",
+      "resolved": true,
+      "resolved_in_doc": "Doc 06"
+    },
+    "vehicle:sunday_driver_torque_cap_30mph": {
+      "id": "vehicle:sunday_driver_torque_cap_30mph",
+      "waiting_for": "Doc 06 (`Vehicles & Mechanics Handbook`)",
+      "first_referenced_in": "Doc 04",
+      "resolved": true,
+      "resolved_in_doc": "Doc 06"
+    },
+    "forage:parkranger_herbalist_identification": {
+      "id": "forage:parkranger_herbalist_identification",
+      "waiting_for": "Doc 08 (`Farming, Trapping, Fishing & Wilderness Survival`)",
+      "first_referenced_in": "Doc 04",
+      "resolved": true,
+      "resolved_in_doc": "Doc 08"
+    },
+    "forage:short_sighted_search_radius_penalty": {
+      "id": "forage:short_sighted_search_radius_penalty",
+      "waiting_for": "Doc 08 (`Farming, Trapping, Fishing & Wilderness Survival`)",
+      "first_referenced_in": "Doc 04",
+      "resolved": true,
+      "resolved_in_doc": "Doc 08"
+    },
+    "skill:husbandry_mechanics": {
+      "id": "skill:husbandry_mechanics",
+      "waiting_for": "Doc 08 (`Farming, Trapping, Fishing & Wilderness Survival`)",
+      "first_referenced_in": "Doc 04",
+      "resolved": true,
+      "resolved_in_doc": "Doc 08"
+    },
+    "combat:keen_hearing_rear_vision_circle": {
+      "id": "combat:keen_hearing_rear_vision_circle",
+      "waiting_for": "Doc 11 (`Combat, Ballistics & Stealth`)",
+      "first_referenced_in": "Doc 04",
+      "resolved": true,
+      "resolved_in_doc": "Doc 11"
+    },
+    "combat:clumsy_trip_vault_probability": {
+      "id": "combat:clumsy_trip_vault_probability",
+      "waiting_for": "Doc 11 (`Combat, Ballistics & Stealth`)",
+      "first_referenced_in": "Doc 04",
+      "resolved": true,
+      "resolved_in_doc": "Doc 11"
+    },
+    "combat:desensitized_ballistic_accuracy_preservation": {
+      "id": "combat:desensitized_ballistic_accuracy_preservation",
+      "waiting_for": "Doc 11 (`Combat, Ballistics & Stealth`)",
+      "first_referenced_in": "Doc 04",
+      "resolved": true,
+      "resolved_in_doc": "Doc 11"
+    },
+    "build:handy_structure_hp_and_speed_bonus": {
+      "id": "build:handy_structure_hp_and_speed_bonus",
+      "waiting_for": "Doc 12 (`Base Building & Fortifications`)",
+      "first_referenced_in": "Doc 04",
+      "resolved": true,
+      "resolved_in_doc": "Doc 12"
+    },
+    "med:smoker_stress_accumulation_rate": {
+      "id": "med:smoker_stress_accumulation_rate",
+      "waiting_for": "Doc 13 (`Medical, Surgery & Health`)",
+      "first_referenced_in": "Doc 04",
+      "resolved": true,
+      "resolved_in_doc": "Doc 13"
+    },
+    "med:slow_healer_wound_recovery_factor": {
+      "id": "med:slow_healer_wound_recovery_factor",
+      "waiting_for": "Doc 13 (`Medical, Surgery & Health`)",
+      "first_referenced_in": "Doc 04",
+      "resolved": true,
+      "resolved_in_doc": "Doc 13"
+    },
+    "med:prone_to_illness_infection_rate": {
+      "id": "med:prone_to_illness_infection_rate",
+      "waiting_for": "Doc 13 (`Medical, Surgery & Health`)",
+      "first_referenced_in": "Doc 04",
+      "resolved": true,
+      "resolved_in_doc": "Doc 13"
+    },
+    "meta:underweight_80kg_weight_gain_calorie_derivative": {
+      "id": "meta:underweight_80kg_weight_gain_calorie_derivative",
+      "waiting_for": "Doc 14 (`Meta Secrets & World Mysteries`)",
+      "first_referenced_in": "Doc 04",
+      "resolved": true,
+      "resolved_in_doc": "Doc 14"
+    },
+    "vehicle:parking_lot_key_and_siphon_mechanics": {
+      "id": "vehicle:parking_lot_key_and_siphon_mechanics",
+      "waiting_for": "Doc 06 (`Vehicles & Mechanics Handbook`)",
+      "first_referenced_in": "Doc 05",
+      "resolved": true,
+      "resolved_in_doc": "Doc 06"
+    },
+    "forage:creek_clay_and_flint_coordinates": {
+      "id": "forage:creek_clay_and_flint_coordinates",
+      "waiting_for": "Doc 08 (`Farming, Trapping, Fishing & Wilderness Survival`)",
+      "first_referenced_in": "Doc 05",
+      "resolved": true,
+      "resolved_in_doc": "Doc 08"
+    },
+    "combat:m16_and_shotgun_ballistic_profiles": {
+      "id": "combat:m16_and_shotgun_ballistic_profiles",
+      "waiting_for": "Doc 11 (`Combat, Ballistics & Stealth`)",
+      "first_referenced_in": "Doc 05",
+      "resolved": true,
+      "resolved_in_doc": "Doc 11"
+    },
+    "build:survivor_house_barricaded_planks_hp": {
+      "id": "build:survivor_house_barricaded_planks_hp",
+      "waiting_for": "Doc 12 (`Base Building & Fortifications`)",
+      "first_referenced_in": "Doc 05",
+      "resolved": true,
+      "resolved_in_doc": "Doc 12"
+    },
+    "meta:post_day60_katana_zombie_spawning_rule": {
+      "id": "meta:post_day60_katana_zombie_spawning_rule",
+      "waiting_for": "Doc 14 (`Meta Secrets & World Mysteries`)",
+      "first_referenced_in": "Doc 05",
+      "resolved": true,
+      "resolved_in_doc": "Doc 14"
+    },
+    "husbandry:livestock_trailer_loading": {
+      "id": "husbandry:livestock_trailer_loading",
+      "waiting_for": "Doc 08 (`Farming, Trapping, Fishing & Wilderness Survival`)",
+      "first_referenced_in": "Doc 06",
+      "resolved": true,
+      "resolved_in_doc": "Doc 08"
+    },
+    "climate:winter_subzero_engine_cold_start_modifier": {
+      "id": "climate:winter_subzero_engine_cold_start_modifier",
+      "waiting_for": "Doc 09 (`Climate, Seasons & World Erosion`)",
+      "first_referenced_in": "Doc 06",
+      "resolved": true,
+      "resolved_in_doc": "Doc 09"
+    },
+    "sandbox:vehicle_spawn_rate_and_condition_settings": {
+      "id": "sandbox:vehicle_spawn_rate_and_condition_settings",
+      "waiting_for": "Doc 10 (`Sandbox Customization & Rules Bible`)",
+      "first_referenced_in": "Doc 06",
+      "resolved": true,
+      "resolved_in_doc": "Doc 10"
+    },
+    "combat:vehicle_window_shooting_and_ballistic_penetration": {
+      "id": "combat:vehicle_window_shooting_and_ballistic_penetration",
+      "waiting_for": "Doc 11 (`Combat, Ballistics & Stealth`)",
+      "first_referenced_in": "Doc 06",
+      "resolved": true,
+      "resolved_in_doc": "Doc 11"
+    },
+    "med:high_speed_crash_bone_fracture_and_glass_laceration": {
+      "id": "med:high_speed_crash_bone_fracture_and_glass_laceration",
+      "waiting_for": "Doc 13 (`Medical, Surgery & Health`)",
+      "first_referenced_in": "Doc 06",
+      "resolved": true,
+      "resolved_in_doc": "Doc 13"
+    },
+    "meta:randomized_vehicle_stories_highway_accidents": {
+      "id": "meta:randomized_vehicle_stories_highway_accidents",
+      "waiting_for": "Doc 14 (`Meta Secrets & World Mysteries`)",
+      "first_referenced_in": "Doc 06",
+      "resolved": true,
+      "resolved_in_doc": "Doc 14"
+    },
+    "climate:winter_subzero_lake_freeze_and_crop_frost": {
+      "id": "climate:winter_subzero_lake_freeze_and_crop_frost",
+      "waiting_for": "Doc 09 (`Climate, Seasons & World Erosion`)",
+      "first_referenced_in": "Doc 08",
+      "resolved": true,
+      "resolved_in_doc": "Doc 09"
+    },
+    "sandbox:crop_growth_speed_and_nature_abundance_multipliers": {
+      "id": "sandbox:crop_growth_speed_and_nature_abundance_multipliers",
+      "waiting_for": "Doc 10 (`Sandbox Customization & Rules Bible`)",
+      "first_referenced_in": "Doc 08",
+      "resolved": true,
+      "resolved_in_doc": "Doc 10"
+    },
+    "build:livestock_pen_fence_hp_and_compost_bin": {
+      "id": "build:livestock_pen_fence_hp_and_compost_bin",
+      "waiting_for": "Doc 12 (`Base Building & Fortifications`)",
+      "first_referenced_in": "Doc 08",
+      "resolved": true,
+      "resolved_in_doc": "Doc 12"
+    },
+    "med:herbal_poultice_fracture_and_poison_derivative": {
+      "id": "med:herbal_poultice_fracture_and_poison_derivative",
+      "waiting_for": "Doc 13 (`Medical, Surgery & Health`)",
+      "first_referenced_in": "Doc 08",
+      "resolved": true,
+      "resolved_in_doc": "Doc 13"
+    },
+    "meta:winter_survival_dense_calorie_equilibrium": {
+      "id": "meta:winter_survival_dense_calorie_equilibrium",
+      "waiting_for": "Doc 14 (`Meta Secrets & World Mysteries`)",
+      "first_referenced_in": "Doc 08",
+      "resolved": true,
+      "resolved_in_doc": "Doc 14"
+    },
+    "sandbox:global_temperature_and_rain_modifiers": {
+      "id": "sandbox:global_temperature_and_rain_modifiers",
+      "waiting_for": "Doc 10 (`Sandbox Customization & Rules Bible`)",
+      "first_referenced_in": "Doc 09",
+      "resolved": true,
+      "resolved_in_doc": "Doc 10"
+    },
+    "combat:tall_grass_crawler_obscuration_and_storm_stealth": {
+      "id": "combat:tall_grass_crawler_obscuration_and_storm_stealth",
+      "waiting_for": "Doc 11 (`Combat, Ballistics & Stealth`)",
+      "first_referenced_in": "Doc 09",
+      "resolved": true,
+      "resolved_in_doc": "Doc 11"
+    },
+    "build:rain_collector_barrel_and_antique_stove_heating": {
+      "id": "build:rain_collector_barrel_and_antique_stove_heating",
+      "waiting_for": "Doc 12 (`Base Building & Fortifications`)",
+      "first_referenced_in": "Doc 09",
+      "resolved": true,
+      "resolved_in_doc": "Doc 12"
+    },
+    "med:core_temp_fatal_hp_drain_and_cold_medicine": {
+      "id": "med:core_temp_fatal_hp_drain_and_cold_medicine",
+      "waiting_for": "Doc 13 (`Medical, Surgery & Health`)",
+      "first_referenced_in": "Doc 09",
+      "resolved": true,
+      "resolved_in_doc": "Doc 13"
+    },
+    "meta:shivering_energy_drain_and_sub_80kg_deficit": {
+      "id": "meta:shivering_energy_drain_and_sub_80kg_deficit",
+      "waiting_for": "Doc 14 (`Meta Secrets & World Mysteries`)",
+      "first_referenced_in": "Doc 09",
+      "resolved": true,
+      "resolved_in_doc": "Doc 14"
+    },
+    "combat:multi_hit_cleave_mechanics_and_sprinter_combat": {
+      "id": "combat:multi_hit_cleave_mechanics_and_sprinter_combat",
+      "waiting_for": "Doc 11 (`Combat, Ballistics & Stealth`)",
+      "first_referenced_in": "Doc 10",
+      "resolved": true,
+      "resolved_in_doc": "Doc 11"
+    },
+    "build:door_lock_cognition_defense_and_generator_grid": {
+      "id": "build:door_lock_cognition_defense_and_generator_grid",
+      "waiting_for": "Doc 12 (`Base Building & Fortifications`)",
+      "first_referenced_in": "Doc 10",
+      "resolved": true,
+      "resolved_in_doc": "Doc 12"
+    },
+    "med:infection_mortality_8tiers_clinical_progression": {
+      "id": "med:infection_mortality_8tiers_clinical_progression",
+      "waiting_for": "Doc 13 (`Medical, Surgery & Health`)",
+      "first_referenced_in": "Doc 10",
+      "resolved": true,
+      "resolved_in_doc": "Doc 13"
+    },
+    "meta:house_alarm_and_sleeping_event_audio_radius": {
+      "id": "meta:house_alarm_and_sleeping_event_audio_radius",
+      "waiting_for": "Doc 14 (`Meta Secrets & World Mysteries`)",
+      "first_referenced_in": "Doc 10",
+      "resolved": true,
+      "resolved_in_doc": "Doc 14"
+    },
+    "build:low_wooden_fence_choke_point_hp": {
+      "id": "build:low_wooden_fence_choke_point_hp",
+      "waiting_for": "Doc 12 (`Base Building & Fortifications`)",
+      "first_referenced_in": "Doc 11",
+      "resolved": true,
+      "resolved_in_doc": "Doc 12"
+    },
+    "med:bullet_removal_surgery_and_laceration": {
+      "id": "med:bullet_removal_surgery_and_laceration",
+      "waiting_for": "Doc 13 (`Medical, Surgery & Health`)",
+      "first_referenced_in": "Doc 11",
+      "resolved": true,
+      "resolved_in_doc": "Doc 13"
+    },
+    "meta:highway_accident_m16_zombie_spawning": {
+      "id": "meta:highway_accident_m16_zombie_spawning",
+      "waiting_for": "Doc 14 (`Meta Secrets & World Mysteries`)",
+      "first_referenced_in": "Doc 11",
+      "resolved": true,
+      "resolved_in_doc": "Doc 14"
+    },
+    "med:generator_explosion_burn_and_co_asphyxiation": {
+      "id": "med:generator_explosion_burn_and_co_asphyxiation",
+      "waiting_for": "Doc 13 (`Medical, Surgery & Health`)",
+      "first_referenced_in": "Doc 12",
+      "resolved": true,
+      "resolved_in_doc": "Doc 13"
+    },
+    "meta:floorboard_stash_treasure_and_burned_houses": {
+      "id": "meta:floorboard_stash_treasure_and_burned_houses",
+      "waiting_for": "Doc 14 (`Meta Secrets & World Mysteries`)",
+      "first_referenced_in": "Doc 12",
+      "resolved": true,
+      "resolved_in_doc": "Doc 14"
+    },
+    "meta:metabolism_calorie_derivative_around_80kg": {
+      "id": "meta:metabolism_calorie_derivative_around_80kg",
+      "waiting_for": "Doc 14 (`Meta Secrets & World Mysteries`)",
+      "first_referenced_in": "Doc 13",
+      "resolved": true,
+      "resolved_in_doc": "Doc 14"
+    }
+  }
+}

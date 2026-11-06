@@ -1,0 +1,1257 @@
+{
+  "package_name": "db_extract_session4_origins_traits_and_medicine",
+  "description": "Kho dữ liệu 25 Thân Phận (Nghề Nghiệp), 95 Đặc Điểm (Traits) & Mẫu Vật Phẩm Dược Liệu/Trang Bị Cổ Phong",
+  "professions_count": 25,
+  "professions": [
+    {
+      "profession_id": "base:burglar",
+      "name": "Burglar",
+      "point_cost": -6,
+      "xp_boosts": {
+        "Nimble": 2,
+        "Sneak": 2,
+        "Lightfoot": 2
+      },
+      "granted_traits": [
+        "base:burglar"
+      ]
+    },
+    {
+      "profession_id": "base:burgerflipper",
+      "name": "Burger Flipper",
+      "point_cost": 2,
+      "xp_boosts": {
+        "Cooking": 2,
+        "Maintenance": 1,
+        "SmallBlade": 1
+      },
+      "granted_traits": [
+        "base:cook2"
+      ]
+    },
+    {
+      "profession_id": "base:carpenter",
+      "name": "Carpenter",
+      "point_cost": -2,
+      "xp_boosts": {
+        "Woodwork": 4,
+        "Carving": 1,
+        "SmallBlunt": 1,
+        "Masonry": 1,
+        "Maintenance": 1
+      },
+      "granted_traits": []
+    },
+    {
+      "profession_id": "base:chef",
+      "name": "Chef",
+      "point_cost": -2,
+      "xp_boosts": {
+        "Cooking": 4,
+        "Maintenance": 1,
+        "SmallBlade": 1,
+        "Butchering": 2
+      },
+      "granted_traits": [
+        "base:cook2"
+      ]
+    },
+    {
+      "profession_id": "base:constructionworker",
+      "name": "Construction Worker",
+      "point_cost": -2,
+      "xp_boosts": {
+        "SmallBlunt": 2,
+        "Blunt": 1,
+        "Masonry": 2,
+        "Woodwork": 1,
+        "Maintenance": 1
+      },
+      "granted_traits": []
+    },
+    {
+      "profession_id": "base:doctor",
+      "name": "Doctor",
+      "point_cost": 0,
+      "xp_boosts": {
+        "Doctor": 6,
+        "SmallBlade": 1
+      },
+      "granted_traits": []
+    },
+    {
+      "profession_id": "base:electrician",
+      "name": "Electrician",
+      "point_cost": -2,
+      "xp_boosts": {
+        "Electricity": 5
+      },
+      "granted_traits": []
+    },
+    {
+      "profession_id": "base:engineer",
+      "name": "Engineer",
+      "point_cost": -4,
+      "xp_boosts": {
+        "Electricity": 1,
+        "Woodwork": 1,
+        "Masonry": 1
+      },
+      "granted_traits": []
+    },
+    {
+      "profession_id": "base:farmer",
+      "name": "Farmer",
+      "point_cost": 0,
+      "xp_boosts": {
+        "Farming": 4,
+        "Husbandry": 1,
+        "Strength": 1
+      },
+      "granted_traits": []
+    },
+    {
+      "profession_id": "base:fireofficer",
+      "name": "Firefighter",
+      "point_cost": 0,
+      "xp_boosts": {
+        "Sprinting": 1,
+        "Strength": 1,
+        "Fitness": 1,
+        "Axe": 1
+      },
+      "granted_traits": []
+    },
+    {
+      "profession_id": "base:fisherman",
+      "name": "Fishing Guide",
+      "point_cost": -2,
+      "xp_boosts": {
+        "Fishing": 3,
+        "PlantScavenging": 1,
+        "Butchering": 1
+      },
+      "granted_traits": []
+    },
+    {
+      "profession_id": "base:fitnessinstructor",
+      "name": "Fitness Instructor",
+      "point_cost": -6,
+      "xp_boosts": {
+        "Fitness": 3,
+        "Sprinting": 2,
+        "Strength": 1
+      },
+      "granted_traits": [
+        "base:nutritionist2"
+      ]
+    },
+    {
+      "profession_id": "base:lumberjack",
+      "name": "Lumberjack",
+      "point_cost": 0,
+      "xp_boosts": {
+        "Axe": 2,
+        "Strength": 1,
+        "Maintenance": 1
+      },
+      "granted_traits": [
+        "base:axeman"
+      ]
+    },
+    {
+      "profession_id": "base:mechanics",
+      "name": "Mechanic",
+      "point_cost": -4,
+      "xp_boosts": {
+        "Mechanics": 4,
+        "MetalWelding": 1
+      },
+      "granted_traits": [
+        "base:mechanics2"
+      ]
+    },
+    {
+      "profession_id": "base:metalworker",
+      "name": "Welder",
+      "point_cost": -4,
+      "xp_boosts": {
+        "MetalWelding": 4
+      },
+      "granted_traits": []
+    },
+    {
+      "profession_id": "base:nurse",
+      "name": "Nurse",
+      "point_cost": 0,
+      "xp_boosts": {
+        "Doctor": 3,
+        "Lightfoot": 1,
+        "Fitness": 1
+      },
+      "granted_traits": [
+        "base:nightowl"
+      ]
+    },
+    {
+      "profession_id": "base:parkranger",
+      "name": "Park Ranger",
+      "point_cost": -4,
+      "xp_boosts": {
+        "Trapping": 1,
+        "Doctor": 1,
+        "PlantScavenging": 1,
+        "FlintKnapping": 1,
+        "Carving": 1
+      },
+      "granted_traits": [
+        "base:herbalist_prof"
+      ]
+    },
+    {
+      "profession_id": "base:policeofficer",
+      "name": "Police Officer",
+      "point_cost": -4,
+      "xp_boosts": {
+        "Aiming": 4,
+        "Reloading": 1,
+        "Nimble": 1
+      },
+      "granted_traits": []
+    },
+    {
+      "profession_id": "base:rancher",
+      "name": "Rancher",
+      "point_cost": 0,
+      "xp_boosts": {
+        "Husbandry": 4,
+        "Butchering": 3,
+        "Fitness": 1
+      },
+      "granted_traits": []
+    },
+    {
+      "profession_id": "base:repairman",
+      "name": "DIY Expert",
+      "point_cost": -2,
+      "xp_boosts": {
+        "Woodwork": 1,
+        "Maintenance": 2,
+        "SmallBlunt": 1,
+        "Masonry": 1
+      },
+      "granted_traits": [
+        "base:inventive_prof"
+      ]
+    },
+    {
+      "profession_id": "base:securityguard",
+      "name": "Security Guard",
+      "point_cost": -2,
+      "xp_boosts": {
+        "Sprinting": 2,
+        "Lightfoot": 1,
+        "SmallBlunt": 1
+      },
+      "granted_traits": [
+        "base:nightowl"
+      ]
+    },
+    {
+      "profession_id": "base:smither",
+      "name": "Blacksmith",
+      "point_cost": -6,
+      "xp_boosts": {
+        "Blacksmith": 4,
+        "Maintenance": 1,
+        "SmallBlunt": 1
+      },
+      "granted_traits": [
+        "base:blacksmith2"
+      ]
+    },
+    {
+      "profession_id": "base:tailor",
+      "name": "Tailor",
+      "point_cost": 2,
+      "xp_boosts": {
+        "Tailoring": 4
+      },
+      "granted_traits": []
+    },
+    {
+      "profession_id": "base:unemployed",
+      "name": "Custom Occupation",
+      "point_cost": 8,
+      "xp_boosts": {},
+      "granted_traits": []
+    },
+    {
+      "profession_id": "base:veteran",
+      "name": "Veteran",
+      "point_cost": -8,
+      "xp_boosts": {
+        "Aiming": 2,
+        "Reloading": 2
+      },
+      "granted_traits": [
+        "base:desensitized"
+      ]
+    }
+  ],
+  "traits_count": 95,
+  "traits": [
+    {
+      "trait_id": "base:adrenalinejunkie",
+      "name": "Adrenaline Junkie",
+      "point_cost": 4,
+      "description": "Moves faster when highly panicked.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:agoraphobic",
+      "name": "Agoraphobic",
+      "point_cost": -4,
+      "description": "Gets panicked when outdoors.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:allthumbs",
+      "name": "All Thumbs",
+      "point_cost": -2,
+      "description": "Transfers inventory items slowly. Can't craft anything while walking.<br>Slower rope climbing speed, and higher chance of falling.<br>Slower weapon shouldering time.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:artisan",
+      "name": "Artisan",
+      "point_cost": 2,
+      "description": "Better at pottery and glass crafts.",
+      "xp_boosts": {
+        "Glassmaking": 1,
+        "Pottery": 1
+      }
+    },
+    {
+      "trait_id": "base:asthmatic",
+      "name": "Short of Breath",
+      "point_cost": -5,
+      "description": "Faster endurance loss.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:athletic",
+      "name": "Athletic",
+      "point_cost": 10,
+      "description": "Faster running speed.<br>Can run for longer without tiring.",
+      "xp_boosts": {
+        "Fitness": 4
+      }
+    },
+    {
+      "trait_id": "base:axeman",
+      "name": "Ax-pert",
+      "point_cost": 0,
+      "description": "Better at chopping trees.<br>Faster axe swing.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:baseballplayer",
+      "name": "Baseball Player",
+      "point_cost": 4,
+      "description": "",
+      "xp_boosts": {
+        "Blunt": 1
+      }
+    },
+    {
+      "trait_id": "base:blacksmith",
+      "name": "Blacksmith Knowledge",
+      "point_cost": 6,
+      "description": "Can use an anvil to create metal items.",
+      "xp_boosts": {
+        "Blacksmith": 2,
+        "Maintenance": 1
+      }
+    },
+    {
+      "trait_id": "base:blacksmith2",
+      "name": "Blacksmith Knowledge",
+      "point_cost": 0,
+      "description": "Can use an anvil to create metal items.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:brave",
+      "name": "Brave",
+      "point_cost": 4,
+      "description": "Less prone to becoming panicked.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:brawler",
+      "name": "Brawler",
+      "point_cost": 6,
+      "description": "",
+      "xp_boosts": {
+        "Axe": 1,
+        "Blunt": 1
+      }
+    },
+    {
+      "trait_id": "base:burglar",
+      "name": "Burglar",
+      "point_cost": 0,
+      "description": "Can hotwire vehicles. Less chance of breaking window locks.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:claustrophobic",
+      "name": "Claustrophobic",
+      "point_cost": -4,
+      "description": "Gets panicked when in small indoor rooms.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:clumsy",
+      "name": "Clumsy",
+      "point_cost": -2,
+      "description": "Makes more noise when moving.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:conspicuous",
+      "name": "Conspicuous",
+      "point_cost": -4,
+      "description": "More likely to be spotted by zombies.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:cook",
+      "name": "Keen Cook",
+      "point_cost": 3,
+      "description": "Knows cooking recipes.",
+      "xp_boosts": {
+        "Cooking": 2,
+        "Butchering": 1
+      }
+    },
+    {
+      "trait_id": "base:cook2",
+      "name": "Keen Cook",
+      "point_cost": 0,
+      "description": "Knows cooking recipes.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:cowardly",
+      "name": "Cowardly",
+      "point_cost": -2,
+      "description": "Especially prone to becoming panicked.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:crafty",
+      "name": "Crafty",
+      "point_cost": 3,
+      "description": "Increased XP gains for Crafting skills.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:deaf",
+      "name": "Deaf",
+      "point_cost": -12,
+      "description": "Can't hear sound.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:desensitized",
+      "name": "Desensitized",
+      "point_cost": 0,
+      "description": "Far less prone to panic. <br>Ignore discomfort.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:dextrous",
+      "name": "Dextrous",
+      "point_cost": 2,
+      "description": "Transfers inventory items quickly.<br>Faster rope climbing speed, and less chance of falling.<br>Faster weapon shouldering time.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:disorganized",
+      "name": "Disorganized",
+      "point_cost": -6,
+      "description": "Decreased container inventory capacity.<br>Affects world containers and bags, but not your main inventory.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:eagleeyed",
+      "name": "Eagle Eyed",
+      "point_cost": 4,
+      "description": "Faster visibility fade.<br>Higher visibility arc.<br>Weapon sights more effective at long range.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:emaciated",
+      "name": "Emaciated",
+      "point_cost": -10,
+      "description": "Low strength, low endurance and prone to injury.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:fasthealer",
+      "name": "Fast Healer",
+      "point_cost": 6,
+      "description": "Recovers quickly from injuries and illness.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:fastlearner",
+      "name": "Fast Learner",
+      "point_cost": 6,
+      "description": "Increased XP gains.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:fastreader",
+      "name": "Fast Reader",
+      "point_cost": 2,
+      "description": "Takes less time to read books.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:feeble",
+      "name": "Weak",
+      "point_cost": -6,
+      "description": "Less knockback from melee weapons.<br>Decreased carrying weight.",
+      "xp_boosts": {
+        "Strength": -2
+      }
+    },
+    {
+      "trait_id": "base:firstaid",
+      "name": "First Aider",
+      "point_cost": 2,
+      "description": "",
+      "xp_boosts": {
+        "Doctor": 1
+      }
+    },
+    {
+      "trait_id": "base:fishing",
+      "name": "Angler",
+      "point_cost": 4,
+      "description": "",
+      "xp_boosts": {
+        "Fishing": 1
+      }
+    },
+    {
+      "trait_id": "base:fit",
+      "name": "Fit",
+      "point_cost": 6,
+      "description": "",
+      "xp_boosts": {
+        "Fitness": 2
+      }
+    },
+    {
+      "trait_id": "base:gardener",
+      "name": "Gardener",
+      "point_cost": 2,
+      "description": "",
+      "xp_boosts": {
+        "Farming": 1
+      }
+    },
+    {
+      "trait_id": "base:graceful",
+      "name": "Graceful",
+      "point_cost": 4,
+      "description": "Makes less noise when moving.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:gymnast",
+      "name": "Gymnast",
+      "point_cost": 5,
+      "description": "",
+      "xp_boosts": {
+        "Lightfoot": 1,
+        "Nimble": 1
+      }
+    },
+    {
+      "trait_id": "base:handy",
+      "name": "Handy",
+      "point_cost": 8,
+      "description": "Faster and stronger constructions.",
+      "xp_boosts": {
+        "Carving": 1,
+        "Maintenance": 1,
+        "Masonry": 1,
+        "Woodwork": 1
+      }
+    },
+    {
+      "trait_id": "base:hardofhearing",
+      "name": "Hard of Hearing",
+      "point_cost": -4,
+      "description": "Smaller perception radius.<br>Smaller hearing range.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:heartyappetite",
+      "name": "Hearty Appetite",
+      "point_cost": -4,
+      "description": "Needs to eat more regularly.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:hemophobic",
+      "name": "Fear of Blood",
+      "point_cost": -5,
+      "description": "Panic when performing first aid on self.<br>Cannot perform first aid on others.<br>Gets stressed when bloody.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:herbalist",
+      "name": "Herbalist",
+      "point_cost": 4,
+      "description": "Can find medicinal herbs and craft medicines and poultices from them.",
+      "xp_boosts": {
+        "PlantScavenging": 1
+      }
+    },
+    {
+      "trait_id": "base:herbalist_prof",
+      "name": "Herbalist",
+      "point_cost": 0,
+      "description": "Can find medicinal herbs and craft medicines and poultices from them.",
+      "xp_boosts": {
+        "PlantScavenging": 1
+      }
+    },
+    {
+      "trait_id": "base:hiker",
+      "name": "Hiker",
+      "point_cost": 5,
+      "description": "",
+      "xp_boosts": {
+        "PlantScavenging": 1,
+        "Trapping": 1
+      }
+    },
+    {
+      "trait_id": "base:highthirst",
+      "name": "High Thirst",
+      "point_cost": -2,
+      "description": "Needs more water to survive.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:hunter",
+      "name": "Hunter",
+      "point_cost": 8,
+      "description": "",
+      "xp_boosts": {
+        "Aiming": 1,
+        "Tracking": 1,
+        "Sneak": 1,
+        "SmallBlade": 1,
+        "Butchering": 1
+      }
+    },
+    {
+      "trait_id": "base:tinkerer",
+      "name": "Tinkerer",
+      "point_cost": 4,
+      "description": "",
+      "xp_boosts": {
+        "Maintenance": 1
+      }
+    },
+    {
+      "trait_id": "base:target_shooter",
+      "name": "Target Shooter",
+      "point_cost": 5,
+      "description": "",
+      "xp_boosts": {
+        "Aiming": 1
+      }
+    },
+    {
+      "trait_id": "base:illiterate",
+      "name": "Illiterate",
+      "point_cost": -10,
+      "description": "Cannot read any books or in-world text.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:inconspicuous",
+      "name": "Inconspicuous",
+      "point_cost": 4,
+      "description": "Less likely to be spotted by zombies.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:inventive",
+      "name": "Inventive",
+      "point_cost": 2,
+      "description": "Has lower skill level requirements to research recipes from items or auto learn recipes.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:inventive_prof",
+      "name": "Inventive",
+      "point_cost": 0,
+      "description": "Has lower skill level requirements to research recipes from items or auto learn recipes.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:irongut",
+      "name": "Iron Gut",
+      "point_cost": 2,
+      "description": "Less chance to have food illness.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:insomniac",
+      "name": "Restless Sleeper",
+      "point_cost": -6,
+      "description": "Slow loss of tiredness while sleeping.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:jogger",
+      "name": "Runner",
+      "point_cost": 4,
+      "description": "",
+      "xp_boosts": {
+        "Sprinting": 1
+      }
+    },
+    {
+      "trait_id": "base:keenhearing",
+      "name": "Keen Hearing",
+      "point_cost": 6,
+      "description": "Larger perception radius.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:lighteater",
+      "name": "Light Eater",
+      "point_cost": 2,
+      "description": "Needs to eat less regularly.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:lowthirst",
+      "name": "Low Thirst",
+      "point_cost": 2,
+      "description": "Needs less water to survive.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:marksman",
+      "name": "Marksman",
+      "point_cost": 0,
+      "description": "Improved gun accuracy and damage.<br>Quicker reload.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:mason",
+      "name": "Mason",
+      "point_cost": 2,
+      "description": "Better at building stone and brick constructions.",
+      "xp_boosts": {
+        "Masonry": 2
+      }
+    },
+    {
+      "trait_id": "base:mechanics",
+      "name": "Vehicle Knowledge",
+      "point_cost": 3,
+      "description": "Has knowledge of common and commercial vehicle models, and repairs.",
+      "xp_boosts": {
+        "Mechanics": 1
+      }
+    },
+    {
+      "trait_id": "base:mechanics2",
+      "name": "Vehicle Knowledge",
+      "point_cost": 0,
+      "description": "Has knowledge of common and commercial vehicle models, and repairs.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:needslesssleep",
+      "name": "Wakeful",
+      "point_cost": 3,
+      "description": "Needs less sleep.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:needsmoresleep",
+      "name": "Sleepyhead",
+      "point_cost": -4,
+      "description": "Needs more sleep.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:nightowl",
+      "name": "Night Owl",
+      "point_cost": 0,
+      "description": "Requires little sleep.<br>Stays extra alert even when sleeping.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:nightvision",
+      "name": "Cat's Eyes",
+      "point_cost": 3,
+      "description": "Better vision at night.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:nutritionist",
+      "name": "Nutritionist",
+      "point_cost": 2,
+      "description": "Can see the nutritional values of any food.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:nutritionist2",
+      "name": "Nutritionist",
+      "point_cost": 0,
+      "description": "Can see the nutritional values of any food.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:obese",
+      "name": "Very High Weight",
+      "point_cost": 0,
+      "description": "Reduced running speed, very low endurance and prone to injury.",
+      "xp_boosts": {
+        "Fitness": -2
+      }
+    },
+    {
+      "trait_id": "base:organized",
+      "name": "Organized",
+      "point_cost": 4,
+      "description": "Increased container inventory capacity.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:outdoorsman",
+      "name": "Outdoorsy",
+      "point_cost": 2,
+      "description": "Less affected by harsh weather conditions.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:overweight",
+      "name": "High Weight",
+      "point_cost": 0,
+      "description": "Reduced running speed, low endurance and prone to injury.",
+      "xp_boosts": {
+        "Fitness": -1
+      }
+    },
+    {
+      "trait_id": "base:pacifist",
+      "name": "Reluctant Fighter",
+      "point_cost": -5,
+      "description": "Decreased combat XP gains.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:pronetoillness",
+      "name": "Prone to Illness",
+      "point_cost": -4,
+      "description": "More prone to disease.<br>Faster rate of zombification.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:resilient",
+      "name": "Resilient",
+      "point_cost": 4,
+      "description": "Less prone to disease.<br>Slower rate of zombification.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:formerscout",
+      "name": "Former Scout",
+      "point_cost": 6,
+      "description": "Start fires faster.",
+      "xp_boosts": {
+        "Doctor": 1,
+        "PlantScavenging": 1,
+        "Fishing": 1
+      }
+    },
+    {
+      "trait_id": "base:shortsighted",
+      "name": "Short Sighted",
+      "point_cost": -2,
+      "description": "Smaller view distance.<br>Slower visibility fade.<br>Weapon sights less effective.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:slowhealer",
+      "name": "Slow Healer",
+      "point_cost": -3,
+      "description": "Recovers slowly from injuries and illness.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:slowreader",
+      "name": "Slow Reader",
+      "point_cost": -2,
+      "description": "Takes longer to read books and other literature.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:slowlearner",
+      "name": "Slow Learner",
+      "point_cost": -6,
+      "description": "Decreased XP gains.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:smoker",
+      "name": "Smoker",
+      "point_cost": -3,
+      "description": "Unhappiness rises when tobacco is not smoked.<br>Stress and unhappiness decrease after smoking tobacco.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:speeddemon",
+      "name": "Speed Demon",
+      "point_cost": 1,
+      "description": "Drives very fast.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:stout",
+      "name": "Stout",
+      "point_cost": 6,
+      "description": "Extra knockback from melee weapons.<br>Increased carrying weight.",
+      "xp_boosts": {
+        "Strength": 2
+      }
+    },
+    {
+      "trait_id": "base:strong",
+      "name": "Strong",
+      "point_cost": 10,
+      "description": "Extra knockback from melee weapons.<br>Increased carrying weight.",
+      "xp_boosts": {
+        "Strength": 4
+      }
+    },
+    {
+      "trait_id": "base:sundaydriver",
+      "name": "Sunday Driver",
+      "point_cost": -1,
+      "description": "Drives very slow.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:tailor",
+      "name": "Sewer",
+      "point_cost": 4,
+      "description": "",
+      "xp_boosts": {
+        "Tailoring": 1
+      }
+    },
+    {
+      "trait_id": "base:thickskinned",
+      "name": "Thick-skinned",
+      "point_cost": 8,
+      "description": "Lower chance of being scratched or bitten.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:thinskinned",
+      "name": "Thin-skinned",
+      "point_cost": -8,
+      "description": "Higher chance of being scratched or bitten by zombies.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:underweight",
+      "name": "Low Weight",
+      "point_cost": 0,
+      "description": "Low strength, low endurance and prone to injury.",
+      "xp_boosts": {
+        "Fitness": -1
+      }
+    },
+    {
+      "trait_id": "base:unfit",
+      "name": "Unfit",
+      "point_cost": -10,
+      "description": "Very low endurance and endurance regeneration.",
+      "xp_boosts": {
+        "Fitness": -4
+      }
+    },
+    {
+      "trait_id": "base:weak",
+      "name": "Puny",
+      "point_cost": -10,
+      "description": "Far less knockback from melee weapons.<br>Extremely small carrying weight.",
+      "xp_boosts": {
+        "Strength": -5
+      }
+    },
+    {
+      "trait_id": "base:weakstomach",
+      "name": "Weak Stomach",
+      "point_cost": -2,
+      "description": "Higher chance to have food illness.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:weightgain",
+      "name": "Slow Metabolism",
+      "point_cost": -2,
+      "description": "Permanent tendency to gain weight. Starts with High Weight trait.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:weightloss",
+      "name": "Fast Metabolism",
+      "point_cost": -2,
+      "description": "Permanent tendency to lose weight. Starts with Low Weight trait.",
+      "xp_boosts": {}
+    },
+    {
+      "trait_id": "base:whittler",
+      "name": "Whittler",
+      "point_cost": 2,
+      "description": "Can carve wood and bone items.",
+      "xp_boosts": {
+        "Carving": 2
+      }
+    },
+    {
+      "trait_id": "base:wildernessknowledge",
+      "name": "Bushcrafter",
+      "point_cost": 8,
+      "description": "Can find medicinal herbs and craft medicines and poultices from them, and make simple stone and bone tools. <br> Start fires faster.",
+      "xp_boosts": {
+        "PlantScavenging": 1,
+        "FlintKnapping": 1,
+        "Maintenance": 1,
+        "Carving": 1
+      }
+    }
+  ],
+  "archetypal_representative_items": {
+    "Food": [
+      {
+        "item_id": "SugarPacket",
+        "name": "Sugar Packet",
+        "weight": 0.005,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "Ladybug",
+        "name": "Ladybug",
+        "weight": 0.01,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "Maggots",
+        "name": "Maggots",
+        "weight": 0.01,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "Pillbug",
+        "name": "Pillbug",
+        "weight": 0.01,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "Termites",
+        "name": "Termites",
+        "weight": 0.01,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "Worm",
+        "name": "Worm",
+        "weight": 0.01,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "SoybeansSeed",
+        "name": "Soybeans (Dried)",
+        "weight": 0.02,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "SugarCubes",
+        "name": "Sugar Cubes",
+        "weight": 0.02,
+        "metal_value": 0.0
+      }
+    ],
+    "Container": [
+      {
+        "item_id": "KeyRing",
+        "name": "Key Ring",
+        "weight": 0.05,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "KeyRing_CarDealer",
+        "name": "Key Ring",
+        "weight": 0.05,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "KeyRing_Large",
+        "name": "Key Ring - Large",
+        "weight": 0.05,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "KeyRing_SecurityPass",
+        "name": "Security Pass Key Ring",
+        "weight": 0.05,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "KeyRing_Forged",
+        "name": "Key Ring - Forged",
+        "weight": 0.05,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "KeyRing_Forged_Gold",
+        "name": "Key Ring - Gold",
+        "weight": 0.05,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "KeyRing_Forged_Silver",
+        "name": "Key Ring - Silver",
+        "weight": 0.05,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "Plasticbag",
+        "name": "Plastic Bag",
+        "weight": 0.1,
+        "metal_value": 0.0
+      }
+    ],
+    "Material": [
+      {
+        "item_id": "Paperclip",
+        "name": "Paperclip",
+        "weight": 0.01,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "GoldScrap",
+        "name": "Gold Fragments",
+        "weight": 0.05,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "SilverScrap",
+        "name": "Silver Fragments",
+        "weight": 0.05,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "Nails",
+        "name": "Nails",
+        "weight": 0.05,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "Screws",
+        "name": "Screws",
+        "weight": 0.05,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "SteelSlug",
+        "name": "Steel Slug",
+        "weight": 0.075,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "Thread",
+        "name": "Thread",
+        "weight": 0.1,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "DentalFloss",
+        "name": "Dental Floss",
+        "weight": 0.1,
+        "metal_value": 0.0
+      }
+    ],
+    "ProtectiveGear": [
+      {
+        "item_id": "Hat_BoxingRed",
+        "name": "Boxing Head Gear",
+        "weight": 0.0,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "Hat_BoxingBlue",
+        "name": "Boxing Head Gear",
+        "weight": 0.0,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "Hat_Army",
+        "name": "Military Helmet",
+        "weight": 0.0,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "Hat_SWAT",
+        "name": "SWAT Helmet",
+        "weight": 0.0,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "Hat_BaseballHelmet",
+        "name": "Batting Helmet",
+        "weight": 0.0,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "Hat_BaseballHelmet_KY",
+        "name": "Batting Helmet - Kentucky",
+        "weight": 0.0,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "Hat_BaseballHelmet_Rangers",
+        "name": "Batting Helmet - Riverside Rangers",
+        "weight": 0.0,
+        "metal_value": 0.0
+      },
+      {
+        "item_id": "Hat_BaseballHelmet_Z",
+        "name": "Batting Helmet - Z Hurricanes",
+        "weight": 0.0,
+        "metal_value": 0.0
+      }
+    ],
+    "Medical": []
+  }
+}

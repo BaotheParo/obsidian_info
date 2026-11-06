@@ -1,0 +1,1839 @@
+{
+  "package_name": "db_extract_session3_arsenal_and_crafting",
+  "description": "Kho dữ liệu 35 Khuôn Mẫu Vũ Khí Cốt Lõi, Hỏa Khí Đại Việt, Trạm Chế Tác & 64 Bí Tịch Cổ Thư",
+  "weapon_archetypes_count": 35,
+  "weapon_archetypes": [
+    {
+      "archetype_id": "wpn_arch_axe_tier_1",
+      "name_daiviet": "Rìu Tiền Tiêu Nhẹ",
+      "base_category": "axe",
+      "category_vietnamese": "Rìu",
+      "tier": 1,
+      "weight_kg": 1.44,
+      "damage_range": [
+        0.5,
+        0.93
+      ],
+      "crit_chance_percent": 20.6,
+      "crit_multiplier": 3.1,
+      "max_condition": 8,
+      "attack_speed": 1.07,
+      "represented_weapon_count": 9
+    },
+    {
+      "archetype_id": "wpn_arch_axe_tier_2",
+      "name_daiviet": "Rìu Tiều Phu Khai Hoang",
+      "base_category": "axe",
+      "category_vietnamese": "Rìu",
+      "tier": 2,
+      "weight_kg": 1.67,
+      "damage_range": [
+        0.64,
+        1.38
+      ],
+      "crit_chance_percent": 15.6,
+      "crit_multiplier": 4.8,
+      "max_condition": 9,
+      "attack_speed": 1.03,
+      "represented_weapon_count": 9
+    },
+    {
+      "archetype_id": "wpn_arch_axe_tier_3",
+      "name_daiviet": "Rìu Chiến Phá Trận",
+      "base_category": "axe",
+      "category_vietnamese": "Rìu",
+      "tier": 3,
+      "weight_kg": 2.39,
+      "damage_range": [
+        0.69,
+        1.54
+      ],
+      "crit_chance_percent": 13.3,
+      "crit_multiplier": 4.8,
+      "max_condition": 8,
+      "attack_speed": 0.98,
+      "represented_weapon_count": 9
+    },
+    {
+      "archetype_id": "wpn_arch_axe_tier_4",
+      "name_daiviet": "Rìu Đại Đao Hai Tay",
+      "base_category": "axe",
+      "category_vietnamese": "Rìu",
+      "tier": 4,
+      "weight_kg": 3.06,
+      "damage_range": [
+        0.91,
+        1.88
+      ],
+      "crit_chance_percent": 24.4,
+      "crit_multiplier": 4.7,
+      "max_condition": 11,
+      "attack_speed": 0.99,
+      "represented_weapon_count": 9
+    },
+    {
+      "archetype_id": "wpn_arch_axe_tier_5",
+      "name_daiviet": "Việt Phủ Nghi Lễ",
+      "base_category": "axe",
+      "category_vietnamese": "Rìu",
+      "tier": 5,
+      "weight_kg": 4.22,
+      "damage_range": [
+        1.32,
+        2.6
+      ],
+      "crit_chance_percent": 40.0,
+      "crit_multiplier": 6.2,
+      "max_condition": 11,
+      "attack_speed": 0.91,
+      "represented_weapon_count": 9
+    },
+    {
+      "archetype_id": "wpn_arch_longblade_tier_1",
+      "name_daiviet": "Đoản Đao Cận Thân",
+      "base_category": "longblade",
+      "category_vietnamese": "Trường Đao & Kiếm",
+      "tier": 1,
+      "weight_kg": 1.75,
+      "damage_range": [
+        0.9,
+        1.7
+      ],
+      "crit_chance_percent": 20.0,
+      "crit_multiplier": 2.0,
+      "max_condition": 10,
+      "attack_speed": 1.0,
+      "represented_weapon_count": 2
+    },
+    {
+      "archetype_id": "wpn_arch_longblade_tier_2",
+      "name_daiviet": "Phác Đao Tuần Tiễu",
+      "base_category": "longblade",
+      "category_vietnamese": "Trường Đao & Kiếm",
+      "tier": 2,
+      "weight_kg": 1.75,
+      "damage_range": [
+        1.15,
+        1.8
+      ],
+      "crit_chance_percent": 20.0,
+      "crit_multiplier": 2.5,
+      "max_condition": 11,
+      "attack_speed": 1.0,
+      "represented_weapon_count": 2
+    },
+    {
+      "archetype_id": "wpn_arch_longblade_tier_3",
+      "name_daiviet": "Kiếm Bách Luyện Thép",
+      "base_category": "longblade",
+      "category_vietnamese": "Trường Đao & Kiếm",
+      "tier": 3,
+      "weight_kg": 1.5,
+      "damage_range": [
+        1.25,
+        2.0
+      ],
+      "crit_chance_percent": 20.0,
+      "crit_multiplier": 3.5,
+      "max_condition": 10,
+      "attack_speed": 1.0,
+      "represented_weapon_count": 2
+    },
+    {
+      "archetype_id": "wpn_arch_longblade_tier_4",
+      "name_daiviet": "Trảm Mã Đại Đao",
+      "base_category": "longblade",
+      "category_vietnamese": "Trường Đao & Kiếm",
+      "tier": 4,
+      "weight_kg": 1.75,
+      "damage_range": [
+        1.25,
+        2.0
+      ],
+      "crit_chance_percent": 15.0,
+      "crit_multiplier": 3.5,
+      "max_condition": 11,
+      "attack_speed": 1.0,
+      "represented_weapon_count": 2
+    },
+    {
+      "archetype_id": "wpn_arch_longblade_tier_5",
+      "name_daiviet": "Liễu Diệp Bảo Kiếm",
+      "base_category": "longblade",
+      "category_vietnamese": "Trường Đao & Kiếm",
+      "tier": 5,
+      "weight_kg": 2.17,
+      "damage_range": [
+        2.83,
+        3.75
+      ],
+      "crit_chance_percent": 22.5,
+      "crit_multiplier": 4.8,
+      "max_condition": 11,
+      "attack_speed": 1.0,
+      "represented_weapon_count": 6
+    },
+    {
+      "archetype_id": "wpn_arch_spear_tier_1",
+      "name_daiviet": "Ngọn Tầm Vông Vót Nhọn",
+      "base_category": "spear",
+      "category_vietnamese": "Thương & Giáo",
+      "tier": 1,
+      "weight_kg": 1.3,
+      "damage_range": [
+        0.46,
+        0.68
+      ],
+      "crit_chance_percent": 8.0,
+      "crit_multiplier": 1.0,
+      "max_condition": 6,
+      "attack_speed": 0.92,
+      "represented_weapon_count": 5
+    },
+    {
+      "archetype_id": "wpn_arch_spear_tier_2",
+      "name_daiviet": "Thương Tre Bọc Sắt",
+      "base_category": "spear",
+      "category_vietnamese": "Thương & Giáo",
+      "tier": 2,
+      "weight_kg": 1.8,
+      "damage_range": [
+        0.9,
+        1.32
+      ],
+      "crit_chance_percent": 24.0,
+      "crit_multiplier": 7.2,
+      "max_condition": 7,
+      "attack_speed": 0.94,
+      "represented_weapon_count": 5
+    },
+    {
+      "archetype_id": "wpn_arch_spear_tier_3",
+      "name_daiviet": "Trường Thương Bộ Binh",
+      "base_category": "spear",
+      "category_vietnamese": "Thương & Giáo",
+      "tier": 3,
+      "weight_kg": 2.6,
+      "damage_range": [
+        1.0,
+        1.58
+      ],
+      "crit_chance_percent": 20.0,
+      "crit_multiplier": 4.8,
+      "max_condition": 5,
+      "attack_speed": 0.99,
+      "represented_weapon_count": 5
+    },
+    {
+      "archetype_id": "wpn_arch_spear_tier_4",
+      "name_daiviet": "Bát Xà Đại Mâu",
+      "base_category": "spear",
+      "category_vietnamese": "Thương & Giáo",
+      "tier": 4,
+      "weight_kg": 2.52,
+      "damage_range": [
+        1.04,
+        1.6
+      ],
+      "crit_chance_percent": 20.0,
+      "crit_multiplier": 5.0,
+      "max_condition": 7,
+      "attack_speed": 1.0,
+      "represented_weapon_count": 5
+    },
+    {
+      "archetype_id": "wpn_arch_spear_tier_5",
+      "name_daiviet": "Thương Câu Liêm Phá Ngựa",
+      "base_category": "spear",
+      "category_vietnamese": "Thương & Giáo",
+      "tier": 5,
+      "weight_kg": 2.83,
+      "damage_range": [
+        1.17,
+        1.68
+      ],
+      "crit_chance_percent": 20.0,
+      "crit_multiplier": 4.9,
+      "max_condition": 7,
+      "attack_speed": 1.0,
+      "represented_weapon_count": 9
+    },
+    {
+      "archetype_id": "wpn_arch_blunt_tier_1",
+      "name_daiviet": "Côn Gỗ Luyện Võ",
+      "base_category": "blunt",
+      "category_vietnamese": "Trường Côn & Chùy Lớn",
+      "tier": 1,
+      "weight_kg": 1.57,
+      "damage_range": [
+        0.25,
+        0.51
+      ],
+      "crit_chance_percent": 11.3,
+      "crit_multiplier": 1.5,
+      "max_condition": 5,
+      "attack_speed": 1.14,
+      "represented_weapon_count": 19
+    },
+    {
+      "archetype_id": "wpn_arch_blunt_tier_2",
+      "name_daiviet": "Đòn Gánh Thiết Mộc",
+      "base_category": "blunt",
+      "category_vietnamese": "Trường Côn & Chùy Lớn",
+      "tier": 2,
+      "weight_kg": 1.98,
+      "damage_range": [
+        0.48,
+        0.88
+      ],
+      "crit_chance_percent": 24.7,
+      "crit_multiplier": 2.2,
+      "max_condition": 8,
+      "attack_speed": 1.02,
+      "represented_weapon_count": 19
+    },
+    {
+      "archetype_id": "wpn_arch_blunt_tier_3",
+      "name_daiviet": "Thiết Bổng Tráng Sĩ",
+      "base_category": "blunt",
+      "category_vietnamese": "Trường Côn & Chùy Lớn",
+      "tier": 3,
+      "weight_kg": 2.29,
+      "damage_range": [
+        0.73,
+        1.28
+      ],
+      "crit_chance_percent": 30.8,
+      "crit_multiplier": 3.4,
+      "max_condition": 12,
+      "attack_speed": 0.97,
+      "represented_weapon_count": 19
+    },
+    {
+      "archetype_id": "wpn_arch_blunt_tier_4",
+      "name_daiviet": "Chùy Gai Phá Giáp",
+      "base_category": "blunt",
+      "category_vietnamese": "Trường Côn & Chùy Lớn",
+      "tier": 4,
+      "weight_kg": 3.22,
+      "damage_range": [
+        0.97,
+        1.85
+      ],
+      "crit_chance_percent": 34.2,
+      "crit_multiplier": 3.3,
+      "max_condition": 11,
+      "attack_speed": 0.9,
+      "represented_weapon_count": 19
+    },
+    {
+      "archetype_id": "wpn_arch_blunt_tier_5",
+      "name_daiviet": "Lang Nha Bổng",
+      "base_category": "blunt",
+      "category_vietnamese": "Trường Côn & Chùy Lớn",
+      "tier": 5,
+      "weight_kg": 6.2,
+      "damage_range": [
+        1.79,
+        2.88
+      ],
+      "crit_chance_percent": 31.0,
+      "crit_multiplier": 2.4,
+      "max_condition": 10,
+      "attack_speed": 0.87,
+      "represented_weapon_count": 20
+    },
+    {
+      "archetype_id": "wpn_arch_smallblunt_tier_1",
+      "name_daiviet": "Dùi Cui Gỗ Nghiến",
+      "base_category": "smallblunt",
+      "category_vietnamese": "Đoản Côn & Chùy Cầm Tay",
+      "tier": 1,
+      "weight_kg": 1.21,
+      "damage_range": [
+        0.24,
+        0.44
+      ],
+      "crit_chance_percent": 10.3,
+      "crit_multiplier": 1.6,
+      "max_condition": 6,
+      "attack_speed": 1.17,
+      "represented_weapon_count": 19
+    },
+    {
+      "archetype_id": "wpn_arch_smallblunt_tier_2",
+      "name_daiviet": "Đoản Bổng Dân Binh",
+      "base_category": "smallblunt",
+      "category_vietnamese": "Đoản Côn & Chùy Cầm Tay",
+      "tier": 2,
+      "weight_kg": 1.07,
+      "damage_range": [
+        0.38,
+        0.76
+      ],
+      "crit_chance_percent": 15.5,
+      "crit_multiplier": 2.4,
+      "max_condition": 6,
+      "attack_speed": 1.07,
+      "represented_weapon_count": 19
+    },
+    {
+      "archetype_id": "wpn_arch_smallblunt_tier_3",
+      "name_daiviet": "Chùy Đồng Hộ Thân",
+      "base_category": "smallblunt",
+      "category_vietnamese": "Đoản Côn & Chùy Cầm Tay",
+      "tier": 3,
+      "weight_kg": 1.87,
+      "damage_range": [
+        0.48,
+        0.97
+      ],
+      "crit_chance_percent": 18.8,
+      "crit_multiplier": 3.0,
+      "max_condition": 7,
+      "attack_speed": 1.04,
+      "represented_weapon_count": 19
+    },
+    {
+      "archetype_id": "wpn_arch_smallblunt_tier_4",
+      "name_daiviet": "Búa Rèn Công Binh",
+      "base_category": "smallblunt",
+      "category_vietnamese": "Đoản Côn & Chùy Cầm Tay",
+      "tier": 4,
+      "weight_kg": 1.49,
+      "damage_range": [
+        0.54,
+        1.03
+      ],
+      "crit_chance_percent": 23.2,
+      "crit_multiplier": 2.6,
+      "max_condition": 7,
+      "attack_speed": 1.03,
+      "represented_weapon_count": 19
+    },
+    {
+      "archetype_id": "wpn_arch_smallblunt_tier_5",
+      "name_daiviet": "Song Tiết Côn",
+      "base_category": "smallblunt",
+      "category_vietnamese": "Đoản Côn & Chùy Cầm Tay",
+      "tier": 5,
+      "weight_kg": 1.76,
+      "damage_range": [
+        0.63,
+        1.2
+      ],
+      "crit_chance_percent": 25.7,
+      "crit_multiplier": 3.6,
+      "max_condition": 10,
+      "attack_speed": 1.05,
+      "represented_weapon_count": 22
+    },
+    {
+      "archetype_id": "wpn_arch_smallblade_tier_1",
+      "name_daiviet": "Dao Nhỏ Gọt Vỏ",
+      "base_category": "smallblade",
+      "category_vietnamese": "Dao Găm & Trủy Thủ",
+      "tier": 1,
+      "weight_kg": 0.3,
+      "damage_range": [
+        0.1,
+        0.1
+      ],
+      "crit_chance_percent": 3.6,
+      "crit_multiplier": 5.5,
+      "max_condition": 3,
+      "attack_speed": 1.0,
+      "represented_weapon_count": 11
+    },
+    {
+      "archetype_id": "wpn_arch_smallblade_tier_2",
+      "name_daiviet": "Trủy Thủ Ám Sát",
+      "base_category": "smallblade",
+      "category_vietnamese": "Dao Găm & Trủy Thủ",
+      "tier": 2,
+      "weight_kg": 0.55,
+      "damage_range": [
+        0.14,
+        0.35
+      ],
+      "crit_chance_percent": 11.2,
+      "crit_multiplier": 8.2,
+      "max_condition": 3,
+      "attack_speed": 1.0,
+      "represented_weapon_count": 11
+    },
+    {
+      "archetype_id": "wpn_arch_smallblade_tier_3",
+      "name_daiviet": "Dao Găm Đi Rừng",
+      "base_category": "smallblade",
+      "category_vietnamese": "Dao Găm & Trủy Thủ",
+      "tier": 3,
+      "weight_kg": 0.5,
+      "damage_range": [
+        0.27,
+        0.47
+      ],
+      "crit_chance_percent": 10.5,
+      "crit_multiplier": 5.0,
+      "max_condition": 6,
+      "attack_speed": 1.04,
+      "represented_weapon_count": 11
+    },
+    {
+      "archetype_id": "wpn_arch_smallblade_tier_4",
+      "name_daiviet": "Đao Chặt Xương",
+      "base_category": "smallblade",
+      "category_vietnamese": "Dao Găm & Trủy Thủ",
+      "tier": 4,
+      "weight_kg": 0.51,
+      "damage_range": [
+        0.31,
+        0.65
+      ],
+      "crit_chance_percent": 21.4,
+      "crit_multiplier": 4.0,
+      "max_condition": 9,
+      "attack_speed": 1.0,
+      "represented_weapon_count": 11
+    },
+    {
+      "archetype_id": "wpn_arch_smallblade_tier_5",
+      "name_daiviet": "Đao Lạc Diệp",
+      "base_category": "smallblade",
+      "category_vietnamese": "Dao Găm & Trủy Thủ",
+      "tier": 5,
+      "weight_kg": 0.83,
+      "damage_range": [
+        0.54,
+        1.02
+      ],
+      "crit_chance_percent": 30.0,
+      "crit_multiplier": 4.1,
+      "max_condition": 7,
+      "attack_speed": 1.0,
+      "represented_weapon_count": 15
+    },
+    {
+      "archetype_id": "wpn_arch_other_tier_1",
+      "name_daiviet": "Liềm Cắt Cỏ Thép",
+      "base_category": "other",
+      "category_vietnamese": "Dụng Cụ Ứng Biến",
+      "tier": 1,
+      "weight_kg": 1.5,
+      "damage_range": [
+        0.0,
+        0.0
+      ],
+      "crit_chance_percent": 0.0,
+      "crit_multiplier": 0.0,
+      "max_condition": 1,
+      "attack_speed": 1.0,
+      "represented_weapon_count": 9
+    },
+    {
+      "archetype_id": "wpn_arch_other_tier_2",
+      "name_daiviet": "Cuốc Vỡ Đất",
+      "base_category": "other",
+      "category_vietnamese": "Dụng Cụ Ứng Biến",
+      "tier": 2,
+      "weight_kg": 1.5,
+      "damage_range": [
+        0.0,
+        0.0
+      ],
+      "crit_chance_percent": 0.0,
+      "crit_multiplier": 0.0,
+      "max_condition": 1,
+      "attack_speed": 1.0,
+      "represented_weapon_count": 9
+    },
+    {
+      "archetype_id": "wpn_arch_other_tier_3",
+      "name_daiviet": "Xẻng Sắt Công sự",
+      "base_category": "other",
+      "category_vietnamese": "Dụng Cụ Ứng Biến",
+      "tier": 3,
+      "weight_kg": 1.5,
+      "damage_range": [
+        0.0,
+        0.0
+      ],
+      "crit_chance_percent": 0.0,
+      "crit_multiplier": 0.0,
+      "max_condition": 1,
+      "attack_speed": 1.0,
+      "represented_weapon_count": 9
+    },
+    {
+      "archetype_id": "wpn_arch_other_tier_4",
+      "name_daiviet": "Cào Cỏ Răng Sắt",
+      "base_category": "other",
+      "category_vietnamese": "Dụng Cụ Ứng Biến",
+      "tier": 4,
+      "weight_kg": 0.72,
+      "damage_range": [
+        0.03,
+        0.03
+      ],
+      "crit_chance_percent": 0.0,
+      "crit_multiplier": 0.0,
+      "max_condition": 1,
+      "attack_speed": 1.0,
+      "represented_weapon_count": 9
+    },
+    {
+      "archetype_id": "wpn_arch_other_tier_5",
+      "name_daiviet": "Trượng Gỗ Thần Trấn",
+      "base_category": "other",
+      "category_vietnamese": "Dụng Cụ Ứng Biến",
+      "tier": 5,
+      "weight_kg": 0.42,
+      "damage_range": [
+        0.17,
+        0.26
+      ],
+      "crit_chance_percent": 5.0,
+      "crit_multiplier": 0.9,
+      "max_condition": 2,
+      "attack_speed": 0.98,
+      "represented_weapon_count": 10
+    }
+  ],
+  "gunpowder_weapons_daiviet": [
+    {
+      "gunpowder_id": "wpn_fire_sung_hoa_mai_dieu_thuong",
+      "name_daiviet": "Súng Hỏa Mai Điểu Thương (Matchlock Arquebus)",
+      "derived_from": "Varmint / Single-shot Hunting Rifle",
+      "ammo_type": "Chì Đúc Đơn Viên & Thuốc Súng Đen",
+      "capacity": 1,
+      "sound_radius_tiles": 60,
+      "effective_range_tiles": 25.0,
+      "damage_range": [
+        1.8,
+        2.5
+      ],
+      "stopping_power": 1.2,
+      "jam_chance_wet": 0.15,
+      "lore_notes": "Súng trường bắn từng viên nạp đầu nòng, điểm hỏa bằng dây cháy chậm. Tiếng nổ vang xa 60 ô gạch kích động đàn zombie ảo."
+    },
+    {
+      "gunpowder_id": "wpn_fire_ong_hoa_ho_phun_dan_rai",
+      "name_daiviet": "Ống Hỏa Hổ Phun Đạn Rải (Fire Lance / Blunderbuss)",
+      "derived_from": "Double Barrel / Sawn-off Shotgun",
+      "ammo_type": "Mảnh Gang Vụn & Thuốc Súng Trộn Độc",
+      "capacity": 2,
+      "sound_radius_tiles": 200,
+      "effective_range_tiles": 12.0,
+      "damage_range": [
+        2.2,
+        3.8
+      ],
+      "stopping_power": 3.0,
+      "jam_chance_wet": 0.08,
+      "lore_notes": "Ống tre bọc sắt hoặc đúc đồng nhồi thuốc súng cùng mảnh sắt/sỏi nhỏ. Sát thương diện rộng quét sạch đám đông ở cự ly gần."
+    },
+    {
+      "gunpowder_id": "wpn_fire_phao_than_co_ho_nguyen_trung",
+      "name_daiviet": "Pháo Thần Cơ Cầm Tay Hồ Nguyên Trừng (Heavy Culverin)",
+      "derived_from": "Heavy Slug Shotgun / High-Caliber Magnum",
+      "ammo_type": "Đạn Đồng Đúc Lõi Sắt Cỡ Lớn",
+      "capacity": 1,
+      "sound_radius_tiles": 350,
+      "effective_range_tiles": 35.0,
+      "damage_range": [
+        4.0,
+        6.5
+      ],
+      "stopping_power": 5.0,
+      "jam_chance_wet": 0.05,
+      "lore_notes": "Kỳ quan pháo thủ Đại Việt, dùng khối đồng nguyên khối bắn đạn tày phá tan mọi loại giáp sắt và xé toạc zombie thiết giáp."
+    }
+  ],
+  "ancient_crafting_stations_summary": [
+    {
+      "craft_category": "Tailoring",
+      "workstation_file": "recipes_tailoring_leatherAndHide.txt",
+      "recipe_count": 60
+    },
+    {
+      "craft_category": "Evolvedrecipes",
+      "workstation_file": "evolvedrecipes.txt",
+      "recipe_count": 56
+    },
+    {
+      "craft_category": "Cooking",
+      "workstation_file": "recipes_cooking.txt",
+      "recipe_count": 52
+    },
+    {
+      "craft_category": "Tailoring",
+      "workstation_file": "recipes_tailoring.txt",
+      "recipe_count": 40
+    },
+    {
+      "craft_category": "Tools",
+      "workstation_file": "recipes_blacksmith_tools.txt",
+      "recipe_count": 37
+    },
+    {
+      "craft_category": "Blacksmithing",
+      "workstation_file": "recipes_blacksmith_furnaces_i.txt",
+      "recipe_count": 34
+    },
+    {
+      "craft_category": "Tailoring",
+      "workstation_file": "recipes_tailoring_garbageTapeAndTarp.txt",
+      "recipe_count": 33
+    },
+    {
+      "craft_category": "Carving",
+      "workstation_file": "recipes_carving.txt",
+      "recipe_count": 32
+    },
+    {
+      "craft_category": "Tailoring",
+      "workstation_file": "recipes_tailoring_armor.txt",
+      "recipe_count": 30
+    },
+    {
+      "craft_category": "Weaponry",
+      "workstation_file": "recipes_improvised_weapons.txt",
+      "recipe_count": 30
+    },
+    {
+      "craft_category": "Carpentry",
+      "workstation_file": "recipes_carpentry.txt",
+      "recipe_count": 26
+    },
+    {
+      "craft_category": "Farming",
+      "workstation_file": "entity_Herb_Drying_Rack_craftRecipe.txt",
+      "recipe_count": 25
+    },
+    {
+      "craft_category": "Packing",
+      "workstation_file": "recipes_packing.txt",
+      "recipe_count": 25
+    },
+    {
+      "craft_category": "Recipes",
+      "workstation_file": "recipes.txt",
+      "recipe_count": 23
+    },
+    {
+      "craft_category": "Cooking",
+      "workstation_file": "recipes_baking.txt",
+      "recipe_count": 20
+    },
+    {
+      "craft_category": "Pottery",
+      "workstation_file": "craftrecipe_kiln.txt",
+      "recipe_count": 20
+    },
+    {
+      "craft_category": "Blacksmithing",
+      "workstation_file": "recipes_blacksmith_bar.txt",
+      "recipe_count": 17
+    },
+    {
+      "craft_category": "Blade",
+      "workstation_file": "recipes_blacksmith_blades.txt",
+      "recipe_count": 17
+    },
+    {
+      "craft_category": "Armor",
+      "workstation_file": "recipes_blacksmith_armor.txt",
+      "recipe_count": 16
+    },
+    {
+      "craft_category": "Metalworking",
+      "workstation_file": "recipes_blacksmith_other_metals.txt",
+      "recipe_count": 16
+    },
+    {
+      "craft_category": "Carving",
+      "workstation_file": "recipes_bone.txt",
+      "recipe_count": 14
+    },
+    {
+      "craft_category": "Tools",
+      "workstation_file": "recipes_blacksmith_heads.txt",
+      "recipe_count": 14
+    },
+    {
+      "craft_category": "Farming",
+      "workstation_file": "recipes_farming.txt",
+      "recipe_count": 13
+    },
+    {
+      "craft_category": "Pottery",
+      "workstation_file": "craftrecipe_potterywheel.txt",
+      "recipe_count": 13
+    },
+    {
+      "craft_category": "Repair",
+      "workstation_file": "recipes_fixing.txt",
+      "recipe_count": 12
+    },
+    {
+      "craft_category": "Knapping",
+      "workstation_file": "recipes_knapping.txt",
+      "recipe_count": 11
+    },
+    {
+      "craft_category": "Metalworking",
+      "workstation_file": "recipes_blacksmith_bar.txt",
+      "recipe_count": 11
+    },
+    {
+      "craft_category": "Miscellaneous",
+      "workstation_file": "recipes_gasmasks.txt",
+      "recipe_count": 11
+    },
+    {
+      "craft_category": "Blacksmithing",
+      "workstation_file": "recipes_blacksmith_other_metals.txt",
+      "recipe_count": 10
+    },
+    {
+      "craft_category": "Cookware",
+      "workstation_file": "recipes_blacksmith_cookware.txt",
+      "recipe_count": 10
+    },
+    {
+      "craft_category": "Metalworking",
+      "workstation_file": "recipes_metalWelding.txt",
+      "recipe_count": 10
+    },
+    {
+      "craft_category": "Weaponry",
+      "workstation_file": "recipes_blacksmith_welded_etc_weapons.txt",
+      "recipe_count": 10
+    },
+    {
+      "craft_category": "Cooking",
+      "workstation_file": "recipes_cannedFood.txt",
+      "recipe_count": 9
+    },
+    {
+      "craft_category": "Farming",
+      "workstation_file": "recipes_leather_prep.txt",
+      "recipe_count": 9
+    },
+    {
+      "craft_category": "Metalworking",
+      "workstation_file": "recipes_metalWelding_Armor.txt",
+      "recipe_count": 9
+    },
+    {
+      "craft_category": "Tailoring",
+      "workstation_file": "recipes_bone.txt",
+      "recipe_count": 9
+    },
+    {
+      "craft_category": "Tailoring",
+      "workstation_file": "recipes_tailoring_knitting.txt",
+      "recipe_count": 9
+    },
+    {
+      "craft_category": "Farming",
+      "workstation_file": "entity_Drying_Rack_craftRecipe.txt",
+      "recipe_count": 8
+    },
+    {
+      "craft_category": "Glassmaking",
+      "workstation_file": "recipes_glassmaking.txt",
+      "recipe_count": 8
+    },
+    {
+      "craft_category": "Masonry",
+      "workstation_file": "recipes_stonemasonry_i.txt",
+      "recipe_count": 8
+    },
+    {
+      "craft_category": "Medical",
+      "workstation_file": "recipes_medical.txt",
+      "recipe_count": 8
+    },
+    {
+      "craft_category": "Metalworking",
+      "workstation_file": "recipes_blacksmith_standingdrill.txt",
+      "recipe_count": 8
+    },
+    {
+      "craft_category": "Assembly",
+      "workstation_file": "recipes_assembly.txt",
+      "recipe_count": 7
+    },
+    {
+      "craft_category": "Cookware",
+      "workstation_file": "recipes_blacksmith_other_metals.txt",
+      "recipe_count": 7
+    },
+    {
+      "craft_category": "Miscellaneous",
+      "workstation_file": "recipes_bone.txt",
+      "recipe_count": 7
+    },
+    {
+      "craft_category": "Miscellaneous",
+      "workstation_file": "recipes_lightsources.txt",
+      "recipe_count": 7
+    },
+    {
+      "craft_category": "Fishing",
+      "workstation_file": "recipes_fishing.txt",
+      "recipe_count": 6
+    },
+    {
+      "craft_category": "Pottery",
+      "workstation_file": "craftrecipe_handpress.txt",
+      "recipe_count": 6
+    },
+    {
+      "craft_category": "Assembly",
+      "workstation_file": "recipes_disassembly.txt",
+      "recipe_count": 5
+    },
+    {
+      "craft_category": "Farming",
+      "workstation_file": "entity_stone_mill_craftRecipe.txt",
+      "recipe_count": 5
+    },
+    {
+      "craft_category": "Miscellaneous",
+      "workstation_file": "recipes_trapping.txt",
+      "recipe_count": 5
+    },
+    {
+      "craft_category": "Packing",
+      "workstation_file": "recipes_ammunition.txt",
+      "recipe_count": 5
+    },
+    {
+      "craft_category": "Pottery",
+      "workstation_file": "recipes_pottery.txt",
+      "recipe_count": 5
+    },
+    {
+      "craft_category": "Weaponry",
+      "workstation_file": "recipes_blacksmith_heads.txt",
+      "recipe_count": 5
+    },
+    {
+      "craft_category": "Weaponry",
+      "workstation_file": "recipes_bone.txt",
+      "recipe_count": 5
+    },
+    {
+      "craft_category": "Weaponry",
+      "workstation_file": "recipes_spears.txt",
+      "recipe_count": 5
+    },
+    {
+      "craft_category": "Assembly",
+      "workstation_file": "recipes_knapping.txt",
+      "recipe_count": 4
+    },
+    {
+      "craft_category": "Blacksmith_woodcharcoal",
+      "workstation_file": "recipes_blacksmith_woodcharcoal.txt",
+      "recipe_count": 4
+    },
+    {
+      "craft_category": "Blacksmithing",
+      "workstation_file": "recipes_blacksmith_ii.txt",
+      "recipe_count": 4
+    },
+    {
+      "craft_category": "Metalworking",
+      "workstation_file": "recipes_blacksmith_bandsaw.txt",
+      "recipe_count": 4
+    },
+    {
+      "craft_category": "Miscellaneous",
+      "workstation_file": "recipes_packing.txt",
+      "recipe_count": 4
+    },
+    {
+      "craft_category": "Miscellaneous",
+      "workstation_file": "recipes_sleepingbags_and_tents.txt",
+      "recipe_count": 4
+    },
+    {
+      "craft_category": "Cooking",
+      "workstation_file": "recipes_fluids.txt",
+      "recipe_count": 3
+    },
+    {
+      "craft_category": "Farming",
+      "workstation_file": "entity_simple_loom_craftRecipe.txt",
+      "recipe_count": 3
+    },
+    {
+      "craft_category": "Farming",
+      "workstation_file": "entity_stone_quern_craftRecipe.txt",
+      "recipe_count": 3
+    },
+    {
+      "craft_category": "Farming",
+      "workstation_file": "recipes_spinning_wheel.txt",
+      "recipe_count": 3
+    },
+    {
+      "craft_category": "Masonry",
+      "workstation_file": "recipes_buckets.txt",
+      "recipe_count": 3
+    },
+    {
+      "craft_category": "Miscellaneous",
+      "workstation_file": "recipes_tobacco.txt",
+      "recipe_count": 3
+    },
+    {
+      "craft_category": "Carpentry",
+      "workstation_file": "recipes_buckets.txt",
+      "recipe_count": 2
+    },
+    {
+      "craft_category": "Cooking",
+      "workstation_file": "recipes_jarring.txt",
+      "recipe_count": 2
+    },
+    {
+      "craft_category": "Farming",
+      "workstation_file": "recipes_flax.txt",
+      "recipe_count": 2
+    },
+    {
+      "craft_category": "Glassmaking",
+      "workstation_file": "recipes_blacksmith_furnace_ii.txt",
+      "recipe_count": 2
+    },
+    {
+      "craft_category": "Kiln",
+      "workstation_file": "craftrecipe_kiln.txt",
+      "recipe_count": 2
+    },
+    {
+      "craft_category": "Miscellaneous",
+      "workstation_file": "recipes_cardsAndDice.txt",
+      "recipe_count": 2
+    },
+    {
+      "craft_category": "Miscellaneous",
+      "workstation_file": "recipes_carpentry.txt",
+      "recipe_count": 2
+    },
+    {
+      "craft_category": "Miscellaneous",
+      "workstation_file": "recipes_survivalist.txt",
+      "recipe_count": 2
+    },
+    {
+      "craft_category": "Packing",
+      "workstation_file": "recipes_sacks.txt",
+      "recipe_count": 2
+    },
+    {
+      "craft_category": "Repair",
+      "workstation_file": "recipes.txt",
+      "recipe_count": 2
+    },
+    {
+      "craft_category": "Tailoring",
+      "workstation_file": "recipes.txt",
+      "recipe_count": 2
+    },
+    {
+      "craft_category": "Weaponry",
+      "workstation_file": "recipes.txt",
+      "recipe_count": 2
+    },
+    {
+      "craft_category": "Blacksmithing",
+      "workstation_file": "recipes_blacksmith_furnace_ii.txt",
+      "recipe_count": 1
+    },
+    {
+      "craft_category": "Carving",
+      "workstation_file": "recipes_spears.txt",
+      "recipe_count": 1
+    },
+    {
+      "craft_category": "Entity_dome_kiln_craftRecipe",
+      "workstation_file": "entity_dome_kiln_craftRecipe.txt",
+      "recipe_count": 1
+    },
+    {
+      "craft_category": "Farming",
+      "workstation_file": "craftrecipe_handpress.txt",
+      "recipe_count": 1
+    },
+    {
+      "craft_category": "Farming",
+      "workstation_file": "recipes_butter_churn.txt",
+      "recipe_count": 1
+    },
+    {
+      "craft_category": "Farming",
+      "workstation_file": "recipes_fiber.txt",
+      "recipe_count": 1
+    },
+    {
+      "craft_category": "Fishing_evolvedrecipe",
+      "workstation_file": "recipes_fishing_evolvedrecipe.txt",
+      "recipe_count": 1
+    },
+    {
+      "craft_category": "Leather_prep_blair",
+      "workstation_file": "recipes_leather_prep_blair.txt",
+      "recipe_count": 1
+    },
+    {
+      "craft_category": "Miscellaneous",
+      "workstation_file": "recipes_camping.txt",
+      "recipe_count": 1
+    },
+    {
+      "craft_category": "Miscellaneous",
+      "workstation_file": "recipes_medical.txt",
+      "recipe_count": 1
+    },
+    {
+      "craft_category": "Miscellaneous",
+      "workstation_file": "recipes_traps.txt",
+      "recipe_count": 1
+    },
+    {
+      "craft_category": "Tools",
+      "workstation_file": "recipes_blacksmith_ii.txt",
+      "recipe_count": 1
+    }
+  ],
+  "secret_skill_tomes_64": [
+    {
+      "id": "31a726b7-0ee6-408b-8599-95c80aa8a6c5",
+      "title": "Dead Wrong",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "REL+1",
+        "AIM+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "9ec23879-13eb-4b6a-ab44-e9038952104f",
+      "title": "Mother's Boy",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "SBA+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "4f3f30d6-df77-4e85-b1cb-4ca7e67addd9",
+      "title": "Z-Squad",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "MTL+1",
+        "MEC+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "21411665-0ce7-4200-83a1-43ae2e6cbbb3",
+      "title": "The Dog Goblin",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "STS+0.2",
+        "PAN+25",
+        "PAN+100"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "e6fd44a9-1774-4204-ab45-9b316301aa2b",
+      "title": "The Cook Show",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "COO+1"
+      ],
+      "recipes_granted": [
+        "MakeCakeBatter"
+      ]
+    },
+    {
+      "id": "a754fdaf-5bac-40cd-9a69-da90e8a0cac7",
+      "title": "The Cook Show",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "COO+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "7933a371-a8a6-4c31-8886-7a97d89f2c7e",
+      "title": "The Cook Show",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "COO+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "4cc3b806-4630-4dfc-a935-efa700fbd7fb",
+      "title": "The Cook Show",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "COO+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "2695eb00-ee79-4b39-833a-1023a28ce397",
+      "title": "The Cook Show",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "COO+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "01b3d832-602c-4566-b8d6-c2b74a4a0b00",
+      "title": "The Cook Show",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "COO+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "2c2a052d-097c-4507-85f4-7fda90f3e3d1",
+      "title": "The Cook Show",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "COO+1"
+      ],
+      "recipes_granted": [
+        "MakePieDough"
+      ]
+    },
+    {
+      "id": "dedd4e83-6e3b-4f4f-9c9b-72a5ed08969d",
+      "title": "Woodcraft",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "CRP+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "c2d01da8-8e04-4889-8676-bb633e98df2d",
+      "title": "Woodcraft",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "CRP+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "3e9c5cf0-bf40-40eb-bcd7-4fd6c5ae58ca",
+      "title": "Woodcraft",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "CRP+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "0627a89a-a32b-4e80-9926-815aa9d22b2b",
+      "title": "Woodcraft",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "CRP+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "2bf49f71-0d46-43aa-bbfd-f311e5bda9b2",
+      "title": "Woodcraft",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "CRP+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "968591cd-d4aa-4ef1-9632-7771a1f5b9ab",
+      "title": "Woodcraft",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "CRP+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "01dedfea-62eb-4ae6-a4bc-5e629b7ba54b",
+      "title": "Woodcraft",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "CRP+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "ccfd97d7-6b57-432c-bca7-f9a271f8012f",
+      "title": "Exposure Survival",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "FIS+1"
+      ],
+      "recipes_granted": [
+        "MakeFishingRod"
+      ]
+    },
+    {
+      "id": "6f1be5b5-d871-4ebf-bc44-2657f7c89bb5",
+      "title": "Exposure Survival",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "FIS+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "7402fb83-b5b3-4b08-99f9-82bc67f4572b",
+      "title": "Exposure Survival",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "FRM+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "a628a723-ac78-4bcb-927a-f84ad8c6c286",
+      "title": "Exposure Survival",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "CRP+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "1123df57-5e9b-4d61-88f1-7561949132e3",
+      "title": "Exposure Survival",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "CRP+1",
+        "FOR+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "75928dcd-c613-4a1e-afb5-20c4c671b835",
+      "title": "Exposure Survival",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "TRA+1"
+      ],
+      "recipes_granted": [
+        "MakeWoodenBoxTrap"
+      ]
+    },
+    {
+      "id": "2dcd687b-ac76-4b33-b0b7-79ddfba2feb4",
+      "title": "Exposure Survival",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "FOR+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "f74df7fc-20ae-4600-b2d2-f504d9355440",
+      "title": "Exposure Survival",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "CRP+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "07b0cd73-7563-4699-9fb4-99316a0fc0bd",
+      "title": "Carzone",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "MEC+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "7b192b30-ea36-4395-a5e4-ac2d825d3b91",
+      "title": "Carzone",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "MEC+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "313fa630-d448-44ab-b1f0-7cff1d1db830",
+      "title": "Carzone",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "MEC+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "ba9a65a7-c471-436d-a2cd-3ceb75af6bca",
+      "title": "HOLLYWOOD INSIDER SPECIAL",
+      "author": "",
+      "category": "Home-VHS",
+      "skills_granted": [
+        "STS+0.1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "1559a55a-bfc9-4cfc-967b-e26b860894c6",
+      "title": "OSCC '92",
+      "author": "",
+      "category": "Home-VHS",
+      "skills_granted": [
+        "MEC+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "8904b5c7-86f6-4b49-a163-cf37d4421895",
+      "title": "stock cars",
+      "author": "",
+      "category": "Home-VHS",
+      "skills_granted": [
+        "MEC+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "00a8b565-a566-44f3-b6d2-7a1ae2eafb0c",
+      "title": "Granny Nani",
+      "author": "",
+      "category": "Home-VHS",
+      "skills_granted": [
+        "TAI+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "af941537-39ac-42fb-8c7a-ed346ded282e",
+      "title": "Tailoring 101",
+      "author": "",
+      "category": "Home-VHS",
+      "skills_granted": [
+        "TAI+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "1c6745f6-70b8-49e8-9087-b1bbb9263985",
+      "title": "nof vid",
+      "author": "",
+      "category": "Home-VHS",
+      "skills_granted": [
+        "MTL+1"
+      ],
+      "recipes_granted": [
+        "MetalFloorLvl1",
+        "MetalWallLvl1"
+      ]
+    },
+    {
+      "id": "fe4ede3c-a153-4e46-aebe-9681d14fe196",
+      "title": "no 9",
+      "author": "",
+      "category": "Home-VHS",
+      "skills_granted": [
+        "MTL+1"
+      ],
+      "recipes_granted": [
+        "MetalFenceLvl1",
+        "MetalSmallPoleFence",
+        "MetalPoleFenceGateSmall",
+        "MetalBigMetalFence",
+        "MetalPoleFenceGate",
+        "MetalSmallWireFence",
+        "MetalWireFenceGateSmall",
+        "MetalWireFenceGate",
+        "MetalBigWireFence",
+        "DoubleWireGate"
+      ]
+    },
+    {
+      "id": "ffe28381-b743-4300-8c5a-89b4c4983d05",
+      "title": "Muldraugh AV Club",
+      "author": "",
+      "category": "Home-VHS",
+      "skills_granted": [
+        "ELC+1"
+      ],
+      "recipes_granted": [
+        "CraftMakeshiftRadio"
+      ]
+    },
+    {
+      "id": "c23539e8-c5eb-4f58-850f-18522250c470",
+      "title": "TV repair",
+      "author": "",
+      "category": "Home-VHS",
+      "skills_granted": [
+        "ELC+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "14fca23a-86ca-44b3-8342-264791175421",
+      "title": "RMFA",
+      "author": "",
+      "category": "Home-VHS",
+      "skills_granted": [
+        "DOC+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "8c150873-8bd1-4316-ae3f-a37742ccfa20",
+      "title": "Combat Wound Management",
+      "author": "",
+      "category": "Home-VHS",
+      "skills_granted": [
+        "DOC+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "541b5fff-7f01-402a-8e8a-98cfd0c90916",
+      "title": "Grady v King",
+      "author": "",
+      "category": "Home-VHS",
+      "skills_granted": [
+        "LFT+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "db7deaf2-ddbe-42c8-8fd3-9725d8fdeff3",
+      "title": "Tree Planting Guide",
+      "author": "",
+      "category": "Home-VHS",
+      "skills_granted": [
+        "FRM+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "68785929-d79c-4170-9fc8-5289bbf05388",
+      "title": "Mathematical Quadratics and Algebraic Configurations",
+      "author": "",
+      "category": "Home-VHS",
+      "skills_granted": [
+        "BUA+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "f33ce778-8d37-4fba-889d-d736434aad22",
+      "title": "Basic Gun Handling (Officer Use Only)",
+      "author": "",
+      "category": "Home-VHS",
+      "skills_granted": [
+        "AIM+2",
+        "REL+2",
+        "AIM+1",
+        "REL+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "988e8c5a-93b4-456f-be54-4638c5dc7812",
+      "title": "Making Sushi at Home",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "COO+1"
+      ],
+      "recipes_granted": [
+        "MakeSushi",
+        "MakeMaki",
+        "MakeOnigiri",
+        "MakeFriedShrimp",
+        "MakeCabbageRolls"
+      ]
+    },
+    {
+      "id": "729fc45b-5f9c-46b1-8cb6-d4978b050068",
+      "title": "Knox Gun Owners Club's Guide to Guns",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "REL+1",
+        "AIM+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "1c687700-baf6-4901-83e7-11038b7292a9",
+      "title": "Growing Herbs at Home",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "FRM+1"
+      ],
+      "recipes_granted": [
+        "base:basil growing season",
+        "base:chives growing season",
+        "base:cilantro growing season",
+        "base:oregano growing season",
+        "base:parsley growing season",
+        "base:sage growing season",
+        "base:rosemary growing season",
+        "base:thyme growing season"
+      ]
+    },
+    {
+      "id": "1a22a4b3-156b-4474-a455-8d6c066e5a21",
+      "title": "Growing Fruit and Veg at Home 1",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "FRM+1"
+      ],
+      "recipes_granted": [
+        "base:cabbage growing season",
+        "base:potato growing season",
+        "base:radish growing season",
+        "base:carrot growing season",
+        "base:onion growing season",
+        "base:broccoli growing season",
+        "base:strawberry growing season",
+        "base:tomato growing season"
+      ]
+    },
+    {
+      "id": "a7cd7482-cc83-4097-9ce9-c14eb745014d",
+      "title": "Growing Fruit and Veg at Home 2",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "FRM+1"
+      ],
+      "recipes_granted": [
+        "base:green pea growing season",
+        "base:soybean growing season",
+        "base:kale growing season",
+        "base:garlic growing season",
+        "base:sweet potato growing season",
+        "base:corn growing season"
+      ]
+    },
+    {
+      "id": "4cd4e3d3-c7ad-4848-875d-dd86d946bd45",
+      "title": "Controlling Nasty Crop Pests and Diseases",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "FRM+1"
+      ],
+      "recipes_granted": [
+        "MakeMildewCure",
+        "MakeFliesCure",
+        "MakeSlugTrap",
+        "MakeAphidsCure"
+      ]
+    },
+    {
+      "id": "c7d905cf-3fe7-44e6-89a9-5d501bc73944",
+      "title": "Better Fishing With Jason Master",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "FIS+1"
+      ],
+      "recipes_granted": [
+        "MakeFishingRod",
+        "FixFishingRod"
+      ]
+    },
+    {
+      "id": "b4830b9a-341e-4f2e-b6f6-87aaaaf99d00",
+      "title": "The Petting Zoo",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "HUS+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "fa0cd1c6-3846-4652-8be6-bb1f8c2b176c",
+      "title": "A Day on the Farm",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "HUS+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "9f33c7f2-2af6-4d44-a9bc-630ee8310a2f",
+      "title": "How Electricity Works",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "ELC+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "4653d39e-2fcf-49c2-9b51-0ab992fa123c",
+      "title": "Combat Wound Management",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "DOC+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "0cd1fbcb-1ea6-4edc-aeb6-f0a81eff6c5e",
+      "title": "Rosewood Medical First Aid",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "DOC+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "955bf539-6b8b-4dea-9fde-7bfaf3b31983",
+      "title": "Emergency First Aid",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "DOC+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "c3d6c81d-a141-49ce-9127-79180cf23c2c",
+      "title": "Knapping: The Ancient Art",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "FKN+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "200e0912-8bfc-4d16-bd0b-8c63a7893773",
+      "title": "From Ore to Store",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "BLA+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "89d33c66-7071-4b82-859f-2062bfe8db19",
+      "title": "Adefope Fencing Special",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "MTL+1"
+      ],
+      "recipes_granted": [
+        "MetalFenceLvl1",
+        "MetalSmallPoleFence",
+        "MetalPoleFenceGateSmall",
+        "MetalBigMetalFence",
+        "MetalPoleFenceGate",
+        "MetalWireFenceGateSmall",
+        "MetalSmallWireFence",
+        "MetalWireFenceGate",
+        "MetalBigWireFence",
+        "DoubleWireGate"
+      ]
+    },
+    {
+      "id": "c1a3d275-4b61-4b29-94cd-2a87b183f5e8",
+      "title": "Home Welding Guide",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "MTL+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "dccc28f4-fc37-4d74-928d-9f7d1bdf4e3f",
+      "title": "Working Clay at Home",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "POT+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "7e395694-9830-4066-8709-bf285677937d",
+      "title": "Pottery for Anyone",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "POT+1"
+      ],
+      "recipes_granted": []
+    },
+    {
+      "id": "066ed71a-1803-4143-8151-3d6461a19e79",
+      "title": "A Stitch in Time",
+      "author": "",
+      "category": "Retail-VHS",
+      "skills_granted": [
+        "TAI+1"
+      ],
+      "recipes_granted": []
+    }
+  ]
+}

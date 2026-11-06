@@ -1,0 +1,715 @@
+{
+  "package_name": "db_extract_session2_ecology_and_astronomy",
+  "description": "Kho dữ liệu Sinh thái Nông nghiệp 43 Cây trồng/Dược thảo, Bẫy thú & Hệ Thống Quan Tượng Đài Chiêm Tinh",
+  "crops_and_herbs_count": 43,
+  "crops_and_herbs": [
+    {
+      "name": "WildGarlic",
+      "crop_type": "herb",
+      "water_min": 35,
+      "water_optimal": 70,
+      "growth_days": 18.0,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 5,
+      "cold_hardy": 1,
+      "sow_months": "7, 8, 9,"
+    },
+    {
+      "name": "Leek",
+      "crop_type": "herb",
+      "water_min": 35,
+      "water_optimal": 70,
+      "growth_days": 50.1,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 3,
+      "cold_hardy": 1,
+      "sow_months": "3, 4, 5, 6, 7, 8, 9"
+    },
+    {
+      "name": "Basil",
+      "crop_type": "herb",
+      "water_min": 80,
+      "water_optimal": 70,
+      "growth_days": 20.2,
+      "min_yield": 4,
+      "max_yield": 6,
+      "harvest_level": 3,
+      "cold_hardy": 0,
+      "sow_months": "3, 4, 5"
+    },
+    {
+      "name": "BlackSage",
+      "crop_type": "herb",
+      "water_min": 60,
+      "water_optimal": 70,
+      "growth_days": 20.2,
+      "min_yield": 4,
+      "max_yield": 6,
+      "harvest_level": 3,
+      "cold_hardy": 0,
+      "sow_months": "3, 4, 5, 6, 7, 8"
+    },
+    {
+      "name": "BroadleafPlantain",
+      "crop_type": "herb",
+      "water_min": 60,
+      "water_optimal": 70,
+      "growth_days": 20.2,
+      "min_yield": 4,
+      "max_yield": 6,
+      "harvest_level": 3,
+      "cold_hardy": 0,
+      "sow_months": "3, 4, 5, 6, 7, 8"
+    },
+    {
+      "name": "Chamomile",
+      "crop_type": "herb",
+      "water_min": 80,
+      "water_optimal": 70,
+      "growth_days": 20.2,
+      "min_yield": 4,
+      "max_yield": 6,
+      "harvest_level": 3,
+      "cold_hardy": 0,
+      "sow_months": "3, 4, 5"
+    },
+    {
+      "name": "Chives",
+      "crop_type": "herb",
+      "water_min": 60,
+      "water_optimal": 70,
+      "growth_days": 20.2,
+      "min_yield": 4,
+      "max_yield": 6,
+      "harvest_level": 3,
+      "cold_hardy": 0,
+      "sow_months": "3, 4, 5, 6, 7, 8"
+    },
+    {
+      "name": "Cilantro",
+      "crop_type": "herb",
+      "water_min": 70,
+      "water_optimal": 70,
+      "growth_days": 20.2,
+      "min_yield": 4,
+      "max_yield": 6,
+      "harvest_level": 3,
+      "cold_hardy": 0,
+      "sow_months": "3, 4, 5"
+    },
+    {
+      "name": "Comfrey",
+      "crop_type": "herb",
+      "water_min": 60,
+      "water_optimal": 70,
+      "growth_days": 20.2,
+      "min_yield": 4,
+      "max_yield": 6,
+      "harvest_level": 3,
+      "cold_hardy": 0,
+      "sow_months": "3, 4, 5, 6, 7, 8"
+    },
+    {
+      "name": "CommonMallow",
+      "crop_type": "herb",
+      "water_min": 60,
+      "water_optimal": 70,
+      "growth_days": 20.2,
+      "min_yield": 4,
+      "max_yield": 6,
+      "harvest_level": 3,
+      "cold_hardy": 0,
+      "sow_months": "3, 4, 5, 6, 7, 8"
+    },
+    {
+      "name": "Lavender",
+      "crop_type": "herb",
+      "water_min": 80,
+      "water_optimal": 70,
+      "growth_days": 20.2,
+      "min_yield": 4,
+      "max_yield": 6,
+      "harvest_level": 3,
+      "cold_hardy": 0,
+      "sow_months": "3, 4, 5"
+    },
+    {
+      "name": "LemonGrass",
+      "crop_type": "herb",
+      "water_min": 35,
+      "water_optimal": 70,
+      "growth_days": 20.2,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 3,
+      "cold_hardy": 0,
+      "sow_months": "3, 4, 5, 6, 7, 8, 9"
+    },
+    {
+      "name": "Marigold",
+      "crop_type": "herb",
+      "water_min": 80,
+      "water_optimal": 70,
+      "growth_days": 20.2,
+      "min_yield": 4,
+      "max_yield": 6,
+      "harvest_level": 3,
+      "cold_hardy": 0,
+      "sow_months": "3, 4, 5"
+    },
+    {
+      "name": "Mint",
+      "crop_type": "herb",
+      "water_min": 70,
+      "water_optimal": 70,
+      "growth_days": 20.2,
+      "min_yield": 4,
+      "max_yield": 6,
+      "harvest_level": 3,
+      "cold_hardy": 0,
+      "sow_months": "2, 3, 4"
+    },
+    {
+      "name": "Oregano",
+      "crop_type": "herb",
+      "water_min": 60,
+      "water_optimal": 70,
+      "growth_days": 20.2,
+      "min_yield": 4,
+      "max_yield": 6,
+      "harvest_level": 3,
+      "cold_hardy": 0,
+      "sow_months": "2, 3, 4"
+    },
+    {
+      "name": "Parsley",
+      "crop_type": "herb",
+      "water_min": 70,
+      "water_optimal": 70,
+      "growth_days": 20.2,
+      "min_yield": 4,
+      "max_yield": 6,
+      "harvest_level": 3,
+      "cold_hardy": 0,
+      "sow_months": "2, 3, 4"
+    },
+    {
+      "name": "Poppies",
+      "crop_type": "herb",
+      "water_min": 80,
+      "water_optimal": 70,
+      "growth_days": 20.2,
+      "min_yield": 4,
+      "max_yield": 6,
+      "harvest_level": 3,
+      "cold_hardy": 0,
+      "sow_months": "3, 4, 5"
+    },
+    {
+      "name": "Roses",
+      "crop_type": "herb",
+      "water_min": 80,
+      "water_optimal": 70,
+      "growth_days": 20.2,
+      "min_yield": 4,
+      "max_yield": 6,
+      "harvest_level": 3,
+      "cold_hardy": 0,
+      "sow_months": "3, 4, 5"
+    },
+    {
+      "name": "Thyme",
+      "crop_type": "herb",
+      "water_min": 35,
+      "water_optimal": 70,
+      "growth_days": 20.2,
+      "min_yield": 4,
+      "max_yield": 6,
+      "harvest_level": 3,
+      "cold_hardy": 0,
+      "sow_months": "2, 3, 4"
+    },
+    {
+      "name": "Habanero",
+      "crop_type": "herb",
+      "water_min": 75,
+      "water_optimal": 85,
+      "growth_days": 20.3,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 5,
+      "cold_hardy": 0,
+      "sow_months": "4, 5, 6"
+    },
+    {
+      "name": "Jalapeno",
+      "crop_type": "herb",
+      "water_min": 75,
+      "water_optimal": 85,
+      "growth_days": 20.3,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 5,
+      "cold_hardy": 0,
+      "sow_months": "4, 5, 6"
+    },
+    {
+      "name": "Sage",
+      "crop_type": "herb",
+      "water_min": 35,
+      "water_optimal": 70,
+      "growth_days": 30.0,
+      "min_yield": 4,
+      "max_yield": 6,
+      "harvest_level": 3,
+      "cold_hardy": 0,
+      "sow_months": "2, 3, 4"
+    },
+    {
+      "name": "Rosemary",
+      "crop_type": "herb",
+      "water_min": 35,
+      "water_optimal": 70,
+      "growth_days": 60.2,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 3,
+      "cold_hardy": 0,
+      "sow_months": "3, 4, 5, 6, 7, 8, 9"
+    },
+    {
+      "name": "Kale",
+      "crop_type": "vegetable",
+      "water_min": 85,
+      "water_optimal": 80,
+      "growth_days": 12.2,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 5,
+      "cold_hardy": 1,
+      "sow_months": "2, 3, 4, 5, 6, 7, 8"
+    },
+    {
+      "name": "Barley",
+      "crop_type": "vegetable",
+      "water_min": 35,
+      "water_optimal": 70,
+      "growth_days": 18.0,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 6,
+      "cold_hardy": 1,
+      "sow_months": "8, 9, 10"
+    },
+    {
+      "name": "Flax",
+      "crop_type": "vegetable",
+      "water_min": 35,
+      "water_optimal": 70,
+      "growth_days": 18.0,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 6,
+      "cold_hardy": 1,
+      "sow_months": "8, 9, 10"
+    },
+    {
+      "name": "Garlic",
+      "crop_type": "vegetable",
+      "water_min": 35,
+      "water_optimal": 70,
+      "growth_days": 18.0,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 5,
+      "cold_hardy": 1,
+      "sow_months": "7, 8, 9"
+    },
+    {
+      "name": "Rye",
+      "crop_type": "vegetable",
+      "water_min": 35,
+      "water_optimal": 70,
+      "growth_days": 18.0,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 6,
+      "cold_hardy": 1,
+      "sow_months": "8, 9, 10"
+    },
+    {
+      "name": "Wheat",
+      "crop_type": "vegetable",
+      "water_min": 35,
+      "water_optimal": 70,
+      "growth_days": 18.0,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 6,
+      "cold_hardy": 1,
+      "sow_months": "8, 9, 10"
+    },
+    {
+      "name": "BellPepper",
+      "crop_type": "vegetable",
+      "water_min": 75,
+      "water_optimal": 85,
+      "growth_days": 12.2,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 5,
+      "cold_hardy": 0,
+      "sow_months": "4, 5, 6"
+    },
+    {
+      "name": "Greenpeas",
+      "crop_type": "vegetable",
+      "water_min": 75,
+      "water_optimal": 85,
+      "growth_days": 12.2,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 5,
+      "cold_hardy": 0,
+      "sow_months": "2, 3, 4"
+    },
+    {
+      "name": "Lettuce",
+      "crop_type": "vegetable",
+      "water_min": 75,
+      "water_optimal": 85,
+      "growth_days": 12.2,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 5,
+      "cold_hardy": 0,
+      "sow_months": "2, 3, 4, 7, 8, 9"
+    },
+    {
+      "name": "Turnip",
+      "crop_type": "vegetable",
+      "water_min": 65,
+      "water_optimal": 70,
+      "growth_days": 12.2,
+      "min_yield": 3,
+      "max_yield": 4,
+      "harvest_level": 5,
+      "cold_hardy": 0,
+      "sow_months": "5, 6, 7, 8, 9, 10"
+    },
+    {
+      "name": "Corn",
+      "crop_type": "vegetable",
+      "water_min": 35,
+      "water_optimal": 70,
+      "growth_days": 18.0,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 5,
+      "cold_hardy": 0,
+      "sow_months": "3, 4, 5"
+    },
+    {
+      "name": "Cucumber",
+      "crop_type": "vegetable",
+      "water_min": 75,
+      "water_optimal": 85,
+      "growth_days": 18.0,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 5,
+      "cold_hardy": 0,
+      "sow_months": "3, 4, 5"
+    },
+    {
+      "name": "Hemp",
+      "crop_type": "vegetable",
+      "water_min": 35,
+      "water_optimal": 70,
+      "growth_days": 18.0,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 6,
+      "cold_hardy": 0,
+      "sow_months": "8, 9, 10"
+    },
+    {
+      "name": "Hops",
+      "crop_type": "vegetable",
+      "water_min": 35,
+      "water_optimal": 70,
+      "growth_days": 18.0,
+      "min_yield": 3,
+      "max_yield": 4,
+      "harvest_level": 6,
+      "cold_hardy": 0,
+      "sow_months": "8, 9, 10"
+    },
+    {
+      "name": "Onion",
+      "crop_type": "vegetable",
+      "water_min": 35,
+      "water_optimal": 70,
+      "growth_days": 18.0,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 5,
+      "cold_hardy": 0,
+      "sow_months": "2, 3"
+    },
+    {
+      "name": "Pumpkin",
+      "crop_type": "vegetable",
+      "water_min": 35,
+      "water_optimal": 70,
+      "growth_days": 18.0,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 5,
+      "cold_hardy": 0,
+      "sow_months": "3, 4, 5"
+    },
+    {
+      "name": "Soybeans",
+      "crop_type": "vegetable",
+      "water_min": 65,
+      "water_optimal": 70,
+      "growth_days": 18.0,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 5,
+      "cold_hardy": 0,
+      "sow_months": "3, 4, 5"
+    },
+    {
+      "name": "SweetPotato",
+      "crop_type": "vegetable",
+      "water_min": 65,
+      "water_optimal": 70,
+      "growth_days": 18.0,
+      "min_yield": 3,
+      "max_yield": 4,
+      "harvest_level": 5,
+      "cold_hardy": 0,
+      "sow_months": "5, 6, 7"
+    },
+    {
+      "name": "Watermelon",
+      "crop_type": "vegetable",
+      "water_min": 35,
+      "water_optimal": 80,
+      "growth_days": 18.0,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 5,
+      "cold_hardy": 0,
+      "sow_months": "3, 4, 5"
+    },
+    {
+      "name": "Zucchini",
+      "crop_type": "vegetable",
+      "water_min": 35,
+      "water_optimal": 70,
+      "growth_days": 18.0,
+      "min_yield": 2,
+      "max_yield": 4,
+      "harvest_level": 5,
+      "cold_hardy": 0,
+      "sow_months": "3, 4, 5"
+    }
+  ],
+  "trapping_mechanisms": [
+    {
+      "name": "crateTrap",
+      "item_type": "Base.TrapCrate",
+      "trap_strength": 15
+    },
+    {
+      "name": "trapBox",
+      "item_type": "Base.TrapBox",
+      "trap_strength": 15
+    },
+    {
+      "name": "cageTrap",
+      "item_type": "Base.TrapCage",
+      "trap_strength": 20
+    },
+    {
+      "name": "snareTrap",
+      "item_type": "Base.TrapSnare",
+      "trap_strength": 10
+    },
+    {
+      "name": "stickTrap",
+      "item_type": "Base.TrapStick",
+      "trap_strength": 15
+    },
+    {
+      "name": "mouseTrap",
+      "item_type": "Base.TrapMouse",
+      "trap_strength": 50
+    }
+  ],
+  "wildlife_game_schedule": [
+    {
+      "name": "rabbit",
+      "animal_type": "rabbit",
+      "active_min_hour": 19,
+      "active_max_hour": 5
+    },
+    {
+      "name": "squirrel",
+      "animal_type": "squirrel",
+      "active_min_hour": 19,
+      "active_max_hour": 5
+    },
+    {
+      "name": "bird",
+      "animal_type": "bird",
+      "active_min_hour": 0,
+      "active_max_hour": 0
+    },
+    {
+      "name": "mouse",
+      "animal_type": "mouse",
+      "active_min_hour": 0,
+      "active_max_hour": 0
+    },
+    {
+      "name": "rat",
+      "animal_type": "rat",
+      "active_min_hour": 0,
+      "active_max_hour": 0
+    },
+    {
+      "name": "raccoon",
+      "animal_type": "raccoon",
+      "active_min_hour": 19,
+      "active_max_hour": 5
+    }
+  ],
+  "astronomical_telemetry_oracle": [
+    {
+      "omen_key": "AEBS_Intro",
+      "oracle_signal": "<bzzt> Fiver Zero Two. <wzzt> Automated Broadcast System. <bzzt>"
+    },
+    {
+      "omen_key": "AEBS_Choppah",
+      "oracle_signal": "Air Activity detected."
+    },
+    {
+      "omen_key": "AEBS_Power_1",
+      "oracle_signal": "Knox Power Grid: Power fluctuations detected."
+    },
+    {
+      "omen_key": "AEBS_Power_2",
+      "oracle_signal": "Knox Power Grid: Systems failing. Network compromised."
+    },
+    {
+      "omen_key": "AEBS_Power_3",
+      "oracle_signal": "Knox Power Grid: Blackout."
+    },
+    {
+      "omen_key": "AEBS_Pre_today",
+      "oracle_signal": "Today,"
+    },
+    {
+      "omen_key": "AEBS_Pre_tomorrow",
+      "oracle_signal": "Tomorrow,"
+    },
+    {
+      "omen_key": "AEBS_Pre_dayafter",
+      "oracle_signal": "Day after tomorrow,"
+    },
+    {
+      "omen_key": "AEBS_temperature",
+      "oracle_signal": "average temperature %1. Minimum: %2. Maximum: %3. Humidity: %4%%..."
+    },
+    {
+      "omen_key": "AEBS_wind_0",
+      "oracle_signal": "%1 wind from the %2. Maximum of %3 expected. %4"
+    },
+    {
+      "omen_key": "AEBS_wind_1",
+      "oracle_signal": "Mild"
+    },
+    {
+      "omen_key": "AEBS_wind_2",
+      "oracle_signal": "Moderate"
+    },
+    {
+      "omen_key": "AEBS_wind_3",
+      "oracle_signal": "Strong"
+    },
+    {
+      "omen_key": "AEBS_wind_4",
+      "oracle_signal": "Storm-strength"
+    },
+    {
+      "omen_key": "AEBS_clouds_0",
+      "oracle_signal": "Clear skies."
+    },
+    {
+      "omen_key": "AEBS_clouds_1",
+      "oracle_signal": "Some clouds."
+    },
+    {
+      "omen_key": "AEBS_clouds_2",
+      "oracle_signal": "Heavy cloud cover."
+    },
+    {
+      "omen_key": "AEBS_clouds_3",
+      "oracle_signal": "Periodical cloudy spells."
+    },
+    {
+      "omen_key": "AEBS_clouds_4",
+      "oracle_signal": "Periods of heavy cloud."
+    },
+    {
+      "omen_key": "AEBS_fog_0",
+      "oracle_signal": "Light fog."
+    },
+    {
+      "omen_key": "AEBS_fog_1",
+      "oracle_signal": "Thick fog."
+    },
+    {
+      "omen_key": "AEBS_fog_2",
+      "oracle_signal": "Very thick fog."
+    },
+    {
+      "omen_key": "AEBS_weather_0_a",
+      "oracle_signal": "WARNING: Period of weather predicted to start in the %1..."
+    },
+    {
+      "omen_key": "AEBS_weather_0_b",
+      "oracle_signal": "Weather continues throughout the day..."
+    },
+    {
+      "omen_key": "AEBS_weather_0_c",
+      "oracle_signal": "Weather period predicted to end in the %1..."
+    },
+    {
+      "omen_key": "AEBS_weather_predicted",
+      "oracle_signal": "expecting "
+    },
+    {
+      "omen_key": "AEBS_weather_and_a",
+      "oracle_signal": "and a "
+    },
+    {
+      "omen_key": "AEBS_weather_light_moderate",
+      "oracle_signal": "expecting light to moderate rain..."
+    },
+    {
+      "omen_key": "AEBS_weather_heavy_rain",
+      "oracle_signal": "showers and or heavy rain"
+    },
+    {
+      "omen_key": "AEBS_weather_storm",
+      "oracle_signal": "thunderstorm"
+    }
+  ]
+}
